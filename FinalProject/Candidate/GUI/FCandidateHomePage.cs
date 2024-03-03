@@ -54,5 +54,17 @@ namespace FinalProject.Candidate.GUI
             FChangePassword fChangePassword = new FChangePassword();
             fChangePassword.ShowDialog();
         }
+
+        private void menuItem_QlyCv_Click(object sender, EventArgs e)
+        {
+            FQlyCv fQlyCv = new FQlyCv();
+            fQlyCv.ShowDialog();
+        }
+
+        private void menuItem_MauCv_Click(object sender, EventArgs e)
+        {
+            FMauCv fMauCv = new FMauCv();
+            fMauCv.ShowDialog();
+        }
     }
 }

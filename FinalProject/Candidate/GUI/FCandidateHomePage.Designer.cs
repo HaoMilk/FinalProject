@@ -40,7 +40,10 @@
             this.menuItem_DsCty = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_ThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.menuStrip_MenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip_MenuStrip
@@ -56,7 +59,7 @@
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1881, 40);
+            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1329, 40);
             this.menuStrip_MenuStrip.TabIndex = 0;
             this.menuStrip_MenuStrip.Text = "menuStrip1";
             // 
@@ -131,8 +134,9 @@
             this.menuItem_QlyCv.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_QlyCv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_QlyCv.Name = "menuItem_QlyCv";
-            this.menuItem_QlyCv.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_QlyCv.Size = new System.Drawing.Size(209, 34);
             this.menuItem_QlyCv.Text = "Quản lý CV";
+            this.menuItem_QlyCv.Click += new System.EventHandler(this.menuItem_QlyCv_Click);
             // 
             // menuItem_MauCv
             // 
@@ -140,8 +144,9 @@
             this.menuItem_MauCv.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_MauCv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_MauCv.Name = "menuItem_MauCv";
-            this.menuItem_MauCv.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_MauCv.Size = new System.Drawing.Size(209, 34);
             this.menuItem_MauCv.Text = "Mẫu CV";
+            this.menuItem_MauCv.Click += new System.EventHandler(this.menuItem_MauCv_Click);
             // 
             // menuItem_DsCty
             // 
@@ -149,7 +154,7 @@
             this.menuItem_DsCty.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DsCty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DsCty.Name = "menuItem_DsCty";
-            this.menuItem_DsCty.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_DsCty.Size = new System.Drawing.Size(265, 34);
             this.menuItem_DsCty.Text = "Danh sách công ty";
             // 
             // menuItem_ThongTinCaNhan
@@ -158,7 +163,7 @@
             this.menuItem_ThongTinCaNhan.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_ThongTinCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_ThongTinCaNhan.Name = "menuItem_ThongTinCaNhan";
-            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(266, 34);
             this.menuItem_ThongTinCaNhan.Text = "Thông tin cá nhân";
             this.menuItem_ThongTinCaNhan.Click += new System.EventHandler(this.menuItem_ThongTinCaNhan_Click);
             // 
@@ -168,15 +173,39 @@
             this.menuItem_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DoiMatKhau.Name = "menuItem_DoiMatKhau";
-            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(266, 34);
             this.menuItem_DoiMatKhau.Text = "Đổi mật khẩu";
             this.menuItem_DoiMatKhau.Click += new System.EventHandler(this.menuItem_DoiMatKhau_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Location = new System.Drawing.Point(0, 557);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1329, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox_Image
+            // 
+            this.pictureBox_Image.BackgroundImage = global::FinalProject.Properties.Resources.hcmute;
+            this.pictureBox_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox_Image.Location = new System.Drawing.Point(0, 40);
+            this.pictureBox_Image.Name = "pictureBox_Image";
+            this.pictureBox_Image.Size = new System.Drawing.Size(1329, 545);
+            this.pictureBox_Image.TabIndex = 1;
+            this.pictureBox_Image.TabStop = false;
             // 
             // FCandidateHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1881, 850);
+            this.ClientSize = new System.Drawing.Size(1329, 585);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox_Image);
             this.Controls.Add(this.menuStrip_MenuStrip);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -187,6 +216,7 @@
             this.Load += new System.EventHandler(this.FCandidateHomePage_Load);
             this.menuStrip_MenuStrip.ResumeLayout(false);
             this.menuStrip_MenuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +236,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_DsCty;
         private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCaNhan;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
+        private System.Windows.Forms.PictureBox pictureBox_Image;
+        private System.Windows.Forms.Label label1;
     }
 }
