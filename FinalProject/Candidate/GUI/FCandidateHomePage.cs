@@ -66,5 +66,10 @@ namespace FinalProject.Candidate.GUI
             FMauCv fMauCv = new FMauCv();
             fMauCv.ShowDialog();
         }
+
+        private void menuItem_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
