@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Candidate.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace FinalProject
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button_DangNhap_Click(object sender, EventArgs e)
+        {
+            // Ẩn form hiện tại
+            this.Hide();
+
+            FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
+            fCandidateHomePage.ShowDialog();
+
+            // Show lại
+            this.Show();
         }
     }
 }

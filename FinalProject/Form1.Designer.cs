@@ -29,23 +29,33 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_DangNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(275, 196);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Location = new System.Drawing.Point(244, 157);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 26);
+            this.textBox1.Size = new System.Drawing.Size(303, 22);
             this.textBox1.TabIndex = 0;
+            // 
+            // button_DangNhap
+            // 
+            this.button_DangNhap.Location = new System.Drawing.Point(413, 567);
+            this.button_DangNhap.Name = "button_DangNhap";
+            this.button_DangNhap.Size = new System.Drawing.Size(269, 58);
+            this.button_DangNhap.TabIndex = 1;
+            this.button_DangNhap.Text = "ĐĂNG NHẬP";
+            this.button_DangNhap.UseVisualStyleBackColor = true;
+            this.button_DangNhap.Click += new System.EventHandler(this.button_DangNhap_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 849);
+            this.ClientSize = new System.Drawing.Size(1182, 679);
+            this.Controls.Add(this.button_DangNhap);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -56,6 +66,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_DangNhap;
     }
 }
 
