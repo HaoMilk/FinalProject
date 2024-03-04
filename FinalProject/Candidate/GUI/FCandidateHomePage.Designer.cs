@@ -30,18 +30,19 @@
         {
             this.menuStrip_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_CongTy = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_TrangCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_Dsvl = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_VieclamUT = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_QlyCv = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_MauCv = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_CongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DsCty = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_TrangCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_ThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
+            this.menuItem_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
@@ -75,41 +76,6 @@
             this.menu_ViecLam.Text = "Việc làm";
             this.menu_ViecLam.Click += new System.EventHandler(this.menu_ViecLam_Click);
             // 
-            // menu_HoSo
-            // 
-            this.menu_HoSo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_QlyCv,
-            this.menuItem_MauCv});
-            this.menu_HoSo.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_HoSo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menu_HoSo.Name = "menu_HoSo";
-            this.menu_HoSo.Size = new System.Drawing.Size(130, 32);
-            this.menu_HoSo.Text = "Hồ sơ & CV";
-            this.menu_HoSo.Click += new System.EventHandler(this.menu_HoSo_Click);
-            // 
-            // menu_CongTy
-            // 
-            this.menu_CongTy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_DsCty});
-            this.menu_CongTy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_CongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menu_CongTy.Name = "menu_CongTy";
-            this.menu_CongTy.Size = new System.Drawing.Size(105, 32);
-            this.menu_CongTy.Text = "Công ty";
-            this.menu_CongTy.Click += new System.EventHandler(this.menu_CongTy_Click);
-            // 
-            // menu_TrangCaNhan
-            // 
-            this.menu_TrangCaNhan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_ThongTinCaNhan,
-            this.menuItem_DoiMatKhau});
-            this.menu_TrangCaNhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menu_TrangCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menu_TrangCaNhan.Name = "menu_TrangCaNhan";
-            this.menu_TrangCaNhan.Size = new System.Drawing.Size(174, 32);
-            this.menu_TrangCaNhan.Text = "Trang cá nhân";
-            this.menu_TrangCaNhan.Click += new System.EventHandler(this.menu_TrangCaNhan_Click);
-            // 
             // menuItem_Dsvl
             // 
             this.menuItem_Dsvl.BackColor = System.Drawing.SystemColors.Highlight;
@@ -128,13 +94,25 @@
             this.menuItem_VieclamUT.Size = new System.Drawing.Size(298, 34);
             this.menuItem_VieclamUT.Text = "Việc làm đã ứng tuyển";
             // 
+            // menu_HoSo
+            // 
+            this.menu_HoSo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItem_QlyCv,
+            this.menuItem_MauCv});
+            this.menu_HoSo.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_HoSo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_HoSo.Name = "menu_HoSo";
+            this.menu_HoSo.Size = new System.Drawing.Size(130, 32);
+            this.menu_HoSo.Text = "Hồ sơ & CV";
+            this.menu_HoSo.Click += new System.EventHandler(this.menu_HoSo_Click);
+            // 
             // menuItem_QlyCv
             // 
             this.menuItem_QlyCv.BackColor = System.Drawing.SystemColors.Highlight;
             this.menuItem_QlyCv.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_QlyCv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_QlyCv.Name = "menuItem_QlyCv";
-            this.menuItem_QlyCv.Size = new System.Drawing.Size(209, 34);
+            this.menuItem_QlyCv.Size = new System.Drawing.Size(270, 34);
             this.menuItem_QlyCv.Text = "Quản lý CV";
             this.menuItem_QlyCv.Click += new System.EventHandler(this.menuItem_QlyCv_Click);
             // 
@@ -144,9 +122,20 @@
             this.menuItem_MauCv.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_MauCv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_MauCv.Name = "menuItem_MauCv";
-            this.menuItem_MauCv.Size = new System.Drawing.Size(209, 34);
+            this.menuItem_MauCv.Size = new System.Drawing.Size(270, 34);
             this.menuItem_MauCv.Text = "Mẫu CV";
             this.menuItem_MauCv.Click += new System.EventHandler(this.menuItem_MauCv_Click);
+            // 
+            // menu_CongTy
+            // 
+            this.menu_CongTy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItem_DsCty});
+            this.menu_CongTy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_CongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_CongTy.Name = "menu_CongTy";
+            this.menu_CongTy.Size = new System.Drawing.Size(105, 32);
+            this.menu_CongTy.Text = "Công ty";
+            this.menu_CongTy.Click += new System.EventHandler(this.menu_CongTy_Click);
             // 
             // menuItem_DsCty
             // 
@@ -154,8 +143,21 @@
             this.menuItem_DsCty.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DsCty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DsCty.Name = "menuItem_DsCty";
-            this.menuItem_DsCty.Size = new System.Drawing.Size(265, 34);
+            this.menuItem_DsCty.Size = new System.Drawing.Size(270, 34);
             this.menuItem_DsCty.Text = "Danh sách công ty";
+            // 
+            // menu_TrangCaNhan
+            // 
+            this.menu_TrangCaNhan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuItem_ThongTinCaNhan,
+            this.menuItem_DoiMatKhau,
+            this.menuItem_DangXuat});
+            this.menu_TrangCaNhan.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_TrangCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_TrangCaNhan.Name = "menu_TrangCaNhan";
+            this.menu_TrangCaNhan.Size = new System.Drawing.Size(174, 32);
+            this.menu_TrangCaNhan.Text = "Trang cá nhân";
+            this.menu_TrangCaNhan.Click += new System.EventHandler(this.menu_TrangCaNhan_Click);
             // 
             // menuItem_ThongTinCaNhan
             // 
@@ -163,7 +165,7 @@
             this.menuItem_ThongTinCaNhan.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_ThongTinCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_ThongTinCaNhan.Name = "menuItem_ThongTinCaNhan";
-            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(266, 34);
+            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(270, 34);
             this.menuItem_ThongTinCaNhan.Text = "Thông tin cá nhân";
             this.menuItem_ThongTinCaNhan.Click += new System.EventHandler(this.menuItem_ThongTinCaNhan_Click);
             // 
@@ -173,7 +175,7 @@
             this.menuItem_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DoiMatKhau.Name = "menuItem_DoiMatKhau";
-            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(266, 34);
+            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(270, 34);
             this.menuItem_DoiMatKhau.Text = "Đổi mật khẩu";
             this.menuItem_DoiMatKhau.Click += new System.EventHandler(this.menuItem_DoiMatKhau_Click);
             // 
@@ -198,6 +200,15 @@
             this.pictureBox_Image.Size = new System.Drawing.Size(1329, 545);
             this.pictureBox_Image.TabIndex = 1;
             this.pictureBox_Image.TabStop = false;
+            // 
+            // menuItem_DangXuat
+            // 
+            this.menuItem_DangXuat.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuItem_DangXuat.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuItem_DangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuItem_DangXuat.Name = "menuItem_DangXuat";
+            this.menuItem_DangXuat.Size = new System.Drawing.Size(270, 34);
+            this.menuItem_DangXuat.Text = "Đăng xuất";
             // 
             // FCandidateHomePage
             // 
@@ -238,5 +249,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
         private System.Windows.Forms.PictureBox pictureBox_Image;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
     }
 }
