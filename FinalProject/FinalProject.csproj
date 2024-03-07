@@ -463,5 +463,17 @@
   <ItemGroup>
     <None Include="Resources\24_sign_in.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-property-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-up-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-24.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

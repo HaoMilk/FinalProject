@@ -83,6 +83,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap avatar_24 {
+            get {
+                object obj = ResourceManager.GetObject("avatar-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background_neon {
             get {
                 object obj = ResourceManager.GetObject("background_neon", resourceCulture);
@@ -153,16 +163,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap administrator_icon_on_white_background_simple_vector_28227279 {
-            get {
-                object obj = ResourceManager.GetObject("administrator-icon-on-white-background-simple-vector-28227279", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap CỤM_LOGO_THÁNG_THANH_NIÊN {
             get {
                 object obj = ResourceManager.GetObject("CỤM LOGO THÁNG THANH NIÊN", resourceCulture);
@@ -176,6 +176,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap done {
             get {
                 object obj = ResourceManager.GetObject("done", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_property_24 {
+            get {
+                object obj = ResourceManager.GetObject("edit_property_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,6 +513,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap save_24 {
+            get {
+                object obj = ResourceManager.GetObject("save_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shock {
             get {
                 object obj = ResourceManager.GetObject("shock", resourceCulture);
@@ -516,6 +536,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap sign_in {
             get {
                 object obj = ResourceManager.GetObject("sign_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_up_24 {
+            get {
+                object obj = ResourceManager.GetObject("sign_up_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
