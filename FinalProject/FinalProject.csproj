@@ -311,6 +311,9 @@
     <Folder Include="Candidate\BUS\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
+    <None Include="Resources\CV-template.docx" />
+    <None Include="Resources\CV-template.rtf" />
     <None Include="Resources\CỤM LOGO THÁNG THANH NIÊN.png" />
   </ItemGroup>
   <ItemGroup>
@@ -329,6 +332,8 @@
     <None Include="Resources\logo FIT.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\resume.rtf" />
+    <None Include="Resources\resume_009.rtf" />
     <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
@@ -462,6 +467,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\24_sign_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-property-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-up-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dev-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tester-female-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-choose-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
