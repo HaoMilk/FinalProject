@@ -142,7 +142,7 @@
             this.label_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Name.Location = new System.Drawing.Point(0, 0);
             this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(591, 34);
+            this.label_Name.Size = new System.Drawing.Size(591, 30);
             this.label_Name.TabIndex = 7;
             this.label_Name.Text = "QUẢN LÝ CV";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

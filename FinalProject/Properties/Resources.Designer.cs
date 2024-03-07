@@ -153,6 +153,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap administrator_icon_on_white_background_simple_vector_28227279 {
+            get {
+                object obj = ResourceManager.GetObject("administrator-icon-on-white-background-simple-vector-28227279", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CỤM_LOGO_THÁNG_THANH_NIÊN {
             get {
                 object obj = ResourceManager.GetObject("CỤM LOGO THÁNG THANH NIÊN", resourceCulture);
