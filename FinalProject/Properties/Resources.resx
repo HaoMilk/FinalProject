@@ -154,11 +154,17 @@
   <data name="stackoverflow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stackoverflow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="resume_009" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resume_009.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="cpp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cpp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="birthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CV_Template_for_Software_Engineer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CV-Template-for-Software-Engineer.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="vietnam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vietnam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,8 @@
   <data name="virus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\virus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo FIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo FIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="oggy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oggy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background_neon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7384eb896c87f613f4d36bba5a24108b.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,9 +196,6 @@
   <data name="angular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\angular.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="oggy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\oggy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bku" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\01_logobachkhoatoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,6 +210,9 @@
   </data>
   <data name="google_drive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google_drive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +229,9 @@
   <data name="nodejs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nodejs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CV_template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CV-template.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,6 +247,9 @@
   <data name="google_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="python" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\python.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -247,8 +259,8 @@
   <data name="python1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\python.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="avatar-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,11 +271,17 @@
   <data name="react" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\react.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dev-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dev-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="firebase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\firebase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo FIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo FIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="javascript" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\javascript.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,13 +289,13 @@
   <data name="bug" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bug.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="python" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\python.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="resume" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resume.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="CỤM LOGO THÁNG THANH NIÊN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CỤM LOGO THÁNG THANH NIÊN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="avatar-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\avatar-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tester-female-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tester-female-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

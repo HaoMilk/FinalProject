@@ -171,6 +171,37 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\adeflang1025\ansi\ansicpg1258\uc1\adeff31507\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang1066\deflangfe1066\themelang1033\themelangfe0\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+        ///{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fbidi \fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f34\f [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string CV_template {
+            get {
+                return ResourceManager.GetString("CV_template", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\adeflang1025\ansi\ansicpg1258\uc1\adeff31507\deff0\stshfdbch31505\stshfloch31506\stshfhich31506\stshfbi31507\deflang1066\deflangfe1066\themelang1033\themelangfe1041\themelangcs0{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+        ///{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fbidi \fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}
+        ///{\ [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string CV_Template_for_Software_Engineer {
+            get {
+                return ResourceManager.GetString("CV_Template_for_Software_Engineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dev_24 {
+            get {
+                object obj = ResourceManager.GetObject("dev-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap done {
@@ -491,6 +522,26 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\adeflang1025\ansi\ansicpg1258\uc1\adeff31507\deff0\stshfdbch31506\stshfloch31506\stshfhich31506\stshfbi31507\deflang1066\deflangfe1066\themelang4096\themelangfe0\themelangcs1037{\fonttbl{\f1\fbidi \fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+        ///{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\fbidi \fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f34\fbidi \f [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string resume {
+            get {
+                return ResourceManager.GetString("resume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\adeflang1025\ansi\ansicpg1258\uc1\adeff31507\deff0\stshfdbch31506\stshfloch31506\stshfhich31506\stshfbi31507\deflang1066\deflangfe1066\themelang1045\themelangfe0\themelangcs1025{\fonttbl{\f0\fbidi \froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fbidi \fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+        ///{\f2\fbidi \fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\fbidi \froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f10\f [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string resume_009 {
+            get {
+                return ResourceManager.GetString("resume_009", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap sass {
@@ -556,6 +607,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap stackoverflow {
             get {
                 object obj = ResourceManager.GetObject("stackoverflow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tester_female_24 {
+            get {
+                object obj = ResourceManager.GetObject("tester-female-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
