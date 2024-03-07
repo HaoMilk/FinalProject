@@ -29,5 +29,10 @@ namespace FinalProject
             // Show lại
             this.Show();
         }
+
+        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Đăng ký thành công");
+        }
     }
 }
