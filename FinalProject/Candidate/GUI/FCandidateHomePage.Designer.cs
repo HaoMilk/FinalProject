@@ -164,7 +164,7 @@
             this.menuItem_ThongTinCaNhan.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_ThongTinCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_ThongTinCaNhan.Name = "menuItem_ThongTinCaNhan";
-            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(224, 26);
+            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(222, 26);
             this.menuItem_ThongTinCaNhan.Text = "Thông tin cá nhân";
             this.menuItem_ThongTinCaNhan.Click += new System.EventHandler(this.menuItem_ThongTinCaNhan_Click);
             // 
@@ -174,7 +174,7 @@
             this.menuItem_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DoiMatKhau.Name = "menuItem_DoiMatKhau";
-            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(224, 26);
+            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(222, 26);
             this.menuItem_DoiMatKhau.Text = "Đổi mật khẩu";
             this.menuItem_DoiMatKhau.Click += new System.EventHandler(this.menuItem_DoiMatKhau_Click);
             // 
@@ -184,7 +184,7 @@
             this.menuItem_DangXuat.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DangXuat.Name = "menuItem_DangXuat";
-            this.menuItem_DangXuat.Size = new System.Drawing.Size(224, 26);
+            this.menuItem_DangXuat.Size = new System.Drawing.Size(222, 26);
             this.menuItem_DangXuat.Text = "Đăng xuất";
             this.menuItem_DangXuat.Click += new System.EventHandler(this.menuItem_DangXuat_Click);
             // 
@@ -247,8 +247,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_DsCty;
         private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCaNhan;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
-        private System.Windows.Forms.PictureBox pictureBox_Image;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
+        private System.Windows.Forms.PictureBox pictureBox_Image;
     }
 }

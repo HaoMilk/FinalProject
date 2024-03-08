@@ -1,4 +1,5 @@
-﻿using FinalProject.Candidate.GUI;
+﻿using FinalProject.Admin;
+using FinalProject.Candidate.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,12 +23,24 @@ namespace FinalProject
         {
             // Ẩn form hiện tại
             this.Hide();
-
-            FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
-            fCandidateHomePage.ShowDialog();
+            if (radioButton__UngVien.Checked)
+            {
+                FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
+                fCandidateHomePage.ShowDialog();
+            }
+            else if(radioButton_Admin.Checked)
+            {
+                FAdminHomePage fAdminHomePage = new FAdminHomePage();
+                fAdminHomePage.ShowDialog();
+            }    
 
             // Show lại
             this.Show();
+        }
+
+        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Đăng ký thành công");
         }
     }
 }
