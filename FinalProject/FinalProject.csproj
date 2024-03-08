@@ -209,6 +209,18 @@
     <Compile Include="Candidate\GUI\FCandidateInfor.Designer.cs">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachVL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachVL.Designer.cs">
+      <DependentUpon>FDanhSachVL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDsCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDsCv.Designer.cs">
+      <DependentUpon>FDsCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FMauCv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +279,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateInfor.resx">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachVL.resx">
+      <DependentUpon>FDanhSachVL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDsCv.resx">
+      <DependentUpon>FDsCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FMauCv.resx">
       <DependentUpon>FMauCv.cs</DependentUpon>

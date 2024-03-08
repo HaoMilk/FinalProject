@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FCandidateInfor : Form
+    public partial class FDsCv : Form
     {
-        public FCandidateInfor()
+        public FDsCv()
         {
             InitializeComponent();
         }
 
-        private void pictureBox_Avatar_Click(object sender, EventArgs e)
+        private void FDsCv_Load(object sender, EventArgs e)
         {
 
         }

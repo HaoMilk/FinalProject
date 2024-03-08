@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FCandidateInfor : Form
+    public partial class FDanhSachVL : Form
     {
-        public FCandidateInfor()
+        public FDanhSachVL()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox_Avatar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
