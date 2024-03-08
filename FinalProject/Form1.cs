@@ -1,5 +1,6 @@
 ﻿using FinalProject.Admin;
 using FinalProject.Candidate.GUI;
+using FinalProject.Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,11 @@ namespace FinalProject
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();
             }    
+            else if (radioButton_NhaTuyenDung.Checked)
+            {
+                FCompanyHomePage fCompanyHomePage = new FCompanyHomePage();
+                fCompanyHomePage.ShowDialog();
+            }
 
             // Show lại
             this.Show();
