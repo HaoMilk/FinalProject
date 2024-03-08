@@ -227,6 +227,54 @@
     <Compile Include="Common\GUI\FChangePassword.Designer.cs">
       <DependentUpon>FChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Company\FCompanyHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\FCompanyHomePage.Designer.cs">
+      <DependentUpon>FCompanyHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ho so\FHoSoChuaDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ho so\FHoSoChuaDuyet.Designer.cs">
+      <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.Designer.cs">
+      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.Designer.cs">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.Designer.cs">
+      <DependentUpon>FSuaThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
+      <DependentUpon>FThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.Designer.cs">
+      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FLichSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FLichSu.Designer.cs">
+      <DependentUpon>FLichSu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +324,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FChangePassword.resx">
       <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\FCompanyHomePage.resx">
+      <DependentUpon>FCompanyHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ho so\FHoSoChuaDuyet.resx">
+      <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ho so\FHoSoDaDuyet.resx">
+      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhau.resx">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FSuaThongTin.resx">
+      <DependentUpon>FSuaThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
+      <DependentUpon>FThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachCongViec.resx">
+      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSu.resx">
+      <DependentUpon>FLichSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
