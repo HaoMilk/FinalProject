@@ -591,5 +591,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-choose-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh chụp màn hình 2024-03-08 100951.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

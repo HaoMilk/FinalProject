@@ -83,6 +83,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ảnh_chụp_màn_hình_2024_03_08_100951 {
+            get {
+                object obj = ResourceManager.GetObject("Ảnh chụp màn hình 2024-03-08 100951", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap avatar_24 {
             get {
                 object obj = ResourceManager.GetObject("avatar-24", resourceCulture);

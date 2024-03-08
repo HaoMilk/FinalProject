@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FDanhSachVL : Form
+    public partial class FDanhSachVL_Name : Form
     {
-        public FDanhSachVL()
+        public FDanhSachVL_Name()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FDanhSachVL_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

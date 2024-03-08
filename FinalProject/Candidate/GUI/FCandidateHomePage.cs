@@ -71,5 +71,11 @@ namespace FinalProject.Candidate.GUI
         {
             this.Dispose();
         }
+
+        private void menuItem_Dsvl_Click(object sender, EventArgs e)
+        {
+            FDanhSachVL_Name fDanhSachVL = new FDanhSachVL_Name();
+            fDanhSachVL.ShowDialog();
+        }
     }
 }

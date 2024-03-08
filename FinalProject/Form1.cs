@@ -48,5 +48,10 @@ namespace FinalProject
         {
             MessageBox.Show("Đăng ký thành công");
         }
+
+        private void Form_DangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
