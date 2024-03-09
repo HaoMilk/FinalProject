@@ -301,6 +301,12 @@
     <Compile Include="UC\UCDanhSach.Designer.cs">
       <DependentUpon>UCDanhSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCJobCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCJobCard.Designer.cs">
+      <DependentUpon>UCJobCard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,6 +388,9 @@
     </Compile>
     <EmbeddedResource Include="UC\UCDanhSach.resx">
       <DependentUpon>UCDanhSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCJobCard.resx">
+      <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -593,6 +602,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ảnh chụp màn hình 2024-03-08 100951.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_cv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
