@@ -29,37 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.tấtCảCáMứcLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tấtCảKinhNghiệmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dưới1NămToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nămToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nămToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tPHCMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hàNộiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bìnhDươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bìnhPhướcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đồngNaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.vũngTàuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tâyNinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lạngSơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảngNgãiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anGiangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_Search = new FinalProject.UC.UCCustomButton();
+            this.menuStrip_Filter = new System.Windows.Forms.MenuStrip();
+            this.comboBox_ViTri = new System.Windows.Forms.ToolStripComboBox();
+            this.comboBox_NgheNghiep = new System.Windows.Forms.ToolStripComboBox();
+            this.comboBox_MucLuong = new System.Windows.Forms.ToolStripComboBox();
+            this.comboBox_KinhNghiem = new System.Windows.Forms.ToolStripComboBox();
             this.groupBox_ViTri = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_TimKiem = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label_SoLuongViecLam = new System.Windows.Forms.Label();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
+            this.label_SoLuongViecLam = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.menuStrip3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
+            this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,178 +53,194 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.menuStrip3);
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Controls.Add(this.menuStrip2);
+            this.panel1.Controls.Add(this.button_Search);
+            this.panel1.Controls.Add(this.menuStrip_Filter);
             this.panel1.Controls.Add(this.groupBox_ViTri);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 462);
+            this.panel1.Size = new System.Drawing.Size(292, 623);
             this.panel1.TabIndex = 0;
             // 
-            // menuStrip3
+            // button_Search
             // 
-            this.menuStrip3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuStrip3.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tấtCảCáMứcLươngToolStripMenuItem});
-            this.menuStrip3.Location = new System.Drawing.Point(0, 248);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip3.Size = new System.Drawing.Size(292, 30);
-            this.menuStrip3.TabIndex = 3;
-            this.menuStrip3.Text = "menuStrip3";
+            this.button_Search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_Search.BorderRadius = 0;
+            this.button_Search.BorderSize = 0;
+            this.button_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Search.Location = new System.Drawing.Point(0, 569);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
+            this.button_Search.Size = new System.Drawing.Size(292, 54);
+            this.button_Search.TabIndex = 3;
+            this.button_Search.Text = "Tìm kiếm";
+            this.button_Search.TextColor = System.Drawing.Color.White;
+            this.button_Search.UseVisualStyleBackColor = false;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
-            // tấtCảCáMứcLươngToolStripMenuItem
+            // menuStrip_Filter
             // 
-            this.tấtCảCáMứcLươngToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tấtCảCáMứcLươngToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tấtCảCáMứcLươngToolStripMenuItem.Name = "tấtCảCáMứcLươngToolStripMenuItem";
-            this.tấtCảCáMứcLươngToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.tấtCảCáMứcLươngToolStripMenuItem.Text = "Tất cả cá mức lương";
+            this.menuStrip_Filter.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip_Filter.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip_Filter.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip_Filter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comboBox_ViTri,
+            this.comboBox_NgheNghiep,
+            this.comboBox_MucLuong,
+            this.comboBox_KinhNghiem});
+            this.menuStrip_Filter.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.menuStrip_Filter.Location = new System.Drawing.Point(0, 188);
+            this.menuStrip_Filter.Name = "menuStrip_Filter";
+            this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
+            this.menuStrip_Filter.TabIndex = 2;
+            this.menuStrip_Filter.Text = "MenuFilter";
             // 
-            // menuStrip1
+            // comboBox_ViTri
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tấtCảKinhNghiệmToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 218);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(292, 30);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.comboBox_ViTri.BackColor = System.Drawing.SystemColors.Highlight;
+            this.comboBox_ViTri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_ViTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_ViTri.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.comboBox_ViTri.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox_ViTri.Items.AddRange(new object[] {
+            "Tất cả vị trí việc làm",
+            "An Giang",
+            "Bà Rịa - Vũng Tàu",
+            "Bạc Liêu",
+            "Bắc Giang",
+            "Bắc Kạn",
+            "Bắc Ninh",
+            "Bến Tre",
+            "Bình Dương",
+            "Bình Định",
+            "Bình Phước",
+            "Bình Thuận",
+            "Cà Mau",
+            "Cao Bằng",
+            "Cần Thơ",
+            "Đà Nẵng",
+            "Đắk Lắk",
+            "Đắk Nông",
+            "Điện Biên",
+            "Đồng Nai",
+            "Đồng Tháp",
+            "Gia Lai",
+            "Hà Giang",
+            "Hà Nam",
+            "Hà Nội",
+            "Hà Tĩnh",
+            "Hải Dương",
+            "Hải Phòng",
+            "Hậu Giang",
+            "Hòa Bình",
+            "Hưng Yên",
+            "Kiên Giang",
+            "Kon Tum",
+            "Khánh Hòa",
+            "Lai Châu",
+            "Lạng Sơn",
+            "Lào Cai",
+            "Lâm Đồng",
+            "Long An",
+            "Nam Định",
+            "Ninh Bình",
+            "Ninh Thuận",
+            "Nghệ An",
+            "Phú Thọ",
+            "Phú Yên",
+            "Quảng Bình",
+            "Quảng Nam",
+            "Quảng Ninh",
+            "Quảng Ngãi",
+            "Quảng Trị",
+            "Sóc Trăng",
+            "Sơn La",
+            "Tây Ninh",
+            "Tiền Giang",
+            "Tuyên Quang",
+            "Thái Bình",
+            "Thái Nguyên",
+            "Thanh Hóa",
+            "Thành phố Hồ Chí Minh",
+            "Thừa Thiên Huế",
+            "Trà Vinh",
+            "Vĩnh Long",
+            "Vĩnh Phúc",
+            "Yên Bái"});
+            this.comboBox_ViTri.Name = "comboBox_ViTri";
+            this.comboBox_ViTri.Size = new System.Drawing.Size(284, 35);
             // 
-            // tấtCảKinhNghiệmToolStripMenuItem
+            // comboBox_NgheNghiep
             // 
-            this.tấtCảKinhNghiệmToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dưới1NămToolStripMenuItem,
-            this.nămToolStripMenuItem,
-            this.nămToolStripMenuItem1});
-            this.tấtCảKinhNghiệmToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tấtCảKinhNghiệmToolStripMenuItem.Name = "tấtCảKinhNghiệmToolStripMenuItem";
-            this.tấtCảKinhNghiệmToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.tấtCảKinhNghiệmToolStripMenuItem.Text = "Tất cả kinh nghiệm";
+            this.comboBox_NgheNghiep.BackColor = System.Drawing.SystemColors.Highlight;
+            this.comboBox_NgheNghiep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_NgheNghiep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_NgheNghiep.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.comboBox_NgheNghiep.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox_NgheNghiep.Items.AddRange(new object[] {
+            "Tất cả ngành nghề",
+            "IT phần mềm",
+            "Kinh doanh / Bán hàng",
+            "Marketing / Truyền thông / Quảng cáo",
+            "Hành chính / Văn phòng",
+            "Dịch vụ khách hàng",
+            "Tư vấn"});
+            this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
+            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(284, 35);
             // 
-            // dưới1NămToolStripMenuItem
+            // comboBox_MucLuong
             // 
-            this.dưới1NămToolStripMenuItem.Name = "dưới1NămToolStripMenuItem";
-            this.dưới1NămToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.dưới1NămToolStripMenuItem.Text = "Dưới 1 năm";
+            this.comboBox_MucLuong.BackColor = System.Drawing.SystemColors.Highlight;
+            this.comboBox_MucLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_MucLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_MucLuong.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.comboBox_MucLuong.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox_MucLuong.Items.AddRange(new object[] {
+            "Tất cả mức lương",
+            "Dưới 10 triệu",
+            "10 - 15 triệu",
+            "15 - 20 triệu",
+            "20 - 25 triệu",
+            "25 - 30 triệu",
+            "30 - 50 triệu",
+            "Trên 50 triệu",
+            "Thỏa thuận"});
+            this.comboBox_MucLuong.Name = "comboBox_MucLuong";
+            this.comboBox_MucLuong.Size = new System.Drawing.Size(284, 35);
             // 
-            // nămToolStripMenuItem
+            // comboBox_KinhNghiem
             // 
-            this.nămToolStripMenuItem.Name = "nămToolStripMenuItem";
-            this.nămToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.nămToolStripMenuItem.Text = "1 năm";
-            // 
-            // nămToolStripMenuItem1
-            // 
-            this.nămToolStripMenuItem1.Name = "nămToolStripMenuItem1";
-            this.nămToolStripMenuItem1.Size = new System.Drawing.Size(191, 26);
-            this.nămToolStripMenuItem1.Text = "2 năm";
-            // 
-            // menuStrip2
-            // 
-            this.menuStrip2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuStrip2.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 188);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(292, 30);
-            this.menuStrip2.TabIndex = 2;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // tấtCảCácTỉnhThànhPhốToolStripMenuItem
-            // 
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tPHCMToolStripMenuItem,
-            this.hàNộiToolStripMenuItem,
-            this.bìnhDươngToolStripMenuItem,
-            this.bìnhPhướcToolStripMenuItem,
-            this.đồngNaiToolStripMenuItem,
-            this.vũngTàuToolStripMenuItem,
-            this.tâyNinhToolStripMenuItem,
-            this.lạngSơnToolStripMenuItem,
-            this.quảngNgãiToolStripMenuItem,
-            this.anGiangToolStripMenuItem});
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem.Name = "tấtCảCácTỉnhThànhPhốToolStripMenuItem";
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
-            this.tấtCảCácTỉnhThànhPhốToolStripMenuItem.Text = "Tất cả các tỉnh/Thành phố";
-            // 
-            // tPHCMToolStripMenuItem
-            // 
-            this.tPHCMToolStripMenuItem.Name = "tPHCMToolStripMenuItem";
-            this.tPHCMToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.tPHCMToolStripMenuItem.Text = "TP.HCM";
-            // 
-            // hàNộiToolStripMenuItem
-            // 
-            this.hàNộiToolStripMenuItem.Name = "hàNộiToolStripMenuItem";
-            this.hàNộiToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.hàNộiToolStripMenuItem.Text = "Hà Nội";
-            // 
-            // bìnhDươngToolStripMenuItem
-            // 
-            this.bìnhDươngToolStripMenuItem.Name = "bìnhDươngToolStripMenuItem";
-            this.bìnhDươngToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.bìnhDươngToolStripMenuItem.Text = "Bình Dương";
-            // 
-            // bìnhPhướcToolStripMenuItem
-            // 
-            this.bìnhPhướcToolStripMenuItem.Name = "bìnhPhướcToolStripMenuItem";
-            this.bìnhPhướcToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.bìnhPhướcToolStripMenuItem.Text = "Bình Phước";
-            // 
-            // đồngNaiToolStripMenuItem
-            // 
-            this.đồngNaiToolStripMenuItem.Name = "đồngNaiToolStripMenuItem";
-            this.đồngNaiToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.đồngNaiToolStripMenuItem.Text = "Đồng Nai";
-            // 
-            // vũngTàuToolStripMenuItem
-            // 
-            this.vũngTàuToolStripMenuItem.Name = "vũngTàuToolStripMenuItem";
-            this.vũngTàuToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.vũngTàuToolStripMenuItem.Text = "Vũng Tàu";
-            // 
-            // tâyNinhToolStripMenuItem
-            // 
-            this.tâyNinhToolStripMenuItem.Name = "tâyNinhToolStripMenuItem";
-            this.tâyNinhToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.tâyNinhToolStripMenuItem.Text = "Tây Ninh";
-            // 
-            // lạngSơnToolStripMenuItem
-            // 
-            this.lạngSơnToolStripMenuItem.Name = "lạngSơnToolStripMenuItem";
-            this.lạngSơnToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.lạngSơnToolStripMenuItem.Text = "Lạng Sơn";
-            // 
-            // quảngNgãiToolStripMenuItem
-            // 
-            this.quảngNgãiToolStripMenuItem.Name = "quảngNgãiToolStripMenuItem";
-            this.quảngNgãiToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.quảngNgãiToolStripMenuItem.Text = "Quảng Ngãi";
-            // 
-            // anGiangToolStripMenuItem
-            // 
-            this.anGiangToolStripMenuItem.Name = "anGiangToolStripMenuItem";
-            this.anGiangToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
-            this.anGiangToolStripMenuItem.Text = "An Giang";
+            this.comboBox_KinhNghiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.comboBox_KinhNghiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_KinhNghiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox_KinhNghiem.Font = new System.Drawing.Font("Times New Roman", 14F);
+            this.comboBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.Control;
+            this.comboBox_KinhNghiem.Items.AddRange(new object[] {
+            "Tất cả kinh nghiệm",
+            "Dưới 1 năm",
+            "1 - 2 năm",
+            "2 - 4 năm",
+            "4 - 5 năm",
+            "Trên 5 năm"});
+            this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
+            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(284, 35);
             // 
             // groupBox_ViTri
             // 
             this.groupBox_ViTri.BackColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_ViTri.Controls.Add(this.textBox1);
+            this.groupBox_ViTri.Controls.Add(this.textBox_TimKiem);
             this.groupBox_ViTri.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_ViTri.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_ViTri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -253,14 +253,14 @@
             this.groupBox_ViTri.TabStop = false;
             this.groupBox_ViTri.Text = "Vị trí tuyển dụng";
             // 
-            // textBox1
+            // textBox_TimKiem
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 24);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 29);
-            this.textBox1.TabIndex = 1;
+            this.textBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_TimKiem.Location = new System.Drawing.Point(3, 24);
+            this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TimKiem.Name = "textBox_TimKiem";
+            this.textBox_TimKiem.Size = new System.Drawing.Size(286, 29);
+            this.textBox_TimKiem.TabIndex = 1;
             // 
             // panel2
             // 
@@ -274,7 +274,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.Ảnh_chụp_màn_hình_2024_03_08_100951;
+            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.job_search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
@@ -283,16 +283,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(292, 130);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // iconMenuItem1
-            // 
-            this.iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconMenuItem1.IconColor = System.Drawing.Color.Black;
-            this.iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMenuItem1.Name = "iconMenuItem1";
-            this.iconMenuItem1.Size = new System.Drawing.Size(32, 19);
-            this.iconMenuItem1.Text = "iconMenuItem1";
             // 
             // panel3
             // 
@@ -302,22 +292,8 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(292, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(849, 462);
+            this.panel3.Size = new System.Drawing.Size(1048, 623);
             this.panel3.TabIndex = 5;
-            // 
-            // label_SoLuongViecLam
-            // 
-            this.label_SoLuongViecLam.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label_SoLuongViecLam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_SoLuongViecLam.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SoLuongViecLam.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
-            this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
-            this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label_SoLuongViecLam.Size = new System.Drawing.Size(849, 40);
-            this.label_SoLuongViecLam.TabIndex = 4;
-            this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
-            this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // flowLayoutPanel_CongViec
             // 
@@ -328,30 +304,39 @@
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(849, 422);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1048, 583);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
+            // 
+            // label_SoLuongViecLam
+            // 
+            this.label_SoLuongViecLam.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label_SoLuongViecLam.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_SoLuongViecLam.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_SoLuongViecLam.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
+            this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
+            this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.label_SoLuongViecLam.Size = new System.Drawing.Size(1048, 40);
+            this.label_SoLuongViecLam.TabIndex = 4;
+            this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
+            this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FDanhSachVL_Name
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1141, 462);
+            this.ClientSize = new System.Drawing.Size(1340, 623);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachVL_Name";
-            this.Text = "FDanhSachVL";
+            this.Text = "Danh sách việc làm";
             this.Load += new System.EventHandler(this.FDanhSachVL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.menuStrip_Filter.ResumeLayout(false);
+            this.menuStrip_Filter.PerformLayout();
             this.groupBox_ViTri.ResumeLayout(false);
             this.groupBox_ViTri.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -364,32 +349,18 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_TimKiem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox_ViTri;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip3;
-        private System.Windows.Forms.ToolStripMenuItem tấtCảCáMứcLươngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tấtCảKinhNghiệmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dưới1NămToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nămToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nămToolStripMenuItem1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem tấtCảCácTỉnhThànhPhốToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tPHCMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hàNộiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bìnhDươngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bìnhPhướcToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đồngNaiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem vũngTàuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tâyNinhToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lạngSơnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quảngNgãiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anGiangToolStripMenuItem;
-        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip_Filter;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
         private System.Windows.Forms.Label label_SoLuongViecLam;
+        private System.Windows.Forms.ToolStripComboBox comboBox_ViTri;
+        private System.Windows.Forms.ToolStripComboBox comboBox_KinhNghiem;
+        private System.Windows.Forms.ToolStripComboBox comboBox_NgheNghiep;
+        private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
+        private UC.UCCustomButton button_Search;
     }
 }

@@ -1,4 +1,6 @@
-﻿using FinalProject.UC;
+﻿using FinalProject.Candidate.DTO;
+using FinalProject.UC;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +19,15 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            var ucJobCards = CreateJobList(50);
+            this.comboBox_ViTri.SelectedIndex = 0;
+            this.comboBox_KinhNghiem.SelectedIndex = 0;
+            this.comboBox_MucLuong.SelectedIndex = 0;
+            this.comboBox_NgheNghiep.SelectedIndex = 0;
+        }
+
+        private void InitJobList()
+        {
+            var ucJobCards = CreateJobList(10);
             foreach (var ucJobCard in ucJobCards)
             {
                 flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
@@ -25,33 +35,42 @@ namespace FinalProject.Candidate.GUI
             this.label_SoLuongViecLam.Text = "Số lượng việc làm: " + ucJobCards.Count;
         }
 
-        private UCJobCard CreateJobCard(int id, string cvName, DateTime cvUpdatedTime)
-        {
-            UCJobCard ucJobCard = new UCJobCard();
-            ucJobCard.Id = id;
-            ucJobCard.CvName = cvName;
-            ucJobCard.CvUpdatedTime = cvUpdatedTime;
-            //ucJobCard.ScaleSize(0.5f);
-            return ucJobCard;
-        }
-
         private List<UCJobCard> CreateJobList(int quantity)
         {
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
             for (int i = 0; i < quantity; i++)
             {
-                ucJobCards.Add(CreateJobCard(i, "CV " + i, DateTime.Now));
+                UCJobCard ucJobCard = new UCJobCard();
+                ucJobCard.Id = (i + 1);
+                ucJobCard.CvName = $"Việc làm {i + 1}";
+                ucJobCard.CvUpdatedTime = DateTime.Now;
+                //ucJobCard.ScaleSize(0.5f);
+
+                ucJobCards.Add(ucJobCard);
             }
             return ucJobCards;
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
         {
+            InitJobList();
+        }
 
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            var searchCriteria = GetSearchCriteria();
+            MessageBox.Show($"Tìm kiếm: {JsonConvert.SerializeObject(searchCriteria)}");
+        }
+
+        private TimKiemViecLamDto GetSearchCriteria()
+        {
+            TimKiemViecLamDto searchCriteria = new TimKiemViecLamDto();
+            searchCriteria.Search = this.textBox_TimKiem.Text;
+            searchCriteria.ViTri = this.comboBox_ViTri.Text;
+            searchCriteria.NgheNghiep = this.comboBox_NgheNghiep.Text;
+            //searchCriteria.KinhNghiem = this.comboBox_KinhNghiem.Text;
+            //searchCriteria.MucLuong = this.comboBox_MucLuong.Text;
+            return searchCriteria;
         }
     }
 }
