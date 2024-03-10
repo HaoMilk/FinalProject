@@ -1,4 +1,5 @@
-﻿using FinalProject.Candidate.DTO;
+﻿using FinalProject.Candidate.Constants;
+using FinalProject.Candidate.DTO;
 using FinalProject.UC;
 using Newtonsoft.Json;
 using System;
@@ -19,9 +20,18 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            this.comboBox_ViTri.SelectedIndex = 0;
+            this.comboBox_DiaDiem.SelectedIndex = 0;
+
+            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
+            this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
             this.comboBox_KinhNghiem.SelectedIndex = 0;
+
+            var listMucLuong = MucLuongConstants.GetMucLuongList();
+            this.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
             this.comboBox_MucLuong.SelectedIndex = 0;
+
+            var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
+            this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
             this.comboBox_NgheNghiep.SelectedIndex = 0;
         }
 
@@ -66,11 +76,91 @@ namespace FinalProject.Candidate.GUI
         {
             TimKiemViecLamDto searchCriteria = new TimKiemViecLamDto();
             searchCriteria.Search = this.textBox_TimKiem.Text;
-            searchCriteria.ViTri = this.comboBox_ViTri.Text;
+            searchCriteria.DiaDiem = this.comboBox_DiaDiem.Text;
             searchCriteria.NgheNghiep = this.comboBox_NgheNghiep.Text;
-            //searchCriteria.KinhNghiem = this.comboBox_KinhNghiem.Text;
-            //searchCriteria.MucLuong = this.comboBox_MucLuong.Text;
+
+            searchCriteria = KinhNghiemBuilder(searchCriteria);
+            searchCriteria = MucLuongBuilder(searchCriteria);
+
             return searchCriteria;
+        }
+
+        private TimKiemViecLamDto KinhNghiemBuilder(TimKiemViecLamDto timKiemViecLamDto)
+        {
+            switch (this.comboBox_KinhNghiem.Text)
+            {
+                case KinhNghiemConstants.All:
+                    timKiemViecLamDto.MinKinhNghiem = null;
+                    timKiemViecLamDto.MaxKinhNghiem = null;
+                    break;
+                case KinhNghiemConstants.Duoi1Nam:
+                    timKiemViecLamDto.MinKinhNghiem = 0;
+                    timKiemViecLamDto.MaxKinhNghiem = 1;
+                    break;
+                case KinhNghiemConstants.Tu1Den2Nam:
+                    timKiemViecLamDto.MinKinhNghiem = 1;
+                    timKiemViecLamDto.MaxKinhNghiem = 2;
+                    break;
+                case KinhNghiemConstants.Tu2Den5Nam:
+                    timKiemViecLamDto.MinKinhNghiem = 2;
+                    timKiemViecLamDto.MaxKinhNghiem = 5;
+                    break;
+                case KinhNghiemConstants.Tren5Nam:
+                    timKiemViecLamDto.MinKinhNghiem = 5;
+                    timKiemViecLamDto.MaxKinhNghiem = null;
+                    break;
+                case KinhNghiemConstants.KhongYeuCau:
+                    timKiemViecLamDto.MinKinhNghiem = -1;
+                    timKiemViecLamDto.MaxKinhNghiem = -1;
+                    break;
+            }
+            return timKiemViecLamDto;
+        }
+
+        private TimKiemViecLamDto MucLuongBuilder(TimKiemViecLamDto timKiemViecLamDto)
+        {
+            switch (this.comboBox_MucLuong.Text)
+            {
+                case MucLuongConstants.All:
+                    timKiemViecLamDto.MinLuong = null;
+                    timKiemViecLamDto.MaxLuong = null;
+                    timKiemViecLamDto.LuongThoaThuan = false;
+                    break;
+                case MucLuongConstants.Duoi10Trieu:
+                    timKiemViecLamDto.MinLuong = 0;
+                    timKiemViecLamDto.MaxLuong = 10;
+                    break;
+                case MucLuongConstants.Tu10Den15Trieu:
+                    timKiemViecLamDto.MinLuong = 10;
+                    timKiemViecLamDto.MaxLuong = 15;
+                    break;
+                case MucLuongConstants.Tu15Den20Trieu:
+                    timKiemViecLamDto.MinLuong = 15;
+                    timKiemViecLamDto.MaxLuong = 20;
+                    break;
+                case MucLuongConstants.Tu20Den25Trieu:
+                    timKiemViecLamDto.MinLuong = 20;
+                    timKiemViecLamDto.MaxLuong = 25;
+                    break;
+                case MucLuongConstants.Tu25Den30Trieu:
+                    timKiemViecLamDto.MinLuong = 25;
+                    timKiemViecLamDto.MaxLuong = 30;
+                    break;
+                case MucLuongConstants.Tu30Den50Trieu:
+                    timKiemViecLamDto.MinLuong = 30;
+                    timKiemViecLamDto.MaxLuong = 50;
+                    break;
+                case MucLuongConstants.Tren50Trieu:
+                    timKiemViecLamDto.MinLuong = 50;
+                    timKiemViecLamDto.MaxLuong = null;
+                    break;
+                case MucLuongConstants.ThoaThuan:
+                    timKiemViecLamDto.MinLuong = null;
+                    timKiemViecLamDto.MaxLuong = null;
+                    timKiemViecLamDto.LuongThoaThuan = true;
+                    break;
+            }
+            return timKiemViecLamDto;
         }
     }
 }

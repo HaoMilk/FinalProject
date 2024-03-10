@@ -9,12 +9,12 @@ namespace FinalProject.Candidate.DTO
     public class TimKiemViecLamDto
     {
         public string Search { get; set; }
-        public string ViTri { get; set; }
+        public string DiaDiem { get; set; }
         public string NgheNghiep { get; set; }
-        public decimal MinLuong { get; set; }
-        public decimal MaxLuong { get; set; }
-        public bool LuongThoaThuan { get; set; }
-        public decimal MinKinhNghiem { get; set; }
-        public decimal MaxKinhNghiem { get; set; }
+        public decimal? MinLuong { get; set; }
+        public decimal? MaxLuong { get; set; }
+        public bool LuongThoaThuan { get; set; } = false;
+        public decimal? MinKinhNghiem { get; set; }
+        public decimal? MaxKinhNghiem { get; set; }
     }
 }

@@ -200,6 +200,8 @@
     <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.Designer.cs">
       <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
+    <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
     <Compile Include="Candidate\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
