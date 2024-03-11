@@ -434,6 +434,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_menu_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menu-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_save_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-save-32", resourceCulture);
@@ -477,6 +487,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_view_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-view-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_96 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-view-96", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
