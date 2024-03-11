@@ -63,29 +63,9 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _24_sign_in {
-            get {
-                object obj = ResourceManager.GetObject("24_sign_in", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap angular {
             get {
                 object obj = ResourceManager.GetObject("angular", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ảnh_chụp_màn_hình_2024_03_08_100951 {
-            get {
-                object obj = ResourceManager.GetObject("Ảnh chụp màn hình 2024-03-08 100951", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -198,6 +178,16 @@ namespace FinalProject.Properties {
         internal static string CV_Template_for_Software_Engineer {
             get {
                 return ResourceManager.GetString("CV_Template_for_Software_Engineer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap default_cv {
+            get {
+                object obj = ResourceManager.GetObject("default_cv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -434,6 +424,66 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_menu_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menu-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_save_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-save-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sign_in_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sign-in-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_view_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-view-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap java {
             get {
                 object obj = ResourceManager.GetObject("java", resourceCulture);
@@ -457,6 +507,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap javascript {
             get {
                 object obj = ResourceManager.GetObject("javascript", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap job_search {
+            get {
+                object obj = ResourceManager.GetObject("job_search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -667,6 +727,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap stackoverflow {
             get {
                 object obj = ResourceManager.GetObject("stackoverflow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap techny_cybersecurity_with_password_locked_laptop {
+            get {
+                object obj = ResourceManager.GetObject("techny-cybersecurity-with-password-locked-laptop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

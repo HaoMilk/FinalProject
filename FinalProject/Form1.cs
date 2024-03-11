@@ -53,5 +53,10 @@ namespace FinalProject
         {
 
         }
+
+        private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Quên mật khẩu");
+        }
     }
 }
