@@ -35,6 +35,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_NgheNghiep.SelectedIndex = 0;
         }
 
+        #region JobList
         private void InitJobList()
         {
             var ucJobCards = CreateJobList(10);
@@ -60,6 +61,29 @@ namespace FinalProject.Candidate.GUI
             }
             return ucJobCards;
         }
+
+        /// <summary>
+        /// Event khi click vào nút xem chi tiết của UCJobCard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UcJobCard_ViewClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            MessageBox.Show($"Xem chi tiết công việc: {ucJobCard.Id}");
+        }
+
+        /// <summary>
+        /// Event khi click vào menu của UCJobCard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UcJobCard_MenuClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            MessageBox.Show($"Menu công việc: {ucJobCard.Id}");
+        }
+        #endregion JobList
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
         {

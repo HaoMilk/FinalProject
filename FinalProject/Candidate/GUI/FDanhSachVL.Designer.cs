@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Search = new FinalProject.UC.UCCustomButton();
             this.menuStrip_Filter = new System.Windows.Forms.MenuStrip();
             this.comboBox_DiaDiem = new System.Windows.Forms.ToolStripComboBox();
             this.comboBox_NgheNghiep = new System.Windows.Forms.ToolStripComboBox();
@@ -41,7 +42,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.label_SoLuongViecLam = new System.Windows.Forms.Label();
-            this.button_Search = new FinalProject.UC.UCCustomButton();
             this.panel1.SuspendLayout();
             this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
@@ -64,6 +64,30 @@
             this.panel1.Size = new System.Drawing.Size(292, 623);
             this.panel1.TabIndex = 0;
             // 
+            // button_Search
+            // 
+            this.button_Search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_Search.BorderRadius = 0;
+            this.button_Search.BorderSize = 0;
+            this.button_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Search.Location = new System.Drawing.Point(0, 569);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
+            this.button_Search.Size = new System.Drawing.Size(292, 54);
+            this.button_Search.TabIndex = 3;
+            this.button_Search.Text = "Tìm kiếm";
+            this.button_Search.TextColor = System.Drawing.Color.White;
+            this.button_Search.UseVisualStyleBackColor = false;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            // 
             // menuStrip_Filter
             // 
             this.menuStrip_Filter.BackColor = System.Drawing.SystemColors.Highlight;
@@ -79,7 +103,7 @@
             this.menuStrip_Filter.Name = "menuStrip_Filter";
             this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 170);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 
@@ -272,30 +296,6 @@
             this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
             this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button_Search
-            // 
-            this.button_Search.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button_Search.BackgroundColor = System.Drawing.SystemColors.Highlight;
-            this.button_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button_Search.BorderRadius = 0;
-            this.button_Search.BorderSize = 0;
-            this.button_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_Search.FlatAppearance.BorderSize = 0;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
-            this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Search.Location = new System.Drawing.Point(0, 569);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
-            this.button_Search.Size = new System.Drawing.Size(292, 54);
-            this.button_Search.TabIndex = 3;
-            this.button_Search.Text = "Tìm kiếm";
-            this.button_Search.TextColor = System.Drawing.Color.White;
-            this.button_Search.UseVisualStyleBackColor = false;
-            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
-            // 
             // FDanhSachVL_Name
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,12 +330,12 @@
         private System.Windows.Forms.MenuStrip menuStrip_Filter;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
         private System.Windows.Forms.Label label_SoLuongViecLam;
         private System.Windows.Forms.ToolStripComboBox comboBox_DiaDiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_KinhNghiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_NgheNghiep;
         private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
         private UC.UCCustomButton button_Search;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
     }
 }
