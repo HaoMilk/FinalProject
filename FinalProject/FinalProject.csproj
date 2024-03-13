@@ -216,6 +216,18 @@
     <Compile Include="Candidate\GUI\FCandidateInfor.Designer.cs">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachCty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachCty.Designer.cs">
+      <DependentUpon>FDanhSachCty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachDauUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachDauUT.Designer.cs">
+      <DependentUpon>FDanhSachDauUT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FDanhSachVL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +251,12 @@
     </Compile>
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\UC\FUCUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Candidate\UC\FUCUserControl1.Designer.cs">
+      <DependentUpon>FUCUserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\GUI\FChangePassword.cs">
       <SubType>Form</SubType>
@@ -341,6 +359,12 @@
     <EmbeddedResource Include="Candidate\GUI\FCandidateInfor.resx">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachCty.resx">
+      <DependentUpon>FDanhSachCty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachDauUT.resx">
+      <DependentUpon>FDanhSachDauUT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FDanhSachVL.resx">
       <DependentUpon>FDanhSachVL.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\UC\FUCUserControl1.resx">
+      <DependentUpon>FUCUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FChangePassword.resx">
       <DependentUpon>FChangePassword.cs</DependentUpon>
@@ -642,6 +669,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-menu-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-people-partnership-support-team-urban-scene-concept.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -97,5 +97,17 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+
+        private void menuItem_DsCty_Click(object sender, EventArgs e)
+        {
+            FDanhSachCty fDanhSachCty = new FDanhSachCty();
+            fDanhSachCty.ShowDialog();
+        }
+
+        private void menuItem_VieclamUT_Click(object sender, EventArgs e)
+        {
+            FDanhSachDauUT fDanhSachDauUT = new FDanhSachDauUT();
+            fDanhSachDauUT.ShowDialog();
+        }
     }
 }
