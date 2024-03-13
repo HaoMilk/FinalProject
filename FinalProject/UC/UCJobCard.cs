@@ -18,6 +18,9 @@ namespace FinalProject.UC
         private Color buttonMenuBackground = Color.LightCyan;
         private Color labelCvNameTextColor = SystemColors.Highlight;
         private Color labelUpdatedTimeTextColor = Color.Navy;
+        private Image bgImage;
+        private Image buttonViewImage;
+        private Image buttonMenuImage;
         #endregion Fields
 
         #region Properties
@@ -32,6 +35,7 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
+        [DisplayName("ID")]
         public int Id
         {
             get { return id; }
@@ -43,6 +47,7 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
+        [DisplayName("CV Name")]
         public string CvName
         {
             get { return cvName; }
@@ -55,6 +60,7 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
+        [DisplayName("Updated Time")]
         public DateTime CvUpdatedTime
         {
             get { return cvUpdatedTime; }
@@ -67,6 +73,7 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE UI")]
+        [DisplayName("BackColor View")]
         public Color ButtonViewBackground
         {
             get { return buttonViewBackground; }
@@ -79,18 +86,20 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE UI")]
+        [DisplayName("BackColor Menu")]
         public Color ButtonMenuBackground
         {
             get { return buttonMenuBackground; }
             set
             {
                 buttonMenuBackground = value;
-                this.button_menu.BackColor = buttonMenuBackground;
+                this.button_Menu.BackColor = buttonMenuBackground;
                 this.Invalidate();
             }
         }
 
         [Category("CUSTOMIZE UI")]
+        [DisplayName("TextColor CvName")]
         public Color LabelCvNameTextColor
         {
             get { return labelCvNameTextColor; }
@@ -103,7 +112,7 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE UI")]
-        [DisplayName("TextColor for label UpdatedTime")]
+        [DisplayName("TextColor UpdatedTime")]
         public Color LabelUpdatedTimeTextColor
         {
             get { return labelUpdatedTimeTextColor; }
@@ -111,6 +120,57 @@ namespace FinalProject.UC
             {
                 labelUpdatedTimeTextColor = value;
                 this.label_UpdatedTime.ForeColor = labelUpdatedTimeTextColor;
+                this.Invalidate();
+            }
+        }
+
+        [Category("CUSTOMIZE UI")]
+        [DisplayName("Background Image")]
+        public Image BgImage
+        {
+            get { return bgImage; }
+            set
+            {
+                if (value == null)
+                {
+                    value = Properties.Resources.default_cv;
+                }
+                bgImage = value;
+                this.BackgroundImage = bgImage;
+                this.Invalidate();
+            }
+        }
+
+        [Category("CUSTOMIZE UI")]
+        [DisplayName("ButtonView Image")]
+        public Image ButtonViewImage
+        {
+            get { return buttonViewImage; }
+            set
+            {
+                if (value == null)
+                {
+                    value = Properties.Resources.icons8_view_96;
+                }
+                buttonViewImage = value;
+                this.button_View.BackgroundImage = buttonViewImage;
+                this.Invalidate();
+            }
+        }
+
+        [Category("CUSTOMIZE UI")]
+        [DisplayName("ButtonMenu Image")]
+        public Image ButtonMenuImage
+        {
+            get { return buttonMenuImage; }
+            set
+            {
+                if (value == null)
+                {
+                    value = Properties.Resources.icons8_menu_96;
+                }
+                buttonMenuImage = value;
+                this.button_Menu.BackgroundImage = buttonMenuImage;
                 this.Invalidate();
             }
         }
@@ -133,7 +193,7 @@ namespace FinalProject.UC
             MessageBox.Show($"View id = {id}");
         }
 
-        private void button_menu_Click(object sender, EventArgs e)
+        private void button_Menu_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Menu id = {id}");
         }

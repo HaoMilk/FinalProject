@@ -60,7 +60,7 @@
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1329, 40);
+            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1372, 40);
             this.menuStrip_MenuStrip.TabIndex = 0;
             this.menuStrip_MenuStrip.Text = "menuStrip1";
             // 
@@ -94,6 +94,7 @@
             this.menuItem_VieclamUT.Name = "menuItem_VieclamUT";
             this.menuItem_VieclamUT.Size = new System.Drawing.Size(298, 34);
             this.menuItem_VieclamUT.Text = "Việc làm đã ứng tuyển";
+            this.menuItem_VieclamUT.Click += new System.EventHandler(this.menuItem_VieclamUT_Click);
             // 
             // menu_HoSo
             // 
@@ -144,8 +145,9 @@
             this.menuItem_DsCty.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_DsCty.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DsCty.Name = "menuItem_DsCty";
-            this.menuItem_DsCty.Size = new System.Drawing.Size(265, 34);
+            this.menuItem_DsCty.Size = new System.Drawing.Size(270, 34);
             this.menuItem_DsCty.Text = "Danh sách công ty";
+            this.menuItem_DsCty.Click += new System.EventHandler(this.menuItem_DsCty_Click);
             // 
             // menu_TrangCaNhan
             // 
@@ -196,7 +198,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(0, 557);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1329, 28);
+            this.label1.Size = new System.Drawing.Size(1372, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,7 +210,7 @@
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Image.Location = new System.Drawing.Point(0, 40);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(1329, 545);
+            this.pictureBox_Image.Size = new System.Drawing.Size(1372, 545);
             this.pictureBox_Image.TabIndex = 1;
             this.pictureBox_Image.TabStop = false;
             // 
@@ -216,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 585);
+            this.ClientSize = new System.Drawing.Size(1372, 585);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox_Image);
             this.Controls.Add(this.menuStrip_MenuStrip);
