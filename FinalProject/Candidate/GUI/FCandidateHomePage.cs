@@ -45,31 +45,69 @@ namespace FinalProject.Candidate.GUI
 
         private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FCandidateInfor fCandidateInfor = new FCandidateInfor();
             fCandidateInfor.ShowDialog();
+
+            this.Show();
         }
 
         private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FChangePassword fChangePassword = new FChangePassword();
             fChangePassword.ShowDialog();
+
+            this.Show();
         }
 
         private void menuItem_QlyCv_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FQlyCv fQlyCv = new FQlyCv();
             fQlyCv.ShowDialog();
+
+            this.Show();
         }
 
         private void menuItem_MauCv_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FMauCv fMauCv = new FMauCv();
             fMauCv.ShowDialog();
+
+            this.Show();
         }
 
         private void menuItem_DangXuat_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void menuItem_Dsvl_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FDanhSachVL_Name fDanhSachVL = new FDanhSachVL_Name();
+            fDanhSachVL.ShowDialog();
+
+            this.Show();
+        }
+
+        private void menuItem_DsCty_Click(object sender, EventArgs e)
+        {
+            FDanhSachCty fDanhSachCty = new FDanhSachCty();
+            fDanhSachCty.ShowDialog();
+        }
+
+        private void menuItem_VieclamUT_Click(object sender, EventArgs e)
+        {
+            FDanhSachDauUT fDanhSachDauUT = new FDanhSachDauUT();
+            fDanhSachDauUT.ShowDialog();
         }
     }
 }

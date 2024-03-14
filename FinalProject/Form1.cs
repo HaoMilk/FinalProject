@@ -1,5 +1,6 @@
 ﻿using FinalProject.Admin;
 using FinalProject.Candidate.GUI;
+using FinalProject.Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,11 @@ namespace FinalProject
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();
             }    
+            else if (radioButton_NhaTuyenDung.Checked)
+            {
+                FCompanyHomePage fCompanyHomePage = new FCompanyHomePage();
+                fCompanyHomePage.ShowDialog();
+            }
 
             // Show lại
             this.Show();
@@ -41,6 +47,16 @@ namespace FinalProject
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Đăng ký thành công");
+        }
+
+        private void Form_DangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Quên mật khẩu");
         }
     }
 }

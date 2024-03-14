@@ -16,5 +16,10 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
         }
+
+        private void pictureBox_Avatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

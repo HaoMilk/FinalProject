@@ -137,6 +137,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="RJCodeAdance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -197,6 +200,10 @@
     <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.Designer.cs">
       <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
+    <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
+    <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
+    <Compile Include="Candidate\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +216,30 @@
     <Compile Include="Candidate\GUI\FCandidateInfor.Designer.cs">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachCty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachCty.Designer.cs">
+      <DependentUpon>FDanhSachCty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachDauUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachDauUT.Designer.cs">
+      <DependentUpon>FDanhSachDauUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachVL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDanhSachVL.Designer.cs">
+      <DependentUpon>FDanhSachVL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDsCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FDsCv.Designer.cs">
+      <DependentUpon>FDsCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FMauCv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +251,12 @@
     </Compile>
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Candidate\UC\FUCUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Candidate\UC\FUCUserControl1.Designer.cs">
+      <DependentUpon>FUCUserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\GUI\FChangePassword.cs">
       <SubType>Form</SubType>
@@ -289,6 +326,12 @@
     <Compile Include="UC\UCDanhSach.Designer.cs">
       <DependentUpon>UCDanhSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCJobCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCJobCard.Designer.cs">
+      <DependentUpon>UCJobCard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,11 +359,26 @@
     <EmbeddedResource Include="Candidate\GUI\FCandidateInfor.resx">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachCty.resx">
+      <DependentUpon>FDanhSachCty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachDauUT.resx">
+      <DependentUpon>FDanhSachDauUT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDanhSachVL.resx">
+      <DependentUpon>FDanhSachVL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FDsCv.resx">
+      <DependentUpon>FDsCv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FMauCv.resx">
       <DependentUpon>FMauCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\UC\FUCUserControl1.resx">
+      <DependentUpon>FUCUserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FChangePassword.resx">
       <DependentUpon>FChangePassword.cs</DependentUpon>
@@ -364,6 +422,9 @@
     </Compile>
     <EmbeddedResource Include="UC\UCDanhSach.resx">
       <DependentUpon>UCDanhSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCJobCard.resx">
+      <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -572,6 +633,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-choose-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh chụp màn hình 2024-03-08 100951.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_cv.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sign-in-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\techny-cybersecurity-with-password-locked-laptop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business-people-partnership-support-team-urban-scene-concept.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
