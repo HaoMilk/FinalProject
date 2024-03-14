@@ -31,10 +31,10 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox_TimCongTy = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_TimKiem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_DanhSach = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -78,19 +78,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(896, 109);
             this.panel2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(896, 44);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DANH SÁCH CÔNG TY";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox_TimCongTy
             // 
@@ -136,6 +123,19 @@
             this.button_TimKiem.TabIndex = 3;
             this.button_TimKiem.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(896, 44);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "DANH SÁCH CÔNG TY";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // flowLayoutPanel_DanhSach
             // 
             this.flowLayoutPanel_DanhSach.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -156,6 +156,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachCty";
             this.Text = "Danh sách công ty";
+            this.Load += new System.EventHandler(this.FDanhSachCty_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

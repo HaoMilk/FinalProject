@@ -252,6 +252,12 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCCtyCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCCtyCard.Designer.cs">
+      <DependentUpon>UCCtyCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCCtyCard.resx">
+      <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
