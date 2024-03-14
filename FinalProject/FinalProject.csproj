@@ -216,6 +216,12 @@
     <Compile Include="Candidate\GUI\FCandidateInfor.Designer.cs">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Candidate\GUI\FChiTietCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FChiTietCv.Designer.cs">
+      <DependentUpon>FChiTietCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FDanhSachCty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateInfor.resx">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FChiTietCv.resx">
+      <DependentUpon>FChiTietCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FDanhSachCty.resx">
       <DependentUpon>FDanhSachCty.cs</DependentUpon>

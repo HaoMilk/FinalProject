@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Candidate.GUI;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
@@ -190,7 +191,11 @@ namespace FinalProject.UC
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"View id = {id}");
+            FChiTietCv fChiTietCv = new FChiTietCv(); 
+            fChiTietCv.Id = id;
+            fChiTietCv.CvName = cvName;
+            fChiTietCv.CvUpdatedTime = cvUpdatedTime;
+            fChiTietCv.ShowDialog();
         }
 
         private void button_Menu_Click(object sender, EventArgs e)
