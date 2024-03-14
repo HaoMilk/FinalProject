@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Candidate.GUI
+﻿using FinalProject.UC;
+
+namespace FinalProject.Candidate.GUI
 {
     partial class FDanhSachVL_Name
     {
@@ -335,7 +337,7 @@
         private System.Windows.Forms.ToolStripComboBox comboBox_KinhNghiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_NgheNghiep;
         private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
-        private UC.UCCustomButton button_Search;
+        private UCCustomButton button_Search;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
     }
 }
