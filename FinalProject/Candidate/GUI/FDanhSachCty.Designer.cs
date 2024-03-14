@@ -28,51 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox_TimCongTy = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Contro_TimKiem = new System.Windows.Forms.Button();
-            this.dataGridView_DanhSachCty = new System.Windows.Forms.DataGridView();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.button_TimKiem = new System.Windows.Forms.Button();
+            this.flowLayoutPanel_DanhSach = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.groupBox_TimCongTy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachCty)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // tableLayoutPanel1
             // 
-            this.panel1.Controls.Add(this.splitContainer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 135);
-            this.panel1.TabIndex = 0;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1102, 115);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // splitContainer1
+            // pictureBox1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.business_people_partnership_support_team_urban_scene_concept;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 111);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // splitContainer1.Panel1
+            // panel2
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.Contro_TimKiem);
-            this.splitContainer1.Panel2.Controls.Add(this.groupBox_TimCongTy);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(1240, 135);
-            this.splitContainer1.SplitterDistance = 291;
-            this.splitContainer1.TabIndex = 0;
+            this.panel2.Controls.Add(this.groupBox_TimCongTy);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(203, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(896, 109);
+            this.panel2.TabIndex = 3;
             // 
             // label1
             // 
@@ -82,99 +87,92 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(945, 58);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(896, 44);
+            this.label1.TabIndex = 1;
             this.label1.Text = "DANH SÁCH CÔNG TY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.business_people_partnership_support_team_urban_scene_concept;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(291, 135);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox_TimCongTy
             // 
             this.groupBox_TimCongTy.BackColor = System.Drawing.SystemColors.Highlight;
             this.groupBox_TimCongTy.Controls.Add(this.textBox1);
+            this.groupBox_TimCongTy.Controls.Add(this.button_TimKiem);
             this.groupBox_TimCongTy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_TimCongTy.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_TimCongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_TimCongTy.Location = new System.Drawing.Point(0, 58);
+            this.groupBox_TimCongTy.Location = new System.Drawing.Point(0, 44);
+            this.groupBox_TimCongTy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_TimCongTy.Name = "groupBox_TimCongTy";
-            this.groupBox_TimCongTy.Size = new System.Drawing.Size(945, 77);
-            this.groupBox_TimCongTy.TabIndex = 1;
+            this.groupBox_TimCongTy.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox_TimCongTy.Size = new System.Drawing.Size(896, 65);
+            this.groupBox_TimCongTy.TabIndex = 2;
             this.groupBox_TimCongTy.TabStop = false;
             this.groupBox_TimCongTy.Text = "Tên công ty";
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 26);
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(5, 25);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(939, 30);
+            this.textBox1.Size = new System.Drawing.Size(809, 34);
             this.textBox1.TabIndex = 0;
             // 
-            // Contro_TimKiem
+            // button_TimKiem
             // 
-            this.Contro_TimKiem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Contro_TimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Contro_TimKiem.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contro_TimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Contro_TimKiem.Location = new System.Drawing.Point(772, 58);
-            this.Contro_TimKiem.Name = "Contro_TimKiem";
-            this.Contro_TimKiem.Size = new System.Drawing.Size(173, 77);
-            this.Contro_TimKiem.TabIndex = 2;
-            this.Contro_TimKiem.Text = "Tìm kiếm";
-            this.Contro_TimKiem.UseVisualStyleBackColor = false;
+            this.button_TimKiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_TimKiem.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.button_TimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_TimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_TimKiem.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_TimKiem.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_TimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_TimKiem.Location = new System.Drawing.Point(814, 25);
+            this.button_TimKiem.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.button_TimKiem.Name = "button_TimKiem";
+            this.button_TimKiem.Size = new System.Drawing.Size(77, 35);
+            this.button_TimKiem.TabIndex = 3;
+            this.button_TimKiem.UseVisualStyleBackColor = false;
             // 
-            // dataGridView_DanhSachCty
+            // flowLayoutPanel_DanhSach
             // 
-            this.dataGridView_DanhSachCty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_DanhSachCty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_DanhSachCty.Location = new System.Drawing.Point(0, 135);
-            this.dataGridView_DanhSachCty.Name = "dataGridView_DanhSachCty";
-            this.dataGridView_DanhSachCty.RowHeadersWidth = 62;
-            this.dataGridView_DanhSachCty.RowTemplate.Height = 28;
-            this.dataGridView_DanhSachCty.Size = new System.Drawing.Size(1240, 443);
-            this.dataGridView_DanhSachCty.TabIndex = 1;
+            this.flowLayoutPanel_DanhSach.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.flowLayoutPanel_DanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel_DanhSach.Location = new System.Drawing.Point(0, 115);
+            this.flowLayoutPanel_DanhSach.Name = "flowLayoutPanel_DanhSach";
+            this.flowLayoutPanel_DanhSach.Size = new System.Drawing.Size(1102, 648);
+            this.flowLayoutPanel_DanhSach.TabIndex = 3;
             // 
             // FDanhSachCty
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1240, 578);
-            this.Controls.Add(this.dataGridView_DanhSachCty);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1102, 763);
+            this.Controls.Add(this.flowLayoutPanel_DanhSach);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachCty";
-            this.Text = "FDanhSachCty";
-            this.panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.Text = "Danh sách công ty";
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.groupBox_TimCongTy.ResumeLayout(false);
             this.groupBox_TimCongTy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachCty)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox_TimCongTy;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button Contro_TimKiem;
-        private System.Windows.Forms.DataGridView dataGridView_DanhSachCty;
+        private System.Windows.Forms.Button button_TimKiem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_DanhSach;
     }
 }
