@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FDanhSachDauUT : Form
+    public partial class FDanhSachDaUT : Form
     {
-        public FDanhSachDauUT()
+        public FDanhSachDaUT()
         {
             InitializeComponent();
         }
 
         private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

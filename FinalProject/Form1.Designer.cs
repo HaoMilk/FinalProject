@@ -69,7 +69,7 @@
             this.groupBox_PhanQuyen.Location = new System.Drawing.Point(152, 340);
             this.groupBox_PhanQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_PhanQuyen.Name = "groupBox_PhanQuyen";
-            this.groupBox_PhanQuyen.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.groupBox_PhanQuyen.Padding = new System.Windows.Forms.Padding(15);
             this.groupBox_PhanQuyen.Size = new System.Drawing.Size(450, 89);
             this.groupBox_PhanQuyen.TabIndex = 2;
             this.groupBox_PhanQuyen.TabStop = false;
@@ -123,7 +123,7 @@
             this.groupBox_Name.Location = new System.Drawing.Point(152, 99);
             this.groupBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Name.Name = "groupBox_Name";
-            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(15);
             this.groupBox_Name.Size = new System.Drawing.Size(450, 94);
             this.groupBox_Name.TabIndex = 3;
             this.groupBox_Name.TabStop = false;
@@ -138,7 +138,7 @@
             this.groupBox_Pass.Location = new System.Drawing.Point(152, 222);
             this.groupBox_Pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Pass.Name = "groupBox_Pass";
-            this.groupBox_Pass.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.groupBox_Pass.Padding = new System.Windows.Forms.Padding(15);
             this.groupBox_Pass.Size = new System.Drawing.Size(450, 98);
             this.groupBox_Pass.TabIndex = 4;
             this.groupBox_Pass.TabStop = false;
@@ -188,7 +188,7 @@
             this.linkLabel_DangKy.Location = new System.Drawing.Point(200, 0);
             this.linkLabel_DangKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel_DangKy.Name = "linkLabel_DangKy";
-            this.linkLabel_DangKy.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.linkLabel_DangKy.Padding = new System.Windows.Forms.Padding(8);
             this.linkLabel_DangKy.Size = new System.Drawing.Size(95, 39);
             this.linkLabel_DangKy.TabIndex = 1;
             this.linkLabel_DangKy.TabStop = true;
@@ -204,7 +204,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.label1.Padding = new System.Windows.Forms.Padding(8);
             this.label1.Size = new System.Drawing.Size(200, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chưa có tài khoản ? ";
@@ -217,7 +217,7 @@
             this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(216, 612);
             this.linkLabel_QuenMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel_QuenMatKhau.Name = "linkLabel_QuenMatKhau";
-            this.linkLabel_QuenMatKhau.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.linkLabel_QuenMatKhau.Padding = new System.Windows.Forms.Padding(8);
             this.linkLabel_QuenMatKhau.Size = new System.Drawing.Size(328, 40);
             this.linkLabel_QuenMatKhau.TabIndex = 8;
             this.linkLabel_QuenMatKhau.TabStop = true;
@@ -242,7 +242,7 @@
             this.button_DangNhap.Location = new System.Drawing.Point(217, 472);
             this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_DangNhap.Name = "button_DangNhap";
-            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(8);
             this.button_DangNhap.Size = new System.Drawing.Size(327, 66);
             this.button_DangNhap.TabIndex = 6;
             this.button_DangNhap.Text = "ĐĂNG NHẬP";

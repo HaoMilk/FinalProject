@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.UC
 {
-    public partial class FUCUserControl1 : UserControl
+    public partial class UCUserSetting : UserControl
     {
-        public FUCUserControl1()
+        public UCUserSetting()
         {
             InitializeComponent();
         }

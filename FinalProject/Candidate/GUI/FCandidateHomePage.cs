@@ -106,7 +106,7 @@ namespace FinalProject.Candidate.GUI
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FDanhSachDauUT fDanhSachDauUT = new FDanhSachDauUT();
+            FDanhSachDaUT fDanhSachDauUT = new FDanhSachDaUT();
             fDanhSachDauUT.ShowDialog();
         }
     }
