@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Candidate.UC
+namespace FinalProject.Candidate.GUI
 {
-    public partial class FUCUserControl1 : UserControl
+    public partial class FDanhSachDaUT : Form
     {
-        public FUCUserControl1()
+        public FDanhSachDaUT()
         {
             InitializeComponent();
         }
 
-        private void label_name1_Click(object sender, EventArgs e)
+        private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

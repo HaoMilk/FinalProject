@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Candidate.GUI
+namespace FinalProject.Candidate.UC
 {
-    public partial class FDanhSachDauUT : Form
+    public partial class UCUserSetting : UserControl
     {
-        public FDanhSachDauUT()
+        public UCUserSetting()
         {
             InitializeComponent();
         }
 
-        private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        private void label_name1_Click(object sender, EventArgs e)
         {
 
         }

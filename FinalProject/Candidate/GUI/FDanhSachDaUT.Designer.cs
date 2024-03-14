@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.Candidate.GUI
 {
-    partial class FDanhSachDauUT
+    partial class FDanhSachDaUT
     {
         /// <summary>
         /// Required designer variable.
@@ -28,78 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label_Ten = new System.Windows.Forms.Label();
             this.groupBox_TenTrangThai = new System.Windows.Forms.GroupBox();
             this.rjComboBox1 = new RJCodeAdvance.RJControls.RJComboBox();
-            this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.ucUserSetting1 = new FinalProject.Candidate.UC.UCUserSetting();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.groupBox_TenTrangThai.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.splitContainer1);
-            this.panel1.Controls.Add(this.menuStrip1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1253, 586);
-            this.panel1.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(1228, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(25, 586);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(9, 4);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1228, 586);
-            this.splitContainer1.SplitterDistance = 869;
-            this.splitContainer1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.splitContainer2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(869, 100);
+            this.panel2.Size = new System.Drawing.Size(785, 100);
             this.panel2.TabIndex = 0;
             // 
             // splitContainer2
@@ -115,17 +66,9 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox_TenTrangThai);
-            this.splitContainer2.Size = new System.Drawing.Size(869, 100);
-            this.splitContainer2.SplitterDistance = 376;
+            this.splitContainer2.Size = new System.Drawing.Size(785, 100);
+            this.splitContainer2.SplitterDistance = 499;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 100);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(869, 486);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // label_Ten
             // 
@@ -135,7 +78,7 @@
             this.label_Ten.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_Ten.Location = new System.Drawing.Point(0, 0);
             this.label_Ten.Name = "label_Ten";
-            this.label_Ten.Size = new System.Drawing.Size(376, 100);
+            this.label_Ten.Size = new System.Drawing.Size(499, 100);
             this.label_Ten.TabIndex = 0;
             this.label_Ten.Text = "Công việc đã ứng tuyển";
             this.label_Ten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,7 +92,7 @@
             this.groupBox_TenTrangThai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox_TenTrangThai.Location = new System.Drawing.Point(0, 0);
             this.groupBox_TenTrangThai.Name = "groupBox_TenTrangThai";
-            this.groupBox_TenTrangThai.Size = new System.Drawing.Size(489, 100);
+            this.groupBox_TenTrangThai.Size = new System.Drawing.Size(282, 100);
             this.groupBox_TenTrangThai.TabIndex = 0;
             this.groupBox_TenTrangThai.TabStop = false;
             this.groupBox_TenTrangThai.Text = "Trạng thái";
@@ -174,48 +117,62 @@
             this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(483, 71);
+            this.rjComboBox1.Size = new System.Drawing.Size(276, 71);
             this.rjComboBox1.TabIndex = 1;
             this.rjComboBox1.Texts = "";
             this.rjComboBox1.OnSelectedIndexChanged += new System.EventHandler(this.rjComboBox1_OnSelectedIndexChanged);
+            // 
+            // ucUserSetting1
+            // 
+            this.ucUserSetting1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucUserSetting1.Location = new System.Drawing.Point(794, 3);
+            this.ucUserSetting1.Name = "ucUserSetting1";
+            this.ucUserSetting1.Size = new System.Drawing.Size(334, 586);
+            this.ucUserSetting1.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ucUserSetting1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1131, 548);
+            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // FDanhSachDauUT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1253, 586);
-            this.Controls.Add(this.panel1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(1131, 548);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FDanhSachDauUT";
             this.Text = "FDanhSachDauUT";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.groupBox_TenTrangThai.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Label label_Ten;
         private System.Windows.Forms.GroupBox groupBox_TenTrangThai;
         private RJCodeAdvance.RJControls.RJComboBox rjComboBox1;
+        private UC.UCUserSetting ucUserSetting1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
