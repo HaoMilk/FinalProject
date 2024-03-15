@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.UC;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +18,59 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
-        private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        #region JobList
+        private void InitJobList()
         {
-
+            var ucJobCards = CreateJobList(20);
+            foreach (var ucJobCard in ucJobCards)
+            {
+                flowLayoutPanel_Data.Controls.Add(ucJobCard);
+            }
+            //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private List<UCJobCard> CreateJobList(int quantity)
         {
+            List<UCJobCard> ucJobCards = new List<UCJobCard>();
+            for (int i = 0; i < quantity; i++)
+            {
+                UCJobCard ucJobCard = new UCJobCard();
+                ucJobCard.Id = (i + 1);
+                ucJobCard.CvName = $"Việc làm {i + 1}";
+                ucJobCard.CvUpdatedTime = DateTime.Now;
+                //ucJobCard.ScaleSize(0.5f);
 
+                ucJobCards.Add(ucJobCard);
+            }
+            return ucJobCards;
+        }
+
+        /// <summary>
+        /// Event khi click vào nút xem chi tiết của UCJobCard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UcJobCard_ViewClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            MessageBox.Show($"Xem chi tiết công việc: {ucJobCard.Id}");
+        }
+
+        /// <summary>
+        /// Event khi click vào menu của UCJobCard
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void UcJobCard_MenuClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            MessageBox.Show($"Menu công việc: {ucJobCard.Id}");
+        }
+        #endregion JobList
+
+        private void FDanhSachDaUT_Load(object sender, EventArgs e)
+        {
+            InitJobList();
         }
     }
 }
