@@ -117,20 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="richTextBox_MoTaCv.Text" xml:space="preserve">
-    <value>- Kiểm tra và ghi nhận vào phần mềm kế toán các chứng từ liên quan
-- Ghi nhận các khoản chi phí theo đúng đối tượng sử dụng và khoản mục chi phí
-- Tiếp nhận và kiểm tra chứng từ đề nghị thanh toán, tạm ứng, quyết toán tạm ứng.
-- Lập hồ sơ thanh toán cho nhà cung cấp theo kế hoạch thanh toán
-- Theo dõi tiền gửi ngân hàng, nghiệp vụ tạm ứng.
-- Lập phiếu xuất bán hàng và hóa đơn giá trị gia tăng
-- Kiểm tra, đối chiếu chứng từ trước khi xuất hàng
-- Kiểm tra đối chiếu hàng hóa nhập/xuất kho phối hợp với bộ phận kho kiểm tra hàng tồn
-- Lập bảng kê hàng hóa dịch vụ mua vào, lưu trữ hóa đơn và chứng từ
-- Khấu hao tài sản cố định, phân bổ chi phí trả trước hàng tháng.
-- Các công việc khác sẽ trao đổi khi phỏng vấn.</value>
-  </data>
 </root>
