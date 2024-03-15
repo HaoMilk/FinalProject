@@ -50,9 +50,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.lblLicSu);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Location = new System.Drawing.Point(175, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1045, 348);
