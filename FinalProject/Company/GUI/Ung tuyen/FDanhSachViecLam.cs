@@ -21,5 +21,19 @@ namespace FinalProject.Company.GUI.Ung_tuyen
         {
 
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+                    }
+
+        private void FDanhSachViecLam_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
