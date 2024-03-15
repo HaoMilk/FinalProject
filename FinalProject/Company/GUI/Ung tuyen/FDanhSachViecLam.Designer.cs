@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    partial class FDanhSachCongViec
+    partial class FDanhSachViecLam
     {
         /// <summary>
         /// Required designer variable.
@@ -357,13 +357,13 @@
             this.textBox_Search.Size = new System.Drawing.Size(775, 30);
             this.textBox_Search.TabIndex = 0;
             // 
-            // FDanhSachCongViec
+            // FDanhSachViecLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1559, 522);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FDanhSachCongViec";
+            this.Name = "FDanhSachViecLam";
             this.Text = "FDanhSachCongViec";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cv)).EndInit();
             this.groupBox3.ResumeLayout(false);

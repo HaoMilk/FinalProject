@@ -300,11 +300,11 @@
     <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.Designer.cs">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.Designer.cs">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\Ung tuyen\FLichSu.cs">
       <SubType>Form</SubType>
@@ -401,8 +401,8 @@
     <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachCongViec.resx">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachViecLam.resx">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSu.resx">
       <DependentUpon>FLichSu.cs</DependentUpon>

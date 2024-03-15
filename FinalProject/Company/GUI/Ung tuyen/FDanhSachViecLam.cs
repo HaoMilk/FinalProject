@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FDanhSachCongViec : Form
+    public partial class FDanhSachViecLam : Form
     {
-        public FDanhSachCongViec()
+        public FDanhSachViecLam()
         {
             InitializeComponent();
         }
