@@ -66,7 +66,7 @@
             this.groupBox_PhanQuyen.Controls.Add(this.radioButton__UngVien);
             this.groupBox_PhanQuyen.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_PhanQuyen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_PhanQuyen.Location = new System.Drawing.Point(152, 340);
+            this.groupBox_PhanQuyen.Location = new System.Drawing.Point(152, 295);
             this.groupBox_PhanQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_PhanQuyen.Name = "groupBox_PhanQuyen";
             this.groupBox_PhanQuyen.Padding = new System.Windows.Forms.Padding(15);
@@ -124,7 +124,7 @@
             this.groupBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Name.Name = "groupBox_Name";
             this.groupBox_Name.Padding = new System.Windows.Forms.Padding(15);
-            this.groupBox_Name.Size = new System.Drawing.Size(450, 94);
+            this.groupBox_Name.Size = new System.Drawing.Size(450, 90);
             this.groupBox_Name.TabIndex = 3;
             this.groupBox_Name.TabStop = false;
             this.groupBox_Name.Text = "Tên đăng nhập";
@@ -135,7 +135,7 @@
             this.groupBox_Pass.Controls.Add(this.textBox_MatKhau);
             this.groupBox_Pass.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_Pass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_Pass.Location = new System.Drawing.Point(152, 222);
+            this.groupBox_Pass.Location = new System.Drawing.Point(152, 193);
             this.groupBox_Pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Pass.Name = "groupBox_Pass";
             this.groupBox_Pass.Padding = new System.Windows.Forms.Padding(15);
@@ -173,7 +173,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.linkLabel_DangKy);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(217, 551);
+            this.panel1.Location = new System.Drawing.Point(216, 484);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
@@ -214,7 +214,7 @@
             this.linkLabel_QuenMatKhau.BackColor = System.Drawing.SystemColors.Highlight;
             this.linkLabel_QuenMatKhau.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel_QuenMatKhau.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(216, 612);
+            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(215, 545);
             this.linkLabel_QuenMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel_QuenMatKhau.Name = "linkLabel_QuenMatKhau";
             this.linkLabel_QuenMatKhau.Padding = new System.Windows.Forms.Padding(8);
@@ -235,15 +235,15 @@
             this.button_DangNhap.BorderSize = 0;
             this.button_DangNhap.FlatAppearance.BorderSize = 0;
             this.button_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DangNhap.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.button_DangNhap.Font = new System.Drawing.Font("SVN-Avengeance", 12F, System.Drawing.FontStyle.Bold);
             this.button_DangNhap.ForeColor = System.Drawing.Color.White;
             this.button_DangNhap.Image = global::FinalProject.Properties.Resources.icons8_sign_in_24;
             this.button_DangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_DangNhap.Location = new System.Drawing.Point(217, 472);
+            this.button_DangNhap.Location = new System.Drawing.Point(216, 405);
             this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_DangNhap.Name = "button_DangNhap";
             this.button_DangNhap.Padding = new System.Windows.Forms.Padding(8);
-            this.button_DangNhap.Size = new System.Drawing.Size(327, 66);
+            this.button_DangNhap.Size = new System.Drawing.Size(327, 70);
             this.button_DangNhap.TabIndex = 6;
             this.button_DangNhap.Text = "ĐĂNG NHẬP";
             this.button_DangNhap.TextColor = System.Drawing.Color.White;
