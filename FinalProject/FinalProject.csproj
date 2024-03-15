@@ -137,6 +137,9 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -151,6 +154,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -294,23 +299,23 @@
     <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.Designer.cs">
       <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.cs">
+    <Compile Include="Company\GUI\Thong tin\FDoiMatKhauCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.Designer.cs">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    <Compile Include="Company\GUI\Thong tin\FDoiMatKhauCT.Designer.cs">
+      <DependentUpon>FDoiMatKhauCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.cs">
+    <Compile Include="Company\GUI\Thong tin\FSuaThongTinCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.Designer.cs">
-      <DependentUpon>FSuaThongTin.cs</DependentUpon>
+    <Compile Include="Company\GUI\Thong tin\FSuaThongTinCT.Designer.cs">
+      <DependentUpon>FSuaThongTinCT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
+    <Compile Include="Company\GUI\Thong tin\FThongTinCT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <Compile Include="Company\GUI\Thong tin\FThongTinCT.Designer.cs">
+      <DependentUpon>FThongTinCT.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
@@ -318,11 +323,11 @@
     <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.Designer.cs">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FLichSu.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FLichSuTuyenDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FLichSu.Designer.cs">
-      <DependentUpon>FLichSu.cs</DependentUpon>
+    <Compile Include="Company\GUI\Ung tuyen\FLichSuTuyenDung.Designer.cs">
+      <DependentUpon>FLichSuTuyenDung.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -410,20 +415,20 @@
     <EmbeddedResource Include="Company\GUI\Ho so\FHoSoDaDuyet.resx">
       <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhau.resx">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhauCT.resx">
+      <DependentUpon>FDoiMatKhauCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FSuaThongTin.resx">
-      <DependentUpon>FSuaThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FSuaThongTinCT.resx">
+      <DependentUpon>FSuaThongTinCT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Thong tin\FThongTinCT.resx">
+      <DependentUpon>FThongTinCT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSu.resx">
-      <DependentUpon>FLichSu.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSuTuyenDung.resx">
+      <DependentUpon>FLichSuTuyenDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

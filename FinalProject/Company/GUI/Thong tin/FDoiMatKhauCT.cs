@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Thong_tin
 {
-    public partial class FDoiMatKhau : Form
+    public partial class FDoiMatKhauCT : Form
     {
-        public FDoiMatKhau()
+        public FDoiMatKhauCT()
         {
             InitializeComponent();
         }

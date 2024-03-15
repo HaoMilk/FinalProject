@@ -29,14 +29,14 @@ namespace FinalProject.Company
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FLichSu fLichSu = new FLichSu();
+            FLichSuTuyenDung fLichSu = new FLichSuTuyenDung();
             fLichSu.Show();
         }
 
         private void hồSơĐãDuyệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FHoSoDaDuyet fHoSoDaDuyet = new FHoSoDaDuyet();
-            fHoSoDaDuyet.Show();
+           fHoSoDaDuyet.Show();
         }
 
         private void hồSơChưaDuyệtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,13 +53,13 @@ namespace FinalProject.Company
 
         private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            FThongTin fThongTin = new FThongTin();
+            FThongTinCT fThongTin = new FThongTinCT();
             fThongTin.Show();
         }
 
         private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            FDoiMatKhauCT fDoiMatKhau = new FDoiMatKhauCT();
             fDoiMatKhau.Show();
         }
 

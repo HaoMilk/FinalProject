@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FLichSu : Form
+    public partial class FLichSuTuyenDung : Form
     {
-        public FLichSu()
+        public FLichSuTuyenDung()
         {
             InitializeComponent();
         }

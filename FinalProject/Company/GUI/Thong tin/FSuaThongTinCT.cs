@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Thong_tin
 {
-    public partial class FSuaThongTin : Form
+    public partial class FSuaThongTinCT : Form
     {
-        public FSuaThongTin()
+        public FSuaThongTinCT()
         {
             InitializeComponent();
         }
