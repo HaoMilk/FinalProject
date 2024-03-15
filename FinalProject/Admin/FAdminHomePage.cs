@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinalProject.Candidate.GUI;
+using FinalProject.Company.GUI.Thong_tin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +49,18 @@ namespace FinalProject.Admin
         {
             FDanhSachCongViec fDanhSachCongViec = new FDanhSachCongViec();
             fDanhSachCongViec.ShowDialog();
+        }
+
+        private void thêmỨngViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FCandidateInfor fCandidateInfor = new FCandidateInfor();
+            fCandidateInfor .ShowDialog();
+        }
+
+        private void tàiKhoảnVàMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            fDoiMatKhau.ShowDialog();
         }
     }
 }
