@@ -1,4 +1,8 @@
-﻿using System;
+﻿using FinalProject.Admin;
+using FinalProject.Company.GUI.Ho_so;
+using FinalProject.Company.GUI.Thong_tin;
+using FinalProject.Company.GUI.Ung_tuyen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +19,53 @@ namespace FinalProject.Company
         public FCompanyHomePage()
         {
             InitializeComponent();
+        }
+
+        private void menuItem_Dsvl_Click(object sender, EventArgs e)
+        {
+            FDanhSachViecLam fDanhSachViecLam = new FDanhSachViecLam();
+            fDanhSachViecLam.Show();
+        }
+
+        private void menuItem_VieclamUT_Click(object sender, EventArgs e)
+        {
+            FLichSu fLichSu = new FLichSu();
+            fLichSu.Show();
+        }
+
+        private void hồSơĐãDuyệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FHoSoDaDuyet fHoSoDaDuyet = new FHoSoDaDuyet();
+            fHoSoDaDuyet.Show();
+        }
+
+        private void hồSơChưaDuyệtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FHoSoChuaDuyet fHoSoChuaDuyet = new FHoSoChuaDuyet();
+            fHoSoChuaDuyet.Show();
+        }
+
+        private void menuItem_DsCty_Click(object sender, EventArgs e)
+        {
+            FDanhSachUngVien fDanhSachUngVien = new FDanhSachUngVien();
+            fDanhSachUngVien.Show();
+        }
+
+        private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            FThongTin fThongTin = new FThongTin();
+            fThongTin.Show();
+        }
+
+        private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            fDoiMatKhau.Show();
+        }
+
+        private void menuItem_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
