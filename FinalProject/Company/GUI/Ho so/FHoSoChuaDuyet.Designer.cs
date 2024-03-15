@@ -232,7 +232,7 @@
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(594, 38);
             this.dataGridView2.Name = "dataGridView2";
@@ -255,7 +255,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 38);
             this.dataGridView1.Name = "dataGridView1";
@@ -266,6 +266,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.btnDuyet);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnTuChoi);
@@ -286,7 +287,7 @@
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(162, 27);
+            this.panel1.Location = new System.Drawing.Point(54, 29);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1211, 513);
             this.panel1.TabIndex = 1;
@@ -295,7 +296,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1534, 566);
+            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ClientSize = new System.Drawing.Size(1387, 566);
             this.Controls.Add(this.panel1);
             this.Name = "FHoSoChuaDuyet";
             this.Text = "FHoSoChuaDuyet";
