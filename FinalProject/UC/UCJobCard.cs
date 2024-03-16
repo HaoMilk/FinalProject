@@ -202,5 +202,10 @@ namespace FinalProject.UC
         {
             MessageBox.Show($"Menu id = {id}");
         }
+
+        private void label_CvName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

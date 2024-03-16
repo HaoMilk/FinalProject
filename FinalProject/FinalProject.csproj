@@ -397,6 +397,7 @@
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>

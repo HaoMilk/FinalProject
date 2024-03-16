@@ -52,5 +52,20 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
         }
+
+        private void label_CvName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FChiTietCv_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
