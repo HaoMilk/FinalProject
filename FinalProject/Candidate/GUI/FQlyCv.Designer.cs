@@ -45,12 +45,12 @@
             this.button_Them = new System.Windows.Forms.Button();
             this.button_ChonFile = new System.Windows.Forms.Button();
             this.label_Name = new System.Windows.Forms.Label();
+            this.dataGridView_Cv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.button_TimKiem = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
-            this.dataGridView_Cv = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,15 +61,15 @@
             this.groupBox_Status.SuspendLayout();
             this.groupBox_Name.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cv)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cv)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 84);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -78,14 +78,13 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.splitContainer1.Panel1.Controls.Add(this.panel2);
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainer1.Panel1.Controls.Add(this.label_Name);
             this.splitContainer1.Panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView_Cv);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1323, 651);
+            this.splitContainer1.Size = new System.Drawing.Size(1323, 567);
             this.splitContainer1.SplitterDistance = 422;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -224,7 +223,7 @@
             this.tableLayoutPanel2.Controls.Add(this.button_Them, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button_ChonFile, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 553);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 469);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -311,15 +310,30 @@
             // 
             // label_Name
             // 
-            this.label_Name.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label_Name.BackColor = System.Drawing.Color.DarkSalmon;
             this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.Location = new System.Drawing.Point(0, 0);
+            this.label_Name.ForeColor = System.Drawing.Color.Azure;
+            this.label_Name.Location = new System.Drawing.Point(0, 40);
             this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(422, 30);
+            this.label_Name.Size = new System.Drawing.Size(1323, 44);
             this.label_Name.TabIndex = 7;
             this.label_Name.Text = "QUẢN LÝ CV";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView_Cv
+            // 
+            this.dataGridView_Cv.BackgroundColor = System.Drawing.Color.Azure;
+            this.dataGridView_Cv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Cv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_Cv.Location = new System.Drawing.Point(0, 50);
+            this.dataGridView_Cv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView_Cv.Name = "dataGridView_Cv";
+            this.dataGridView_Cv.RowHeadersWidth = 62;
+            this.dataGridView_Cv.RowTemplate.Height = 28;
+            this.dataGridView_Cv.Size = new System.Drawing.Size(897, 517);
+            this.dataGridView_Cv.TabIndex = 2;
+            this.dataGridView_Cv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Cv_CellClick);
             // 
             // panel1
             // 
@@ -329,40 +343,36 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 44);
+            this.panel1.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
+            this.panel1.Size = new System.Drawing.Size(897, 50);
             this.panel1.TabIndex = 1;
             // 
             // textBox_Search
             // 
             this.textBox_Search.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Search.Location = new System.Drawing.Point(0, 0);
+            this.textBox_Search.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Search.Location = new System.Drawing.Point(20, 10);
             this.textBox_Search.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(780, 30);
+            this.textBox_Search.Size = new System.Drawing.Size(777, 32);
             this.textBox_Search.TabIndex = 0;
             // 
             // button_TimKiem
             // 
+            this.button_TimKiem.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.button_TimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_TimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_TimKiem.Location = new System.Drawing.Point(780, 0);
+            this.button_TimKiem.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button_TimKiem.FlatAppearance.BorderSize = 0;
+            this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_TimKiem.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_TimKiem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_TimKiem.Location = new System.Drawing.Point(797, 10);
             this.button_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(117, 44);
+            this.button_TimKiem.Size = new System.Drawing.Size(80, 30);
             this.button_TimKiem.TabIndex = 1;
-            this.button_TimKiem.Text = "Tìm Kiếm";
             this.button_TimKiem.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.button_Close);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
-            this.panel3.Size = new System.Drawing.Size(1323, 40);
-            this.panel3.TabIndex = 7;
             // 
             // button_Close
             // 
@@ -379,19 +389,16 @@
             this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
-            // dataGridView_Cv
+            // panel3
             // 
-            this.dataGridView_Cv.BackgroundColor = System.Drawing.Color.Azure;
-            this.dataGridView_Cv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_Cv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_Cv.Location = new System.Drawing.Point(0, 44);
-            this.dataGridView_Cv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView_Cv.Name = "dataGridView_Cv";
-            this.dataGridView_Cv.RowHeadersWidth = 62;
-            this.dataGridView_Cv.RowTemplate.Height = 28;
-            this.dataGridView_Cv.Size = new System.Drawing.Size(897, 607);
-            this.dataGridView_Cv.TabIndex = 2;
-            this.dataGridView_Cv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Cv_CellClick);
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.button_Close);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
+            this.panel3.Size = new System.Drawing.Size(1323, 40);
+            this.panel3.TabIndex = 7;
             // 
             // FQlyCv
             // 
@@ -399,8 +406,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1323, 651);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.label_Name);
+            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -420,10 +428,10 @@
             this.groupBox_Name.ResumeLayout(false);
             this.groupBox_Name.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cv)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Cv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -449,8 +457,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox_Search;
         private System.Windows.Forms.Button button_TimKiem;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_Close;
         private System.Windows.Forms.DataGridView dataGridView_Cv;
+        private System.Windows.Forms.Button button_Close;
+        private System.Windows.Forms.Panel panel3;
     }
 }
