@@ -32,7 +32,7 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 cvName = value;
-                this.label_CvName.Text = cvName;
+                this.label_JobName.Text = cvName;
                 this.Invalidate();
             }
         }
@@ -50,11 +50,6 @@ namespace FinalProject.Candidate.GUI
         public FChiTietCv()
         {
             InitializeComponent();
-        }
-
-        private void label_CvName_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FChiTietCv_Load(object sender, EventArgs e)

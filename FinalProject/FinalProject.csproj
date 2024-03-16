@@ -647,5 +647,14 @@
   <ItemGroup>
     <None Include="Resources\icons8-resume-website-96.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-next-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-last-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-previous-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
