@@ -30,6 +30,7 @@ namespace FinalProject.Candidate.GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachVL_Name));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_Search = new FinalProject.UC.UCCustomButton();
             this.menuStrip_Filter = new System.Windows.Forms.MenuStrip();
@@ -44,26 +45,29 @@ namespace FinalProject.Candidate.GUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.label_SoLuongViecLam = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button_Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.button_Search);
             this.panel1.Controls.Add(this.menuStrip_Filter);
             this.panel1.Controls.Add(this.groupBox_ViTri);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(20, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 623);
+            this.panel1.Size = new System.Drawing.Size(292, 553);
             this.panel1.TabIndex = 0;
             // 
             // button_Search
@@ -80,7 +84,7 @@ namespace FinalProject.Candidate.GUI
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
             this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Search.Location = new System.Drawing.Point(0, 569);
+            this.button_Search.Location = new System.Drawing.Point(0, 499);
             this.button_Search.Name = "button_Search";
             this.button_Search.Padding = new System.Windows.Forms.Padding(5);
             this.button_Search.Size = new System.Drawing.Size(292, 54);
@@ -267,21 +271,21 @@ namespace FinalProject.Candidate.GUI
             this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
             this.panel3.Controls.Add(this.label_SoLuongViecLam);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(292, 0);
+            this.panel3.Location = new System.Drawing.Point(312, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1048, 623);
+            this.panel3.Size = new System.Drawing.Size(690, 553);
             this.panel3.TabIndex = 5;
             // 
             // flowLayoutPanel_CongViec
             // 
             this.flowLayoutPanel_CongViec.AutoScroll = true;
-            this.flowLayoutPanel_CongViec.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1048, 583);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(690, 513);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
             // 
             // label_SoLuongViecLam
@@ -293,22 +297,56 @@ namespace FinalProject.Candidate.GUI
             this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
             this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
             this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label_SoLuongViecLam.Size = new System.Drawing.Size(1048, 40);
+            this.label_SoLuongViecLam.Size = new System.Drawing.Size(690, 40);
             this.label_SoLuongViecLam.TabIndex = 4;
             this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
             this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.button_Close);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(20, 10);
+            this.panel4.Name = "panel4";
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
+            this.panel4.Size = new System.Drawing.Size(982, 40);
+            this.panel4.TabIndex = 6;
+            // 
+            // button_Close
+            // 
+            this.button_Close.BackColor = System.Drawing.Color.Transparent;
+            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
+            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Close.FlatAppearance.BorderSize = 0;
+            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Close.Location = new System.Drawing.Point(938, 5);
+            this.button_Close.Name = "button_Close";
+            this.button_Close.Size = new System.Drawing.Size(44, 25);
+            this.button_Close.TabIndex = 1;
+            this.button_Close.UseVisualStyleBackColor = false;
+            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // FDanhSachVL_Name
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1340, 623);
+            this.ClientSize = new System.Drawing.Size(1022, 623);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel4);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachVL_Name";
+            this.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách việc làm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachVL_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -319,6 +357,7 @@ namespace FinalProject.Candidate.GUI
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -339,5 +378,7 @@ namespace FinalProject.Candidate.GUI
         private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
         private UCCustomButton button_Search;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button_Close;
     }
 }

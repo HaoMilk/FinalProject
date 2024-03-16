@@ -43,7 +43,7 @@
             this.menuItem_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Top = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ucMenuCard_DsViecLam = new FinalProject.UC.UCMenuCard();
@@ -55,13 +55,13 @@
             this.ucMenuCard_DoiMatKhau = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DangXuat = new FinalProject.UC.UCMenuCard();
             this.menuStrip_MenuStrip.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_Top.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip_MenuStrip
             // 
-            this.menuStrip_MenuStrip.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip_MenuStrip.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menuStrip_MenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_ViecLam,
@@ -209,16 +209,16 @@
             this.label1.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // panel_Top
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button_Close);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.panel1.Size = new System.Drawing.Size(942, 40);
-            this.panel1.TabIndex = 5;
+            this.panel_Top.BackColor = System.Drawing.Color.Transparent;
+            this.panel_Top.Controls.Add(this.button_Close);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(0, 0);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.panel_Top.Size = new System.Drawing.Size(942, 40);
+            this.panel_Top.TabIndex = 5;
             // 
             // button_Close
             // 
@@ -409,7 +409,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip_MenuStrip);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Top);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -423,7 +423,7 @@
             this.Load += new System.EventHandler(this.FCandidateHomePage_Load);
             this.menuStrip_MenuStrip.ResumeLayout(false);
             this.menuStrip_MenuStrip.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panel_Top.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -446,7 +446,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_Top;
         private System.Windows.Forms.Button button_Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private FinalProject.UC.UCMenuCard ucMenuCard_DsViecLam;
