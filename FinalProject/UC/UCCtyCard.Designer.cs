@@ -79,8 +79,8 @@
             this.label_Name.AutoEllipsis = true;
             this.label_Name.BackColor = System.Drawing.Color.LightBlue;
             this.label_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.ForeColor = System.Drawing.Color.OrangeRed;
             this.label_Name.Location = new System.Drawing.Point(0, 0);
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(272, 84);
@@ -94,7 +94,7 @@
             this.button_View.BackgroundImage = global::FinalProject.Properties.Resources.icons8_view_24;
             this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button_View.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_View.FlatAppearance.BorderColor = System.Drawing.SystemColors.Info;
+            this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.Salmon;
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_View.Location = new System.Drawing.Point(0, 84);
             this.button_View.Name = "button_View";
@@ -110,6 +110,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Name = "UCCtyCard";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Size = new System.Drawing.Size(298, 298);

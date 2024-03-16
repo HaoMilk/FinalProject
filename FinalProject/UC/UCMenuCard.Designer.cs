@@ -71,7 +71,7 @@
             // 
             // pictureBox_Image
             // 
-            this.pictureBox_Image.BackgroundImage = global::FinalProject.Properties.Resources.job_search;
+            this.pictureBox_Image.BackgroundImage = global::FinalProject.Properties.Resources.icons8_name_96;
             this.pictureBox_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Image.Location = new System.Drawing.Point(3, 3);

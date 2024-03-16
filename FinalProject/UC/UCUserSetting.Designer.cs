@@ -61,12 +61,12 @@
             // 
             this.label_name1.AutoSize = true;
             this.label_name1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_name1.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name1.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_name1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_name1.Location = new System.Drawing.Point(20, 5);
             this.label_name1.Name = "label_name1";
             this.label_name1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.label_name1.Size = new System.Drawing.Size(170, 30);
+            this.label_name1.Size = new System.Drawing.Size(193, 31);
             this.label_name1.TabIndex = 0;
             this.label_name1.Text = "Chào mừng bạn trở lại";
             this.label_name1.Click += new System.EventHandler(this.label_name1_Click);
@@ -121,13 +121,13 @@
             // 
             this.checkBox_TinhTrang.AutoSize = true;
             this.checkBox_TinhTrang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.checkBox_TinhTrang.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_TinhTrang.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox_TinhTrang.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBox_TinhTrang.Location = new System.Drawing.Point(20, 150);
+            this.checkBox_TinhTrang.Location = new System.Drawing.Point(20, 148);
             this.checkBox_TinhTrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox_TinhTrang.Name = "checkBox_TinhTrang";
             this.checkBox_TinhTrang.Padding = new System.Windows.Forms.Padding(5);
-            this.checkBox_TinhTrang.Size = new System.Drawing.Size(258, 33);
+            this.checkBox_TinhTrang.Size = new System.Drawing.Size(258, 35);
             this.checkBox_TinhTrang.TabIndex = 5;
             this.checkBox_TinhTrang.Text = "Tình trạng tìm việc";
             this.checkBox_TinhTrang.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             this.tableLayoutPanel3.Controls.Add(this.textBox_Email, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.textBox_HoTen, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 35);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(20, 36);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(10);
             this.tableLayoutPanel3.RowCount = 3;
@@ -149,7 +149,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(258, 148);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(258, 147);
             this.tableLayoutPanel3.TabIndex = 6;
             // 
             // textBox_Phone
@@ -162,7 +162,7 @@
             this.textBox_Phone.Location = new System.Drawing.Point(15, 69);
             this.textBox_Phone.Margin = new System.Windows.Forms.Padding(5);
             this.textBox_Phone.Name = "textBox_Phone";
-            this.textBox_Phone.Size = new System.Drawing.Size(361, 23);
+            this.textBox_Phone.Size = new System.Drawing.Size(228, 23);
             this.textBox_Phone.TabIndex = 4;
             // 
             // textBox_Email
@@ -175,7 +175,7 @@
             this.textBox_Email.Location = new System.Drawing.Point(13, 39);
             this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(365, 23);
+            this.textBox_Email.Size = new System.Drawing.Size(232, 23);
             this.textBox_Email.TabIndex = 3;
             // 
             // textBox_HoTen
@@ -188,7 +188,7 @@
             this.textBox_HoTen.Location = new System.Drawing.Point(13, 12);
             this.textBox_HoTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_HoTen.Name = "textBox_HoTen";
-            this.textBox_HoTen.Size = new System.Drawing.Size(365, 23);
+            this.textBox_HoTen.Size = new System.Drawing.Size(232, 23);
             this.textBox_HoTen.TabIndex = 2;
             // 
             // picture_Avatar
@@ -211,7 +211,7 @@
             // 
             // panelSettings
             // 
-            this.panelSettings.BackColor = System.Drawing.Color.SkyBlue;
+            this.panelSettings.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panelSettings.Controls.Add(this.groupBox_MauNen);
             this.panelSettings.Controls.Add(this.groupBox_FontMacDinh);
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -224,17 +224,17 @@
             // 
             // groupBox_MauNen
             // 
-            this.groupBox_MauNen.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox_MauNen.BackColor = System.Drawing.Color.Transparent;
             this.groupBox_MauNen.Controls.Add(this.textBox_MauNen);
             this.groupBox_MauNen.Controls.Add(this.button_MauNen);
             this.groupBox_MauNen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_MauNen.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_MauNen.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_MauNen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_MauNen.Location = new System.Drawing.Point(20, 81);
+            this.groupBox_MauNen.Location = new System.Drawing.Point(20, 90);
             this.groupBox_MauNen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_MauNen.Name = "groupBox_MauNen";
-            this.groupBox_MauNen.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox_MauNen.Size = new System.Drawing.Size(339, 61);
+            this.groupBox_MauNen.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox_MauNen.Size = new System.Drawing.Size(339, 72);
             this.groupBox_MauNen.TabIndex = 4;
             this.groupBox_MauNen.TabStop = false;
             this.groupBox_MauNen.Text = "Màu nền mặc định";
@@ -242,24 +242,27 @@
             // textBox_MauNen
             // 
             this.textBox_MauNen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_MauNen.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_MauNen.Location = new System.Drawing.Point(5, 25);
+            this.textBox_MauNen.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_MauNen.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.textBox_MauNen.Location = new System.Drawing.Point(10, 31);
             this.textBox_MauNen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_MauNen.Name = "textBox_MauNen";
-            this.textBox_MauNen.Size = new System.Drawing.Size(252, 27);
+            this.textBox_MauNen.Size = new System.Drawing.Size(242, 28);
             this.textBox_MauNen.TabIndex = 0;
+            this.textBox_MauNen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_MauNen
             // 
-            this.button_MauNen.BackColor = System.Drawing.Color.SteelBlue;
+            this.button_MauNen.BackColor = System.Drawing.Color.Transparent;
             this.button_MauNen.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_32;
             this.button_MauNen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button_MauNen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_MauNen.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.button_MauNen.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.button_MauNen.FlatAppearance.BorderSize = 0;
             this.button_MauNen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_MauNen.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_MauNen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_MauNen.Location = new System.Drawing.Point(257, 25);
+            this.button_MauNen.Location = new System.Drawing.Point(252, 31);
             this.button_MauNen.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.button_MauNen.Name = "button_MauNen";
             this.button_MauNen.Size = new System.Drawing.Size(77, 31);
@@ -268,17 +271,17 @@
             // 
             // groupBox_FontMacDinh
             // 
-            this.groupBox_FontMacDinh.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox_FontMacDinh.BackColor = System.Drawing.Color.Transparent;
             this.groupBox_FontMacDinh.Controls.Add(this.textBox_FontMacDinh);
             this.groupBox_FontMacDinh.Controls.Add(this.button_FontMacDinh);
             this.groupBox_FontMacDinh.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_FontMacDinh.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_FontMacDinh.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_FontMacDinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox_FontMacDinh.Location = new System.Drawing.Point(20, 20);
             this.groupBox_FontMacDinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_FontMacDinh.Name = "groupBox_FontMacDinh";
-            this.groupBox_FontMacDinh.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox_FontMacDinh.Size = new System.Drawing.Size(339, 61);
+            this.groupBox_FontMacDinh.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox_FontMacDinh.Size = new System.Drawing.Size(339, 70);
             this.groupBox_FontMacDinh.TabIndex = 3;
             this.groupBox_FontMacDinh.TabStop = false;
             this.groupBox_FontMacDinh.Text = "Font mặc định";
@@ -286,27 +289,29 @@
             // textBox_FontMacDinh
             // 
             this.textBox_FontMacDinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_FontMacDinh.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_FontMacDinh.Location = new System.Drawing.Point(5, 25);
+            this.textBox_FontMacDinh.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_FontMacDinh.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.textBox_FontMacDinh.Location = new System.Drawing.Point(10, 31);
             this.textBox_FontMacDinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_FontMacDinh.Name = "textBox_FontMacDinh";
-            this.textBox_FontMacDinh.Size = new System.Drawing.Size(252, 27);
+            this.textBox_FontMacDinh.Size = new System.Drawing.Size(242, 28);
             this.textBox_FontMacDinh.TabIndex = 0;
             // 
             // button_FontMacDinh
             // 
-            this.button_FontMacDinh.BackColor = System.Drawing.Color.SteelBlue;
+            this.button_FontMacDinh.BackColor = System.Drawing.Color.Transparent;
             this.button_FontMacDinh.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_32;
             this.button_FontMacDinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button_FontMacDinh.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_FontMacDinh.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.button_FontMacDinh.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.button_FontMacDinh.FlatAppearance.BorderSize = 0;
             this.button_FontMacDinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_FontMacDinh.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_FontMacDinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_FontMacDinh.Location = new System.Drawing.Point(257, 25);
+            this.button_FontMacDinh.Location = new System.Drawing.Point(252, 31);
             this.button_FontMacDinh.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.button_FontMacDinh.Name = "button_FontMacDinh";
-            this.button_FontMacDinh.Size = new System.Drawing.Size(77, 31);
+            this.button_FontMacDinh.Size = new System.Drawing.Size(77, 29);
             this.button_FontMacDinh.TabIndex = 3;
             this.button_FontMacDinh.UseVisualStyleBackColor = false;
             // 

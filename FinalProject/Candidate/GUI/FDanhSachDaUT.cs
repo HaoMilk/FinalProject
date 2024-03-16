@@ -72,5 +72,10 @@ namespace FinalProject.Candidate.GUI
         {
             InitJobList();
         }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

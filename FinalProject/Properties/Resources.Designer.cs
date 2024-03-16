@@ -484,6 +484,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_last_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-last-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_log_out_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-log-out-96", resourceCulture);
@@ -524,9 +534,29 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_next_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-next-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_password_144 {
             get {
                 object obj = ResourceManager.GetObject("icons8-password-144", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_previous_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-previous-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

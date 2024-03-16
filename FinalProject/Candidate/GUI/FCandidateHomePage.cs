@@ -13,6 +13,8 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FCandidateHomePage : Form
     {
+        private bool isAlwaysShowDashboard = true;
+
         public FCandidateHomePage()
         {
             InitializeComponent();
@@ -36,12 +38,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenThongTinCaNhan()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FCandidateInfor fCandidateInfor = new FCandidateInfor();
             fCandidateInfor.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion ThongTinCaNhan
 
@@ -58,12 +60,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenDoiMatKhau()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FChangePassword fChangePassword = new FChangePassword();
             fChangePassword.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion DoiMatKhau
 
@@ -80,12 +82,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenDanhSachCV()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FQlyCv fQlyCv = new FQlyCv();
             fQlyCv.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion DanhSachCV
 
@@ -102,12 +104,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenMauCV()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FMauCv fMauCv = new FMauCv();
             fMauCv.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion MauCV
 
@@ -136,12 +138,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenMenuDanhSachViecLam()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FDanhSachVL_Name fDanhSachVL = new FDanhSachVL_Name();
             fDanhSachVL.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion DanhSachViecLam
 
@@ -158,12 +160,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenDanhSachCongTy()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FDanhSachCty fDanhSachCty = new FDanhSachCty();
             fDanhSachCty.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion DanhSachCongTy
 
@@ -180,12 +182,12 @@ namespace FinalProject.Candidate.GUI
 
         private void OpenDanhSachDaUT()
         {
-            this.Hide();
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FDanhSachDaUT fDanhSachDaUT = new FDanhSachDaUT();
             fDanhSachDaUT.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion ViecLamDaUngTuyen
 
