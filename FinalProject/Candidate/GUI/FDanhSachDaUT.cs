@@ -36,8 +36,8 @@ namespace FinalProject.Candidate.GUI
             {
                 UCJobCard ucJobCard = new UCJobCard();
                 ucJobCard.Id = (i + 1);
-                ucJobCard.CvName = $"Việc làm {i + 1}";
-                ucJobCard.CvUpdatedTime = DateTime.Now;
+                ucJobCard.JobName = $"Việc làm {i + 1}";
+                ucJobCard.LastUpdatedTime = DateTime.Now;
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);

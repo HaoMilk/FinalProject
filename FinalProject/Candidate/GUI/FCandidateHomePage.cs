@@ -23,27 +23,18 @@ namespace FinalProject.Candidate.GUI
 
         }
 
-        private void menu_TrangCaNhan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_CongTy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_HoSo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_ViecLam_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #region ThongTinCaNhan
         private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            this.OpenThongTinCaNhan();
+        }
+
+        private void ucMenuCard_ThongTin_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenThongTinCaNhan();
+        }
+
+        private void OpenThongTinCaNhan()
         {
             this.Hide();
 
@@ -52,8 +43,20 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+        #endregion ThongTinCaNhan
 
+        #region DoiMatKhau
         private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+            this.OpenDoiMatKhau();
+        }
+
+        private void ucMenuCard_DoiMatKhau_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDoiMatKhau();
+        }
+
+        private void OpenDoiMatKhau()
         {
             this.Hide();
 
@@ -62,8 +65,20 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+        #endregion DoiMatKhau
 
+        #region DanhSachCV
         private void menuItem_QlyCv_Click(object sender, EventArgs e)
+        {
+            this.OpenDanhSachCV();
+        }
+
+        private void ucMenuCard_DsCV_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachCV();
+        }
+
+        private void OpenDanhSachCV()
         {
             this.Hide();
 
@@ -72,8 +87,20 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+        #endregion DanhSachCV
 
+        #region MauCV
         private void menuItem_MauCv_Click(object sender, EventArgs e)
+        {
+            this.OpenMauCV();
+        }
+
+        private void ucMenuCard_MauCV_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenMauCV();
+        }
+
+        private void OpenMauCV()
         {
             this.Hide();
 
@@ -82,13 +109,32 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+        #endregion MauCV
 
+        #region DangXuat
         private void menuItem_DangXuat_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        private void ucMenuCard_DangXuat_MenuClick(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        #endregion DangXuat
+
+        #region DanhSachViecLam
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
+        {
+            this.OpenMenuDanhSachViecLam();
+        }
+
+        private void ucMenuCard_DsViecLam_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenMenuDanhSachViecLam();
+        }
+
+        private void OpenMenuDanhSachViecLam()
         {
             this.Hide();
 
@@ -97,17 +143,55 @@ namespace FinalProject.Candidate.GUI
 
             this.Show();
         }
+        #endregion DanhSachViecLam
 
+        #region DanhSachCongTy
         private void menuItem_DsCty_Click(object sender, EventArgs e)
         {
-            FDanhSachCty fDanhSachCty = new FDanhSachCty();
-            fDanhSachCty.ShowDialog();
+            this.OpenDanhSachCongTy();
         }
 
+        private void ucMenuCard_DsCty_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachCongTy();
+        }
+
+        private void OpenDanhSachCongTy()
+        {
+            this.Hide();
+
+            FDanhSachCty fDanhSachCty = new FDanhSachCty();
+            fDanhSachCty.ShowDialog();
+
+            this.Show();
+        }
+        #endregion DanhSachCongTy
+
+        #region ViecLamDaUngTuyen
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FDanhSachDaUT fDanhSachDauUT = new FDanhSachDaUT();
-            fDanhSachDauUT.ShowDialog();
+            this.OpenDanhSachDaUT();
+        }
+
+        private void ucMenuCard_ViecLamUT_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachDaUT();
+        }
+
+        private void OpenDanhSachDaUT()
+        {
+            this.Hide();
+
+            FDanhSachDaUT fDanhSachDaUT = new FDanhSachDaUT();
+            fDanhSachDaUT.ShowDialog();
+
+            this.Show();
+        }
+        #endregion ViecLamDaUngTuyen
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

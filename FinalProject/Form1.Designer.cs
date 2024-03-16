@@ -101,7 +101,7 @@
             this.panel2.Location = new System.Drawing.Point(451, 33);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(30, 10, 30, 10);
-            this.panel2.Size = new System.Drawing.Size(412, 292);
+            this.panel2.Size = new System.Drawing.Size(412, 291);
             this.panel2.TabIndex = 0;
             // 
             // groupBox_PhanQuyen
@@ -231,7 +231,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(33, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(412, 292);
+            this.pictureBox1.Size = new System.Drawing.Size(412, 291);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -241,10 +241,10 @@
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.linkLabel_QuenMatKhau);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(451, 331);
+            this.panel4.Location = new System.Drawing.Point(451, 330);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(30, 0, 30, 0);
-            this.panel4.Size = new System.Drawing.Size(412, 159);
+            this.panel4.Size = new System.Drawing.Size(412, 160);
             this.panel4.TabIndex = 2;
             // 
             // button_DangNhap
@@ -261,7 +261,7 @@
             this.button_DangNhap.ForeColor = System.Drawing.Color.White;
             this.button_DangNhap.Image = global::FinalProject.Properties.Resources.icons8_sign_in_24;
             this.button_DangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_DangNhap.Location = new System.Drawing.Point(30, 9);
+            this.button_DangNhap.Location = new System.Drawing.Point(30, 10);
             this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_DangNhap.Name = "button_DangNhap";
             this.button_DangNhap.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
@@ -278,7 +278,7 @@
             this.panel1.Controls.Add(this.linkLabel_DangKy);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(30, 65);
+            this.panel1.Location = new System.Drawing.Point(30, 66);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 50);
@@ -321,7 +321,7 @@
             this.linkLabel_QuenMatKhau.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.linkLabel_QuenMatKhau.Font = new System.Drawing.Font("Segoe UI Black", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel_QuenMatKhau.LinkColor = System.Drawing.SystemColors.Control;
-            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(30, 115);
+            this.linkLabel_QuenMatKhau.Location = new System.Drawing.Point(30, 116);
             this.linkLabel_QuenMatKhau.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel_QuenMatKhau.Name = "linkLabel_QuenMatKhau";
             this.linkLabel_QuenMatKhau.Padding = new System.Windows.Forms.Padding(10);

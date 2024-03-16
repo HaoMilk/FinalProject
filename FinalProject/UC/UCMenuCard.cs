@@ -88,7 +88,8 @@ namespace FinalProject.UC
                     value = Color.RoyalBlue;
                 }
                 buttonTextColor = value;
-                this.button_View.ForeColor = buttonTextColor;
+                this.button_View.ForeColor = value;
+                this.button_View.FlatAppearance.BorderColor = value;
                 this.Invalidate();
             }
         }
@@ -127,6 +128,10 @@ namespace FinalProject.UC
             if (MenuClick != null)
             {
                 MenuClick(this, e);
+            }
+            else
+            {
+                MessageBox.Show("Menu clicked");
             }
         }
     }

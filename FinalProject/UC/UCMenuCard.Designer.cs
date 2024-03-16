@@ -46,8 +46,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(180, 130);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -60,10 +60,10 @@
             this.button_View.FlatAppearance.MouseDownBackColor = System.Drawing.Color.NavajoWhite;
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_View.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_View.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button_View.Location = new System.Drawing.Point(3, 81);
+            this.button_View.ForeColor = System.Drawing.Color.Orange;
+            this.button_View.Location = new System.Drawing.Point(3, 68);
             this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(174, 46);
+            this.button_View.Size = new System.Drawing.Size(174, 59);
             this.button_View.TabIndex = 0;
             this.button_View.Text = "Menu";
             this.button_View.UseVisualStyleBackColor = false;
@@ -72,11 +72,11 @@
             // pictureBox_Image
             // 
             this.pictureBox_Image.BackgroundImage = global::FinalProject.Properties.Resources.job_search;
-            this.pictureBox_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Image.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(174, 72);
+            this.pictureBox_Image.Size = new System.Drawing.Size(174, 59);
             this.pictureBox_Image.TabIndex = 1;
             this.pictureBox_Image.TabStop = false;
             // 

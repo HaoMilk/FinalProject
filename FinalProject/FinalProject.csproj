@@ -623,5 +623,29 @@
   <ItemGroup>
     <None Include="Resources\icons8-close-96.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-name-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-log-out-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-company-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-job-seeker-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cv-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-profiles-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-resume-website-96.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
