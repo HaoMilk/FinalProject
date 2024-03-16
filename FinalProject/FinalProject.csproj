@@ -171,6 +171,12 @@
     <Compile Include="UC\UCCtyCard.Designer.cs">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCMenuItem.Designer.cs">
+      <DependentUpon>UCMenuItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCMenuItem.resx">
+      <DependentUpon>UCMenuItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
