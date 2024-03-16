@@ -43,7 +43,6 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 cvUpdatedTime = value;
-                this.label_UpdatedTime.Text = cvUpdatedTime.ToString("dd/MM/yyyy");
                 this.Invalidate();
             }
         }
@@ -63,9 +62,9 @@ namespace FinalProject.Candidate.GUI
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void button_Close_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
