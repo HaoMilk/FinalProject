@@ -58,5 +58,10 @@ namespace FinalProject
         {
             MessageBox.Show("Quên mật khẩu");
         }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

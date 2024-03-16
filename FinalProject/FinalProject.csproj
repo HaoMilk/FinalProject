@@ -164,6 +164,7 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="UC\UCCtyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -394,7 +395,7 @@
     <None Include="Resources\save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\7384eb896c87f613f4d36bba5a24108b.jpg" />
+    <None Include="Resources\background_neon.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\administrator-icon-on-white-background-simple-vector-28227279.jpg" />
@@ -599,6 +600,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\4156954.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\job.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YIT_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
