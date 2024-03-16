@@ -57,6 +57,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -171,11 +172,11 @@
     <Compile Include="UC\UCCtyCard.Designer.cs">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\UCMenuItem.cs">
+    <Compile Include="UC\UCMenuCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC\UCMenuItem.Designer.cs">
-      <DependentUpon>UCMenuItem.cs</DependentUpon>
+    <Compile Include="UC\UCMenuCard.Designer.cs">
+      <DependentUpon>UCMenuCard.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
@@ -308,8 +309,8 @@
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC\UCMenuItem.resx">
-      <DependentUpon>UCMenuItem.cs</DependentUpon>
+    <EmbeddedResource Include="UC\UCMenuCard.resx">
+      <DependentUpon>UCMenuCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>

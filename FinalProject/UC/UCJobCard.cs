@@ -3,22 +3,33 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
 
 namespace FinalProject.UC
 {
     public partial class UCJobCard : UserControl
     {
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked when user clicks button menu")]
+        public event EventHandler MenuClick;
+
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked when user clicks button view")]
+        public event EventHandler ViewClick;
+
         private Size defaultCardSize = new Size(300, 250);
 
         #region Fields
         private int id;
-        private string cvName;
-        private DateTime cvUpdatedTime;
+        private string jobName;
+        private DateTime lastUpdatedTime;
 
         private Color buttonViewBackground = Color.Cornsilk;
         private Color buttonMenuBackground = Color.LightCyan;
-        private Color labelCvNameTextColor = SystemColors.Highlight;
-        private Color labelUpdatedTimeTextColor = Color.Navy;
+        private Color jobNameTextColor = SystemColors.Highlight;
+        private Color lastUpdatedTimeTextColor = Color.Navy;
         private Image bgImage;
         private Image buttonViewImage;
         private Image buttonMenuImage;
@@ -48,27 +59,35 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
-        [DisplayName("CV Name")]
-        public string CvName
+        [DisplayName("Job Name")]
+        public string JobName
         {
-            get { return cvName; }
+            get { return jobName; }
             set
             {
-                cvName = value;
-                this.label_CvName.Text = cvName;
+                if (value == null)
+                {
+                    value = "Job Name";
+                }
+                jobName = value;
+                this.label_CvName.Text = jobName;
                 this.Invalidate();
             }
         }
 
         [Category("CUSTOMIZE DATA")]
-        [DisplayName("Updated Time")]
-        public DateTime CvUpdatedTime
+        [DisplayName("Last Updated Time")]
+        public DateTime LastUpdatedTime
         {
-            get { return cvUpdatedTime; }
+            get { return lastUpdatedTime; }
             set
             {
-                cvUpdatedTime = value;
-                this.label_UpdatedTime.Text = cvUpdatedTime.ToString("dd/MM/yyyy");
+                if (value == null)
+                {
+                    value = DateTime.Now;
+                }
+                lastUpdatedTime = value;
+                this.label_UpdatedTime.Text = lastUpdatedTime.ToString("dd/MM/yyyy");
                 this.Invalidate();
             }
         }
@@ -80,6 +99,10 @@ namespace FinalProject.UC
             get { return buttonViewBackground; }
             set
             {
+                if (value == null)
+                {
+                    value = Color.Cornsilk;
+                }
                 buttonViewBackground = value;
                 this.button_View.BackColor = buttonViewBackground;
                 this.Invalidate();
@@ -93,6 +116,10 @@ namespace FinalProject.UC
             get { return buttonMenuBackground; }
             set
             {
+                if (value == null)
+                {
+                    value = Color.Azure;
+                }
                 buttonMenuBackground = value;
                 this.button_Menu.BackColor = buttonMenuBackground;
                 this.Invalidate();
@@ -100,27 +127,35 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE UI")]
-        [DisplayName("TextColor CvName")]
-        public Color LabelCvNameTextColor
+        [DisplayName("JobNameTextColor")]
+        public Color JobNameTextColor
         {
-            get { return labelCvNameTextColor; }
+            get { return jobNameTextColor; }
             set
             {
-                labelCvNameTextColor = value;
-                this.label_CvName.ForeColor = labelCvNameTextColor;
+                if (value == null)
+                {
+                    value = Color.RoyalBlue;
+                }
+                jobNameTextColor = value;
+                this.label_CvName.ForeColor = jobNameTextColor;
                 this.Invalidate();
             }
         }
 
         [Category("CUSTOMIZE UI")]
-        [DisplayName("TextColor UpdatedTime")]
-        public Color LabelUpdatedTimeTextColor
+        [DisplayName("LastUpdatedTimeTextColor")]
+        public Color LastUpdatedTimeTextColor
         {
-            get { return labelUpdatedTimeTextColor; }
+            get { return lastUpdatedTimeTextColor; }
             set
             {
-                labelUpdatedTimeTextColor = value;
-                this.label_UpdatedTime.ForeColor = labelUpdatedTimeTextColor;
+                if (value == null)
+                {
+                    value = Color.RoyalBlue;
+                }
+                lastUpdatedTimeTextColor = value;
+                this.label_UpdatedTime.ForeColor = lastUpdatedTimeTextColor;
                 this.Invalidate();
             }
         }
@@ -191,21 +226,32 @@ namespace FinalProject.UC
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            FChiTietCv fChiTietCv = new FChiTietCv(); 
-            fChiTietCv.Id = id;
-            fChiTietCv.CvName = cvName;
-            fChiTietCv.CvUpdatedTime = cvUpdatedTime;
-            fChiTietCv.ShowDialog();
+            if (ViewClick != null)
+            {
+                ViewClick(this, e);
+            }
+            else
+            {
+                //MessageBox.Show($"View id = {id}");
+
+                FChiTietCv fChiTietCv = new FChiTietCv();
+                fChiTietCv.Id = id;
+                fChiTietCv.CvName = jobName;
+                fChiTietCv.CvUpdatedTime = lastUpdatedTime;
+                fChiTietCv.ShowDialog();
+            }
         }
 
         private void button_Menu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Menu id = {id}");
-        }
-
-        private void label_CvName_Click(object sender, EventArgs e)
-        {
-
+            if (MenuClick != null)
+            {
+                MenuClick(this, e);
+            }
+            else
+            {
+                MessageBox.Show($"Menu id = {id}");
+            }
         }
     }
 }
