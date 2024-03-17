@@ -109,7 +109,7 @@ namespace FinalProject.Candidate.GUI
             this.menuStrip_Filter.Name = "menuStrip_Filter";
             this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 170);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 
@@ -120,73 +120,9 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_DiaDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox_DiaDiem.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.comboBox_DiaDiem.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox_DiaDiem.Items.AddRange(new object[] {
-            "Tất cả vị trí việc làm",
-            "An Giang",
-            "Bà Rịa - Vũng Tàu",
-            "Bạc Liêu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Dương",
-            "Bình Định",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cao Bằng",
-            "Cần Thơ",
-            "Đà Nẵng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Nội",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hải Phòng",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Kiên Giang",
-            "Kon Tum",
-            "Khánh Hòa",
-            "Lai Châu",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Lâm Đồng",
-            "Long An",
-            "Nam Định",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Nghệ An",
-            "Phú Thọ",
-            "Phú Yên",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ninh",
-            "Quảng Ngãi",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Tiền Giang",
-            "Tuyên Quang",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thành phố Hồ Chí Minh",
-            "Thừa Thiên Huế",
-            "Trà Vinh",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
             this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
             this.comboBox_DiaDiem.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_DiaDiem.ToolTipText = "Địa điểm";
             // 
             // comboBox_NgheNghiep
             // 
@@ -197,6 +133,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_NgheNghiep.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
             this.comboBox_NgheNghiep.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_NgheNghiep.ToolTipText = "Nghề nghiệp";
             // 
             // comboBox_MucLuong
             // 
@@ -207,6 +144,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_MucLuong.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_MucLuong.Name = "comboBox_MucLuong";
             this.comboBox_MucLuong.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_MucLuong.ToolTipText = "Mức lương";
             // 
             // comboBox_KinhNghiem
             // 
@@ -217,6 +155,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
             this.comboBox_KinhNghiem.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_KinhNghiem.ToolTipText = "Kinh nghiệm";
             // 
             // groupBox_ViTri
             // 

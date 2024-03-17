@@ -180,7 +180,16 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BUS\TinhBUS.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
+    <Compile Include="Common\DAO\TinhDAO.cs" />
+    <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\Entities\CongViec.cs" />
+    <Compile Include="Database\Entities\CV.cs" />
+    <Compile Include="Database\Entities\Tinh.cs" />
+    <Compile Include="Database\Entities\UngTuyen.cs" />
+    <Compile Include="Database\Entities\UngVien.cs" />
+    <Compile Include="Database\Entities\User.cs" />
     <Compile Include="UC\UCCtyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -376,7 +385,6 @@
     <EmbeddedResource Include="UC\UCJobCard.resx">
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Database\005. Create table UngTuyen.sql" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -391,10 +399,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Candidate\BUS\" />
-    <Folder Include="Candidate\DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
     <None Include="Resources\CV-template.docx" />
@@ -675,14 +680,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\001. Create table CongViec.sql" />
-    <Content Include="Database\002. Create table User.sql" />
-    <Content Include="Database\003. Create table UngVien.sql" />
-    <Content Include="Database\004. Create table CV.sql" />
+    <Content Include="Database\Scripts\001. Create table CongViec.sql" />
+    <Content Include="Database\Scripts\002. Create table User.sql" />
+    <Content Include="Database\Scripts\003. Create table UngVien.sql" />
+    <Content Include="Database\Scripts\004. Create table CV.sql" />
+    <Content Include="Database\Scripts\005. Create table UngTuyen.sql" />
+    <Content Include="Database\Scripts\006. Create table Tinh.sql" />
+    <Content Include="Database\Scripts\007. Insert masterdata Tinh.sql" />
+    <Content Include="Database\Scripts\008. Update table CongViec.sql" />
+    <Content Include="Database\Scripts\009. Add column IsDeleted into table CongViec.sql" />
+    <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
+    <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
+    <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
     <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
