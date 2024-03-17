@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -181,6 +181,13 @@
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\Themes\BlueTheme.cs" />
+    <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\Entities\CongViec.cs" />
+    <Compile Include="Database\Entities\CV.cs" />
+    <Compile Include="Database\Entities\Tinh.cs" />
+    <Compile Include="Database\Entities\UngTuyen.cs" />
+    <Compile Include="Database\Entities\UngVien.cs" />
+    <Compile Include="Database\Entities\User.cs" />
     <Compile Include="UC\UCCtyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -676,12 +683,16 @@
     <Content Include="Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\001. Create table CongViec.sql" />
-    <Content Include="Database\002. Create table User.sql" />
-    <Content Include="Database\003. Create table UngVien.sql" />
-    <Content Include="Database\004. Create table CV.sql" />
-    <Content Include="Database\005. Create table UngTuyen.sql" />
-    <Content Include="Database\006. Create table Tinh.sql" />
+    <Content Include="Database\Scripts\001. Create table CongViec.sql" />
+    <Content Include="Database\Scripts\002. Create table User.sql" />
+    <Content Include="Database\Scripts\003. Create table UngVien.sql" />
+    <Content Include="Database\Scripts\004. Create table CV.sql" />
+    <Content Include="Database\Scripts\005. Create table UngTuyen.sql" />
+    <Content Include="Database\Scripts\006. Create table Tinh.sql" />
+    <Content Include="Database\Scripts\007. Insert masterdata Tinh.sql" />
+    <Content Include="Database\Scripts\008. Update table CongViec.sql" />
+    <Content Include="Database\Scripts\009. Add column IsDeleted into table CongViec.sql" />
+    <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
