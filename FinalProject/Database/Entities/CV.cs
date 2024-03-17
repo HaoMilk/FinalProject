@@ -19,5 +19,7 @@ namespace FinalProject.Database.Entities
         public DateTime NgayTao { get; set; }
         public DateTime? NgayCapNhat { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime? UpdatedTime { get; set; }
     }
 }

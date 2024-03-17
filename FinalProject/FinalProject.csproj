@@ -693,6 +693,7 @@
     <Content Include="Database\Scripts\008. Update table CongViec.sql" />
     <Content Include="Database\Scripts\009. Add column IsDeleted into table CongViec.sql" />
     <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
+    <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>

@@ -23,5 +23,7 @@ namespace FinalProject.Database.Entities
         public Image Avatar { get; set; }
         public string AvatarString { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime? UpdatedTime { get; set; }
     }
 }

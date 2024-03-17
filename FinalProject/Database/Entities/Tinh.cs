@@ -15,5 +15,7 @@ namespace FinalProject.Database.Entities
         public string Ten { get; set; }
         public string TrangThai { get; set; }
         public bool IsDeleted { get; set; }
+        public DateTime CreatedTime { get; set; }
+        public DateTime? UpdatedTime { get; set; }
     }
 }
