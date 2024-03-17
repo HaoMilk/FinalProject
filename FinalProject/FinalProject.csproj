@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -180,7 +180,9 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BUS\TinhBUS.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
+    <Compile Include="Common\DAO\TinhDAO.cs" />
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
@@ -397,10 +399,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Candidate\BUS\" />
-    <Folder Include="Candidate\DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
     <None Include="Resources\CV-template.docx" />
@@ -681,7 +680,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Database\Scripts\001. Create table CongViec.sql" />
     <Content Include="Database\Scripts\002. Create table User.sql" />
@@ -694,8 +693,9 @@
     <Content Include="Database\Scripts\009. Add column IsDeleted into table CongViec.sql" />
     <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
     <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
+    <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
     <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
