@@ -376,7 +376,6 @@
     <EmbeddedResource Include="UC\UCJobCard.resx">
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
-    <Content Include="Database\005. Create table UngTuyen.sql" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -681,6 +680,8 @@
     <Content Include="Database\002. Create table User.sql" />
     <Content Include="Database\003. Create table UngVien.sql" />
     <Content Include="Database\004. Create table CV.sql" />
+    <Content Include="Database\005. Create table UngTuyen.sql" />
+    <Content Include="Database\006. Create table Tinh.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
