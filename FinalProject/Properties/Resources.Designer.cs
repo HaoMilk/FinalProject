@@ -103,6 +103,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundgrbox {
+            get {
+                object obj = ResourceManager.GetObject("backgroundgrbox", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap birthday {
             get {
                 object obj = ResourceManager.GetObject("birthday", resourceCulture);
@@ -457,6 +467,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_delete_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-48 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
