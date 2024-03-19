@@ -61,5 +61,10 @@ namespace FinalProject.Candidate.GUI
         {
             this.Close();
         }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
