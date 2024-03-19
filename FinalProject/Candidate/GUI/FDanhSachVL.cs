@@ -1,5 +1,7 @@
 ﻿using FinalProject.Candidate.Constants;
 using FinalProject.Candidate.DTO;
+using FinalProject.Common.BUS;
+using FinalProject.Database.Entities;
 using FinalProject.UC;
 using Newtonsoft.Json;
 using System;
@@ -16,11 +18,16 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachVL_Name : Form
     {
+        private TinhBUS tinhBUS = new TinhBUS();
+        private List<Tinh> listTinh = new List<Tinh>();
+
         public FDanhSachVL_Name()
         {
             InitializeComponent();
 
-            this.comboBox_DiaDiem.SelectedIndex = 0;
+            this.listTinh = tinhBUS.GetAll();
+            this.comboBox_DiaDiem.Items.Clear();
+            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
             var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
             this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
@@ -53,8 +60,8 @@ namespace FinalProject.Candidate.GUI
             {
                 UCJobCard ucJobCard = new UCJobCard();
                 ucJobCard.Id = (i + 1);
-                ucJobCard.CvName = $"Việc làm {i + 1}";
-                ucJobCard.CvUpdatedTime = DateTime.Now;
+                ucJobCard.JobName = $"Việc làm {i + 1}";
+                ucJobCard.LastUpdatedTime = DateTime.Now;
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);
@@ -100,7 +107,10 @@ namespace FinalProject.Candidate.GUI
         {
             TimKiemViecLamDto searchCriteria = new TimKiemViecLamDto();
             searchCriteria.Search = this.textBox_TimKiem.Text;
-            searchCriteria.DiaDiem = this.comboBox_DiaDiem.Text;
+
+            var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
+            searchCriteria.DiaDiem = selectedTinh != null ? selectedTinh.Code : null;
+
             searchCriteria.NgheNghiep = this.comboBox_NgheNghiep.Text;
 
             searchCriteria = KinhNghiemBuilder(searchCriteria);
@@ -185,6 +195,11 @@ namespace FinalProject.Candidate.GUI
                     break;
             }
             return timKiemViecLamDto;
+        }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

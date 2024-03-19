@@ -42,5 +42,10 @@ namespace FinalProject.Candidate.GUI
             this.richTextBox_Data.Clear();
             this.richTextBox_Data.SelectedRtf = Resources.resume_009;
         }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
