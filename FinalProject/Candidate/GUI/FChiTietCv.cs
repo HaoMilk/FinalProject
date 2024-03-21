@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FinalProject.Common.BUS;
+using FinalProject.Database.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FChiTietCv : Form
     {
+        private CongViecBUS congViecBUS = new CongViecBUS();
+        private CongViec congViec = new CongViec();
         private int id;
         private string cvName;
         private DateTime cvUpdatedTime;
@@ -52,9 +56,26 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
+
         private void FChiTietCv_Load(object sender, EventArgs e)
         {
+            // load du lieu tu database
+            congViec = congViecBUS.GetById(id);
+          
+            // fill data 
+            if(congViec != null )
+            {
+                textBox_DiaDiemLamViec.Text = congViec.DiaDiem;
+                textBox_MucLuong.Text = congViec.MucLuong.ToString();
+                textBox_ViTriCongViec.Text = congViec.ViTriTuyenDung;
+                textBox_TenCongTy.Text = congViec.Id.ToString();
+                richTextBox_MoTa.Text = congViec.MoTa;
+                textBox_KinhNghiem.Text = congViec.KinhNghiem;
+                textBox_LienHe.Text = congViec.LienHe;
+                textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
+                richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
 
+            }
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -63,6 +84,16 @@ namespace FinalProject.Candidate.GUI
         }
 
         private void groupBox7_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox_MoTa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Submit_Click(object sender, EventArgs e)
         {
 
         }

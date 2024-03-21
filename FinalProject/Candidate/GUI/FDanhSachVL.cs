@@ -20,6 +20,8 @@ namespace FinalProject.Candidate.GUI
     {
         private TinhBUS tinhBUS = new TinhBUS();
         private List<Tinh> listTinh = new List<Tinh>();
+        private CongViecBUS congViecBUS = new CongViecBUS();
+        private List<CongViec> listCongViec = new List<CongViec>();
 
         public FDanhSachVL_Name()
         {
@@ -43,6 +45,7 @@ namespace FinalProject.Candidate.GUI
         }
 
         #region JobList
+
         private void InitJobList()
         {
             var ucJobCards = CreateJobList(10);
@@ -55,17 +58,23 @@ namespace FinalProject.Candidate.GUI
 
         private List<UCJobCard> CreateJobList(int quantity)
         {
+            listCongViec = congViecBUS.GetAll();
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
-            for (int i = 0; i < quantity; i++)
+            if(listCongViec != null && listCongViec.Count > 0)
             {
-                UCJobCard ucJobCard = new UCJobCard();
-                ucJobCard.Id = (i + 1);
-                ucJobCard.JobName = $"Việc làm {i + 1}";
-                ucJobCard.LastUpdatedTime = DateTime.Now;
-                //ucJobCard.ScaleSize(0.5f);
+                for (int i = 0; i < listCongViec.Count; i++)
+                {
 
-                ucJobCards.Add(ucJobCard);
+                    UCJobCard ucJobCard = new UCJobCard();
+                    ucJobCard.Id = listCongViec[i].Id;
+                    ucJobCard.JobName = listCongViec[i].Ten;
+                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
+                    //ucJobCard.ScaleSize(0.5f);
+
+                    ucJobCards.Add(ucJobCard);
+                }
             }
+           
             return ucJobCards;
         }
 
@@ -95,6 +104,7 @@ namespace FinalProject.Candidate.GUI
         private void FDanhSachVL_Load(object sender, EventArgs e)
         {
             InitJobList();
+
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -200,6 +210,16 @@ namespace FinalProject.Candidate.GUI
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ucJobCard1_MenuClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucJobCard1_ViewClick(object sender, EventArgs e)
+        {
+
         }
     }
 }
