@@ -13,6 +13,8 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FCandidateHomePage : Form
     {
+        private bool isAlwaysShowDashboard = true;
+
         public FCandidateHomePage()
         {
             InitializeComponent();
@@ -23,91 +25,175 @@ namespace FinalProject.Candidate.GUI
 
         }
 
-        private void menu_TrangCaNhan_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_CongTy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_HoSo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menu_ViecLam_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #region ThongTinCaNhan
         private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.OpenThongTinCaNhan();
+        }
+
+        private void ucMenuCard_ThongTin_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenThongTinCaNhan();
+        }
+
+        private void OpenThongTinCaNhan()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FCandidateInfor fCandidateInfor = new FCandidateInfor();
             fCandidateInfor.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
+        #endregion ThongTinCaNhan
 
+        #region DoiMatKhau
         private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.OpenDoiMatKhau();
+        }
+
+        private void ucMenuCard_DoiMatKhau_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDoiMatKhau();
+        }
+
+        private void OpenDoiMatKhau()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FChangePassword fChangePassword = new FChangePassword();
             fChangePassword.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
+        #endregion DoiMatKhau
 
+        #region DanhSachCV
         private void menuItem_QlyCv_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.OpenDanhSachCV();
+        }
+
+        private void ucMenuCard_DsCV_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachCV();
+        }
+
+        private void OpenDanhSachCV()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FQlyCv fQlyCv = new FQlyCv();
             fQlyCv.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
+        #endregion DanhSachCV
 
+        #region MauCV
         private void menuItem_MauCv_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.OpenMauCV();
+        }
+
+        private void ucMenuCard_MauCV_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenMauCV();
+        }
+
+        private void OpenMauCV()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FMauCv fMauCv = new FMauCv();
             fMauCv.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
+        #endregion MauCV
 
+        #region DangXuat
         private void menuItem_DangXuat_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
+        private void ucMenuCard_DangXuat_MenuClick(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        #endregion DangXuat
+
+        #region DanhSachViecLam
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.OpenMenuDanhSachViecLam();
+        }
+
+        private void ucMenuCard_DsViecLam_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenMenuDanhSachViecLam();
+        }
+
+        private void OpenMenuDanhSachViecLam()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
 
             FDanhSachVL_Name fDanhSachVL = new FDanhSachVL_Name();
             fDanhSachVL.ShowDialog();
 
-            this.Show();
+            if (!isAlwaysShowDashboard) this.Show();
         }
+        #endregion DanhSachViecLam
 
+        #region DanhSachCongTy
         private void menuItem_DsCty_Click(object sender, EventArgs e)
         {
-            FDanhSachCty fDanhSachCty = new FDanhSachCty();
-            fDanhSachCty.ShowDialog();
+            this.OpenDanhSachCongTy();
         }
 
+        private void ucMenuCard_DsCty_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachCongTy();
+        }
+
+        private void OpenDanhSachCongTy()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+
+            FDanhSachCty fDanhSachCty = new FDanhSachCty();
+            fDanhSachCty.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        #endregion DanhSachCongTy
+
+        #region ViecLamDaUngTuyen
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FDanhSachDaUT fDanhSachDauUT = new FDanhSachDaUT();
-            fDanhSachDauUT.ShowDialog();
+            this.OpenDanhSachDaUT();
+        }
+
+        private void ucMenuCard_ViecLamUT_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenDanhSachDaUT();
+        }
+
+        private void OpenDanhSachDaUT()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+
+            FDanhSachDaUT fDanhSachDaUT = new FDanhSachDaUT();
+            fDanhSachDaUT.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        #endregion ViecLamDaUngTuyen
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

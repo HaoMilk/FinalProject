@@ -36,8 +36,8 @@ namespace FinalProject.Candidate.GUI
             {
                 UCJobCard ucJobCard = new UCJobCard();
                 ucJobCard.Id = (i + 1);
-                ucJobCard.CvName = $"Việc làm {i + 1}";
-                ucJobCard.CvUpdatedTime = DateTime.Now;
+                ucJobCard.JobName = $"Việc làm {i + 1}";
+                ucJobCard.LastUpdatedTime = DateTime.Now;
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);
@@ -71,6 +71,11 @@ namespace FinalProject.Candidate.GUI
         private void FDanhSachDaUT_Load(object sender, EventArgs e)
         {
             InitJobList();
+        }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

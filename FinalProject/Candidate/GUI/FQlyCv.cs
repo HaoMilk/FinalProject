@@ -17,16 +17,6 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button_ChonFile_Click(object sender, EventArgs e)
         {
 
@@ -35,6 +25,11 @@ namespace FinalProject.Candidate.GUI
         private void dataGridView_Cv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

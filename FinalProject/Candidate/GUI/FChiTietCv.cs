@@ -32,7 +32,7 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 cvName = value;
-                this.label_CvName.Text = cvName;
+                this.label_JobName.Text = cvName;
                 this.Invalidate();
             }
         }
@@ -43,7 +43,6 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 cvUpdatedTime = value;
-                this.label_UpdatedTime.Text = cvUpdatedTime.ToString("dd/MM/yyyy");
                 this.Invalidate();
             }
         }
@@ -53,17 +52,17 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
-        private void label_CvName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FChiTietCv_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void groupBox7_Enter(object sender, EventArgs e)
         {
 
         }
