@@ -694,6 +694,7 @@
     <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
     <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
     <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
+    <Content Include="Database\Scripts\013. Update UngTuyen.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
