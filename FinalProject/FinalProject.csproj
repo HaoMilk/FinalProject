@@ -250,9 +250,7 @@
     <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs" />
     <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
