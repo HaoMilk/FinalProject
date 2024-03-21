@@ -23,8 +23,8 @@ namespace FinalProject.Company
 
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            FAddViecLam fDanhSachViecLam = new FAddViecLam();
-            fDanhSachViecLam.Show();
+            //FAddViecLam fDanhSachViecLam = new FAddViecLam();
+            //fDanhSachViecLam.Show();
         }
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
