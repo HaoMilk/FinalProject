@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnDuyet = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnTuChoi = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -56,57 +56,43 @@
             // 
             // btnDuyet
             // 
-            this.btnDuyet.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDuyet.BackColor = System.Drawing.Color.Khaki;
             this.btnDuyet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDuyet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDuyet.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuyet.Location = new System.Drawing.Point(832, 449);
+            this.btnDuyet.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnDuyet.Location = new System.Drawing.Point(808, 465);
             this.btnDuyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDuyet.Name = "btnDuyet";
-            this.btnDuyet.Size = new System.Drawing.Size(102, 52);
+            this.btnDuyet.Size = new System.Drawing.Size(102, 36);
             this.btnDuyet.TabIndex = 45;
-            this.btnDuyet.Text = "Duyệt";
+            this.btnDuyet.Text = "DUYỆT";
             this.btnDuyet.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDuyet.UseVisualStyleBackColor = false;
             // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(1048, 449);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(102, 52);
-            this.btnThoat.TabIndex = 44;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            // 
             // btnTuChoi
             // 
-            this.btnTuChoi.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTuChoi.BackColor = System.Drawing.Color.LightCoral;
             this.btnTuChoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTuChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTuChoi.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTuChoi.Location = new System.Drawing.Point(940, 449);
+            this.btnTuChoi.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnTuChoi.Location = new System.Drawing.Point(916, 465);
             this.btnTuChoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTuChoi.Name = "btnTuChoi";
-            this.btnTuChoi.Size = new System.Drawing.Size(102, 52);
+            this.btnTuChoi.Size = new System.Drawing.Size(126, 36);
             this.btnTuChoi.TabIndex = 43;
-            this.btnTuChoi.Text = "Từ chối";
+            this.btnTuChoi.Text = "TỪ CHỐI";
             this.btnTuChoi.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTuChoi.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.BackColor = System.Drawing.Color.Turquoise;
+            this.label9.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label9.ForeColor = System.Drawing.Color.Brown;
             this.label9.Location = new System.Drawing.Point(646, 392);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 20);
+            this.label9.Size = new System.Drawing.Size(129, 24);
             this.label9.TabIndex = 39;
             this.label9.Text = "Kinh nghiệm";
             // 
@@ -120,11 +106,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.BackColor = System.Drawing.Color.Turquoise;
+            this.label8.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label8.ForeColor = System.Drawing.Color.Brown;
             this.label8.Location = new System.Drawing.Point(28, 392);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.Size = new System.Drawing.Size(88, 24);
             this.label8.TabIndex = 37;
             this.label8.Text = "Học vấn";
             // 
@@ -159,22 +146,24 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.BackColor = System.Drawing.Color.Turquoise;
+            this.label7.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label7.ForeColor = System.Drawing.Color.Brown;
             this.label7.Location = new System.Drawing.Point(646, 354);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 20);
+            this.label7.Size = new System.Drawing.Size(48, 24);
             this.label7.TabIndex = 32;
             this.label7.Text = "SDT";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.BackColor = System.Drawing.Color.Turquoise;
+            this.label6.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.ForeColor = System.Drawing.Color.Brown;
             this.label6.Location = new System.Drawing.Point(28, 354);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
+            this.label6.Size = new System.Drawing.Size(77, 24);
             this.label6.TabIndex = 31;
             this.label6.Text = "Địa chỉ";
             // 
@@ -188,45 +177,48 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.BackColor = System.Drawing.Color.Turquoise;
+            this.label5.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.Brown;
             this.label5.Location = new System.Drawing.Point(646, 316);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(72, 24);
             this.label5.TabIndex = 29;
             this.label5.Text = "CMND";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.BackColor = System.Drawing.Color.Turquoise;
+            this.label4.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.Brown;
             this.label4.Location = new System.Drawing.Point(28, 314);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 20);
+            this.label4.Size = new System.Drawing.Size(74, 24);
             this.label4.TabIndex = 28;
             this.label4.Text = "Họ tên";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.BackColor = System.Drawing.Color.Turquoise;
+            this.label3.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.ForeColor = System.Drawing.Color.Brown;
             this.label3.Location = new System.Drawing.Point(33, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 20);
+            this.label3.Size = new System.Drawing.Size(186, 24);
             this.label3.TabIndex = 27;
             this.label3.Text = "Thông tin ứng viên";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(595, 16);
+            this.label2.BackColor = System.Drawing.Color.Turquoise;
+            this.label2.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.Brown;
+            this.label2.Location = new System.Drawing.Point(590, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 20);
+            this.label2.Size = new System.Drawing.Size(196, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Danh sách đã duyệt";
             // 
@@ -244,12 +236,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(33, 16);
+            this.label1.BackColor = System.Drawing.Color.Turquoise;
+            this.label1.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.Brown;
+            this.label1.Location = new System.Drawing.Point(28, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 20);
+            this.label1.Size = new System.Drawing.Size(209, 24);
             this.label1.TabIndex = 24;
             this.label1.Text = "Danh sách chờ duyệt";
             // 
@@ -266,7 +258,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.Controls.Add(this.btnDuyet);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnTuChoi);
@@ -287,17 +279,32 @@
             this.panel1.Controls.Add(this.dataGridView2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(54, 29);
+            this.panel1.Location = new System.Drawing.Point(34, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1211, 513);
             this.panel1.TabIndex = 1;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Teal;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnThoat.Location = new System.Drawing.Point(1048, 465);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(102, 36);
+            this.btnThoat.TabIndex = 44;
+            this.btnThoat.Text = "THOÁT";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThoat.UseVisualStyleBackColor = false;
             // 
             // FHoSoChuaDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.ClientSize = new System.Drawing.Size(1387, 566);
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1293, 566);
             this.Controls.Add(this.panel1);
             this.Name = "FHoSoChuaDuyet";
             this.Text = "FHoSoChuaDuyet";
@@ -312,7 +319,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnDuyet;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnTuChoi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox2;
@@ -332,5 +338,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnThoat;
     }
 }

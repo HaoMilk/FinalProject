@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Company.GUI.Thong_tin
+namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FDoiMatKhau : Form
+    public partial class FChiTiet : Form
     {
-        public FDoiMatKhau()
+        public FChiTiet()
         {
             InitializeComponent();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

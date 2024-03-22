@@ -10,16 +10,32 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FLichSu : Form
+    public partial class FThemViecLam : Form
     {
-        public FLichSu()
+        public FThemViecLam()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           FChiTiet fChiTiet = new FChiTiet();
+            fChiTiet.Show();
         }
     }
 }

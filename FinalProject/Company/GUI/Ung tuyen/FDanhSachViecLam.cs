@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FLichSu : Form
+    public partial class FDanhSachViecLam : Form
     {
-        public FLichSu()
+        public FDanhSachViecLam()
         {
             InitializeComponent();
+        }
+
+        private void rjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button_Close_Click(object sender, EventArgs e)

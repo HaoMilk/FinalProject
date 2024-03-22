@@ -185,6 +185,30 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
+    <Compile Include="Company\GUI\Ung tuyen\FChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FChiTiet.Designer.cs">
+      <DependentUpon>FChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.Designer.cs">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FThemViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FThemViecLam.Designer.cs">
+      <DependentUpon>FThemViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FThongTinCoBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FThongTinCoBan.Designer.cs">
+      <DependentUpon>FThongTinCoBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
@@ -326,6 +350,18 @@
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FChiTiet.resx">
+      <DependentUpon>FChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachViecLam.resx">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FThemViecLam.resx">
+      <DependentUpon>FThemViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FThongTinCoBan.resx">
+      <DependentUpon>FThongTinCoBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,7 +428,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Company\GUI\Common\" />
+    <Folder Include="Company\UC\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
     <None Include="Resources\CV-template.docx" />
@@ -692,6 +731,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
   </ItemGroup>
