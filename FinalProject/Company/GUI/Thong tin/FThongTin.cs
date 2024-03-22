@@ -16,16 +16,5 @@ namespace FinalProject.Company.GUI.Thong_tin
         {
             InitializeComponent();
         }
-
-        private void rjDatePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            FSuaThongTin fSuaThongTin = new FSuaThongTin();
-            fSuaThongTin.Show();
-        }
     }
 }

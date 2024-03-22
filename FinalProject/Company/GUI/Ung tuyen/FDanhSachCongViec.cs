@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Company.GUI.Thong_tin
+namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FSuaThongTin : Form
+    public partial class FDanhSachCongViec : Form
     {
-        public FSuaThongTin()
+        public FDanhSachCongViec()
         {
             InitializeComponent();
         }
