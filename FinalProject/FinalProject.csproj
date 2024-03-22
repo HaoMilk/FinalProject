@@ -193,6 +193,12 @@
     <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.Designer.cs">
+      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
@@ -230,29 +236,11 @@
     <Compile Include="Company\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoChuaDuyet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoChuaDuyet.Designer.cs">
-      <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.Designer.cs">
-      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.Designer.cs">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Thong tin\FSuaThongTin.Designer.cs">
-      <DependentUpon>FSuaThongTin.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
       <SubType>Form</SubType>
@@ -331,6 +319,9 @@
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachCongViec.resx">
+      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,17 +337,8 @@
     <EmbeddedResource Include="Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ho so\FHoSoChuaDuyet.resx">
-      <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ho so\FHoSoDaDuyet.resx">
-      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhau.resx">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FSuaThongTin.resx">
-      <DependentUpon>FSuaThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
@@ -396,6 +378,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Company\GUI\Common\" />
+    <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
   <ItemGroup>
@@ -697,6 +680,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\company_profile.jpg" />
+    <None Include="Resources\profilecp.jpg" />
+    <None Include="Resources\profilecp1.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

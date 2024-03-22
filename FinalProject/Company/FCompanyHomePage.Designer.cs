@@ -41,7 +41,6 @@
             this.menuItem_ThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.menuStrip_MenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +52,7 @@
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Image.Location = new System.Drawing.Point(0, 36);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(800, 386);
+            this.pictureBox_Image.Size = new System.Drawing.Size(1135, 646);
             this.pictureBox_Image.TabIndex = 7;
             this.pictureBox_Image.TabStop = false;
             // 
@@ -68,7 +67,7 @@
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(800, 36);
+            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1135, 36);
             this.menuStrip_MenuStrip.TabIndex = 6;
             this.menuStrip_MenuStrip.Text = "menuStrip1";
             // 
@@ -90,8 +89,8 @@
             this.menuItem_Dsvl.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_Dsvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_Dsvl.Name = "menuItem_Dsvl";
-            this.menuItem_Dsvl.Size = new System.Drawing.Size(285, 28);
-            this.menuItem_Dsvl.Text = "Tạo công việc mới";
+            this.menuItem_Dsvl.Size = new System.Drawing.Size(344, 28);
+            this.menuItem_Dsvl.Text = "Tạo và chỉnh sửa công việc";
             this.menuItem_Dsvl.Click += new System.EventHandler(this.menuItem_Dsvl_Click);
             // 
             // chỉnhSửaCôngViệcToolStripMenuItem
@@ -99,7 +98,7 @@
             this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(285, 28);
+            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(344, 28);
             this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Danh sách công việc";
             this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
             // 
@@ -109,7 +108,7 @@
             this.menuItem_VieclamUT.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuItem_VieclamUT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_VieclamUT.Name = "menuItem_VieclamUT";
-            this.menuItem_VieclamUT.Size = new System.Drawing.Size(285, 28);
+            this.menuItem_VieclamUT.Size = new System.Drawing.Size(344, 28);
             this.menuItem_VieclamUT.Text = "Lịch sử tuyển dụng";
             this.menuItem_VieclamUT.Click += new System.EventHandler(this.menuItem_VieclamUT_Click);
             // 
@@ -186,27 +185,16 @@
             this.menuItem_DangXuat.Text = "Đăng xuất";
             this.menuItem_DangXuat.Click += new System.EventHandler(this.menuItem_DangXuat_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 422);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 28);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FCompanyHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1135, 682);
             this.Controls.Add(this.pictureBox_Image);
             this.Controls.Add(this.menuStrip_MenuStrip);
-            this.Controls.Add(this.label1);
             this.Name = "FCompanyHomePage";
             this.Text = "FCompanyHomePage";
+            this.Load += new System.EventHandler(this.FCompanyHomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             this.menuStrip_MenuStrip.ResumeLayout(false);
             this.menuStrip_MenuStrip.PerformLayout();
@@ -229,7 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCaNhan;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngViệcToolStripMenuItem;
     }
 }
