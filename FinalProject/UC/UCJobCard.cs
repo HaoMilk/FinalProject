@@ -22,7 +22,7 @@ namespace FinalProject.UC
         private Size defaultCardSize = new Size(300, 250);
 
         #region Fields
-        private int id;
+        private int id = 0;
         private string jobName;
         private DateTime lastUpdatedTime;
 

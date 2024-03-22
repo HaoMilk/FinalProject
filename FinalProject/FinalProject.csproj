@@ -180,7 +180,9 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BUS\CongViecBUS.cs" />
     <Compile Include="Common\BUS\TinhBUS.cs" />
+    <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
     <Compile Include="Database\DatabaseConnection.cs" />
@@ -692,6 +694,7 @@
     <Content Include="Database\Scripts\010. Add Phone, Role into table User.sql" />
     <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
     <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
+    <Content Include="Database\Scripts\013. Update UngTuyen.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
