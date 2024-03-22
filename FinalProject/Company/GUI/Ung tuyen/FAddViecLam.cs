@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI.Ung_tuyen
 {
-    public partial class FThongTinCoBan : Form
+    public partial class FAddViecLam : Form
     {
-        public FThongTinCoBan()
+        public FAddViecLam()
         {
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
