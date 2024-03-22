@@ -22,7 +22,7 @@ namespace FinalProject.Common.BUS
             return congViecDAO.CheckExist(id);
         }
 
-        public int Add(int id, string ten, string nganh, string viTriTuyenDung,
+        public int Add(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
             string quyenLoi, string ngoaiNgu, string tinHoc,
@@ -31,7 +31,8 @@ namespace FinalProject.Common.BUS
              string link)
         {
             var congViec = new CongViec();
-            congViec.Id = id;
+            congViec.IdCongTy = idCongTy;
+            congViec.TenCongTy = tenCongTy;
             congViec.Ten = ten;
             congViec.Nganh =nganh;
             congViec.ViTriTuyenDung = viTriTuyenDung;
@@ -58,7 +59,7 @@ namespace FinalProject.Common.BUS
             return congViecDAO.Add(congViec);
         }
 
-        public int Update(int id, string ten, string nganh, string viTriTuyenDung,
+        public int Update(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
             string quyenLoi, string ngoaiNgu, string tinHoc,
@@ -67,7 +68,8 @@ namespace FinalProject.Common.BUS
              string link, bool isDeleted)
         {
             var congViec = new CongViec();
-            congViec.Id = id;
+            congViec.IdCongTy = idCongTy;
+            congViec.TenCongTy = tenCongTy;
             congViec.Ten = ten;
             congViec.Nganh = nganh;
             congViec.ViTriTuyenDung = viTriTuyenDung;
@@ -98,17 +100,17 @@ namespace FinalProject.Common.BUS
             return congViecDAO.Update(congViec);
         }
 
-        public int Delete(int id)
+        public int Delete(int idCongTy)
         {
             var congViec = new CongViec();
-            congViec.Id = id;
+            congViec.IdCongTy = idCongTy;
             return congViecDAO.Delete(congViec);
         }
 
-        public int SoftDelete(int id)
+        public int SoftDelete(int idCongTy)
         {
             var congViec = new CongViec();
-            congViec.Id = id;
+            congViec.IdCongTy = idCongTy;
             congViec.IsDeleted = true;
             congViec.UpdatedTime = DateTime.Now;
 

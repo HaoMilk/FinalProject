@@ -10,7 +10,8 @@ namespace FinalProject.Database.Entities
     {
         public static string TableName = "CongViec";
 
-        public int Id { get; set; }
+        public int IdCongTy { get; set; }
+        public string TenCongTy { get; set; }
         public string Ten { get; set; }
         public string Nganh { get; set; }
         public string ViTriTuyenDung { get; set; }
