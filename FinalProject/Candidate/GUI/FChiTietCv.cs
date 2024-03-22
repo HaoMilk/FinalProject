@@ -68,7 +68,7 @@ namespace FinalProject.Candidate.GUI
                 textBox_DiaDiemLamViec.Text = congViec.DiaDiem;
                 textBox_MucLuong.Text = congViec.MucLuong.ToString();
                 textBox_ViTriCongViec.Text = congViec.ViTriTuyenDung;
-                textBox_TenCongTy.Text = congViec.Id.ToString();
+                textBox_TenCongTy.Text = congViec.TenCongTy.ToString();
                 richTextBox_MoTa.Text = congViec.MoTa;
                 textBox_KinhNghiem.Text = congViec.KinhNghiem;
                 textBox_LienHe.Text = congViec.LienHe;
@@ -95,6 +95,11 @@ namespace FinalProject.Candidate.GUI
         }
 
         private void button_Submit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TenCongTy_TextChanged(object sender, EventArgs e)
         {
 
         }
