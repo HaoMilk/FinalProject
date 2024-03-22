@@ -74,6 +74,7 @@ namespace FinalProject.Candidate.GUI
                 textBox_LienHe.Text = congViec.LienHe;
                 textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
+                textBox_Nganh.Text = congViec.Nganh;
 
             }
         }
