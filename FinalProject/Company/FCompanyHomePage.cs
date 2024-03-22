@@ -23,20 +23,17 @@ namespace FinalProject.Company
 
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            FThemViecLam fThemViecLam = new FThemViecLam(); 
-            fThemViecLam.ShowDialog();
+
         }
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FLichSu fLichSu = new FLichSu();
-            fLichSu.Show();
+
         }
 
         private void hồSơĐãDuyệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FHoSoDaDuyet fHoSoDaDuyet = new FHoSoDaDuyet();
-            fHoSoDaDuyet.Show();
+
         }
 
         private void hồSơChưaDuyệtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,8 +67,7 @@ namespace FinalProject.Company
 
         private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FDanhSachViecLam fDanhSachViecLam = new FDanhSachViecLam();
-            fDanhSachViecLam.Show();
+
         }
     }
 }

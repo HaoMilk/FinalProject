@@ -53,9 +53,6 @@
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -234,12 +231,6 @@
     <Compile Include="Company\GUI\Ho so\FHoSoChuaDuyet.Designer.cs">
       <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ho so\FHoSoDaDuyet.Designer.cs">
-      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,9 +337,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ho so\FHoSoChuaDuyet.resx">
       <DependentUpon>FHoSoChuaDuyet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ho so\FHoSoDaDuyet.resx">
-      <DependentUpon>FHoSoDaDuyet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhau.resx">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
