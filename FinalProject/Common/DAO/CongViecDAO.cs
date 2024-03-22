@@ -46,9 +46,9 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var congViec = new CongViec();
-                        congViec.IdCongTy = reader.GetInt32(0);
-                        congViec.TenCongTy = reader.GetString(1);
-                        congViec.Ten = reader.GetString(2);
+                        congViec.Id = reader.GetInt32(0);
+                        congViec.Ten = reader.GetString(1);
+                        congViec.TenCongTy = reader.GetString(2);
                         congViec.Nganh = reader.GetString(3);
                         congViec.ViTriTuyenDung = reader.GetString(4);
                         congViec.MucLuong = reader.GetDecimal(5);
@@ -70,6 +70,7 @@ namespace FinalProject.Common.DAO
                         congViec.IsDeleted = reader.GetBoolean(21);
                         congViec.CreatedTime = reader.GetDateTime(22);
                         congViec.UpdatedTime = reader.IsDBNull(23) ? (DateTime?)null : reader.GetDateTime(23);
+                        congViec.IdCongTy = reader.GetInt32(24);
 
                         list.Add(congViec);
                     }
@@ -85,10 +86,10 @@ namespace FinalProject.Common.DAO
 
         public int Add(CongViec CongViec)
         {
-            string query = "INSERT INTO CongViec (IdCongTy, TenCongTy, Ten, Nganh, ViTriTuyenDung, MucLuong," +
+            string query = "INSERT INTO CongViec (Id, TenCongTy, Ten, Nganh, ViTriTuyenDung, MucLuong," +
                 " DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, NgoaiNgu," +
                 " TinHoc, KinhNghiem, KyNang, FromDate, ToDate, TrangThai," +
-                " SoLuong, Link, IsDeleted, CreatedTime, UpdatedTime ) " +
+                " SoLuong, Link, IsDeleted, CreatedTime, UpdatedTime, IdCongTy ) " +
                 $"VALUES ('{CongViec.IdCongTy}', N'{CongViec.TenCongTy}, N'{CongViec.Ten}', " +
                 $"N'{CongViec.Nganh}',N'{CongViec.ViTriTuyenDung}'," +
                 $" {CongViec.MucLuong},N'{CongViec.DiaDiem}', " +
@@ -100,7 +101,7 @@ namespace FinalProject.Common.DAO
                 $"'{CongViec.ToDate}', N'{CongViec.TrangThai}'," +
                 $"'{CongViec.SoLuong}," +
                 $"N'{CongViec.Link}', {CongViec.IsDeleted}," +
-                $" '{CongViec.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
+                $" '{CongViec.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL, {CongViec.IdCongTy}); ";
 
             using (dbConnection.Connection)
             {
@@ -142,7 +143,8 @@ namespace FinalProject.Common.DAO
                     $"SoLuong = {CongViec.SoLuong}, " +
                     $"Link = N'{CongViec.Link}', " +                
                     $"IsDeleted = {CongViec.IsDeleted}, " +
-                    $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
+                    $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}'," +
+                    $"IdCongTy = {CongViec.IdCongTy} " +
                     $"WHERE Id = {CongViec.IdCongTy};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -211,9 +213,9 @@ namespace FinalProject.Common.DAO
                     if (reader.Read())
                     {
                         congViec = new CongViec();
-                        congViec.IdCongTy = reader.GetInt32(0);
-                        congViec.TenCongTy = reader.GetString(1);
-                        congViec.Ten = reader.GetString(2);
+                        congViec.Id = reader.GetInt32(0);
+                        congViec.Ten = reader.GetString(1);
+                        congViec.TenCongTy = reader.GetString(2);
                         congViec.Nganh = reader.GetString(3);
                         congViec.ViTriTuyenDung = reader.GetString(4);
                         congViec.MucLuong = reader.GetDecimal(5);
@@ -235,8 +237,9 @@ namespace FinalProject.Common.DAO
                         congViec.IsDeleted = reader.GetBoolean(21);
                         congViec.CreatedTime = reader.GetDateTime(22);
                         congViec.UpdatedTime = reader.IsDBNull(23) ? (DateTime?)null : reader.GetDateTime(23);
+                        congViec.IdCongTy = reader.GetInt32(24);
+
                         return congViec;
-                  
                     }
                 }
                 catch (Exception ex)
@@ -247,6 +250,5 @@ namespace FinalProject.Common.DAO
                 return null;
             }
         }
-
     }
 }

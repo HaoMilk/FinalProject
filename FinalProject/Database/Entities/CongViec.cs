@@ -10,8 +10,7 @@ namespace FinalProject.Database.Entities
     {
         public static string TableName = "CongViec";
 
-        public int IdCongTy { get; set; }
-        public string TenCongTy { get; set; }
+        public int Id { get; set; }
         public string Ten { get; set; }
         public string Nganh { get; set; }
         public string ViTriTuyenDung { get; set; }
@@ -34,5 +33,7 @@ namespace FinalProject.Database.Entities
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
+        public int IdCongTy { get; set; }
+        public string TenCongTy { get; set; }
     }
 }
