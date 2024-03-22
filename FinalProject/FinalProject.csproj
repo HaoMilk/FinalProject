@@ -252,10 +252,6 @@
     <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
-      <DependentUpon>FAddViecLam.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\Ung tuyen\FLichSu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -359,9 +355,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
-      <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSu.resx">
       <DependentUpon>FLichSu.cs</DependentUpon>
