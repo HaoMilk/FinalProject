@@ -226,7 +226,6 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(690, 513);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
-            this.flowLayoutPanel_CongViec.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel_CongViec_Paint);
             // 
             // label_SoLuongViecLam
             // 
