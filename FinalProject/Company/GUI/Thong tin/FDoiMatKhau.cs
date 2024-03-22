@@ -16,5 +16,10 @@ namespace FinalProject.Company.GUI.Thong_tin
         {
             InitializeComponent();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

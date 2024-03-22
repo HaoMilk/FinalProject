@@ -201,5 +201,10 @@ namespace FinalProject.Candidate.GUI
         {
             this.Close();
         }
+
+        private void flowLayoutPanel_CongViec_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -23,8 +23,8 @@ namespace FinalProject.Company
 
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            //FAddViecLam fDanhSachViecLam = new FAddViecLam();
-            //fDanhSachViecLam.Show();
+            FThemViecLam fThemViecLam = new FThemViecLam(); 
+            fThemViecLam.ShowDialog();
         }
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
@@ -70,8 +70,8 @@ namespace FinalProject.Company
 
         private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FDanhSachCongViec fDanhSachCongViec = new FDanhSachCongViec();
-            fDanhSachCongViec.Show();
+            FDanhSachViecLam fDanhSachViecLam = new FDanhSachViecLam();
+            fDanhSachViecLam.Show();
         }
     }
 }

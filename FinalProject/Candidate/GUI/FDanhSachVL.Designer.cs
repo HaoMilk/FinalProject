@@ -109,7 +109,7 @@ namespace FinalProject.Candidate.GUI
             this.menuStrip_Filter.Name = "menuStrip_Filter";
             this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 170);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 
@@ -226,6 +226,7 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(690, 513);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
+            this.flowLayoutPanel_CongViec.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel_CongViec_Paint);
             // 
             // label_SoLuongViecLam
             // 
