@@ -180,10 +180,10 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\BUS\UngTuyenBUS - Copy.cs" />
+    <Compile Include="Common\BUS\UngTuyenBUS.cs" />
     <Compile Include="Common\BUS\CongViecBUS.cs" />
     <Compile Include="Common\BUS\TinhBUS.cs" />
-    <Compile Include="Common\DAO\UngTuyenDAO - Copy.cs" />
+    <Compile Include="Common\DAO\UngTuyenDAO.cs" />
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
