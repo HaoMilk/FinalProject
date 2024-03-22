@@ -185,29 +185,11 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FChiTiet.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FChiTiet.Designer.cs">
-      <DependentUpon>FChiTiet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachViecLam.Designer.cs">
-      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FThemViecLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FThemViecLam.Designer.cs">
-      <DependentUpon>FThemViecLam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FThongTinCoBan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FThongTinCoBan.Designer.cs">
-      <DependentUpon>FThongTinCoBan.cs</DependentUpon>
+    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
+      <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
@@ -275,12 +257,6 @@
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FLichSu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FLichSu.Designer.cs">
-      <DependentUpon>FLichSu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -350,17 +326,8 @@
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FChiTiet.resx">
-      <DependentUpon>FChiTiet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachViecLam.resx">
-      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FThemViecLam.resx">
-      <DependentUpon>FThemViecLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FThongTinCoBan.resx">
-      <DependentUpon>FThongTinCoBan.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
+      <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
@@ -391,9 +358,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FLichSu.resx">
-      <DependentUpon>FLichSu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
