@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachDaUT));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_Data = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucPagination = new FinalProject.UC.UCPagination();
             this.panelFilter = new System.Windows.Forms.Panel();
             this.groupBox_TenTrangThai = new System.Windows.Forms.GroupBox();
             this.comboBox_Status = new System.Windows.Forms.ComboBox();
@@ -51,12 +52,13 @@
             // panelLeft
             // 
             this.panelLeft.Controls.Add(this.flowLayoutPanel_Data);
+            this.panelLeft.Controls.Add(this.ucPagination);
             this.panelLeft.Controls.Add(this.panelFilter);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelLeft.Location = new System.Drawing.Point(3, 2);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(916, 754);
+            this.panelLeft.Size = new System.Drawing.Size(916, 684);
             this.panelLeft.TabIndex = 0;
             // 
             // flowLayoutPanel_Data
@@ -68,8 +70,19 @@
             this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
             this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(916, 650);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(916, 530);
             this.flowLayoutPanel_Data.TabIndex = 1;
+            // 
+            // ucPagination
+            // 
+            this.ucPagination.CurrentPage = 1;
+            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucPagination.Location = new System.Drawing.Point(0, 634);
+            this.ucPagination.Name = "ucPagination";
+            this.ucPagination.Size = new System.Drawing.Size(916, 50);
+            this.ucPagination.TabIndex = 0;
+            this.ucPagination.TotalRecord = 20;
+            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // panelFilter
             // 
@@ -153,7 +166,7 @@
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight.Location = new System.Drawing.Point(925, 3);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(390, 752);
+            this.panelRight.Size = new System.Drawing.Size(390, 682);
             this.panelRight.TabIndex = 1;
             // 
             // ucUserSetting1
@@ -163,7 +176,7 @@
             this.ucUserSetting1.Location = new System.Drawing.Point(0, 0);
             this.ucUserSetting1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ucUserSetting1.Name = "ucUserSetting1";
-            this.ucUserSetting1.Size = new System.Drawing.Size(390, 752);
+            this.ucUserSetting1.Size = new System.Drawing.Size(390, 682);
             this.ucUserSetting1.TabIndex = 0;
             // 
             // panel_Top
@@ -234,5 +247,6 @@
         private UC.UCUserSetting ucUserSetting1;
         private System.Windows.Forms.Panel panel_Top;
         private System.Windows.Forms.Button button_Close;
+        private FinalProject.UC.UCPagination ucPagination;
     }
 }
