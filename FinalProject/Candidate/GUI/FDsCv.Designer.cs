@@ -36,13 +36,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
             this.flowLayoutPanel_Data = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_Pagination = new System.Windows.Forms.TableLayoutPanel();
             this.button_Previous = new System.Windows.Forms.Button();
             this.button_Next = new System.Windows.Forms.Button();
             this.label_CurrentPage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel_Pagination.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_DanhSachCv
@@ -136,22 +136,22 @@
             this.flowLayoutPanel_Data.Size = new System.Drawing.Size(960, 641);
             this.flowLayoutPanel_Data.TabIndex = 7;
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel_Pagination
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.button_Previous, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_Next, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label_CurrentPage, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 732);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(960, 48);
-            this.tableLayoutPanel1.TabIndex = 8;
+            this.tableLayoutPanel_Pagination.ColumnCount = 3;
+            this.tableLayoutPanel_Pagination.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_Pagination.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_Pagination.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel_Pagination.Controls.Add(this.button_Previous, 0, 0);
+            this.tableLayoutPanel_Pagination.Controls.Add(this.button_Next, 2, 0);
+            this.tableLayoutPanel_Pagination.Controls.Add(this.label_CurrentPage, 1, 0);
+            this.tableLayoutPanel_Pagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel_Pagination.Location = new System.Drawing.Point(20, 732);
+            this.tableLayoutPanel_Pagination.Name = "tableLayoutPanel_Pagination";
+            this.tableLayoutPanel_Pagination.RowCount = 1;
+            this.tableLayoutPanel_Pagination.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel_Pagination.Size = new System.Drawing.Size(960, 48);
+            this.tableLayoutPanel_Pagination.TabIndex = 8;
             // 
             // button_Previous
             // 
@@ -167,7 +167,7 @@
             this.button_Previous.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Previous.Location = new System.Drawing.Point(3, 3);
             this.button_Previous.Name = "button_Previous";
-            this.button_Previous.Size = new System.Drawing.Size(313, 42);
+            this.button_Previous.Size = new System.Drawing.Size(314, 42);
             this.button_Previous.TabIndex = 1;
             this.button_Previous.Text = "Previous page";
             this.button_Previous.UseVisualStyleBackColor = false;
@@ -184,9 +184,9 @@
             this.button_Next.ForeColor = System.Drawing.SystemColors.Control;
             this.button_Next.Image = global::FinalProject.Properties.Resources.icons8_last_48;
             this.button_Next.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Next.Location = new System.Drawing.Point(641, 3);
+            this.button_Next.Location = new System.Drawing.Point(643, 3);
             this.button_Next.Name = "button_Next";
-            this.button_Next.Size = new System.Drawing.Size(316, 42);
+            this.button_Next.Size = new System.Drawing.Size(314, 42);
             this.button_Next.TabIndex = 0;
             this.button_Next.Text = "Next page";
             this.button_Next.UseVisualStyleBackColor = false;
@@ -198,9 +198,9 @@
             this.label_CurrentPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_CurrentPage.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_CurrentPage.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_CurrentPage.Location = new System.Drawing.Point(322, 0);
+            this.label_CurrentPage.Location = new System.Drawing.Point(323, 0);
             this.label_CurrentPage.Name = "label_CurrentPage";
-            this.label_CurrentPage.Size = new System.Drawing.Size(313, 48);
+            this.label_CurrentPage.Size = new System.Drawing.Size(314, 48);
             this.label_CurrentPage.TabIndex = 2;
             this.label_CurrentPage.Text = "0 / 0";
             this.label_CurrentPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,7 +211,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 800);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tableLayoutPanel_Pagination);
             this.Controls.Add(this.flowLayoutPanel_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_DanhSachCv);
@@ -229,8 +229,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel_Pagination.ResumeLayout(false);
+            this.tableLayoutPanel_Pagination.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -244,7 +244,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_Close;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Data;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_Pagination;
         private System.Windows.Forms.Button button_Next;
         private System.Windows.Forms.Button button_Previous;
         private System.Windows.Forms.Label label_CurrentPage;

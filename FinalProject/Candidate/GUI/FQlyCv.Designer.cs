@@ -44,11 +44,11 @@
             this.button_Xoa = new System.Windows.Forms.Button();
             this.button_Them = new System.Windows.Forms.Button();
             this.button_ChonFile = new System.Windows.Forms.Button();
-            this.label_Name = new System.Windows.Forms.Label();
             this.dataGridView_Cv = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.button_TimKiem = new System.Windows.Forms.Button();
+            this.label_Name = new System.Windows.Forms.Label();
             this.button_Close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -308,19 +308,6 @@
             this.button_ChonFile.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_ChonFile.UseVisualStyleBackColor = false;
             // 
-            // label_Name
-            // 
-            this.label_Name.BackColor = System.Drawing.Color.DarkSalmon;
-            this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.Color.Azure;
-            this.label_Name.Location = new System.Drawing.Point(0, 40);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(1323, 44);
-            this.label_Name.TabIndex = 7;
-            this.label_Name.Text = "QUẢN LÝ CV";
-            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // dataGridView_Cv
             // 
             this.dataGridView_Cv.BackgroundColor = System.Drawing.Color.Azure;
@@ -373,6 +360,19 @@
             this.button_TimKiem.Size = new System.Drawing.Size(80, 30);
             this.button_TimKiem.TabIndex = 1;
             this.button_TimKiem.UseVisualStyleBackColor = true;
+            // 
+            // label_Name
+            // 
+            this.label_Name.BackColor = System.Drawing.Color.DarkSalmon;
+            this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.ForeColor = System.Drawing.Color.Azure;
+            this.label_Name.Location = new System.Drawing.Point(0, 40);
+            this.label_Name.Name = "label_Name";
+            this.label_Name.Size = new System.Drawing.Size(1323, 44);
+            this.label_Name.TabIndex = 7;
+            this.label_Name.Text = "QUẢN LÝ CV";
+            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_Close
             // 
