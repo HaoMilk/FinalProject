@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,10 @@ namespace FinalProject.Candidate.GUI
     {
         private CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
+        private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
+        private UngTuyen ungTuyen = new UngTuyen();
+        private UngTuyenDAO ungTuyenDto = new UngTuyenDAO();
+
         private int id;
         private string cvName;
         private DateTime cvUpdatedTime;
@@ -100,7 +105,28 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Submit_Click(object sender, EventArgs e)
         {
+            ungTuyen = new UngTuyen()
+            {
+                Id = -1,
+                CongViecId = id,
+                UngVienId = 1,
+                CvId = 1,
+                TrangThai = "Chờ xác nhận",
+                MoTa = "Chờ xác nhận",
+                IsDeleted = false,
+                CreatedTime = DateTime.Now,
+                UpdatedTime = null
+            };
 
+            var result = ungTuyenBUS.Add(ungTuyen);
+            if (result > 0)
+            {
+                MessageBox.Show("Ứng tuyển thành công");
+            }
+            else
+            {
+                MessageBox.Show("Ứng tuyển thất bại");
+            }
         }
 
         private void textBox_TenCongTy_TextChanged(object sender, EventArgs e)

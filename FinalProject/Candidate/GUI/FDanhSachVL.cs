@@ -1,6 +1,6 @@
 ﻿using FinalProject.Candidate.Constants;
-using FinalProject.Candidate.DTO;
 using FinalProject.Common.BUS;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using Newtonsoft.Json;

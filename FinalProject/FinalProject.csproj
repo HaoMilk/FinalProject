@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -125,7 +125,13 @@
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
-    <Compile Include="Candidate\DTO\TimKiemViecLamDto.cs" />
+    <Compile Include="Candidate\GUI\FUngTuyenCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FUngTuyenCongViec.Designer.cs">
+      <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,8 @@
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\DTO\UngTuyenDTO.cs" />
+    <Compile Include="Database\DTO\UngTuyenGetAllInput.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
     <Compile Include="Database\Entities\Tinh.cs" />
@@ -324,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
+      <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
@@ -690,6 +701,7 @@
     <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
     <Content Include="Database\Scripts\013. Update UngTuyen.sql" />
     <Content Include="Database\Scripts\015. Update columns order in table CongViec.sql" />
+    <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
