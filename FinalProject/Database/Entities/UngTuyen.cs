@@ -20,4 +20,11 @@ namespace FinalProject.Database.Entities
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
     }
+
+    public static class TrangThaiUngTuyen
+    {
+        public const string Submitted = "Submitted";
+        public const string Approved = "Approved";
+        public const string Rejected = "Rejected";
+    }
 }

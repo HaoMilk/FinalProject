@@ -20,6 +20,11 @@ namespace FinalProject.Candidate.GUI
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
         private UngTuyen ungTuyen = new UngTuyen();
         private UngTuyenDAO ungTuyenDto = new UngTuyenDAO();
+        private UngVien ungVien = new UngVien()
+        {
+            Id = 1,
+            HoTen = "Vi Quốc Thuận",
+        };
 
         private int id;
         private string cvName;
@@ -105,28 +110,10 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Submit_Click(object sender, EventArgs e)
         {
-            ungTuyen = new UngTuyen()
-            {
-                Id = -1,
-                CongViecId = id,
-                UngVienId = 1,
-                CvId = 1,
-                TrangThai = "Chờ xác nhận",
-                MoTa = "Chờ xác nhận",
-                IsDeleted = false,
-                CreatedTime = DateTime.Now,
-                UpdatedTime = null
-            };
-
-            var result = ungTuyenBUS.Add(ungTuyen);
-            if (result > 0)
-            {
-                MessageBox.Show("Ứng tuyển thành công");
-            }
-            else
-            {
-                MessageBox.Show("Ứng tuyển thất bại");
-            }
+            FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
+            fUngTuyenCongViec.CongViec = congViec;
+            fUngTuyenCongViec.UngVien = ungVien;
+            fUngTuyenCongViec.ShowDialog();
         }
 
         private void textBox_TenCongTy_TextChanged(object sender, EventArgs e)
