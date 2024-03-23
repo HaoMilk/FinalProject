@@ -11,7 +11,6 @@ namespace FinalProject.Database.Entities
         public static string TableName = "UngTuyen";
 
         public int Id { get; set; }
-        public string TenCongViec { get; set; }
         public int CongViecId { get; set; }
         public int UngVienId { get; set; }
         public int CvId { get; set; }
