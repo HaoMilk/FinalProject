@@ -218,6 +218,12 @@
     <Compile Include="UC\UCMenuCard.Designer.cs">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCPagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPagination.Designer.cs">
+      <DependentUpon>UCPagination.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPagination.resx">
+      <DependentUpon>UCPagination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
