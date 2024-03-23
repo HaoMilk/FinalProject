@@ -206,6 +206,9 @@
     <Compile Include="Database\Entities\UngTuyen.cs" />
     <Compile Include="Database\Entities\UngVien.cs" />
     <Compile Include="Database\Entities\User.cs" />
+    <Compile Include="UC\UCComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC\UCCtyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -15,6 +15,16 @@ namespace FinalProject.UC
         public UCPagination()
         {
             InitializeComponent();
+
+            var items = new ComboBoxItem[]
+            {
+                new ComboBoxItem { Text = "5 items/page", Value = 5 },
+                new ComboBoxItem { Text = "10 items/page", Value = 10 },
+                new ComboBoxItem { Text = "15 items/page", Value = 15 },
+                new ComboBoxItem { Text = "20 items/page", Value = 20 },
+            };
+            this.ucComboBox_PageSize.Items = items;
+            this.ucComboBox_PageSize.SelectedIndex = 0;
         }
 
         private int _currentPage;
