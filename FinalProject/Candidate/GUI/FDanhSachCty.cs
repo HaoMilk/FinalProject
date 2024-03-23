@@ -16,6 +16,10 @@ namespace FinalProject.Candidate.GUI
         public FDanhSachCty()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void FDanhSachCty_Load(object sender, EventArgs e)

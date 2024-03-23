@@ -16,6 +16,11 @@ namespace FinalProject.Candidate.GUI
         public FMauCv()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+
             this.richTextBox_Data.SelectedRtf = Resources.resume;
         }
 

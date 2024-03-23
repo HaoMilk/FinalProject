@@ -27,6 +27,10 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+
             this.listTinh = tinhBUS.GetAll();
             this.comboBox_DiaDiem.Items.Clear();
             this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());

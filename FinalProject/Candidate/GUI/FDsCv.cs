@@ -15,6 +15,10 @@ namespace FinalProject.Candidate.GUI
         public FDsCv()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void FDsCv_Load(object sender, EventArgs e)

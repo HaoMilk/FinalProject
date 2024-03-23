@@ -16,6 +16,10 @@ namespace FinalProject.Candidate.GUI
         public FDanhSachDaUT()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         #region JobList
