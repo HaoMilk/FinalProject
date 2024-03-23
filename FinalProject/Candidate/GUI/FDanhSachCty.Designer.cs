@@ -39,6 +39,7 @@
             this.flowLayoutPanel_DanhSach = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
+            this.ucPagination = new FinalProject.UC.UCPagination();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -153,7 +154,7 @@
             this.flowLayoutPanel_DanhSach.Location = new System.Drawing.Point(20, 177);
             this.flowLayoutPanel_DanhSach.Name = "flowLayoutPanel_DanhSach";
             this.flowLayoutPanel_DanhSach.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel_DanhSach.Size = new System.Drawing.Size(1062, 566);
+            this.flowLayoutPanel_DanhSach.Size = new System.Drawing.Size(1062, 516);
             this.flowLayoutPanel_DanhSach.TabIndex = 3;
             // 
             // panel1
@@ -182,6 +183,18 @@
             this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
+            // ucPagination
+            // 
+            this.ucPagination.CurrentPage = 0;
+            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucPagination.Location = new System.Drawing.Point(20, 693);
+            this.ucPagination.Name = "ucPagination";
+            this.ucPagination.PageSize = 10;
+            this.ucPagination.Size = new System.Drawing.Size(1062, 50);
+            this.ucPagination.TabIndex = 0;
+            this.ucPagination.TotalPage = 0;
+            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
+            // 
             // FDanhSachCty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -189,6 +202,7 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1102, 763);
             this.Controls.Add(this.flowLayoutPanel_DanhSach);
+            this.Controls.Add(this.ucPagination);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -222,5 +236,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_DanhSach;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_Close;
+        private FinalProject.UC.UCPagination ucPagination;
     }
 }

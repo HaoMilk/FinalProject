@@ -30,5 +30,10 @@ namespace FinalProject.Candidate.GUI
         {
             this.Close();
         }
+
+        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

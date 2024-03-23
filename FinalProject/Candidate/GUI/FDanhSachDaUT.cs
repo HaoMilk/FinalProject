@@ -23,9 +23,15 @@ namespace FinalProject.Candidate.GUI
         }
 
         #region JobList
-        private void InitJobList()
+        private void LoadJobList()
         {
-            var ucJobCards = CreateJobList(20);
+            var quantity = ucPagination.PageSize;
+            var start = ucPagination.StartRecord;
+            var end = ucPagination.EndRecord;
+
+            var ucJobCards = CreateJobList(quantity);
+            flowLayoutPanel_Data.Controls.Clear();
+
             foreach (var ucJobCard in ucJobCards)
             {
                 flowLayoutPanel_Data.Controls.Add(ucJobCard);
@@ -74,12 +80,17 @@ namespace FinalProject.Candidate.GUI
 
         private void FDanhSachDaUT_Load(object sender, EventArgs e)
         {
-            InitJobList();
+            LoadJobList();
         }
 
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
+        {
+            LoadJobList();
         }
     }
 }

@@ -30,7 +30,13 @@ namespace FinalProject.Candidate.GUI
         #region JobList
         private void InitListCongTy()
         {
-            var UCCtyCards = CreateCongTyList(10);
+            var quantity = ucPagination.PageSize;
+            var start = ucPagination.StartRecord;
+            var end = ucPagination.EndRecord;
+
+            var UCCtyCards = CreateCongTyList(quantity);
+            flowLayoutPanel_DanhSach.Controls.Clear();
+
             foreach (var UCCtyCard in UCCtyCards)
             {
                 flowLayoutPanel_DanhSach.Controls.Add(UCCtyCard);
@@ -57,6 +63,11 @@ namespace FinalProject.Candidate.GUI
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
