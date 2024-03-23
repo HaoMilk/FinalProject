@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,7 @@ namespace FinalProject.UC
 
         private int _currentPage;
         private int _totalPage;
+        private int _totalRecord;
         private int _pageSize = 10;
 
         [Category("CUSTOMIZE DATA")]
@@ -53,35 +55,22 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE DATA")]
-        public int TotalPage
-        {
-            get { return _totalPage; }
-            set
-            {
-                _totalPage = value;
-                this.CurrentPage = 1;
-                this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
-                this.Invalidate();
-            }
-        }
-
-        [Category("CUSTOMIZE DATA")]
         public int PageSize
         {
             get { return _pageSize; }
-            set
-            {
-                _pageSize = value;
-                this.Invalidate();
-            }
         }
 
+        [Category("CUSTOMIZE DATA")]
         public int TotalRecord
         {
-            get
+            get { return _totalRecord; }
+            set
             {
-                return this.TotalPage * this.PageSize;
+                _totalRecord = value;
+                _currentPage = 1;
+                _totalPage = (int)Math.Ceiling((double)_totalRecord / _pageSize);
+                this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
+                this.Invalidate();
             }
         }
 
@@ -122,6 +111,18 @@ namespace FinalProject.UC
             {
                 CurrentPageChanged(this, e);
             }    
+        }
+
+        private void ucComboBox_PageSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var item = this.ucComboBox_PageSize.SelectedItem as ComboBoxItem;
+            if (item != null)
+            {
+                this._pageSize = (int)item.Value;
+                this._currentPage = 1;
+                this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
+                this.Invalidate();
+            }
         }
     }
 }

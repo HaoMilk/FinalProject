@@ -122,11 +122,13 @@
             this.ucComboBox_PageSize.ForeColor = System.Drawing.SystemColors.Control;
             this.ucComboBox_PageSize.FormattingEnabled = true;
             this.ucComboBox_PageSize.ItemHeight = 44;
+            this.ucComboBox_PageSize.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_PageSize.Location = new System.Drawing.Point(250, 0);
             this.ucComboBox_PageSize.Margin = new System.Windows.Forms.Padding(0);
             this.ucComboBox_PageSize.Name = "ucComboBox_PageSize";
             this.ucComboBox_PageSize.Size = new System.Drawing.Size(125, 50);
             this.ucComboBox_PageSize.TabIndex = 3;
+            this.ucComboBox_PageSize.SelectedIndexChanged += new System.EventHandler(this.ucComboBox_PageSize_SelectedIndexChanged);
             // 
             // UCPagination
             // 

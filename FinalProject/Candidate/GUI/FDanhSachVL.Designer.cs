@@ -235,10 +235,9 @@ namespace FinalProject.Candidate.GUI
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ucPagination.Location = new System.Drawing.Point(0, 503);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.PageSize = 10;
             this.ucPagination.Size = new System.Drawing.Size(690, 50);
             this.ucPagination.TabIndex = 0;
-            this.ucPagination.TotalPage = 5;
+            this.ucPagination.TotalRecord = 15;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // label_SoLuongViecLam

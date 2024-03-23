@@ -138,10 +138,8 @@
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ucPagination.Location = new System.Drawing.Point(20, 730);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.PageSize = 10;
             this.ucPagination.Size = new System.Drawing.Size(960, 50);
             this.ucPagination.TabIndex = 0;
-            this.ucPagination.TotalPage = 0;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // FDsCv
