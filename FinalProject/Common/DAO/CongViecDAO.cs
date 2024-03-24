@@ -86,21 +86,20 @@ namespace FinalProject.Common.DAO
 
         public int Add(CongViec CongViec)
         {
-            string query = "INSERT INTO CongViec (Id, TenCongTy, Ten, Nganh, ViTriTuyenDung, MucLuong," +
+            string query = "INSERT INTO CongViec (Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong," +
                 " DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, NgoaiNgu," +
                 " TinHoc, KinhNghiem, KyNang, FromDate, ToDate, TrangThai," +
                 " SoLuong, Link, IsDeleted, CreatedTime, UpdatedTime, IdCongTy ) " +
-                $"VALUES ('{CongViec.IdCongTy}', N'{CongViec.TenCongTy}, N'{CongViec.Ten}', " +
-                $"N'{CongViec.Nganh}',N'{CongViec.ViTriTuyenDung}'," +
-                $" {CongViec.MucLuong},N'{CongViec.DiaDiem}', " +
+                $"VALUES (N'{CongViec.Ten}, N'{CongViec.TenCongTy}', " +
+                $" N'{CongViec.Nganh}', N'{CongViec.ViTriTuyenDung}'," +
+                $" {CongViec.MucLuong}, N'{CongViec.DiaDiem}', " +
                 $" N'{CongViec.TrinhDoHocVan}', N'{CongViec.GioiTinh}'," +
-                $"N'{CongViec.LienHe}', N'{CongViec.MoTa}'," +
-                $"N'{CongViec.QuyenLoi}', N'{CongViec.NgoaiNgu}'," +
-                $"N'{CongViec.TinHoc}', N'{CongViec.KinhNghiem}'," +
-                $"N'{CongViec.KyNang}', '{CongViec.FromDate}'," +
+                $" N'{CongViec.LienHe}', N'{CongViec.MoTa}'," +
+                $" N'{CongViec.QuyenLoi}', N'{CongViec.NgoaiNgu}'," +
+                $" N'{CongViec.TinHoc}', N'{CongViec.KinhNghiem}'," +
+                $" N'{CongViec.KyNang}', '{CongViec.FromDate}'," +
                 $"'{CongViec.ToDate}', N'{CongViec.TrangThai}'," +
-                $"'{CongViec.SoLuong}," +
-                $"N'{CongViec.Link}', {CongViec.IsDeleted}," +
+                $"'{CongViec.SoLuong}, N'{CongViec.Link}', {CongViec.IsDeleted}," +
                 $" '{CongViec.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL, {CongViec.IdCongTy}); ";
 
             using (dbConnection.Connection)
@@ -122,8 +121,8 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $"UPDATE CongViec SET " +
-                    $"TenCongTy = N'{CongViec.TenCongTy}'" +
                     $"Ten = N'{CongViec.Ten}', " +
+                    $"TenCongTy = N'{CongViec.TenCongTy}'" +
                     $"Nganh = N'{CongViec.Nganh}', " +
                     $"ViTriTuyenDung = N'{CongViec.ViTriTuyenDung}', " +
                     $"MucLuong = {CongViec.MucLuong}, " +
@@ -145,7 +144,7 @@ namespace FinalProject.Common.DAO
                     $"IsDeleted = {CongViec.IsDeleted}, " +
                     $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}'," +
                     $"IdCongTy = {CongViec.IdCongTy} " +
-                    $"WHERE Id = {CongViec.IdCongTy};";
+                    $"WHERE Id = {CongViec.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
