@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -15,13 +16,74 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FUngTuyenCongViec : Form
     {
+        #region Fields and Properties
+        private CongViecBUS congViecBUS = new CongViecBUS();
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
-        private UngTuyen ungTuyen = new UngTuyen();
-        public UngVien UngVien { get; set; }
-        public CongViec CongViec { get; set; }
-        public int UngTuyenId { get; set; }
-        public int CongViecId { get; set; }
+        private int? ungTuyenId;
+        private int? congViecId;
+        private UngVien ungVien;
+        private CongViec congViec;
+
+        public int? UngTuyenId
+        {
+            get { return ungTuyenId; }
+            set
+            {
+                ungTuyenId = value;
+                if (value != null && value > 0)
+                {
+                    var ungTuyenDto = ungTuyenBUS.GetById(ungTuyenId.Value);
+                    textBox_TenUngVien.Text = ungTuyenDto.TenUngVien;
+                    textBox_TenCongViec.Text = ungTuyenDto.TenCongViec;
+                    textBox_TenCongTy.Text = ungTuyenDto.TenCongTy;
+                    richTextBox_MoTa.Text = ungTuyenDto.MoTa;
+                    DisableEdit();
+                }
+            }
+        }
+
+        public int? CongViecId
+        {
+            get { return congViecId; }
+            set
+            {
+                congViecId = value;
+                if (value != null && value > 0)
+                {
+                    this.CongViec = congViecBUS.GetById(value.Value);
+                }
+            }
+        }
+
+        public UngVien UngVien
+        {
+            get { return ungVien; }
+            set
+            {
+                ungVien = value;
+                if (value != null)
+                {
+                    textBox_TenUngVien.Text = value.HoTen;
+                }
+            }
+        }
+
+        public CongViec CongViec
+        {
+            get { return congViec; }
+            set
+            {
+                congViec = value;
+                if (value != null)
+                {
+                    textBox_TenCongViec.Text = value.Ten;
+                    textBox_TenCongTy.Text = value.TenCongTy;
+                }
+            }
+        }
+
         private List<CV> listCV = new List<CV>();
+        #endregion Fields and Properties
 
         public FUngTuyenCongViec()
         {
@@ -52,22 +114,14 @@ namespace FinalProject.Candidate.GUI
 
         private void FUngTuyenCongViec_Load(object sender, EventArgs e)
         {
-            if (UngVien != null)
-            {
-                textBox_TenUngVien.Text = UngVien.HoTen;
-            }
-            if (CongViec != null)
-            {
-                textBox_TenCongViec.Text = CongViec.Ten;
-                textBox_TenCongTy.Text = CongViec.TenCongTy;
-            }
+            
         }
 
         private void button_Submit_Click(object sender, EventArgs e)
         {
             var selectedCv = ucComboBox_Cv.SelectedItem as ComboBoxItem;
 
-            ungTuyen = new UngTuyen()
+            var ungTuyen = new UngTuyen()
             {
                 Id = -1,
                 CongViecId = CongViec.Id,
@@ -92,5 +146,14 @@ namespace FinalProject.Candidate.GUI
             this.Close();
         }
 
+        private void DisableEdit()
+        {
+            textBox_TenUngVien.Enabled = false;
+            textBox_TenCongViec.Enabled = false;
+            textBox_TenCongTy.Enabled = false;
+            richTextBox_MoTa.Enabled = false;
+            ucComboBox_Cv.Enabled = false;
+            button_Submit.Visible = false;
+        }
     }
 }
