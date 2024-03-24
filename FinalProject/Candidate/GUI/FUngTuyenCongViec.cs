@@ -19,6 +19,7 @@ namespace FinalProject.Candidate.GUI
         #region Fields and Properties
         private CongViecBUS congViecBUS = new CongViecBUS();
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
+        private CvBUS cvBUS = new CvBUS();
         private int? ungTuyenId;
         private int? congViecId;
         private UngVien ungVien;
@@ -64,6 +65,7 @@ namespace FinalProject.Candidate.GUI
                 if (value != null)
                 {
                     textBox_TenUngVien.Text = value.HoTen;
+                    LoadCv();
                 }
             }
         }
@@ -92,19 +94,6 @@ namespace FinalProject.Candidate.GUI
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
-
-            this.listCV = new List<CV>
-            {
-                new CV { Id = 1, Ten = "CV 1" },
-                new CV { Id = 2, Ten = "CV 2" },
-                new CV { Id = 3, Ten = "CV 3" },
-            };
-            var listComboBoxItem = new List<ComboBoxItem>();
-            foreach (var cv in listCV)
-            {
-                listComboBoxItem.Add(new ComboBoxItem(cv.Ten, cv.Id));
-            }
-            ucComboBox_Cv.DataSource = listComboBoxItem.ToArray();
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -114,7 +103,21 @@ namespace FinalProject.Candidate.GUI
 
         private void FUngTuyenCongViec_Load(object sender, EventArgs e)
         {
-            
+            LoadCv();
+        }
+   
+        private void LoadCv()
+        {
+            if (UngVien != null)
+            {
+                this.listCV = cvBUS.GetByUngVienId(UngVien.Id);
+                var listComboBoxItem = new List<ComboBoxItem>();
+                foreach (var cv in listCV)
+                {
+                    listComboBoxItem.Add(new ComboBoxItem(cv.Ten, cv.Id));
+                }
+                ucComboBox_Cv.DataSource = listComboBoxItem.ToArray();
+            }
         }
 
         private void button_Submit_Click(object sender, EventArgs e)

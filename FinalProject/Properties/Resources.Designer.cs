@@ -884,6 +884,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rounded_reactangle {
+            get {
+                object obj = ResourceManager.GetObject("rounded-reactangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sass {
             get {
                 object obj = ResourceManager.GetObject("sass", resourceCulture);
