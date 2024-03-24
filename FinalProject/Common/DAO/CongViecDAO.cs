@@ -37,7 +37,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 var list = new List<CongViec>();
-                string query = "SELECT * FROM CongViec;";
+                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -162,7 +162,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $"DELETE FROM CongViec WHERE Id = {CongViec.IdCongTy};";
+                string query = $"DELETE FROM CongViec WHERE Id = {CongViec.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -184,7 +184,7 @@ namespace FinalProject.Common.DAO
                 string query = $"UPDATE CongViec SET " +
                     $"IsDeleted = 1, " +
                     $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {CongViec.IdCongTy};";
+                    $"WHERE Id = {CongViec.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
