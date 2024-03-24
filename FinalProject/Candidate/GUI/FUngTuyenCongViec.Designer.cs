@@ -36,13 +36,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox_TenUngVien = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_Cv = new FinalProject.UC.UCComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox_TenCongTy = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox_TenCongViec = new System.Windows.Forms.TextBox();
             this.groupBox_MoTa = new System.Windows.Forms.GroupBox();
             this.richTextBox_MoTa = new System.Windows.Forms.RichTextBox();
-            this.ucComboBox_Cv = new FinalProject.UC.UCComboBox();
             this.panel_Top.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,7 +89,7 @@
             this.label_JobName.Name = "label_JobName";
             this.label_JobName.Size = new System.Drawing.Size(760, 39);
             this.label_JobName.TabIndex = 7;
-            this.label_JobName.Text = "CÔNG VIỆC";
+            this.label_JobName.Text = "ỨNG TUYÊN VIỆC LÀM";
             this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_Submit
@@ -165,6 +165,22 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "CV";
+            // 
+            // ucComboBox_Cv
+            // 
+            this.ucComboBox_Cv.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ucComboBox_Cv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_Cv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_Cv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ucComboBox_Cv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_Cv.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_Cv.FormattingEnabled = true;
+            this.ucComboBox_Cv.ItemHeight = 26;
+            this.ucComboBox_Cv.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_Cv.Location = new System.Drawing.Point(10, 33);
+            this.ucComboBox_Cv.Name = "ucComboBox_Cv";
+            this.ucComboBox_Cv.Size = new System.Drawing.Size(354, 32);
+            this.ucComboBox_Cv.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -244,22 +260,6 @@
             this.richTextBox_MoTa.Size = new System.Drawing.Size(740, 151);
             this.richTextBox_MoTa.TabIndex = 0;
             this.richTextBox_MoTa.Text = "";
-            // 
-            // ucComboBox_Cv
-            // 
-            this.ucComboBox_Cv.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ucComboBox_Cv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucComboBox_Cv.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ucComboBox_Cv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ucComboBox_Cv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ucComboBox_Cv.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.ucComboBox_Cv.FormattingEnabled = true;
-            this.ucComboBox_Cv.ItemHeight = 26;
-            this.ucComboBox_Cv.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_Cv.Location = new System.Drawing.Point(10, 33);
-            this.ucComboBox_Cv.Name = "ucComboBox_Cv";
-            this.ucComboBox_Cv.Size = new System.Drawing.Size(354, 32);
-            this.ucComboBox_Cv.TabIndex = 0;
             // 
             // FUngTuyenCongViec
             // 

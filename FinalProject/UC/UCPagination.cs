@@ -97,12 +97,14 @@ namespace FinalProject.UC
 
         private void button_Previous_Click(object sender, EventArgs e)
         {
-            this.CurrentPage--;
+            if (this.CurrentPage > 1)
+                this.CurrentPage--;
         }
 
         private void button_Next_Click(object sender, EventArgs e)
         {
-            this.CurrentPage++;
+            if (this.CurrentPage < _totalPage)
+                this.CurrentPage++;
         }
 
         protected virtual void OnCurrentPageChanged(EventArgs e)

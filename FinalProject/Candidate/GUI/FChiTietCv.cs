@@ -27,6 +27,7 @@ namespace FinalProject.Candidate.GUI
         };
 
         private int id;
+        private int? ungTuyenId;
         private string cvName;
         private DateTime cvUpdatedTime;
 
@@ -37,6 +38,19 @@ namespace FinalProject.Candidate.GUI
             {
                 id = value;
                 this.Invalidate();
+            }
+        }
+
+        public int? UngTuyenId
+        {
+            get { return ungTuyenId; }
+            set
+            {
+                ungTuyenId = value;
+                if (value != null && value > 0)
+                {
+                    DisableEdit();
+                }
             }
         }
 
@@ -89,23 +103,12 @@ namespace FinalProject.Candidate.GUI
                 textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 textBox_Nganh.Text = congViec.Nganh;
-
             }
         }
 
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox_MoTa_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button_Submit_Click(object sender, EventArgs e)
@@ -116,9 +119,10 @@ namespace FinalProject.Candidate.GUI
             fUngTuyenCongViec.ShowDialog();
         }
 
-        private void textBox_TenCongTy_TextChanged(object sender, EventArgs e)
+        private void DisableEdit()
         {
-
+            this.button_Submit.Enabled = false;
+            this.button_Submit.Visible = false;
         }
     }
 }

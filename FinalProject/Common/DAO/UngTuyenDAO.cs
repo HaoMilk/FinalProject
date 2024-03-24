@@ -63,7 +63,7 @@ namespace FinalProject.Common.DAO
             {
                 var list = new List<UngTuyenDTO>();
                 string query = @"
-                    SELECT UngTuyen.*, UngVien.HoTen, CongViec.Ten, Cv.Ten, CV.Link
+                    SELECT UngTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link
                     FROM UngTuyen 
                     INNER JOIN UngVien ON UngTuyen.UngVienId = UngVien.Id
                     INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.Id
@@ -83,20 +83,20 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var ungTuyenDto = new UngTuyenDTO();
-                        ungTuyenDto.Id = reader.GetInt32(1);
-                        ungTuyenDto.CongViecId = reader.GetInt32(2);
-                        ungTuyenDto.UngVienId = reader.GetInt32(3);
-                        ungTuyenDto.CvId = reader.GetInt32(4);
-                        ungTuyenDto.TrangThai = reader.GetString(5);
-                        ungTuyenDto.MoTa = reader.GetString(6);
-                        ungTuyenDto.TrangThai = reader.GetString(7);
-                        ungTuyenDto.IsDeleted = reader.GetBoolean(8);
-                        ungTuyenDto.CreatedTime = reader.GetDateTime(9);
-                        ungTuyenDto.UpdatedTime = reader.IsDBNull(10) ? (DateTime?)null : reader.GetDateTime(10);
-                        ungTuyenDto.TenUngVien = reader.GetString(11);
-                        ungTuyenDto.TenCongViec = reader.GetString(12);
-                        ungTuyenDto.TenCv = reader.GetString(13);
-                        ungTuyenDto.LinkCv = reader.GetString(14);
+                        ungTuyenDto.Id = reader.GetInt32(0);
+                        ungTuyenDto.CongViecId = reader.GetInt32(1);
+                        ungTuyenDto.UngVienId = reader.GetInt32(2);
+                        ungTuyenDto.CvId = reader.GetInt32(3);
+                        ungTuyenDto.TrangThai = reader.GetString(4);
+                        ungTuyenDto.MoTa = reader.GetString(5);
+                        ungTuyenDto.IsDeleted = reader.GetBoolean(6);
+                        ungTuyenDto.CreatedTime = reader.GetDateTime(7);
+                        ungTuyenDto.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
+                        ungTuyenDto.TenUngVien = reader.GetString(9);
+                        ungTuyenDto.TenCongViec = reader.GetString(10);
+                        ungTuyenDto.TenCongTy = reader.GetString(11);
+                        ungTuyenDto.TenCv = reader.GetString(12);
+                        ungTuyenDto.LinkCv = reader.GetString(13);
 
                         list.Add(ungTuyenDto);
                     }

@@ -16,8 +16,6 @@ namespace FinalProject.Database.Entities
         public string Link { get; set; }
         public string MoTa { get; set; }
         public string TrangThai { get; set; }
-        public DateTime NgayTao { get; set; }
-        public DateTime? NgayCapNhat { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
