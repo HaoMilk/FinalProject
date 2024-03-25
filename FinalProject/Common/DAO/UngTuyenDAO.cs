@@ -1,4 +1,5 @@
 ﻿using FinalProject.Database;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $"SELECT COUNT(1) FROM CongViec WHERE Id = '{id}';";
+                string query = $"SELECT COUNT(1) FROM UngTuyen WHERE Id = '{id}';";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -32,12 +33,48 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<CongViec> GetAll()
+        public int Count()
         {
             using (dbConnection.Connection)
             {
-                var list = new List<CongViec>();
-                string query = "SELECT * FROM CongViec;";
+                string query = "SELECT COUNT(1) FROM UngTuyen WHERE IsDeleted = 0 ;";
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+
+                try
+                {
+                    var result = cmd.ExecuteScalar();
+                    return Convert.ToInt32(result);
+                }
+                catch (Exception ex)
+                {
+                    return -1;
+                }
+            }
+        }
+
+        public List<UngTuyenDTO> GetAll(UngTuyenGetAllInput input = null)
+        {
+            if (input == null)
+            {
+                input = new UngTuyenGetAllInput();
+            }
+
+            using (dbConnection.Connection)
+            {
+                var list = new List<UngTuyenDTO>();
+                string query = @"
+                    SELECT UngTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link
+                    FROM UngTuyen 
+                    INNER JOIN UngVien ON UngTuyen.UngVienId = UngVien.Id
+                    INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.Id
+                    INNER JOIN CV ON UngTuyen.CvId = CV.Id
+                    WHERE UngTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 AND CV.IsDeleted = 0 ";
+
+                if (input.Id != 0)
+                {
+                    query += $" AND UngTuyen.Id = {input.Id}";
+                }
+
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -45,32 +82,23 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        var congViec = new CongViec();
-                        congViec.Id = reader.GetInt32(0);
-                        congViec.Ten = reader.GetString(1);
-                        congViec.Nganh = reader.GetString(2);
-                        congViec.ViTriTuyenDung = reader.GetString(3);
-                        congViec.MucLuong = reader.GetDecimal(4);
-                        congViec.DiaDiem = reader.GetString(5);
-                        congViec.TrinhDoHocVan = reader.GetString(6);
-                        congViec.GioiTinh = reader.GetString(7);
-                        congViec.LienHe = reader.GetString(8);
-                        congViec.MoTa = reader.GetString(9);
-                        congViec.QuyenLoi = reader.GetString(10);
-                        congViec.NgoaiNgu = reader.GetString(11);
-                        congViec.TinHoc = reader.GetString(12);
-                        congViec.KinhNghiem = reader.GetString(13);
-                        congViec.KyNang = reader.GetString(14);
-                        congViec.FromDate = reader.IsDBNull(15) ? (DateTime?)null : reader.GetDateTime(15);
-                        congViec.ToDate = reader.IsDBNull(16) ? (DateTime?)null : reader.GetDateTime(16);
-                        congViec.TrangThai = reader.GetString(17);
-                        congViec.SoLuong = reader.GetInt32(18);
-                        congViec.Link = reader.GetString(19);
-                        congViec.IsDeleted = reader.GetBoolean(20);
-                        congViec.CreatedTime = reader.GetDateTime(21);
-                        congViec.UpdatedTime = reader.IsDBNull(22) ? (DateTime?)null : reader.GetDateTime(22);
+                        var ungTuyenDto = new UngTuyenDTO();
+                        ungTuyenDto.Id = reader.GetInt32(0);
+                        ungTuyenDto.CongViecId = reader.GetInt32(1);
+                        ungTuyenDto.UngVienId = reader.GetInt32(2);
+                        ungTuyenDto.CvId = reader.GetInt32(3);
+                        ungTuyenDto.TrangThai = reader.GetString(4);
+                        ungTuyenDto.MoTa = reader.GetString(5);
+                        ungTuyenDto.IsDeleted = reader.GetBoolean(6);
+                        ungTuyenDto.CreatedTime = reader.GetDateTime(7);
+                        ungTuyenDto.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
+                        ungTuyenDto.TenUngVien = reader.GetString(9);
+                        ungTuyenDto.TenCongViec = reader.GetString(10);
+                        ungTuyenDto.TenCongTy = reader.GetString(11);
+                        ungTuyenDto.TenCv = reader.GetString(12);
+                        ungTuyenDto.LinkCv = reader.GetString(13);
 
-                        list.Add(congViec);
+                        list.Add(ungTuyenDto);
                     }
                 }
                 catch (Exception ex)
@@ -82,24 +110,13 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public int Add(CongViec CongViec)
+        public int Add(UngTuyen ungTuyen)
         {
-            string query = "INSERT INTO CongViec (Id, Ten, Nganh, ViTriTuyenDung, MucLuong," +
-                " DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, NgoaiNgu," +
-                " TinHoc, KinhNghiem, KyNang, FromDate, ToDate, TrangThai," +
-                " SoLuong, Link, IsDeleted, CreatedTime, UpdatedTime ) " +
-                $"VALUES ('{CongViec.Id}', N'{CongViec.Ten}', " +
-                $"N'{CongViec.Nganh}',N'{CongViec.ViTriTuyenDung}'," +
-                $" {CongViec.MucLuong},N'{CongViec.DiaDiem}', " +
-                $" N'{CongViec.TrinhDoHocVan}', N'{CongViec.GioiTinh}'," +
-                $"N'{CongViec.LienHe}', N'{CongViec.MoTa}'," +
-                $"N'{CongViec.QuyenLoi}', N'{CongViec.NgoaiNgu}'," +
-                $"N'{CongViec.TinHoc}', N'{CongViec.KinhNghiem}'," +
-                $"N'{CongViec.KyNang}', '{CongViec.FromDate}'," +
-                $"'{CongViec.ToDate}', N'{CongViec.TrangThai}'," +
-                $"'{CongViec.SoLuong}," +
-                $"N'{CongViec.Link}', {CongViec.IsDeleted}," +
-                $" '{CongViec.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
+            string query = "INSERT INTO UngTuyen (CongViecId, UngVienId, CvId, TrangThai, MoTa, IsDeleted, CreatedTime, UpdatedTime ) " +
+                $"VALUES ({ungTuyen.CongViecId}, " +
+                $" {ungTuyen.UngVienId}, {ungTuyen.CvId}, " +
+                $" N'{ungTuyen.TrangThai}', N'{ungTuyen.MoTa}', " +
+                $" 0, '{ungTuyen.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
 
             using (dbConnection.Connection)
             {
@@ -115,33 +132,15 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public int Update(CongViec CongViec)
+        public int Update(UngTuyen UngTuyen)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE CongViec SET " +
-                    $"Ten = N'{CongViec.Ten}', " +
-                    $"Nganh = N'{CongViec.Nganh}', " +
-                    $"ViTriTuyenDung = N'{CongViec.ViTriTuyenDung}', " +
-                    $"MucLuong = {CongViec.MucLuong}, " +
-                    $"DiaDiem = N'{CongViec.DiaDiem}', " +
-                    $"TrinhDoHocVan = N'{CongViec.TrinhDoHocVan}', " +
-                    $"GioiTinh = N'{CongViec.GioiTinh}', " +
-                    $"LienHe = N'{CongViec.LienHe}', " +
-                    $"MoTa = N'{CongViec.MoTa}', " +
-                    $"QuyenLoi = N'{CongViec.QuyenLoi}', " +
-                    $"NgoaiNgu = N'{CongViec.NgoaiNgu}', " +
-                    $"TinHoc = N'{CongViec.TinHoc}', " +
-                    $"KinhNghiem = N'{CongViec.KinhNghiem}', " +
-                    $"KyNang = N'{CongViec.KyNang}', " +
-                    $"FromDate = '{CongViec.FromDate}', " +
-                    $"ToDate = '{CongViec.ToDate}', " +               
-                    $"TrangThai = '{CongViec.TrangThai}', " +
-                    $"SoLuong = {CongViec.SoLuong}, " +
-                    $"Link = N'{CongViec.Link}', " +                
-                    $"IsDeleted = {CongViec.IsDeleted}, " +
-                    $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {CongViec.Id};";
+                string query = $"UPDATE UngTuyen SET " +
+                    $"TrangThai = N'{UngTuyen.TrangThai}', " +
+                    $"MoTa = N'{UngTuyen.MoTa}', " +
+                    $"UpdatedTime = '{UngTuyen.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
+                    $"WHERE Id = {UngTuyen.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -155,11 +154,11 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public int Delete(CongViec CongViec)
+        public int Delete(UngTuyen UngTuyen)
         {
             using (dbConnection.Connection)
             {
-                string query = $"DELETE FROM CongViec WHERE Id = {CongViec.Id};";
+                string query = $"DELETE FROM UngTuyen WHERE Id = {UngTuyen.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -174,14 +173,14 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public int SoftDelete(CongViec CongViec)
+        public int SoftDelete(UngTuyen UngTuyen)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE CongViec SET " +
+                string query = $"UPDATE UngTuyen SET " +
                     $"IsDeleted = 1, " +
-                    $"UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {CongViec.Id};";
+                    $"UpdatedTime = '{UngTuyen.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
+                    $"WHERE Id = {UngTuyen.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -195,55 +194,5 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public CongViec GetById(int id)
-        {
-            using (dbConnection.Connection)
-            {
-                CongViec congViec;
-                string query = $"SELECT * FROM CongViec WHERE Id = {id} ;";
-                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
-
-                try
-                {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
-                    {
-                        congViec = new CongViec();
-                        congViec.Id = reader.GetInt32(0);
-                        congViec.Ten = reader.GetString(1);
-                        congViec.Nganh = reader.GetString(2);
-                        congViec.ViTriTuyenDung = reader.GetString(3);
-                        congViec.MucLuong = reader.GetDecimal(4);
-                        congViec.DiaDiem = reader.GetString(5);
-                        congViec.TrinhDoHocVan = reader.GetString(6);
-                        congViec.GioiTinh = reader.GetString(7);
-                        congViec.LienHe = reader.GetString(8);
-                        congViec.MoTa = reader.GetString(9);
-                        congViec.QuyenLoi = reader.GetString(10);
-                        congViec.NgoaiNgu = reader.GetString(11);
-                        congViec.TinHoc = reader.GetString(12);
-                        congViec.KinhNghiem = reader.GetString(13);
-                        congViec.KyNang = reader.GetString(14);
-                        congViec.FromDate = reader.IsDBNull(15) ? (DateTime?)null : reader.GetDateTime(15);
-                        congViec.ToDate = reader.IsDBNull(16) ? (DateTime?)null : reader.GetDateTime(16);
-                        congViec.TrangThai = reader.GetString(17);
-                        congViec.SoLuong = reader.GetInt32(18);
-                        congViec.Link = reader.GetString(19);
-                        congViec.IsDeleted = reader.GetBoolean(20);
-                        congViec.CreatedTime = reader.GetDateTime(21);
-                        congViec.UpdatedTime = reader.IsDBNull(22) ? (DateTime?)null : reader.GetDateTime(22);
-                        return congViec;
-                  
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
-                return null;
-            }
-        }
-
     }
 }

@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace FinalProject.Common.BUS
     public class UngTuyenBUS
     {
         private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
-        public List<CongViec> GetAll()
+        public List<UngTuyenDTO> GetAll()
         {
             return ungTuyenDAO.GetAll();
         }
@@ -22,101 +23,75 @@ namespace FinalProject.Common.BUS
             return ungTuyenDAO.CheckExist(id);
         }
 
-        public int Add(int id, string ten, string nganh, string viTriTuyenDung,
-            decimal mucLuong, string diaDiem, string trinhDoHocVan,
-            string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string ngoaiNgu, string tinHoc,
-             string kinhNghiem, string kyNang, DateTime fromDate,
-             DateTime toDate, string trangThai, int soLuong,
-             string link)
+        public int Count()
         {
-            var congViec = new CongViec();
-            congViec.Id = id;
-            congViec.Ten = ten;
-            congViec.Nganh =nganh;
-            congViec.ViTriTuyenDung = viTriTuyenDung;
-            congViec.MucLuong = mucLuong;
-            congViec.DiaDiem = diaDiem;
-            congViec.TrinhDoHocVan = trinhDoHocVan;
-            congViec.GioiTinh = gioiTinh;
-            congViec.LienHe = lienHe;
-            congViec.MoTa = moTa;
-            congViec.QuyenLoi = quyenLoi;
-            congViec.NgoaiNgu = ngoaiNgu;
-            congViec.TinHoc = tinHoc;
-            congViec.KinhNghiem = kinhNghiem;
-            congViec.KyNang = kyNang;
-            congViec.FromDate = fromDate ;
-            congViec.ToDate =toDate;
-            congViec.TrangThai = trangThai;
-            congViec.SoLuong = soLuong;
-            congViec.Link = link;
-            congViec.IsDeleted = false;
-            congViec.CreatedTime = DateTime.Now;
-            congViec.UpdatedTime = null;
-
-            return ungTuyenDAO.Add(congViec);
+            return ungTuyenDAO.Count();
         }
 
-        public int Update(int id, string ten, string nganh, string viTriTuyenDung,
-            decimal mucLuong, string diaDiem, string trinhDoHocVan,
-            string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string ngoaiNgu, string tinHoc,
-             string kinhNghiem, string kyNang, DateTime fromDate,
-             DateTime toDate, string trangThai, int soLuong,
-             string link, bool isDeleted)
+        public int Add(int id, int congViecId, int ungVienId, int cvId, string trangThai, string moTa)
         {
-            var congViec = new CongViec();
-            congViec.Id = id;
-            congViec.Ten = ten;
-            congViec.Nganh = nganh;
-            congViec.ViTriTuyenDung = viTriTuyenDung;
-            congViec.MucLuong = mucLuong;
-            congViec.DiaDiem = diaDiem;
-            congViec.TrinhDoHocVan = trinhDoHocVan;
-            congViec.GioiTinh = gioiTinh;
-            congViec.LienHe = lienHe;
-            congViec.MoTa = moTa;
-            congViec.QuyenLoi = quyenLoi;
-            congViec.NgoaiNgu = ngoaiNgu;
-            congViec.TinHoc = tinHoc;
-            congViec.KinhNghiem = kinhNghiem;
-            congViec.KyNang = kyNang;
-            congViec.FromDate = fromDate;
-            congViec.ToDate = toDate;
-            congViec.TrangThai = trangThai;
-            congViec.SoLuong = soLuong;
-            congViec.Link = link;
-            congViec.IsDeleted = isDeleted;
-            congViec.UpdatedTime = DateTime.Now;
+            var ungTuyen = new UngTuyen();
+            ungTuyen.Id = id;
+            ungTuyen.CongViecId = congViecId;
+            ungTuyen.UngVienId = ungVienId;
+            ungTuyen.CvId = cvId;
+            ungTuyen.TrangThai = trangThai;
+            ungTuyen.MoTa = moTa;
+            ungTuyen.IsDeleted = false;
+            ungTuyen.CreatedTime = DateTime.Now;
+            ungTuyen.UpdatedTime = null;
 
-            return ungTuyenDAO.Update(congViec);
+            return ungTuyenDAO.Add(ungTuyen);
         }
 
-        public int Update(CongViec congViec)
+        public int Add(UngTuyen ungTuyen)
         {
-            return ungTuyenDAO.Update(congViec);
+            return ungTuyenDAO.Add(ungTuyen);
+        }
+
+        public int Update(int id, string trangThai, string moTa)
+        {
+            var ungTuyen = new UngTuyen()
+            {
+                Id = id,
+                TrangThai = trangThai,
+                MoTa = moTa,
+                UpdatedTime = DateTime.Now
+            };
+
+            return ungTuyenDAO.Update(ungTuyen);
+        }
+
+        public int Update(UngTuyen ungTuyen)
+        {
+            return ungTuyenDAO.Update(ungTuyen);
         }
 
         public int Delete(int id)
         {
-            var congViec = new CongViec();
-            congViec.Id = id;
-            return ungTuyenDAO.Delete(congViec);
+            var ungTuyen = new UngTuyen();
+            ungTuyen.Id = id;
+            return ungTuyenDAO.Delete(ungTuyen);
         }
 
         public int SoftDelete(int id)
         {
-            var congViec = new CongViec();
-            congViec.Id = id;
-            congViec.IsDeleted = true;
-            congViec.UpdatedTime = DateTime.Now;
+            var ungTuyen = new UngTuyen();
+            ungTuyen.Id = id;
+            ungTuyen.IsDeleted = true;
+            ungTuyen.UpdatedTime = DateTime.Now;
 
-            return ungTuyenDAO.SoftDelete(congViec);
+            return ungTuyenDAO.SoftDelete(ungTuyen);
         }
-        public CongViec GetById(int id)
+
+        public UngTuyenDTO GetById(int id)
         {
-            return ungTuyenDAO.GetById(id);
+            var input = new UngTuyenGetAllInput()
+            {
+                Id = id
+            };
+            var list = ungTuyenDAO.GetAll(input);
+            return list.FirstOrDefault();
         }
     }
 }

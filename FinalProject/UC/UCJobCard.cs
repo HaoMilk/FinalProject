@@ -1,4 +1,5 @@
 ﻿using FinalProject.Candidate.GUI;
+using FinalProject.Database.Entities;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -23,6 +24,7 @@ namespace FinalProject.UC
 
         #region Fields
         private int id = 0;
+        private int? ungTuyenId = 0;
         private string jobName;
         private DateTime lastUpdatedTime;
 
@@ -54,6 +56,18 @@ namespace FinalProject.UC
             set
             {
                 id = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("CUSTOMIZE DATA")]
+        [DisplayName("UngTuyen ID")]
+        public int? UngTuyenId
+        {
+            get { return ungTuyenId; }
+            set
+            {
+                ungTuyenId = value;
                 this.Invalidate();
             }
         }
@@ -236,11 +250,18 @@ namespace FinalProject.UC
 
                 FChiTietCv fChiTietCv = new FChiTietCv();
                 fChiTietCv.Id = id;
+                fChiTietCv.UngTuyenId = ungTuyenId;
                 fChiTietCv.CvName = jobName;
                 fChiTietCv.CvUpdatedTime = lastUpdatedTime;
                 fChiTietCv.ShowDialog();
             }
         }
+
+        private UngVien ungVien = new UngVien()
+        {
+            Id = 1,
+            HoTen = "Vi Quốc Thuận",
+        };
 
         private void button_Menu_Click(object sender, EventArgs e)
         {
@@ -250,7 +271,11 @@ namespace FinalProject.UC
             }
             else
             {
-                MessageBox.Show($"Menu id = {id}");
+                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
+                fUngTuyenCongViec.UngTuyenId = ungTuyenId;
+                fUngTuyenCongViec.UngVien = ungVien;
+                fUngTuyenCongViec.CongViecId = id;
+                fUngTuyenCongViec.ShowDialog();
             }
         }
     }

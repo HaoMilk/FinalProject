@@ -1,4 +1,7 @@
-﻿using FinalProject.UC;
+﻿using FinalProject.Common.DAO;
+using FinalProject.Database.DTO;
+using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +16,9 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachDaUT : Form
     {
+        private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
+        private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
+
         public FDanhSachDaUT()
         {
             InitializeComponent();
@@ -41,13 +47,22 @@ namespace FinalProject.Candidate.GUI
 
         private List<UCJobCard> CreateJobList(int quantity)
         {
+            listUngTuyen = ungTuyenDAO.GetAll();
+
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
-            for (int i = 0; i < quantity; i++)
+
+            if (listUngTuyen.Count == 0)
+            {
+                return ucJobCards;
+            }
+
+            for (int i = 0; i < listUngTuyen.Count; i++)
             {
                 UCJobCard ucJobCard = new UCJobCard();
-                ucJobCard.Id = (i + 1);
-                ucJobCard.JobName = $"Việc làm {i + 1}";
-                ucJobCard.LastUpdatedTime = DateTime.Now;
+                ucJobCard.Id = listUngTuyen[i].CongViecId;
+                ucJobCard.UngTuyenId = listUngTuyen[i].Id;
+                ucJobCard.JobName = listUngTuyen[i].TenCongViec;
+                ucJobCard.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);

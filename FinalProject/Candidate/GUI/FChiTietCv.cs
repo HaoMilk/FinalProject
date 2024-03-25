@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,17 @@ namespace FinalProject.Candidate.GUI
     {
         private CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
+        private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
+        private UngTuyen ungTuyen = new UngTuyen();
+        private UngTuyenDAO ungTuyenDto = new UngTuyenDAO();
+        private UngVien ungVien = new UngVien()
+        {
+            Id = 1,
+            HoTen = "Vi Quốc Thuận",
+        };
+
         private int id;
+        private int? ungTuyenId;
         private string cvName;
         private DateTime cvUpdatedTime;
 
@@ -27,6 +38,19 @@ namespace FinalProject.Candidate.GUI
             {
                 id = value;
                 this.Invalidate();
+            }
+        }
+
+        public int? UngTuyenId
+        {
+            get { return ungTuyenId; }
+            set
+            {
+                ungTuyenId = value;
+                if (value != null && value > 0)
+                {
+                    DisableEdit();
+                }
             }
         }
 
@@ -79,7 +103,6 @@ namespace FinalProject.Candidate.GUI
                 textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 textBox_Nganh.Text = congViec.Nganh;
-
             }
         }
 
@@ -88,24 +111,18 @@ namespace FinalProject.Candidate.GUI
             this.Close();
         }
 
-        private void groupBox7_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox_MoTa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Submit_Click(object sender, EventArgs e)
         {
-
+            FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
+            fUngTuyenCongViec.CongViec = congViec;
+            fUngTuyenCongViec.UngVien = ungVien;
+            fUngTuyenCongViec.ShowDialog();
         }
 
-        private void textBox_TenCongTy_TextChanged(object sender, EventArgs e)
+        private void DisableEdit()
         {
-
+            this.button_Submit.Enabled = false;
+            this.button_Submit.Visible = false;
         }
     }
 }

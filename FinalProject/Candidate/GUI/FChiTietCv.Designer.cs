@@ -142,7 +142,6 @@
             this.richTextBox_MoTa.Size = new System.Drawing.Size(1133, 319);
             this.richTextBox_MoTa.TabIndex = 0;
             this.richTextBox_MoTa.Text = "Mô tả";
-            this.richTextBox_MoTa.TextChanged += new System.EventHandler(this.richTextBox_MoTa_TextChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -229,7 +228,6 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Kinh nghiệm";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // textBox_KinhNghiem
             // 
@@ -312,7 +310,6 @@
             this.textBox_TenCongTy.Name = "textBox_TenCongTy";
             this.textBox_TenCongTy.Size = new System.Drawing.Size(262, 34);
             this.textBox_TenCongTy.TabIndex = 0;
-            this.textBox_TenCongTy.TextChanged += new System.EventHandler(this.textBox_TenCongTy_TextChanged);
             // 
             // groupBox3
             // 
