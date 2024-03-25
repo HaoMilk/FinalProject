@@ -15,6 +15,10 @@ namespace FinalProject.Common.GUI
         public FChangePassword()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void button_Luu_Click(object sender, EventArgs e)

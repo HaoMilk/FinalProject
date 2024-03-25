@@ -163,6 +163,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap company_profile {
+            get {
+                object obj = ResourceManager.GetObject("company_profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cpp {
             get {
                 object obj = ResourceManager.GetObject("cpp", resourceCulture);
@@ -787,6 +797,26 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap posterchinh_3x {
             get {
                 object obj = ResourceManager.GetObject("posterchinh@3x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profilecp {
+            get {
+                object obj = ResourceManager.GetObject("profilecp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap profilecp1 {
+            get {
+                object obj = ResourceManager.GetObject("profilecp1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

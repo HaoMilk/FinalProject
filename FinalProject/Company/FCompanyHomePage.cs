@@ -1,5 +1,4 @@
 ﻿using FinalProject.Admin;
-using FinalProject.Company.GUI.Ho_so;
 using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Company.GUI.Ung_tuyen;
 using System;
@@ -23,26 +22,23 @@ namespace FinalProject.Company
 
         private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            //FAddViecLam fDanhSachViecLam = new FAddViecLam();
-            //fDanhSachViecLam.Show();
+            FAddViecLam fAddViecLam = new FAddViecLam();
+            fAddViecLam.Show();
         }
 
         private void menuItem_VieclamUT_Click(object sender, EventArgs e)
         {
-            FLichSu fLichSu = new FLichSu();
-            fLichSu.Show();
+
         }
 
         private void hồSơĐãDuyệnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FHoSoDaDuyet fHoSoDaDuyet = new FHoSoDaDuyet();
-            fHoSoDaDuyet.Show();
+
         }
 
         private void hồSơChưaDuyệtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FHoSoChuaDuyet fHoSoChuaDuyet = new FHoSoChuaDuyet();
-            fHoSoChuaDuyet.Show();
+;
         }
 
         private void menuItem_DsCty_Click(object sender, EventArgs e)
@@ -70,8 +66,11 @@ namespace FinalProject.Company
 
         private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FDanhSachCongViec fDanhSachCongViec = new FDanhSachCongViec();
-            fDanhSachCongViec.Show();
+        }
+
+        private void FCompanyHomePage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

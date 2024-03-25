@@ -15,6 +15,10 @@ namespace FinalProject.Candidate.GUI
         public FQlyCv()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void button_ChonFile_Click(object sender, EventArgs e)
