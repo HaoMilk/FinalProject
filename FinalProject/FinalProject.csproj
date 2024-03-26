@@ -725,6 +725,7 @@
     <None Include="Resources\rounded-reactangle.png" />
     <None Include="Resources\rounded-reactangle1.png" />
     <None Include="Resources\work.jpg" />
+    <None Include="Resources\companyicon.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
