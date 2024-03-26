@@ -111,7 +111,7 @@
             this.tabPage_ThongTinChung.Location = new System.Drawing.Point(4, 38);
             this.tabPage_ThongTinChung.Name = "tabPage_ThongTinChung";
             this.tabPage_ThongTinChung.Padding = new System.Windows.Forms.Padding(10);
-            this.tabPage_ThongTinChung.Size = new System.Drawing.Size(1173, 610);
+            this.tabPage_ThongTinChung.Size = new System.Drawing.Size(1173, 563);
             this.tabPage_ThongTinChung.TabIndex = 0;
             this.tabPage_ThongTinChung.Text = "Thông tin chung";
             this.tabPage_ThongTinChung.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@
             this.groupBox_MoTa.Location = new System.Drawing.Point(10, 184);
             this.groupBox_MoTa.Name = "groupBox_MoTa";
             this.groupBox_MoTa.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox_MoTa.Size = new System.Drawing.Size(1153, 416);
+            this.groupBox_MoTa.Size = new System.Drawing.Size(1153, 369);
             this.groupBox_MoTa.TabIndex = 1;
             this.groupBox_MoTa.TabStop = false;
             this.groupBox_MoTa.Text = "Mô tả công việc";
@@ -139,10 +139,9 @@
             this.richTextBox_MoTa.ForeColor = System.Drawing.Color.MidnightBlue;
             this.richTextBox_MoTa.Location = new System.Drawing.Point(10, 40);
             this.richTextBox_MoTa.Name = "richTextBox_MoTa";
-            this.richTextBox_MoTa.Size = new System.Drawing.Size(1133, 366);
+            this.richTextBox_MoTa.Size = new System.Drawing.Size(1133, 319);
             this.richTextBox_MoTa.TabIndex = 0;
             this.richTextBox_MoTa.Text = "Mô tả";
-            this.richTextBox_MoTa.TextChanged += new System.EventHandler(this.richTextBox_MoTa_TextChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -229,7 +228,6 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Kinh nghiệm";
-            this.groupBox7.Enter += new System.EventHandler(this.groupBox7_Enter);
             // 
             // textBox_KinhNghiem
             // 
@@ -367,7 +365,7 @@
             this.tabPage_QuyenLoi.Location = new System.Drawing.Point(4, 38);
             this.tabPage_QuyenLoi.Name = "tabPage_QuyenLoi";
             this.tabPage_QuyenLoi.Padding = new System.Windows.Forms.Padding(10);
-            this.tabPage_QuyenLoi.Size = new System.Drawing.Size(1173, 610);
+            this.tabPage_QuyenLoi.Size = new System.Drawing.Size(1173, 563);
             this.tabPage_QuyenLoi.TabIndex = 0;
             this.tabPage_QuyenLoi.Text = "Quyền lợi ";
             this.tabPage_QuyenLoi.UseVisualStyleBackColor = true;
@@ -380,7 +378,7 @@
             this.richTextBox_QuyenLoi.ForeColor = System.Drawing.Color.MidnightBlue;
             this.richTextBox_QuyenLoi.Location = new System.Drawing.Point(10, 10);
             this.richTextBox_QuyenLoi.Name = "richTextBox_QuyenLoi";
-            this.richTextBox_QuyenLoi.Size = new System.Drawing.Size(1153, 590);
+            this.richTextBox_QuyenLoi.Size = new System.Drawing.Size(1153, 543);
             this.richTextBox_QuyenLoi.TabIndex = 0;
             this.richTextBox_QuyenLoi.Text = "Làm 1/2 ngày thứ 7\nThưởng Tết\nQùa Tết, quà Trung Thu và Li xi\n* Đi lại tự túc";
             // 

@@ -68,8 +68,8 @@ namespace FinalProject.Common.DAO
 
         public int Add(Tinh Tinh)
         {
-            string query = "INSERT INTO Tinh (Id, Code, Ten, TrangThai, IsDeleted, CreatedTime, UpdatedTime ) " +
-                $"VALUES ('{Tinh.Id}','{Tinh.Code}', N'{Tinh.Ten}', '{Tinh.TrangThai}', {Tinh.IsDeleted}, '{Tinh.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
+            string query = "INSERT INTO Tinh (Code, Ten, TrangThai, IsDeleted, CreatedTime, UpdatedTime ) " +
+                $"VALUES ('{Tinh.Code}', N'{Tinh.Ten}', '{Tinh.TrangThai}', {Tinh.IsDeleted}, '{Tinh.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
 
             using (dbConnection.Connection)
             {

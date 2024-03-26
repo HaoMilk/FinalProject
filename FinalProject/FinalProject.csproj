@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -26,7 +27,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -125,7 +125,16 @@
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
-    <Compile Include="Candidate\DTO\TimKiemViecLamDto.cs" />
+    <Compile Include="Candidate\GUI\FUngTuyenCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FUngTuyenCongViec.Designer.cs">
+      <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BUS\CvBUS.cs" />
+    <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Database\DTO\CvGetAllInput.cs" />
+    <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,10 +189,10 @@
     <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\BUS\UngTuyenBUS - Copy.cs" />
+    <Compile Include="Common\BUS\UngTuyenBUS.cs" />
     <Compile Include="Common\BUS\CongViecBUS.cs" />
     <Compile Include="Common\BUS\TinhBUS.cs" />
-    <Compile Include="Common\DAO\UngTuyenDAO - Copy.cs" />
+    <Compile Include="Common\DAO\UngTuyenDAO.cs" />
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
@@ -200,23 +209,40 @@
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\DTO\UngTuyenDTO.cs" />
+    <Compile Include="Database\DTO\UngTuyenGetAllInput.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
     <Compile Include="Database\Entities\Tinh.cs" />
     <Compile Include="Database\Entities\UngTuyen.cs" />
     <Compile Include="Database\Entities\UngVien.cs" />
     <Compile Include="Database\Entities\User.cs" />
+    <Compile Include="UC\UCComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UC\UCCtyCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCCtyCard.Designer.cs">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCCvCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCCvCard.Designer.cs">
+      <DependentUpon>UCCvCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCMenuCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC\UCMenuCard.Designer.cs">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCPagination.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCPagination.Designer.cs">
+      <DependentUpon>UCPagination.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
@@ -316,6 +342,9 @@
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
+      <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,8 +354,14 @@
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCCvCard.resx">
+      <DependentUpon>UCCvCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCPagination.resx">
+      <DependentUpon>UCPagination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
@@ -362,6 +397,7 @@
     <EmbeddedResource Include="UC\UCJobCard.resx">
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
+    <Content Include="Database\Scripts\014. Update TableCongViec.sql" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -676,6 +712,9 @@
     <Content Include="Database\Scripts\011. Add CreatedTime, UpdatedTime.sql" />
     <Content Include="Database\Scripts\012. Update CreatedTime for table Tinh.sql" />
     <Content Include="Database\Scripts\013. Update UngTuyen.sql" />
+    <Content Include="Database\Scripts\015. Update columns order in table CongViec.sql" />
+    <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
+    <Content Include="Database\Scripts\017. Update CV columns.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
@@ -683,6 +722,8 @@
     <None Include="Resources\company_profile.jpg" />
     <None Include="Resources\profilecp.jpg" />
     <None Include="Resources\profilecp1.jpg" />
+    <None Include="Resources\rounded-reactangle.png" />
+    <None Include="Resources\rounded-reactangle1.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

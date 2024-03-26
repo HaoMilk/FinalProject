@@ -1,6 +1,6 @@
 ﻿using FinalProject.Candidate.Constants;
-using FinalProject.Candidate.DTO;
 using FinalProject.Common.BUS;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using Newtonsoft.Json;
@@ -27,6 +27,10 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
+
             this.listTinh = tinhBUS.GetAll();
             this.comboBox_DiaDiem.Items.Clear();
             this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
@@ -46,9 +50,15 @@ namespace FinalProject.Candidate.GUI
 
         #region JobList
 
-        private void InitJobList()
+        private void LoadJobList()
         {
-            var ucJobCards = CreateJobList(10);
+            var quantity = ucPagination.PageSize;
+            var start = ucPagination.StartRecord;
+            var end = ucPagination.EndRecord;
+
+            var ucJobCards = CreateJobList(quantity);
+
+            flowLayoutPanel_CongViec.Controls.Clear();
             foreach (var ucJobCard in ucJobCards)
             {
                 flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
@@ -103,8 +113,7 @@ namespace FinalProject.Candidate.GUI
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
         {
-            InitJobList();
-
+            LoadJobList();
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -212,14 +221,9 @@ namespace FinalProject.Candidate.GUI
             this.Close();
         }
 
-        private void ucJobCard1_MenuClick(object sender, EventArgs e)
+        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void ucJobCard1_ViewClick(object sender, EventArgs e)
-        {
-
+            LoadJobList();
         }
     }
 }
