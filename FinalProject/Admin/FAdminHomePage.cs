@@ -1,4 +1,5 @@
-﻿using FinalProject.Candidate.GUI;
+﻿using FinalProject.Admin.GUI.CongTy;
+using FinalProject.Candidate.GUI;
 using FinalProject.Company.GUI.Thong_tin;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,13 @@ namespace FinalProject.Admin
         {
             FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
             fDoiMatKhau.ShowDialog();
+        }
+
+        private void chỉnhSửaCôngTyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+
+            fChinhSuaCongTy.ShowDialog();
         }
     }
 }
