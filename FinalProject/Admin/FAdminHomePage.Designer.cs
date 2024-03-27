@@ -32,6 +32,7 @@
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachCongViec = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaCôngViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachUngVien = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmỨngViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
@@ -81,7 +81,7 @@
             this.menu_DanhSachCongViec.BackColor = System.Drawing.SystemColors.Highlight;
             this.menu_DanhSachCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_DanhSachCongViec.Name = "menu_DanhSachCongViec";
-            this.menu_DanhSachCongViec.Size = new System.Drawing.Size(265, 28);
+            this.menu_DanhSachCongViec.Size = new System.Drawing.Size(286, 28);
             this.menu_DanhSachCongViec.Text = "Danh sách công việc";
             this.menu_DanhSachCongViec.Click += new System.EventHandler(this.menu_DanhSachCongViec_Click);
             // 
@@ -90,8 +90,17 @@
             this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
+            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
             this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Chỉnh sửa công việc";
+            // 
+            // tàiKhoảnVàMậtKhẩuToolStripMenuItem
+            // 
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Name = "tàiKhoảnVàMậtKhẩuToolStripMenuItem";
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Text = "Tài khoản và mật khẩu";
+            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnVàMậtKhẩuToolStripMenuItem_Click);
             // 
             // menu_HoSo
             // 
@@ -160,6 +169,7 @@
             this.chỉnhSửaCôngTyToolStripMenuItem.Name = "chỉnhSửaCôngTyToolStripMenuItem";
             this.chỉnhSửaCôngTyToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
             this.chỉnhSửaCôngTyToolStripMenuItem.Text = "Chỉnh sửa công ty";
+            this.chỉnhSửaCôngTyToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngTyToolStripMenuItem_Click);
             // 
             // menu_TaiKhoanMatKhau
             // 
@@ -199,15 +209,6 @@
             this.pictureBox_Image.Size = new System.Drawing.Size(1065, 594);
             this.pictureBox_Image.TabIndex = 4;
             this.pictureBox_Image.TabStop = false;
-            // 
-            // tàiKhoảnVàMậtKhẩuToolStripMenuItem
-            // 
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Name = "tàiKhoảnVàMậtKhẩuToolStripMenuItem";
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Text = "Tài khoản và mật khẩu";
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnVàMậtKhẩuToolStripMenuItem_Click);
             // 
             // FAdminHomePage
             // 

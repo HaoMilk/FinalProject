@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Admin.GUI.CongTy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace FinalProject.Admin
         public FDanhSachCongTy()
         {
             InitializeComponent();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+            fChinhSuaCongTy.Show();
         }
     }
 }

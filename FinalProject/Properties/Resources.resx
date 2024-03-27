@@ -160,6 +160,9 @@
   <data name="love" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\love.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-edit-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-edit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edit_property_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-property-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,8 +190,8 @@
   <data name="bku" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\01_logobachkhoatoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-radio-94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="companyicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\companyicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-name-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-name-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,20 +214,20 @@
   <data name="js" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\js.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-view-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-view-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="google_colab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google_colab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="posterchinh@3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\posterchinh@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-choose-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-choose-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="google_photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google_photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-view-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-view-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="google_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\google-search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -246,9 +249,6 @@
   </data>
   <data name="backgroundgrbox" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\backgroundgrbox.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-save-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-save-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="company_profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\company_profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,12 +274,6 @@
   <data name="sass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CỤM LOGO THÁNG THANH NIÊN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CỤM LOGO THÁNG THANH NIÊN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rounded-reactangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rounded-reactangle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-next-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-next-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,8 +298,11 @@
   <data name="java1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\java.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="done" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\done.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-menu-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-menu-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rounded-reactangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rounded-reactangle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="react" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\react.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,11 +316,14 @@
   <data name="YIT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\YIT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sign_up_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-up-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="birthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birthday.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="posterchinh@3x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\posterchinh@3x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CỤM LOGO THÁNG THANH NIÊN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CỤM LOGO THÁNG THANH NIÊN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hcmute" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hcmute.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,14 +337,14 @@
   <data name="avatar-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sign_up_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-up-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="messenger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\messenger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vietnam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vietnam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-edit-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-edit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-save-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-save-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="resume" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resume.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
@@ -385,11 +385,11 @@
   <data name="4156954" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4156954.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="google_colab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google_colab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-radio-94.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-log-out-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-log-out-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="done" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\done.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-delete-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,8 +409,11 @@
   <data name="icons8-search-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-search-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-menu-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-menu-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="google_photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google_photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-log-out-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-log-out-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-delete-48 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-delete-48 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,7 +427,7 @@
   <data name="jobs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jobs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="companyicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\companyicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
