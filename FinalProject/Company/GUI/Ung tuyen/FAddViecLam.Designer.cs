@@ -535,7 +535,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.work;
+            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.jobs;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
