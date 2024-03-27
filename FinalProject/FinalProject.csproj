@@ -724,6 +724,8 @@
     <None Include="Resources\profilecp1.jpg" />
     <None Include="Resources\rounded-reactangle.png" />
     <None Include="Resources\rounded-reactangle1.png" />
+    <None Include="Resources\work.jpg" />
+    <None Include="Resources\jobs.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
