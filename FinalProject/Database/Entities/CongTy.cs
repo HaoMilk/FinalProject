@@ -8,7 +8,7 @@ namespace FinalProject.Database.Entities
 {
     internal class CongTy
     {
-        public string Ten { get; set; }
+        public string TenCongTy { get; set; }
         public string Diachi { get; set; }
         public string TenCEO { get; set; }
         public string MST { get; set; }
