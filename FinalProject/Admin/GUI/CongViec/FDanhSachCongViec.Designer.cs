@@ -37,7 +37,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label_DSCongTy = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvDSCT = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvDSCV = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.grpBoxTimKiem = new System.Windows.Forms.GroupBox();
             this.cbDiaDiem = new System.Windows.Forms.ComboBox();
             this.cbNganh = new System.Windows.Forms.ComboBox();
@@ -47,7 +49,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCV)).BeginInit();
+            this.panel1.SuspendLayout();
             this.grpBoxTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,6 +97,7 @@
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -158,25 +163,44 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.grpBoxTimKiem);
-            this.panel4.Controls.Add(this.dgvDSCT);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(241, 69);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1110, 619);
             this.panel4.TabIndex = 8;
             // 
-            // dgvDSCT
+            // panel3
             // 
-            this.dgvDSCT.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.dgvDSCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSCT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSCT.Location = new System.Drawing.Point(0, 0);
-            this.dgvDSCT.Name = "dgvDSCT";
-            this.dgvDSCT.RowHeadersWidth = 51;
-            this.dgvDSCT.RowTemplate.Height = 24;
-            this.dgvDSCT.Size = new System.Drawing.Size(1110, 619);
-            this.dgvDSCT.TabIndex = 0;
+            this.panel3.Controls.Add(this.dgvDSCV);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1110, 519);
+            this.panel3.TabIndex = 1;
+            // 
+            // dgvDSCV
+            // 
+            this.dgvDSCV.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.dgvDSCV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSCV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.dgvDSCV.Location = new System.Drawing.Point(0, 0);
+            this.dgvDSCV.Name = "dgvDSCV";
+            this.dgvDSCV.RowHeadersWidth = 51;
+            this.dgvDSCV.RowTemplate.Height = 24;
+            this.dgvDSCV.Size = new System.Drawing.Size(1110, 519);
+            this.dgvDSCV.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.grpBoxTimKiem);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1110, 100);
+            this.panel1.TabIndex = 0;
             // 
             // grpBoxTimKiem
             // 
@@ -189,7 +213,7 @@
             this.grpBoxTimKiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpBoxTimKiem.Location = new System.Drawing.Point(0, 0);
             this.grpBoxTimKiem.Name = "grpBoxTimKiem";
-            this.grpBoxTimKiem.Size = new System.Drawing.Size(1110, 619);
+            this.grpBoxTimKiem.Size = new System.Drawing.Size(1110, 100);
             this.grpBoxTimKiem.TabIndex = 1;
             this.grpBoxTimKiem.TabStop = false;
             this.grpBoxTimKiem.Text = "TÌm kiếm";
@@ -201,11 +225,11 @@
             this.cbDiaDiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDiaDiem.ForeColor = System.Drawing.SystemColors.Window;
             this.cbDiaDiem.FormattingEnabled = true;
-            this.cbDiaDiem.Location = new System.Drawing.Point(569, 68);
+            this.cbDiaDiem.Location = new System.Drawing.Point(550, 68);
             this.cbDiaDiem.Name = "cbDiaDiem";
-            this.cbDiaDiem.Size = new System.Drawing.Size(538, 36);
+            this.cbDiaDiem.Size = new System.Drawing.Size(557, 36);
             this.cbDiaDiem.TabIndex = 2;
-            this.cbDiaDiem.Text = "Kinh nghiệm";
+            this.cbDiaDiem.Text = "Địa điểm";
             // 
             // cbNganh
             // 
@@ -216,9 +240,9 @@
             this.cbNganh.FormattingEnabled = true;
             this.cbNganh.Location = new System.Drawing.Point(3, 68);
             this.cbNganh.Name = "cbNganh";
-            this.cbNganh.Size = new System.Drawing.Size(569, 36);
+            this.cbNganh.Size = new System.Drawing.Size(541, 36);
             this.cbNganh.TabIndex = 1;
-            this.cbNganh.Text = "Mức lương";
+            this.cbNganh.Text = "Ngành";
             // 
             // txtTimKiem
             // 
@@ -238,12 +262,15 @@
             this.Controls.Add(this.pnlControl);
             this.Name = "FDanhSachCongViec";
             this.Text = "FDanhSachCongViec";
+            this.Load += new System.EventHandler(this.FDanhSachCongViec_Load);
             this.pnlControl.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCV)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.grpBoxTimKiem.ResumeLayout(false);
             this.grpBoxTimKiem.PerformLayout();
             this.ResumeLayout(false);
@@ -261,10 +288,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label_DSCongTy;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dgvDSCT;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox grpBoxTimKiem;
         private System.Windows.Forms.ComboBox cbDiaDiem;
         private System.Windows.Forms.ComboBox cbNganh;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.DataGridView dgvDSCV;
     }
 }
