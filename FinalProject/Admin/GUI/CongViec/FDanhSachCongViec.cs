@@ -1,5 +1,4 @@
-﻿using FinalProject.Admin.GUI.CongViec;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,8 +42,6 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaCV fChinhSuaCV = new FChinhSuaCV();
-            fChinhSuaCV.ShowDialog();
         }
     }
 }
