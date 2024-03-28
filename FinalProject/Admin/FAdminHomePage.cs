@@ -66,14 +66,15 @@ namespace FinalProject.Admin
 
         private void chỉnhSửaCôngTyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+            FCSCongViec fChinhSuaCongTy = new FCSCongViec();
 
             fChinhSuaCongTy.ShowDialog();
         }
 
         private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FCSCongViec fCSCongViec = new FCSCongViec();
+            fCSCongViec.ShowDialog();
         }
     }
 }
