@@ -28,50 +28,243 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ucDanhSach1 = new FinalProject.UC.UCDanhSach();
-            this.label_Name = new System.Windows.Forms.Label();
+            this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox_Avatar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label_DSCongTy = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvDSCT = new System.Windows.Forms.DataGridView();
+            this.grpBoxTimKiem = new System.Windows.Forms.GroupBox();
+            this.cbDiaDiem = new System.Windows.Forms.ComboBox();
+            this.cbNganh = new System.Windows.Forms.ComboBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.pnlControl.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
+            this.grpBoxTimKiem.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ucDanhSach1
+            // pnlControl
             // 
-            this.ucDanhSach1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucDanhSach1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucDanhSach1.Location = new System.Drawing.Point(0, 43);
-            this.ucDanhSach1.Margin = new System.Windows.Forms.Padding(4);
-            this.ucDanhSach1.Name = "ucDanhSach1";
-            this.ucDanhSach1.Size = new System.Drawing.Size(1023, 645);
-            this.ucDanhSach1.TabIndex = 12;
+            this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.pnlControl.Controls.Add(this.btnXoa);
+            this.pnlControl.Controls.Add(this.btnSua);
+            this.pnlControl.Controls.Add(this.btnThem);
+            this.pnlControl.Controls.Add(this.panel5);
+            this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlControl.Location = new System.Drawing.Point(0, 0);
+            this.pnlControl.Name = "pnlControl";
+            this.pnlControl.Size = new System.Drawing.Size(241, 688);
+            this.pnlControl.TabIndex = 5;
             // 
-            // label_Name
+            // btnXoa
             // 
-            this.label_Name.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_Name.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_Name.Location = new System.Drawing.Point(0, 0);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(1023, 43);
-            this.label_Name.TabIndex = 11;
-            this.label_Name.Text = "DANH SÁCH CÔNG VIỆC";
-            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Name.UseCompatibleTextRendering = true;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnXoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXoa.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnXoa.Image = global::FinalProject.Properties.Resources.icons8_delete_48;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(0, 344);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(241, 86);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "XÓA";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnSua.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSua.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnSua.Image = global::FinalProject.Properties.Resources.icons8_edit_48;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(0, 258);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(241, 86);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "SỬA";
+            this.btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnThem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThem.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnThem.Image = global::FinalProject.Properties.Resources.icons8_add_48;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(0, 172);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(241, 86);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "THÊM";
+            this.btnThem.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox_Avatar);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(241, 172);
+            this.panel5.TabIndex = 3;
+            // 
+            // pictureBox_Avatar
+            // 
+            this.pictureBox_Avatar.BackColor = System.Drawing.Color.White;
+            this.pictureBox_Avatar.BackgroundImage = global::FinalProject.Properties.Resources.work;
+            this.pictureBox_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_Avatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox_Avatar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox_Avatar.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_Avatar.Margin = new System.Windows.Forms.Padding(34, 32, 34, 32);
+            this.pictureBox_Avatar.Name = "pictureBox_Avatar";
+            this.pictureBox_Avatar.Padding = new System.Windows.Forms.Padding(34, 32, 34, 32);
+            this.pictureBox_Avatar.Size = new System.Drawing.Size(241, 172);
+            this.pictureBox_Avatar.TabIndex = 1;
+            this.pictureBox_Avatar.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label_DSCongTy);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(241, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1110, 69);
+            this.panel2.TabIndex = 6;
+            // 
+            // label_DSCongTy
+            // 
+            this.label_DSCongTy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.label_DSCongTy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_DSCongTy.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.Info;
+            this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
+            this.label_DSCongTy.Name = "label_DSCongTy";
+            this.label_DSCongTy.Size = new System.Drawing.Size(1110, 69);
+            this.label_DSCongTy.TabIndex = 9;
+            this.label_DSCongTy.Text = "DANH SÁCH CÔNG VIỆC";
+            this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_DSCongTy.UseCompatibleTextRendering = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.grpBoxTimKiem);
+            this.panel4.Controls.Add(this.dgvDSCT);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(241, 69);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1110, 619);
+            this.panel4.TabIndex = 8;
+            // 
+            // dgvDSCT
+            // 
+            this.dgvDSCT.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.dgvDSCT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSCT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSCT.Location = new System.Drawing.Point(0, 0);
+            this.dgvDSCT.Name = "dgvDSCT";
+            this.dgvDSCT.RowHeadersWidth = 51;
+            this.dgvDSCT.RowTemplate.Height = 24;
+            this.dgvDSCT.Size = new System.Drawing.Size(1110, 619);
+            this.dgvDSCT.TabIndex = 0;
+            // 
+            // grpBoxTimKiem
+            // 
+            this.grpBoxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.grpBoxTimKiem.Controls.Add(this.cbDiaDiem);
+            this.grpBoxTimKiem.Controls.Add(this.cbNganh);
+            this.grpBoxTimKiem.Controls.Add(this.txtTimKiem);
+            this.grpBoxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grpBoxTimKiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.grpBoxTimKiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.grpBoxTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.grpBoxTimKiem.Name = "grpBoxTimKiem";
+            this.grpBoxTimKiem.Size = new System.Drawing.Size(1110, 619);
+            this.grpBoxTimKiem.TabIndex = 1;
+            this.grpBoxTimKiem.TabStop = false;
+            this.grpBoxTimKiem.Text = "TÌm kiếm";
+            // 
+            // cbDiaDiem
+            // 
+            this.cbDiaDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.cbDiaDiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cbDiaDiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbDiaDiem.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbDiaDiem.FormattingEnabled = true;
+            this.cbDiaDiem.Location = new System.Drawing.Point(569, 68);
+            this.cbDiaDiem.Name = "cbDiaDiem";
+            this.cbDiaDiem.Size = new System.Drawing.Size(538, 36);
+            this.cbDiaDiem.TabIndex = 2;
+            this.cbDiaDiem.Text = "Kinh nghiệm";
+            // 
+            // cbNganh
+            // 
+            this.cbNganh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.cbNganh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbNganh.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbNganh.ForeColor = System.Drawing.Color.White;
+            this.cbNganh.FormattingEnabled = true;
+            this.cbNganh.Location = new System.Drawing.Point(3, 68);
+            this.cbNganh.Name = "cbNganh";
+            this.cbNganh.Size = new System.Drawing.Size(569, 36);
+            this.cbNganh.TabIndex = 1;
+            this.cbNganh.Text = "Mức lương";
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtTimKiem.Location = new System.Drawing.Point(3, 32);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(1104, 36);
+            this.txtTimKiem.TabIndex = 0;
             // 
             // FDanhSachCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 688);
-            this.Controls.Add(this.ucDanhSach1);
-            this.Controls.Add(this.label_Name);
+            this.ClientSize = new System.Drawing.Size(1351, 688);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlControl);
             this.Name = "FDanhSachCongViec";
             this.Text = "FDanhSachCongViec";
+            this.pnlControl.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).EndInit();
+            this.grpBoxTimKiem.ResumeLayout(false);
+            this.grpBoxTimKiem.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private UC.UCDanhSach ucDanhSach1;
-        private System.Windows.Forms.Label label_Name;
+        private System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox_Avatar;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_DSCongTy;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView dgvDSCT;
+        private System.Windows.Forms.GroupBox grpBoxTimKiem;
+        private System.Windows.Forms.ComboBox cbDiaDiem;
+        private System.Windows.Forms.ComboBox cbNganh;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }
