@@ -131,6 +131,12 @@
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
+    <Compile Include="Candidate\GUI\FTaoCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FTaoCv.Designer.cs">
+      <DependentUpon>FTaoCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FUngTuyenCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FTaoCv.resx">
+      <DependentUpon>FTaoCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
