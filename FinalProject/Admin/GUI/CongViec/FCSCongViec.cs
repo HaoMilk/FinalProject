@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Admin.GUI.CongTy
 {
-    public partial class FChinhSuaCongTy : Form
+    public partial class FCSCongViec : Form
     {
-        public FChinhSuaCongTy()
+        public FCSCongViec()
         {
             InitializeComponent();
         }

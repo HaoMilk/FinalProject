@@ -22,7 +22,7 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+            FCSCongViec fChinhSuaCongTy = new FCSCongViec();
             fChinhSuaCongTy.Show();
         }
 
