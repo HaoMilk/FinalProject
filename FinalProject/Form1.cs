@@ -1,6 +1,7 @@
 ﻿using FinalProject.Admin;
 using FinalProject.Candidate.GUI;
 using FinalProject.Company;
+using FinalProject.Company.GUI.Thong_tin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,17 @@ namespace FinalProject
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Đăng ký thành công");
+            if(!Check())
+            {
+                return;
+            }
+            else if (radioButton_NhaTuyenDung.Checked)
+            {
+                FDangKyCongTy fDangKyCongTy = new FDangKyCongTy();
+                fDangKyCongTy.ShowDialog();
+            }
+
+            
         }
 
         private void Form_DangNhap_Load(object sender, EventArgs e)
@@ -66,6 +77,15 @@ namespace FinalProject
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private bool Check()
+        {
+            if(String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin");
+                return false;
+            }    
+            return true;
         }
     }
 }

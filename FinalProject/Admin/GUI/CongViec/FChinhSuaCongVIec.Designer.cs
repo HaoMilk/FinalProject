@@ -1,6 +1,6 @@
-﻿namespace FinalProject.Admin.GUI.CongTy
+﻿namespace FinalProject.Admin.GUI.CongViec
 {
-    partial class FChinhSuaCongTy
+    partial class FChinhSuaCongViec
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FChinhSuaCongTy
+            // FChinhSuaCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1859, 714);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FChinhSuaCongTy";
-            this.Text = "FChinhSuaCongTy";
+            this.ClientSize = new System.Drawing.Size(1636, 563);
+            this.Name = "FChinhSuaCongViec";
+            this.Text = "FChinhSuaCongViec";
             this.ResumeLayout(false);
 
         }
