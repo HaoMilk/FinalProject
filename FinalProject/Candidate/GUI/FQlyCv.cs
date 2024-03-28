@@ -93,7 +93,6 @@ namespace FinalProject.Candidate.GUI
         {
             FTaoCv fTaoCv = new FTaoCv();
             fTaoCv.ShowDialog();
-
         }
     }
 }
