@@ -223,6 +223,7 @@
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\DTO\UngTuyenDTO.cs" />
     <Compile Include="Database\DTO\UngTuyenGetAllInput.cs" />
+    <Compile Include="Database\Entities\CongTy.cs" />
     <Compile Include="Database\Entities\CongViec.cs" />
     <Compile Include="Database\Entities\CV.cs" />
     <Compile Include="Database\Entities\Tinh.cs" />
