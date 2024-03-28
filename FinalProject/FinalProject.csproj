@@ -104,6 +104,12 @@
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.Designer.cs">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongViec\FCSuaCongVIec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongViec\FCSuaCongVIec.Designer.cs">
+      <DependentUpon>FCSuaCongVIec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
