@@ -8,8 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using FinalProject.Admin.GUI.CongViec;
 
 namespace FinalProject.Admin
 {
@@ -44,8 +42,7 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            FChinhSuaCongVIec fChinhSuaCongVIec = new FChinhSuaCongVIec();
-            fChinhSuaCongVIec.Show();
+
         }
     }
 }
