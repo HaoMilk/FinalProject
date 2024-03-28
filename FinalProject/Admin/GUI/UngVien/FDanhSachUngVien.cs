@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using FinalProject.Admin.GUI.UngVien;
 
 namespace FinalProject.Admin
 {
@@ -43,6 +44,12 @@ namespace FinalProject.Admin
             {
                 conn.Close();
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            FCSUngVien fCSUngVien = new FCSUngVien();
+            fCSUngVien.Show();
         }
     }
 }
