@@ -31,15 +31,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_GiayPhep = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_MST = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_CEO = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_DiaChi = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_TenCTy = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_Luu = new System.Windows.Forms.Button();
             this.button_CapNhat = new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.textBox5);
+            this.groupBox6.Controls.Add(this.textBox_GiayPhep);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox6.Location = new System.Drawing.Point(3, 383);
@@ -102,17 +102,17 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Giấy phép đăng ký";
             // 
-            // textBox5
+            // textBox_GiayPhep
             // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(3, 28);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(410, 32);
-            this.textBox5.TabIndex = 1;
+            this.textBox_GiayPhep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_GiayPhep.Location = new System.Drawing.Point(3, 28);
+            this.textBox_GiayPhep.Name = "textBox_GiayPhep";
+            this.textBox_GiayPhep.Size = new System.Drawing.Size(410, 32);
+            this.textBox_GiayPhep.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.textBox_MST);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox4.Location = new System.Drawing.Point(3, 288);
@@ -122,17 +122,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Mã số thuế";
             // 
-            // textBox3
+            // textBox_MST
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(3, 28);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(410, 32);
-            this.textBox3.TabIndex = 1;
+            this.textBox_MST.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_MST.Location = new System.Drawing.Point(3, 28);
+            this.textBox_MST.Name = "textBox_MST";
+            this.textBox_MST.Size = new System.Drawing.Size(410, 32);
+            this.textBox_MST.TabIndex = 1;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBox_CEO);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox3.Location = new System.Drawing.Point(3, 193);
@@ -142,17 +142,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CEO";
             // 
-            // textBox2
+            // textBox_CEO
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(3, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(410, 32);
-            this.textBox2.TabIndex = 2;
+            this.textBox_CEO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_CEO.Location = new System.Drawing.Point(3, 28);
+            this.textBox_CEO.Name = "textBox_CEO";
+            this.textBox_CEO.Size = new System.Drawing.Size(410, 32);
+            this.textBox_CEO.TabIndex = 2;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBox_DiaChi);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(3, 98);
@@ -162,17 +162,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Địa chỉ";
             // 
-            // textBox1
+            // textBox_DiaChi
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(3, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(410, 32);
-            this.textBox1.TabIndex = 1;
+            this.textBox_DiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_DiaChi.Location = new System.Drawing.Point(3, 28);
+            this.textBox_DiaChi.Name = "textBox_DiaChi";
+            this.textBox_DiaChi.Size = new System.Drawing.Size(410, 32);
+            this.textBox_DiaChi.TabIndex = 1;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.textBox_TenCTy);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox5.Location = new System.Drawing.Point(3, 3);
@@ -182,13 +182,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Tên";
             // 
-            // textBox4
+            // textBox_TenCTy
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(3, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(410, 32);
-            this.textBox4.TabIndex = 1;
+            this.textBox_TenCTy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_TenCTy.Location = new System.Drawing.Point(3, 28);
+            this.textBox_TenCTy.Name = "textBox_TenCTy";
+            this.textBox_TenCTy.Size = new System.Drawing.Size(410, 32);
+            this.textBox_TenCTy.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -223,6 +223,7 @@
             this.button_Luu.TabIndex = 0;
             this.button_Luu.Text = "Lưu";
             this.button_Luu.UseVisualStyleBackColor = false;
+            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
             // 
             // button_CapNhat
             // 
@@ -294,14 +295,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_MST;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_CEO;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_DiaChi;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_TenCTy;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_GiayPhep;
     }
 }
