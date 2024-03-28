@@ -49,6 +49,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -92,12 +98,6 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +131,12 @@
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
+    <Compile Include="Candidate\GUI\FTaoCv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Candidate\GUI\FTaoCv.Designer.cs">
+      <DependentUpon>FTaoCv.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\GUI\FUngTuyenCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,9 +316,6 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Candidate\GUI\FTaoCv.resx">
+      <DependentUpon>FTaoCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>

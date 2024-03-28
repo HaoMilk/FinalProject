@@ -90,6 +90,7 @@
             this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
             this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
             this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Chỉnh sửa công việc";
+            this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
             // 
             // tàiKhoảnVàMậtKhẩuToolStripMenuItem
             // 

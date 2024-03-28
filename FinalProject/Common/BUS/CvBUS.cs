@@ -4,9 +4,6 @@ using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.LinkLabel;
 
 namespace FinalProject.Common.BUS
 {
@@ -24,7 +21,9 @@ namespace FinalProject.Common.BUS
             return cvDAO.Count();
         }
 
-        public int Add(int id, string ten, int ungVienId, string link, string moTa, string trangThai)
+        public int Add(int id, string ten, int ungVienId, string link,
+            string moTa, string trangThai, string viTriUngTuyen, string kyNang,
+            string ngoaiNgu, string tinHoc, string hocVan, string hoatDong, string chungChi, string mucTieu, string kinhNghiem)
         {
             var cv = new CV();
             cv.Id = id;
@@ -36,6 +35,15 @@ namespace FinalProject.Common.BUS
             cv.IsDeleted = false;
             cv.CreatedTime = DateTime.Now;
             cv.UpdatedTime = null;
+            cv.ViTriUngTuyen = viTriUngTuyen;
+            cv.KyNang = kyNang;
+            cv.NgoaiNgu = ngoaiNgu;
+            cv.TinHoc = tinHoc;
+            cv.HocVan = hocVan;
+            cv.HoatDong = hoatDong;
+            cv.ChungChi = chungChi;
+            cv.MucTieu = mucTieu;
+            cv.KinhNghiem = kinhNghiem;
 
             return cvDAO.Add(cv);
         }

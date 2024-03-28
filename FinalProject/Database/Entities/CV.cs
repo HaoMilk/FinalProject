@@ -19,5 +19,15 @@ namespace FinalProject.Database.Entities
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
+        public string ViTriUngTuyen {  get; set; }
+        public string KyNang { get; set; }
+        public string NgoaiNgu { get; set; }
+        public string TinHoc { get; set; }
+        public string HocVan { get; set; }
+        public string HoatDong { get; set; }
+        public string ChungChi { get; set; }
+        public string MucTieu { get; set; }
+        public string KinhNghiem { get; set; }
+
     }
 }
