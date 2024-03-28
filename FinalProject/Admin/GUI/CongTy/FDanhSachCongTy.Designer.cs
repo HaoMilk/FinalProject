@@ -67,6 +67,7 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "THÊM";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel4
             // 
@@ -252,6 +253,7 @@
             this.MinimizeBox = false;
             this.Name = "FDanhSachCongTy";
             this.Text = "FDanhSachCongTy";
+            this.Load += new System.EventHandler(this.FDanhSachCongTy_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).EndInit();
             this.panel3.ResumeLayout(false);
