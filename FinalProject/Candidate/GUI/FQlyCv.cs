@@ -88,5 +88,12 @@ namespace FinalProject.Candidate.GUI
         {
             LoadCvList();
         }
+
+        private void button_Them_Click(object sender, EventArgs e)
+        {
+            FTaoCv fTaoCv = new FTaoCv();
+            fTaoCv.ShowDialog();
+
+        }
     }
 }
