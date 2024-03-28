@@ -1,4 +1,4 @@
-﻿using FinalProject.Admin.GUI.CongTy;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +22,7 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            FCSCongViec fChinhSuaCongTy = new FCSCongViec();
-            fChinhSuaCongTy.Show();
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
