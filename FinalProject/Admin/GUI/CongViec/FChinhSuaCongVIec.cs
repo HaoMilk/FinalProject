@@ -7,22 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace FinalProject.Admin.GUI.CongViec
 {
-    
-    public partial class FChinhSuaCongVIec : Form
+    public partial class FChinhSuaCongViec : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
-        public FChinhSuaCongVIec()
+        public FChinhSuaCongViec()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
