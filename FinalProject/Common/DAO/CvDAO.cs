@@ -89,15 +89,15 @@ namespace FinalProject.Common.DAO
                         cv.IsDeleted = reader.GetBoolean(6);
                         cv.CreatedTime = reader.GetDateTime(7);
                         cv.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
-                        cv.ViTriUngTuyen = reader.GetString(9);
-                        cv.KyNang = reader.GetString(10);
-                        cv.NgoaiNgu = reader.GetString(11);
-                        cv.TinHoc = reader.GetString(12);
-                        cv.HocVan = reader.GetString(13);
-                        cv.HoatDong = reader.GetString(14);
-                        cv.ChungChi = reader.GetString(15);
-                        cv.MucTieu = reader.GetString(16);
-                        cv.KinhNghiem = reader.GetString(17);
+                       // cv.ViTriUngTuyen = reader.GetString(9);
+                      //  cv.KyNang = reader.GetString(10);
+                       // cv.NgoaiNgu = reader.GetString(11);
+                       // cv.TinHoc = reader.GetString(12);
+                        //cv.HocVan = reader.GetString(13);
+                       // cv.HoatDong = reader.GetString(14);
+                        //cv.ChungChi = reader.GetString(15);
+                        //cv.MucTieu = reader.GetString(16);
+                        //cv.KinhNghiem = reader.GetString(17);
                        
                         list.Add(cv);
                     }
