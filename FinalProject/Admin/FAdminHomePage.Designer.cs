@@ -41,7 +41,6 @@
             this.menu_DanhSachCongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaCôngTyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TaiKhoanMatKhau = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
             this.menuStrip_MenuStrip.SuspendLayout();
@@ -55,8 +54,7 @@
             this.menuStrip_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_ViecLam,
             this.menu_HoSo,
-            this.menu_CongTy,
-            this.thốngKêToolStripMenuItem});
+            this.menu_CongTy});
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
@@ -180,14 +178,6 @@
             this.menu_TaiKhoanMatKhau.Text = "Tài khoản và mật khẩu";
             this.menu_TaiKhoanMatKhau.Click += new System.EventHandler(this.menu_TaiKhoanMatKhau_Click);
             // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thốngKêToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(102, 27);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Highlight;
@@ -237,7 +227,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_ViecLam;
         private System.Windows.Forms.ToolStripMenuItem menu_HoSo;
         private System.Windows.Forms.ToolStripMenuItem menu_CongTy;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem menu_DanhSachCongViec;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngViệcToolStripMenuItem;

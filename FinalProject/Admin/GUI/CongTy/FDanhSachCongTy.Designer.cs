@@ -33,8 +33,6 @@
             this.dgvDSCT = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.grpBoxTimKiem = new System.Windows.Forms.GroupBox();
-            this.cbKinhNghiem = new System.Windows.Forms.ComboBox();
-            this.cbMucLuong = new System.Windows.Forms.ComboBox();
             this.cbDiaDiem = new System.Windows.Forms.ComboBox();
             this.cbNganh = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -69,6 +67,7 @@
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "THÊM";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel4
             // 
@@ -103,8 +102,6 @@
             // grpBoxTimKiem
             // 
             this.grpBoxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.grpBoxTimKiem.Controls.Add(this.cbKinhNghiem);
-            this.grpBoxTimKiem.Controls.Add(this.cbMucLuong);
             this.grpBoxTimKiem.Controls.Add(this.cbDiaDiem);
             this.grpBoxTimKiem.Controls.Add(this.cbNganh);
             this.grpBoxTimKiem.Controls.Add(this.txtTimKiem);
@@ -118,42 +115,16 @@
             this.grpBoxTimKiem.TabStop = false;
             this.grpBoxTimKiem.Text = "TÌm kiếm";
             // 
-            // cbKinhNghiem
-            // 
-            this.cbKinhNghiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.cbKinhNghiem.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cbKinhNghiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbKinhNghiem.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbKinhNghiem.FormattingEnabled = true;
-            this.cbKinhNghiem.Location = new System.Drawing.Point(867, 68);
-            this.cbKinhNghiem.Name = "cbKinhNghiem";
-            this.cbKinhNghiem.Size = new System.Drawing.Size(288, 36);
-            this.cbKinhNghiem.TabIndex = 4;
-            this.cbKinhNghiem.Text = "Kinh nghiệm";
-            // 
-            // cbMucLuong
-            // 
-            this.cbMucLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.cbMucLuong.Dock = System.Windows.Forms.DockStyle.Left;
-            this.cbMucLuong.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbMucLuong.ForeColor = System.Drawing.SystemColors.Window;
-            this.cbMucLuong.FormattingEnabled = true;
-            this.cbMucLuong.Location = new System.Drawing.Point(579, 68);
-            this.cbMucLuong.Name = "cbMucLuong";
-            this.cbMucLuong.Size = new System.Drawing.Size(288, 36);
-            this.cbMucLuong.TabIndex = 3;
-            this.cbMucLuong.Text = "Mức lương";
-            // 
             // cbDiaDiem
             // 
             this.cbDiaDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.cbDiaDiem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbDiaDiem.Dock = System.Windows.Forms.DockStyle.Right;
             this.cbDiaDiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDiaDiem.ForeColor = System.Drawing.SystemColors.Window;
             this.cbDiaDiem.FormattingEnabled = true;
-            this.cbDiaDiem.Location = new System.Drawing.Point(291, 68);
+            this.cbDiaDiem.Location = new System.Drawing.Point(570, 68);
             this.cbDiaDiem.Name = "cbDiaDiem";
-            this.cbDiaDiem.Size = new System.Drawing.Size(288, 36);
+            this.cbDiaDiem.Size = new System.Drawing.Size(585, 36);
             this.cbDiaDiem.TabIndex = 2;
             this.cbDiaDiem.Text = "Địa điểm";
             // 
@@ -166,7 +137,7 @@
             this.cbNganh.FormattingEnabled = true;
             this.cbNganh.Location = new System.Drawing.Point(3, 68);
             this.cbNganh.Name = "cbNganh";
-            this.cbNganh.Size = new System.Drawing.Size(288, 36);
+            this.cbNganh.Size = new System.Drawing.Size(569, 36);
             this.cbNganh.TabIndex = 1;
             this.cbNganh.Text = "Ngành";
             // 
@@ -282,6 +253,7 @@
             this.MinimizeBox = false;
             this.Name = "FDanhSachCongTy";
             this.Text = "FDanhSachCongTy";
+            this.Load += new System.EventHandler(this.FDanhSachCongTy_Load);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -310,8 +282,6 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.ComboBox cbKinhNghiem;
-        private System.Windows.Forms.ComboBox cbMucLuong;
         private System.Windows.Forms.ComboBox cbDiaDiem;
         private System.Windows.Forms.PictureBox pictureBox_Avatar;
         private System.Windows.Forms.Label label_DSCongTy;
