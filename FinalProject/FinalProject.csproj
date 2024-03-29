@@ -49,6 +49,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -91,12 +97,6 @@
     </Compile>
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
       <SubType>Form</SubType>
@@ -143,7 +143,9 @@
     <Compile Include="Candidate\GUI\FUngTuyenCongViec.Designer.cs">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\BUS\CongTyBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
+    <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
       <SubType>Form</SubType>
@@ -315,9 +317,6 @@
     </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
@@ -743,6 +742,7 @@
     <Content Include="Database\Scripts\015. Update columns order in table CongViec.sql" />
     <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
     <Content Include="Database\Scripts\017. Update CV columns.sql" />
+    <Content Include="Database\Scripts\018. Add new columns to CV.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>

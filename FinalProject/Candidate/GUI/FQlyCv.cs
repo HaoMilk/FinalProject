@@ -91,8 +91,13 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Them_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FTaoCv fTaoCv = new FTaoCv();
             fTaoCv.ShowDialog();
+
+            this.FQlyCv_Load(this, EventArgs.Empty);
+            this.Show();
         }
     }
 }

@@ -43,9 +43,19 @@ namespace FinalProject.Candidate.GUI
             var ChungChi = textBox_ChungChi.Text;
             var MucTieu = richTextBox_MucTieu.Text;
             var KinhNghiem = richTextBox_KinhNghiem.Text;
-            _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
+            
+            var result = _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
                 KyNang, NgoaiNgu, TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem);
 
+            if (result > 0)
+            {
+                MessageBox.Show("Thêm mới thành công");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thêm mới thất bại");
+            }
         }
     }
 }

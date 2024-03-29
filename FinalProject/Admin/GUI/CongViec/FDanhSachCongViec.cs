@@ -42,7 +42,7 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
