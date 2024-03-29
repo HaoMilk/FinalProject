@@ -115,14 +115,14 @@ namespace FinalProject.Common.DAO
         {
             string query = "INSERT INTO CV (Ten, UngVienId, Link, MoTa, TrangThai, IsDeleted, CreatedTime, UpdatedTime," +
                 " ViTriUngTuyen,KyNang,  NgoaiNgu , TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem) " +
-                $"VALUES (N'{CV.Ten}, {CV.UngVienId}, " +
+                $"VALUES (N'{CV.Ten}', {CV.UngVienId}, " +
                 $" N'{CV.Link}', N'{CV.MoTa}'," +
                 $" N'{CV.TrangThai}', 0," +
                 $" '{CV.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL," +
                 $" N'{CV.ViTriUngTuyen}', N'{CV.KyNang}'," +
                 $" N'{CV.NgoaiNgu}',N'{CV.TinHoc}', N'{CV.HocVan}'," +
                 $" N'{CV.HoatDong}', N'{CV.ChungChi}'," +
-                $" N' {CV.MucTieu} ', N' {CV.KinhNghiem} '); ";
+                $" N'{CV.MucTieu}', N'{CV.KinhNghiem}'); ";
 
 
             using (dbConnection.Connection)
