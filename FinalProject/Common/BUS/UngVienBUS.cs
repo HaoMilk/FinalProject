@@ -11,16 +11,38 @@ namespace FinalProject.Common.BUS
     {
         private UngVienDAO ungVienDAO = new UngVienDAO();
 
+        /// <summary>
+        /// Kiểm tra xem ứng viên có id này đã tồn tại chưa
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public int CheckExist(int id)
         {
             return ungVienDAO.CheckExist(id);
         }
 
+        /// <summary>
+        /// Đếm số lượng ứng viên hiện có
+        /// </summary>
+        /// <returns></returns>
         public int Count()
         {
             return ungVienDAO.Count();
         }
 
+        /// <summary>
+        /// Thêm 1 ứng viên mới vào database
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="ten"></param>
+        /// <param name="ngaySinh"></param>
+        /// <param name="gioiTinh"></param>
+        /// <param name="diaChi"></param>
+        /// <param name="sDT"></param>
+        /// <param name="email"></param>
+        /// <param name="chuyenMon"></param>
+        /// <param name="trangThai"></param>
+        /// <returns></returns>
         public int Add(int id, string ten, DateTime ngaySinh, string gioiTinh,
             string diaChi, string sDT, string email, string chuyenMon, string trangThai)
         {
@@ -37,16 +59,26 @@ namespace FinalProject.Common.BUS
             ungVien.IsDeleted = false;
             ungVien.CreatedTime = DateTime.Now;
             ungVien.UpdatedTime = null;
-            
 
             return ungVienDAO.Add(ungVien);
         }
 
+        /// <summary>
+        /// Thêm 1 ứng viên mới vào database
+        /// </summary>
+        /// <param name="ungVien"></param>
+        /// <returns></returns>
         public int Add(UngVien ungVien)
         {
             return ungVienDAO.Add(ungVien);
         }
 
+        /// <summary>
+        /// Cập nhật trạng thái của ứng viên
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="trangThai"></param>
+        /// <returns></returns>
         public int Update(int id, string trangThai)
         {
             var ungVien = new UngVien()
@@ -59,11 +91,21 @@ namespace FinalProject.Common.BUS
             return ungVienDAO.Update(ungVien);
         }
 
+        /// <summary>
+        /// Cập nhật thông tin của ứng viên
+        /// </summary>
+        /// <param name="ungVien"></param>
+        /// <returns></returns>
         public int Update(UngVien ungVien)
         {
             return ungVienDAO.Update(ungVien);
         }
 
+        /// <summary>
+        /// Xóa ứng viên khỏi database dựa vào id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public int Delete(int id)
         {
             var ungVien = new UngVien();
@@ -71,6 +113,11 @@ namespace FinalProject.Common.BUS
             return ungVienDAO.Delete(ungVien);
         }
 
+        /// <summary>
+        /// Gán IsDeleted = true cho ứng viên dựa vào id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public int SoftDelete(int id)
         {
             var ungVien = new UngVien();
@@ -81,29 +128,29 @@ namespace FinalProject.Common.BUS
             return ungVienDAO.SoftDelete(ungVien);
         }
 
-        public List<UngVien> GetAll(CvGetAllInput input = null)
+        /// <summary>
+        /// Lấy danh sách ứng viên dựa vào input
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public List<UngVien> GetAll(UngVienGetAllInput input = null)
         {
             return ungVienDAO.GetAll(input);
         }
 
+        /// <summary>
+        /// Lấy 1 ứng viên dựa vào id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public UngVien GetById(int id)
         {
-            var input = new CvGetAllInput()
+            var input = new UngVienGetAllInput()
             {
                 Id = id
             };
             var list = ungVienDAO.GetAll(input);
             return list.FirstOrDefault();
-        }
-
-        public List<UngVien> GetByUngVienId(int ungVienId)
-        {
-            var input = new CvGetAllInput()
-            {
-                UngVienId = ungVienId
-            };
-            var list = GetAll(input);
-            return list;
         }
     }
 }
