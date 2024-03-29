@@ -16,5 +16,10 @@ namespace FinalProject.Admin.GUI.UngVien
         {
             InitializeComponent();
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

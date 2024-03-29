@@ -134,6 +134,7 @@
             this.btnSua.TabIndex = 8;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
