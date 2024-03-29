@@ -149,12 +149,14 @@
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\LoggedUser.cs" />
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.Designer.cs">
       <DependentUpon>FDangKyCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Database\DTO\CvGetAllInput.cs" />
     <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">

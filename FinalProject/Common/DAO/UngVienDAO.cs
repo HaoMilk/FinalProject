@@ -4,6 +4,7 @@ using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,11 +53,11 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<UngVien> GetAll(CvGetAllInput input = null)
+        public List<UngVien> GetAll(UngVienGetAllInput input = null)
         {
             if (input == null)
             {
-                input = new CvGetAllInput();
+                input = new UngVienGetAllInput();
             }
 
             using (dbConnection.Connection)
@@ -66,10 +67,6 @@ namespace FinalProject.Common.DAO
                 if (input.Id > 0)
                 {
                     query += $" AND Id = {input.Id} ";
-                }
-                if (input.UngVienId > 0)
-                {
-                    query += $" AND UngVienId = {input.UngVienId} ";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -89,19 +86,12 @@ namespace FinalProject.Common.DAO
                         ungVien.Email = reader.GetString(6);
                         ungVien.ChuyenMon = reader.GetString(7);
                         ungVien.TrangThai = reader.GetString(8);
-                        ungVien.IsDeleted = reader.GetBoolean(9);
-                        ungVien.CreatedTime = reader.GetDateTime(10);
-                        ungVien.UpdatedTime = reader.IsDBNull(11) ? (DateTime?)null : reader.GetDateTime(11);
-                       // ungVien.ViTriUngTuyen = reader.GetString(9);
-                      //  ungVien.KyNang = reader.GetString(10);
-                       // ungVien.NgoaiNgu = reader.GetString(11);
-                       // ungVien.TinHoc = reader.GetString(12);
-                        //ungVien.HocVan = reader.GetString(13);
-                       // ungVien.HoatDong = reader.GetString(14);
-                        //ungVien.ChungChi = reader.GetString(15);
-                        //ungVien.MucTieu = reader.GetString(16);
-                        //ungVien.KinhNghiem = reader.GetString(17);
-                       
+                        //ungVien.Avatar = new Bitmap(reader.GetString(9));
+                        ungVien.Avatar = null;
+                        ungVien.IsDeleted = reader.GetBoolean(10);
+                        ungVien.CreatedTime = reader.GetDateTime(11);
+                        ungVien.UpdatedTime = reader.IsDBNull(12) ? (DateTime?)null : reader.GetDateTime(12);
+
                         list.Add(ungVien);
                     }
                 }
@@ -206,11 +196,10 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public UngVien GetByUngVienId(int id)
+        public UngVien GetById(int id)
         {
             using (dbConnection.Connection)
             {
-                UngVien ungVien;
                 string query = $"SELECT * FROM  WHERE Id = {id} ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
@@ -219,9 +208,22 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        ungVien = new UngVien();
-                        ungVien.HoTen = reader.GetString(0);
-                       
+                        var ungVien = new UngVien();
+                        ungVien.Id = reader.GetInt32(0);
+                        ungVien.HoTen = reader.GetString(1);
+                        ungVien.NgaySinh = reader.GetDateTime(2);
+                        ungVien.GioiTinh = reader.GetString(3);
+                        ungVien.DiaChi = reader.GetString(4);
+                        ungVien.SDT = reader.GetString(5);
+                        ungVien.Email = reader.GetString(6);
+                        ungVien.ChuyenMon = reader.GetString(7);
+                        ungVien.TrangThai = reader.GetString(8);
+                        //ungVien.Avatar = new Bitmap(reader.GetString(9));
+                        ungVien.Avatar = null;
+                        ungVien.IsDeleted = reader.GetBoolean(10);
+                        ungVien.CreatedTime = reader.GetDateTime(11);
+                        ungVien.UpdatedTime = reader.IsDBNull(12) ? (DateTime?)null : reader.GetDateTime(12);
+
 
                         return ungVien;
                     }

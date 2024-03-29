@@ -1,7 +1,10 @@
 ﻿using FinalProject.Admin;
 using FinalProject.Candidate.GUI;
+using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Company;
 using FinalProject.Company.GUI.Thong_tin;
+using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +19,7 @@ namespace FinalProject
 {
     public partial class Form_DangNhap : Form
     {
+        private UngVienBUS ungVienBUS = new UngVienBUS();
         public Form_DangNhap()
         {
             InitializeComponent();
@@ -27,6 +31,12 @@ namespace FinalProject
 
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
+            // Kiểm tra thông tin đăng nhập
+
+            // Đăng nhập thành công, lưu thông tin người dùng vào biến toàn cục
+            LoggedUser.UngVienId = 1;
+            LoggedUser.UngVien = ungVienBUS.GetById(LoggedUser.UngVienId);
+
             // Ẩn form hiện tại
             this.Hide();
             if (radioButton__UngVien.Checked)
