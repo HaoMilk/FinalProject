@@ -742,6 +742,7 @@
     <Content Include="Database\Scripts\015. Update columns order in table CongViec.sql" />
     <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
     <Content Include="Database\Scripts\017. Update CV columns.sql" />
+    <Content Include="Database\Scripts\018. Add new columns to CV.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
