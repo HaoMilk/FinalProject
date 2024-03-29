@@ -63,7 +63,7 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(253, 688);
+            this.pnlControl.Size = new System.Drawing.Size(280, 688);
             this.pnlControl.TabIndex = 5;
             // 
             // btnSua
@@ -76,7 +76,7 @@
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(0, 172);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(253, 86);
+            this.btnSua.Size = new System.Drawing.Size(280, 86);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "CHỈNH SỬA";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -88,7 +88,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 172);
+            this.panel5.Size = new System.Drawing.Size(280, 172);
             this.panel5.TabIndex = 3;
             // 
             // pictureBox_Avatar
@@ -102,7 +102,7 @@
             this.pictureBox_Avatar.Margin = new System.Windows.Forms.Padding(34, 32, 34, 32);
             this.pictureBox_Avatar.Name = "pictureBox_Avatar";
             this.pictureBox_Avatar.Padding = new System.Windows.Forms.Padding(34, 32, 34, 32);
-            this.pictureBox_Avatar.Size = new System.Drawing.Size(253, 172);
+            this.pictureBox_Avatar.Size = new System.Drawing.Size(280, 172);
             this.pictureBox_Avatar.TabIndex = 1;
             this.pictureBox_Avatar.TabStop = false;
             // 
@@ -110,9 +110,9 @@
             // 
             this.panel2.Controls.Add(this.label_DSCongTy);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(253, 0);
+            this.panel2.Location = new System.Drawing.Point(280, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1338, 69);
+            this.panel2.Size = new System.Drawing.Size(1311, 69);
             this.panel2.TabIndex = 6;
             // 
             // label_DSCongTy
@@ -123,7 +123,7 @@
             this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.Info;
             this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
             this.label_DSCongTy.Name = "label_DSCongTy";
-            this.label_DSCongTy.Size = new System.Drawing.Size(1338, 69);
+            this.label_DSCongTy.Size = new System.Drawing.Size(1311, 69);
             this.label_DSCongTy.TabIndex = 9;
             this.label_DSCongTy.Text = "DANH SÁCH CÔNG VIỆC";
             this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,9 +134,9 @@
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(253, 69);
+            this.panel4.Location = new System.Drawing.Point(280, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1338, 619);
+            this.panel4.Size = new System.Drawing.Size(1311, 619);
             this.panel4.TabIndex = 8;
             // 
             // panel3
@@ -145,7 +145,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 119);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1338, 500);
+            this.panel3.Size = new System.Drawing.Size(1311, 500);
             this.panel3.TabIndex = 1;
             // 
             // dgvDSCV
@@ -158,7 +158,7 @@
             this.dgvDSCV.Name = "dgvDSCV";
             this.dgvDSCV.RowHeadersWidth = 51;
             this.dgvDSCV.RowTemplate.Height = 24;
-            this.dgvDSCV.Size = new System.Drawing.Size(1338, 500);
+            this.dgvDSCV.Size = new System.Drawing.Size(1311, 500);
             this.dgvDSCV.TabIndex = 1;
             // 
             // panel1
@@ -167,7 +167,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1338, 119);
+            this.panel1.Size = new System.Drawing.Size(1311, 119);
             this.panel1.TabIndex = 0;
             // 
             // grpBoxTimKiem
@@ -183,7 +183,7 @@
             this.grpBoxTimKiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpBoxTimKiem.Location = new System.Drawing.Point(0, 0);
             this.grpBoxTimKiem.Name = "grpBoxTimKiem";
-            this.grpBoxTimKiem.Size = new System.Drawing.Size(1338, 119);
+            this.grpBoxTimKiem.Size = new System.Drawing.Size(1311, 119);
             this.grpBoxTimKiem.TabIndex = 1;
             this.grpBoxTimKiem.TabStop = false;
             this.grpBoxTimKiem.Text = "TÌm kiếm";
@@ -245,7 +245,7 @@
             this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTimKiem.Location = new System.Drawing.Point(3, 32);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(1332, 36);
+            this.txtTimKiem.Size = new System.Drawing.Size(1305, 36);
             this.txtTimKiem.TabIndex = 0;
             // 
             // FDanhSachCongViec

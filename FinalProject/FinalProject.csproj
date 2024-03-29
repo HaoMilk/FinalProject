@@ -110,6 +110,12 @@
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.Designer.cs">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.Designer.cs">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongViec\FChinhSuaCongViec.resx">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
