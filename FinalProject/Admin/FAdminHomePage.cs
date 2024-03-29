@@ -1,5 +1,6 @@
 ﻿
 using FinalProject.Admin.GUI.CongTy;
+using FinalProject.Admin.GUI.CongViec;
 using FinalProject.Admin.GUI.UngVien;
 using FinalProject.Candidate.GUI;
 using FinalProject.Company.GUI.Thong_tin;
@@ -74,7 +75,8 @@ namespace FinalProject.Admin
 
         private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
+            fChinhSuaCongViec.ShowDialog();
         }
     }
 }
