@@ -258,6 +258,7 @@
             this.Controls.Add(this.pnlControl);
             this.Name = "FDanhSachCongViec";
             this.Text = "FDanhSachCongViec";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachCongViec_Load);
             this.pnlControl.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
