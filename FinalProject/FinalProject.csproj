@@ -98,6 +98,12 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,6 +333,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
