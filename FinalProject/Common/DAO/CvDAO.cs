@@ -203,5 +203,33 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+        public CV GetByUngVienId(int id)
+        {
+            using (dbConnection.Connection)
+            {
+                CV cv;
+                string query = $"SELECT * FROM  WHERE Id = {id} ;";
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        cv = new CV();
+                        cv.Ten = reader.GetString(0);
+                        cv.
+
+                        return cv;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return null;
+            }
+        }
     }
 }

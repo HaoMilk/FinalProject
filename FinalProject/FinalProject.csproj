@@ -144,8 +144,10 @@
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\BUS\CongTyBUS.cs" />
+    <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
+    <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
       <SubType>Form</SubType>
