@@ -47,7 +47,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.TenCEO);
-                    MessageBox.Show("Thanh Cong");
+                    //MessageBox.Show("Thanh Cong");
                     return cmd.ExecuteNonQuery();
                     
                 }
