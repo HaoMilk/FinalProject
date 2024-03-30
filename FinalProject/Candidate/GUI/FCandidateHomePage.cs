@@ -66,7 +66,7 @@ namespace FinalProject.Candidate.GUI
         {
             if (!isAlwaysShowDashboard) this.Hide();
 
-            FChangePassword fChangePassword = new FChangePassword();
+            FDoiMatKhau fChangePassword = new FDoiMatKhau();
             fChangePassword.ShowDialog();
 
             if (!isAlwaysShowDashboard) this.Show();

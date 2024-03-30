@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FinalProject.Common.GUI
 {
-    public partial class FChangePassword : Form
+    public partial class FDoiMatKhau : Form
     {
-        public FChangePassword()
+        public FDoiMatKhau()
         {
             InitializeComponent();
 

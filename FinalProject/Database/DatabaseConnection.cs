@@ -9,7 +9,7 @@ namespace FinalProject.Database
 {
     public class DatabaseConnection
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True";
+        private readonly string connectionString = Properties.Settings.Default.connectionString;
         public string ConnectionString
         {
             get

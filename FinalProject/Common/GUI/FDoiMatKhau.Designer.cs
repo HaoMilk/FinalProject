@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.Common.GUI
 {
-    partial class FChangePassword
+    partial class FDoiMatKhau
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChangePassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDoiMatKhau));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_TenDangNhap = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_MatKhauCu = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_MatKhauMoi = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox_NhapLaiMatKhau = new System.Windows.Forms.TextBox();
             this.pictureBox_Picture = new System.Windows.Forms.PictureBox();
             this.label_Name = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_Luu = new FinalProject.UC.UCCustomButton();
             this.panel_Top = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
-            this.button_Luu = new FinalProject.UC.UCCustomButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -57,11 +57,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox_TenDangNhap);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Location = new System.Drawing.Point(25, 254);
+            this.groupBox1.Location = new System.Drawing.Point(25, 25);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(9, 7, 9, 7);
@@ -70,24 +70,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tên đăng nhập";
             // 
-            // textBox1
+            // textBox_TenDangNhap
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox1.Location = new System.Drawing.Point(9, 28);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(516, 28);
-            this.textBox1.TabIndex = 1;
+            this.textBox_TenDangNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_TenDangNhap.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox_TenDangNhap.Location = new System.Drawing.Point(9, 28);
+            this.textBox_TenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TenDangNhap.Name = "textBox_TenDangNhap";
+            this.textBox_TenDangNhap.Size = new System.Drawing.Size(516, 28);
+            this.textBox_TenDangNhap.TabIndex = 1;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox_MatKhauCu);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(25, 179);
+            this.groupBox2.Location = new System.Drawing.Point(25, 105);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(9, 7, 9, 7);
@@ -96,24 +96,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mật khẩu cũ";
             // 
-            // textBox2
+            // textBox_MatKhauCu
             // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox2.Location = new System.Drawing.Point(9, 28);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(516, 28);
-            this.textBox2.TabIndex = 1;
+            this.textBox_MatKhauCu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_MatKhauCu.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox_MatKhauCu.Location = new System.Drawing.Point(9, 28);
+            this.textBox_MatKhauCu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_MatKhauCu.Name = "textBox_MatKhauCu";
+            this.textBox_MatKhauCu.Size = new System.Drawing.Size(516, 28);
+            this.textBox_MatKhauCu.TabIndex = 1;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.textBox_MatKhauMoi);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(25, 25);
+            this.groupBox3.Location = new System.Drawing.Point(25, 180);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(9, 7, 9, 7);
@@ -122,24 +122,24 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mật khẩu mới";
             // 
-            // textBox3
+            // textBox_MatKhauMoi
             // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox3.Location = new System.Drawing.Point(9, 28);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(516, 28);
-            this.textBox3.TabIndex = 1;
+            this.textBox_MatKhauMoi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_MatKhauMoi.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox_MatKhauMoi.Location = new System.Drawing.Point(9, 28);
+            this.textBox_MatKhauMoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_MatKhauMoi.Name = "textBox_MatKhauMoi";
+            this.textBox_MatKhauMoi.Size = new System.Drawing.Size(516, 28);
+            this.textBox_MatKhauMoi.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.textBox_NhapLaiMatKhau);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox4.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(25, 102);
+            this.groupBox4.Location = new System.Drawing.Point(25, 257);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(9, 7, 9, 7);
@@ -148,16 +148,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Nhập lại mật khẩu";
             // 
-            // textBox4
+            // textBox_NhapLaiMatKhau
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox4.Location = new System.Drawing.Point(9, 28);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(516, 28);
-            this.textBox4.TabIndex = 1;
+            this.textBox_NhapLaiMatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_NhapLaiMatKhau.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_NhapLaiMatKhau.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox_NhapLaiMatKhau.Location = new System.Drawing.Point(9, 28);
+            this.textBox_NhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_NhapLaiMatKhau.Name = "textBox_NhapLaiMatKhau";
+            this.textBox_NhapLaiMatKhau.Size = new System.Drawing.Size(516, 28);
+            this.textBox_NhapLaiMatKhau.TabIndex = 1;
             // 
             // pictureBox_Picture
             // 
@@ -200,16 +200,41 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel2.Controls.Add(this.button_Luu);
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(25, 25);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(25);
             this.panel2.Size = new System.Drawing.Size(584, 418);
             this.panel2.TabIndex = 5;
+            // 
+            // button_Luu
+            // 
+            this.button_Luu.BackColor = System.Drawing.Color.OrangeRed;
+            this.button_Luu.BackgroundColor = System.Drawing.Color.OrangeRed;
+            this.button_Luu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_Luu.BorderRadius = 0;
+            this.button_Luu.BorderSize = 0;
+            this.button_Luu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_Luu.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
+            this.button_Luu.FlatAppearance.BorderSize = 0;
+            this.button_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Luu.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Luu.ForeColor = System.Drawing.Color.White;
+            this.button_Luu.Image = global::FinalProject.Properties.Resources.icons8_save_32;
+            this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Luu.Location = new System.Drawing.Point(25, 345);
+            this.button_Luu.Name = "button_Luu";
+            this.button_Luu.Padding = new System.Windows.Forms.Padding(5);
+            this.button_Luu.Size = new System.Drawing.Size(534, 48);
+            this.button_Luu.TabIndex = 7;
+            this.button_Luu.Text = "Lưu";
+            this.button_Luu.TextColor = System.Drawing.Color.White;
+            this.button_Luu.UseVisualStyleBackColor = false;
+            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
             // 
             // panel_Top
             // 
@@ -238,31 +263,6 @@
             this.button_Close.TabIndex = 1;
             this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
-            // button_Luu
-            // 
-            this.button_Luu.BackColor = System.Drawing.Color.OrangeRed;
-            this.button_Luu.BackgroundColor = System.Drawing.Color.OrangeRed;
-            this.button_Luu.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button_Luu.BorderRadius = 0;
-            this.button_Luu.BorderSize = 0;
-            this.button_Luu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_Luu.FlatAppearance.BorderColor = System.Drawing.Color.OrangeRed;
-            this.button_Luu.FlatAppearance.BorderSize = 0;
-            this.button_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Luu.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Luu.ForeColor = System.Drawing.Color.White;
-            this.button_Luu.Image = global::FinalProject.Properties.Resources.icons8_save_32;
-            this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Luu.Location = new System.Drawing.Point(25, 345);
-            this.button_Luu.Name = "button_Luu";
-            this.button_Luu.Padding = new System.Windows.Forms.Padding(5);
-            this.button_Luu.Size = new System.Drawing.Size(534, 48);
-            this.button_Luu.TabIndex = 7;
-            this.button_Luu.Text = "Lưu";
-            this.button_Luu.TextColor = System.Drawing.Color.White;
-            this.button_Luu.UseVisualStyleBackColor = false;
-            this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
             // 
             // FChangePassword
             // 
@@ -304,13 +304,13 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_TenDangNhap;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_MatKhauCu;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_MatKhauMoi;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox_NhapLaiMatKhau;
         private System.Windows.Forms.PictureBox pictureBox_Picture;
         private System.Windows.Forms.Label label_Name;
         private System.Windows.Forms.Panel panel1;

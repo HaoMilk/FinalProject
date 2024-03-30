@@ -14,7 +14,7 @@ namespace FinalProject.Admin
 {
     public partial class FDanhSachCongViec : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connectionString);
         public FDanhSachCongViec()
         {
             InitializeComponent();

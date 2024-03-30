@@ -42,13 +42,13 @@
             this.textBox_TenDangNhap = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button_DangNhap = new FinalProject.UC.UCCustomButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel_DangKy = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel_QuenMatKhau = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
+            this.button_DangNhap = new FinalProject.UC.UCCustomButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox_PhanQuyen.SuspendLayout();
@@ -247,31 +247,6 @@
             this.panel4.Size = new System.Drawing.Size(412, 160);
             this.panel4.TabIndex = 2;
             // 
-            // button_DangNhap
-            // 
-            this.button_DangNhap.BackColor = System.Drawing.Color.Crimson;
-            this.button_DangNhap.BackgroundColor = System.Drawing.Color.Crimson;
-            this.button_DangNhap.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.button_DangNhap.BorderRadius = 0;
-            this.button_DangNhap.BorderSize = 0;
-            this.button_DangNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_DangNhap.FlatAppearance.BorderSize = 0;
-            this.button_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_DangNhap.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
-            this.button_DangNhap.ForeColor = System.Drawing.Color.White;
-            this.button_DangNhap.Image = global::FinalProject.Properties.Resources.icons8_sign_in_24;
-            this.button_DangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_DangNhap.Location = new System.Drawing.Point(30, 10);
-            this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_DangNhap.Name = "button_DangNhap";
-            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.button_DangNhap.Size = new System.Drawing.Size(352, 56);
-            this.button_DangNhap.TabIndex = 12;
-            this.button_DangNhap.Text = "ĐĂNG NHẬP";
-            this.button_DangNhap.TextColor = System.Drawing.Color.White;
-            this.button_DangNhap.UseVisualStyleBackColor = false;
-            this.button_DangNhap.Click += new System.EventHandler(this.button_DangNhap_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -356,6 +331,31 @@
             this.button_Close.TabIndex = 0;
             this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
+            // 
+            // button_DangNhap
+            // 
+            this.button_DangNhap.BackColor = System.Drawing.Color.Crimson;
+            this.button_DangNhap.BackgroundColor = System.Drawing.Color.Crimson;
+            this.button_DangNhap.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.button_DangNhap.BorderRadius = 0;
+            this.button_DangNhap.BorderSize = 0;
+            this.button_DangNhap.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_DangNhap.FlatAppearance.BorderSize = 0;
+            this.button_DangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_DangNhap.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold);
+            this.button_DangNhap.ForeColor = System.Drawing.Color.White;
+            this.button_DangNhap.Image = global::FinalProject.Properties.Resources.icons8_sign_in_24;
+            this.button_DangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_DangNhap.Location = new System.Drawing.Point(30, 10);
+            this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_DangNhap.Name = "button_DangNhap";
+            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.button_DangNhap.Size = new System.Drawing.Size(352, 56);
+            this.button_DangNhap.TabIndex = 12;
+            this.button_DangNhap.Text = "ĐĂNG NHẬP";
+            this.button_DangNhap.TextColor = System.Drawing.Color.White;
+            this.button_DangNhap.UseVisualStyleBackColor = false;
+            this.button_DangNhap.Click += new System.EventHandler(this.button_DangNhap_Click);
             // 
             // Form_DangNhap
             // 

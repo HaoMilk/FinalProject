@@ -3,6 +3,7 @@ using FinalProject.Admin.GUI.CongTy;
 using FinalProject.Admin.GUI.CongViec;
 using FinalProject.Admin.GUI.UngVien;
 using FinalProject.Candidate.GUI;
+using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
 using System;
 using System.Collections.Generic;
