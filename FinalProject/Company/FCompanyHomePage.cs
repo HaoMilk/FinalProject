@@ -1,5 +1,6 @@
 ﻿using FinalProject.Admin;
 using FinalProject.Common.GUI;
+using FinalProject.Company.GUI;
 using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Company.GUI.Ung_tuyen;
 using System;
@@ -16,12 +17,16 @@ namespace FinalProject.Company
 {
     public partial class FCompanyHomePage : Form
     {
+        private bool isAlwaysShowDashboard = true;
         public FCompanyHomePage()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
-        private void menuItem_Dsvl_Click(object sender, EventArgs e)
+  
+
+
+    private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
             FAddViecLam fAddViecLam = new FAddViecLam();
             fAddViecLam.Show();
@@ -71,9 +76,21 @@ namespace FinalProject.Company
         {
 
         }
-
+        #region DanhSachViecLam
         private void ToolStripMenuItem_ChinhSuaCongViec_Click(object sender, EventArgs e)
-        {         
+        {
+            this.OpenMenuDanhSachViecLam();
         }
+
+        private void OpenMenuDanhSachViecLam()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+
+            FDSViecLam fDanhSachVL = new FDSViecLam();
+            fDanhSachVL.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        #endregion DanhSachViecLam
     }
 }

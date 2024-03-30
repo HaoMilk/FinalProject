@@ -47,7 +47,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.TenCEO);
-                    //MessageBox.Show("Thanh Cong");
+                    MessageBox.Show("Thanh Cong");
                     return cmd.ExecuteNonQuery();
                     
                 }
@@ -58,6 +58,35 @@ namespace FinalProject.Common.DAO
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 return -1;
             }
+        }
+        public int Edit(CongTy Cty)
+        {
+            try
+            {
+                using (var connection = dbConnection.Connection)
+                {
+                    string query = @"UPDATE CongTy SET 
+                    TenCongTy = @TenCongTy, 
+                    DiaChi = @DiaChi, 
+                    TenCEO = @TenCEO 
+                    WHERE MST = @MST";
+
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@MST", Cty.MST);
+                    cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
+                    cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
+                    cmd.Parameters.AddWithValue("@TenCEO", Cty.TenCEO);
+
+                    MessageBox.Show("Cập nhật thành công");
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Đã xảy ra lỗi: {ex.Message}");
+                return -1;
+            }
+
         }
 
         public int Count()

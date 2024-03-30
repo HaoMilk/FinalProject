@@ -25,5 +25,10 @@ namespace FinalProject.Candidate.GUI
         {
             this.Close();
         }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

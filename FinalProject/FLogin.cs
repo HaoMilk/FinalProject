@@ -67,7 +67,7 @@ namespace FinalProject
             }
             else if (radioButton_NhaTuyenDung.Checked)
             {
-                FDangKyCongTy fDangKyCongTy = new FDangKyCongTy();
+                FThongTin fDangKyCongTy = new FThongTin();
                 fDangKyCongTy.ShowDialog();
             }
 
