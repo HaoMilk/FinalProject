@@ -39,7 +39,7 @@ namespace FinalProject.Common.DAO
         {
             try
             {
-                using (var connection = dbConnection.Connection)
+                using (var connection = dbConnection.Connection )
                 {
                     string query = "INSERT INTO CongTy(MST, TenCongTy, DiaChi, TenCEO)" + $"VALUES ('{Cty.MST}', '{Cty.TenCongTy}', '{Cty.Diachi}', '{Cty.TenCEO})";
                     SqlCommand cmd = new SqlCommand(query, connection);
