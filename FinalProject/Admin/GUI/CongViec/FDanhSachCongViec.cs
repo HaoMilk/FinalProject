@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Admin.GUI.CongViec;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace FinalProject.Admin
 {
     public partial class FDanhSachCongViec : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connectionString);
         public FDanhSachCongViec()
         {
             InitializeComponent();
@@ -42,7 +43,8 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
+            fChinhSuaCongViec.ShowDialog();
         }
     }
 }

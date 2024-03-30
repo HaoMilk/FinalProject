@@ -1,4 +1,5 @@
 ﻿using FinalProject.Admin;
+using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Company.GUI.Ung_tuyen;
 using System;

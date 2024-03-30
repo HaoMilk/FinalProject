@@ -9,12 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using FinalProject.Admin.GUI.CongTy;
 
 namespace FinalProject.Admin
 {
     public partial class FDanhSachCongTy : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connectionString);
         public FDanhSachCongTy()
         {
             InitializeComponent();
@@ -22,7 +23,8 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+            fChinhSuaCongTy.ShowDialog();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -35,7 +37,7 @@ namespace FinalProject.Admin
             try
             {
                 conn.Open();
-                string sqlStr = string.Format("SELECT * FROM CV");
+                string sqlStr = string.Format("SELECT * FROM CongTy");
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlStr, conn);
                 DataTable dt = new DataTable();
                 sqlDataAdapter.Fill(dt);

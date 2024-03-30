@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using FinalProject.Admin.GUI.UngVien;
 
 
 namespace FinalProject.Admin
 {
     public partial class FDanhSachUngVien : Form
     {
-        SqlConnection conn = new SqlConnection(Properties.Settings.Default.conn);
+        SqlConnection conn = new SqlConnection(Properties.Settings.Default.connectionString);
         public FDanhSachUngVien()
         {
             InitializeComponent();
@@ -48,7 +49,8 @@ namespace FinalProject.Admin
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            
+            FChinhSuaUngVien fChinhSuaUngVien = new FChinhSuaUngVien();
+            fChinhSuaUngVien.ShowDialog();
         }
     }
 }
