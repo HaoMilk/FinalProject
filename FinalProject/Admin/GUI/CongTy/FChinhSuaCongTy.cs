@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Admin.GUI.UngVien
+namespace FinalProject.Admin.GUI.CongTy
 {
-    public partial class FCSUngVien : Form
+    public partial class FChinhSuaCongTy : Form
     {
-        public FCSUngVien()
+        public FChinhSuaCongTy()
         {
             InitializeComponent();
         }
