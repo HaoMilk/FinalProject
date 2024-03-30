@@ -65,13 +65,15 @@ namespace FinalProject.Company
             this.Close();
         }
 
-        private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
+
 
         private void FCompanyHomePage_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ToolStripMenuItem_ChinhSuaCongViec_Click(object sender, EventArgs e)
+        {         
         }
     }
 }

@@ -32,7 +32,7 @@
             this.menuStrip_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_Dsvl = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaCôngViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_ChinhSuaCongViec = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_VieclamUT = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.hồSơĐãDuyệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +75,7 @@
             // 
             this.menu_ViecLam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItem_Dsvl,
-            this.chỉnhSửaCôngViệcToolStripMenuItem,
+            this.ToolStripMenuItem_ChinhSuaCongViec,
             this.menuItem_VieclamUT});
             this.menu_ViecLam.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_ViecLam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -93,14 +93,14 @@
             this.menuItem_Dsvl.Text = "Tạo và chỉnh sửa công việc";
             this.menuItem_Dsvl.Click += new System.EventHandler(this.menuItem_Dsvl_Click);
             // 
-            // chỉnhSửaCôngViệcToolStripMenuItem
+            // ToolStripMenuItem_ChinhSuaCongViec
             // 
-            this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(344, 28);
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Danh sách công việc";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
+            this.ToolStripMenuItem_ChinhSuaCongViec.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ToolStripMenuItem_ChinhSuaCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ToolStripMenuItem_ChinhSuaCongViec.Name = "ToolStripMenuItem_ChinhSuaCongViec";
+            this.ToolStripMenuItem_ChinhSuaCongViec.Size = new System.Drawing.Size(344, 28);
+            this.ToolStripMenuItem_ChinhSuaCongViec.Text = "Danh sách công việc";
+            this.ToolStripMenuItem_ChinhSuaCongViec.Click += new System.EventHandler(this.ToolStripMenuItem_ChinhSuaCongViec_Click);
             // 
             // menuItem_VieclamUT
             // 
@@ -217,6 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCaNhan;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngViệcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ChinhSuaCongViec;
     }
 }
