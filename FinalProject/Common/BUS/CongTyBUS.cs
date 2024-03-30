@@ -11,14 +11,14 @@ namespace FinalProject.Common.BUS
     internal class CongTyBUS
     {
         CongTyDAO congTyDAO = new CongTyDAO();  
-        public int Add(string mst, String tencongty, string dichi, string tenCEO)
+        public void Add(string mst, String tencongty, string dichi, string tenCEO)
         {
             var ct = new CongTy();
             ct.MST = mst;
             ct.TenCongTy = tencongty;
             ct.Diachi = dichi;
             ct.TenCEO = tenCEO;
-            return congTyDAO.Add(ct);
+            congTyDAO.Add(ct);
         }
     }
 }

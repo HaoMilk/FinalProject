@@ -41,12 +41,8 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "INSERT INTO CongTy(MST, TenCongTy, DiaChi, TenCEO) VALUES(@MST, @TenCongTy, @DiaChi, @TenCEO)";
+                    string query = "INSERT INTO CongTy(MST, TenCongTy, DiaChi, TenCEO)" + $"VALUES ('{Cty.MST}', '{Cty.TenCongTy}', '{Cty.Diachi}', '{Cty.TenCEO})";
                     SqlCommand cmd = new SqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@MST", Cty.MST);
-                    cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
-                    cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
-                    cmd.Parameters.AddWithValue("@TenCEO", Cty.TenCEO);
                     MessageBox.Show("Thanh Cong");
                     return cmd.ExecuteNonQuery();
                     

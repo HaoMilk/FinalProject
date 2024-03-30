@@ -14,7 +14,5 @@ namespace FinalProject.Database.Entities
         public string MST { get; set; }
         public string Giayphep { get; set; }
         public bool IsDeleted { get; set; }
-
-
     }
 }
