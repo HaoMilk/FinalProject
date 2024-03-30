@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FinalProject.Common.DAO
 {
@@ -137,32 +138,31 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $@"
-                    UPDATE CongViec 
-                    SET Ten = N'{CongViec.Ten}', 
-                        TenCongTy = N'{CongViec.TenCongTy}', 
-                        Nganh = N'{CongViec.Nganh}', 
-                        ViTriTuyenDung = N'{CongViec.ViTriTuyenDung}', 
-                        MucLuong = {CongViec.MucLuong}, 
-                        DiaDiem = N'{CongViec.DiaDiem}', 
-                        TrinhDoHocVan = N'{CongViec.TrinhDoHocVan}', 
-                        GioiTinh = N'{CongViec.GioiTinh}', 
-                        LienHe = N'{CongViec.LienHe}', 
-                        MoTa = N'{CongViec.MoTa}', 
-                        QuyenLoi = N'{CongViec.QuyenLoi}', 
-                        NgoaiNgu = N'{CongViec.NgoaiNgu}', 
-                        TinHoc = N'{CongViec.TinHoc}', 
-                        KinhNghiem = N'{CongViec.KinhNghiem}', 
-                        KyNang = N'{CongViec.KyNang}', 
-                        FromDate = '{CongViec.FromDate}', 
-                        ToDate = '{CongViec.ToDate}', 
-                        TrangThai = '{CongViec.TrangThai}', 
-                        SoLuong = {CongViec.SoLuong}, 
-                        Link = N'{CongViec.Link}', 
-                        IsDeleted = {CongViec.IsDeleted}, 
-                        UpdatedTime = '{CongViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}', 
-                        IdCongTy = {CongViec.IdCongTy} 
-                    WHERE Id = {CongViec.Id};";
+                string query = @"UPDATE CongViec SET 
+                        Ten = @Ten, 
+                        TenCongTy = @TenCongTy, 
+                        Nganh = @Nganh, 
+                        ViTriTuyenDung = @ViTriTuyenDung, 
+                        MucLuong = @MucLuong, 
+                        DiaDiem = @DiaDiem, 
+                        TrinhDoHocVan = @TrinhDoHocVan, 
+                        GioiTinh = @GioiTinh, 
+                        LienHe = @LienHe, 
+                        MoTa = @MoTa, 
+                        QuyenLoi = @QuyenLoi, 
+                        NgoaiNgu = @NgoaiNgu, 
+                        TinHoc = @TinHoc, 
+                        KinhNghiem = @KinhNghiem, 
+                        KyNang = @KyNang, 
+                        FromDate = @FromDate, 
+                        ToDate = @ToDate, 
+                        TrangThai = @TrangThai, 
+                        SoLuong = @SoLuong, 
+                        Link = @Link, 
+                        IsDeleted = @IsDeleted, 
+                        UpdatedTime = @UpdatedTime, 
+                        IdCongTy = @IdCongTy 
+                    WHERE Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 cmd.Parameters.AddWithValue("@Ten", CongViec.Ten);
@@ -188,9 +188,10 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@IsDeleted", CongViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@UpdatedTime", CongViec.UpdatedTime);
                 cmd.Parameters.AddWithValue("@IdCongTy", CongViec.IdCongTy);
-
+                cmd.Parameters.AddWithValue("@Id", CongViec.Id);
                 try
                 {
+                    MessageBox.Show("Thanh Cong");
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)

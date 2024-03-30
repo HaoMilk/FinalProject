@@ -171,17 +171,11 @@
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Company\GUI\FDSCongViec.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FDSCongViec.Designer.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.Designer.cs">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.Designer.cs">
-      <DependentUpon>FDangKyCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Common\DTO\CvGetAllInput.cs" />
@@ -252,12 +246,6 @@
     </Compile>
     <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.Designer.cs">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Common\DTO\UngTuyenDTO.cs" />
@@ -400,17 +388,11 @@
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FDangKyCongTy.resx">
-      <DependentUpon>FDangKyCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachCongViec.resx">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>

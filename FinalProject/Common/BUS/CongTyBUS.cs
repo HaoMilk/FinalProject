@@ -20,5 +20,13 @@ namespace FinalProject.Common.BUS
             ct.TenCEO = tenCEO;
             return congTyDAO.Add(ct);
         }
+        public int Edit(string mst, String tencongty, string dichi, string tenCEO)
+        {  var ct = new CongTy();
+            ct.MST = mst;
+            ct.TenCongTy = tencongty;
+            ct.Diachi = dichi;
+            ct.TenCEO = tenCEO;
+            return congTyDAO.Edit(ct);
+        }
     }
 }

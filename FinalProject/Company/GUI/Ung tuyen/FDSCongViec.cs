@@ -16,14 +16,14 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI
 {
-    public partial class FDanhSachVL_Name : Form
+    public partial class FDSViecLam : Form
     {
         private TinhBUS tinhBUS = new TinhBUS();
         private List<Tinh> listTinh = new List<Tinh>();
         private CongViecBUS congViecBUS = new CongViecBUS();
         private List<CongViec> listCongViec = new List<CongViec>();
 
-        public FDanhSachVL_Name()
+        public FDSViecLam()
         {
             InitializeComponent();
 
@@ -78,9 +78,6 @@ namespace FinalProject.Company.GUI
                     UCJobCard ucJobCard = new UCJobCard();
                     ucJobCard.Id = listCongViec[i].Id;
                     ucJobCard.JobName = listCongViec[i].Ten;
-                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
-                    //ucJobCard.ScaleSize(0.5f);
-
                     ucJobCards.Add(ucJobCard);
                 }
             }

@@ -2,7 +2,7 @@
 
 namespace FinalProject.Company.GUI
 {
-    partial class FDanhSachVL_Name
+    partial class FDSViecLam
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace FinalProject.Company.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachVL_Name));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDSViecLam));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_Search = new FinalProject.UC.UCCustomButton();
             this.menuStrip_Filter = new System.Windows.Forms.MenuStrip();
