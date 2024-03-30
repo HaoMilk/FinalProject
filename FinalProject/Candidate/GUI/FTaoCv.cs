@@ -1,12 +1,6 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
@@ -30,9 +24,9 @@ namespace FinalProject.Candidate.GUI
         {
             var Id = 1;
             var TenCv = textBox_TenCv.Text;
-            var UngVienId= 1  ;
-            var Link = "http://"  ;
-            var MoTa = "Yeu cau"  ;
+            var UngVienId = LoggedUser.UngVienId;
+            var Link = "http://";
+            var MoTa = "Yeu cau";
             var TrangThai = "Active";
             var ViTriUngTuyen = textBox_ViTriUT.Text;
             var KyNang = textBox_KyNang.Text;
@@ -43,9 +37,37 @@ namespace FinalProject.Candidate.GUI
             var ChungChi = textBox_ChungChi.Text;
             var MucTieu = richTextBox_MucTieu.Text;
             var KinhNghiem = richTextBox_KinhNghiem.Text;
-            _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
+
+            var result = _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
                 KyNang, NgoaiNgu, TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem);
 
+            if (result > 0)
+            {
+                MessageBox.Show("Thêm mới thành công");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Thêm mới thất bại");
+            }
+        }
+
+        private void FTaoCv_Load(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            if (LoggedUser.UngVien != null)
+            {
+                textBox_HovaTen.Text = LoggedUser.UngVien.HoTen;
+                textBox_Email.Text = LoggedUser.UngVien.Email;
+                textBox_SoDienThoai.Text = LoggedUser.UngVien.SDT;
+                textBox_DiaChi.Text = LoggedUser.UngVien.DiaChi;
+                textBox_NgaySinh.Text = LoggedUser.UngVien.NgaySinh.ToString();
+                comboBox_GioiTinh.Text = LoggedUser.UngVien.GioiTinh;
+            }
         }
     }
 }

@@ -89,16 +89,16 @@ namespace FinalProject.Common.DAO
                         cv.IsDeleted = reader.GetBoolean(6);
                         cv.CreatedTime = reader.GetDateTime(7);
                         cv.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
-                       // cv.ViTriUngTuyen = reader.GetString(9);
-                      //  cv.KyNang = reader.GetString(10);
-                       // cv.NgoaiNgu = reader.GetString(11);
-                       // cv.TinHoc = reader.GetString(12);
-                        //cv.HocVan = reader.GetString(13);
-                       // cv.HoatDong = reader.GetString(14);
-                        //cv.ChungChi = reader.GetString(15);
-                        //cv.MucTieu = reader.GetString(16);
-                        //cv.KinhNghiem = reader.GetString(17);
-                       
+                        cv.ViTriUngTuyen = reader.GetString(9);
+                        cv.KyNang = reader.GetString(10);
+                        cv.NgoaiNgu = reader.GetString(11);
+                        cv.TinHoc = reader.GetString(12);
+                        cv.HocVan = reader.GetString(13);
+                        cv.HoatDong = reader.GetString(14);
+                        cv.ChungChi = reader.GetString(15);
+                        cv.MucTieu = reader.GetString(16);
+                        cv.KinhNghiem = reader.GetString(17);
+
                         list.Add(cv);
                     }
                 }
@@ -115,14 +115,14 @@ namespace FinalProject.Common.DAO
         {
             string query = "INSERT INTO CV (Ten, UngVienId, Link, MoTa, TrangThai, IsDeleted, CreatedTime, UpdatedTime," +
                 " ViTriUngTuyen,KyNang,  NgoaiNgu , TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem) " +
-                $"VALUES (N'{CV.Ten}, {CV.UngVienId}, " +
+                $"VALUES (N'{CV.Ten}', {CV.UngVienId}, " +
                 $" N'{CV.Link}', N'{CV.MoTa}'," +
                 $" N'{CV.TrangThai}', 0," +
                 $" '{CV.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL," +
                 $" N'{CV.ViTriUngTuyen}', N'{CV.KyNang}'," +
                 $" N'{CV.NgoaiNgu}',N'{CV.TinHoc}', N'{CV.HocVan}'," +
                 $" N'{CV.HoatDong}', N'{CV.ChungChi}'," +
-                $" N' {CV.MucTieu} ', N' {CV.KinhNghiem} '); ";
+                $" N'{CV.MucTieu}', N'{CV.KinhNghiem}'); ";
 
 
             using (dbConnection.Connection)
@@ -201,6 +201,50 @@ namespace FinalProject.Common.DAO
                     throw ex;
                     return -1;
                 }
+            }
+        }
+        public List<CV> GetByUngVienId(int ungVienId)
+        {
+            List<CV> list = new List<CV>();
+            using (dbConnection.Connection)
+            {
+                string query = $"SELECT * FROM  WHERE UngVienId = {ungVienId} AND IsDeleted = 0 ;";
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        var cv = new CV();
+                        cv.Id = reader.GetInt32(0);
+                        cv.Ten = reader.GetString(1);
+                        cv.UngVienId = reader.GetInt32(2);
+                        cv.Link = reader.GetString(3);
+                        cv.MoTa = reader.GetString(4);
+                        cv.TrangThai = reader.GetString(5);
+                        cv.IsDeleted = reader.GetBoolean(6);
+                        cv.CreatedTime = reader.GetDateTime(7);
+                        cv.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
+                        cv.ViTriUngTuyen = reader.GetString(9);
+                        cv.KyNang = reader.GetString(10);
+                        cv.NgoaiNgu = reader.GetString(11);
+                        cv.TinHoc = reader.GetString(12);
+                        cv.HocVan = reader.GetString(13);
+                        cv.HoatDong = reader.GetString(14);
+                        cv.ChungChi = reader.GetString(15);
+                        cv.MucTieu = reader.GetString(16);
+                        cv.KinhNghiem = reader.GetString(17);
+
+                        list.Add(cv);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return list;
             }
         }
     }

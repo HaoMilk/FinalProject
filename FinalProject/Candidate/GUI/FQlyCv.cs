@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -40,12 +41,13 @@ namespace FinalProject.Candidate.GUI
 
         private void FQlyCv_Load(object sender, EventArgs e)
         {
-            ucPagination.TotalRecord = cvBUS.Count();
             LoadCvList();
         }
 
+
         private void LoadCvList()
         {
+            ucPagination.TotalRecord = cvBUS.Count();
             var quantity = ucPagination.PageSize;
             var start = ucPagination.StartRecord;
             var end = ucPagination.EndRecord;
@@ -62,7 +64,7 @@ namespace FinalProject.Candidate.GUI
 
         private List<UCCvCard> CreateCvList(int quantity)
         {
-            listCV = cvBUS.GetAll();
+            listCV = cvBUS.GetByUngVienId(LoggedUser.UngVienId);
 
             List<UCCvCard> ucCvCards = new List<UCCvCard>();
 
@@ -91,8 +93,13 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Them_Click(object sender, EventArgs e)
         {
+            this.Hide();
+
             FTaoCv fTaoCv = new FTaoCv();
             fTaoCv.ShowDialog();
+
+            this.FQlyCv_Load(this, EventArgs.Empty);
+            this.Show();
         }
     }
 }

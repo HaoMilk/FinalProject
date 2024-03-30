@@ -98,17 +98,35 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.Designer.cs">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.Designer.cs">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.Designer.cs">
+      <DependentUpon>FChinhSuaUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\UngVien\FDanhSachUngVien.cs">
       <SubType>Form</SubType>
@@ -144,15 +162,19 @@
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\BUS\CongTyBUS.cs" />
+    <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
+    <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\LoggedUser.cs" />
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.Designer.cs">
       <DependentUpon>FDangKyCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Database\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Database\DTO\CvGetAllInput.cs" />
     <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
@@ -318,11 +340,20 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongViec\FChinhSuaCongViec.resx">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\UngVien\FChinhSuaUngVien.resx">
+      <DependentUpon>FChinhSuaUngVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
       <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
@@ -742,6 +773,7 @@
     <Content Include="Database\Scripts\015. Update columns order in table CongViec.sql" />
     <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
     <Content Include="Database\Scripts\017. Update CV columns.sql" />
+    <Content Include="Database\Scripts\018. Add new columns to CV.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
