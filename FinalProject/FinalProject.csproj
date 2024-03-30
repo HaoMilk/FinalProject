@@ -165,8 +165,11 @@
     <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
+    <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\DTO\UserGetAllInput.cs" />
+    <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
       <SubType>Form</SubType>
@@ -174,9 +177,9 @@
     <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.Designer.cs">
       <DependentUpon>FDangKyCongTy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\DTO\UngVienGetAllInput.cs" />
-    <Compile Include="Database\DTO\CvGetAllInput.cs" />
-    <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
+    <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
+    <Compile Include="Common\DTO\CvGetAllInput.cs" />
+    <Compile Include="Common\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,15 +254,15 @@
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
-    <Compile Include="Database\DTO\UngTuyenDTO.cs" />
-    <Compile Include="Database\DTO\UngTuyenGetAllInput.cs" />
-    <Compile Include="Database\Entities\CongTy.cs" />
-    <Compile Include="Database\Entities\CongViec.cs" />
-    <Compile Include="Database\Entities\CV.cs" />
-    <Compile Include="Database\Entities\Tinh.cs" />
-    <Compile Include="Database\Entities\UngTuyen.cs" />
-    <Compile Include="Database\Entities\UngVien.cs" />
-    <Compile Include="Database\Entities\User.cs" />
+    <Compile Include="Common\DTO\UngTuyenDTO.cs" />
+    <Compile Include="Common\DTO\UngTuyenGetAllInput.cs" />
+    <Compile Include="Common\Entities\CongTy.cs" />
+    <Compile Include="Common\Entities\CongViec.cs" />
+    <Compile Include="Common\Entities\CV.cs" />
+    <Compile Include="Common\Entities\Tinh.cs" />
+    <Compile Include="Common\Entities\UngTuyen.cs" />
+    <Compile Include="Common\Entities\UngVien.cs" />
+    <Compile Include="Common\Entities\User.cs" />
     <Compile Include="UC\UCComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
