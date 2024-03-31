@@ -4,6 +4,8 @@ using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Web.UI.WebControls;
 
 namespace FinalProject.Common.BUS
 {
@@ -79,12 +81,22 @@ namespace FinalProject.Common.BUS
         /// <param name="id"></param>
         /// <param name="trangThai"></param>
         /// <returns></returns>
-        public int Update(int id, string trangThai)
+        public int Update(int id, string hoTen, DateTime ngaySinh, string gioiTinh,
+            string diaChi, string sdt, string email, string chuyenMon, 
+            string trangThai, object avatar)
         {
             var ungVien = new UngVien()
             {
                 Id = id,
-                TrangThai = trangThai,       
+                HoTen = hoTen,
+                NgaySinh = ngaySinh,
+                GioiTinh = gioiTinh,
+                DiaChi = diaChi,
+                SDT = sdt,
+                Email = email,
+                ChuyenMon = chuyenMon,
+                TrangThai = trangThai,
+                Avatar = null,
                 UpdatedTime = DateTime.Now
             };
 
