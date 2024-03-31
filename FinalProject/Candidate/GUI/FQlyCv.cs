@@ -29,11 +29,6 @@ namespace FinalProject.Candidate.GUI
             this.SetStyle(ControlStyles.UserPaint, true);
         }
 
-        private void button_ChonFile_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -100,6 +95,11 @@ namespace FinalProject.Candidate.GUI
 
             this.FQlyCv_Load(this, EventArgs.Empty);
             this.Show();
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
