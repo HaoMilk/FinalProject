@@ -39,9 +39,6 @@
             this.textBox_HoTen = new System.Windows.Forms.TextBox();
             this.picture_Avatar = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.panelSettings = new System.Windows.Forms.Panel();
-            this.groupBox_MauNen = new System.Windows.Forms.GroupBox();
-            this.textBox_MauNen = new System.Windows.Forms.TextBox();
-            this.button_MauNen = new System.Windows.Forms.Button();
             this.groupBox_FontMacDinh = new System.Windows.Forms.GroupBox();
             this.textBox_FontMacDinh = new System.Windows.Forms.TextBox();
             this.button_FontMacDinh = new System.Windows.Forms.Button();
@@ -52,7 +49,6 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Avatar)).BeginInit();
             this.panelSettings.SuspendLayout();
-            this.groupBox_MauNen.SuspendLayout();
             this.groupBox_FontMacDinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Bottom)).BeginInit();
             this.SuspendLayout();
@@ -212,7 +208,6 @@
             // panelSettings
             // 
             this.panelSettings.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panelSettings.Controls.Add(this.groupBox_MauNen);
             this.panelSettings.Controls.Add(this.groupBox_FontMacDinh);
             this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSettings.Location = new System.Drawing.Point(3, 202);
@@ -221,53 +216,6 @@
             this.panelSettings.Padding = new System.Windows.Forms.Padding(20);
             this.panelSettings.Size = new System.Drawing.Size(379, 223);
             this.panelSettings.TabIndex = 1;
-            // 
-            // groupBox_MauNen
-            // 
-            this.groupBox_MauNen.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_MauNen.Controls.Add(this.textBox_MauNen);
-            this.groupBox_MauNen.Controls.Add(this.button_MauNen);
-            this.groupBox_MauNen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_MauNen.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_MauNen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_MauNen.Location = new System.Drawing.Point(20, 90);
-            this.groupBox_MauNen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_MauNen.Name = "groupBox_MauNen";
-            this.groupBox_MauNen.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox_MauNen.Size = new System.Drawing.Size(339, 72);
-            this.groupBox_MauNen.TabIndex = 4;
-            this.groupBox_MauNen.TabStop = false;
-            this.groupBox_MauNen.Text = "Màu nền mặc định";
-            // 
-            // textBox_MauNen
-            // 
-            this.textBox_MauNen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_MauNen.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_MauNen.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_MauNen.Location = new System.Drawing.Point(10, 31);
-            this.textBox_MauNen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_MauNen.Name = "textBox_MauNen";
-            this.textBox_MauNen.Size = new System.Drawing.Size(242, 28);
-            this.textBox_MauNen.TabIndex = 0;
-            this.textBox_MauNen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button_MauNen
-            // 
-            this.button_MauNen.BackColor = System.Drawing.Color.Transparent;
-            this.button_MauNen.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_32;
-            this.button_MauNen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button_MauNen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_MauNen.FlatAppearance.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.button_MauNen.FlatAppearance.BorderSize = 0;
-            this.button_MauNen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_MauNen.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_MauNen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_MauNen.Location = new System.Drawing.Point(252, 31);
-            this.button_MauNen.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.button_MauNen.Name = "button_MauNen";
-            this.button_MauNen.Size = new System.Drawing.Size(77, 31);
-            this.button_MauNen.TabIndex = 3;
-            this.button_MauNen.UseVisualStyleBackColor = false;
             // 
             // groupBox_FontMacDinh
             // 
@@ -344,8 +292,6 @@
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_Avatar)).EndInit();
             this.panelSettings.ResumeLayout(false);
-            this.groupBox_MauNen.ResumeLayout(false);
-            this.groupBox_MauNen.PerformLayout();
             this.groupBox_FontMacDinh.ResumeLayout(false);
             this.groupBox_FontMacDinh.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Bottom)).EndInit();
@@ -361,9 +307,6 @@
         private System.Windows.Forms.TextBox textBox_FontMacDinh;
         private System.Windows.Forms.Button button_FontMacDinh;
         private System.Windows.Forms.Panel panelSettings;
-        private System.Windows.Forms.GroupBox groupBox_MauNen;
-        private System.Windows.Forms.TextBox textBox_MauNen;
-        private System.Windows.Forms.Button button_MauNen;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panelProfile;
         private System.Windows.Forms.CheckBox checkBox_TinhTrang;
