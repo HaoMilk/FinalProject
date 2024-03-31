@@ -133,16 +133,16 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $"UPDATE UngVien SET " +
-                    $"Ten = N'{UngVien.HoTen}', " + 
-                    $"NgaySinh = N'{UngVien.NgaySinh}', " +
-                    $"GioiTinh = N'{UngVien.GioiTinh}', " +
+                    $" HoTen = N'{UngVien.HoTen}', " + 
+                    $" NgaySinh = '{UngVien.NgaySinh:yyyy-MM-dd}', " +
+                    $" GioiTinh = N'{UngVien.GioiTinh}', " +
                     $" DiaChi = N'{UngVien.DiaChi}', " +
                     $" SDT = N'{UngVien.SDT}', " +
                     $" Email = N'{UngVien.Email}'," +
-                    $" ChuyenMon = N'{UngVien.ChuyenMon}' " +             
-                    $"TrangThai = '{UngVien.TrangThai}', " +
-                    $"UpdatedTime = '{UngVien.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {UngVien.Id};";
+                    $" ChuyenMon = N'{UngVien.ChuyenMon}', " +             
+                    $" TrangThai = N'{UngVien.TrangThai}', " +
+                    $" UpdatedTime = '{UngVien.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
+                    $" WHERE Id = {UngVien.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try

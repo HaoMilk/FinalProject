@@ -141,10 +141,10 @@
             this.textBox_Major.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Major.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Major.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Major.Location = new System.Drawing.Point(16, 35);
+            this.textBox_Major.Location = new System.Drawing.Point(16, 38);
             this.textBox_Major.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Major.Name = "textBox_Major";
-            this.textBox_Major.Size = new System.Drawing.Size(232, 28);
+            this.textBox_Major.Size = new System.Drawing.Size(232, 32);
             this.textBox_Major.TabIndex = 4;
             // 
             // groupBox2
@@ -168,10 +168,10 @@
             this.textBox_Phone.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Phone.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Phone.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Phone.Location = new System.Drawing.Point(16, 35);
+            this.textBox_Phone.Location = new System.Drawing.Point(16, 38);
             this.textBox_Phone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Phone.Name = "textBox_Phone";
-            this.textBox_Phone.Size = new System.Drawing.Size(232, 28);
+            this.textBox_Phone.Size = new System.Drawing.Size(232, 32);
             this.textBox_Phone.TabIndex = 4;
             // 
             // groupBox4
@@ -195,10 +195,10 @@
             this.textBox_Gender.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Gender.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Gender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Gender.Location = new System.Drawing.Point(16, 35);
+            this.textBox_Gender.Location = new System.Drawing.Point(16, 38);
             this.textBox_Gender.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Gender.Name = "textBox_Gender";
-            this.textBox_Gender.Size = new System.Drawing.Size(232, 28);
+            this.textBox_Gender.Size = new System.Drawing.Size(232, 32);
             this.textBox_Gender.TabIndex = 4;
             // 
             // groupBox
@@ -222,10 +222,10 @@
             this.textBox_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Name.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Name.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Name.Location = new System.Drawing.Point(10, 31);
+            this.textBox_Name.Location = new System.Drawing.Point(10, 35);
             this.textBox_Name.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(244, 28);
+            this.textBox_Name.Size = new System.Drawing.Size(244, 32);
             this.textBox_Name.TabIndex = 4;
             // 
             // groupBox1
@@ -252,10 +252,10 @@
             this.dateTime_Birthday.CustomFormat = "yyyy-MM-dd";
             this.dateTime_Birthday.Dock = System.Windows.Forms.DockStyle.Top;
             this.dateTime_Birthday.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime_Birthday.Location = new System.Drawing.Point(16, 35);
+            this.dateTime_Birthday.Location = new System.Drawing.Point(16, 38);
             this.dateTime_Birthday.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTime_Birthday.Name = "dateTime_Birthday";
-            this.dateTime_Birthday.Size = new System.Drawing.Size(233, 28);
+            this.dateTime_Birthday.Size = new System.Drawing.Size(233, 32);
             this.dateTime_Birthday.TabIndex = 11;
             // 
             // groupBox3
@@ -279,10 +279,10 @@
             this.textBox_Address.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Address.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Address.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Address.Location = new System.Drawing.Point(16, 35);
+            this.textBox_Address.Location = new System.Drawing.Point(16, 38);
             this.textBox_Address.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(233, 28);
+            this.textBox_Address.Size = new System.Drawing.Size(233, 32);
             this.textBox_Address.TabIndex = 4;
             // 
             // groupBox5
@@ -306,10 +306,10 @@
             this.textBox_Email.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Email.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Email.Location = new System.Drawing.Point(16, 35);
+            this.textBox_Email.Location = new System.Drawing.Point(16, 38);
             this.textBox_Email.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(233, 28);
+            this.textBox_Email.Size = new System.Drawing.Size(233, 32);
             this.textBox_Email.TabIndex = 4;
             // 
             // label1
@@ -455,7 +455,7 @@
             // 
             // FCandidateInfor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(988, 544);
@@ -472,6 +472,7 @@
             this.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";
+            this.Load += new System.EventHandler(this.FCandidateInfor_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
