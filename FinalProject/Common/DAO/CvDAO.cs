@@ -72,6 +72,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND UngVienId = {input.UngVienId} ";
                 }
+                if (!string.IsNullOrEmpty(input.Ten))
+                {
+                    query += $" AND Ten LIKE N'%{input.Ten}%' ";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 

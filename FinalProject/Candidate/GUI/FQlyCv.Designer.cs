@@ -33,18 +33,18 @@
             this.label_Name = new System.Windows.Forms.Label();
             this.button_Close = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox_Name = new System.Windows.Forms.GroupBox();
-            this.button_TimKiem = new System.Windows.Forms.Button();
-            this.textBox_Name = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_Them = new System.Windows.Forms.Button();
+            this.groupBox_Name = new System.Windows.Forms.GroupBox();
+            this.button_TimKiem = new System.Windows.Forms.Button();
+            this.textBox_TenCv = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucPagination = new FinalProject.UC.UCPagination();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox_Name.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox_Name.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel_Data
@@ -98,18 +98,6 @@
             this.panel3.Size = new System.Drawing.Size(906, 40);
             this.panel3.TabIndex = 7;
             // 
-            // ucPagination
-            // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(20, 667);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(906, 50);
-            this.ucPagination.TabIndex = 9;
-            this.ucPagination.TotalRecord = 0;
-            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -125,50 +113,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(906, 100);
             this.tableLayoutPanel1.TabIndex = 8;
-            // 
-            // groupBox_Name
-            // 
-            this.groupBox_Name.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Name.Controls.Add(this.button_TimKiem);
-            this.groupBox_Name.Controls.Add(this.textBox_Name);
-            this.groupBox_Name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_Name.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox_Name.Location = new System.Drawing.Point(13, 12);
-            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox_Name.Name = "groupBox_Name";
-            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox_Name.Size = new System.Drawing.Size(427, 76);
-            this.groupBox_Name.TabIndex = 15;
-            this.groupBox_Name.TabStop = false;
-            this.groupBox_Name.Text = "Tìm kiếm";
-            // 
-            // button_TimKiem
-            // 
-            this.button_TimKiem.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_24;
-            this.button_TimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button_TimKiem.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_TimKiem.FlatAppearance.BorderSize = 0;
-            this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
-            this.button_TimKiem.Location = new System.Drawing.Point(358, 33);
-            this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(56, 31);
-            this.button_TimKiem.TabIndex = 2;
-            this.button_TimKiem.UseVisualStyleBackColor = true;
-            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
-            // 
-            // textBox_Name
-            // 
-            this.textBox_Name.BackColor = System.Drawing.Color.Azure;
-            this.textBox_Name.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Name.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_Name.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox_Name.Location = new System.Drawing.Point(13, 33);
-            this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(401, 28);
-            this.textBox_Name.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -207,6 +151,51 @@
             this.button_Them.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Them.UseVisualStyleBackColor = false;
             // 
+            // groupBox_Name
+            // 
+            this.groupBox_Name.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Name.Controls.Add(this.button_TimKiem);
+            this.groupBox_Name.Controls.Add(this.textBox_TenCv);
+            this.groupBox_Name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_Name.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox_Name.Location = new System.Drawing.Point(13, 12);
+            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox_Name.Name = "groupBox_Name";
+            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox_Name.Size = new System.Drawing.Size(427, 76);
+            this.groupBox_Name.TabIndex = 15;
+            this.groupBox_Name.TabStop = false;
+            this.groupBox_Name.Text = "Tìm kiếm";
+            // 
+            // button_TimKiem
+            // 
+            this.button_TimKiem.BackgroundImage = global::FinalProject.Properties.Resources.icons8_search_24;
+            this.button_TimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button_TimKiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_TimKiem.FlatAppearance.BorderSize = 0;
+            this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
+            this.button_TimKiem.Location = new System.Drawing.Point(358, 33);
+            this.button_TimKiem.Name = "button_TimKiem";
+            this.button_TimKiem.Size = new System.Drawing.Size(56, 31);
+            this.button_TimKiem.TabIndex = 2;
+            this.button_TimKiem.UseVisualStyleBackColor = true;
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
+            // 
+            // textBox_TenCv
+            // 
+            this.textBox_TenCv.BackColor = System.Drawing.Color.Azure;
+            this.textBox_TenCv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_TenCv.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TenCv.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox_TenCv.Location = new System.Drawing.Point(13, 33);
+            this.textBox_TenCv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_TenCv.Name = "textBox_TenCv";
+            this.textBox_TenCv.Size = new System.Drawing.Size(401, 28);
+            this.textBox_TenCv.TabIndex = 1;
+            this.textBox_TenCv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_TenCv_KeyDown);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
@@ -215,6 +204,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(906, 20);
             this.panel1.TabIndex = 0;
+            // 
+            // ucPagination
+            // 
+            this.ucPagination.CurrentPage = 1;
+            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucPagination.Location = new System.Drawing.Point(20, 667);
+            this.ucPagination.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ucPagination.Name = "ucPagination";
+            this.ucPagination.Size = new System.Drawing.Size(906, 50);
+            this.ucPagination.TabIndex = 9;
+            this.ucPagination.TotalRecord = 0;
+            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // FQlyCv
             // 
@@ -239,9 +240,9 @@
             this.Load += new System.EventHandler(this.FQlyCv_Load);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox_Name.ResumeLayout(false);
             this.groupBox_Name.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -254,7 +255,7 @@
         private FinalProject.UC.UCPagination ucPagination;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox_Name;
-        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.TextBox textBox_TenCv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_Them;
         private System.Windows.Forms.Button button_TimKiem;
