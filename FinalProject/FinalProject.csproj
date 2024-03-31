@@ -98,17 +98,35 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.Designer.cs">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.Designer.cs">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.Designer.cs">
+      <DependentUpon>FChinhSuaUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\UngVien\FDanhSachUngVien.cs">
       <SubType>Form</SubType>
@@ -147,18 +165,21 @@
     <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
+    <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\DTO\UserGetAllInput.cs" />
+    <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.cs">
+    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDangKyCongTy.Designer.cs">
-      <DependentUpon>FDangKyCongTy.cs</DependentUpon>
+    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.Designer.cs">
+      <DependentUpon>FDSCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database\DTO\UngVienGetAllInput.cs" />
-    <Compile Include="Database\DTO\CvGetAllInput.cs" />
-    <Compile Include="Database\DTO\TimKiemViecLamDto.cs" />
+    <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
+    <Compile Include="Common\DTO\CvGetAllInput.cs" />
+    <Compile Include="Common\DTO\TimKiemViecLamDto.cs" />
     <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,22 +247,16 @@
     <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDanhSachCongViec.Designer.cs">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
-    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
-    <Compile Include="Database\DTO\UngTuyenDTO.cs" />
-    <Compile Include="Database\DTO\UngTuyenGetAllInput.cs" />
-    <Compile Include="Database\Entities\CongTy.cs" />
-    <Compile Include="Database\Entities\CongViec.cs" />
-    <Compile Include="Database\Entities\CV.cs" />
-    <Compile Include="Database\Entities\Tinh.cs" />
-    <Compile Include="Database\Entities\UngTuyen.cs" />
-    <Compile Include="Database\Entities\UngVien.cs" />
-    <Compile Include="Database\Entities\User.cs" />
+    <Compile Include="Common\DTO\UngTuyenDTO.cs" />
+    <Compile Include="Common\DTO\UngTuyenGetAllInput.cs" />
+    <Compile Include="Common\Entities\CongTy.cs" />
+    <Compile Include="Common\Entities\CongViec.cs" />
+    <Compile Include="Common\Entities\CV.cs" />
+    <Compile Include="Common\Entities\Tinh.cs" />
+    <Compile Include="Common\Entities\UngTuyen.cs" />
+    <Compile Include="Common\Entities\UngVien.cs" />
+    <Compile Include="Common\Entities\User.cs" />
     <Compile Include="UC\UCComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -275,11 +290,11 @@
     <Compile Include="UC\UCUserSetting.Designer.cs">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\GUI\FChangePassword.cs">
+    <Compile Include="Common\GUI\FDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Common\GUI\FChangePassword.Designer.cs">
-      <DependentUpon>FChangePassword.cs</DependentUpon>
+    <Compile Include="Common\GUI\FDoiMatKhau.Designer.cs">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\FCompanyHomePage.cs">
       <SubType>Form</SubType>
@@ -287,23 +302,17 @@
     <Compile Include="Company\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\Thong tin\FDoiMatKhau.Designer.cs">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -322,8 +331,14 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
+      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
       <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\CongViec\FChinhSuaCongViec.resx">
+      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
@@ -373,14 +388,11 @@
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FDangKyCongTy.resx">
-      <DependentUpon>FDangKyCongTy.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDSCongViec.resx">
+      <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDanhSachCongViec.resx">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
@@ -397,20 +409,17 @@
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FChangePassword.resx">
-      <DependentUpon>FChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="Common\GUI\FDoiMatKhau.resx">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FDoiMatKhau.resx">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
       <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -444,7 +453,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Company\GUI\Common\" />
     <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>

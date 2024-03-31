@@ -1,4 +1,5 @@
-﻿using FinalProject.Database;
+﻿using FinalProject.Common.Helper;
+using FinalProject.Database;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
@@ -29,7 +30,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -48,7 +49,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -77,20 +78,20 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var ungVien = new UngVien();
-                        ungVien.Id = reader.GetInt32(0);
-                        ungVien.HoTen = reader.GetString(1);
-                        ungVien.NgaySinh = reader.GetDateTime(2);
-                        ungVien.GioiTinh = reader.GetString(3);
-                        ungVien.DiaChi = reader.GetString(4);
-                        ungVien.SDT = reader.GetString(5);
-                        ungVien.Email = reader.GetString(6);
-                        ungVien.ChuyenMon = reader.GetString(7);
-                        ungVien.TrangThai = reader.GetString(8);
-                        //ungVien.Avatar = new Bitmap(reader.GetString(9));
+                        ungVien.Id = reader.GetIntValue(0);
+                        ungVien.HoTen = reader.GetStringValue(1);
+                        ungVien.NgaySinh = reader.GetDateTimeValue(2);
+                        ungVien.GioiTinh = reader.GetStringValue(3);
+                        ungVien.DiaChi = reader.GetStringValue(4);
+                        ungVien.SDT = reader.GetStringValue(5);
+                        ungVien.Email = reader.GetStringValue(6);
+                        ungVien.ChuyenMon = reader.GetStringValue(7);
+                        ungVien.TrangThai = reader.GetStringValue(8);
+                        //ungVien.Avatar = new Bitmap(reader.GetStringValue(9));
                         ungVien.Avatar = null;
-                        ungVien.IsDeleted = reader.GetBoolean(10);
-                        ungVien.CreatedTime = reader.GetDateTime(11);
-                        ungVien.UpdatedTime = reader.IsDBNull(12) ? (DateTime?)null : reader.GetDateTime(12);
+                        ungVien.IsDeleted = reader.GetBooleanValue(10);
+                        ungVien.CreatedTime = reader.GetDateTimeValue(11);
+                        ungVien.UpdatedTime = reader.GetDateTimeValueNullable(12);
 
                         list.Add(ungVien);
                     }
@@ -124,7 +125,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
@@ -152,7 +152,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
@@ -170,7 +169,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
@@ -192,7 +190,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
@@ -209,21 +206,20 @@ namespace FinalProject.Common.DAO
                     if (reader.Read())
                     {
                         var ungVien = new UngVien();
-                        ungVien.Id = reader.GetInt32(0);
-                        ungVien.HoTen = reader.GetString(1);
-                        ungVien.NgaySinh = reader.GetDateTime(2);
-                        ungVien.GioiTinh = reader.GetString(3);
-                        ungVien.DiaChi = reader.GetString(4);
-                        ungVien.SDT = reader.GetString(5);
-                        ungVien.Email = reader.GetString(6);
-                        ungVien.ChuyenMon = reader.GetString(7);
-                        ungVien.TrangThai = reader.GetString(8);
-                        //ungVien.Avatar = new Bitmap(reader.GetString(9));
+                        ungVien.Id = reader.GetIntValue(0);
+                        ungVien.HoTen = reader.GetStringValue(1);
+                        ungVien.NgaySinh = reader.GetDateTimeValue(2);
+                        ungVien.GioiTinh = reader.GetStringValue(3);
+                        ungVien.DiaChi = reader.GetStringValue(4);
+                        ungVien.SDT = reader.GetStringValue(5);
+                        ungVien.Email = reader.GetStringValue(6);
+                        ungVien.ChuyenMon = reader.GetStringValue(7);
+                        ungVien.TrangThai = reader.GetStringValue(8);
+                        //ungVien.Avatar = new Bitmap(reader.GetStringValue(9));
                         ungVien.Avatar = null;
-                        ungVien.IsDeleted = reader.GetBoolean(10);
-                        ungVien.CreatedTime = reader.GetDateTime(11);
-                        ungVien.UpdatedTime = reader.IsDBNull(12) ? (DateTime?)null : reader.GetDateTime(12);
-
+                        ungVien.IsDeleted = reader.GetBooleanValue(10);
+                        ungVien.CreatedTime = reader.GetDateTimeValue(11);
+                        ungVien.UpdatedTime = reader.GetDateTimeValueNullable(12);
 
                         return ungVien;
                     }

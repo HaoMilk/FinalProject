@@ -1,4 +1,5 @@
-﻿using FinalProject.Database;
+﻿using FinalProject.Common.Helper;
+using FinalProject.Database;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,11 @@ namespace FinalProject.Common.DAO
     {
         private DatabaseConnection dbConnection = new DatabaseConnection();
 
+        /// <summary>
+        /// Kiểm tra tỉnh có tồn tại không dựa vào id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public int CheckExist(int id)
         {
             using (dbConnection.Connection)
@@ -27,17 +33,44 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
 
+        /// <summary>
+        /// Đếm tổng số tỉnh
+        /// </summary>
+        /// <returns></returns>
+        public int Count()
+        {
+            using (dbConnection.Connection)
+            {
+                string query = "SELECT COUNT(1) FROM Tinh WHERE IsDeleted = 0;";
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+
+                try
+                {
+                    var result = cmd.ExecuteScalar();
+                    return Convert.ToInt32(result);
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Lấy danh sách tỉnh
+        /// </summary>
+        /// <returns></returns>
         public List<Tinh> GetAll()
         {
             using (dbConnection.Connection)
             {
                 var list = new List<Tinh>();
-                string query = "SELECT * FROM Tinh;";
+                string query = "SELECT * FROM Tinh WHERE IsDeleted = 0;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -46,13 +79,13 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var tinh = new Tinh();
-                        tinh.Id = reader.GetInt32(0);
-                        tinh.Code = reader.GetString(1);
-                        tinh.Ten = reader.GetString(2);
-                        tinh.TrangThai = reader.GetString(3);
-                        tinh.IsDeleted = reader.GetBoolean(4);
-                        tinh.CreatedTime = reader.GetDateTime(5);
-                        tinh.UpdatedTime = reader.IsDBNull(6) ? (DateTime?)null : reader.GetDateTime(6);
+                        tinh.Id = reader.GetIntValue(0);
+                        tinh.Code = reader.GetStringValue(1);
+                        tinh.Ten = reader.GetStringValue(2);
+                        tinh.TrangThai = reader.GetStringValue(3);
+                        tinh.IsDeleted = reader.GetBooleanValue(4);
+                        tinh.CreatedTime = reader.GetDateTimeValue(5);
+                        tinh.UpdatedTime = reader.GetDateTimeValueNullable(6);
 
                         list.Add(tinh);
                     }
@@ -66,10 +99,17 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public int Add(Tinh Tinh)
+        /// <summary>
+        /// Thêm mới tỉnh vào database
+        /// </summary>
+        /// <param name="tinh"></param>
+        /// <returns></returns>
+        public int Add(Tinh tinh)
         {
-            string query = "INSERT INTO Tinh (Code, Ten, TrangThai, IsDeleted, CreatedTime, UpdatedTime ) " +
-                $"VALUES ('{Tinh.Code}', N'{Tinh.Ten}', '{Tinh.TrangThai}', {Tinh.IsDeleted}, '{Tinh.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
+            string query = $@"
+                INSERT INTO Tinh (Code, Ten, TrangThai, IsDeleted, CreatedTime, UpdatedTime ) 
+                VALUES ('{tinh.Code}', N'{tinh.Ten}', '{tinh.TrangThai}', {tinh.IsDeleted}, 
+                        '{tinh.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL);";
 
             using (dbConnection.Connection)
             {
@@ -81,21 +121,27 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
-        public int Update(Tinh Tinh)
+
+        /// <summary>
+        /// Cập nhật thông tin tỉnh
+        /// </summary>
+        /// <param name="tinh"></param>
+        /// <returns></returns>
+        public int Update(Tinh tinh)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE Tinh SET " +
-                    $"Code = '{Tinh.Code}', " +
-                    $"Ten = N'{Tinh.Ten}', " +
-                    $"TrangThai = '{Tinh.TrangThai}', " +
-                    $"IsDeleted = {Tinh.IsDeleted}, " +
-                    $"UpdatedTime = '{Tinh.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {Tinh.Id};";
+                string query = $@"
+                    UPDATE Tinh 
+                    SET Code = '{tinh.Code}', 
+                        Ten = N'{tinh.Ten}', 
+                        TrangThai = '{tinh.TrangThai}', 
+                        IsDeleted = {tinh.IsDeleted}, 
+                        UpdatedTime = '{tinh.UpdatedTime:yyyy-MM-dd hh:mm:ss}' 
+                    WHERE Id = {tinh.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -105,10 +151,15 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
+
+        /// <summary>
+        /// Xóa tỉnh khỏi database
+        /// </summary>
+        /// <param name="Tinh"></param>
+        /// <returns></returns>
         public int Delete(Tinh Tinh)
         {
             using (dbConnection.Connection)
@@ -123,19 +174,24 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
 
-        public int SoftDelete(Tinh Tinh)
+        /// <summary>
+        /// Cập nhật IsDeleted = 1 để xóa mềm tỉnh
+        /// </summary>
+        /// <param name="tinh"></param>
+        /// <returns></returns>
+        public int SoftDelete(Tinh tinh)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE Tinh SET " +
-                    $"IsDeleted = 1, " +
-                    $"UpdatedTime = '{Tinh.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {Tinh.Id};";
+                string query = $@"
+                    UPDATE Tinh 
+                    SET IsDeleted = 1, 
+                        UpdatedTime = '{tinh.UpdatedTime:yyyy-MM-dd hh:mm:ss}' 
+                    WHERE Id = {tinh.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -145,7 +201,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }

@@ -32,7 +32,6 @@
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachCongViec = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaCôngViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachUngVien = new System.Windows.Forms.ToolStripMenuItem();
             this.thêmỨngViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,8 +65,7 @@
             // 
             this.menu_ViecLam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_DanhSachCongViec,
-            this.chỉnhSửaCôngViệcToolStripMenuItem,
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem});
+            this.chỉnhSửaCôngViệcToolStripMenuItem});
             this.menu_ViecLam.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_ViecLam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_ViecLam.Name = "menu_ViecLam";
@@ -79,7 +77,7 @@
             this.menu_DanhSachCongViec.BackColor = System.Drawing.SystemColors.Highlight;
             this.menu_DanhSachCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_DanhSachCongViec.Name = "menu_DanhSachCongViec";
-            this.menu_DanhSachCongViec.Size = new System.Drawing.Size(286, 28);
+            this.menu_DanhSachCongViec.Size = new System.Drawing.Size(265, 28);
             this.menu_DanhSachCongViec.Text = "Danh sách công việc";
             this.menu_DanhSachCongViec.Click += new System.EventHandler(this.menu_DanhSachCongViec_Click);
             // 
@@ -88,18 +86,9 @@
             this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
+            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
             this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Chỉnh sửa công việc";
             this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
-            // 
-            // tàiKhoảnVàMậtKhẩuToolStripMenuItem
-            // 
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Name = "tàiKhoảnVàMậtKhẩuToolStripMenuItem";
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Text = "Tài khoản và mật khẩu";
-            this.tàiKhoảnVàMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnVàMậtKhẩuToolStripMenuItem_Click);
             // 
             // menu_HoSo
             // 
@@ -213,6 +202,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FAdminHomePage";
             this.Text = "FAdminHomePage";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip_MenuStrip.ResumeLayout(false);
             this.menuStrip_MenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
@@ -237,6 +227,5 @@
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngTyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanUngVien;
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanMatKhau;
-        private System.Windows.Forms.ToolStripMenuItem tàiKhoảnVàMậtKhẩuToolStripMenuItem;
     }
 }

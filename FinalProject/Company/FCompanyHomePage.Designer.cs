@@ -32,13 +32,13 @@
             this.menuStrip_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_Dsvl = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaCôngViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_ChinhSuaCongViec = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_VieclamUT = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
-            this.hồSơĐãDuyệnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hồSơChưaDuyệtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_HoSoDaDuyet = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_HoSoChuaDuyet = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TrangCaNhan = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem_ThongTinCaNhan = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem_ThongTinCongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.menuItem_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
@@ -75,7 +75,7 @@
             // 
             this.menu_ViecLam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuItem_Dsvl,
-            this.chỉnhSửaCôngViệcToolStripMenuItem,
+            this.ToolStripMenuItem_ChinhSuaCongViec,
             this.menuItem_VieclamUT});
             this.menu_ViecLam.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_ViecLam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -93,14 +93,14 @@
             this.menuItem_Dsvl.Text = "Tạo và chỉnh sửa công việc";
             this.menuItem_Dsvl.Click += new System.EventHandler(this.menuItem_Dsvl_Click);
             // 
-            // chỉnhSửaCôngViệcToolStripMenuItem
+            // ToolStripMenuItem_ChinhSuaCongViec
             // 
-            this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(344, 28);
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Danh sách công việc";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
+            this.ToolStripMenuItem_ChinhSuaCongViec.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ToolStripMenuItem_ChinhSuaCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ToolStripMenuItem_ChinhSuaCongViec.Name = "ToolStripMenuItem_ChinhSuaCongViec";
+            this.ToolStripMenuItem_ChinhSuaCongViec.Size = new System.Drawing.Size(344, 28);
+            this.ToolStripMenuItem_ChinhSuaCongViec.Text = "Danh sách công việc";
+            this.ToolStripMenuItem_ChinhSuaCongViec.Click += new System.EventHandler(this.ToolStripMenuItem_ChinhSuaCongViec_Click);
             // 
             // menuItem_VieclamUT
             // 
@@ -115,38 +115,38 @@
             // menu_HoSo
             // 
             this.menu_HoSo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hồSơĐãDuyệnToolStripMenuItem,
-            this.hồSơChưaDuyệtToolStripMenuItem});
+            this.menuItem_HoSoDaDuyet,
+            this.menuItem_HoSoChuaDuyet});
             this.menu_HoSo.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.menu_HoSo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_HoSo.Name = "menu_HoSo";
             this.menu_HoSo.Size = new System.Drawing.Size(155, 28);
             this.menu_HoSo.Text = "Quản lý hồ sơ";
             // 
-            // hồSơĐãDuyệnToolStripMenuItem
+            // menuItem_HoSoDaDuyet
             // 
-            this.hồSơĐãDuyệnToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.hồSơĐãDuyệnToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.hồSơĐãDuyệnToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hồSơĐãDuyệnToolStripMenuItem.Name = "hồSơĐãDuyệnToolStripMenuItem";
-            this.hồSơĐãDuyệnToolStripMenuItem.Size = new System.Drawing.Size(263, 28);
-            this.hồSơĐãDuyệnToolStripMenuItem.Text = "Hồ sơ đã duyệt";
-            this.hồSơĐãDuyệnToolStripMenuItem.Click += new System.EventHandler(this.hồSơĐãDuyệnToolStripMenuItem_Click);
+            this.menuItem_HoSoDaDuyet.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuItem_HoSoDaDuyet.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.menuItem_HoSoDaDuyet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuItem_HoSoDaDuyet.Name = "menuItem_HoSoDaDuyet";
+            this.menuItem_HoSoDaDuyet.Size = new System.Drawing.Size(263, 28);
+            this.menuItem_HoSoDaDuyet.Text = "Hồ sơ đã duyệt";
+            this.menuItem_HoSoDaDuyet.Click += new System.EventHandler(this.hồSơĐãDuyệnToolStripMenuItem_Click);
             // 
-            // hồSơChưaDuyệtToolStripMenuItem
+            // menuItem_HoSoChuaDuyet
             // 
-            this.hồSơChưaDuyệtToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.hồSơChưaDuyệtToolStripMenuItem.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.hồSơChưaDuyệtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.hồSơChưaDuyệtToolStripMenuItem.Name = "hồSơChưaDuyệtToolStripMenuItem";
-            this.hồSơChưaDuyệtToolStripMenuItem.Size = new System.Drawing.Size(263, 28);
-            this.hồSơChưaDuyệtToolStripMenuItem.Text = "Hồ sơ chưa duyệt";
-            this.hồSơChưaDuyệtToolStripMenuItem.Click += new System.EventHandler(this.hồSơChưaDuyệtToolStripMenuItem_Click);
+            this.menuItem_HoSoChuaDuyet.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuItem_HoSoChuaDuyet.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.menuItem_HoSoChuaDuyet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuItem_HoSoChuaDuyet.Name = "menuItem_HoSoChuaDuyet";
+            this.menuItem_HoSoChuaDuyet.Size = new System.Drawing.Size(263, 28);
+            this.menuItem_HoSoChuaDuyet.Text = "Hồ sơ chưa duyệt";
+            this.menuItem_HoSoChuaDuyet.Click += new System.EventHandler(this.hồSơChưaDuyệtToolStripMenuItem_Click);
             // 
             // menu_TrangCaNhan
             // 
             this.menu_TrangCaNhan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_ThongTinCaNhan,
+            this.menuItem_ThongTinCongTy,
             this.menuItem_DoiMatKhau,
             this.menuItem_DangXuat});
             this.menu_TrangCaNhan.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -155,15 +155,15 @@
             this.menu_TrangCaNhan.Size = new System.Drawing.Size(188, 28);
             this.menu_TrangCaNhan.Text = "Quản lý thông tin";
             // 
-            // menuItem_ThongTinCaNhan
+            // menuItem_ThongTinCongTy
             // 
-            this.menuItem_ThongTinCaNhan.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuItem_ThongTinCaNhan.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.menuItem_ThongTinCaNhan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.menuItem_ThongTinCaNhan.Name = "menuItem_ThongTinCaNhan";
-            this.menuItem_ThongTinCaNhan.Size = new System.Drawing.Size(264, 28);
-            this.menuItem_ThongTinCaNhan.Text = "Thông tin cá nhân";
-            this.menuItem_ThongTinCaNhan.Click += new System.EventHandler(this.menuItem_ThongTinCaNhan_Click);
+            this.menuItem_ThongTinCongTy.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuItem_ThongTinCongTy.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.menuItem_ThongTinCongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuItem_ThongTinCongTy.Name = "menuItem_ThongTinCongTy";
+            this.menuItem_ThongTinCongTy.Size = new System.Drawing.Size(257, 28);
+            this.menuItem_ThongTinCongTy.Text = "Thông tin công ty";
+            this.menuItem_ThongTinCongTy.Click += new System.EventHandler(this.menuItem_ThongTinCaNhan_Click);
             // 
             // menuItem_DoiMatKhau
             // 
@@ -171,7 +171,7 @@
             this.menuItem_DoiMatKhau.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.menuItem_DoiMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DoiMatKhau.Name = "menuItem_DoiMatKhau";
-            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(264, 28);
+            this.menuItem_DoiMatKhau.Size = new System.Drawing.Size(257, 28);
             this.menuItem_DoiMatKhau.Text = "Đổi mật khẩu";
             this.menuItem_DoiMatKhau.Click += new System.EventHandler(this.menuItem_DoiMatKhau_Click);
             // 
@@ -181,7 +181,7 @@
             this.menuItem_DangXuat.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.menuItem_DangXuat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menuItem_DangXuat.Name = "menuItem_DangXuat";
-            this.menuItem_DangXuat.Size = new System.Drawing.Size(264, 28);
+            this.menuItem_DangXuat.Size = new System.Drawing.Size(257, 28);
             this.menuItem_DangXuat.Text = "Đăng xuất";
             this.menuItem_DangXuat.Click += new System.EventHandler(this.menuItem_DangXuat_Click);
             // 
@@ -211,12 +211,12 @@
         private System.Windows.Forms.ToolStripMenuItem menuItem_Dsvl;
         private System.Windows.Forms.ToolStripMenuItem menuItem_VieclamUT;
         private System.Windows.Forms.ToolStripMenuItem menu_HoSo;
-        private System.Windows.Forms.ToolStripMenuItem hồSơĐãDuyệnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hồSơChưaDuyệtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_HoSoDaDuyet;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_HoSoChuaDuyet;
         private System.Windows.Forms.ToolStripMenuItem menu_TrangCaNhan;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCaNhan;
+        private System.Windows.Forms.ToolStripMenuItem menuItem_ThongTinCongTy;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem menuItem_DangXuat;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngViệcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_ChinhSuaCongViec;
     }
 }

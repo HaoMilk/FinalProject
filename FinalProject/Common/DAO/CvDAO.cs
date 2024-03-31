@@ -1,4 +1,5 @@
-﻿using FinalProject.Database;
+﻿using FinalProject.Common.Helper;
+using FinalProject.Database;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
@@ -28,7 +29,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -47,7 +48,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -80,24 +81,24 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var cv = new CV();
-                        cv.Id = reader.GetInt32(0);
-                        cv.Ten = reader.GetString(1);
-                        cv.UngVienId = reader.GetInt32(2);
-                        cv.Link = reader.GetString(3);
-                        cv.MoTa = reader.GetString(4);
-                        cv.TrangThai = reader.GetString(5);
-                        cv.IsDeleted = reader.GetBoolean(6);
-                        cv.CreatedTime = reader.GetDateTime(7);
-                        cv.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
-                        cv.ViTriUngTuyen = reader.GetString(9);
-                        cv.KyNang = reader.GetString(10);
-                        cv.NgoaiNgu = reader.GetString(11);
-                        cv.TinHoc = reader.GetString(12);
-                        cv.HocVan = reader.GetString(13);
-                        cv.HoatDong = reader.GetString(14);
-                        cv.ChungChi = reader.GetString(15);
-                        cv.MucTieu = reader.GetString(16);
-                        cv.KinhNghiem = reader.GetString(17);
+                        cv.Id = reader.GetIntValue(0);
+                        cv.Ten = reader.GetStringValue(1);
+                        cv.UngVienId = reader.GetIntValue(2);
+                        cv.Link = reader.GetStringValue(3);
+                        cv.MoTa = reader.GetStringValue(4);
+                        cv.TrangThai = reader.GetStringValue(5);
+                        cv.IsDeleted = reader.GetBooleanValue(6);
+                        cv.CreatedTime = reader.GetDateTimeValue(7);
+                        cv.UpdatedTime = reader.GetDateTimeValueNullable(8);
+                        cv.ViTriUngTuyen = reader.GetStringValue(9);
+                        cv.KyNang = reader.GetStringValue(10);
+                        cv.NgoaiNgu = reader.GetStringValue(11);
+                        cv.TinHoc = reader.GetStringValue(12);
+                        cv.HocVan = reader.GetStringValue(13);
+                        cv.HoatDong = reader.GetStringValue(14);
+                        cv.ChungChi = reader.GetStringValue(15);
+                        cv.MucTieu = reader.GetStringValue(16);
+                        cv.KinhNghiem = reader.GetStringValue(17);
 
                         list.Add(cv);
                     }
@@ -113,21 +114,33 @@ namespace FinalProject.Common.DAO
 
         public int Add(CV CV)
         {
-            string query = "INSERT INTO CV (Ten, UngVienId, Link, MoTa, TrangThai, IsDeleted, CreatedTime, UpdatedTime," +
-                " ViTriUngTuyen,KyNang,  NgoaiNgu , TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem) " +
-                $"VALUES (N'{CV.Ten}', {CV.UngVienId}, " +
-                $" N'{CV.Link}', N'{CV.MoTa}'," +
-                $" N'{CV.TrangThai}', 0," +
-                $" '{CV.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL," +
-                $" N'{CV.ViTriUngTuyen}', N'{CV.KyNang}'," +
-                $" N'{CV.NgoaiNgu}',N'{CV.TinHoc}', N'{CV.HocVan}'," +
-                $" N'{CV.HoatDong}', N'{CV.ChungChi}'," +
-                $" N'{CV.MucTieu}', N'{CV.KinhNghiem}'); ";
-
+            string query = $@"
+                INSERT INTO CV (Ten, UngVienId, Link, MoTa, TrangThai, IsDeleted, CreatedTime, UpdatedTime, 
+                    ViTriUngTuyen, KyNang, NgoaiNgu, TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem) 
+                VALUES (@Ten, @UngVienId, @Link, @MoTa, @TrangThai, @IsDeleted, @CreatedTime, @UpdatedTime, 
+                    @ViTriUngTuyen, @KyNang, @NgoaiNgu, @TinHoc, @HocVan, @HoatDong, @ChungChi, @MucTieu, @KinhNghiem);";
 
             using (dbConnection.Connection)
             {
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@Ten", CV.Ten);
+                cmd.Parameters.AddWithValue("@UngVienId", CV.UngVienId);
+                cmd.Parameters.AddWithValue("@Link", CV.Link);
+                cmd.Parameters.AddWithValue("@MoTa", CV.MoTa);
+                cmd.Parameters.AddWithValue("@TrangThai", CV.TrangThai);
+                cmd.Parameters.AddWithValue("@IsDeleted", CV.IsDeleted);
+                cmd.Parameters.AddWithValue("@CreatedTime", CV.CreatedTime);
+                cmd.Parameters.AddWithValue("@UpdatedTime", DBNull.Value);
+                cmd.Parameters.AddWithValue("@ViTriUngTuyen", CV.ViTriUngTuyen);
+                cmd.Parameters.AddWithValue("@KyNang", CV.KyNang);
+                cmd.Parameters.AddWithValue("@NgoaiNgu", CV.NgoaiNgu);
+                cmd.Parameters.AddWithValue("@TinHoc", CV.TinHoc);
+                cmd.Parameters.AddWithValue("@HocVan", CV.HocVan);
+                cmd.Parameters.AddWithValue("@HoatDong", CV.HoatDong);
+                cmd.Parameters.AddWithValue("@ChungChi", CV.ChungChi);
+                cmd.Parameters.AddWithValue("@MucTieu", CV.MucTieu);
+                cmd.Parameters.AddWithValue("@KinhNghiem", CV.KinhNghiem);
+
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -135,23 +148,30 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
-        public int Update(CV CV)
+        public int Update(CV cv)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE CV SET " +
-                    $"Ten = N'{CV.Ten}', " + 
-                    $"MoTa = N'{CV.MoTa}', " +
-                    $"Link = N'{CV.Link}', " +             
-                    $"TrangThai = '{CV.TrangThai}', " +
-                    $"UpdatedTime = '{CV.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {CV.Id};";
+                string query = $@"
+                    UPDATE CV 
+                    SET Ten = @Ten, 
+                        MoTa = @MoTa, 
+                        Link = @Link, 
+                        TrangThai = @TrangThai, 
+                        UpdatedTime = @UpdatedTime 
+                    WHERE Id = @Id;";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@Ten", cv.Ten);
+                cmd.Parameters.AddWithValue("@MoTa", cv.MoTa);
+                cmd.Parameters.AddWithValue("@Link", cv.Link);
+                cmd.Parameters.AddWithValue("@TrangThai", cv.TrangThai);
+                cmd.Parameters.AddWithValue("@UpdatedTime", cv.UpdatedTime);
+                cmd.Parameters.AddWithValue("@Id", cv.Id);
+
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -159,15 +179,15 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
-        public int Delete(CV CV)
+
+        public int Delete(CV cv)
         {
             using (dbConnection.Connection)
             {
-                string query = $"DELETE FROM CV WHERE Id = {CV.Id};";
+                string query = $"DELETE FROM CV WHERE Id = {cv.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -177,19 +197,18 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
 
-        public int SoftDelete(CV CV)
+        public int SoftDelete(CV cv)
         {
             using (dbConnection.Connection)
             {
                 string query = $"UPDATE CV SET " +
                     $"IsDeleted = 1, " +
-                    $"UpdatedTime = '{CV.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {CV.Id};";
+                    $"UpdatedTime = '{cv.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
+                    $"WHERE Id = {cv.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -199,7 +218,6 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
@@ -217,24 +235,24 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         var cv = new CV();
-                        cv.Id = reader.GetInt32(0);
-                        cv.Ten = reader.GetString(1);
-                        cv.UngVienId = reader.GetInt32(2);
-                        cv.Link = reader.GetString(3);
-                        cv.MoTa = reader.GetString(4);
-                        cv.TrangThai = reader.GetString(5);
-                        cv.IsDeleted = reader.GetBoolean(6);
-                        cv.CreatedTime = reader.GetDateTime(7);
-                        cv.UpdatedTime = reader.IsDBNull(8) ? (DateTime?)null : reader.GetDateTime(8);
-                        cv.ViTriUngTuyen = reader.GetString(9);
-                        cv.KyNang = reader.GetString(10);
-                        cv.NgoaiNgu = reader.GetString(11);
-                        cv.TinHoc = reader.GetString(12);
-                        cv.HocVan = reader.GetString(13);
-                        cv.HoatDong = reader.GetString(14);
-                        cv.ChungChi = reader.GetString(15);
-                        cv.MucTieu = reader.GetString(16);
-                        cv.KinhNghiem = reader.GetString(17);
+                        cv.Id = reader.GetIntValue(0);
+                        cv.Ten = reader.GetStringValue(1);
+                        cv.UngVienId = reader.GetIntValue(2);
+                        cv.Link = reader.GetStringValue(3);
+                        cv.MoTa = reader.GetStringValue(4);
+                        cv.TrangThai = reader.GetStringValue(5);
+                        cv.IsDeleted = reader.GetBooleanValue(6);
+                        cv.CreatedTime = reader.GetDateTimeValue(7);
+                        cv.UpdatedTime = reader.GetDateTimeValueNullable(8);
+                        cv.ViTriUngTuyen = reader.GetStringValue(9);
+                        cv.KyNang = reader.GetStringValue(10);
+                        cv.NgoaiNgu = reader.GetStringValue(11);
+                        cv.TinHoc = reader.GetStringValue(12);
+                        cv.HocVan = reader.GetStringValue(13);
+                        cv.HoatDong = reader.GetStringValue(14);
+                        cv.ChungChi = reader.GetStringValue(15);
+                        cv.MucTieu = reader.GetStringValue(16);
+                        cv.KinhNghiem = reader.GetStringValue(17);
 
                         list.Add(cv);
                     }

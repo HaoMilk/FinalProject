@@ -198,6 +198,7 @@
             this.Controls.Add(this.pnlControl);
             this.Name = "FDanhSachUngVien";
             this.Text = "FDanhSachUngVien";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachUngVien_Load);
             this.grpBoxTimKiem.ResumeLayout(false);
             this.grpBoxTimKiem.PerformLayout();
