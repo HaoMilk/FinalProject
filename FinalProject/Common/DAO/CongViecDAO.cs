@@ -60,14 +60,14 @@ namespace FinalProject.Common.DAO
                         congViec.LienHe = reader.GetStringValue(9);
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.KinhNghiem = reader.GetStringValue(14);
-                        congViec.YeuCauUngVien = reader.GetStringValue(15);;
-                        congViec.TrangThai = reader.GetStringValue(18);
-                        congViec.SoLuong = reader.GetIntValue(19);
-                        congViec.IsDeleted = reader.GetBooleanValue(21);
-                        congViec.CreatedTime = reader.GetDateTimeValue(22);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(23);
-                        congViec.IdCongTy = reader.GetIntValue(24);
+                        congViec.KinhNghiem = reader.GetStringValue(12);
+                        congViec.YeuCauUngVien = reader.GetStringValue(13);;
+                        congViec.TrangThai = reader.GetStringValue(16);
+                        congViec.SoLuong = reader.GetIntValue(17);
+                        congViec.IsDeleted = reader.GetBooleanValue(18);
+                        congViec.CreatedTime = reader.GetDateTimeValue(19);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
+                        congViec.IdCongTy = reader.GetIntValue(21);
 
                         list.Add(congViec);
                     }
@@ -243,14 +243,14 @@ namespace FinalProject.Common.DAO
                         congViec.LienHe = reader.GetStringValue(9);
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.KinhNghiem = reader.GetStringValue(14);
-                        congViec.YeuCauUngVien = reader.GetStringValue(15);;
-                        congViec.TrangThai = reader.GetStringValue(18);
-                        congViec.SoLuong = reader.GetIntValue(19);
-                        congViec.IsDeleted = reader.GetBooleanValue(21);
-                        congViec.CreatedTime = reader.GetDateTimeValue(22);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(23);
-                        congViec.IdCongTy = reader.GetIntValue(24);
+                        congViec.KinhNghiem = reader.GetStringValue(12);
+                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
+                        congViec.TrangThai = reader.GetStringValue(16);
+                        congViec.SoLuong = reader.GetIntValue(17);
+                        congViec.IsDeleted = reader.GetBooleanValue(18);
+                        congViec.CreatedTime = reader.GetDateTimeValue(19);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
+                        congViec.IdCongTy = reader.GetIntValue(21);
                         return congViec;
                     }
                 }
