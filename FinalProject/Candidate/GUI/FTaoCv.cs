@@ -31,7 +31,7 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Luu_Click(object sender, EventArgs e)
         {
-            var Id = 1;
+            var Id = id;
             var TenCv = textBox_TenCv.Text;
             var UngVienId = LoggedUser.UngVienId;
             var Link = "http://";
@@ -47,9 +47,17 @@ namespace FinalProject.Candidate.GUI
             var MucTieu = richTextBox_MucTieu.Text;
             var KinhNghiem = richTextBox_KinhNghiem.Text;
 
-            var result = _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
+            var result = 0;
+            if (_cvBus.CheckExist(Id) == 0)
+            {
+                result = _cvBus.Add(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
                 KyNang, NgoaiNgu, TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem);
-
+            }
+            else
+            {
+                result = _cvBus.Update(Id, TenCv, UngVienId, Link, MoTa, TrangThai, ViTriUngTuyen,
+                KyNang, NgoaiNgu, TinHoc, HocVan, HoatDong, ChungChi, MucTieu, KinhNghiem);
+            }
             if (result > 0)
             {
                 MessageBox.Show("Lưu thành công");
