@@ -747,6 +747,7 @@
     <Content Include="Database\Scripts\017. Update CV columns.sql" />
     <Content Include="Database\Scripts\018. Add new columns to CV.sql" />
     <Content Include="Database\Scripts\019.Update CongViec.sql" />
+    <Content Include="Database\Scripts\020.Update CongTy, Db CongTy.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
