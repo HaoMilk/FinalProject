@@ -168,6 +168,7 @@
     <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
@@ -265,6 +266,12 @@
     </Compile>
     <Compile Include="UC\UCCvCard.Designer.cs">
       <DependentUpon>UCCvCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\UCForm.Designer.cs">
+      <DependentUpon>UCForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCMenuCard.cs">
       <SubType>UserControl</SubType>
@@ -390,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCvCard.resx">
       <DependentUpon>UCCvCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCForm.resx">
+      <DependentUpon>UCForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>

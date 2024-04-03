@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.Helper;
+﻿using FinalProject.Common.DTO;
+using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.Entities;
 using System;
@@ -34,12 +35,28 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<CongViec> GetAll()
+        public List<CongViec> GetAll(CongViecGetAllInput input = null)
         {
+            if (input == null)
+            {
+                input = new CongViecGetAllInput();
+            }
+
             using (dbConnection.Connection)
             {
                 var list = new List<CongViec>();
-                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0;";
+                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0 ";
+
+                if (input.FromId > 0 && input.ToId > input.FromId)
+                {
+                    query = query + $" AND (Id >= {input.FromId} AND Id < {input.ToId}) ";
+                }
+
+                if (!string.IsNullOrWhiteSpace(input.Search))
+                {
+                    query = query + $" AND Ten LIKE '%{input.Search}%' ";
+                }
+
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -170,7 +187,6 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@Id", CongViec.Id);
                 try
                 {
-                    MessageBox.Show("Thanh Cong");
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)

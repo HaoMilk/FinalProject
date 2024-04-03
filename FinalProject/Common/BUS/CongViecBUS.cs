@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,11 @@ namespace FinalProject.Common.BUS
             return congViecDAO.GetAll();
         }
 
+        public List<CongViec> Search(CongViecGetAllInput input)
+        {
+            return congViecDAO.GetAll(input);
+        }
+
         public int CheckExist(int id)
         {
             return congViecDAO.CheckExist(id);
@@ -25,9 +31,7 @@ namespace FinalProject.Common.BUS
         public int Add(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string kinhNghiem, string yeuCauUngVien, DateTime fromDate,
-             DateTime toDate, string trangThai, int soLuong,
-             string link)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, string trangThai, int soLuong)
         {
             var congViec = new CongViec();
             congViec.IdCongTy = idCongTy;
@@ -56,8 +60,7 @@ namespace FinalProject.Common.BUS
         public int Update(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string kinhNghiem, string yeuCauUngVien, DateTime fromDate,
-             DateTime toDate, string trangThai, int soLuong, bool isDeleted)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, string trangThai, int soLuong, bool isDeleted)
         {
             var congViec = new CongViec();
             congViec.IdCongTy = idCongTy;

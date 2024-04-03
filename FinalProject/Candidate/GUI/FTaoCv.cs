@@ -1,12 +1,13 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FTaoCv : Form
+    public partial class FTaoCv : UCForm
     {
         private CvBUS _cvBus = new CvBUS();
 
@@ -26,15 +27,6 @@ namespace FinalProject.Candidate.GUI
         public FTaoCv()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -99,11 +91,6 @@ namespace FinalProject.Candidate.GUI
                 richTextBox_MucTieu.Text = _cv.MucTieu;
                 richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
             }
-        }
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

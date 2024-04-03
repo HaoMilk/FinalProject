@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.GUI;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,13 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FCandidateHomePage : Form
+    public partial class FCandidateHomePage : UCForm
     {
         private bool isAlwaysShowDashboard = true;
 
         public FCandidateHomePage()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void FCandidateHomePage_Load(object sender, EventArgs e)
@@ -194,10 +191,5 @@ namespace FinalProject.Candidate.GUI
             if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion ViecLamDaUngTuyen
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
