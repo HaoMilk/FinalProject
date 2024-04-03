@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FDanhSachVL_Name : Form
+    public partial class FDanhSachVL_Name : UCForm
     {
         private TinhBUS tinhBUS = new TinhBUS();
         private List<Tinh> listTinh = new List<Tinh>();
@@ -26,10 +26,6 @@ namespace FinalProject.Candidate.GUI
         public FDanhSachVL_Name()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
 
             this.listTinh = tinhBUS.GetAll();
             this.comboBox_DiaDiem.Items.Clear();

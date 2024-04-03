@@ -1,4 +1,5 @@
 ﻿using FinalProject.Properties;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,15 +12,11 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FMauCv : Form
+    public partial class FMauCv : UCForm
     {
         public FMauCv()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
 
             this.richTextBox_Data.SelectedRtf = Resources.resume;
         }
@@ -46,11 +43,6 @@ namespace FinalProject.Candidate.GUI
         {
             this.richTextBox_Data.Clear();
             this.richTextBox_Data.SelectedRtf = Resources.resume_009;
-        }
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FDanhSachDaUT : Form
+    public partial class FDanhSachDaUT : UCForm
     {
         private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
         private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
@@ -22,10 +22,6 @@ namespace FinalProject.Candidate.GUI
         public FDanhSachDaUT()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         #region JobList

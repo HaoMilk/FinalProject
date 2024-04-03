@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FUngTuyenCongViec : Form
+    public partial class FUngTuyenCongViec : UCForm
     {
         #region Fields and Properties
         private CongViecBUS congViecBUS = new CongViecBUS();
@@ -90,10 +90,6 @@ namespace FinalProject.Candidate.GUI
         public FUngTuyenCongViec()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void button_Close_Click(object sender, EventArgs e)

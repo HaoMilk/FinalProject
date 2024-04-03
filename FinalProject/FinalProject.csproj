@@ -266,6 +266,12 @@
     <Compile Include="UC\UCCvCard.Designer.cs">
       <DependentUpon>UCCvCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\UCForm.Designer.cs">
+      <DependentUpon>UCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCMenuCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCvCard.resx">
       <DependentUpon>UCCvCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCForm.resx">
+      <DependentUpon>UCForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
