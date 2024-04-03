@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,11 @@ namespace FinalProject.Common.BUS
         public List<CongViec> GetAll()
         {
             return congViecDAO.GetAll();
+        }
+
+        public List<CongViec> Search(CongViecGetAllInput input)
+        {
+            return congViecDAO.GetAll(input);
         }
 
         public int CheckExist(int id)

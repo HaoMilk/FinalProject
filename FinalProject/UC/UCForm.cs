@@ -54,5 +54,22 @@ namespace FinalProject.UC
         {
             this.Close();
         }
+
+        private void panel_Top_DoubleClick(object sender, EventArgs e)
+        {
+            switch (this.WindowState)
+            {
+                case FormWindowState.Maximized:
+                    this.WindowState = FormWindowState.Normal;
+                    break;
+                case FormWindowState.Normal:
+                    this.WindowState = FormWindowState.Maximized;
+                    break;
+                default:
+                    this.WindowState = FormWindowState.Maximized;
+                    break;
+            }
+            this.Invalidate();
+        }
     }
 }

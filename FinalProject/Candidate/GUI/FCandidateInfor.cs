@@ -21,11 +21,6 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button_Save_Click(object sender, EventArgs e)
         {
             var id = LoggedUser.UngVienId;

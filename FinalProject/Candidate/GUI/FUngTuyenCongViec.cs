@@ -92,11 +92,6 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
         }
 
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void FUngTuyenCongViec_Load(object sender, EventArgs e)
         {
             LoadCv();
