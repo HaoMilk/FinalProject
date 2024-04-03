@@ -60,15 +60,10 @@ namespace FinalProject.Common.DAO
                         congViec.LienHe = reader.GetStringValue(9);
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.NgoaiNgu = reader.GetStringValue(12);
-                        congViec.TinHoc = reader.GetStringValue(13);
                         congViec.KinhNghiem = reader.GetStringValue(14);
-                        congViec.KyNang = reader.GetStringValue(15);
-                        congViec.FromDate = reader.GetDateTimeValueNullable(16);
-                        congViec.ToDate = reader.GetDateTimeValueNullable(17);
+                        congViec.YeuCauUngVien = reader.GetStringValue(15);;
                         congViec.TrangThai = reader.GetStringValue(18);
                         congViec.SoLuong = reader.GetIntValue(19);
-                        congViec.Link = reader.GetStringValue(20);
                         congViec.IsDeleted = reader.GetBooleanValue(21);
                         congViec.CreatedTime = reader.GetDateTimeValue(22);
                         congViec.UpdatedTime = reader.GetDateTimeValueNullable(23);
@@ -90,11 +85,11 @@ namespace FinalProject.Common.DAO
         {
             string query = $@"
                 INSERT INTO CongViec (Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, 
-                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, NgoaiNgu, TinHoc, KinhNghiem, KyNang, 
-                    FromDate, ToDate, TrangThai, SoLuong, Link, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
+                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, KyNang, 
+                    TrangThai, SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
                 VALUES (@Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
-                    @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @NgoaiNgu, @TinHoc, @KinhNghiem, @KyNang, 
-                    @FromDate, @ToDate, @TrangThai, @SoLuong, @Link, @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
+                    @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @KinhNghiem, @KyNang, 
+                    , @TrangThai, @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
 
             using (dbConnection.Connection)
             {
@@ -110,20 +105,14 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@LienHe", congViec.LienHe);
                 cmd.Parameters.AddWithValue("@MoTa", congViec.MoTa);
                 cmd.Parameters.AddWithValue("@QuyenLoi", congViec.QuyenLoi);
-                cmd.Parameters.AddWithValue("@NgoaiNgu", congViec.NgoaiNgu);
-                cmd.Parameters.AddWithValue("@TinHoc", congViec.TinHoc);
                 cmd.Parameters.AddWithValue("@KinhNghiem", congViec.KinhNghiem);
-                cmd.Parameters.AddWithValue("@KyNang", congViec.KyNang);
-                cmd.Parameters.AddWithValue("@FromDate", congViec.FromDate);
-                cmd.Parameters.AddWithValue("@ToDate", congViec.ToDate);
+                cmd.Parameters.AddWithValue("@KyNang", congViec.YeuCauUngVien);
                 cmd.Parameters.AddWithValue("@TrangThai", congViec.TrangThai);
                 cmd.Parameters.AddWithValue("@SoLuong", congViec.SoLuong);
-                cmd.Parameters.AddWithValue("@Link", congViec.Link);
                 cmd.Parameters.AddWithValue("@IsDeleted", congViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@CreatedTime", congViec.CreatedTime);
                 cmd.Parameters.AddWithValue("@UpdatedTime", congViec.UpdatedTime);
-                cmd.Parameters.AddWithValue("@IdCongTy", congViec.IdCongTy);
-                
+                cmd.Parameters.AddWithValue("@IdCongTy", congViec.IdCongTy);           
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -150,15 +139,10 @@ namespace FinalProject.Common.DAO
                         LienHe = @LienHe, 
                         MoTa = @MoTa, 
                         QuyenLoi = @QuyenLoi, 
-                        NgoaiNgu = @NgoaiNgu, 
-                        TinHoc = @TinHoc, 
                         KinhNghiem = @KinhNghiem, 
                         KyNang = @KyNang, 
-                        FromDate = @FromDate, 
-                        ToDate = @ToDate, 
                         TrangThai = @TrangThai, 
                         SoLuong = @SoLuong, 
-                        Link = @Link, 
                         IsDeleted = @IsDeleted, 
                         UpdatedTime = @UpdatedTime, 
                         IdCongTy = @IdCongTy 
@@ -176,15 +160,10 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@LienHe", CongViec.LienHe);
                 cmd.Parameters.AddWithValue("@MoTa", CongViec.MoTa);
                 cmd.Parameters.AddWithValue("@QuyenLoi", CongViec.QuyenLoi);
-                cmd.Parameters.AddWithValue("@NgoaiNgu", CongViec.NgoaiNgu);
-                cmd.Parameters.AddWithValue("@TinHoc", CongViec.TinHoc);
                 cmd.Parameters.AddWithValue("@KinhNghiem", CongViec.KinhNghiem);
-                cmd.Parameters.AddWithValue("@KyNang", CongViec.KyNang);
-                cmd.Parameters.AddWithValue("@FromDate", CongViec.FromDate);
-                cmd.Parameters.AddWithValue("@ToDate", CongViec.ToDate);
+                cmd.Parameters.AddWithValue("@KyNang", CongViec.YeuCauUngVien);
                 cmd.Parameters.AddWithValue("@TrangThai", CongViec.TrangThai);
                 cmd.Parameters.AddWithValue("@SoLuong", CongViec.SoLuong);
-                cmd.Parameters.AddWithValue("@Link", CongViec.Link);
                 cmd.Parameters.AddWithValue("@IsDeleted", CongViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@UpdatedTime", CongViec.UpdatedTime);
                 cmd.Parameters.AddWithValue("@IdCongTy", CongViec.IdCongTy);
@@ -264,15 +243,10 @@ namespace FinalProject.Common.DAO
                         congViec.LienHe = reader.GetStringValue(9);
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.NgoaiNgu = reader.GetStringValue(12);
-                        congViec.TinHoc = reader.GetStringValue(13);
                         congViec.KinhNghiem = reader.GetStringValue(14);
-                        congViec.KyNang = reader.GetStringValue(15);
-                        congViec.FromDate = reader.GetDateTimeValueNullable(16);
-                        congViec.ToDate = reader.GetDateTimeValueNullable(17);
+                        congViec.YeuCauUngVien = reader.GetStringValue(15);;
                         congViec.TrangThai = reader.GetStringValue(18);
                         congViec.SoLuong = reader.GetIntValue(19);
-                        congViec.Link = reader.GetStringValue(20);
                         congViec.IsDeleted = reader.GetBooleanValue(21);
                         congViec.CreatedTime = reader.GetDateTimeValue(22);
                         congViec.UpdatedTime = reader.GetDateTimeValueNullable(23);
