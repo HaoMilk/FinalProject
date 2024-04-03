@@ -52,10 +52,10 @@
             this.flowLayoutPanel_Data.BackColor = System.Drawing.Color.CadetBlue;
             this.flowLayoutPanel_Data.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel_Data.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(20, 204);
+            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(0, 173);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
-            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(906, 443);
+            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(18, 19, 18, 19);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(828, 452);
             this.flowLayoutPanel_Data.TabIndex = 12;
             // 
             // label_Name
@@ -64,9 +64,9 @@
             this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Name.ForeColor = System.Drawing.Color.Azure;
-            this.label_Name.Location = new System.Drawing.Point(20, 60);
+            this.label_Name.Location = new System.Drawing.Point(0, 38);
             this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(906, 44);
+            this.label_Name.Size = new System.Drawing.Size(828, 41);
             this.label_Name.TabIndex = 7;
             this.label_Name.Text = "QUẢN LÝ CV";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,9 +79,9 @@
             this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_Close.FlatAppearance.BorderSize = 0;
             this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(862, 5);
+            this.button_Close.Location = new System.Drawing.Point(790, 5);
             this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(44, 25);
+            this.button_Close.Size = new System.Drawing.Size(38, 24);
             this.button_Close.TabIndex = 1;
             this.button_Close.TabStop = false;
             this.button_Close.UseVisualStyleBackColor = false;
@@ -92,10 +92,10 @@
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.button_Close);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(20, 20);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
-            this.panel3.Size = new System.Drawing.Size(906, 40);
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 9);
+            this.panel3.Size = new System.Drawing.Size(828, 38);
             this.panel3.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -107,11 +107,11 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox_Name, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 104);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 79);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(906, 100);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(828, 94);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // groupBox1
@@ -121,11 +121,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(466, 12);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(425, 11);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox1.Size = new System.Drawing.Size(427, 76);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox1.Size = new System.Drawing.Size(392, 71);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý";
@@ -141,15 +141,16 @@
             this.button_Them.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Them.Image = global::FinalProject.Properties.Resources.icons8_add_24;
             this.button_Them.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Them.Location = new System.Drawing.Point(13, 33);
+            this.button_Them.Location = new System.Drawing.Point(11, 32);
             this.button_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Them.Name = "button_Them";
-            this.button_Them.Size = new System.Drawing.Size(401, 31);
+            this.button_Them.Size = new System.Drawing.Size(370, 28);
             this.button_Them.TabIndex = 7;
             this.button_Them.TabStop = false;
             this.button_Them.Text = "Thêm";
             this.button_Them.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Them.UseVisualStyleBackColor = false;
+            this.button_Them.Click += new System.EventHandler(this.button_Them_Click);
             // 
             // groupBox_Name
             // 
@@ -159,11 +160,11 @@
             this.groupBox_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_Name.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox_Name.Location = new System.Drawing.Point(13, 12);
-            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(13, 12, 13, 12);
+            this.groupBox_Name.Location = new System.Drawing.Point(11, 11);
+            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
             this.groupBox_Name.Name = "groupBox_Name";
-            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.groupBox_Name.Size = new System.Drawing.Size(427, 76);
+            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_Name.Size = new System.Drawing.Size(392, 71);
             this.groupBox_Name.TabIndex = 15;
             this.groupBox_Name.TabStop = false;
             this.groupBox_Name.Text = "Tìm kiếm";
@@ -176,9 +177,9 @@
             this.button_TimKiem.FlatAppearance.BorderSize = 0;
             this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
-            this.button_TimKiem.Location = new System.Drawing.Point(358, 33);
+            this.button_TimKiem.Location = new System.Drawing.Point(332, 32);
             this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(56, 31);
+            this.button_TimKiem.Size = new System.Drawing.Size(49, 28);
             this.button_TimKiem.TabIndex = 2;
             this.button_TimKiem.UseVisualStyleBackColor = true;
             this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
@@ -189,10 +190,10 @@
             this.textBox_TenCv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_TenCv.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_TenCv.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox_TenCv.Location = new System.Drawing.Point(13, 33);
+            this.textBox_TenCv.Location = new System.Drawing.Point(11, 32);
             this.textBox_TenCv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_TenCv.Name = "textBox_TenCv";
-            this.textBox_TenCv.Size = new System.Drawing.Size(401, 28);
+            this.textBox_TenCv.Size = new System.Drawing.Size(370, 28);
             this.textBox_TenCv.TabIndex = 1;
             this.textBox_TenCv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_TenCv_KeyDown);
             // 
@@ -200,40 +201,40 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 647);
+            this.panel1.Location = new System.Drawing.Point(0, 625);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(906, 20);
+            this.panel1.Size = new System.Drawing.Size(828, 19);
             this.panel1.TabIndex = 0;
             // 
             // ucPagination
             // 
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(20, 667);
+            this.ucPagination.Location = new System.Drawing.Point(0, 644);
             this.ucPagination.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(906, 50);
+            this.ucPagination.Size = new System.Drawing.Size(828, 47);
             this.ucPagination.TabIndex = 9;
             this.ucPagination.TotalRecord = 0;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // FQlyCv
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(946, 737);
+            this.ClientSize = new System.Drawing.Size(828, 691);
             this.Controls.Add(this.flowLayoutPanel_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucPagination);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label_Name);
             this.Controls.Add(this.panel3);
+            this.Font = new System.Drawing.Font("Constantia", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FQlyCv";
-            this.Padding = new System.Windows.Forms.Padding(20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý CV";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

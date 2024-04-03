@@ -46,15 +46,12 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.ucPagination = new FinalProject.UC.UCPagination();
             this.label_SoLuongViecLam = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.button_Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,10 +62,10 @@ namespace FinalProject.Candidate.GUI
             this.panel1.Controls.Add(this.groupBox_ViTri);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(20, 50);
+            this.panel1.Location = new System.Drawing.Point(0, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 553);
+            this.panel1.Size = new System.Drawing.Size(307, 534);
             this.panel1.TabIndex = 0;
             // 
             // button_Search
@@ -85,10 +82,10 @@ namespace FinalProject.Candidate.GUI
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
             this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Search.Location = new System.Drawing.Point(0, 509);
+            this.button_Search.Location = new System.Drawing.Point(0, 493);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
-            this.button_Search.Size = new System.Drawing.Size(292, 44);
+            this.button_Search.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_Search.Size = new System.Drawing.Size(307, 41);
             this.button_Search.TabIndex = 3;
             this.button_Search.Text = "Tìm kiếm";
             this.button_Search.TextColor = System.Drawing.Color.White;
@@ -106,11 +103,11 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_MucLuong,
             this.comboBox_KinhNghiem});
             this.menuStrip_Filter.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip_Filter.Location = new System.Drawing.Point(0, 188);
+            this.menuStrip_Filter.Location = new System.Drawing.Point(0, 202);
             this.menuStrip_Filter.Name = "menuStrip_Filter";
-            this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(20);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(307, 182);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 
@@ -122,7 +119,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_DiaDiem.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.comboBox_DiaDiem.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
-            this.comboBox_DiaDiem.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_DiaDiem.Size = new System.Drawing.Size(264, 35);
             this.comboBox_DiaDiem.ToolTipText = "Địa điểm";
             // 
             // comboBox_NgheNghiep
@@ -133,7 +130,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_NgheNghiep.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.comboBox_NgheNghiep.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
-            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(264, 35);
             this.comboBox_NgheNghiep.ToolTipText = "Nghề nghiệp";
             // 
             // comboBox_MucLuong
@@ -144,7 +141,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_MucLuong.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.comboBox_MucLuong.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_MucLuong.Name = "comboBox_MucLuong";
-            this.comboBox_MucLuong.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_MucLuong.Size = new System.Drawing.Size(264, 35);
             this.comboBox_MucLuong.ToolTipText = "Mức lương";
             // 
             // comboBox_KinhNghiem
@@ -155,7 +152,7 @@ namespace FinalProject.Candidate.GUI
             this.comboBox_KinhNghiem.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.comboBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.Control;
             this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
-            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(284, 35);
+            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(264, 35);
             this.comboBox_KinhNghiem.ToolTipText = "Kinh nghiệm";
             // 
             // groupBox_ViTri
@@ -165,11 +162,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_ViTri.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox_ViTri.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_ViTri.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_ViTri.Location = new System.Drawing.Point(0, 130);
+            this.groupBox_ViTri.Location = new System.Drawing.Point(0, 122);
             this.groupBox_ViTri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_ViTri.Name = "groupBox_ViTri";
-            this.groupBox_ViTri.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_ViTri.Size = new System.Drawing.Size(292, 58);
+            this.groupBox_ViTri.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            this.groupBox_ViTri.Size = new System.Drawing.Size(307, 80);
             this.groupBox_ViTri.TabIndex = 1;
             this.groupBox_ViTri.TabStop = false;
             this.groupBox_ViTri.Text = "Vị trí tuyển dụng";
@@ -177,10 +174,10 @@ namespace FinalProject.Candidate.GUI
             // textBox_TimKiem
             // 
             this.textBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_TimKiem.Location = new System.Drawing.Point(3, 24);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(20, 27);
             this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_TimKiem.Name = "textBox_TimKiem";
-            this.textBox_TimKiem.Size = new System.Drawing.Size(286, 29);
+            this.textBox_TimKiem.Size = new System.Drawing.Size(267, 29);
             this.textBox_TimKiem.TabIndex = 1;
             // 
             // panel2
@@ -190,7 +187,7 @@ namespace FinalProject.Candidate.GUI
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 130);
+            this.panel2.Size = new System.Drawing.Size(307, 122);
             this.panel2.TabIndex = 1;
             // 
             // pictureBox1
@@ -201,7 +198,7 @@ namespace FinalProject.Candidate.GUI
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(307, 122);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -212,9 +209,9 @@ namespace FinalProject.Candidate.GUI
             this.panel3.Controls.Add(this.ucPagination);
             this.panel3.Controls.Add(this.label_SoLuongViecLam);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(312, 50);
+            this.panel3.Location = new System.Drawing.Point(307, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(690, 553);
+            this.panel3.Size = new System.Drawing.Size(639, 534);
             this.panel3.TabIndex = 5;
             // 
             // flowLayoutPanel_CongViec
@@ -223,19 +220,19 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 40);
+            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 38);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
-            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(690, 463);
+            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(9);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(639, 449);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
             // 
             // ucPagination
             // 
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(0, 503);
+            this.ucPagination.Location = new System.Drawing.Point(0, 487);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(690, 50);
+            this.ucPagination.Size = new System.Drawing.Size(639, 47);
             this.ucPagination.TabIndex = 0;
             this.ucPagination.TotalRecord = 15;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
@@ -248,58 +245,30 @@ namespace FinalProject.Candidate.GUI
             this.label_SoLuongViecLam.ForeColor = System.Drawing.SystemColors.Control;
             this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
             this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
-            this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label_SoLuongViecLam.Size = new System.Drawing.Size(690, 40);
+            this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(18, 5, 18, 5);
+            this.label_SoLuongViecLam.Size = new System.Drawing.Size(639, 38);
             this.label_SoLuongViecLam.TabIndex = 4;
             this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
             this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.button_Close);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(20, 10);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
-            this.panel4.Size = new System.Drawing.Size(982, 40);
-            this.panel4.TabIndex = 6;
-            // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(938, 5);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(44, 25);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
             // FDanhSachVL_Name
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1022, 623);
+            this.ClientSize = new System.Drawing.Size(946, 584);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel4);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachVL_Name";
-            this.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachVL_Load);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip_Filter.ResumeLayout(false);
@@ -309,7 +278,6 @@ namespace FinalProject.Candidate.GUI
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,8 +298,6 @@ namespace FinalProject.Candidate.GUI
         private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
         private UCCustomButton button_Search;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button_Close;
         private UCPagination ucPagination;
     }
 }

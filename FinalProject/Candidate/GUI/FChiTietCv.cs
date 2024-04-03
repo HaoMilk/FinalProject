@@ -1,6 +1,7 @@
 ﻿using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FChiTietCv : Form
+    public partial class FChiTietCv : UCForm
     {
         private CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
@@ -78,10 +79,6 @@ namespace FinalProject.Candidate.GUI
         public FChiTietCv()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
 
