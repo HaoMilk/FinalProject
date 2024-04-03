@@ -19,10 +19,6 @@ namespace FinalProject.Candidate.GUI
         public FCandidateHomePage()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void FCandidateHomePage_Load(object sender, EventArgs e)

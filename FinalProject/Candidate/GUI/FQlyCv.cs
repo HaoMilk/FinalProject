@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FQlyCv : Form
+    public partial class FQlyCv : UCForm
     {
         private CvBUS cvBUS = new CvBUS();
         private List<CV> listCV = new List<CV>();
@@ -23,15 +23,6 @@ namespace FinalProject.Candidate.GUI
         public FQlyCv()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
-        }
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void FQlyCv_Load(object sender, EventArgs e)
@@ -39,7 +30,6 @@ namespace FinalProject.Candidate.GUI
             listCV = cvBUS.GetByUngVienId(LoggedUser.UngVienId);
             LoadCvList();
         }
-
 
         private void LoadCvList()
         {

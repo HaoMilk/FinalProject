@@ -74,7 +74,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.ucUserSetting1 = new FinalProject.Candidate.UC.UCUserSetting();
-            this.button_Close = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl_ThongTin.SuspendLayout();
@@ -726,21 +725,6 @@
             this.ucUserSetting1.Size = new System.Drawing.Size(319, 515);
             this.ucUserSetting1.TabIndex = 1;
             // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(1021, 5);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(44, 25);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
             // FTaoCv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -844,6 +828,5 @@
         private System.Windows.Forms.TextBox textBox_ChungChi;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button_Close;
     }
 }

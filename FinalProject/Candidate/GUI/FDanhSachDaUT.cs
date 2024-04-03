@@ -94,11 +94,6 @@ namespace FinalProject.Candidate.GUI
             LoadJobList();
         }
 
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
             LoadJobList();

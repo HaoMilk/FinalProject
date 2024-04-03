@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -21,11 +22,6 @@ namespace FinalProject.Candidate.GUI
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
         private UngTuyen ungTuyen = new UngTuyen();
         private UngTuyenDAO ungTuyenDto = new UngTuyenDAO();
-        private UngVien ungVien = new UngVien()
-        {
-            Id = 1,
-            HoTen = "Vi Quốc Thuận",
-        };
 
         private int id;
         private int? ungTuyenId;
@@ -112,7 +108,7 @@ namespace FinalProject.Candidate.GUI
         {
             FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
             fUngTuyenCongViec.CongViec = congViec;
-            fUngTuyenCongViec.UngVien = ungVien;
+            fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
             fUngTuyenCongViec.ShowDialog();
         }
 

@@ -56,11 +56,6 @@ namespace FinalProject.Candidate.GUI
         }
         #endregion JobList
 
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
 

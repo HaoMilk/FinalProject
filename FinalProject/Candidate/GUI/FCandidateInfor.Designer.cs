@@ -52,7 +52,6 @@
             this.button_ChangeAvatar = new System.Windows.Forms.Button();
             this.button_UpdateInfor = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
-            this.button_Close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,7 +81,7 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(20);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(14, 14, 14, 14);
             // 
             // splitContainer1.Panel2
             // 
@@ -108,15 +107,14 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.groupBox5, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 52);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(578, 353);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(590, 374);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // groupBox6
@@ -124,11 +122,11 @@
             this.groupBox6.Controls.Add(this.textBox_Major);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(11, 275);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox6.Location = new System.Drawing.Point(8, 287);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox6.Size = new System.Drawing.Size(267, 67);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox6.Size = new System.Drawing.Size(279, 79);
             this.groupBox6.TabIndex = 18;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Chuyên môn";
@@ -140,10 +138,10 @@
             this.textBox_Major.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Major.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Major.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Major.Location = new System.Drawing.Point(11, 31);
-            this.textBox_Major.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Major.Location = new System.Drawing.Point(8, 28);
+            this.textBox_Major.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Major.Name = "textBox_Major";
-            this.textBox_Major.Size = new System.Drawing.Size(245, 28);
+            this.textBox_Major.Size = new System.Drawing.Size(263, 28);
             this.textBox_Major.TabIndex = 4;
             // 
             // groupBox2
@@ -151,11 +149,11 @@
             this.groupBox2.Controls.Add(this.textBox_Phone);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(11, 187);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox2.Location = new System.Drawing.Point(8, 194);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox2.Size = new System.Drawing.Size(267, 66);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox2.Size = new System.Drawing.Size(279, 77);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Số điện thoại";
@@ -167,10 +165,10 @@
             this.textBox_Phone.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Phone.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Phone.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Phone.Location = new System.Drawing.Point(11, 31);
-            this.textBox_Phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Phone.Location = new System.Drawing.Point(8, 28);
+            this.textBox_Phone.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Phone.Name = "textBox_Phone";
-            this.textBox_Phone.Size = new System.Drawing.Size(245, 28);
+            this.textBox_Phone.Size = new System.Drawing.Size(263, 28);
             this.textBox_Phone.TabIndex = 4;
             // 
             // groupBox4
@@ -178,11 +176,11 @@
             this.groupBox4.Controls.Add(this.textBox_Gender);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(11, 99);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox4.Location = new System.Drawing.Point(8, 101);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox4.Size = new System.Drawing.Size(267, 66);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox4.Size = new System.Drawing.Size(279, 77);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Giới tính";
@@ -194,10 +192,10 @@
             this.textBox_Gender.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Gender.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Gender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Gender.Location = new System.Drawing.Point(11, 31);
-            this.textBox_Gender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Gender.Location = new System.Drawing.Point(8, 28);
+            this.textBox_Gender.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Gender.Name = "textBox_Gender";
-            this.textBox_Gender.Size = new System.Drawing.Size(245, 28);
+            this.textBox_Gender.Size = new System.Drawing.Size(263, 28);
             this.textBox_Gender.TabIndex = 4;
             // 
             // groupBox
@@ -205,11 +203,11 @@
             this.groupBox.Controls.Add(this.textBox_Name);
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox.Location = new System.Drawing.Point(11, 11);
-            this.groupBox.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox.Location = new System.Drawing.Point(8, 8);
+            this.groupBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.groupBox.Size = new System.Drawing.Size(267, 66);
+            this.groupBox.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox.Size = new System.Drawing.Size(279, 77);
             this.groupBox.TabIndex = 12;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Họ và Tên";
@@ -221,10 +219,10 @@
             this.textBox_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Name.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Name.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Name.Location = new System.Drawing.Point(7, 28);
-            this.textBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Name.Location = new System.Drawing.Point(5, 26);
+            this.textBox_Name.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Name.Name = "textBox_Name";
-            this.textBox_Name.Size = new System.Drawing.Size(253, 28);
+            this.textBox_Name.Size = new System.Drawing.Size(269, 28);
             this.textBox_Name.TabIndex = 4;
             // 
             // groupBox1
@@ -232,11 +230,11 @@
             this.groupBox1.Controls.Add(this.dateTime_Birthday);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(300, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox1.Location = new System.Drawing.Point(303, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox1.Size = new System.Drawing.Size(267, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox1.Size = new System.Drawing.Size(279, 77);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Năm sinh";
@@ -251,10 +249,10 @@
             this.dateTime_Birthday.CustomFormat = "yyyy-MM-dd";
             this.dateTime_Birthday.Dock = System.Windows.Forms.DockStyle.Top;
             this.dateTime_Birthday.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime_Birthday.Location = new System.Drawing.Point(11, 31);
-            this.dateTime_Birthday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTime_Birthday.Location = new System.Drawing.Point(8, 28);
+            this.dateTime_Birthday.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dateTime_Birthday.Name = "dateTime_Birthday";
-            this.dateTime_Birthday.Size = new System.Drawing.Size(245, 28);
+            this.dateTime_Birthday.Size = new System.Drawing.Size(263, 28);
             this.dateTime_Birthday.TabIndex = 11;
             // 
             // groupBox3
@@ -262,11 +260,11 @@
             this.groupBox3.Controls.Add(this.textBox_Address);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(300, 99);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox3.Location = new System.Drawing.Point(303, 101);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox3.Size = new System.Drawing.Size(267, 66);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox3.Size = new System.Drawing.Size(279, 77);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Địa chỉ";
@@ -278,10 +276,10 @@
             this.textBox_Address.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Address.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Address.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Address.Location = new System.Drawing.Point(11, 31);
-            this.textBox_Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Address.Location = new System.Drawing.Point(8, 28);
+            this.textBox_Address.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(245, 28);
+            this.textBox_Address.Size = new System.Drawing.Size(263, 28);
             this.textBox_Address.TabIndex = 4;
             // 
             // groupBox5
@@ -289,11 +287,11 @@
             this.groupBox5.Controls.Add(this.textBox_Email);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(300, 187);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox5.Location = new System.Drawing.Point(303, 194);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
-            this.groupBox5.Size = new System.Drawing.Size(267, 66);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox5.Size = new System.Drawing.Size(279, 77);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Email";
@@ -305,10 +303,10 @@
             this.textBox_Email.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox_Email.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Email.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.textBox_Email.Location = new System.Drawing.Point(11, 31);
-            this.textBox_Email.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox_Email.Location = new System.Drawing.Point(8, 28);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox_Email.Name = "textBox_Email";
-            this.textBox_Email.Size = new System.Drawing.Size(245, 28);
+            this.textBox_Email.Size = new System.Drawing.Size(263, 28);
             this.textBox_Email.TabIndex = 4;
             // 
             // label1
@@ -317,9 +315,10 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(20, 20);
+            this.label1.Location = new System.Drawing.Point(14, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(578, 32);
+            this.label1.Size = new System.Drawing.Size(590, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN ỨNG VIÊN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -423,22 +422,6 @@
             this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(894, 7);
-            this.button_Close.Margin = new System.Windows.Forms.Padding(4);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(54, 33);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
             // FCandidateInfor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -506,6 +489,5 @@
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button_Close;
     }
 }

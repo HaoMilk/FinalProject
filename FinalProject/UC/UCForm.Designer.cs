@@ -43,6 +43,7 @@
             this.panel_Top.Padding = new System.Windows.Forms.Padding(10);
             this.panel_Top.Size = new System.Drawing.Size(207, 50);
             this.panel_Top.TabIndex = 0;
+            this.panel_Top.DoubleClick += new System.EventHandler(this.panel_Top_DoubleClick);
             this.panel_Top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_Top_MouseDown);
             // 
             // button_Close
