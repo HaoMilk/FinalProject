@@ -216,12 +216,6 @@
     <Compile Include="Candidate\GUI\FDanhSachVL.Designer.cs">
       <DependentUpon>FDanhSachVL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FDsCv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Candidate\GUI\FDsCv.Designer.cs">
-      <DependentUpon>FDsCv.cs</DependentUpon>
-    </Compile>
     <Compile Include="Candidate\GUI\FMauCv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,9 +366,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FDanhSachVL.resx">
       <DependentUpon>FDanhSachVL.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FDsCv.resx">
-      <DependentUpon>FDsCv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FMauCv.resx">
       <DependentUpon>FMauCv.cs</DependentUpon>
@@ -755,6 +746,8 @@
     <Content Include="Database\Scripts\016. Update IDENTITY auto increase id.sql" />
     <Content Include="Database\Scripts\017. Update CV columns.sql" />
     <Content Include="Database\Scripts\018. Add new columns to CV.sql" />
+    <Content Include="Database\Scripts\019.Update CongViec.sql" />
+    <Content Include="Database\Scripts\020.Update CongTy, Db CongTy.sql" />
     <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>

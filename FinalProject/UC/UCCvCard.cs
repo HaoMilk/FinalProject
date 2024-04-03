@@ -10,6 +10,11 @@ namespace FinalProject.UC
 {
     public partial class UCCvCard : UserControl
     {
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked when user clicks")]
+        public event EventHandler CvClick;
+
         private Size defaultCardSize = new Size(300, 250);
 
         #region Fields
@@ -132,6 +137,10 @@ namespace FinalProject.UC
         public UCCvCard()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         public Size ScaleSize(float scale)
@@ -139,6 +148,20 @@ namespace FinalProject.UC
             var size = new Size((int)(defaultCardSize.Width * scale), (int)(defaultCardSize.Height * scale));
             this.Size = size;
             return size;
+        }
+
+        private void button_View_Click(object sender, EventArgs e)
+        {
+            if (CvClick != null)
+            {
+                CvClick(this, e);
+            }
+            else
+            {
+                FTaoCv fTaoCv = new FTaoCv();
+                fTaoCv.Id = this.Id;
+                fTaoCv.ShowDialog();
+            }
         }
     }
 }

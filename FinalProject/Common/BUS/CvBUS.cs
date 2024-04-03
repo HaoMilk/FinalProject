@@ -109,7 +109,17 @@ namespace FinalProject.Common.BUS
             {
                 UngVienId = ungVienId
             };
-            var list = GetAll(input);
+            var list = cvDAO.GetAll(input);
+            return list;
+        }
+
+        public List<CV> TimKiem(string tenCv)
+        {
+            var input = new CvGetAllInput()
+            {
+                Ten = tenCv
+            };
+            var list = cvDAO.GetAll(input);
             return list;
         }
     }

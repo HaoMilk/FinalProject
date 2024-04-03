@@ -25,8 +25,7 @@ namespace FinalProject.Common.BUS
         public int Add(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string ngoaiNgu, string tinHoc,
-             string kinhNghiem, string kyNang, DateTime fromDate,
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, DateTime fromDate,
              DateTime toDate, string trangThai, int soLuong,
              string link)
         {
@@ -43,15 +42,10 @@ namespace FinalProject.Common.BUS
             congViec.LienHe = lienHe;
             congViec.MoTa = moTa;
             congViec.QuyenLoi = quyenLoi;
-            congViec.NgoaiNgu = ngoaiNgu;
-            congViec.TinHoc = tinHoc;
             congViec.KinhNghiem = kinhNghiem;
-            congViec.KyNang = kyNang;
-            congViec.FromDate = fromDate ;
-            congViec.ToDate =toDate;
+            congViec.YeuCauUngVien = yeuCauUngVien;
             congViec.TrangThai = trangThai;
             congViec.SoLuong = soLuong;
-            congViec.Link = link;
             congViec.IsDeleted = false;
             congViec.CreatedTime = DateTime.Now;
             congViec.UpdatedTime = null;
@@ -62,10 +56,8 @@ namespace FinalProject.Common.BUS
         public int Update(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string ngoaiNgu, string tinHoc,
-             string kinhNghiem, string kyNang, DateTime fromDate,
-             DateTime toDate, string trangThai, int soLuong,
-             string link, bool isDeleted)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, DateTime fromDate,
+             DateTime toDate, string trangThai, int soLuong, bool isDeleted)
         {
             var congViec = new CongViec();
             congViec.IdCongTy = idCongTy;
@@ -80,15 +72,10 @@ namespace FinalProject.Common.BUS
             congViec.LienHe = lienHe;
             congViec.MoTa = moTa;
             congViec.QuyenLoi = quyenLoi;
-            congViec.NgoaiNgu = ngoaiNgu;
-            congViec.TinHoc = tinHoc;
             congViec.KinhNghiem = kinhNghiem;
-            congViec.KyNang = kyNang;
-            congViec.FromDate = fromDate;
-            congViec.ToDate = toDate;
+            congViec.YeuCauUngVien = yeuCauUngVien;
             congViec.TrangThai = trangThai;
             congViec.SoLuong = soLuong;
-            congViec.Link = link;
             congViec.IsDeleted = isDeleted;
             congViec.UpdatedTime = DateTime.Now;
 

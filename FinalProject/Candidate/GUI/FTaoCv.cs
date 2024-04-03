@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Database.Entities;
 using System;
 using System.Windows.Forms;
 
@@ -9,10 +10,26 @@ namespace FinalProject.Candidate.GUI
     {
         private CvBUS _cvBus = new CvBUS();
 
+        private int id;
+        private CV _cv;
+
+        public int Id
+        {
+            get => id; set
+            {
+                id = value;
+                _cv = _cvBus.GetById(id);
+                this.LoadData();
+            }
+        }
+
         public FTaoCv()
         {
             InitializeComponent();
 
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -43,12 +60,12 @@ namespace FinalProject.Candidate.GUI
 
             if (result > 0)
             {
-                MessageBox.Show("Thêm mới thành công");
+                MessageBox.Show("Lưu thành công");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Thêm mới thất bại");
+                MessageBox.Show("Lưu thất bại");
             }
         }
 
@@ -68,6 +85,25 @@ namespace FinalProject.Candidate.GUI
                 textBox_NgaySinh.Text = LoggedUser.UngVien.NgaySinh.ToString();
                 comboBox_GioiTinh.Text = LoggedUser.UngVien.GioiTinh;
             }
+
+            if (_cv != null)
+            {
+                textBox_TenCv.Text = _cv.Ten;
+                textBox_ViTriUT.Text = _cv.ViTriUngTuyen;
+                textBox_KyNang.Text = _cv.KyNang;
+                textBox_NgoaiNgu.Text = _cv.NgoaiNgu;
+                textBox_TinHoc.Text = _cv.TinHoc;
+                textBox_HocVan.Text = _cv.HocVan;
+                textBox_HoatDong.Text = _cv.HoatDong;
+                textBox_ChungChi.Text = _cv.ChungChi;
+                richTextBox_MucTieu.Text = _cv.MucTieu;
+                richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
+            }
+        }
+
+        private void button_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

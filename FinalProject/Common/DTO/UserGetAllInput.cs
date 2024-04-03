@@ -11,5 +11,7 @@ namespace FinalProject.Database.DTO
         public int Id { get; set; }
 
         public int UngVienId { get; set; }
+
+        public string Ten { get; set; }
     }
 }

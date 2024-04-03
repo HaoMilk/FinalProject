@@ -29,11 +29,6 @@ namespace FinalProject.Candidate.GUI
             this.SetStyle(ControlStyles.UserPaint, true);
         }
 
-        private void button_ChonFile_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -41,6 +36,7 @@ namespace FinalProject.Candidate.GUI
 
         private void FQlyCv_Load(object sender, EventArgs e)
         {
+            listCV = cvBUS.GetByUngVienId(LoggedUser.UngVienId);
             LoadCvList();
         }
 
@@ -64,8 +60,6 @@ namespace FinalProject.Candidate.GUI
 
         private List<UCCvCard> CreateCvList(int quantity)
         {
-            listCV = cvBUS.GetByUngVienId(LoggedUser.UngVienId);
-
             List<UCCvCard> ucCvCards = new List<UCCvCard>();
 
             if (listCV.Count == 0)
@@ -100,6 +94,21 @@ namespace FinalProject.Candidate.GUI
 
             this.FQlyCv_Load(this, EventArgs.Empty);
             this.Show();
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            var tenCv = textBox_TenCv.Text;
+            listCV = cvBUS.TimKiem(tenCv);
+            LoadCvList();
+        }
+
+        private void textBox_TenCv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_TimKiem_Click(this, EventArgs.Empty);
+            }
         }
     }
 }
