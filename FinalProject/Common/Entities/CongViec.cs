@@ -23,7 +23,6 @@ namespace FinalProject.Database.Entities
         public string QuyenLoi { get; set; }
         public string KinhNghiem { get; set; }
         public string YeuCauUngVien { get; set; }
-        public string TrangThai { get; set; }
         public int SoLuong { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }

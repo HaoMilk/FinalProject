@@ -29,6 +29,7 @@ namespace FinalProject.Company.GUI.Thong_tin
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
             cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
+            MessageBox.Show("Thêm thành công");
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
@@ -40,12 +41,14 @@ namespace FinalProject.Company.GUI.Thong_tin
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
             cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
+            MessageBox.Show("Cập nhật thành công");
         }
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
             var ID = int.Parse(textBox_ID.Text);
             cty_BUS.Delete(ID);
+            MessageBox.Show("Xoá thành công");
 
         }
     }
