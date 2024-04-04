@@ -1,6 +1,7 @@
 ﻿using FinalProject.Database;
 using FinalProject.Database.Entities;
 using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows;
 
@@ -15,15 +16,15 @@ namespace FinalProject.Common.DAO
             dbConnection = new DatabaseConnection();
         }
 
-        public int CheckExist(string MST)
+        public int CheckExist(int Id)
         {
             try
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "SELECT COUNT(1) FROM CongTy WHERE MST = @MST";
+                    string query = "SELECT COUNT(1) FROM CongTy WHERE Id = @Id";
                     SqlCommand cmd = new SqlCommand(query, connection);
-                    cmd.Parameters.AddWithValue("@MST", MST);
+                    cmd.Parameters.AddWithValue("@Id", Id);
                     return Convert.ToInt32(cmd.ExecuteScalar());
                 }
             }
@@ -41,10 +42,9 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "INSERT INTO CongTy(ID, PassWord, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @PassWord, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST)";
+                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @PassWord, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST)";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
-                    cmd.Parameters.AddWithValue("@PassWord", Cty.PassWord);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
@@ -52,7 +52,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
                     MessageBox.Show("Thêm Thành Công");
                     return cmd.ExecuteNonQuery();
-                    
+
                 }
             }
             catch (Exception ex)
@@ -70,7 +70,6 @@ namespace FinalProject.Common.DAO
                 {
                     string query = @"UPDATE CongTy SET 
                     ID = @ID,
-                    PassWord = @PassWord,
                     Email = @Email,
                     TenCongTy = @TenCongTy, 
                     DiaChi = @DiaChi, 
@@ -79,7 +78,6 @@ namespace FinalProject.Common.DAO
                     WHERE MST = @ID";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
-                    cmd.Parameters.AddWithValue("@PassWord", Cty.PassWord);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
@@ -154,6 +152,72 @@ namespace FinalProject.Common.DAO
                 return -1;
             }
         }
+        public List<CongTy> GetAll()
+        {
+            try
+            {
+                using (var connection = dbConnection.Connection)
+                {
+                    string query = "SELECT * FROM CongTy WHERE IsDeleted = 0";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    List<CongTy> congTyList = new List<CongTy>();
 
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        CongTy congTy = new CongTy();
+                        congTy.ID = reader.GetInt32(0);
+                        congTy.Email = reader.GetString(1);
+                        congTy.TenCongTy = reader.GetString(2);
+                        congTy.Diachi = reader.GetString(3);
+                        congTy.CEO = reader.GetString(4);
+                        congTy.MST = reader.GetString(5);
+                        congTyList.Add(congTy);
+                    }
+
+                    return congTyList;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return null;
+            }
+        }
+        public CongTy GetById(int id)
+        {
+            try
+            {
+                using (var connection = dbConnection.Connection)
+                {
+                    string query = "SELECT * FROM CongTy WHERE ID = @ID AND IsDeleted = 0";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@ID", id);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        CongTy congTy = new CongTy();
+                        congTy.ID = reader.GetInt32(0);
+                        congTy.Email = reader.GetString(1);
+                        congTy.TenCongTy = reader.GetString(2);
+                        congTy.Diachi = reader.GetString(3);
+                        congTy.CEO = reader.GetString(4);
+                        congTy.MST = reader.GetString(5);
+
+                        return congTy;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

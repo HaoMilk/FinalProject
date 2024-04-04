@@ -178,7 +178,7 @@
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Common\LoggerCongTy.cs" />
+    <Compile Include="Common\LoggedCongTy.cs" />
     <Compile Include="Company\GUI\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -21,6 +21,7 @@ namespace FinalProject
     public partial class Form_DangNhap : UCForm
     {
         private UngVienBUS ungVienBUS = new UngVienBUS();
+        private CongTyBUS congTyBUS = new CongTyBUS();
         public Form_DangNhap()
         {
             InitializeComponent();
@@ -48,6 +49,8 @@ namespace FinalProject
             }    
             else if (radioButton_NhaTuyenDung.Checked)
             {
+                LoggedCongTy.CongTyID = 1;
+                LoggedCongTy.CongTy = congTyBUS.GetById(LoggedCongTy.CongTyID);
                 FCompanyHomePage fCompanyHomePage = new FCompanyHomePage();
                 fCompanyHomePage.ShowDialog();
             }

@@ -114,7 +114,7 @@
             this.groupBox_PhanQuyen.Location = new System.Drawing.Point(27, 176);
             this.groupBox_PhanQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_PhanQuyen.Name = "groupBox_PhanQuyen";
-            this.groupBox_PhanQuyen.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_PhanQuyen.Padding = new System.Windows.Forms.Padding(11);
             this.groupBox_PhanQuyen.Size = new System.Drawing.Size(304, 81);
             this.groupBox_PhanQuyen.TabIndex = 6;
             this.groupBox_PhanQuyen.TabStop = false;
@@ -171,7 +171,7 @@
             this.groupBox_Pass.Location = new System.Drawing.Point(27, 92);
             this.groupBox_Pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Pass.Name = "groupBox_Pass";
-            this.groupBox_Pass.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_Pass.Padding = new System.Windows.Forms.Padding(11);
             this.groupBox_Pass.Size = new System.Drawing.Size(304, 84);
             this.groupBox_Pass.TabIndex = 5;
             this.groupBox_Pass.TabStop = false;
@@ -202,7 +202,7 @@
             this.groupBox_Name.Location = new System.Drawing.Point(27, 9);
             this.groupBox_Name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_Name.Name = "groupBox_Name";
-            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11);
             this.groupBox_Name.Size = new System.Drawing.Size(304, 83);
             this.groupBox_Name.TabIndex = 4;
             this.groupBox_Name.TabStop = false;
@@ -262,7 +262,7 @@
             this.button_DangNhap.Location = new System.Drawing.Point(27, 17);
             this.button_DangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_DangNhap.Name = "button_DangNhap";
-            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button_DangNhap.Padding = new System.Windows.Forms.Padding(6);
             this.button_DangNhap.Size = new System.Drawing.Size(304, 53);
             this.button_DangNhap.TabIndex = 12;
             this.button_DangNhap.Text = "ĐĂNG NHẬP";
@@ -277,7 +277,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(27, 70);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 47);
             this.panel1.TabIndex = 11;
@@ -308,7 +308,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.label1.Padding = new System.Windows.Forms.Padding(6);
             this.label1.Size = new System.Drawing.Size(181, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chưa có tài khoản? ";
