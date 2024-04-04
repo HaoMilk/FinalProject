@@ -79,12 +79,11 @@ namespace FinalProject.Common.DAO
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
                         congViec.YeuCauUngVien = reader.GetStringValue(13);;
-                        congViec.TrangThai = reader.GetStringValue(16);
-                        congViec.SoLuong = reader.GetIntValue(17);
-                        congViec.IsDeleted = reader.GetBooleanValue(18);
-                        congViec.CreatedTime = reader.GetDateTimeValue(19);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
-                        congViec.IdCongTy = reader.GetIntValue(21);
+                        congViec.SoLuong = reader.GetIntValue(16);
+                        congViec.IsDeleted = reader.GetBooleanValue(17);
+                        congViec.CreatedTime = reader.GetDateTimeValue(18);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
+                        congViec.IdCongTy = reader.GetIntValue(20);
 
                         list.Add(congViec);
                     }
@@ -102,11 +101,11 @@ namespace FinalProject.Common.DAO
         {
             string query = $@"
                 INSERT INTO CongViec (Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, 
-                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, KyNang, 
-                    TrangThai, SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
+                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, 
+                    SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
                 VALUES (@Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
-                    @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @KinhNghiem, @KyNang, 
-                    , @TrangThai, @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
+                    @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @KinhNghiem, @YeuCauUngVien, 
+                    @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
 
             using (dbConnection.Connection)
             {
@@ -123,8 +122,7 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@MoTa", congViec.MoTa);
                 cmd.Parameters.AddWithValue("@QuyenLoi", congViec.QuyenLoi);
                 cmd.Parameters.AddWithValue("@KinhNghiem", congViec.KinhNghiem);
-                cmd.Parameters.AddWithValue("@KyNang", congViec.YeuCauUngVien);
-                cmd.Parameters.AddWithValue("@TrangThai", congViec.TrangThai);
+                cmd.Parameters.AddWithValue("@YeuCauUngVien", congViec.YeuCauUngVien);
                 cmd.Parameters.AddWithValue("@SoLuong", congViec.SoLuong);
                 cmd.Parameters.AddWithValue("@IsDeleted", congViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@CreatedTime", congViec.CreatedTime);
@@ -158,7 +156,6 @@ namespace FinalProject.Common.DAO
                         QuyenLoi = @QuyenLoi, 
                         KinhNghiem = @KinhNghiem, 
                         KyNang = @KyNang, 
-                        TrangThai = @TrangThai, 
                         SoLuong = @SoLuong, 
                         IsDeleted = @IsDeleted, 
                         UpdatedTime = @UpdatedTime, 
@@ -179,7 +176,6 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@QuyenLoi", CongViec.QuyenLoi);
                 cmd.Parameters.AddWithValue("@KinhNghiem", CongViec.KinhNghiem);
                 cmd.Parameters.AddWithValue("@KyNang", CongViec.YeuCauUngVien);
-                cmd.Parameters.AddWithValue("@TrangThai", CongViec.TrangThai);
                 cmd.Parameters.AddWithValue("@SoLuong", CongViec.SoLuong);
                 cmd.Parameters.AddWithValue("@IsDeleted", CongViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@UpdatedTime", CongViec.UpdatedTime);
@@ -260,13 +256,12 @@ namespace FinalProject.Common.DAO
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
-                        congViec.TrangThai = reader.GetStringValue(16);
-                        congViec.SoLuong = reader.GetIntValue(17);
-                        congViec.IsDeleted = reader.GetBooleanValue(18);
-                        congViec.CreatedTime = reader.GetDateTimeValue(19);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
-                        congViec.IdCongTy = reader.GetIntValue(21);
+                        congViec.YeuCauUngVien = reader.GetStringValue(13);
+                        congViec.SoLuong = reader.GetIntValue(16);
+                        congViec.IsDeleted = reader.GetBooleanValue(17);
+                        congViec.CreatedTime = reader.GetDateTimeValue(18);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
+                        congViec.IdCongTy = reader.GetIntValue(20);
                         return congViec;
                     }
                 }
@@ -307,12 +302,11 @@ namespace FinalProject.Common.DAO
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
                         congViec.YeuCauUngVien = reader.GetStringValue(13); ;
-                        congViec.TrangThai = reader.GetStringValue(16);
-                        congViec.SoLuong = reader.GetIntValue(17);
-                        congViec.IsDeleted = reader.GetBooleanValue(18);
-                        congViec.CreatedTime = reader.GetDateTimeValue(19);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
-                        congViec.IdCongTy = reader.GetIntValue(21);
+                        congViec.SoLuong = reader.GetIntValue(16);
+                        congViec.IsDeleted = reader.GetBooleanValue(17);
+                        congViec.CreatedTime = reader.GetDateTimeValue(18);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
+                        congViec.IdCongTy = reader.GetIntValue(20);
                         return congViec;
                     }
                 }

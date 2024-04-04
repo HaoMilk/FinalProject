@@ -31,7 +31,7 @@ namespace FinalProject.Common.BUS
         public int Add(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string kinhNghiem, string yeuCauUngVien, string trangThai, int soLuong)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong)
         {
             var congViec = new CongViec();
             congViec.IdCongTy = idCongTy;
@@ -48,11 +48,10 @@ namespace FinalProject.Common.BUS
             congViec.QuyenLoi = quyenLoi;
             congViec.KinhNghiem = kinhNghiem;
             congViec.YeuCauUngVien = yeuCauUngVien;
-            congViec.TrangThai = trangThai;
             congViec.SoLuong = soLuong;
             congViec.IsDeleted = false;
             congViec.CreatedTime = DateTime.Now;
-            congViec.UpdatedTime = null;
+            congViec.UpdatedTime = DateTime.Now;
 
             return congViecDAO.Add(congViec);
         }
@@ -60,7 +59,7 @@ namespace FinalProject.Common.BUS
         public int Update(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string kinhNghiem, string yeuCauUngVien, string trangThai, int soLuong, bool isDeleted)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong, bool isDeleted)
         {
             var congViec = new CongViec();
             congViec.IdCongTy = idCongTy;
@@ -77,7 +76,6 @@ namespace FinalProject.Common.BUS
             congViec.QuyenLoi = quyenLoi;
             congViec.KinhNghiem = kinhNghiem;
             congViec.YeuCauUngVien = yeuCauUngVien;
-            congViec.TrangThai = trangThai;
             congViec.SoLuong = soLuong;
             congViec.IsDeleted = isDeleted;
             congViec.UpdatedTime = DateTime.Now;

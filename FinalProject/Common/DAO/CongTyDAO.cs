@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows;
+using System.Windows.Forms;
 
 namespace FinalProject.Common.DAO
 {
@@ -30,8 +31,6 @@ namespace FinalProject.Common.DAO
             }
             catch (Exception ex)
             {
-                // Handle exception (log or rethrow)
-                Console.WriteLine($"An error occurred: {ex.Message}");
                 return -1;
             }
         }
@@ -42,7 +41,7 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @PassWord, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST)";
+                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST)";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
@@ -50,16 +49,13 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
-                    MessageBox.Show("Thêm Thành Công");
                     return cmd.ExecuteNonQuery();
 
                 }
             }
             catch (Exception ex)
             {
-                // Handle exception (log or rethrow)
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return -1;
+                throw ex;
             }
         }
         public int Edit(CongTy Cty)
@@ -83,14 +79,12 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
-                    MessageBox.Show("Cập nhật thành công");
                     return cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Đã xảy ra lỗi: {ex.Message}");
-                return -1;
+                throw ex;
             }
 
         }
@@ -103,7 +97,6 @@ namespace FinalProject.Common.DAO
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
                 {
-                    MessageBox.Show("Xoá Thành Công");
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -147,9 +140,7 @@ namespace FinalProject.Common.DAO
             }
             catch (Exception ex)
             {
-                // Handle exception (log or rethrow)
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return -1;
+                throw ex;
             }
         }
         public List<CongTy> GetAll()
@@ -172,6 +163,9 @@ namespace FinalProject.Common.DAO
                         congTy.Diachi = reader.GetString(3);
                         congTy.CEO = reader.GetString(4);
                         congTy.MST = reader.GetString(5);
+                        congTy.CreatedTime = reader.GetDateTime(6);
+                        congTy.UpdatedTime = reader.GetDateTime(7);
+                        congTy.IsDeleted = reader.GetBoolean(8);
                         congTyList.Add(congTy);
                     }
 
@@ -180,8 +174,7 @@ namespace FinalProject.Common.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return null;
+                throw ex;
             }
         }
         public CongTy GetById(int id)
@@ -204,6 +197,9 @@ namespace FinalProject.Common.DAO
                         congTy.Diachi = reader.GetString(3);
                         congTy.CEO = reader.GetString(4);
                         congTy.MST = reader.GetString(5);
+                        congTy.CreatedTime = reader.GetDateTime(6);
+                        congTy.UpdatedTime = reader.GetDateTime(7);
+                        congTy.IsDeleted = reader.GetBoolean(8);
 
                         return congTy;
                     }
@@ -215,8 +211,7 @@ namespace FinalProject.Common.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-                return null;
+                throw ex;
             }
         }
     }

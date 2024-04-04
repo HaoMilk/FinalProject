@@ -25,7 +25,7 @@ namespace FinalProject.Common.BUS
             ct.Diachi = dichi;
             ct.CEO = ceo;
             ct.CreatedTime = DateTime.Now;
-            ct.UpdatedTime = null;
+            ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
             return congTyDAO.Add(ct);
         }
