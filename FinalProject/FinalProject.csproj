@@ -152,6 +152,12 @@
     <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.Designer.cs">
       <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.Designer.cs">
+      <DependentUpon>FXetDuyet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
@@ -366,6 +372,9 @@
     <Compile Include="UC\UCCustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyet.resx">
+      <DependentUpon>FXetDuyet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </EmbeddedResource>
