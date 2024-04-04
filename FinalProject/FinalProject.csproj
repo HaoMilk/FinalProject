@@ -122,10 +122,10 @@
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\FThongKe.cs">
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\FThongKe.Designer.cs">
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.Designer.cs">
       <DependentUpon>FThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
@@ -350,6 +350,9 @@
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
       <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,7 +463,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\UC\" />
     <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
@@ -785,6 +787,8 @@
     <None Include="Resources\daily-resumes-of-candidates-for-recruitment.png" />
     <None Include="Resources\360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl.jpg" />
     <None Include="Resources\char_icon.png" />
+    <None Include="Resources\chart_icon_1.jpg" />
+    <None Include="Resources\chart_icon_11.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

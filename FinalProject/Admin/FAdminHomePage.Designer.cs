@@ -63,7 +63,7 @@
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
-            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(1065, 35);
+            this.menuStrip_MenuStrip.Size = new System.Drawing.Size(872, 35);
             this.menuStrip_MenuStrip.TabIndex = 3;
             this.menuStrip_MenuStrip.Text = "menuStrip1";
             // 
@@ -213,11 +213,11 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(0, 629);
+            this.label1.Location = new System.Drawing.Point(0, 384);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1065, 28);
+            this.label1.Size = new System.Drawing.Size(872, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "TRƯỜNG ĐẠI HỌC SƯ PHẠM KỸ THUẬT THÀNH PHỐ HỒ CHÍ MINH";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,7 +229,7 @@
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox_Image.Location = new System.Drawing.Point(0, 35);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(1065, 594);
+            this.pictureBox_Image.Size = new System.Drawing.Size(872, 349);
             this.pictureBox_Image.TabIndex = 4;
             this.pictureBox_Image.TabStop = false;
             // 
@@ -238,17 +238,17 @@
             this.ucMenuCard1.BackColor = System.Drawing.Color.Azure;
             this.ucMenuCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ucMenuCard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucMenuCard1.ButtonBackColor = System.Drawing.Color.Cornsilk;
+            this.ucMenuCard1.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
             this.ucMenuCard1.ButtonTextColor = System.Drawing.Color.RoyalBlue;
             this.ucMenuCard1.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard1.Id = 0;
-            this.ucMenuCard1.Location = new System.Drawing.Point(59, 100);
+            this.ucMenuCard1.Location = new System.Drawing.Point(41, 71);
             this.ucMenuCard1.Margin = new System.Windows.Forms.Padding(13);
             this.ucMenuCard1.MenuImage = global::FinalProject.Properties.Resources.char_icon;
             this.ucMenuCard1.MenuName = "THỐNG KÊ";
             this.ucMenuCard1.Name = "ucMenuCard1";
             this.ucMenuCard1.Padding = new System.Windows.Forms.Padding(13);
-            this.ucMenuCard1.Size = new System.Drawing.Size(228, 202);
+            this.ucMenuCard1.Size = new System.Drawing.Size(182, 137);
             this.ucMenuCard1.TabIndex = 6;
             this.ucMenuCard1.MenuClick += new System.EventHandler(this.ucMenuCard1_MenuClick);
             // 
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 657);
+            this.ClientSize = new System.Drawing.Size(872, 412);
             this.Controls.Add(this.ucMenuCard1);
             this.Controls.Add(this.pictureBox_Image);
             this.Controls.Add(this.menuStrip_MenuStrip);
