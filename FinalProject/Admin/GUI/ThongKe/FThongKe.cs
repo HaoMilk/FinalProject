@@ -16,5 +16,19 @@ namespace FinalProject.Admin.GUI
         {
             InitializeComponent();
         }
+
+        private void FThongKe_Load(object sender, EventArgs e)
+        {
+            BDCot.Series["BDCot"].Points.AddXY("CNTT ", 1230);
+            BDCot.Series["BDCot"].Points.AddXY("KE TOAN ", 930);
+            BDCot.Series["BDCot"].Points.AddXY("QLNS ", 1000);
+            BDCot.Series["BDCot"].Points.AddXY("ATTT ", 700);
+            BDCot.Series["BDCot"].Points.AddXY("ANQP ", 1100);
+            BDTron.Series["BDTron"].Points.AddXY("CNTT ", 1230);
+            BDTron.Series["BDTron"].Points.AddXY("KE TOAN ", 930);
+            BDTron.Series["BDTron"].Points.AddXY("QLNS ", 1000);
+            BDTron.Series["BDTron"].Points.AddXY("ATTT ", 700);
+            BDTron.Series["BDTron"].Points.AddXY("ANQP ", 1100);
+        }
     }
 }

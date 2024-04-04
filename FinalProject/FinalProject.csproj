@@ -463,6 +463,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Chart\" />
     <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
@@ -789,6 +790,7 @@
     <None Include="Resources\char_icon.png" />
     <None Include="Resources\chart_icon_1.jpg" />
     <None Include="Resources\chart_icon_11.jpg" />
+    <None Include="Resources\CANDIDATE_ICON.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
