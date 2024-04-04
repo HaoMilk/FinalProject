@@ -234,11 +234,13 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public CongViec GetById(int id)
+        public CongViec GetByIdCty(int idCty)
         {
             using (dbConnection.Connection)
             {
-                string query = $"SELECT * FROM CongViec WHERE Id = {id} ;";
+                string query = $"SELECT * FROM CongViec " +
+                               $"JOIN CongTy ON CongViec.IdCongTy = CongTy.Id " +
+                               $"WHERE Id = {idCty} ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try

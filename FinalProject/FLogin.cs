@@ -58,11 +58,6 @@ namespace FinalProject
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (radioButton_NhaTuyenDung.Checked)
-            {
-                FThongTin fDangKyCongTy = new FThongTin();
-                fDangKyCongTy.ShowDialog();
-            }
         }
 
         private void Form_DangNhap_Load(object sender, EventArgs e)

@@ -178,10 +178,11 @@
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.cs">
+    <Compile Include="Common\LoggerCongTy.cs" />
+    <Compile Include="Company\GUI\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.Designer.cs">
+    <Compile Include="Company\GUI\FDSCongViec.Designer.cs">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
@@ -242,10 +243,10 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs">
+    <Compile Include="Company\GUI\FAddViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
+    <Compile Include="Company\GUI\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
@@ -309,11 +310,11 @@
     <Compile Include="Company\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
+    <Compile Include="Company\GUI\FThongTinCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <Compile Include="Company\GUI\FThongTinCongTy.Designer.cs">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -395,10 +396,10 @@
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDSCongViec.resx">
+    <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
+    <EmbeddedResource Include="Company\GUI\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
@@ -425,8 +426,8 @@
     <EmbeddedResource Include="Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FThongTinCongTy.resx">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -464,7 +465,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\Chart\" />
-    <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
   <ItemGroup>
