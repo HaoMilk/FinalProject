@@ -122,6 +122,12 @@
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -454,6 +460,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\UC\" />
     <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
@@ -777,6 +784,7 @@
     <None Include="Resources\network-process-of-finding-applicants-and-recruitment.gif" />
     <None Include="Resources\daily-resumes-of-candidates-for-recruitment.png" />
     <None Include="Resources\360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl.jpg" />
+    <None Include="Resources\char_icon.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
