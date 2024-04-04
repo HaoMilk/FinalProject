@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,11 +15,10 @@ namespace FinalProject.Common.BUS
     internal class CongTyBUS
     {
         CongTyDAO congTyDAO = new CongTyDAO();  
-        public int Add(int id, string passWord, string email, string tencongty, string dichi, string ceo, string mst)
+        public int Add(int id, string email, string tencongty, string dichi, string ceo, string mst)
         {
             var ct = new CongTy();
             ct.ID = id;
-            ct.PassWord = passWord;
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
@@ -29,11 +29,10 @@ namespace FinalProject.Common.BUS
             ct.IsDeleted = false;
             return congTyDAO.Add(ct);
         }
-        public int Update(int id, string passWord, string email, string tencongty, string dichi, string ceo, string mst )
+        public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst )
         {
             var ct = new CongTy();
             ct.ID = id;
-            ct.PassWord = passWord;
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
@@ -57,6 +56,10 @@ namespace FinalProject.Common.BUS
             congTy.IsDeleted = true;
             congTy.UpdatedTime = DateTime.Now;
             return congTyDAO.SoftDelete(congTy);
+        }
+        public CongTy GetById(int id)
+        {
+            return congTyDAO.GetById(id);
         }
     }
 }

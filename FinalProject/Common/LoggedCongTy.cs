@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.Common
 {
-    static class LoggerCongTy
+    static class LoggedCongTy
     {
         public static int CongTyID {  get; set; }
         public static CongTy CongTy {  get; set; }

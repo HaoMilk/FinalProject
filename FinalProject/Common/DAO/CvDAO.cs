@@ -248,7 +248,7 @@ namespace FinalProject.Common.DAO
             List<CV> list = new List<CV>();
             using (dbConnection.Connection)
             {
-                string query = $"SELECT * FROM  WHERE UngVienId = {ungVienId} AND IsDeleted = 0 ;";
+                string query = $"SELECT * FROM CV WHERE UngVienId = {ungVienId} AND IsDeleted = 0 ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try

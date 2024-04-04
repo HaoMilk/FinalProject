@@ -9,7 +9,6 @@ namespace FinalProject.Database.Entities
     internal class CongTy
     {
         public int ID { get; set; }
-        public string PassWord { get; set; }
         public string Email { get; set; }
         public string TenCongTy { get; set; }
         public string Diachi { get; set; }
