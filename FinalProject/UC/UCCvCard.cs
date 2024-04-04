@@ -12,8 +12,13 @@ namespace FinalProject.UC
     {
         [Browsable(true)]
         [Category("Action")]
-        [Description("Invoked when user clicks")]
+        [Description("Invoked when user clicks view CV")]
         public event EventHandler CvClick;
+
+        [Browsable(true)]
+        [Category("Action")]
+        [Description("Invoked when user clicks delete CV")]
+        public event EventHandler CvDelete;
 
         private Size defaultCardSize = new Size(300, 250);
 
@@ -161,6 +166,14 @@ namespace FinalProject.UC
                 FTaoCv fTaoCv = new FTaoCv();
                 fTaoCv.Id = this.Id;
                 fTaoCv.ShowDialog();
+            }
+        }
+
+        private void button_Delete_Click(object sender, EventArgs e)
+        {
+            if (CvDelete != null)
+            {
+                CvDelete(this, e);
             }
         }
     }

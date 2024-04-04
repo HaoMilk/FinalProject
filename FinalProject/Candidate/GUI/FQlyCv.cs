@@ -64,6 +64,7 @@ namespace FinalProject.Candidate.GUI
                 ucCvCard.CvName = listCV[i].Ten;
                 ucCvCard.LastUpdatedTime = listCV[i].UpdatedTime ?? DateTime.Now;
                 ucCvCard.CvClick += button_View_Click;
+                ucCvCard.CvDelete += button_Xoa_Click;
                 //ucCvCard.ScaleSize(0.5f);
 
                 ucCvCards.Add(ucCvCard);
@@ -110,6 +111,24 @@ namespace FinalProject.Candidate.GUI
 
             // Reload data after update
             this.FQlyCv_Load(this, EventArgs.Empty);
+        }
+
+        private void button_Xoa_Click(object sender, EventArgs e)
+        {
+            var id = (sender as UCCvCard).Id;
+
+            if (cvBUS.CheckExist(id) == 0)
+            {
+                MessageBox.Show("Không tìm thấy CV");
+                return;
+            }
+
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa CV này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                cvBUS.SoftDelete(id);
+                this.FQlyCv_Load(this, EventArgs.Empty);
+                MessageBox.Show("Xóa CV thành công");
+            }
         }
     }
 }
