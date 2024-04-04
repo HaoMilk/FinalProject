@@ -1,4 +1,5 @@
 ﻿
+using FinalProject.Admin.GUI;
 using FinalProject.Admin.GUI.CongTy;
 using FinalProject.Admin.GUI.CongViec;
 using FinalProject.Admin.GUI.UngVien;
@@ -19,6 +20,7 @@ namespace FinalProject.Admin
 {
     public partial class FAdminHomePage : Form
     {
+        private bool isAlwaysShowDashboard = true;
         public FAdminHomePage()
         {
             InitializeComponent();
@@ -79,5 +81,24 @@ namespace FinalProject.Admin
             FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
             fChinhSuaCongViec.ShowDialog();
         }
+        #region ThongKe
+        private void tsM_ThongKe_Click(object sender, EventArgs e)
+        {
+            this.OpenThongKe();
+        }
+        private void OpenThongKe()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FThongKe fThongKe = new FThongKe();
+            fThongKe.ShowDialog();
+
+            if(!isAlwaysShowDashboard) this.Show();
+        }
+        private void ucMenuCard1_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenThongKe();
+        }
+
+        #endregion ThongKe
     }
 }
