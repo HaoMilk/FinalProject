@@ -791,6 +791,7 @@
     <None Include="Resources\chart_icon_1.jpg" />
     <None Include="Resources\chart_icon_11.jpg" />
     <None Include="Resources\CANDIDATE_ICON.jpg" />
+    <None Include="Resources\icons8-delete-24.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
