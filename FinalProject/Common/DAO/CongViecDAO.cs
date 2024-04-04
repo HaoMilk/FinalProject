@@ -234,6 +234,50 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+        public CongViec GetById(int id)
+        {
+            using (dbConnection.Connection)
+            {
+                string query = $"SELECT * FROM CongViec WHERE Id = {id} ;";
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+
+                try
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        var congViec = new CongViec();
+                        congViec.Id = reader.GetIntValue(0);
+                        congViec.Ten = reader.GetStringValue(1);
+                        congViec.TenCongTy = reader.GetStringValue(2);
+                        congViec.Nganh = reader.GetStringValue(3);
+                        congViec.ViTriTuyenDung = reader.GetStringValue(4);
+                        congViec.MucLuong = reader.GetDecimalValue(5);
+                        congViec.DiaDiem = reader.GetStringValue(6);
+                        congViec.TrinhDoHocVan = reader.GetStringValue(7);
+                        congViec.GioiTinh = reader.GetStringValue(8);
+                        congViec.LienHe = reader.GetStringValue(9);
+                        congViec.MoTa = reader.GetStringValue(10);
+                        congViec.QuyenLoi = reader.GetStringValue(11);
+                        congViec.KinhNghiem = reader.GetStringValue(12);
+                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
+                        congViec.TrangThai = reader.GetStringValue(16);
+                        congViec.SoLuong = reader.GetIntValue(17);
+                        congViec.IsDeleted = reader.GetBooleanValue(18);
+                        congViec.CreatedTime = reader.GetDateTimeValue(19);
+                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(20);
+                        congViec.IdCongTy = reader.GetIntValue(21);
+                        return congViec;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+                return null;
+            }
+        }
         public CongViec GetByIdCty(int idCty)
         {
             using (dbConnection.Connection)
