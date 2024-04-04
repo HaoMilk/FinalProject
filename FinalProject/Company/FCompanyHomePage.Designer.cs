@@ -120,8 +120,8 @@
             this.menu_HoSo.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.menu_HoSo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_HoSo.Name = "menu_HoSo";
-            this.menu_HoSo.Size = new System.Drawing.Size(155, 28);
-            this.menu_HoSo.Text = "Quản lý hồ sơ";
+            this.menu_HoSo.Size = new System.Drawing.Size(182, 28);
+            this.menu_HoSo.Text = "Hồ sơ ứng tuyển";
             // 
             // menuItem_HoSoDaDuyet
             // 
