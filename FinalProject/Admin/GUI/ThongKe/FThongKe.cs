@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace FinalProject.Admin.GUI
@@ -19,16 +20,41 @@ namespace FinalProject.Admin.GUI
 
         private void FThongKe_Load(object sender, EventArgs e)
         {
-            BDCot.Series["BDCot"].Points.AddXY("CNTT ", 1230);
-            BDCot.Series["BDCot"].Points.AddXY("KE TOAN ", 930);
-            BDCot.Series["BDCot"].Points.AddXY("QLNS ", 1000);
-            BDCot.Series["BDCot"].Points.AddXY("ATTT ", 700);
-            BDCot.Series["BDCot"].Points.AddXY("ANQP ", 1100);
-            BDTron.Series["BDTron"].Points.AddXY("CNTT ", 1230);
-            BDTron.Series["BDTron"].Points.AddXY("KE TOAN ", 930);
-            BDTron.Series["BDTron"].Points.AddXY("QLNS ", 1000);
-            BDTron.Series["BDTron"].Points.AddXY("ATTT ", 700);
-            BDTron.Series["BDTron"].Points.AddXY("ANQP ", 1100);
+            try
+            {
+                string connectionString = Properties.Settings.Default.connectionString;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT DISTINCT Nganh, COUNT(*) AS SoLuong FROM congviec GROUP BY Nganh"; 
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                BDCot.Series["BDCot"].Points.Clear();
+                                BDTron.Series["BDTron"].Points.Clear();
+                                while (reader.Read())
+                                {
+                                    string nganh = reader.GetString(0);
+                                    int soLuong = reader.GetInt32(1);
+                                    BDCot.Series["BDCot"].Points.AddXY(nganh, soLuong);
+                                    BDTron.Series["BDTron"].Points.AddXY(nganh, soLuong); 
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No data found in the 'congviec' table!");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error connecting to database: " + ex.Message);
+            }
         }
     }
 }
