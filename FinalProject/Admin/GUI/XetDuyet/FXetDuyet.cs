@@ -16,5 +16,22 @@ namespace FinalProject.Admin.GUI.XetDuyet
         {
             InitializeComponent();
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUngVien_Click(object sender, EventArgs e)
+        {
+            FXetDuyetUngVien fXetDuyetUngVien = new FXetDuyetUngVien();
+            fXetDuyetUngVien.ShowDialog();
+        }
+
+        private void btnCongTy_Click(object sender, EventArgs e)
+        {
+            FXetDuyetCongTy fXetDuyetCongTy = new FXetDuyetCongTy();
+            fXetDuyetCongTy.ShowDialog();
+        }
     }
 }
