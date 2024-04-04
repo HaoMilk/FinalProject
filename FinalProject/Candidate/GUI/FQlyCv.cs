@@ -63,6 +63,7 @@ namespace FinalProject.Candidate.GUI
                 ucCvCard.Id = listCV[i].Id;
                 ucCvCard.CvName = listCV[i].Ten;
                 ucCvCard.LastUpdatedTime = listCV[i].UpdatedTime ?? DateTime.Now;
+                ucCvCard.CvClick += button_View_Click;
                 //ucCvCard.ScaleSize(0.5f);
 
                 ucCvCards.Add(ucCvCard);
@@ -99,6 +100,16 @@ namespace FinalProject.Candidate.GUI
             {
                 button_TimKiem_Click(this, EventArgs.Empty);
             }
+        }
+
+        private void button_View_Click(object sender, EventArgs e)
+        {
+            FTaoCv fTaoCv = new FTaoCv();
+            fTaoCv.Id = (sender as UCCvCard).Id;
+            fTaoCv.ShowDialog();
+
+            // Reload data after update
+            this.FQlyCv_Load(this, EventArgs.Empty);
         }
     }
 }
