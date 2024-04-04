@@ -37,13 +37,10 @@
             this.comboBox_Status = new System.Windows.Forms.ComboBox();
             this.label_Ten = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel_Top = new System.Windows.Forms.Panel();
-            this.button_Close = new System.Windows.Forms.Button();
             this.panelLeft.SuspendLayout();
             this.panelFilter.SuspendLayout();
             this.groupBox_TenTrangThai.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel_Top.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -55,7 +52,7 @@
             this.panelLeft.Location = new System.Drawing.Point(3, 2);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(727, 684);
+            this.panelLeft.Size = new System.Drawing.Size(670, 730);
             this.panelLeft.TabIndex = 0;
             // 
             // flowLayoutPanel_Data
@@ -63,20 +60,20 @@
             this.flowLayoutPanel_Data.AutoScroll = true;
             this.flowLayoutPanel_Data.BackColor = System.Drawing.Color.Azure;
             this.flowLayoutPanel_Data.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(0, 104);
+            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(0, 98);
             this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
-            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(727, 530);
+            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(670, 585);
             this.flowLayoutPanel_Data.TabIndex = 1;
             // 
             // ucPagination
             // 
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(0, 634);
+            this.ucPagination.Location = new System.Drawing.Point(0, 683);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(727, 50);
+            this.ucPagination.Size = new System.Drawing.Size(670, 47);
             this.ucPagination.TabIndex = 0;
             this.ucPagination.TotalRecord = 20;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
@@ -90,7 +87,7 @@
             this.panelFilter.Location = new System.Drawing.Point(0, 0);
             this.panelFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFilter.Name = "panelFilter";
-            this.panelFilter.Size = new System.Drawing.Size(727, 104);
+            this.panelFilter.Size = new System.Drawing.Size(670, 98);
             this.panelFilter.TabIndex = 0;
             // 
             // groupBox_TenTrangThai
@@ -101,11 +98,11 @@
             this.groupBox_TenTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_TenTrangThai.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_TenTrangThai.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_TenTrangThai.Location = new System.Drawing.Point(0, 38);
+            this.groupBox_TenTrangThai.Location = new System.Drawing.Point(0, 36);
             this.groupBox_TenTrangThai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox_TenTrangThai.Name = "groupBox_TenTrangThai";
-            this.groupBox_TenTrangThai.Padding = new System.Windows.Forms.Padding(25, 5, 25, 5);
-            this.groupBox_TenTrangThai.Size = new System.Drawing.Size(727, 66);
+            this.groupBox_TenTrangThai.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
+            this.groupBox_TenTrangThai.Size = new System.Drawing.Size(670, 62);
             this.groupBox_TenTrangThai.TabIndex = 0;
             this.groupBox_TenTrangThai.TabStop = false;
             this.groupBox_TenTrangThai.Text = "Trạng thái";
@@ -122,9 +119,9 @@
             "Đã ứng tuyển",
             "NTD đã xem hồ sơ",
             "Hồ sơ phù hợp"});
-            this.comboBox_Status.Location = new System.Drawing.Point(25, 26);
+            this.comboBox_Status.Location = new System.Drawing.Point(22, 26);
             this.comboBox_Status.Name = "comboBox_Status";
-            this.comboBox_Status.Size = new System.Drawing.Size(677, 32);
+            this.comboBox_Status.Size = new System.Drawing.Size(626, 32);
             this.comboBox_Status.TabIndex = 0;
             // 
             // label_Ten
@@ -135,7 +132,7 @@
             this.label_Ten.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_Ten.Location = new System.Drawing.Point(0, 0);
             this.label_Ten.Name = "label_Ten";
-            this.label_Ten.Size = new System.Drawing.Size(727, 38);
+            this.label_Ten.Size = new System.Drawing.Size(670, 36);
             this.label_Ten.TabIndex = 0;
             this.label_Ten.Text = "CÔNG VIỆC ĐÃ ỨNG TUYỂN";
             this.label_Ten.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,65 +144,35 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.Controls.Add(this.panelLeft, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 50);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(733, 688);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 645F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(676, 734);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // panel_Top
-            // 
-            this.panel_Top.BackColor = System.Drawing.Color.Transparent;
-            this.panel_Top.Controls.Add(this.button_Close);
-            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Top.Location = new System.Drawing.Point(20, 10);
-            this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
-            this.panel_Top.Size = new System.Drawing.Size(733, 40);
-            this.panel_Top.TabIndex = 6;
-            // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(689, 5);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(44, 25);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
             // FDanhSachDaUT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(773, 758);
+            this.ClientSize = new System.Drawing.Size(676, 784);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.panel_Top);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDanhSachDaUT";
-            this.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = "Danh sách việc làm đã ứng tuyển";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachDaUT_Load);
+            this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             this.panelLeft.ResumeLayout(false);
             this.panelFilter.ResumeLayout(false);
             this.groupBox_TenTrangThai.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel_Top.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,8 +185,6 @@
         private System.Windows.Forms.Panel panelFilter;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Data;
         private System.Windows.Forms.ComboBox comboBox_Status;
-        private System.Windows.Forms.Panel panel_Top;
-        private System.Windows.Forms.Button button_Close;
         private FinalProject.UC.UCPagination ucPagination;
     }
 }

@@ -5,6 +5,7 @@ using FinalProject.Common.BUS;
 using FinalProject.Company;
 using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,16 +18,12 @@ using System.Windows.Forms;
 
 namespace FinalProject
 {
-    public partial class Form_DangNhap : Form
+    public partial class Form_DangNhap : UCForm
     {
         private UngVienBUS ungVienBUS = new UngVienBUS();
         public Form_DangNhap()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void button_DangNhap_Click(object sender, EventArgs e)

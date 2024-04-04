@@ -122,6 +122,12 @@
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,7 @@
     <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
@@ -266,6 +273,12 @@
     <Compile Include="UC\UCCvCard.Designer.cs">
       <DependentUpon>UCCvCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\UCForm.Designer.cs">
+      <DependentUpon>UCForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCMenuCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -337,6 +350,9 @@
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
       <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +407,9 @@
     <EmbeddedResource Include="UC\UCCvCard.resx">
       <DependentUpon>UCCvCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCForm.resx">
+      <DependentUpon>UCForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,6 +463,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Admin\Chart\" />
     <Folder Include="Company\GUI\Ho so\" />
     <Folder Include="Company\UC\" />
   </ItemGroup>
@@ -760,6 +780,17 @@
     <None Include="Resources\work.jpg" />
     <None Include="Resources\jobs.png" />
     <None Include="Resources\companyicon.jpg" />
+    <None Include="Resources\4171344.jpg" />
+    <None Include="Resources\flat-lay-desk-arrangement-with-copy-space-min.jpg" />
+    <None Include="Resources\3d-casual-life-man-chatting-remotely-with-female-colleague.png" />
+    <None Include="Resources\pngtree-the-internet-technology-data-network-data-picture-image_939245.jpg" />
+    <None Include="Resources\network-process-of-finding-applicants-and-recruitment.gif" />
+    <None Include="Resources\daily-resumes-of-candidates-for-recruitment.png" />
+    <None Include="Resources\360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl.jpg" />
+    <None Include="Resources\char_icon.png" />
+    <None Include="Resources\chart_icon_1.jpg" />
+    <None Include="Resources\chart_icon_11.jpg" />
+    <None Include="Resources\CANDIDATE_ICON.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

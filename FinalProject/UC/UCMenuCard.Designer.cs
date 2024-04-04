@@ -43,16 +43,18 @@
             this.tableLayoutPanel1.Controls.Add(this.button_View, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_Image, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 13);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(180, 130);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(274, 174);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // button_View
             // 
+            this.button_View.AutoEllipsis = true;
             this.button_View.BackColor = System.Drawing.Color.Cornsilk;
             this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_View.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -61,9 +63,10 @@
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_View.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_View.ForeColor = System.Drawing.Color.Orange;
-            this.button_View.Location = new System.Drawing.Point(3, 68);
+            this.button_View.Location = new System.Drawing.Point(4, 91);
+            this.button_View.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(174, 59);
+            this.button_View.Size = new System.Drawing.Size(266, 79);
             this.button_View.TabIndex = 0;
             this.button_View.Text = "Menu";
             this.button_View.UseVisualStyleBackColor = false;
@@ -74,25 +77,27 @@
             this.pictureBox_Image.BackgroundImage = global::FinalProject.Properties.Resources.icons8_name_96;
             this.pictureBox_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox_Image.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox_Image.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox_Image.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(174, 59);
+            this.pictureBox_Image.Size = new System.Drawing.Size(266, 79);
             this.pictureBox_Image.TabIndex = 1;
             this.pictureBox_Image.TabStop = false;
             // 
             // UCMenuCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.tableLayoutPanel1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(10);
+            this.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(13, 13, 13, 13);
             this.Name = "UCMenuCard";
-            this.Padding = new System.Windows.Forms.Padding(10);
-            this.Size = new System.Drawing.Size(200, 150);
+            this.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.Size = new System.Drawing.Size(300, 200);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).EndInit();
             this.ResumeLayout(false);

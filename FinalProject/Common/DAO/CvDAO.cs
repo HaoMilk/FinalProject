@@ -162,17 +162,35 @@ namespace FinalProject.Common.DAO
                 string query = $@"
                     UPDATE CV 
                     SET Ten = @Ten, 
-                        MoTa = @MoTa, 
                         Link = @Link, 
+                        MoTa = @MoTa,
                         TrangThai = @TrangThai, 
+                        ViTriUngTuyen = @ViTriUngTuyen, 
+                        KyNang = @KyNang,
+                        NgoaiNgu = @NgoaiNgu,
+                        TinHoc = @TinHoc,
+                        HocVan = @HocVan,
+                        HoatDong = @HoatDong,
+                        ChungChi = @ChungChi,
+                        MucTieu = @MucTieu,
+                        KinhNghiem = @KinhNghiem,
                         UpdatedTime = @UpdatedTime 
                     WHERE Id = @Id;";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 cmd.Parameters.AddWithValue("@Ten", cv.Ten);
-                cmd.Parameters.AddWithValue("@MoTa", cv.MoTa);
                 cmd.Parameters.AddWithValue("@Link", cv.Link);
+                cmd.Parameters.AddWithValue("@MoTa", cv.MoTa);               
                 cmd.Parameters.AddWithValue("@TrangThai", cv.TrangThai);
+                cmd.Parameters.AddWithValue("@ViTriUngTuyen", cv.ViTriUngTuyen);
+                cmd.Parameters.AddWithValue("@KyNang", cv.KyNang);
+                cmd.Parameters.AddWithValue("@NgoaiNgu", cv.NgoaiNgu);
+                cmd.Parameters.AddWithValue("@TinHoc", cv.TinHoc);
+                cmd.Parameters.AddWithValue("@HocVan", cv.HocVan);
+                cmd.Parameters.AddWithValue("@HoatDong", cv.HoatDong);
+                cmd.Parameters.AddWithValue("@ChungChi", cv.ChungChi);
+                cmd.Parameters.AddWithValue("@MucTieu", cv.MucTieu);
+                cmd.Parameters.AddWithValue("@KinhNghiem", cv.KinhNghiem);
                 cmd.Parameters.AddWithValue("@UpdatedTime", cv.UpdatedTime);
                 cmd.Parameters.AddWithValue("@Id", cv.Id);
 

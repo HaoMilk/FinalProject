@@ -1,6 +1,8 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,18 +15,13 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FChiTietCv : Form
+    public partial class FChiTietCv : UCForm
     {
         private CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
         private UngTuyen ungTuyen = new UngTuyen();
         private UngTuyenDAO ungTuyenDto = new UngTuyenDAO();
-        private UngVien ungVien = new UngVien()
-        {
-            Id = 1,
-            HoTen = "Vi Quốc Thuận",
-        };
 
         private int id;
         private int? ungTuyenId;
@@ -78,10 +75,6 @@ namespace FinalProject.Candidate.GUI
         public FChiTietCv()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
 
@@ -115,7 +108,7 @@ namespace FinalProject.Candidate.GUI
         {
             FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
             fUngTuyenCongViec.CongViec = congViec;
-            fUngTuyenCongViec.UngVien = ungVien;
+            fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
             fUngTuyenCongViec.ShowDialog();
         }
 

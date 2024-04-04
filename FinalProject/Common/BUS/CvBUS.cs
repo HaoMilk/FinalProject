@@ -53,13 +53,28 @@ namespace FinalProject.Common.BUS
             return cvDAO.Add(cv);
         }
 
-        public int Update(int id, string trangThai, string moTa)
+        public int Update(int id, string ten, int ungVienId, string link,
+            string moTa, string trangThai, string viTriUngTuyen, string kyNang,
+            string ngoaiNgu, string tinHoc, string hocVan, string hoatDong, 
+            string chungChi, string mucTieu, string kinhNghiem)
         {
             var cv = new CV()
             {
                 Id = id,
-                TrangThai = trangThai,
+                Ten = ten,
+                UngVienId = ungVienId,
+                Link = link,
                 MoTa = moTa,
+                TrangThai = trangThai,
+                ViTriUngTuyen = viTriUngTuyen,
+                KyNang = kyNang,
+                NgoaiNgu = ngoaiNgu,
+                TinHoc = tinHoc,
+                HocVan = hocVan,
+                HoatDong = hoatDong,
+                ChungChi = chungChi,
+                MucTieu = mucTieu,
+                KinhNghiem = kinhNghiem,
                 UpdatedTime = DateTime.Now
             };
 

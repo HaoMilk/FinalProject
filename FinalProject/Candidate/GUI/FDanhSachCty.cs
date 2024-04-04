@@ -11,15 +11,11 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FDanhSachCty : Form
+    public partial class FDanhSachCty : UCForm
     {
         public FDanhSachCty()
         {
             InitializeComponent();
-
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
-            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void FDanhSachCty_Load(object sender, EventArgs e)
@@ -59,11 +55,6 @@ namespace FinalProject.Candidate.GUI
             return UCCtyCards;
         }
         #endregion JobList
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
