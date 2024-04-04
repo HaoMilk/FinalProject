@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Admin.UC
+namespace FinalProject.Admin.GUI.XetDuyet
 {
-    public partial class UCXetDuyet : UserControl
+    public partial class FXetDuyetCongTy : Form
     {
-        public UCXetDuyet()
+        public FXetDuyetCongTy()
         {
             InitializeComponent();
         }
