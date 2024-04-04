@@ -41,12 +41,11 @@
             this.chỉnhSửaCôngTyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TaiKhoanMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.tsM_ThongKe = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
-            this.ucMenuCard1 = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_XetDuyet = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_ThongKe = new FinalProject.UC.UCMenuCard();
             this.menuStrip_MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +58,8 @@
             this.menu_ViecLam,
             this.menu_HoSo,
             this.menu_CongTy,
-            this.tsM_ThongKe});
+            this.tsM_ThongKe,
+            this.toolStripMenuItem1});
             this.menuStrip_MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_MenuStrip.Name = "menuStrip_MenuStrip";
             this.menuStrip_MenuStrip.Padding = new System.Windows.Forms.Padding(14, 4, 0, 4);
@@ -176,10 +176,6 @@
             // 
             // tsM_ThongKe
             // 
-            this.tsM_ThongKe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
             this.tsM_ThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsM_ThongKe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tsM_ThongKe.Name = "tsM_ThongKe";
@@ -187,29 +183,14 @@
             this.tsM_ThongKe.Text = "Thống kê";
             this.tsM_ThongKe.Click += new System.EventHandler(this.tsM_ThongKe_Click);
             // 
-            // toolStripMenuItem2
+            // toolStripMenuItem1
             // 
-            this.toolStripMenuItem2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(286, 28);
-            this.toolStripMenuItem2.Text = "Danh sách công ty";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.toolStripMenuItem3.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(286, 28);
-            this.toolStripMenuItem3.Text = "Chỉnh sửa công ty";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.toolStripMenuItem4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(286, 28);
-            this.toolStripMenuItem4.Text = "Tài khoản và mật khẩu";
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(101, 27);
+            this.toolStripMenuItem1.Text = "Xét duyệt";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // label1
             // 
@@ -233,37 +214,58 @@
             this.pictureBox_Image.TabIndex = 4;
             this.pictureBox_Image.TabStop = false;
             // 
-            // ucMenuCard1
+            // ucMenuCard_XetDuyet
             // 
-            this.ucMenuCard1.BackColor = System.Drawing.Color.Azure;
-            this.ucMenuCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMenuCard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucMenuCard1.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
-            this.ucMenuCard1.ButtonTextColor = System.Drawing.Color.RoyalBlue;
-            this.ucMenuCard1.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMenuCard1.Id = 0;
-            this.ucMenuCard1.Location = new System.Drawing.Point(41, 71);
-            this.ucMenuCard1.Margin = new System.Windows.Forms.Padding(13);
-            this.ucMenuCard1.MenuImage = global::FinalProject.Properties.Resources.char_icon;
-            this.ucMenuCard1.MenuName = "THỐNG KÊ";
-            this.ucMenuCard1.Name = "ucMenuCard1";
-            this.ucMenuCard1.Padding = new System.Windows.Forms.Padding(13);
-            this.ucMenuCard1.Size = new System.Drawing.Size(182, 137);
-            this.ucMenuCard1.TabIndex = 6;
-            this.ucMenuCard1.MenuClick += new System.EventHandler(this.ucMenuCard1_MenuClick);
+            this.ucMenuCard_XetDuyet.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_XetDuyet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_XetDuyet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_XetDuyet.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_XetDuyet.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_XetDuyet.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_XetDuyet.Id = 0;
+            this.ucMenuCard_XetDuyet.Location = new System.Drawing.Point(249, 71);
+            this.ucMenuCard_XetDuyet.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_XetDuyet.MenuImage = global::FinalProject.Properties.Resources.icons8_profiles_96;
+            this.ucMenuCard_XetDuyet.MenuName = "XÉT DUYỆT";
+            this.ucMenuCard_XetDuyet.Name = "ucMenuCard_XetDuyet";
+            this.ucMenuCard_XetDuyet.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_XetDuyet.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_XetDuyet.TabIndex = 7;
+            this.ucMenuCard_XetDuyet.MenuClick += new System.EventHandler(this.ucMenuCard_XetDuyet_MenuClick);
+            // 
+            // ucMenuCard_ThongKe
+            // 
+            this.ucMenuCard_ThongKe.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_ThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_ThongKe.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_ThongKe.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_ThongKe.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_ThongKe.Id = 0;
+            this.ucMenuCard_ThongKe.Location = new System.Drawing.Point(41, 71);
+            this.ucMenuCard_ThongKe.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_ThongKe.MenuImage = global::FinalProject.Properties.Resources.char_icon;
+            this.ucMenuCard_ThongKe.MenuName = "THỐNG KÊ";
+            this.ucMenuCard_ThongKe.Name = "ucMenuCard_ThongKe";
+            this.ucMenuCard_ThongKe.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_ThongKe.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_ThongKe.TabIndex = 6;
+            this.ucMenuCard_ThongKe.MenuClick += new System.EventHandler(this.ucMenuCard1_MenuClick);
             // 
             // FAdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 412);
-            this.Controls.Add(this.ucMenuCard1);
+            this.Controls.Add(this.ucMenuCard_XetDuyet);
+            this.Controls.Add(this.ucMenuCard_ThongKe);
             this.Controls.Add(this.pictureBox_Image);
             this.Controls.Add(this.menuStrip_MenuStrip);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FAdminHomePage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAdminHomePage";
             this.menuStrip_MenuStrip.ResumeLayout(false);
             this.menuStrip_MenuStrip.PerformLayout();
@@ -290,9 +292,8 @@
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanUngVien;
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsM_ThongKe;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private UC.UCMenuCard ucMenuCard1;
+        private UC.UCMenuCard ucMenuCard_ThongKe;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private UC.UCMenuCard ucMenuCard_XetDuyet;
     }
 }

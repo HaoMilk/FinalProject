@@ -3,6 +3,7 @@ using FinalProject.Admin.GUI;
 using FinalProject.Admin.GUI.CongTy;
 using FinalProject.Admin.GUI.CongViec;
 using FinalProject.Admin.GUI.UngVien;
+using FinalProject.Admin.XetDuyet;
 using FinalProject.Candidate.GUI;
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
@@ -100,5 +101,25 @@ namespace FinalProject.Admin
         }
 
         #endregion ThongKe
+
+        #region XetDuyet
+        private void OpenXetDuyet()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FXetDuyet fXetDuyet = new FXetDuyet();
+            fXetDuyet.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        private void ucMenuCard_XetDuyet_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenXetDuyet();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.OpenXetDuyet();
+        }
+        #endregion XetDuyet
     }
 }

@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label_DSCongTy = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.BDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.BDCot = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -50,10 +53,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.BDCot = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.BDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label_DSCongTy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,16 +62,16 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCot)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BDCot)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -91,7 +92,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
             this.splitContainer1.Panel2.Controls.Add(this.panel3);
             this.splitContainer1.Size = new System.Drawing.Size(1416, 994);
-            this.splitContainer1.SplitterDistance = 268;
+            this.splitContainer1.SplitterDistance = 271;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel2
@@ -102,7 +103,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 137);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(268, 857);
+            this.panel2.Size = new System.Drawing.Size(271, 857);
             this.panel2.TabIndex = 1;
             // 
             // button2
@@ -113,7 +114,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(0, 64);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 64);
+            this.button2.Size = new System.Drawing.Size(271, 64);
             this.button2.TabIndex = 1;
             this.button2.Text = "BÁO CÁO";
             this.button2.UseVisualStyleBackColor = false;
@@ -126,7 +127,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 64);
+            this.button1.Size = new System.Drawing.Size(271, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "DASHBOARD";
             this.button1.UseVisualStyleBackColor = false;
@@ -137,7 +138,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 137);
+            this.panel1.Size = new System.Drawing.Size(271, 137);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -149,32 +150,77 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 137);
+            this.pictureBox1.Size = new System.Drawing.Size(271, 137);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel3
+            // panel8
             // 
-            this.panel3.Controls.Add(this.label_DSCongTy);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1144, 65);
-            this.panel3.TabIndex = 0;
+            this.panel8.Controls.Add(this.groupBox4);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(0, 389);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1141, 605);
+            this.panel8.TabIndex = 4;
             // 
-            // label_DSCongTy
+            // groupBox4
             // 
-            this.label_DSCongTy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
-            this.label_DSCongTy.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_DSCongTy.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.Info;
-            this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
-            this.label_DSCongTy.Name = "label_DSCongTy";
-            this.label_DSCongTy.Size = new System.Drawing.Size(1144, 65);
-            this.label_DSCongTy.TabIndex = 11;
-            this.label_DSCongTy.Text = "TRANG CHỦ";
-            this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_DSCongTy.UseCompatibleTextRendering = true;
+            this.groupBox4.Controls.Add(this.BDTron);
+            this.groupBox4.Controls.Add(this.BDCot);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Constantia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(1141, 605);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "TỔNG QUÁT NHU CẦU VIỆC LÀM";
+            // 
+            // BDTron
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.BDTron.ChartAreas.Add(chartArea3);
+            this.BDTron.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.BDTron.Legends.Add(legend3);
+            this.BDTron.Location = new System.Drawing.Point(611, 32);
+            this.BDTron.Name = "BDTron";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.LegendText = "Biểu đồ tròn";
+            series3.Name = "BDTron";
+            this.BDTron.Series.Add(series3);
+            this.BDTron.Size = new System.Drawing.Size(527, 570);
+            this.BDTron.TabIndex = 1;
+            this.BDTron.Text = "chart1";
+            title3.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            title3.Name = "Title1";
+            title3.Text = "TỈ TRỌNG CÁC NGÀNH";
+            this.BDTron.Titles.Add(title3);
+            // 
+            // BDCot
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.BDCot.ChartAreas.Add(chartArea4);
+            this.BDCot.Dock = System.Windows.Forms.DockStyle.Left;
+            legend4.Name = "Legend1";
+            this.BDCot.Legends.Add(legend4);
+            this.BDCot.Location = new System.Drawing.Point(3, 32);
+            this.BDCot.Name = "BDCot";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.LegendText = "Biểu đồ cột";
+            series4.Name = "BDCot";
+            this.BDCot.Series.Add(series4);
+            this.BDCot.Size = new System.Drawing.Size(608, 570);
+            this.BDCot.TabIndex = 0;
+            this.BDCot.Text = "chart1";
+            title4.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            title4.Name = "Title1";
+            title4.Text = "SỐ LƯỢNG CÔNG VIỆC ";
+            this.BDCot.Titles.Add(title4);
             // 
             // panel4
             // 
@@ -183,7 +229,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 65);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1144, 324);
+            this.panel4.Size = new System.Drawing.Size(1141, 324);
             this.panel4.TabIndex = 3;
             // 
             // groupBox1
@@ -191,12 +237,12 @@
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.panel5);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1144, 324);
+            this.groupBox1.Size = new System.Drawing.Size(1141, 324);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TỔNG QUAN";
@@ -208,7 +254,7 @@
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(571, 32);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(570, 289);
+            this.groupBox3.Size = new System.Drawing.Size(567, 289);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Số công việc hiện tại";
@@ -221,7 +267,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 32);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(564, 254);
+            this.panel7.Size = new System.Drawing.Size(561, 254);
             this.panel7.TabIndex = 0;
             // 
             // panel5
@@ -258,69 +304,28 @@
             this.panel6.Size = new System.Drawing.Size(560, 252);
             this.panel6.TabIndex = 0;
             // 
-            // panel8
+            // panel3
             // 
-            this.panel8.Controls.Add(this.groupBox4);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 414);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1144, 580);
-            this.panel8.TabIndex = 4;
+            this.panel3.Controls.Add(this.label_DSCongTy);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1141, 65);
+            this.panel3.TabIndex = 0;
             // 
-            // groupBox4
+            // label_DSCongTy
             // 
-            this.groupBox4.Controls.Add(this.BDTron);
-            this.groupBox4.Controls.Add(this.BDCot);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Constantia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1144, 580);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "TỔNG QUÁT NHU CẦU VIỆC LÀM";
-            // 
-            // BDCot
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.BDCot.ChartAreas.Add(chartArea2);
-            this.BDCot.Dock = System.Windows.Forms.DockStyle.Left;
-            legend2.Name = "Legend1";
-            this.BDCot.Legends.Add(legend2);
-            this.BDCot.Location = new System.Drawing.Point(3, 32);
-            this.BDCot.Name = "BDCot";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.LegendText = "Biểu đồ cột";
-            series2.Name = "BDCot";
-            this.BDCot.Series.Add(series2);
-            this.BDCot.Size = new System.Drawing.Size(608, 545);
-            this.BDCot.TabIndex = 0;
-            this.BDCot.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            title1.Name = "Title1";
-            title1.Text = "THỐNG KÊ VIỆC LÀM";
-            this.BDCot.Titles.Add(title1);
-            // 
-            // BDTron
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.BDTron.ChartAreas.Add(chartArea1);
-            this.BDTron.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.BDTron.Legends.Add(legend1);
-            this.BDTron.Location = new System.Drawing.Point(611, 32);
-            this.BDTron.Name = "BDTron";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Biểu đồ tròn";
-            series1.Name = "BDTron";
-            this.BDTron.Series.Add(series1);
-            this.BDTron.Size = new System.Drawing.Size(530, 545);
-            this.BDTron.TabIndex = 1;
-            this.BDTron.Text = "chart1";
+            this.label_DSCongTy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.label_DSCongTy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_DSCongTy.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.Info;
+            this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
+            this.label_DSCongTy.Name = "label_DSCongTy";
+            this.label_DSCongTy.Size = new System.Drawing.Size(1141, 65);
+            this.label_DSCongTy.TabIndex = 11;
+            this.label_DSCongTy.Text = "TRANG CHỦ";
+            this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_DSCongTy.UseCompatibleTextRendering = true;
             // 
             // FThongKe
             // 
@@ -331,6 +336,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThongKe";
             this.Load += new System.EventHandler(this.FThongKe_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -340,16 +346,16 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BDCot)).EndInit();
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BDCot)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
