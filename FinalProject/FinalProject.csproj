@@ -158,11 +158,17 @@
     <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.Designer.cs">
       <DependentUpon>FXetDuyet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\UC\UCXetDuyet.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\UC\UCXetDuyet.Designer.cs">
-      <DependentUpon>UCXetDuyet.cs</DependentUpon>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.Designer.cs">
+      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
+      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
@@ -381,8 +387,11 @@
     <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyet.resx">
       <DependentUpon>FXetDuyet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\UC\UCXetDuyet.resx">
-      <DependentUpon>UCXetDuyet.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.resx">
+      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.resx">
+      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
