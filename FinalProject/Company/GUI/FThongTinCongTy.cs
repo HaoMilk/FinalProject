@@ -23,29 +23,29 @@ namespace FinalProject.Company.GUI.Thong_tin
         private void button_Luu_Click(object sender, EventArgs e)
         {
             var ID = int.Parse(textBox_ID.Text);
-            var PassWord = textBox_Pass.Text;
             var Email = textBox_Email.Text;
-            var MST = textBox_TenCTy.Text;
-            var Ten = textBox_ID.Text;
-            var DiaChi = textBox_Pass.Text;
-            var TenCEO = textBox_Email.Text;
-            cty_BUS.Add(ID, PassWord, Email, Ten, DiaChi, TenCEO, MST);
+            var MST = textBox_MST.Text;
+            var Ten = textBox_TenCTy.Text;
+            var DiaChi = textBox_DiaChi.Text;
+            var TenCEO = textBox_CEO.Text;
+            cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
         {
             var ID = int.Parse(textBox_ID.Text);
-            var PassWord = textBox_Pass.Text;
             var Email = textBox_Email.Text;
-            var MST = textBox_TenCTy.Text;
-            var Ten = textBox_ID.Text;
-            var DiaChi = textBox_Pass.Text;
-            var TenCEO = textBox_Email.Text;
-            cty_BUS.Update(ID, PassWord, Email, Ten, DiaChi, TenCEO, MST);
+            var MST = textBox_MST.Text;
+            var Ten = textBox_TenCTy.Text;
+            var DiaChi = textBox_DiaChi.Text;
+            var TenCEO = textBox_CEO.Text;
+            cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
         }
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
+            var ID = int.Parse(textBox_ID.Text);
+            cty_BUS.Delete(ID);
 
         }
     }
