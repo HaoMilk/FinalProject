@@ -1032,6 +1032,16 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Template_Stylish_teaching_resume {
+            get {
+                object obj = ResourceManager.GetObject("Template_Stylish_teaching_resume", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap tester_female_24 {
