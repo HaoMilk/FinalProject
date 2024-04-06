@@ -22,7 +22,7 @@ namespace FinalProject.Common.BUS
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
-            ct.Diachi = dichi;
+            ct.DiaChi = dichi;
             ct.CEO = ceo;
             ct.CreatedTime = DateTime.Now;
             ct.UpdatedTime = DateTime.Now;
@@ -36,7 +36,7 @@ namespace FinalProject.Common.BUS
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
-            ct.Diachi = dichi;
+            ct.DiaChi = dichi;
             ct.CEO = ceo;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
@@ -60,6 +60,11 @@ namespace FinalProject.Common.BUS
         public CongTy GetById(int id)
         {
             return congTyDAO.GetById(id);
+        }
+
+        public List<CongTy> GetAll()
+        {
+            return congTyDAO.GetAll();
         }
     }
 }

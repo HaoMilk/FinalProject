@@ -1,4 +1,6 @@
-﻿using FinalProject.UC;
+﻿using FinalProject.Common.BUS;
+using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,9 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachCty : UCForm
     {
+        private List<CongTy> _listCongTy = new List<CongTy>();
+        private CongTyBUS _congTyBUS = new CongTyBUS();
+
         public FDanhSachCty()
         {
             InitializeComponent();
@@ -20,17 +25,23 @@ namespace FinalProject.Candidate.GUI
 
         private void FDanhSachCty_Load(object sender, EventArgs e)
         {
-            InitListCongTy();
+            _listCongTy = _congTyBUS.GetAll();
+            ucPagination.TotalRecord = _listCongTy.Count;
+            LoadListCongTy();
         }
 
-        #region JobList
-        private void InitListCongTy()
+        private void LoadListCongTy()
         {
-            var quantity = ucPagination.PageSize;
-            var start = ucPagination.StartRecord;
-            var end = ucPagination.EndRecord;
+            List<UCCtyCard> UCCtyCards = new List<UCCtyCard>();
+            for (int i = 0; i < _listCongTy.Count; i++)
+            {
+                UCCtyCard ctyCard = new UCCtyCard();
+                ctyCard.Id = _listCongTy[i].ID;
+                ctyCard.Name = _listCongTy[i].TenCongTy;
+                ctyCard.Address = _listCongTy[i].DiaChi;
 
-            var UCCtyCards = CreateCongTyList(quantity);
+                UCCtyCards.Add(ctyCard);
+            }
             flowLayoutPanel_DanhSach.Controls.Clear();
 
             foreach (var UCCtyCard in UCCtyCards)
@@ -39,22 +50,6 @@ namespace FinalProject.Candidate.GUI
             }
             this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + UCCtyCards.Count;
         }
-
-        private List<UCCtyCard> CreateCongTyList(int quantity)
-        {
-            List<UCCtyCard> UCCtyCards = new List<UCCtyCard>();
-            for (int i = 0; i < quantity; i++)
-            {
-                UCCtyCard ctyCard = new UCCtyCard();
-                ctyCard.Id = (i + 1);
-                ctyCard.Name = $"Công ty {i + 1}";
-                ctyCard.Description = $"Giới thiệu về công ty {i + 1}";
-
-                UCCtyCards.Add(ctyCard);
-            }
-            return UCCtyCards;
-        }
-        #endregion JobList
 
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
