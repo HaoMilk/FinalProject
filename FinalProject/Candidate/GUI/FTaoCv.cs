@@ -1,8 +1,10 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Helper;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
@@ -20,6 +22,7 @@ namespace FinalProject.Candidate.GUI
             {
                 id = value;
                 _cv = _cvBus.GetById(id);
+                this.button_Export.Enabled = true;
                 this.LoadData();
             }
         }
@@ -60,8 +63,9 @@ namespace FinalProject.Candidate.GUI
             }
             if (result > 0)
             {
+                this.Id = Id;
                 MessageBox.Show("Lưu thành công");
-                this.Close();
+                //this.Close();
             }
             else
             {
@@ -98,6 +102,20 @@ namespace FinalProject.Candidate.GUI
                 textBox_ChungChi.Text = _cv.ChungChi;
                 richTextBox_MucTieu.Text = _cv.MucTieu;
                 richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
+            }
+        }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+            var filePath = WordHelper.ExportCV(this._cv, LoggedUser.UngVien);
+
+            if (!string.IsNullOrEmpty(filePath))
+            {
+                Process.Start(filePath);
+            }
+            else
+            {
+                MessageBox.Show("Xuất file thất bại");
             }
         }
     }
