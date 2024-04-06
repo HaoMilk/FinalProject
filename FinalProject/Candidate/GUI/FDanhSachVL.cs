@@ -71,7 +71,6 @@ namespace FinalProject.Candidate.GUI
             {
                 flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
             }
-            this.label_SoLuongViecLam.Text = "Số lượng việc làm: " + ucJobCards.Count;
         }
         #endregion JobList
 
