@@ -45,7 +45,6 @@ namespace FinalProject.Candidate.GUI
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.ucPagination = new FinalProject.UC.UCPagination();
-            this.label_SoLuongViecLam = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
@@ -207,7 +206,6 @@ namespace FinalProject.Candidate.GUI
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
             this.panel3.Controls.Add(this.ucPagination);
-            this.panel3.Controls.Add(this.label_SoLuongViecLam);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(307, 50);
             this.panel3.Name = "panel3";
@@ -220,10 +218,10 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 38);
+            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(9);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(639, 449);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(639, 487);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
             // 
             // ucPagination
@@ -236,20 +234,6 @@ namespace FinalProject.Candidate.GUI
             this.ucPagination.TabIndex = 0;
             this.ucPagination.TotalRecord = 15;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
-            // 
-            // label_SoLuongViecLam
-            // 
-            this.label_SoLuongViecLam.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label_SoLuongViecLam.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_SoLuongViecLam.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_SoLuongViecLam.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
-            this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
-            this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(18, 5, 18, 5);
-            this.label_SoLuongViecLam.Size = new System.Drawing.Size(639, 38);
-            this.label_SoLuongViecLam.TabIndex = 4;
-            this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
-            this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FDanhSachVL_Name
             // 
@@ -291,7 +275,6 @@ namespace FinalProject.Candidate.GUI
         private System.Windows.Forms.MenuStrip menuStrip_Filter;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label_SoLuongViecLam;
         private System.Windows.Forms.ToolStripComboBox comboBox_DiaDiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_KinhNghiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_NgheNghiep;
