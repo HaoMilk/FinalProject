@@ -63,16 +63,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl {
-            get {
-                object obj = ResourceManager.GetObject("360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _4156954 {
             get {
                 object obj = ResourceManager.GetObject("4156954", resourceCulture);
@@ -226,16 +216,6 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap csharp {
             get {
                 object obj = ResourceManager.GetObject("csharp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CỤM_LOGO_THÁNG_THANH_NIÊN {
-            get {
-                object obj = ResourceManager.GetObject("CỤM LOGO THÁNG THANH NIÊN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -734,6 +714,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap it_background {
+            get {
+                object obj = ResourceManager.GetObject("it_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap java {
             get {
                 object obj = ResourceManager.GetObject("java", resourceCulture);
@@ -814,16 +804,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap love {
-            get {
-                object obj = ResourceManager.GetObject("love", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap messenger {
             get {
                 object obj = ResourceManager.GetObject("messenger", resourceCulture);
@@ -847,16 +827,6 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap nodejs {
             get {
                 object obj = ResourceManager.GetObject("nodejs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pngtree_the_internet_technology_data_network_data_picture_image_939245 {
-            get {
-                object obj = ResourceManager.GetObject("pngtree-the-internet-technology-data-network-data-picture-image_939245", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -947,16 +917,6 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap rounded_reactangle {
             get {
                 object obj = ResourceManager.GetObject("rounded-reactangle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sass {
-            get {
-                object obj = ResourceManager.GetObject("sass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

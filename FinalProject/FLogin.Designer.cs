@@ -350,7 +350,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BackgroundImage = global::FinalProject.Properties.Resources._360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl;
+            this.BackgroundImage = global::FinalProject.Properties.Resources.it_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(782, 636);
             this.Controls.Add(this.tableLayoutPanel1);
