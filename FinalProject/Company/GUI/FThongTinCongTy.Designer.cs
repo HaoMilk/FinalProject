@@ -327,6 +327,7 @@
             this.Name = "FThongTinCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FSuaThongTin";
+            this.Load += new System.EventHandler(this.FThongTinCongTy_Load);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
