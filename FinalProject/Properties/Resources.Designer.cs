@@ -63,16 +63,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl {
-            get {
-                object obj = ResourceManager.GetObject("360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _4156954 {
             get {
                 object obj = ResourceManager.GetObject("4156954", resourceCulture);
@@ -226,16 +216,6 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap csharp {
             get {
                 object obj = ResourceManager.GetObject("csharp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CỤM_LOGO_THÁNG_THANH_NIÊN {
-            get {
-                object obj = ResourceManager.GetObject("CỤM LOGO THÁNG THANH NIÊN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -494,6 +474,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_company_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-company-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_company_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-company-96", resourceCulture);
@@ -507,6 +497,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_cv_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cv-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_delete_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-delete-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -714,6 +714,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap it_background {
+            get {
+                object obj = ResourceManager.GetObject("it_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap java {
             get {
                 object obj = ResourceManager.GetObject("java", resourceCulture);
@@ -794,16 +804,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap love {
-            get {
-                object obj = ResourceManager.GetObject("love", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap messenger {
             get {
                 object obj = ResourceManager.GetObject("messenger", resourceCulture);
@@ -827,16 +827,6 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap nodejs {
             get {
                 object obj = ResourceManager.GetObject("nodejs", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pngtree_the_internet_technology_data_network_data_picture_image_939245 {
-            get {
-                object obj = ResourceManager.GetObject("pngtree-the-internet-technology-data-network-data-picture-image_939245", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -934,16 +924,6 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sass {
-            get {
-                object obj = ResourceManager.GetObject("sass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
@@ -1018,6 +998,16 @@ namespace FinalProject.Properties {
             get {
                 object obj = ResourceManager.GetObject("techny-cybersecurity-with-password-locked-laptop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Template_Stylish_teaching_resume {
+            get {
+                object obj = ResourceManager.GetObject("Template_Stylish_teaching_resume", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

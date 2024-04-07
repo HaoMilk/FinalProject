@@ -52,7 +52,7 @@
             this.flowLayoutPanel_Data.Location = new System.Drawing.Point(20, 185);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
             this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(18, 19, 18, 19);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(788, 420);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1040, 536);
             this.flowLayoutPanel_Data.TabIndex = 12;
             // 
             // label_Name
@@ -63,7 +63,7 @@
             this.label_Name.ForeColor = System.Drawing.Color.Azure;
             this.label_Name.Location = new System.Drawing.Point(20, 50);
             this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(788, 41);
+            this.label_Name.Size = new System.Drawing.Size(1040, 41);
             this.label_Name.TabIndex = 7;
             this.label_Name.Text = "QUẢN LÝ CV";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(788, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1040, 94);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // groupBox1
@@ -91,11 +91,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(405, 11);
+            this.groupBox1.Location = new System.Drawing.Point(531, 11);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(11);
-            this.groupBox1.Size = new System.Drawing.Size(372, 71);
+            this.groupBox1.Size = new System.Drawing.Size(498, 71);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý";
@@ -114,7 +114,7 @@
             this.button_Them.Location = new System.Drawing.Point(11, 32);
             this.button_Them.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_Them.Name = "button_Them";
-            this.button_Them.Size = new System.Drawing.Size(350, 28);
+            this.button_Them.Size = new System.Drawing.Size(476, 28);
             this.button_Them.TabIndex = 7;
             this.button_Them.TabStop = false;
             this.button_Them.Text = "Thêm";
@@ -134,7 +134,7 @@
             this.groupBox_Name.Margin = new System.Windows.Forms.Padding(11);
             this.groupBox_Name.Name = "groupBox_Name";
             this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11);
-            this.groupBox_Name.Size = new System.Drawing.Size(372, 71);
+            this.groupBox_Name.Size = new System.Drawing.Size(498, 71);
             this.groupBox_Name.TabIndex = 15;
             this.groupBox_Name.TabStop = false;
             this.groupBox_Name.Text = "Tìm kiếm";
@@ -147,7 +147,7 @@
             this.button_TimKiem.FlatAppearance.BorderSize = 0;
             this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
-            this.button_TimKiem.Location = new System.Drawing.Point(312, 32);
+            this.button_TimKiem.Location = new System.Drawing.Point(438, 32);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(49, 28);
             this.button_TimKiem.TabIndex = 2;
@@ -163,7 +163,7 @@
             this.textBox_TenCv.Location = new System.Drawing.Point(11, 32);
             this.textBox_TenCv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_TenCv.Name = "textBox_TenCv";
-            this.textBox_TenCv.Size = new System.Drawing.Size(350, 28);
+            this.textBox_TenCv.Size = new System.Drawing.Size(476, 28);
             this.textBox_TenCv.TabIndex = 1;
             this.textBox_TenCv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_TenCv_KeyDown);
             // 
@@ -171,19 +171,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 605);
+            this.panel1.Location = new System.Drawing.Point(20, 721);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 19);
+            this.panel1.Size = new System.Drawing.Size(1040, 19);
             this.panel1.TabIndex = 0;
             // 
             // ucPagination
             // 
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(20, 624);
+            this.ucPagination.Location = new System.Drawing.Point(20, 740);
             this.ucPagination.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(788, 47);
+            this.ucPagination.Size = new System.Drawing.Size(1040, 47);
             this.ucPagination.TabIndex = 9;
             this.ucPagination.TotalRecord = 0;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
-            this.ClientSize = new System.Drawing.Size(828, 691);
+            this.ClientSize = new System.Drawing.Size(1080, 807);
             this.Controls.Add(this.flowLayoutPanel_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ucPagination);

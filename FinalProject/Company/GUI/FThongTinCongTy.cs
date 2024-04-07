@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,19 @@ namespace FinalProject.Company.GUI.Thong_tin
 {
     public partial class FThongTinCongTy : Form
     {
-        CongTyBUS cty_BUS = new CongTyBUS();
+        private CongTyBUS cty_BUS = new CongTyBUS();
+        private CongTy _congTy;
+        private int _id;
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                _id = value;
+                _congTy = cty_BUS.GetById(_id);
+            }
+        }
+        
         public FThongTinCongTy()
         {
             InitializeComponent();
@@ -50,6 +63,19 @@ namespace FinalProject.Company.GUI.Thong_tin
             cty_BUS.Delete(ID);
             MessageBox.Show("Xoá thành công");
 
+        }
+
+        private void FThongTinCongTy_Load(object sender, EventArgs e)
+        {
+            if (_congTy != null)
+            {
+                textBox_ID.Text = _congTy.ID.ToString();
+                textBox_Email.Text = _congTy.Email;
+                textBox_MST.Text = _congTy.MST;
+                textBox_TenCTy.Text = _congTy.TenCongTy;
+                textBox_DiaChi.Text = _congTy.DiaChi;
+                textBox_CEO.Text = _congTy.CEO;
+            }
         }
     }
 }

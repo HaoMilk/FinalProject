@@ -1,4 +1,5 @@
 ﻿using FinalProject.Candidate.GUI;
+using FinalProject.Common;
 using FinalProject.Database.Entities;
 using System;
 using System.ComponentModel;
@@ -56,7 +57,6 @@ namespace FinalProject.UC
             set
             {
                 id = value;
-                this.Invalidate();
             }
         }
 
@@ -68,7 +68,6 @@ namespace FinalProject.UC
             set
             {
                 ungTuyenId = value;
-                this.Invalidate();
             }
         }
 
@@ -229,6 +228,12 @@ namespace FinalProject.UC
         public UCJobCard()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         public Size ScaleSize(float scale)
@@ -257,12 +262,6 @@ namespace FinalProject.UC
             }
         }
 
-        private UngVien ungVien = new UngVien()
-        {
-            Id = 1,
-            HoTen = "Vi Quốc Thuận",
-        };
-
         private void button_Menu_Click(object sender, EventArgs e)
         {
             if (MenuClick != null)
@@ -272,8 +271,8 @@ namespace FinalProject.UC
             else
             {
                 FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
-                fUngTuyenCongViec.UngTuyenId = ungTuyenId;
-                fUngTuyenCongViec.UngVien = ungVien;
+                fUngTuyenCongViec.UngTuyenId = LoggedUser.UngVienId;
+                fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
                 fUngTuyenCongViec.CongViecId = id;
                 fUngTuyenCongViec.ShowDialog();
             }

@@ -4,7 +4,6 @@ using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,7 +71,6 @@ namespace FinalProject.Candidate.GUI
             {
                 flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
             }
-            this.label_SoLuongViecLam.Text = "Số lượng việc làm: " + ucJobCards.Count;
         }
         #endregion JobList
 

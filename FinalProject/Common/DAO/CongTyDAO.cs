@@ -1,4 +1,5 @@
-﻿using FinalProject.Database;
+﻿using FinalProject.Common.Helper;
+using FinalProject.Database;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -46,7 +47,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
-                    cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
+                    cmd.Parameters.AddWithValue("@DiaChi", Cty.DiaChi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
                     return cmd.ExecuteNonQuery();
@@ -76,7 +77,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
                     cmd.Parameters.AddWithValue("@TenCongTy", Cty.TenCongTy);
-                    cmd.Parameters.AddWithValue("@DiaChi", Cty.Diachi);
+                    cmd.Parameters.AddWithValue("@DiaChi", Cty.DiaChi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
                     return cmd.ExecuteNonQuery();
@@ -157,15 +158,15 @@ namespace FinalProject.Common.DAO
                     while (reader.Read())
                     {
                         CongTy congTy = new CongTy();
-                        congTy.ID = reader.GetInt32(0);
-                        congTy.Email = reader.GetString(1);
+                        congTy.ID = reader.GetIntValue(0);
+                        congTy.Email = reader.GetStringValue(1);
                         congTy.TenCongTy = reader.GetString(2);
-                        congTy.Diachi = reader.GetString(3);
+                        congTy.DiaChi = reader.GetString(3);
                         congTy.CEO = reader.GetString(4);
                         congTy.MST = reader.GetString(5);
-                        congTy.CreatedTime = reader.GetDateTime(6);
-                        congTy.UpdatedTime = reader.GetDateTime(7);
-                        congTy.IsDeleted = reader.GetBoolean(8);
+                        congTy.CreatedTime = reader.GetDateTimeValue(6);
+                        congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
+                        congTy.IsDeleted = reader.GetBooleanValue(8);
                         congTyList.Add(congTy);
                     }
 
@@ -191,15 +192,15 @@ namespace FinalProject.Common.DAO
                     if (reader.Read())
                     {
                         CongTy congTy = new CongTy();
-                        congTy.ID = reader.GetInt32(0);
-                        congTy.Email = reader.GetString(1);
-                        congTy.TenCongTy = reader.GetString(2);
-                        congTy.Diachi = reader.GetString(3);
-                        congTy.CEO = reader.GetString(4);
-                        congTy.MST = reader.GetString(5);
-                        congTy.CreatedTime = reader.GetDateTime(6);
-                        congTy.UpdatedTime = reader.GetDateTime(7);
-                        congTy.IsDeleted = reader.GetBoolean(8);
+                        congTy.ID = reader.GetIntValue(0);
+                        congTy.Email = reader.GetStringValue(1);
+                        congTy.TenCongTy = reader.GetStringValue(2);
+                        congTy.DiaChi = reader.GetStringValue(3);
+                        congTy.CEO = reader.GetStringValue(4);
+                        congTy.MST = reader.GetStringValue(5);
+                        congTy.CreatedTime = reader.GetDateTimeValue(6);
+                        congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
+                        congTy.IsDeleted = reader.GetBooleanValue(8);
 
                         return congTy;
                     }
