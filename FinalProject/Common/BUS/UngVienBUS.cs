@@ -164,5 +164,20 @@ namespace FinalProject.Common.BUS
             var list = ungVienDAO.GetAll(input);
             return list.FirstOrDefault();
         }
+
+        /// <summary>
+        /// Lấy 1 ứng viên dựa vào userId
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public UngVien GetByUserId(int userId)
+        {
+            var input = new UngVienGetAllInput()
+            {
+                UserId = userId
+            };
+            var list = ungVienDAO.GetAll(input);
+            return list.FirstOrDefault();
+        }
     }
 }

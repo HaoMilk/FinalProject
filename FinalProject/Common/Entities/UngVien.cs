@@ -25,5 +25,6 @@ namespace FinalProject.Database.Entities
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
-}
+        public int UserId { get; set; }
     }
+}

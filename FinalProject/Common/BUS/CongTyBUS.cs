@@ -1,4 +1,6 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,30 +16,28 @@ namespace FinalProject.Common.BUS
     internal class CongTyBUS
     {
         CongTyDAO congTyDAO = new CongTyDAO();  
-        public int Add(int id, string passWord, string email, string tencongty, string dichi, string ceo, string mst)
+        public int Add(int id, string email, string tencongty, string dichi, string ceo, string mst)
         {
             var ct = new CongTy();
             ct.ID = id;
-            ct.PassWord = passWord;
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
-            ct.Diachi = dichi;
+            ct.DiaChi = dichi;
             ct.CEO = ceo;
             ct.CreatedTime = DateTime.Now;
-            ct.UpdatedTime = null;
+            ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
             return congTyDAO.Add(ct);
         }
-        public int Update(int id, string passWord, string email, string tencongty, string dichi, string ceo, string mst )
+        public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst )
         {
             var ct = new CongTy();
             ct.ID = id;
-            ct.PassWord = passWord;
             ct.Email = email;
             ct.MST = mst;
             ct.TenCongTy = tencongty;
-            ct.Diachi = dichi;
+            ct.DiaChi = dichi;
             ct.CEO = ceo;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
@@ -57,6 +57,25 @@ namespace FinalProject.Common.BUS
             congTy.IsDeleted = true;
             congTy.UpdatedTime = DateTime.Now;
             return congTyDAO.SoftDelete(congTy);
+        }
+
+        public CongTy GetById(int id)
+        {
+            return congTyDAO.GetById(id);
+        }
+
+        public List<CongTy> GetAll()
+        {
+            return congTyDAO.GetAll();
+        }
+
+        public CongTy GetByUserId(int userId)
+        {
+            var input = new CongTyGetAllInput
+            {
+                UserId = userId
+            };
+            return congTyDAO.GetAll(input).FirstOrDefault();
         }
     }
 }

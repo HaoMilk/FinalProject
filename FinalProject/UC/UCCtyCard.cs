@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Company.GUI.Thong_tin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace FinalProject.UC
     {
         private int id;
         private string name;
-        private string description;
+        private string address;
 
         public int Id
         {
@@ -39,16 +40,16 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
-        public string Description
+        public string Address
         {
-            get => description;
+            get => address;
             set
             {
                 if (value == null)
                 {
-                    value = "Giới thiệu công ty";
+                    value = "Địa chỉ công ty";
                 }
-                description = value;
+                address = value;
                 this.Invalidate();
             }
         }
@@ -56,11 +57,17 @@ namespace FinalProject.UC
         public UCCtyCard()
         {
             InitializeComponent();
+
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+            this.SetStyle(ControlStyles.UserPaint, true);
         }
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Xem chi tiết công ty '{name}'");
+            FThongTinCongTy fThongTinCongTy = new FThongTinCongTy();
+            fThongTinCongTy.Id = id;
+            fThongTinCongTy.ShowDialog();
         }
     }
 }

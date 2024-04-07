@@ -56,14 +56,41 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Enums.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7ea1c1650d506225, processorArchitecture=MSIL">
+      <HintPath>..\packages\Enums.NET.4.0.1\lib\net45\Enums.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedNumerics.BigDecimal, Version=2023.1000.0.230, Culture=neutral, PublicKeyToken=65f1315a45ad8949, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtendedNumerics.BigDecimal.2023.1000.0.230\lib\net472\ExtendedNumerics.BigDecimal.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.5.0.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.0\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.Core, Version=2.7.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.0\lib\net472\NPOI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.7.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.0\lib\net472\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.7.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.0\lib\net472\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.7.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.7.0\lib\net472\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -73,10 +100,50 @@
     <Reference Include="RJCodeAdvance.RJControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RJCodeAdvance.RJControls.1.0.0\lib\net45\RJCodeAdvance.RJControls.dll</HintPath>
     </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.1\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.ImageSharp.2.1.7\lib\net472\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=6.0.0.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.6.0.3\lib\net461\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.6.0.1\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
@@ -122,6 +189,12 @@
     <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKe.Designer.cs">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +219,24 @@
     <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.Designer.cs">
       <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.Designer.cs">
+      <DependentUpon>FXetDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.Designer.cs">
+      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
+      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
     <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
     <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
@@ -164,18 +255,23 @@
     <Compile Include="Common\BUS\CongTyBUS.cs" />
     <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
+    <Compile Include="Common\BUS\UserBUS.cs" />
+    <Compile Include="Common\Const\UserRoleConst.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
     <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="Common\DTO\CongTyGetAllInput.cs" />
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
+    <Compile Include="Common\Helper\StringHelper.cs" />
+    <Compile Include="Common\Helper\WordHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.cs">
+    <Compile Include="Company\GUI\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FDSCongViec.Designer.cs">
+    <Compile Include="Company\GUI\FDSCongViec.Designer.cs">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
@@ -236,10 +332,10 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.cs">
+    <Compile Include="Company\GUI\FAddViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Ung tuyen\FAddViecLam.Designer.cs">
+    <Compile Include="Company\GUI\FAddViecLam.Designer.cs">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
@@ -303,11 +399,11 @@
     <Compile Include="Company\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.cs">
+    <Compile Include="Company\GUI\FThongTinCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\Thong tin\FThongTin.Designer.cs">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <Compile Include="Company\GUI\FThongTinCongTy.Designer.cs">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="FLogin.cs">
       <SubType>Form</SubType>
@@ -344,6 +440,9 @@
     <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
       <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKe.resx">
+      <DependentUpon>FThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
       <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +455,15 @@
     <Compile Include="UC\UCCustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyet.resx">
+      <DependentUpon>FXetDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.resx">
+      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.resx">
+      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,10 +494,10 @@
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FDSCongViec.resx">
+    <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Ung tuyen\FAddViecLam.resx">
+    <EmbeddedResource Include="Company\GUI\FAddViecLam.resx">
       <DependentUpon>FAddViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
@@ -416,8 +524,8 @@
     <EmbeddedResource Include="Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\Thong tin\FThongTin.resx">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FThongTinCongTy.resx">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FLogin.resx">
       <DependentUpon>FLogin.cs</DependentUpon>
@@ -453,21 +561,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Company\GUI\Ho so\" />
-    <Folder Include="Company\UC\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
-    <None Include="Resources\CV-template.docx" />
     <None Include="Resources\CV-template.rtf" />
-    <None Include="Resources\CỤM LOGO THÁNG THANH NIÊN.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\01_logobachkhoatoi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\posterchinh%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hcmute.jpg" />
@@ -487,9 +584,6 @@
     <None Include="Resources\background_neon.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\administrator-icon-on-white-background-simple-vector-28227279.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\sign_in.png" />
   </ItemGroup>
   <ItemGroup>
@@ -505,6 +599,11 @@
     <None Include="Resources\done.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-company-100.png" />
+    <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
+    <Content Include="Resources\Template-Stylish_teaching_resume.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\tom.png" />
   </ItemGroup>
   <ItemGroup>
@@ -530,9 +629,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\heart.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\love.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\messenger.png" />
@@ -649,7 +745,7 @@
     <None Include="Resources\icons8-choose-48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ảnh chụp màn hình 2024-03-08 100951.png" />
+    <None Include="Resources\job_search.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default_cv.jpg" />
@@ -772,11 +868,13 @@
     <None Include="Resources\companyicon.jpg" />
     <None Include="Resources\4171344.jpg" />
     <None Include="Resources\flat-lay-desk-arrangement-with-copy-space-min.jpg" />
-    <None Include="Resources\3d-casual-life-man-chatting-remotely-with-female-colleague.png" />
-    <None Include="Resources\pngtree-the-internet-technology-data-network-data-picture-image_939245.jpg" />
-    <None Include="Resources\network-process-of-finding-applicants-and-recruitment.gif" />
     <None Include="Resources\daily-resumes-of-candidates-for-recruitment.png" />
-    <None Include="Resources\360_F_571667683_oHkJjFb69yv8untWvqQuYuLEGzwZNZXl.jpg" />
+    <None Include="Resources\it_background.jpg" />
+    <None Include="Resources\char_icon.png" />
+    <None Include="Resources\chart_icon_1.jpg" />
+    <None Include="Resources\chart_icon_11.jpg" />
+    <None Include="Resources\CANDIDATE_ICON.jpg" />
+    <None Include="Resources\icons8-delete-24.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

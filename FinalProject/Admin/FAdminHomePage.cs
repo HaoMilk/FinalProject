@@ -1,7 +1,9 @@
 ﻿
+using FinalProject.Admin.GUI;
 using FinalProject.Admin.GUI.CongTy;
 using FinalProject.Admin.GUI.CongViec;
 using FinalProject.Admin.GUI.UngVien;
+using FinalProject.Admin.GUI.XetDuyet;
 using FinalProject.Candidate.GUI;
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
@@ -19,6 +21,7 @@ namespace FinalProject.Admin
 {
     public partial class FAdminHomePage : Form
     {
+        private bool isAlwaysShowDashboard = true;
         public FAdminHomePage()
         {
             InitializeComponent();
@@ -79,5 +82,48 @@ namespace FinalProject.Admin
             FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
             fChinhSuaCongViec.ShowDialog();
         }
+        #region ThongKe
+        private void tsM_ThongKe_Click(object sender, EventArgs e)
+        {
+            this.OpenThongKe();
+        }
+        private void OpenThongKe()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FThongKe fThongKe = new FThongKe();
+            fThongKe.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        private void ucMenuCard_ThongKe_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenThongKe();
+        }
+
+        #endregion ThongKe
+
+        #region XetDuyet
+
+
+        private void OpenXetDuyet()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FXetDuyet fXetDuyet = new FXetDuyet();
+            fXetDuyet.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+
+        private void tSM_XetDuyet(object sender, EventArgs e)
+        {
+            this.OpenXetDuyet();
+        }       
+
+        private void ucMenuCard_XetDuyet_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenXetDuyet();
+        }
+        #endregion XetDuyet
+
     }
 }

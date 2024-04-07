@@ -9,5 +9,7 @@ namespace FinalProject.Database.DTO
     public class UngVienGetAllInput
     {
         public int Id { get; set; }
+
+        public int UserId { get; set; }
     }
 }

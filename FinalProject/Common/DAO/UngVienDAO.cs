@@ -69,6 +69,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND Id = {input.Id} ";
                 }
+                if (input.UserId > 0)
+                {
+                    query += $" AND UserId = {input.UserId} ";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
@@ -92,6 +96,7 @@ namespace FinalProject.Common.DAO
                         ungVien.IsDeleted = reader.GetBooleanValue(10);
                         ungVien.CreatedTime = reader.GetDateTimeValue(11);
                         ungVien.UpdatedTime = reader.GetDateTimeValueNullable(12);
+                        ungVien.UserId = reader.GetIntValue(13);
 
                         list.Add(ungVien);
                     }
@@ -107,17 +112,24 @@ namespace FinalProject.Common.DAO
 
         public int Add(UngVien UngVien)
         {
-            string query = "INSERT INTO UngVien (HoTen, NgaySinh, GioiTinh, DiaChi, " +
-                ", SDT, Email, ChuyenMon, TrangThai, IsDeleted, CreatedTime, UpdatedTime) " +
-                $"VALUES (N'{UngVien.HoTen}', {UngVien.NgaySinh}, " +
-                $" N'{UngVien.GioiTinh}', N'{UngVien.DiaChi}', N'{UngVien.SDT}'" +
-                $" N'{UngVien.Email}', N'{UngVien.ChuyenMon}', N'{UngVien.TrangThai}', 0," +
-                $" '{UngVien.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL); ";
-
+            string query = $@"
+                INSERT INTO UngVien (HoTen, NgaySinh, GioiTinh, DiaChi, SDT, Email, ChuyenMon, TrangThai, IsDeleted, CreatedTime, UpdatedTime, UserId) 
+                VALUES (@HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SDT, @Email, @ChuyenMon, @TrangThai, 0, @CreatedTime, NULL, @UserId);";
 
             using (dbConnection.Connection)
             {
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@HoTen", UngVien.HoTen);
+                cmd.Parameters.AddWithValue("@NgaySinh", UngVien.NgaySinh);
+                cmd.Parameters.AddWithValue("@GioiTinh", UngVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@DiaChi", UngVien.DiaChi);
+                cmd.Parameters.AddWithValue("@SDT", UngVien.SDT);
+                cmd.Parameters.AddWithValue("@Email", UngVien.Email);
+                cmd.Parameters.AddWithValue("@ChuyenMon", UngVien.ChuyenMon);
+                cmd.Parameters.AddWithValue("@TrangThai", UngVien.TrangThai);
+                cmd.Parameters.AddWithValue("@CreatedTime", UngVien.CreatedTime);
+                cmd.Parameters.AddWithValue("@UserId", UngVien.UserId);
+
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -128,23 +140,35 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+
         public int Update(UngVien UngVien)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE UngVien SET " +
-                    $" HoTen = N'{UngVien.HoTen}', " + 
-                    $" NgaySinh = '{UngVien.NgaySinh:yyyy-MM-dd}', " +
-                    $" GioiTinh = N'{UngVien.GioiTinh}', " +
-                    $" DiaChi = N'{UngVien.DiaChi}', " +
-                    $" SDT = N'{UngVien.SDT}', " +
-                    $" Email = N'{UngVien.Email}'," +
-                    $" ChuyenMon = N'{UngVien.ChuyenMon}', " +             
-                    $" TrangThai = N'{UngVien.TrangThai}', " +
-                    $" UpdatedTime = '{UngVien.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $" WHERE Id = {UngVien.Id};";
+                string query = $@"
+                    UPDATE UngVien SET 
+                        HoTen = @HoTen, 
+                        NgaySinh = @NgaySinh, 
+                        GioiTinh = @GioiTinh, 
+                        DiaChi = @DiaChi, 
+                        SDT = @SDT, 
+                        Email = @Email, 
+                        ChuyenMon = @ChuyenMon, 
+                        TrangThai = @TrangThai, 
+                        UpdatedTime = @UpdatedTime
+                        WHERE Id = {UngVien.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@HoTen", UngVien.HoTen);
+                cmd.Parameters.AddWithValue("@NgaySinh", UngVien.NgaySinh);
+                cmd.Parameters.AddWithValue("@GioiTinh", UngVien.GioiTinh);
+                cmd.Parameters.AddWithValue("@DiaChi", UngVien.DiaChi);
+                cmd.Parameters.AddWithValue("@SDT", UngVien.SDT);
+                cmd.Parameters.AddWithValue("@Email", UngVien.Email);
+                cmd.Parameters.AddWithValue("@ChuyenMon", UngVien.ChuyenMon);
+                cmd.Parameters.AddWithValue("@TrangThai", UngVien.TrangThai);
+                cmd.Parameters.AddWithValue("@UpdatedTime", UngVien.UpdatedTime);
+
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -155,6 +179,7 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+
         public int Delete(UngVien UngVien)
         {
             using (dbConnection.Connection)
@@ -193,6 +218,7 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+
         public UngVien GetById(int id)
         {
             using (dbConnection.Connection)
@@ -220,6 +246,7 @@ namespace FinalProject.Common.DAO
                         ungVien.IsDeleted = reader.GetBooleanValue(10);
                         ungVien.CreatedTime = reader.GetDateTimeValue(11);
                         ungVien.UpdatedTime = reader.GetDateTimeValueNullable(12);
+                        ungVien.UserId = reader.GetIntValue(13);
 
                         return ungVien;
                     }

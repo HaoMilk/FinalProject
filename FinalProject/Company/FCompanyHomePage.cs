@@ -55,7 +55,7 @@ namespace FinalProject.Company
 
         private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            FThongTin fThongTin = new FThongTin();
+            FThongTinCongTy fThongTin = new FThongTinCongTy();
             fThongTin.Show();
         }
 

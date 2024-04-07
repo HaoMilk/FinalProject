@@ -2,6 +2,7 @@
 using FinalProject.Candidate.GUI;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Company;
 using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Database.Entities;
@@ -20,49 +21,91 @@ namespace FinalProject
 {
     public partial class Form_DangNhap : UCForm
     {
+        private UserBUS userBUS = new UserBUS();
         private UngVienBUS ungVienBUS = new UngVienBUS();
+        private CongTyBUS congTyBUS = new CongTyBUS();
+
         public Form_DangNhap()
         {
             InitializeComponent();
+            this.textBox_TenDangNhap.Text = "test";
+            this.textBox_MatKhau.Text = "123456";
         }
 
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
+            if (!Check())
+            {
+                return;
+            }
+
             // Kiểm tra thông tin đăng nhập
+            var username = textBox_TenDangNhap.Text;
+            var password = textBox_MatKhau.Text;
 
-            // Đăng nhập thành công, lưu thông tin người dùng vào biến toàn cục
-            LoggedUser.UngVienId = 1;
-            LoggedUser.UngVien = ungVienBUS.GetById(LoggedUser.UngVienId);
-
-            // Ẩn form hiện tại
-            this.Hide();
             if (radioButton__UngVien.Checked)
             {
+                var user = userBUS.Login(username, password, UserRoleConst.Candidate);
+                if (user == null)
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    return;
+                }
+
+                // Đăng nhập thành công, lưu thông tin người dùng vào biến toàn cục
+                LoggedUser.UserId = user.Id;
+                LoggedUser.UserRole = UserRoleConst.Candidate;
+                LoggedUser.User = user;
+                LoggedUser.UngVien = ungVienBUS.GetByUserId(user.Id);
+
+                this.Hide();
                 FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
                 fCandidateHomePage.ShowDialog();
+                this.Show();
             }
             else if(radioButton_Admin.Checked)
             {
+                var user = userBUS.Login(username, password, UserRoleConst.Admin);
+                if (user == null)
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    return;
+                }
+
+                // Đăng nhập thành công, lưu thông tin người dùng vào biến toàn cục
+                LoggedUser.UserId = user.Id;
+                LoggedUser.UserRole = UserRoleConst.Admin;
+                LoggedUser.User = user;
+
+                this.Hide();
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();
+                this.Show();
             }    
             else if (radioButton_NhaTuyenDung.Checked)
             {
+                var user = userBUS.Login(username, password, UserRoleConst.Employer);
+                if (user == null)
+                {
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    return;
+                }
+
+                // Đăng nhập thành công, lưu thông tin người dùng vào biến toàn cục
+                LoggedUser.UserId = user.Id;
+                LoggedUser.UserRole = UserRoleConst.Employer;
+                LoggedUser.User = user;
+                LoggedUser.CongTy = congTyBUS.GetByUserId(user.Id);
+
+                this.Hide();
                 FCompanyHomePage fCompanyHomePage = new FCompanyHomePage();
                 fCompanyHomePage.ShowDialog();
+                this.Show();
             }
-
-            // Show lại
-            this.Show();
         }
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (radioButton_NhaTuyenDung.Checked)
-            {
-                FThongTin fDangKyCongTy = new FThongTin();
-                fDangKyCongTy.ShowDialog();
-            }
         }
 
         private void Form_DangNhap_Load(object sender, EventArgs e)
@@ -79,11 +122,12 @@ namespace FinalProject
         {
             this.Close();
         }
+
         private bool Check()
         {
-            if(String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
+            if (String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
+                MessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
                 return false;
             }    
             return true;

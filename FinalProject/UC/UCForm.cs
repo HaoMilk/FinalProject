@@ -16,6 +16,8 @@ namespace FinalProject.UC
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+            this.AutoScaleMode = AutoScaleMode.None;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
