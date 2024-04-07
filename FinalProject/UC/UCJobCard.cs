@@ -271,7 +271,7 @@ namespace FinalProject.UC
             else
             {
                 FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
-                fUngTuyenCongViec.UngTuyenId = LoggedUser.UngVienId;
+                fUngTuyenCongViec.UngTuyenId = LoggedUser.UserId;
                 fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
                 fUngTuyenCongViec.CongViecId = id;
                 fUngTuyenCongViec.ShowDialog();

@@ -37,8 +37,8 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             var MoTa = richTextBox_MoTa.Text;
             var QuyenLoi = richTextBox_QuyenLoi.Text;
             var YeuCauUngVien = richTextBox_YeuCauUV.Text;
-            var IdCongTy = LoggedCongTy.CongTyID;
-            var TenCongTy = LoggedCongTy.CongTy.TenCongTy;
+            var IdCongTy = LoggedUser.CongTy.ID;
+            var TenCongTy = LoggedUser.CongTy.TenCongTy;
             cviec_BUS.Add(Id, TenCongTy, TenCongViec, Nganh, ViTriTuyenDung,MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien,SoLuong);
             MessageBox.Show("Thêm Thành Công");
         }

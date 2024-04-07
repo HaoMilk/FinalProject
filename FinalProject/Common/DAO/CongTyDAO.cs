@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.Helper;
+﻿using FinalProject.Common.DTO;
+using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.Entities;
 using System;
@@ -32,7 +33,7 @@ namespace FinalProject.Common.DAO
             }
             catch (Exception ex)
             {
-                return -1;
+                throw ex;
             }
         }
 
@@ -42,7 +43,7 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST)";
+                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST, @UserId)";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
@@ -50,6 +51,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.DiaChi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
+                    cmd.Parameters.AddWithValue("@UserId", Cty.UserId);
                     return cmd.ExecuteNonQuery();
 
                 }
@@ -59,6 +61,7 @@ namespace FinalProject.Common.DAO
                 throw ex;
             }
         }
+
         public int Edit(CongTy Cty)
         {
             try
@@ -106,6 +109,7 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+
         public int SoftDelete(CongTy congTy)
         {
             using (dbConnection.Connection)
@@ -144,13 +148,26 @@ namespace FinalProject.Common.DAO
                 throw ex;
             }
         }
-        public List<CongTy> GetAll()
+        public List<CongTy> GetAll(CongTyGetAllInput input = null)
         {
+            if (input == null)
+            {
+                input = new CongTyGetAllInput();
+            }
             try
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "SELECT * FROM CongTy WHERE IsDeleted = 0";
+                    string query = "SELECT * FROM CongTy WHERE IsDeleted = 0 ";
+                    if (input.Id > 0)
+                    {
+                        query += $" AND ID = {input.Id} ";
+                    }
+                    if (input.UserId > 0)
+                    {
+                        query += $" AND UserId = {input.UserId} ";
+                    }
+
                     SqlCommand cmd = new SqlCommand(query, connection);
                     List<CongTy> congTyList = new List<CongTy>();
 
@@ -167,6 +184,7 @@ namespace FinalProject.Common.DAO
                         congTy.CreatedTime = reader.GetDateTimeValue(6);
                         congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
                         congTy.IsDeleted = reader.GetBooleanValue(8);
+                        congTy.UserId = reader.GetIntValue(9);
                         congTyList.Add(congTy);
                     }
 
@@ -178,6 +196,7 @@ namespace FinalProject.Common.DAO
                 throw ex;
             }
         }
+
         public CongTy GetById(int id)
         {
             try
@@ -201,6 +220,7 @@ namespace FinalProject.Common.DAO
                         congTy.CreatedTime = reader.GetDateTimeValue(6);
                         congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
                         congTy.IsDeleted = reader.GetBooleanValue(8);
+                        congTy.UserId = reader.GetIntValue(9);
 
                         return congTy;
                     }

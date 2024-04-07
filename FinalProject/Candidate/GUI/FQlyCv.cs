@@ -27,7 +27,7 @@ namespace FinalProject.Candidate.GUI
 
         private void FQlyCv_Load(object sender, EventArgs e)
         {
-            listCV = cvBUS.GetByUngVienId(LoggedUser.UngVienId);
+            listCV = cvBUS.GetByUngVienId(LoggedUser.UserId);
             LoadCvList();
         }
 

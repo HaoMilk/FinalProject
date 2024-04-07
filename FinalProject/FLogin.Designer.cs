@@ -47,7 +47,6 @@
             this.linkLabel_DangKy = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel_QuenMatKhau = new System.Windows.Forms.LinkLabel();
-            this.button_Close = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox_PhanQuyen.SuspendLayout();
@@ -330,21 +329,6 @@
             this.linkLabel_QuenMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel_QuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_QuenMatKhau_LinkClicked);
             // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(852, 0);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(44, 40);
-            this.button_Close.TabIndex = 0;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
             // Form_DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -399,7 +383,6 @@
         private System.Windows.Forms.LinkLabel linkLabel_DangKy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel_QuenMatKhau;
-        private System.Windows.Forms.Button button_Close;
     }
 }
 

@@ -20,7 +20,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $"SELECT COUNT(1) FROM User WHERE Id = '{id}';";
+                string query = $"SELECT COUNT(1) FROM [User] WHERE Id = '{id}';";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -30,7 +30,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -39,7 +39,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = "SELECT COUNT(1) FROM User WHERE IsDeleted = 0 ;";
+                string query = "SELECT COUNT(1) FROM [User] WHERE IsDeleted = 0 ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -49,7 +49,7 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    return -1;
+                    throw ex;
                 }
             }
         }
@@ -64,10 +64,34 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 var list = new List<User>();
-                string query = "SELECT * FROM User WHERE IsDeleted = 0 ";
+                string query = "SELECT * FROM [User] WHERE IsDeleted = 0 ";
                 if (input.Id > 0)
                 {
                     query += $" AND Id = {input.Id} ";
+                }
+                if (!string.IsNullOrEmpty(input.Username))
+                {
+                    query += $" AND Username = N'{input.Username}' ";
+                }
+                if (!string.IsNullOrEmpty(input.Password))
+                {
+                    query += $" AND Password = N'{input.Password}' ";
+                }
+                if (!string.IsNullOrEmpty(input.Email))
+                {
+                    query += $" AND Email = N'{input.Email}' ";
+                }
+                if (!string.IsNullOrEmpty(input.Status))
+                {
+                    query += $" AND Status = N'{input.Status}' ";
+                }
+                if (!string.IsNullOrEmpty(input.Phone))
+                {
+                    query += $" AND Phone = N'{input.Phone}' ";
+                }
+                if (!string.IsNullOrEmpty(input.Role))
+                {
+                    query += $" AND Role = N'{input.Role}' ";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -101,14 +125,20 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public int Add(User User)
+        public int Add(User user)
         {
             string query = $@"
                 INSERT INTO User(Username, Password, Email, Status, IsDeleted, Phone, Role, CreatedTime, UpdatedTime)
-                VALUES
-                (N'{User.Username}', N'{User.Password}', N'{User.Email}', N'{User.Status}', 0, N'{User.Phone}', 
-                 N'{User.Role}', '{User.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL);
-            ";
+                VALUES (
+                    N'{user.Username}', 
+                    N'{user.Password}', 
+                    N'{user.Email}', 
+                    N'{user.Status}', 
+                    0, 
+                    N'{user.Phone}', 
+                    N'{user.Role}', 
+                    '{user.CreatedTime:yyyy-MM-dd hh:mm:ss}', 
+                    NULL);";
 
             using (dbConnection.Connection)
             {
@@ -120,24 +150,23 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
-        public int Update(User User)
+        public int Update(User user)
         {
             using (dbConnection.Connection)
             {
                 string query = $@"
                 UPDATE User SET 
-                    Username = N'{User.Username}', 
-                    Password = N'{User.Password}', 
-                    Email = N'{User.Email}', 
-                    Status = N'{User.Status}', 
-                    Phone = N'{User.Phone}', 
-                    Role = N'{User.Role}', 
-                    UpdatedTime = '{User.UpdatedTime:yyyy-MM-dd hh:mm:ss}'
-                    WHERE Id = {User.Id};
+                    Username = N'{user.Username}', 
+                    Password = N'{user.Password}', 
+                    Email = N'{user.Email}', 
+                    Status = N'{user.Status}', 
+                    Phone = N'{user.Phone}', 
+                    Role = N'{user.Role}', 
+                    UpdatedTime = '{user.UpdatedTime:yyyy-MM-dd hh:mm:ss}'
+                    WHERE Id = {user.Id};
                 ";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -148,15 +177,15 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
-        public int Delete(User User)
+
+        public int Delete(int id)
         {
             using (dbConnection.Connection)
             {
-                string query = $"DELETE FROM User WHERE Id = {User.Id};";
+                string query = $"DELETE FROM [User] WHERE Id = {id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -166,19 +195,19 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
 
-        public int SoftDelete(User User)
+        public int SoftDelete(int id)
         {
             using (dbConnection.Connection)
             {
-                string query = $"UPDATE User SET " +
-                    $"IsDeleted = 1, " +
-                    $"UpdatedTime = '{User.UpdatedTime:yyyy-MM-dd hh:mm:ss}' " +
-                    $"WHERE Id = {User.Id};";
+                string query = $@"
+                    UPDATE User SET 
+                        IsDeleted = 1, 
+                        UpdatedTime = '{DateTime.Now:yyyy-MM-dd hh:mm:ss}'
+                        WHERE Id = {id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -188,15 +217,15 @@ namespace FinalProject.Common.DAO
                 catch (Exception ex)
                 {
                     throw ex;
-                    return -1;
                 }
             }
         }
+
         public User GetById(int id)
         {
             using (dbConnection.Connection)
             {
-                string query = $"SELECT * FROM  WHERE Id = {id} ;";
+                string query = $"SELECT * FROM [User] WHERE Id = {id} ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try

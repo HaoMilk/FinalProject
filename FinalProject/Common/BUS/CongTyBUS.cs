@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
@@ -57,6 +58,7 @@ namespace FinalProject.Common.BUS
             congTy.UpdatedTime = DateTime.Now;
             return congTyDAO.SoftDelete(congTy);
         }
+
         public CongTy GetById(int id)
         {
             return congTyDAO.GetById(id);
@@ -65,6 +67,15 @@ namespace FinalProject.Common.BUS
         public List<CongTy> GetAll()
         {
             return congTyDAO.GetAll();
+        }
+
+        public CongTy GetByUserId(int userId)
+        {
+            var input = new CongTyGetAllInput
+            {
+                UserId = userId
+            };
+            return congTyDAO.GetAll(input).FirstOrDefault();
         }
     }
 }
