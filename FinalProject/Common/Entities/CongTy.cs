@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FinalProject.Database.Entities
 {
-    internal class CongTy
+    public class CongTy
     {
         public int ID { get; set; }
         public string Email { get; set; }
@@ -18,5 +18,6 @@ namespace FinalProject.Database.Entities
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
         public bool IsDeleted { get; set; }
+        public int UserId { get; set; }
     }
 }

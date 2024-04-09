@@ -36,7 +36,7 @@ namespace FinalProject.Candidate.GUI
         {
             var Id = id;
             var TenCv = textBox_TenCv.Text;
-            var UngVienId = LoggedUser.UngVienId;
+            var UngVienId = LoggedUser.UserId;
             var Link = "http://";
             var MoTa = "Yeu cau";
             var TrangThai = "Active";

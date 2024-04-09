@@ -255,6 +255,8 @@
     <Compile Include="Common\BUS\CongTyBUS.cs" />
     <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
+    <Compile Include="Common\BUS\UserBUS.cs" />
+    <Compile Include="Common\Const\UserRoleConst.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UserDAO.cs" />
     <Compile Include="Common\DAO\UngVienDAO.cs" />
@@ -263,9 +265,9 @@
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
+    <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Common\LoggedCongTy.cs" />
     <Compile Include="Company\GUI\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -598,6 +600,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
+    <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

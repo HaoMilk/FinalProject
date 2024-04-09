@@ -23,7 +23,7 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            var id = LoggedUser.UngVienId;
+            var id = LoggedUser.UserId;
             var hoten = textBox_Name.Text;
             var ngaysinh = dateTime_Birthday.Value;
             var gioitinh = textBox_Gender.Text;
@@ -37,7 +37,7 @@ namespace FinalProject.Candidate.GUI
             ungVienBUS.Update(id, hoten, ngaysinh, gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
 
-            LoggedUser.UngVien = ungVienBUS.GetById(LoggedUser.UngVienId);
+            LoggedUser.UngVien = ungVienBUS.GetById(LoggedUser.UserId);
 
 
             MessageBox.Show("Bạn đã cập nhật thành công !");
@@ -53,7 +53,6 @@ namespace FinalProject.Candidate.GUI
             textBox_Phone.Text = ungVien.SDT;
             textBox_Email.Text = ungVien.Email;
             textBox_Major.Text = ungVien.ChuyenMon;
-            
         }
     }
 }
