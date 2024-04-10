@@ -601,6 +601,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
+    <None Include="Resources\File icon.jpg" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
