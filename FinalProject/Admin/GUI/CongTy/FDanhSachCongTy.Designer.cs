@@ -39,6 +39,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox_Avatar = new System.Windows.Forms.PictureBox();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSCT)).BeginInit();
             this.panel3.SuspendLayout();
@@ -127,6 +128,7 @@
             // pnlControl
             // 
             this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.pnlControl.Controls.Add(this.btnXuatFile);
             this.pnlControl.Controls.Add(this.btnSua);
             this.pnlControl.Controls.Add(this.panel5);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
@@ -175,6 +177,21 @@
             this.pictureBox_Avatar.TabIndex = 1;
             this.pictureBox_Avatar.TabStop = false;
             // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuatFile.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXuatFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnXuatFile.Image = global::FinalProject.Properties.Resources.icons8_save_32;
+            this.btnXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatFile.Location = new System.Drawing.Point(0, 258);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(285, 86);
+            this.btnXuatFile.TabIndex = 7;
+            this.btnXuatFile.Text = "XUẤT FILE";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
+            // 
             // FDanhSachCongTy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -217,5 +234,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.PictureBox pictureBox_Avatar;
         private System.Windows.Forms.Label label_DSCongTy;
+        private System.Windows.Forms.Button btnXuatFile;
     }
 }
