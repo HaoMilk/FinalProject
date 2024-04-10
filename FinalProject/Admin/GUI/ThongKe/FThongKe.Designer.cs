@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -40,19 +40,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.BDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.txtSoLuongCongViec = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtSoLuongUngVien = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label_DSCongTy = new System.Windows.Forms.Label();
-            this.BDTron = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtSoLuongUngVien = new System.Windows.Forms.TextBox();
-            this.txtSoLuongCongViec = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +62,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,8 +72,6 @@
             this.groupBox2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -190,6 +190,38 @@
             this.panel8.Size = new System.Drawing.Size(857, 376);
             this.panel8.TabIndex = 4;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.BDTron);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("Constantia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(0, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(857, 376);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tỉ trọng giữa ứng viên và công việc";
+            // 
+            // BDTron
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.BDTron.ChartAreas.Add(chartArea1);
+            this.BDTron.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.BDTron.Legends.Add(legend1);
+            this.BDTron.Location = new System.Drawing.Point(3, 32);
+            this.BDTron.Name = "BDTron";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Biểu đồ tròn";
+            series1.Name = "BDTron";
+            this.BDTron.Series.Add(series1);
+            this.BDTron.Size = new System.Drawing.Size(851, 341);
+            this.BDTron.TabIndex = 1;
+            this.BDTron.Text = "chart1";
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -238,6 +270,15 @@
             this.panel7.Size = new System.Drawing.Size(421, 36);
             this.panel7.TabIndex = 0;
             // 
+            // txtSoLuongCongViec
+            // 
+            this.txtSoLuongCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSoLuongCongViec.Location = new System.Drawing.Point(0, 0);
+            this.txtSoLuongCongViec.Name = "txtSoLuongCongViec";
+            this.txtSoLuongCongViec.ReadOnly = true;
+            this.txtSoLuongCongViec.Size = new System.Drawing.Size(421, 36);
+            this.txtSoLuongCongViec.TabIndex = 1;
+            // 
             // panel5
             // 
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -272,6 +313,15 @@
             this.panel6.Size = new System.Drawing.Size(416, 34);
             this.panel6.TabIndex = 0;
             // 
+            // txtSoLuongUngVien
+            // 
+            this.txtSoLuongUngVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSoLuongUngVien.Location = new System.Drawing.Point(0, 0);
+            this.txtSoLuongUngVien.Name = "txtSoLuongUngVien";
+            this.txtSoLuongUngVien.ReadOnly = true;
+            this.txtSoLuongUngVien.Size = new System.Drawing.Size(416, 36);
+            this.txtSoLuongUngVien.TabIndex = 0;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label_DSCongTy);
@@ -295,56 +345,6 @@
             this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_DSCongTy.UseCompatibleTextRendering = true;
             // 
-            // BDTron
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.BDTron.ChartAreas.Add(chartArea2);
-            this.BDTron.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.BDTron.Legends.Add(legend2);
-            this.BDTron.Location = new System.Drawing.Point(3, 32);
-            this.BDTron.Name = "BDTron";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.LegendText = "Biểu đồ tròn";
-            series2.Name = "BDTron";
-            this.BDTron.Series.Add(series2);
-            this.BDTron.Size = new System.Drawing.Size(851, 341);
-            this.BDTron.TabIndex = 1;
-            this.BDTron.Text = "chart1";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.BDTron);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Constantia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(857, 376);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tỉ trọng giữa ứng viên và công việc";
-            // 
-            // txtSoLuongUngVien
-            // 
-            this.txtSoLuongUngVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSoLuongUngVien.Location = new System.Drawing.Point(0, 0);
-            this.txtSoLuongUngVien.Name = "txtSoLuongUngVien";
-            this.txtSoLuongUngVien.ReadOnly = true;
-            this.txtSoLuongUngVien.Size = new System.Drawing.Size(416, 36);
-            this.txtSoLuongUngVien.TabIndex = 0;
-            // 
-            // txtSoLuongCongViec
-            // 
-            this.txtSoLuongCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSoLuongCongViec.Location = new System.Drawing.Point(0, 0);
-            this.txtSoLuongCongViec.Name = "txtSoLuongCongViec";
-            this.txtSoLuongCongViec.ReadOnly = true;
-            this.txtSoLuongCongViec.Size = new System.Drawing.Size(421, 36);
-            this.txtSoLuongCongViec.TabIndex = 1;
-            // 
             // FThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -366,6 +366,8 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).EndInit();
             this.panel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -376,8 +378,6 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BDTron)).EndInit();
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
