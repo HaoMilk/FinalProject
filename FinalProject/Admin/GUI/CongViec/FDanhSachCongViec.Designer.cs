@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox_Avatar = new System.Windows.Forms.PictureBox();
@@ -39,12 +40,11 @@
             this.dgvDSCV = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grpBoxTimKiem = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbMucLuong = new System.Windows.Forms.ComboBox();
+            this.cbKinhNghiem = new System.Windows.Forms.ComboBox();
+            this.cbDiaDiem = new System.Windows.Forms.ComboBox();
             this.cbNganh = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnXuatFile = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).BeginInit();
@@ -67,6 +67,21 @@
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(280, 688);
             this.pnlControl.TabIndex = 5;
+            // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuatFile.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXuatFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnXuatFile.Image = global::FinalProject.Properties.Resources.icons8_save_32;
+            this.btnXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatFile.Location = new System.Drawing.Point(0, 258);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(280, 86);
+            this.btnXuatFile.TabIndex = 7;
+            this.btnXuatFile.Text = "XUẤT FILE";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
@@ -175,9 +190,9 @@
             // grpBoxTimKiem
             // 
             this.grpBoxTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.grpBoxTimKiem.Controls.Add(this.comboBox3);
-            this.grpBoxTimKiem.Controls.Add(this.comboBox2);
-            this.grpBoxTimKiem.Controls.Add(this.comboBox1);
+            this.grpBoxTimKiem.Controls.Add(this.cbMucLuong);
+            this.grpBoxTimKiem.Controls.Add(this.cbKinhNghiem);
+            this.grpBoxTimKiem.Controls.Add(this.cbDiaDiem);
             this.grpBoxTimKiem.Controls.Add(this.cbNganh);
             this.grpBoxTimKiem.Controls.Add(this.txtTimKiem);
             this.grpBoxTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -190,44 +205,44 @@
             this.grpBoxTimKiem.TabStop = false;
             this.grpBoxTimKiem.Text = "TÌm kiếm";
             // 
-            // comboBox3
+            // cbMucLuong
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox3.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1010, 68);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(338, 36);
-            this.comboBox3.TabIndex = 4;
-            this.comboBox3.Text = "Yêu cầu kinh nghiệm";
+            this.cbMucLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.cbMucLuong.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbMucLuong.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbMucLuong.ForeColor = System.Drawing.Color.White;
+            this.cbMucLuong.FormattingEnabled = true;
+            this.cbMucLuong.Location = new System.Drawing.Point(1010, 68);
+            this.cbMucLuong.Name = "cbMucLuong";
+            this.cbMucLuong.Size = new System.Drawing.Size(338, 36);
+            this.cbMucLuong.TabIndex = 5;
+            this.cbMucLuong.Text = "Mức lương";
             // 
-            // comboBox2
+            // cbKinhNghiem
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.comboBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox2.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(672, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(338, 36);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "Mức lương";
+            this.cbKinhNghiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.cbKinhNghiem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbKinhNghiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbKinhNghiem.ForeColor = System.Drawing.Color.White;
+            this.cbKinhNghiem.FormattingEnabled = true;
+            this.cbKinhNghiem.Location = new System.Drawing.Point(672, 68);
+            this.cbKinhNghiem.Name = "cbKinhNghiem";
+            this.cbKinhNghiem.Size = new System.Drawing.Size(338, 36);
+            this.cbKinhNghiem.TabIndex = 4;
+            this.cbKinhNghiem.Text = "Yêu cầu kinh nghiệm";
             // 
-            // comboBox1
+            // cbDiaDiem
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox1.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(334, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(338, 36);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "Địa điểm";
+            this.cbDiaDiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(100)))), ((int)(((byte)(102)))));
+            this.cbDiaDiem.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbDiaDiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbDiaDiem.ForeColor = System.Drawing.Color.White;
+            this.cbDiaDiem.FormattingEnabled = true;
+            this.cbDiaDiem.Location = new System.Drawing.Point(334, 68);
+            this.cbDiaDiem.Name = "cbDiaDiem";
+            this.cbDiaDiem.Size = new System.Drawing.Size(338, 36);
+            this.cbDiaDiem.TabIndex = 2;
+            this.cbDiaDiem.Text = "Địa điểm";
             // 
             // cbNganh
             // 
@@ -250,21 +265,6 @@
             this.txtTimKiem.Size = new System.Drawing.Size(1305, 36);
             this.txtTimKiem.TabIndex = 0;
             // 
-            // btnXuatFile
-            // 
-            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
-            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXuatFile.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXuatFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
-            this.btnXuatFile.Image = global::FinalProject.Properties.Resources.icons8_save_32;
-            this.btnXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuatFile.Location = new System.Drawing.Point(0, 258);
-            this.btnXuatFile.Name = "btnXuatFile";
-            this.btnXuatFile.Size = new System.Drawing.Size(280, 86);
-            this.btnXuatFile.TabIndex = 7;
-            this.btnXuatFile.Text = "XUẤT FILE";
-            this.btnXuatFile.UseVisualStyleBackColor = false;
-            // 
             // FDanhSachCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,9 +273,10 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlControl);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FDanhSachCongViec";
             this.Text = "FDanhSachCongViec";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachCongViec_Load);
             this.pnlControl.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -306,9 +307,9 @@
         private System.Windows.Forms.ComboBox cbNganh;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.DataGridView dgvDSCV;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbKinhNghiem;
+        private System.Windows.Forms.ComboBox cbDiaDiem;
         private System.Windows.Forms.Button btnXuatFile;
+        private System.Windows.Forms.ComboBox cbMucLuong;
     }
 }
