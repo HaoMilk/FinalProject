@@ -1,4 +1,5 @@
 ﻿using FinalProject.Candidate.Constants;
+using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
@@ -68,7 +69,7 @@ namespace FinalProject.Company.GUI
 
         private List<UCJobCard> CreateJobList(int quantity)
         {
-            listCongViec = congViecBUS.GetAll();
+            listCongViec = congViecBUS.GetByIDCty(LoggedUser.CongTy.ID);
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
             if(listCongViec != null && listCongViec.Count > 0)
             {

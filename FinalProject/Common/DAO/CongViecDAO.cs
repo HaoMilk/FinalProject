@@ -273,19 +273,21 @@ namespace FinalProject.Common.DAO
                 return null;
             }
         }
-        public CongViec GetByIdCty(int idCty)
+        public List<CongViec> GetByIDCty(int companyId)
         {
+            List<CongViec> congViecList = new List<CongViec>();
             using (dbConnection.Connection)
             {
-                string query = $"SELECT * FROM CongViec " +
-                               $"JOIN CongTy ON CongViec.IdCongTy = CongTy.Id " +
-                               $"WHERE Id = {idCty} ;";
-                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                string query = @"SELECT *FROM CongViec cv
+                         JOIN CongTy ct ON cv.IdCongTy = ct.Id
+                         WHERE cv.IdCongTy = @CompanyId";
+                SqlCommand command = new SqlCommand(query, dbConnection.Connection);
+                command.Parameters.AddWithValue("@CompanyId", companyId);
 
                 try
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
                     {
                         var congViec = new CongViec();
                         congViec.Id = reader.GetIntValue(0);
@@ -301,22 +303,25 @@ namespace FinalProject.Common.DAO
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
+                        congViec.YeuCauUngVien = reader.GetStringValue(13);
                         congViec.SoLuong = reader.GetIntValue(16);
                         congViec.IsDeleted = reader.GetBooleanValue(17);
                         congViec.CreatedTime = reader.GetDateTimeValue(18);
                         congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
                         congViec.IdCongTy = reader.GetIntValue(20);
-                        return congViec;
+                        congViecList.Add(congViec);
                     }
+                    reader.Close();
                 }
                 catch (Exception ex)
                 {
+                    // Xử lý ngoại lệ hoặc ghi log
                     throw ex;
                 }
-
-                return null;
             }
+            return congViecList;
         }
+
+
     }
 }

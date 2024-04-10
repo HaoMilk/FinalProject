@@ -108,5 +108,9 @@ namespace FinalProject.Common.BUS
         {
             return congViecDAO.GetById(id);
         }
+        public List<CongViec> GetByIDCty(int id)
+        {
+            return congViecDAO.GetByIDCty(id);
+        }
     }
 }

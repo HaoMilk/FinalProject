@@ -15,7 +15,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
 {
     public partial class FAddViecLam : Form
     {
-        CongViecBUS cviec_BUS = new CongViecBUS();
+        CongViecBUS congViecBUS = new CongViecBUS();
         public FAddViecLam()
         {
             InitializeComponent();
@@ -39,8 +39,25 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             var YeuCauUngVien = richTextBox_YeuCauUV.Text;
             var IdCongTy = LoggedUser.CongTy.ID;
             var TenCongTy = LoggedUser.CongTy.TenCongTy;
-            cviec_BUS.Add(Id, TenCongTy, TenCongViec, Nganh, ViTriTuyenDung,MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien,SoLuong);
+            congViecBUS.Add(Id, TenCongTy, TenCongViec, Nganh, ViTriTuyenDung,MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien,SoLuong);
             MessageBox.Show("Thêm Thành Công");
+        }
+
+        private void button_CapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FAddViecLam_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Xoa_Click(object sender, EventArgs e)
+        {
+            var id = int.Parse(textBox_ID.Text);
+            congViecBUS.SoftDelete(id);
+            congViecBUS.Delete(id);
         }
     }
 }
