@@ -31,21 +31,24 @@
             this.menuStrip_MenuStrip = new System.Windows.Forms.MenuStrip();
             this.menu_ViecLam = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachCongViec = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaCôngViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_ChinhSuaCongViec = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_HoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachUngVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmỨngViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_ChinhSuaUngVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TaiKhoanUngVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_CongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DanhSachCongTy = new System.Windows.Forms.ToolStripMenuItem();
-            this.chỉnhSửaCôngTyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_ChinhSuaCongTy = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_TaiKhoanMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.tsM_ThongKe = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
-            this.ucMenuCard_ThongKe = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_UngVien = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_CongViec = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_XetDuyet = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_ThongKe = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_CongTy = new FinalProject.UC.UCMenuCard();
             this.menuStrip_MenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +74,7 @@
             // 
             this.menu_ViecLam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_DanhSachCongViec,
-            this.chỉnhSửaCôngViệcToolStripMenuItem});
+            this.menu_ChinhSuaCongViec});
             this.menu_ViecLam.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_ViecLam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_ViecLam.Name = "menu_ViecLam";
@@ -80,27 +83,27 @@
             // 
             // menu_DanhSachCongViec
             // 
-            this.menu_DanhSachCongViec.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menu_DanhSachCongViec.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menu_DanhSachCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_DanhSachCongViec.Name = "menu_DanhSachCongViec";
             this.menu_DanhSachCongViec.Size = new System.Drawing.Size(265, 28);
             this.menu_DanhSachCongViec.Text = "Danh sách công việc";
             this.menu_DanhSachCongViec.Click += new System.EventHandler(this.menu_DanhSachCongViec_Click);
             // 
-            // chỉnhSửaCôngViệcToolStripMenuItem
+            // menu_ChinhSuaCongViec
             // 
-            this.chỉnhSửaCôngViệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Name = "chỉnhSửaCôngViệcToolStripMenuItem";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Size = new System.Drawing.Size(265, 28);
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Text = "Chỉnh sửa công việc";
-            this.chỉnhSửaCôngViệcToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngViệcToolStripMenuItem_Click);
+            this.menu_ChinhSuaCongViec.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.menu_ChinhSuaCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_ChinhSuaCongViec.Name = "menu_ChinhSuaCongViec";
+            this.menu_ChinhSuaCongViec.Size = new System.Drawing.Size(265, 28);
+            this.menu_ChinhSuaCongViec.Text = "Chỉnh sửa công việc";
+            this.menu_ChinhSuaCongViec.Click += new System.EventHandler(this.menu_ChinhSuaCongViec_Click);
             // 
             // menu_HoSo
             // 
             this.menu_HoSo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_DanhSachUngVien,
-            this.thêmỨngViênToolStripMenuItem,
+            this.menu_ChinhSuaUngVien,
             this.menu_TaiKhoanUngVien});
             this.menu_HoSo.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_HoSo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -110,25 +113,25 @@
             // 
             // menu_DanhSachUngVien
             // 
-            this.menu_DanhSachUngVien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menu_DanhSachUngVien.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menu_DanhSachUngVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_DanhSachUngVien.Name = "menu_DanhSachUngVien";
             this.menu_DanhSachUngVien.Size = new System.Drawing.Size(286, 28);
             this.menu_DanhSachUngVien.Text = "Danh sách ứng viên";
             this.menu_DanhSachUngVien.Click += new System.EventHandler(this.menu_DanhSachUngVien_Click);
             // 
-            // thêmỨngViênToolStripMenuItem
+            // menu_ChinhSuaUngVien
             // 
-            this.thêmỨngViênToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.thêmỨngViênToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.thêmỨngViênToolStripMenuItem.Name = "thêmỨngViênToolStripMenuItem";
-            this.thêmỨngViênToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
-            this.thêmỨngViênToolStripMenuItem.Text = "Chỉnh sửa ứng viên";
-            this.thêmỨngViênToolStripMenuItem.Click += new System.EventHandler(this.thêmỨngViênToolStripMenuItem_Click);
+            this.menu_ChinhSuaUngVien.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.menu_ChinhSuaUngVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menu_ChinhSuaUngVien.Name = "menu_ChinhSuaUngVien";
+            this.menu_ChinhSuaUngVien.Size = new System.Drawing.Size(286, 28);
+            this.menu_ChinhSuaUngVien.Text = "Chỉnh sửa ứng viên";
+            this.menu_ChinhSuaUngVien.Click += new System.EventHandler(this.menu_ChinhSuaUngVien_Click);
             // 
             // menu_TaiKhoanUngVien
             // 
-            this.menu_TaiKhoanUngVien.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menu_TaiKhoanUngVien.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menu_TaiKhoanUngVien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_TaiKhoanUngVien.Name = "menu_TaiKhoanUngVien";
             this.menu_TaiKhoanUngVien.Size = new System.Drawing.Size(286, 28);
@@ -139,7 +142,7 @@
             // 
             this.menu_CongTy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_DanhSachCongTy,
-            this.chỉnhSửaCôngTyToolStripMenuItem,
+            this.menu_ChinhSuaCongTy,
             this.menu_TaiKhoanMatKhau});
             this.menu_CongTy.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_CongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -149,25 +152,25 @@
             // 
             // menu_DanhSachCongTy
             // 
-            this.menu_DanhSachCongTy.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menu_DanhSachCongTy.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menu_DanhSachCongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_DanhSachCongTy.Name = "menu_DanhSachCongTy";
             this.menu_DanhSachCongTy.Size = new System.Drawing.Size(286, 28);
             this.menu_DanhSachCongTy.Text = "Danh sách công ty";
             this.menu_DanhSachCongTy.Click += new System.EventHandler(this.menu_DanhSachCongTy_Click);
             // 
-            // chỉnhSửaCôngTyToolStripMenuItem
+            // menu_ChinhSuaCongTy
             // 
-            this.chỉnhSửaCôngTyToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.chỉnhSửaCôngTyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.chỉnhSửaCôngTyToolStripMenuItem.Name = "chỉnhSửaCôngTyToolStripMenuItem";
-            this.chỉnhSửaCôngTyToolStripMenuItem.Size = new System.Drawing.Size(286, 28);
-            this.chỉnhSửaCôngTyToolStripMenuItem.Text = "Chỉnh sửa công ty";
-            this.chỉnhSửaCôngTyToolStripMenuItem.Click += new System.EventHandler(this.chỉnhSửaCôngTyToolStripMenuItem_Click);
+            this.menu_ChinhSuaCongTy.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.menu_ChinhSuaCongTy.ForeColor = System.Drawing.SystemColors.Control;
+            this.menu_ChinhSuaCongTy.Name = "menu_ChinhSuaCongTy";
+            this.menu_ChinhSuaCongTy.Size = new System.Drawing.Size(286, 28);
+            this.menu_ChinhSuaCongTy.Text = "Chỉnh sửa công ty";
+            this.menu_ChinhSuaCongTy.Click += new System.EventHandler(this.menu_ChinhSuaCongTy_Click);
             // 
             // menu_TaiKhoanMatKhau
             // 
-            this.menu_TaiKhoanMatKhau.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menu_TaiKhoanMatKhau.BackColor = System.Drawing.Color.DarkSlateGray;
             this.menu_TaiKhoanMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.menu_TaiKhoanMatKhau.Name = "menu_TaiKhoanMatKhau";
             this.menu_TaiKhoanMatKhau.Size = new System.Drawing.Size(286, 28);
@@ -214,24 +217,43 @@
             this.pictureBox_Image.TabIndex = 4;
             this.pictureBox_Image.TabStop = false;
             // 
-            // ucMenuCard_ThongKe
+            // ucMenuCard_UngVien
             // 
-            this.ucMenuCard_ThongKe.BackColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMenuCard_ThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ucMenuCard_ThongKe.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
-            this.ucMenuCard_ThongKe.ButtonTextColor = System.Drawing.Color.RoyalBlue;
-            this.ucMenuCard_ThongKe.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMenuCard_ThongKe.Id = 0;
-            this.ucMenuCard_ThongKe.Location = new System.Drawing.Point(41, 71);
-            this.ucMenuCard_ThongKe.Margin = new System.Windows.Forms.Padding(13);
-            this.ucMenuCard_ThongKe.MenuImage = global::FinalProject.Properties.Resources.char_icon;
-            this.ucMenuCard_ThongKe.MenuName = "THỐNG KÊ";
-            this.ucMenuCard_ThongKe.Name = "ucMenuCard_ThongKe";
-            this.ucMenuCard_ThongKe.Padding = new System.Windows.Forms.Padding(13);
-            this.ucMenuCard_ThongKe.Size = new System.Drawing.Size(182, 137);
-            this.ucMenuCard_ThongKe.TabIndex = 6;
-            this.ucMenuCard_ThongKe.MenuClick += new System.EventHandler(this.ucMenuCard_ThongKe_MenuClick);
+            this.ucMenuCard_UngVien.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_UngVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_UngVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_UngVien.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_UngVien.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_UngVien.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_UngVien.Id = 0;
+            this.ucMenuCard_UngVien.Location = new System.Drawing.Point(665, 71);
+            this.ucMenuCard_UngVien.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_UngVien.MenuImage = global::FinalProject.Properties.Resources.daily_resumes_of_candidates_for_recruitment;
+            this.ucMenuCard_UngVien.MenuName = "ỨNG VIÊN";
+            this.ucMenuCard_UngVien.Name = "ucMenuCard_UngVien";
+            this.ucMenuCard_UngVien.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_UngVien.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_UngVien.TabIndex = 9;
+            this.ucMenuCard_UngVien.MenuClick += new System.EventHandler(this.ucMenuCard_UngVien_MenuClick);
+            // 
+            // ucMenuCard_CongViec
+            // 
+            this.ucMenuCard_CongViec.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_CongViec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_CongViec.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_CongViec.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_CongViec.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_CongViec.Id = 0;
+            this.ucMenuCard_CongViec.Location = new System.Drawing.Point(457, 71);
+            this.ucMenuCard_CongViec.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_CongViec.MenuImage = global::FinalProject.Properties.Resources.work;
+            this.ucMenuCard_CongViec.MenuName = "CÔNG VIỆC";
+            this.ucMenuCard_CongViec.Name = "ucMenuCard_CongViec";
+            this.ucMenuCard_CongViec.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_CongViec.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_CongViec.TabIndex = 8;
+            this.ucMenuCard_CongViec.MenuClick += new System.EventHandler(this.ucMenuCard_CongViec_MenuClick);
             // 
             // ucMenuCard_XetDuyet
             // 
@@ -252,11 +274,52 @@
             this.ucMenuCard_XetDuyet.TabIndex = 7;
             this.ucMenuCard_XetDuyet.MenuClick += new System.EventHandler(this.ucMenuCard_XetDuyet_MenuClick);
             // 
+            // ucMenuCard_ThongKe
+            // 
+            this.ucMenuCard_ThongKe.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_ThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_ThongKe.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_ThongKe.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_ThongKe.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_ThongKe.Id = 0;
+            this.ucMenuCard_ThongKe.Location = new System.Drawing.Point(41, 71);
+            this.ucMenuCard_ThongKe.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_ThongKe.MenuImage = global::FinalProject.Properties.Resources.char_icon;
+            this.ucMenuCard_ThongKe.MenuName = "THỐNG KÊ";
+            this.ucMenuCard_ThongKe.Name = "ucMenuCard_ThongKe";
+            this.ucMenuCard_ThongKe.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_ThongKe.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_ThongKe.TabIndex = 6;
+            this.ucMenuCard_ThongKe.MenuClick += new System.EventHandler(this.ucMenuCard_ThongKe_MenuClick);
+            // 
+            // ucMenuCard_CongTy
+            // 
+            this.ucMenuCard_CongTy.BackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_CongTy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_CongTy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ucMenuCard_CongTy.ButtonBackColor = System.Drawing.Color.AntiqueWhite;
+            this.ucMenuCard_CongTy.ButtonTextColor = System.Drawing.Color.RoyalBlue;
+            this.ucMenuCard_CongTy.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_CongTy.Id = 0;
+            this.ucMenuCard_CongTy.Location = new System.Drawing.Point(41, 234);
+            this.ucMenuCard_CongTy.Margin = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_CongTy.MenuImage = global::FinalProject.Properties.Resources.icons8_company_100;
+            this.ucMenuCard_CongTy.MenuName = "CÔNG TY";
+            this.ucMenuCard_CongTy.Name = "ucMenuCard_CongTy";
+            this.ucMenuCard_CongTy.Padding = new System.Windows.Forms.Padding(13);
+            this.ucMenuCard_CongTy.Size = new System.Drawing.Size(182, 137);
+            this.ucMenuCard_CongTy.TabIndex = 10;
+            this.ucMenuCard_CongTy.MenuClick += new System.EventHandler(this.ucMenuCard_CongTy_MenuClick);
+            // 
             // FAdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 412);
+            this.Controls.Add(this.ucMenuCard_CongTy);
+            this.Controls.Add(this.ucMenuCard_UngVien);
+            this.Controls.Add(this.ucMenuCard_CongViec);
             this.Controls.Add(this.ucMenuCard_XetDuyet);
             this.Controls.Add(this.ucMenuCard_ThongKe);
             this.Controls.Add(this.pictureBox_Image);
@@ -284,16 +347,19 @@
         private System.Windows.Forms.ToolStripMenuItem menu_CongTy;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem menu_DanhSachCongViec;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngViệcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu_ChinhSuaCongViec;
         private System.Windows.Forms.ToolStripMenuItem menu_DanhSachUngVien;
-        private System.Windows.Forms.ToolStripMenuItem thêmỨngViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu_ChinhSuaUngVien;
         private System.Windows.Forms.ToolStripMenuItem menu_DanhSachCongTy;
-        private System.Windows.Forms.ToolStripMenuItem chỉnhSửaCôngTyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu_ChinhSuaCongTy;
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanUngVien;
         private System.Windows.Forms.ToolStripMenuItem menu_TaiKhoanMatKhau;
         private System.Windows.Forms.ToolStripMenuItem tsM_ThongKe;
         private UC.UCMenuCard ucMenuCard_ThongKe;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private UC.UCMenuCard ucMenuCard_XetDuyet;
+        private UC.UCMenuCard ucMenuCard_CongViec;
+        private UC.UCMenuCard ucMenuCard_UngVien;
+        private UC.UCMenuCard ucMenuCard_CongTy;
     }
 }
