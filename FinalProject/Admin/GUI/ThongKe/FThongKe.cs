@@ -8,53 +8,66 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace FinalProject.Admin.GUI
 {
     public partial class FThongKe : Form
     {
+        string connectionString = Properties.Settings.Default.connectionString;
+
         public FThongKe()
         {
             InitializeComponent();
         }
 
-        private void FThongKe_Load(object sender, EventArgs e)
+        private int DemSoLuongCongViec(string connectionString)
         {
-            try
+            int Dem = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string connectionString = Properties.Settings.Default.connectionString;
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                string query = "SELECT COUNT(*) FROM CongViec";
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    string query = "SELECT DISTINCT Nganh, COUNT(*) AS SoLuong FROM congviec GROUP BY Nganh"; 
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                BDCot.Series["BDCot"].Points.Clear();
-                                BDTron.Series["BDTron"].Points.Clear();
-                                while (reader.Read())
-                                {
-                                    string nganh = reader.GetString(0);
-                                    int soLuong = reader.GetInt32(1);
-                                    BDCot.Series["BDCot"].Points.AddXY(nganh, soLuong);
-                                    BDTron.Series["BDTron"].Points.AddXY(nganh, soLuong); 
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("No data found in the 'congviec' table!");
-                            }
-                        }
-                    }
+                    connection.Open();
+                    Dem = (int)command.ExecuteScalar();
                 }
             }
-            catch (SqlException ex)
+            return Dem;
+        }
+
+        private int DemSoLuongUngVien(string connectionString)
+        {
+            int Dem = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                MessageBox.Show("Error connecting to database: " + ex.Message);
+                string query = "SELECT COUNT(*) FROM UngVien";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    Dem = (int)command.ExecuteScalar();
+                }
             }
+            return Dem;
+        }
+
+        private void FThongKe_Load(object sender, EventArgs e)
+        {
+            int soLuongCongViec = DemSoLuongCongViec(connectionString);
+            txtSoLuongCongViec.Text = soLuongCongViec.ToString();
+            int soLuongUngVien = DemSoLuongUngVien(connectionString);
+            txtSoLuongUngVien.Text = soLuongUngVien.ToString();
+
+            // Vẽ biểu đồ tròn
+            BDTron.Series.Clear();
+            BDTron.Series.Add("Số Lượng");
+
+            BDTron.Series["Số Lượng"].Points.AddXY("Công Việc", soLuongCongViec);
+            BDTron.Series["Số Lượng"].Points.AddXY("Ứng Viên", soLuongUngVien);
+
+            BDTron.Series["Số Lượng"].ChartType = SeriesChartType.Pie;
+            BDTron.Series["Số Lượng"]["PieLabelStyle"] = "Outside";
+            BDTron.Series["Số Lượng"].IsValueShownAsLabel = true;
         }
     }
 }

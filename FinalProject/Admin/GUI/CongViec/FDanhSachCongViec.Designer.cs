@@ -44,6 +44,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.cbNganh = new System.Windows.Forms.ComboBox();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.pnlControl.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Avatar)).BeginInit();
@@ -58,6 +59,7 @@
             // pnlControl
             // 
             this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.pnlControl.Controls.Add(this.btnXuatFile);
             this.pnlControl.Controls.Add(this.btnSua);
             this.pnlControl.Controls.Add(this.panel5);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
@@ -248,6 +250,21 @@
             this.txtTimKiem.Size = new System.Drawing.Size(1305, 36);
             this.txtTimKiem.TabIndex = 0;
             // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuatFile.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXuatFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnXuatFile.Image = global::FinalProject.Properties.Resources.icons8_save_32;
+            this.btnXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatFile.Location = new System.Drawing.Point(0, 258);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(280, 86);
+            this.btnXuatFile.TabIndex = 7;
+            this.btnXuatFile.Text = "XUẤT FILE";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
+            // 
             // FDanhSachCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,5 +309,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnXuatFile;
     }
 }

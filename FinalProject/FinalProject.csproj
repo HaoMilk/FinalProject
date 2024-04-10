@@ -195,6 +195,12 @@
     <Compile Include="Admin\GUI\ThongKe\FThongKe.Designer.cs">
       <DependentUpon>FThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.Designer.cs">
+      <DependentUpon>FThongKeCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKe.resx">
       <DependentUpon>FThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKeCongViec.resx">
+      <DependentUpon>FThongKeCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
       <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
