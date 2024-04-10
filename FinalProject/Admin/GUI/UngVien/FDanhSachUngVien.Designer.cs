@@ -40,6 +40,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.btnXuatFile = new System.Windows.Forms.Button();
             this.grpBoxTimKiem.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSUV)).BeginInit();
@@ -180,6 +181,7 @@
             // pnlControl
             // 
             this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.pnlControl.Controls.Add(this.btnXuatFile);
             this.pnlControl.Controls.Add(this.btnSua);
             this.pnlControl.Controls.Add(this.panel5);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
@@ -187,6 +189,22 @@
             this.pnlControl.Name = "pnlControl";
             this.pnlControl.Size = new System.Drawing.Size(271, 685);
             this.pnlControl.TabIndex = 9;
+            // 
+            // btnXuatFile
+            // 
+            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(40)))), ((int)(((byte)(51)))));
+            this.btnXuatFile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXuatFile.Font = new System.Drawing.Font("Constantia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXuatFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(252)))), ((int)(((byte)(241)))));
+            this.btnXuatFile.Image = global::FinalProject.Properties.Resources.icons8_save_32;
+            this.btnXuatFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXuatFile.Location = new System.Drawing.Point(0, 258);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(271, 86);
+            this.btnXuatFile.TabIndex = 6;
+            this.btnXuatFile.Text = "XUẤT FILE";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
+            this.btnXuatFile.Click += new System.EventHandler(this.btnXuatFile_Click);
             // 
             // FDanhSachUngVien
             // 
@@ -227,5 +245,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.Button btnXuatFile;
     }
 }

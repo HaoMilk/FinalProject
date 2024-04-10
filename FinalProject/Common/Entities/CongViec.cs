@@ -27,7 +27,29 @@ namespace FinalProject.Database.Entities
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
+        public DateTime FromDate { get; set; }  
         public int IdCongTy { get; set; }
         public string TenCongTy { get; set; }
+
+        public bool CheckNull( )
+        {
+            return Ten is null ||
+                   Nganh is null ||
+                   ViTriTuyenDung is null ||
+                   DiaDiem is null ||
+                   TrinhDoHocVan is null ||
+                   GioiTinh is null ||
+                   LienHe is null ||
+                   MoTa is null ||
+                   QuyenLoi is null ||
+                   KinhNghiem is null ||
+                   YeuCauUngVien is null ||
+                   TenCongTy is null ||
+                   MucLuong == default ||
+                   SoLuong == default ||
+                   IdCongTy == default ||
+                   FromDate == default;
+        }
     }
+
 }

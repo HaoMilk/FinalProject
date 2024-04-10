@@ -332,11 +332,11 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FAddViecLam.cs">
+    <Compile Include="Company\GUI\FCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FAddViecLam.Designer.cs">
-      <DependentUpon>FAddViecLam.cs</DependentUpon>
+    <Compile Include="Company\GUI\FCongViec.Designer.cs">
+      <DependentUpon>FCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Common\DTO\UngTuyenDTO.cs" />
@@ -425,6 +425,12 @@
     <Compile Include="UC\UCJobCard.Designer.cs">
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\UCViewJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCViewJob.Designer.cs">
+      <DependentUpon>UCViewJob.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,8 +503,8 @@
     <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FAddViecLam.resx">
-      <DependentUpon>FAddViecLam.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FCongViec.resx">
+      <DependentUpon>FCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
@@ -547,6 +553,9 @@
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="Database\Scripts\014. Update TableCongViec.sql" />
+    <EmbeddedResource Include="UC\UCViewJob.resx">
+      <DependentUpon>UCViewJob.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -561,7 +570,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\CV-Template-for-Software-Engineer.rtf" />
     <None Include="Resources\CV-template.rtf" />
@@ -601,6 +609,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
+    <None Include="Resources\File icon.jpg" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

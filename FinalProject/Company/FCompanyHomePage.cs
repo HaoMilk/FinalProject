@@ -28,7 +28,7 @@ namespace FinalProject.Company
 
     private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            FAddViecLam fAddViecLam = new FAddViecLam();
+            FCongViec fAddViecLam = new FCongViec();
             fAddViecLam.Show();
         }
 

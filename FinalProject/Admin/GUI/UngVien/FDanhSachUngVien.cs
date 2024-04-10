@@ -52,5 +52,10 @@ namespace FinalProject.Admin
             FChinhSuaUngVien fChinhSuaUngVien = new FChinhSuaUngVien();
             fChinhSuaUngVien.ShowDialog();
         }
+
+        private void btnXuatFile_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

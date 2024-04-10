@@ -25,63 +25,8 @@ namespace FinalProject.Admin
         public FAdminHomePage()
         {
             InitializeComponent();
-        }
-
-        private void menu_TaiKhoanMatKhau_Click(object sender, EventArgs e)
-        {
-            FTaiKhoanCty fTaiKhoanCty = new FTaiKhoanCty();
-            fTaiKhoanCty.ShowDialog();
-        }
-
-
-        private void menu_TaiKhoanUngVien_Click_1(object sender, EventArgs e)
-        {
-            FTaiKhoanUngVien fTaiKhoanUngVien = new FTaiKhoanUngVien();
-            fTaiKhoanUngVien.ShowDialog();
-        }
-
-        private void menu_DanhSachUngVien_Click(object sender, EventArgs e)
-        {
-            FDanhSachUngVien fDanhSachUngVien = new FDanhSachUngVien();
-            fDanhSachUngVien .ShowDialog();
-
-        }
-
-        private void menu_DanhSachCongTy_Click(object sender, EventArgs e)
-        {
-            FDanhSachCongTy fDanhSachCongTy = new FDanhSachCongTy();    
-            fDanhSachCongTy .ShowDialog();
-        }
-
-        private void menu_DanhSachCongViec_Click(object sender, EventArgs e)
-        {
-            FDanhSachCongViec fDanhSachCongViec = new FDanhSachCongViec();
-            fDanhSachCongViec.ShowDialog();
-        }
-
-        private void thêmỨngViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FChinhSuaUngVien fChinhSuaUngVien = new FChinhSuaUngVien();
-            fChinhSuaUngVien.ShowDialog();
-        }
-
-        private void tàiKhoảnVàMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
-            fDoiMatKhau.ShowDialog();
-        }
-
-        private void chỉnhSửaCôngTyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
-            fChinhSuaCongTy.ShowDialog();
-        }
-
-        private void chỉnhSửaCôngViệcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
-            fChinhSuaCongViec.ShowDialog();
-        }
+        }      
+        
         #region ThongKe
         private void tsM_ThongKe_Click(object sender, EventArgs e)
         {
@@ -123,7 +68,92 @@ namespace FinalProject.Admin
         {
             this.OpenXetDuyet();
         }
+
         #endregion XetDuyet
 
+        #region CongViec
+        private void ucMenuCard_CongViec_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenCongViec();
+        }
+        private void menu_DanhSachCongViec_Click(object sender, EventArgs e)
+        {
+            this.OpenCongViec();
+        }
+        private void OpenCongViec()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FDanhSachCongViec fDanhSachCongViec = new FDanhSachCongViec();
+            fDanhSachCongViec.ShowDialog(); 
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        private void menu_ChinhSuaCongViec_Click(object sender, EventArgs e)
+        {
+            FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
+            fChinhSuaCongViec.ShowDialog();
+        }
+        #endregion CongViec
+
+        #region UngVien
+        private void ucMenuCard_UngVien_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenUngVien();
+        }
+        private void OpenUngVien()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FDanhSachUngVien fDanhSachUngVien = new FDanhSachUngVien();
+            fDanhSachUngVien.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        private void menu_DanhSachUngVien_Click(object sender, EventArgs e)
+        {
+            this.OpenUngVien();
+
+        }
+        private void menu_ChinhSuaUngVien_Click(object sender, EventArgs e)
+        {
+            FChinhSuaUngVien fChinhSuaUngVien = new FChinhSuaUngVien();
+            fChinhSuaUngVien.ShowDialog();
+        }
+        private void menu_TaiKhoanUngVien_Click_1(object sender, EventArgs e)
+        {
+            FTaiKhoanUngVien fTaiKhoanUngVien = new FTaiKhoanUngVien();
+            fTaiKhoanUngVien.ShowDialog();
+        }
+
+        #endregion UngVien
+
+        #region CongTy
+        private void ucMenuCard_CongTy_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenCongTy();
+        }
+
+        private void menu_ChinhSuaCongTy_Click(object sender, EventArgs e)
+        {
+            FChinhSuaCongTy fChinhSuaCongTy = new FChinhSuaCongTy();
+            fChinhSuaCongTy.ShowDialog();
+        }
+        private void OpenCongTy()
+        {
+            if (!isAlwaysShowDashboard) this.Hide();
+            FDanhSachCongTy fDanhSachCongTy = new FDanhSachCongTy();
+            fDanhSachCongTy.ShowDialog();
+
+            if (!isAlwaysShowDashboard) this.Show();
+        }
+        private void menu_DanhSachCongTy_Click(object sender, EventArgs e)
+        {
+            this.OpenCongTy();
+        }
+        private void menu_TaiKhoanMatKhau_Click(object sender, EventArgs e)
+        {
+            FTaiKhoanCty fTaiKhoanCty = new FTaiKhoanCty();
+            fTaiKhoanCty.ShowDialog();
+        }
+        #endregion
     }
 }
