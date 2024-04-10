@@ -253,7 +253,7 @@ namespace FinalProject.UC
             {
                 //MessageBox.Show($"View id = {id}");
 
-                FChiTietCv fChiTietCv = new FChiTietCv();
+                FChiTietCongViec fChiTietCv = new FChiTietCongViec();
                 fChiTietCv.Id = id;
                 fChiTietCv.UngTuyenId = ungTuyenId;
                 fChiTietCv.CvName = jobName;

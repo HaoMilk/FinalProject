@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
 {
-    public partial class FChiTietCv : UCForm
+    public partial class FChiTietCongViec : UCForm
     {
         private CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
@@ -72,7 +72,7 @@ namespace FinalProject.Candidate.GUI
             }
         }
 
-        public FChiTietCv()
+        public FChiTietCongViec()
         {
             InitializeComponent();
         }
@@ -96,6 +96,7 @@ namespace FinalProject.Candidate.GUI
                 textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 textBox_Nganh.Text = congViec.Nganh;
+                textBox_SoLuong.Text = congViec.SoLuong.ToString() ;
             }
         }
 
