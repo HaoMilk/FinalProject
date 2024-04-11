@@ -35,11 +35,9 @@
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_Xoa = new System.Windows.Forms.Button();
             this.button_Luu = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox_GiayPhep = new System.Windows.Forms.TextBox();
-            this.button_CapNhat = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox_MST = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -48,6 +46,7 @@
             this.textBox_DiaChi = new System.Windows.Forms.TextBox();
             this.label_Name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -133,10 +132,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button_Xoa);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button_Luu);
             this.panel1.Controls.Add(this.groupBox8);
-            this.panel1.Controls.Add(this.button_CapNhat);
             this.panel1.Controls.Add(this.groupBox7);
             this.panel1.Controls.Add(this.groupBox6);
             this.panel1.Controls.Add(this.groupBox2);
@@ -146,34 +144,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(626, 695);
+            this.panel1.Size = new System.Drawing.Size(626, 643);
             this.panel1.TabIndex = 12;
-            // 
-            // button_Xoa
-            // 
-            this.button_Xoa.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_Xoa.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Xoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_Xoa.Image = global::FinalProject.Properties.Resources.save;
-            this.button_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Xoa.Location = new System.Drawing.Point(411, 591);
-            this.button_Xoa.Name = "button_Xoa";
-            this.button_Xoa.Size = new System.Drawing.Size(215, 104);
-            this.button_Xoa.TabIndex = 13;
-            this.button_Xoa.Text = "Xoá";
-            this.button_Xoa.UseVisualStyleBackColor = false;
-            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_Luu
             // 
             this.button_Luu.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_Luu.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_Luu.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Luu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button_Luu.Image = global::FinalProject.Properties.Resources.save;
             this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Luu.Location = new System.Drawing.Point(3, 588);
+            this.button_Luu.Location = new System.Drawing.Point(0, 578);
             this.button_Luu.Name = "button_Luu";
-            this.button_Luu.Size = new System.Drawing.Size(215, 104);
+            this.button_Luu.Size = new System.Drawing.Size(626, 65);
             this.button_Luu.TabIndex = 3;
             this.button_Luu.Text = "Lưu";
             this.button_Luu.UseVisualStyleBackColor = false;
@@ -202,21 +186,6 @@
             this.textBox_GiayPhep.Name = "textBox_GiayPhep";
             this.textBox_GiayPhep.Size = new System.Drawing.Size(620, 32);
             this.textBox_GiayPhep.TabIndex = 2;
-            // 
-            // button_CapNhat
-            // 
-            this.button_CapNhat.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button_CapNhat.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_CapNhat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button_CapNhat.Image = global::FinalProject.Properties.Resources.icons8_edit_48;
-            this.button_CapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_CapNhat.Location = new System.Drawing.Point(213, 588);
-            this.button_CapNhat.Name = "button_CapNhat";
-            this.button_CapNhat.Size = new System.Drawing.Size(201, 104);
-            this.button_CapNhat.TabIndex = 10;
-            this.button_CapNhat.Text = "Cập nhật";
-            this.button_CapNhat.UseVisualStyleBackColor = false;
-            this.button_CapNhat.Click += new System.EventHandler(this.button_CapNhat_Click);
             // 
             // groupBox7
             // 
@@ -310,22 +279,36 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Location = new System.Drawing.Point(630, 42);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(500, 695);
+            this.pictureBox1.Size = new System.Drawing.Size(500, 643);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::FinalProject.Properties.Resources.icons8_add_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 513);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(626, 65);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Chọn giấy phép";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FThongTinCongTy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1130, 737);
+            this.ClientSize = new System.Drawing.Size(1130, 685);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_Name);
             this.MaximizeBox = false;
             this.Name = "FThongTinCongTy";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FSuaThongTin";
             this.Load += new System.EventHandler(this.FThongTinCongTy_Load);
             this.groupBox5.ResumeLayout(false);
@@ -359,15 +342,14 @@
         private System.Windows.Forms.Label label_Name;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox_DiaChi;
-        private System.Windows.Forms.Button button_CapNhat;
         private System.Windows.Forms.Button button_Luu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox_MST;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox_CEO;
-        private System.Windows.Forms.Button button_Xoa;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox_GiayPhep;
+        private System.Windows.Forms.Button button1;
     }
 }

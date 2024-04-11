@@ -96,7 +96,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             }
             else
             {
-                result = congViecBUS.Update(IdCongTy, TenCongTy, TenCongViec, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, FromDate);
+                result = congViecBUS.Update(Id, IdCongTy, TenCongTy, TenCongViec, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, FromDate);
             }
             if (result > 0)
             {
