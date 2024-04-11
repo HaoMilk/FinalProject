@@ -97,6 +97,7 @@ namespace FinalProject.Candidate.GUI
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 textBox_Nganh.Text = congViec.Nganh;
                 textBox_SoLuong.Text = congViec.SoLuong.ToString() ;
+                richTextBox_YeuCau.Text = congViec.YeuCauUngVien;
             }
         }
 

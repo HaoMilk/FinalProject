@@ -28,23 +28,8 @@ namespace FinalProject.Company
 
     private void menuItem_Dsvl_Click(object sender, EventArgs e)
         {
-            FAddViecLam fAddViecLam = new FAddViecLam();
+            FCongViec fAddViecLam = new FCongViec();
             fAddViecLam.Show();
-        }
-
-        private void menuItem_VieclamUT_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hồSơĐãDuyệnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hồSơChưaDuyệtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-;
         }
 
         private void menuItem_DsCty_Click(object sender, EventArgs e)
@@ -64,17 +49,9 @@ namespace FinalProject.Company
             FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
             fDoiMatKhau.Show();
         }
-
         private void menuItem_DangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-
-
-        private void FCompanyHomePage_Load(object sender, EventArgs e)
-        {
-
         }
         #region DanhSachViecLam
         private void ToolStripMenuItem_ChinhSuaCongViec_Click(object sender, EventArgs e)
@@ -92,5 +69,28 @@ namespace FinalProject.Company
             if (!isAlwaysShowDashboard) this.Show();
         }
         #endregion DanhSachViecLam
+
+        private void ucMenuCard_TaoViecLam_MenuClick(object sender, EventArgs e)
+        {
+            FCongViec fAddViecLam = new FCongViec();
+            fAddViecLam.Show();
+        }
+
+
+        private void ucMenuCard_DangXuat_MenuClick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ucMenuCard_ViecLamUT_MenuClick(object sender, EventArgs e)
+        {
+            this.OpenMenuDanhSachViecLam();
+        }
+
+        private void ucMenuCard_ThongTin_MenuClick(object sender, EventArgs e)
+        {
+            FThongTinCongTy fThongTin = new FThongTinCongTy();
+            fThongTin.Show();
+        }
     }
 }
