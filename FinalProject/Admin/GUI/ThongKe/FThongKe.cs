@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using FinalProject.Admin.GUI.ThongKe;
 
 namespace FinalProject.Admin.GUI
 {
@@ -68,6 +69,12 @@ namespace FinalProject.Admin.GUI
             BDTron.Series["Số Lượng"].ChartType = SeriesChartType.Pie;
             BDTron.Series["Số Lượng"]["PieLabelStyle"] = "Outside";
             BDTron.Series["Số Lượng"].IsValueShownAsLabel = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FThongKeCongViec fThongKeCongViec = new FThongKeCongViec();
+            fThongKeCongViec.Show();
         }
     }
 }

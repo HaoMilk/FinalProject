@@ -129,7 +129,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(280, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1311, 69);
+            this.panel2.Size = new System.Drawing.Size(1384, 69);
             this.panel2.TabIndex = 6;
             // 
             // label_DSCongTy
@@ -140,7 +140,7 @@
             this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.Info;
             this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
             this.label_DSCongTy.Name = "label_DSCongTy";
-            this.label_DSCongTy.Size = new System.Drawing.Size(1311, 69);
+            this.label_DSCongTy.Size = new System.Drawing.Size(1384, 69);
             this.label_DSCongTy.TabIndex = 9;
             this.label_DSCongTy.Text = "DANH SÁCH CÔNG VIỆC";
             this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,7 +153,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(280, 69);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1311, 619);
+            this.panel4.Size = new System.Drawing.Size(1384, 619);
             this.panel4.TabIndex = 8;
             // 
             // panel3
@@ -162,7 +162,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 119);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1311, 500);
+            this.panel3.Size = new System.Drawing.Size(1384, 500);
             this.panel3.TabIndex = 1;
             // 
             // dgvDSCV
@@ -175,8 +175,9 @@
             this.dgvDSCV.Name = "dgvDSCV";
             this.dgvDSCV.RowHeadersWidth = 51;
             this.dgvDSCV.RowTemplate.Height = 24;
-            this.dgvDSCV.Size = new System.Drawing.Size(1311, 500);
+            this.dgvDSCV.Size = new System.Drawing.Size(1384, 500);
             this.dgvDSCV.TabIndex = 1;
+            this.dgvDSCV.SelectionChanged += new System.EventHandler(this.dgvDSCV_SelectionChanged);
             // 
             // panel1
             // 
@@ -184,7 +185,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1311, 119);
+            this.panel1.Size = new System.Drawing.Size(1384, 119);
             this.panel1.TabIndex = 0;
             // 
             // grpBoxTimKiem
@@ -200,7 +201,7 @@
             this.grpBoxTimKiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.grpBoxTimKiem.Location = new System.Drawing.Point(0, 0);
             this.grpBoxTimKiem.Name = "grpBoxTimKiem";
-            this.grpBoxTimKiem.Size = new System.Drawing.Size(1311, 119);
+            this.grpBoxTimKiem.Size = new System.Drawing.Size(1384, 119);
             this.grpBoxTimKiem.TabIndex = 1;
             this.grpBoxTimKiem.TabStop = false;
             this.grpBoxTimKiem.Text = "TÌm kiếm";
@@ -212,11 +213,12 @@
             this.cbMucLuong.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbMucLuong.ForeColor = System.Drawing.Color.White;
             this.cbMucLuong.FormattingEnabled = true;
-            this.cbMucLuong.Location = new System.Drawing.Point(1010, 68);
+            this.cbMucLuong.Location = new System.Drawing.Point(1323, 68);
             this.cbMucLuong.Name = "cbMucLuong";
-            this.cbMucLuong.Size = new System.Drawing.Size(338, 36);
+            this.cbMucLuong.Size = new System.Drawing.Size(440, 36);
             this.cbMucLuong.TabIndex = 5;
             this.cbMucLuong.Text = "Mức lương";
+            this.cbMucLuong.SelectedIndexChanged += new System.EventHandler(this.cbMucLuong_SelectedIndexChanged);
             // 
             // cbKinhNghiem
             // 
@@ -225,11 +227,12 @@
             this.cbKinhNghiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbKinhNghiem.ForeColor = System.Drawing.Color.White;
             this.cbKinhNghiem.FormattingEnabled = true;
-            this.cbKinhNghiem.Location = new System.Drawing.Point(672, 68);
+            this.cbKinhNghiem.Location = new System.Drawing.Point(883, 68);
             this.cbKinhNghiem.Name = "cbKinhNghiem";
-            this.cbKinhNghiem.Size = new System.Drawing.Size(338, 36);
+            this.cbKinhNghiem.Size = new System.Drawing.Size(440, 36);
             this.cbKinhNghiem.TabIndex = 4;
             this.cbKinhNghiem.Text = "Yêu cầu kinh nghiệm";
+            this.cbKinhNghiem.SelectedIndexChanged += new System.EventHandler(this.cbKinhNghiem_SelectedIndexChanged);
             // 
             // cbDiaDiem
             // 
@@ -238,11 +241,12 @@
             this.cbDiaDiem.Font = new System.Drawing.Font("Constantia", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbDiaDiem.ForeColor = System.Drawing.Color.White;
             this.cbDiaDiem.FormattingEnabled = true;
-            this.cbDiaDiem.Location = new System.Drawing.Point(334, 68);
+            this.cbDiaDiem.Location = new System.Drawing.Point(443, 68);
             this.cbDiaDiem.Name = "cbDiaDiem";
-            this.cbDiaDiem.Size = new System.Drawing.Size(338, 36);
+            this.cbDiaDiem.Size = new System.Drawing.Size(440, 36);
             this.cbDiaDiem.TabIndex = 2;
             this.cbDiaDiem.Text = "Địa điểm";
+            this.cbDiaDiem.SelectedIndexChanged += new System.EventHandler(this.cbDiaDiem_SelectedIndexChanged);
             // 
             // cbNganh
             // 
@@ -253,23 +257,24 @@
             this.cbNganh.FormattingEnabled = true;
             this.cbNganh.Location = new System.Drawing.Point(3, 68);
             this.cbNganh.Name = "cbNganh";
-            this.cbNganh.Size = new System.Drawing.Size(331, 36);
+            this.cbNganh.Size = new System.Drawing.Size(440, 36);
             this.cbNganh.TabIndex = 1;
             this.cbNganh.Text = "Ngành";
+            this.cbNganh.SelectedIndexChanged += new System.EventHandler(this.cbNganh_SelectedIndexChanged);
             // 
             // txtTimKiem
             // 
             this.txtTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtTimKiem.Location = new System.Drawing.Point(3, 32);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(1305, 36);
+            this.txtTimKiem.Size = new System.Drawing.Size(1378, 36);
             this.txtTimKiem.TabIndex = 0;
             // 
             // FDanhSachCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1591, 688);
+            this.ClientSize = new System.Drawing.Size(1664, 688);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlControl);
@@ -277,6 +282,7 @@
             this.MinimizeBox = false;
             this.Name = "FDanhSachCongViec";
             this.Text = "FDanhSachCongViec";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FDanhSachCongViec_Load);
             this.pnlControl.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -158,6 +158,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "CÔNG VIỆC";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -205,19 +206,19 @@
             // 
             // BDTron
             // 
-            chartArea1.Name = "ChartArea1";
-            this.BDTron.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.BDTron.ChartAreas.Add(chartArea2);
             this.BDTron.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.BDTron.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.BDTron.Legends.Add(legend2);
             this.BDTron.Location = new System.Drawing.Point(3, 32);
             this.BDTron.Name = "BDTron";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.LegendText = "Biểu đồ tròn";
-            series1.Name = "BDTron";
-            this.BDTron.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Biểu đồ tròn";
+            series2.Name = "BDTron";
+            this.BDTron.Series.Add(series2);
             this.BDTron.Size = new System.Drawing.Size(851, 341);
             this.BDTron.TabIndex = 1;
             this.BDTron.Text = "chart1";
