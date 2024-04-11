@@ -213,6 +213,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap create_job {
+            get {
+                object obj = ResourceManager.GetObject("create job", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap csharp {
             get {
                 object obj = ResourceManager.GetObject("csharp", resourceCulture);
@@ -514,6 +524,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_data_pending_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-data-pending-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_delete_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-24", resourceCulture);
@@ -554,6 +574,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_history_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-history-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_job_seeker_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-job-seeker-96", resourceCulture);
@@ -567,6 +597,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_last_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-last-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_list_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-list-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -637,6 +677,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_previous_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-previous-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_profile_check_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-profile-check-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

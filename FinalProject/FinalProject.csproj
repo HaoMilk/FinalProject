@@ -610,6 +610,11 @@
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
+    <None Include="Resources\create job.png" />
+    <None Include="Resources\icons8-list-64.png" />
+    <None Include="Resources\icons8-profile-check-64.png" />
+    <None Include="Resources\icons8-data-pending-64.png" />
+    <None Include="Resources\icons8-history-64.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

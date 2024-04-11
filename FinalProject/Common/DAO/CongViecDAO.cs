@@ -35,7 +35,7 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<CongViec> GetAll(CongViecGetAllInput input = null)
+        public List<CongViec> GetAll(CongViecGetAllInput input)
         {
             if (input == null)
             {
@@ -56,7 +56,6 @@ namespace FinalProject.Common.DAO
                 {
                     query = query + $" AND Ten LIKE '%{input.Search}%' ";
                 }
-
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -78,7 +77,7 @@ namespace FinalProject.Common.DAO
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13);;
+                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
                         congViec.FromDate = reader.GetDateTimeValue(14);
                         congViec.SoLuong = reader.GetIntValue(16);
                         congViec.IsDeleted = reader.GetBooleanValue(17);
@@ -129,7 +128,7 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@IsDeleted", congViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@CreatedTime", congViec.CreatedTime);
                 cmd.Parameters.AddWithValue("@UpdatedTime", congViec.UpdatedTime);
-                cmd.Parameters.AddWithValue("@IdCongTy", congViec.IdCongTy);           
+                cmd.Parameters.AddWithValue("@IdCongTy", congViec.IdCongTy);
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -158,10 +157,10 @@ namespace FinalProject.Common.DAO
                 QuyenLoi = @QuyenLoi, 
                 KinhNghiem = @KinhNghiem, 
                 YeuCauUngVien = @YeuCau, 
+                FromDate = @FromDate,
                 SoLuong = @SoLuong, 
                 IsDeleted = @IsDeleted, 
-                UpdatedTime = @UpdatedTime, 
-                FromDate = @FromDate,
+                UpdatedTime = @UpdatedTime,            
                 IdCongTy = @IdCongTy 
                 WHERE Id = @Id";
                 try
@@ -326,7 +325,5 @@ namespace FinalProject.Common.DAO
             }
             return congViecList;
         }
-
-
     }
 }
