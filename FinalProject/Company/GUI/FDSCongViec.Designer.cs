@@ -32,7 +32,6 @@ namespace FinalProject.Company.GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDSViecLam));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_Search = new FinalProject.UC.UCCustomButton();
             this.menuStrip_Filter = new System.Windows.Forms.MenuStrip();
             this.comboBox_DiaDiem = new System.Windows.Forms.ToolStripComboBox();
             this.comboBox_NgheNghiep = new System.Windows.Forms.ToolStripComboBox();
@@ -44,10 +43,11 @@ namespace FinalProject.Company.GUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
             this.label_SoLuongViecLam = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button_Close = new System.Windows.Forms.Button();
+            this.ucPagination = new FinalProject.UC.UCPagination();
+            this.button_Search = new FinalProject.UC.UCCustomButton();
             this.panel1.SuspendLayout();
             this.menuStrip_Filter.SuspendLayout();
             this.groupBox_ViTri.SuspendLayout();
@@ -68,32 +68,8 @@ namespace FinalProject.Company.GUI
             this.panel1.Location = new System.Drawing.Point(20, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 553);
+            this.panel1.Size = new System.Drawing.Size(292, 639);
             this.panel1.TabIndex = 0;
-            // 
-            // button_Search
-            // 
-            this.button_Search.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button_Search.BackgroundColor = System.Drawing.SystemColors.Highlight;
-            this.button_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.button_Search.BorderRadius = 0;
-            this.button_Search.BorderSize = 0;
-            this.button_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button_Search.FlatAppearance.BorderSize = 0;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
-            this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Search.Location = new System.Drawing.Point(0, 509);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
-            this.button_Search.Size = new System.Drawing.Size(292, 44);
-            this.button_Search.TabIndex = 3;
-            this.button_Search.Text = "Tìm kiếm";
-            this.button_Search.TextColor = System.Drawing.Color.White;
-            this.button_Search.UseVisualStyleBackColor = false;
-            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // menuStrip_Filter
             // 
@@ -214,7 +190,7 @@ namespace FinalProject.Company.GUI
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(312, 50);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(690, 553);
+            this.panel3.Size = new System.Drawing.Size(810, 639);
             this.panel3.TabIndex = 5;
             // 
             // flowLayoutPanel_CongViec
@@ -226,19 +202,8 @@ namespace FinalProject.Company.GUI
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(10);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(690, 463);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(810, 549);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
-            // 
-            // ucPagination
-            // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(0, 503);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(690, 50);
-            this.ucPagination.TabIndex = 0;
-            this.ucPagination.TotalRecord = 15;
-            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // label_SoLuongViecLam
             // 
@@ -249,7 +214,7 @@ namespace FinalProject.Company.GUI
             this.label_SoLuongViecLam.Location = new System.Drawing.Point(0, 0);
             this.label_SoLuongViecLam.Name = "label_SoLuongViecLam";
             this.label_SoLuongViecLam.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            this.label_SoLuongViecLam.Size = new System.Drawing.Size(690, 40);
+            this.label_SoLuongViecLam.Size = new System.Drawing.Size(810, 40);
             this.label_SoLuongViecLam.TabIndex = 4;
             this.label_SoLuongViecLam.Text = "Số lượng việc làm: 0";
             this.label_SoLuongViecLam.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -262,7 +227,7 @@ namespace FinalProject.Company.GUI
             this.panel4.Location = new System.Drawing.Point(20, 10);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 10);
-            this.panel4.Size = new System.Drawing.Size(982, 40);
+            this.panel4.Size = new System.Drawing.Size(1102, 40);
             this.panel4.TabIndex = 6;
             // 
             // button_Close
@@ -273,20 +238,55 @@ namespace FinalProject.Company.GUI
             this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_Close.FlatAppearance.BorderSize = 0;
             this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Location = new System.Drawing.Point(938, 5);
+            this.button_Close.Location = new System.Drawing.Point(1058, 5);
             this.button_Close.Name = "button_Close";
             this.button_Close.Size = new System.Drawing.Size(44, 25);
             this.button_Close.TabIndex = 1;
             this.button_Close.UseVisualStyleBackColor = false;
             this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
             // 
-            // FDanhSachVL_Name
+            // ucPagination
+            // 
+            this.ucPagination.CurrentPage = 1;
+            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucPagination.Location = new System.Drawing.Point(0, 589);
+            this.ucPagination.Name = "ucPagination";
+            this.ucPagination.Size = new System.Drawing.Size(810, 50);
+            this.ucPagination.TabIndex = 0;
+            this.ucPagination.TotalRecord = 15;
+            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
+            // 
+            // button_Search
+            // 
+            this.button_Search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.button_Search.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.button_Search.BorderRadius = 0;
+            this.button_Search.BorderSize = 0;
+            this.button_Search.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Image = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.button_Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Search.Location = new System.Drawing.Point(0, 595);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Padding = new System.Windows.Forms.Padding(5);
+            this.button_Search.Size = new System.Drawing.Size(292, 44);
+            this.button_Search.TabIndex = 3;
+            this.button_Search.Text = "Tìm kiếm";
+            this.button_Search.TextColor = System.Drawing.Color.White;
+            this.button_Search.UseVisualStyleBackColor = false;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
+            // 
+            // FDSViecLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1022, 623);
+            this.ClientSize = new System.Drawing.Size(1142, 709);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -294,7 +294,7 @@ namespace FinalProject.Company.GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FDanhSachVL_Name";
+            this.Name = "FDSViecLam";
             this.Padding = new System.Windows.Forms.Padding(20, 10, 20, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

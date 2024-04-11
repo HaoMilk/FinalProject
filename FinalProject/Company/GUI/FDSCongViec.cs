@@ -1,4 +1,5 @@
 ﻿using FinalProject.Candidate.Constants;
+using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
@@ -56,29 +57,29 @@ namespace FinalProject.Company.GUI
             var start = ucPagination.StartRecord;
             var end = ucPagination.EndRecord;
 
-            var ucJobCards = CreateJobList(quantity);
+            var ucViewJobCard = CreateJobList(quantity);
 
             flowLayoutPanel_CongViec.Controls.Clear();
-            foreach (var ucJobCard in ucJobCards)
+            foreach (var ucJobCard in ucViewJobCard)
             {
                 flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
             }
-            this.label_SoLuongViecLam.Text = "Số lượng việc làm: " + ucJobCards.Count;
+            this.label_SoLuongViecLam.Text = "Số lượng việc làm: " + ucViewJobCard.Count;
         }
 
-        private List<UCJobCard> CreateJobList(int quantity)
+        private List<UCViewJob> CreateJobList(int quantity)
         {
-            listCongViec = congViecBUS.GetAll();
-            List<UCJobCard> ucJobCards = new List<UCJobCard>();
+            listCongViec = congViecBUS.GetByIDCty(LoggedUser.CongTy.ID);
+            List<UCViewJob> ucJobCards = new List<UCViewJob>();
             if(listCongViec != null && listCongViec.Count > 0)
             {
                 for (int i = 0; i < listCongViec.Count; i++)
                 {
 
-                    UCJobCard ucJobCard = new UCJobCard();
-                    ucJobCard.Id = listCongViec[i].Id;
-                    ucJobCard.JobName = listCongViec[i].Ten;
-                    ucJobCards.Add(ucJobCard);
+                    UCViewJob ucViewJob = new UCViewJob();
+                    ucViewJob.Id = listCongViec[i].Id;
+                    ucViewJob.JobName = listCongViec[i].Ten;
+                    ucJobCards.Add(ucViewJob);
                 }
             }
            

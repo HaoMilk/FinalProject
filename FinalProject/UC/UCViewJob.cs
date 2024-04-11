@@ -1,15 +1,18 @@
 ﻿using FinalProject.Candidate.GUI;
-using FinalProject.Common;
-using FinalProject.Database.Entities;
+using FinalProject.Company.GUI.Ung_tuyen;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.Media3D;
 
 namespace FinalProject.UC
 {
-    public partial class UCJobCard : UserControl
+    public partial class UCViewJob : UserControl
     {
         [Browsable(true)]
         [Category("Action")]
@@ -122,22 +125,6 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("BackColor Menu")]
-        public Color ButtonMenuBackground
-        {
-            get { return buttonMenuBackground; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Color.Azure;
-                }
-                buttonMenuBackground = value;
-                this.button_Menu.BackColor = buttonMenuBackground;
-                this.Invalidate();
-            }
-        }
 
         [Category("CUSTOMIZE UI")]
         [DisplayName("JobNameTextColor")]
@@ -207,35 +194,18 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("ButtonMenu Image")]
-        public Image ButtonMenuImage
-        {
-            get { return buttonMenuImage; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Properties.Resources.icons8_menu_96;
-                }
-                buttonMenuImage = value;
-                this.button_Menu.BackgroundImage = buttonMenuImage;
-                this.Invalidate();
-            }
-        }
-        #endregion Properties
 
-        public UCJobCard()
+ 
+        #endregion Properties
+        public UCViewJob()
         {
             InitializeComponent();
-
             this.DoubleBuffered = true;
             this.AutoScaleMode = AutoScaleMode.None;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
         }
-
         public Size ScaleSize(float scale)
         {
             var size = new Size((int)(defaultCardSize.Width * scale), (int)(defaultCardSize.Height * scale));
@@ -253,29 +223,17 @@ namespace FinalProject.UC
             {
                 //MessageBox.Show($"View id = {id}");
 
-                FChiTietCongViec fChiTietCv = new FChiTietCongViec();
-                fChiTietCv.Id = id;
-                fChiTietCv.UngTuyenId = ungTuyenId;
-                fChiTietCv.CvName = jobName;
-                fChiTietCv.CvUpdatedTime = lastUpdatedTime;
-                fChiTietCv.ShowDialog();
+                FCongViec fCongViec = new FCongViec();
+                fCongViec.Id = id;
+                fCongViec.CvUpdatedTime = lastUpdatedTime;
+                fCongViec.ShowDialog();
             }
         }
 
-        private void button_Menu_Click(object sender, EventArgs e)
+        private void button_Edit_Click(object sender, EventArgs e)
         {
-            if (MenuClick != null)
-            {
-                MenuClick(this, e);
-            }
-            else
-            {
-                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
-                fUngTuyenCongViec.UngTuyenId = LoggedUser.UserId;
-                fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
-                fUngTuyenCongViec.CongViecId = id;
-                fUngTuyenCongViec.ShowDialog();
-            }
+            FCongViec fAddViecLam = new FCongViec();
+            
         }
     }
 }

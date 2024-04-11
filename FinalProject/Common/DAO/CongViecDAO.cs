@@ -79,6 +79,7 @@ namespace FinalProject.Common.DAO
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
                         congViec.YeuCauUngVien = reader.GetStringValue(13);;
+                        congViec.FromDate = reader.GetDateTimeValue(14);
                         congViec.SoLuong = reader.GetIntValue(16);
                         congViec.IsDeleted = reader.GetBooleanValue(17);
                         congViec.CreatedTime = reader.GetDateTimeValue(18);
@@ -100,12 +101,12 @@ namespace FinalProject.Common.DAO
         public int Add(CongViec congViec)
         {
             string query = $@"
-                INSERT INTO CongViec (Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, 
-                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, 
-                    SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
-                VALUES (@Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
+                INSERT INTO CongViec ( Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, 
+                    TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien,
+                    FromDate, SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
+                VALUES (@Id, @Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
                     @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @KinhNghiem, @YeuCauUngVien, 
-                    @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
+                    @FromDate, @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
 
             using (dbConnection.Connection)
             {
@@ -123,6 +124,7 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@QuyenLoi", congViec.QuyenLoi);
                 cmd.Parameters.AddWithValue("@KinhNghiem", congViec.KinhNghiem);
                 cmd.Parameters.AddWithValue("@YeuCauUngVien", congViec.YeuCauUngVien);
+                cmd.Parameters.AddWithValue("@FromDate", congViec.FromDate);
                 cmd.Parameters.AddWithValue("@SoLuong", congViec.SoLuong);
                 cmd.Parameters.AddWithValue("@IsDeleted", congViec.IsDeleted);
                 cmd.Parameters.AddWithValue("@CreatedTime", congViec.CreatedTime);
@@ -138,51 +140,52 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public int Update(CongViec CongViec)
+        public int Update(CongViec congViec)
         {
             using (dbConnection.Connection)
             {
                 string query = @"UPDATE CongViec SET 
-                        Ten = @Ten, 
-                        TenCongTy = @TenCongTy, 
-                        Nganh = @Nganh, 
-                        ViTriTuyenDung = @ViTriTuyenDung, 
-                        MucLuong = @MucLuong, 
-                        DiaDiem = @DiaDiem, 
-                        TrinhDoHocVan = @TrinhDoHocVan, 
-                        GioiTinh = @GioiTinh, 
-                        LienHe = @LienHe, 
-                        MoTa = @MoTa, 
-                        QuyenLoi = @QuyenLoi, 
-                        KinhNghiem = @KinhNghiem, 
-                        KyNang = @KyNang, 
-                        SoLuong = @SoLuong, 
-                        IsDeleted = @IsDeleted, 
-                        UpdatedTime = @UpdatedTime, 
-                        IdCongTy = @IdCongTy 
-                    WHERE Id = @Id";
-
-                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
-                cmd.Parameters.AddWithValue("@Ten", CongViec.Ten);
-                cmd.Parameters.AddWithValue("@TenCongTy", CongViec.TenCongTy);
-                cmd.Parameters.AddWithValue("@Nganh", CongViec.Nganh);
-                cmd.Parameters.AddWithValue("@ViTriTuyenDung", CongViec.ViTriTuyenDung);
-                cmd.Parameters.AddWithValue("@MucLuong", CongViec.MucLuong);
-                cmd.Parameters.AddWithValue("@DiaDiem", CongViec.DiaDiem);
-                cmd.Parameters.AddWithValue("@TrinhDoHocVan", CongViec.TrinhDoHocVan);
-                cmd.Parameters.AddWithValue("@GioiTinh", CongViec.GioiTinh);
-                cmd.Parameters.AddWithValue("@LienHe", CongViec.LienHe);
-                cmd.Parameters.AddWithValue("@MoTa", CongViec.MoTa);
-                cmd.Parameters.AddWithValue("@QuyenLoi", CongViec.QuyenLoi);
-                cmd.Parameters.AddWithValue("@KinhNghiem", CongViec.KinhNghiem);
-                cmd.Parameters.AddWithValue("@KyNang", CongViec.YeuCauUngVien);
-                cmd.Parameters.AddWithValue("@SoLuong", CongViec.SoLuong);
-                cmd.Parameters.AddWithValue("@IsDeleted", CongViec.IsDeleted);
-                cmd.Parameters.AddWithValue("@UpdatedTime", CongViec.UpdatedTime);
-                cmd.Parameters.AddWithValue("@IdCongTy", CongViec.IdCongTy);
-                cmd.Parameters.AddWithValue("@Id", CongViec.Id);
+                Ten = @Ten, 
+                TenCongTy = @TenCongTy, 
+                Nganh = @Nganh, 
+                ViTriTuyenDung = @ViTriTuyenDung, 
+                MucLuong = @MucLuong, 
+                DiaDiem = @DiaDiem, 
+                TrinhDoHocVan = @TrinhDoHocVan, 
+                GioiTinh = @GioiTinh, 
+                LienHe = @LienHe, 
+                MoTa = @MoTa, 
+                QuyenLoi = @QuyenLoi, 
+                KinhNghiem = @KinhNghiem, 
+                YeuCauUngVien = @YeuCau, 
+                SoLuong = @SoLuong, 
+                IsDeleted = @IsDeleted, 
+                UpdatedTime = @UpdatedTime, 
+                FromDate = @FromDate,
+                IdCongTy = @IdCongTy 
+                WHERE Id = @Id";
                 try
                 {
+                    SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                    cmd.Parameters.AddWithValue("@Id", congViec.Id);
+                    cmd.Parameters.AddWithValue("@Ten", congViec.Ten);
+                    cmd.Parameters.AddWithValue("@TenCongTy", congViec.TenCongTy);
+                    cmd.Parameters.AddWithValue("@Nganh", congViec.Nganh);
+                    cmd.Parameters.AddWithValue("@ViTriTuyenDung", congViec.ViTriTuyenDung);
+                    cmd.Parameters.AddWithValue("@MucLuong", congViec.MucLuong);
+                    cmd.Parameters.AddWithValue("@DiaDiem", congViec.DiaDiem);
+                    cmd.Parameters.AddWithValue("@TrinhDoHocVan", congViec.TrinhDoHocVan);
+                    cmd.Parameters.AddWithValue("@GioiTinh", congViec.GioiTinh);
+                    cmd.Parameters.AddWithValue("@LienHe", congViec.LienHe);
+                    cmd.Parameters.AddWithValue("@MoTa", congViec.MoTa);
+                    cmd.Parameters.AddWithValue("@QuyenLoi", congViec.QuyenLoi);
+                    cmd.Parameters.AddWithValue("@KinhNghiem", congViec.KinhNghiem);
+                    cmd.Parameters.AddWithValue("@YeuCau", congViec.YeuCauUngVien);
+                    cmd.Parameters.AddWithValue("@SoLuong", congViec.SoLuong);
+                    cmd.Parameters.AddWithValue("@IsDeleted", congViec.IsDeleted);
+                    cmd.Parameters.AddWithValue("@UpdatedTime", congViec.UpdatedTime);
+                    cmd.Parameters.AddWithValue("@IdCongTy", congViec.IdCongTy);
+                    cmd.Parameters.AddWithValue("@FromDate", congViec.FromDate);
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -257,6 +260,7 @@ namespace FinalProject.Common.DAO
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
                         congViec.YeuCauUngVien = reader.GetStringValue(13);
+                        congViec.FromDate = reader.GetDateTimeValue(14);
                         congViec.SoLuong = reader.GetIntValue(16);
                         congViec.IsDeleted = reader.GetBooleanValue(17);
                         congViec.CreatedTime = reader.GetDateTimeValue(18);
@@ -273,19 +277,21 @@ namespace FinalProject.Common.DAO
                 return null;
             }
         }
-        public CongViec GetByIdCty(int idCty)
+        public List<CongViec> GetByIDCty(int companyId)
         {
+            List<CongViec> congViecList = new List<CongViec>();
             using (dbConnection.Connection)
             {
-                string query = $"SELECT * FROM CongViec " +
-                               $"JOIN CongTy ON CongViec.IdCongTy = CongTy.Id " +
-                               $"WHERE Id = {idCty} ;";
-                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                string query = @"SELECT *FROM CongViec cv
+                         JOIN CongTy ct ON cv.IdCongTy = ct.Id
+                         WHERE cv.IdCongTy = @CompanyId";
+                SqlCommand command = new SqlCommand(query, dbConnection.Connection);
+                command.Parameters.AddWithValue("@CompanyId", companyId);
 
                 try
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.Read())
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
                     {
                         var congViec = new CongViec();
                         congViec.Id = reader.GetIntValue(0);
@@ -301,22 +307,26 @@ namespace FinalProject.Common.DAO
                         congViec.MoTa = reader.GetStringValue(10);
                         congViec.QuyenLoi = reader.GetStringValue(11);
                         congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
+                        congViec.YeuCauUngVien = reader.GetStringValue(13);
+                        congViec.FromDate = reader.GetDateTimeValue(14);
                         congViec.SoLuong = reader.GetIntValue(16);
                         congViec.IsDeleted = reader.GetBooleanValue(17);
                         congViec.CreatedTime = reader.GetDateTimeValue(18);
                         congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
                         congViec.IdCongTy = reader.GetIntValue(20);
-                        return congViec;
+                        congViecList.Add(congViec);
                     }
+                    reader.Close();
                 }
                 catch (Exception ex)
                 {
+                    // Xử lý ngoại lệ hoặc ghi log
                     throw ex;
                 }
-
-                return null;
             }
+            return congViecList;
         }
+
+
     }
 }
