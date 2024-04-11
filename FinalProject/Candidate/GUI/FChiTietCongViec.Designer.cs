@@ -35,8 +35,12 @@
             this.groupBox_MoTa = new System.Windows.Forms.GroupBox();
             this.richTextBox_MoTa = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.textBox_NgayBatDau = new System.Windows.Forms.TextBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.textBox_SoLuong = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.textBox_ThoiGianLamViec = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox_DiaDiemLamViec = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -57,15 +61,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox_YeuCau = new System.Windows.Forms.RichTextBox();
             this.button_Submit = new System.Windows.Forms.Button();
-            this.textBox_ThoiGianLamViec = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.textBox_NgayBatDau = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage_ThongTinChung.SuspendLayout();
             this.groupBox_MoTa.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -76,8 +78,6 @@
             this.tabPage_QuyenLoi.SuspendLayout();
             this.tabPage_KyNangYeuCau.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_JobName
@@ -86,7 +86,7 @@
             this.label_JobName.Dock = System.Windows.Forms.DockStyle.Top;
             this.label_JobName.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_JobName.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_JobName.Location = new System.Drawing.Point(0, 0);
+            this.label_JobName.Location = new System.Drawing.Point(0, 50);
             this.label_JobName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_JobName.Name = "label_JobName";
             this.label_JobName.Size = new System.Drawing.Size(1221, 57);
@@ -101,10 +101,10 @@
             this.tabControl.Controls.Add(this.tabPage_KyNangYeuCau);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl.Location = new System.Drawing.Point(0, 57);
+            this.tabControl.Location = new System.Drawing.Point(0, 107);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1221, 644);
+            this.tabControl.Size = new System.Drawing.Size(1221, 594);
             this.tabControl.TabIndex = 3;
             // 
             // tabPage_ThongTinChung
@@ -114,7 +114,7 @@
             this.tabPage_ThongTinChung.Location = new System.Drawing.Point(4, 33);
             this.tabPage_ThongTinChung.Name = "tabPage_ThongTinChung";
             this.tabPage_ThongTinChung.Padding = new System.Windows.Forms.Padding(10);
-            this.tabPage_ThongTinChung.Size = new System.Drawing.Size(1213, 607);
+            this.tabPage_ThongTinChung.Size = new System.Drawing.Size(1213, 557);
             this.tabPage_ThongTinChung.TabIndex = 0;
             this.tabPage_ThongTinChung.Text = "Thông tin chung";
             this.tabPage_ThongTinChung.UseVisualStyleBackColor = true;
@@ -122,12 +122,13 @@
             // groupBox_MoTa
             // 
             this.groupBox_MoTa.Controls.Add(this.richTextBox_MoTa);
+            this.groupBox_MoTa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox_MoTa.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_MoTa.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_MoTa.Location = new System.Drawing.Point(10, 183);
+            this.groupBox_MoTa.Location = new System.Drawing.Point(10, 177);
             this.groupBox_MoTa.Name = "groupBox_MoTa";
             this.groupBox_MoTa.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox_MoTa.Size = new System.Drawing.Size(1193, 414);
+            this.groupBox_MoTa.Size = new System.Drawing.Size(1193, 370);
             this.groupBox_MoTa.TabIndex = 1;
             this.groupBox_MoTa.TabStop = false;
             this.groupBox_MoTa.Text = "Mô tả công việc";
@@ -141,7 +142,7 @@
             this.richTextBox_MoTa.ForeColor = System.Drawing.Color.MidnightBlue;
             this.richTextBox_MoTa.Location = new System.Drawing.Point(10, 35);
             this.richTextBox_MoTa.Name = "richTextBox_MoTa";
-            this.richTextBox_MoTa.Size = new System.Drawing.Size(1173, 369);
+            this.richTextBox_MoTa.Size = new System.Drawing.Size(1173, 325);
             this.richTextBox_MoTa.TabIndex = 0;
             this.richTextBox_MoTa.Text = "Mô tả";
             // 
@@ -173,6 +174,29 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1193, 167);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.textBox_NgayBatDau);
+            this.groupBox11.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox11.Location = new System.Drawing.Point(955, 87);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox11.Size = new System.Drawing.Size(232, 71);
+            this.groupBox11.TabIndex = 5;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Liên hệ";
+            // 
+            // textBox_NgayBatDau
+            // 
+            this.textBox_NgayBatDau.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox_NgayBatDau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_NgayBatDau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_NgayBatDau.Location = new System.Drawing.Point(10, 33);
+            this.textBox_NgayBatDau.Name = "textBox_NgayBatDau";
+            this.textBox_NgayBatDau.Size = new System.Drawing.Size(212, 30);
+            this.textBox_NgayBatDau.TabIndex = 0;
+            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.textBox_SoLuong);
@@ -195,6 +219,30 @@
             this.textBox_SoLuong.Name = "textBox_SoLuong";
             this.textBox_SoLuong.Size = new System.Drawing.Size(212, 30);
             this.textBox_SoLuong.TabIndex = 0;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.textBox_ThoiGianLamViec);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox9.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox9.Location = new System.Drawing.Point(3, 87);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(10);
+            this.groupBox9.Size = new System.Drawing.Size(232, 71);
+            this.groupBox9.TabIndex = 7;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Thời gian làm việc";
+            // 
+            // textBox_ThoiGianLamViec
+            // 
+            this.textBox_ThoiGianLamViec.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.textBox_ThoiGianLamViec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_ThoiGianLamViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_ThoiGianLamViec.Location = new System.Drawing.Point(10, 33);
+            this.textBox_ThoiGianLamViec.Name = "textBox_ThoiGianLamViec";
+            this.textBox_ThoiGianLamViec.Size = new System.Drawing.Size(212, 30);
+            this.textBox_ThoiGianLamViec.TabIndex = 1;
             // 
             // groupBox8
             // 
@@ -439,53 +487,6 @@
             this.button_Submit.UseVisualStyleBackColor = false;
             this.button_Submit.Click += new System.EventHandler(this.button_Submit_Click);
             // 
-            // textBox_ThoiGianLamViec
-            // 
-            this.textBox_ThoiGianLamViec.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox_ThoiGianLamViec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_ThoiGianLamViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ThoiGianLamViec.Location = new System.Drawing.Point(10, 33);
-            this.textBox_ThoiGianLamViec.Name = "textBox_ThoiGianLamViec";
-            this.textBox_ThoiGianLamViec.Size = new System.Drawing.Size(212, 30);
-            this.textBox_ThoiGianLamViec.TabIndex = 1;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.textBox_ThoiGianLamViec);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox9.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox9.Location = new System.Drawing.Point(3, 87);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox9.Size = new System.Drawing.Size(232, 71);
-            this.groupBox9.TabIndex = 7;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Thời gian làm việc";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.textBox_NgayBatDau);
-            this.groupBox11.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox11.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox11.Location = new System.Drawing.Point(955, 87);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox11.Size = new System.Drawing.Size(232, 71);
-            this.groupBox11.TabIndex = 5;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Liên hệ";
-            // 
-            // textBox_NgayBatDau
-            // 
-            this.textBox_NgayBatDau.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.textBox_NgayBatDau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_NgayBatDau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_NgayBatDau.Location = new System.Drawing.Point(10, 33);
-            this.textBox_NgayBatDau.Name = "textBox_NgayBatDau";
-            this.textBox_NgayBatDau.Size = new System.Drawing.Size(212, 30);
-            this.textBox_NgayBatDau.TabIndex = 0;
-            // 
             // FChiTietCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -511,8 +512,12 @@
             this.tabPage_ThongTinChung.ResumeLayout(false);
             this.groupBox_MoTa.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -530,10 +535,6 @@
             this.tabPage_QuyenLoi.ResumeLayout(false);
             this.tabPage_KyNangYeuCau.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
             this.ResumeLayout(false);
 
         }
