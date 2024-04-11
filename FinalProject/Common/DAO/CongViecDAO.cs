@@ -52,7 +52,7 @@ namespace FinalProject.Common.DAO
                     query = query + $" AND (Id >= {input.FromId} AND Id < {input.ToId}) ";
                 }
 
-                if (!string.IsNullOrWhiteSpace(input.Search))
+                if (string.IsNullOrWhiteSpace(input.Search))
                 {
                     query = query + $" AND Ten LIKE '%{input.Search}%' ";
                 }

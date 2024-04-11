@@ -49,7 +49,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             if (congViec != null)
             {
                 textBox_TenCViec.Text = congViec.Ten;
-                textBox_DiaDiem.Text = congViec.DiaDiem;
+                comboBox_DiaDiem.Text = congViec.DiaDiem;
                 textBox_MucLuong.Text = congViec.MucLuong.ToString();
                 textBox_ViTriCongViec.Text = congViec.ViTriTuyenDung;
                 comboBox_GioiTinh.Text = congViec.GioiTinh;
@@ -65,12 +65,6 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             }
         }
 
-        private void button_Xoa_Click(object sender, EventArgs e)
-        {
-            congViecBUS.Delete(id);
-
-        }
-
         private void button_Luu_Click(object sender, EventArgs e)
         {
             var Nganh = textBox_Nganh.Text;
@@ -80,7 +74,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             var KinhNghiem = textBox_KinhNghiem.Text;
             var TrinhDoHocVan = textBox_TrinhDoHocVan.Text;
             var SoLuong = int.TryParse(textBox_SoLuong.Text, out int parsedSoLuong) ? parsedSoLuong : 0;
-            var DiaDiem = textBox_DiaDiem.Text;
+            var DiaDiem = comboBox_DiaDiem.Text;
             var LienHe = textBox_LienHe.Text;
             var TenCongViec = textBox_TenCViec.Text;
             var MoTa = richTextBox_MoTa.Text;
@@ -112,5 +106,18 @@ namespace FinalProject.Company.GUI.Ung_tuyen
                 MessageBox.Show("Lưu thất bại");
             }
         }
-    }
+
+        private void button_Xoa_Click_1(object sender, EventArgs e)
+        {
+           var result = congViecBUS.Delete(Id);
+            if (result > 0)
+            {
+                MessageBox.Show("Xoá thành công");
+                this.Close();
+            }
+            else
+            
+                MessageBox.Show("Xoá thất bại");
+            }
+        }
 }
