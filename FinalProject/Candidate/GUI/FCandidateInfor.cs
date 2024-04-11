@@ -46,13 +46,17 @@ namespace FinalProject.Candidate.GUI
         private void FCandidateInfor_Load(object sender, EventArgs e)
         {
             var ungVien = LoggedUser.UngVien;
-            textBox_Name.Text = ungVien.HoTen;
-            dateTime_Birthday.Value = ungVien.NgaySinh;
-            textBox_Gender.Text = ungVien.GioiTinh;
-            textBox_Address.Text = ungVien.DiaChi;
-            textBox_Phone.Text = ungVien.SDT;
-            textBox_Email.Text = ungVien.Email;
-            textBox_Major.Text = ungVien.ChuyenMon;
+            if(ungVien != null)
+            {
+                textBox_Name.Text = ungVien.HoTen;
+                dateTime_Birthday.Value = ungVien.NgaySinh;
+                textBox_Gender.Text = ungVien.GioiTinh;
+                textBox_Address.Text = ungVien.DiaChi;
+                textBox_Phone.Text = ungVien.SDT;
+                textBox_Email.Text = ungVien.Email;
+                textBox_Major.Text = ungVien.ChuyenMon;
+            }
+         
         }
     }
 }

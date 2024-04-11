@@ -56,7 +56,20 @@ namespace FinalProject
                 LoggedUser.UserId = user.Id;
                 LoggedUser.UserRole = UserRoleConst.Candidate;
                 LoggedUser.User = user;
-                LoggedUser.UngVien = ungVienBUS.GetByUserId(user.Id);
+                var ungVien = ungVienBUS.GetByUserId(user.Id);
+
+                if (ungVien == null)
+                {
+                    ungVien = new UngVien()
+                    {
+                        UserId = user.Id,
+                        NgaySinh = DateTime.Now,
+                        CreatedTime = DateTime.Now,
+                    };
+                    ungVienBUS.Add(ungVien);
+                    ungVien = ungVienBUS.GetByUserId(user.Id);
+                }
+                LoggedUser.UngVien = ungVien;
 
                 this.Hide();
                 FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
@@ -106,6 +119,10 @@ namespace FinalProject
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
+            FDangKy fDangKy = new FDangKy();
+            fDangKy.ShowDialog();
+            this.Show();
         }
 
         private void Form_DangNhap_Load(object sender, EventArgs e)

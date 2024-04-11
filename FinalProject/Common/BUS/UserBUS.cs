@@ -78,6 +78,17 @@ namespace FinalProject.Common.BUS
             var user = _userDAO.GetAll(input).FirstOrDefault();
             return user;
         }
+        public int Signup(string username, string plainPassword, string role)
+        {
+            var user = new User()
+            {
+                Username = username,
+                Password = plainPassword.ToMD5(),
+                Role = role
+            };
+            var result = _userDAO.Add(user);
+            return result;
+        }
 
         /// <summary>
         /// Change password of user by id

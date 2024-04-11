@@ -270,6 +270,12 @@
     <Compile Include="Common\DTO\CongTyGetAllInput.cs" />
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
+    <Compile Include="Common\GUI\FDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\GUI\FDangKy.Designer.cs">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
@@ -508,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\GUI\FDangKy.resx">
+      <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>

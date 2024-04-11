@@ -71,11 +71,11 @@ namespace FinalProject.Common.DAO
                 }
                 if (!string.IsNullOrEmpty(input.Username))
                 {
-                    query += $" AND Username = N'{input.Username}' ";
+                    query += $" AND UserName = N'{input.Username}' ";
                 }
                 if (!string.IsNullOrEmpty(input.Password))
                 {
-                    query += $" AND Password = N'{input.Password}' ";
+                    query += $" AND [Password] = N'{input.Password}' ";
                 }
                 if (!string.IsNullOrEmpty(input.Email))
                 {
@@ -83,7 +83,7 @@ namespace FinalProject.Common.DAO
                 }
                 if (!string.IsNullOrEmpty(input.Status))
                 {
-                    query += $" AND Status = N'{input.Status}' ";
+                    query += $" AND [Status] = N'{input.Status}' ";
                 }
                 if (!string.IsNullOrEmpty(input.Phone))
                 {
@@ -91,7 +91,7 @@ namespace FinalProject.Common.DAO
                 }
                 if (!string.IsNullOrEmpty(input.Role))
                 {
-                    query += $" AND Role = N'{input.Role}' ";
+                    query += $" AND [Role] = N'{input.Role}' ";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -128,7 +128,7 @@ namespace FinalProject.Common.DAO
         public int Add(User user)
         {
             string query = $@"
-                INSERT INTO User(Username, Password, Email, Status, IsDeleted, Phone, Role, CreatedTime, UpdatedTime)
+                INSERT INTO [User](UserName, [Password], Email, [Status], IsDeleted, Phone, [Role], CreatedTime, UpdatedTime)
                 VALUES (
                     N'{user.Username}', 
                     N'{user.Password}', 
@@ -158,13 +158,13 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $@"
-                UPDATE User SET 
-                    Username = N'{user.Username}', 
-                    Password = N'{user.Password}', 
+                UPDATE [User] SET 
+                    UserName = N'{user.Username}', 
+                    [Password] = N'{user.Password}', 
                     Email = N'{user.Email}', 
-                    Status = N'{user.Status}', 
+                    [Status] = N'{user.Status}', 
                     Phone = N'{user.Phone}', 
-                    Role = N'{user.Role}', 
+                    [Role] = N'{user.Role}', 
                     UpdatedTime = '{user.UpdatedTime:yyyy-MM-dd hh:mm:ss}'
                     WHERE Id = {user.Id};
                 ";
@@ -204,7 +204,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $@"
-                    UPDATE User SET 
+                    UPDATE [User] SET 
                         IsDeleted = 1, 
                         UpdatedTime = '{DateTime.Now:yyyy-MM-dd hh:mm:ss}'
                         WHERE Id = {id};";
