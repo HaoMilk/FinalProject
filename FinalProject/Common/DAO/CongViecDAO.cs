@@ -52,10 +52,33 @@ namespace FinalProject.Common.DAO
                     query = query + $" AND (Id >= {input.FromId} AND Id < {input.ToId}) ";
                 }
 
-                if (string.IsNullOrWhiteSpace(input.Search))
+                if (!string.IsNullOrWhiteSpace(input.Search))
                 {
-                    query = query + $" AND Ten LIKE '%{input.Search}%' ";
+                    query = query + $" AND ViTriTuyenDung LIKE '{input.Search}' ";
                 }
+/*                if (input.NgheNghiep != "Tất cả ngành nghề")
+                {
+                    query = query + $" AND Nganh LIKE {input.NgheNghiep} ";
+                }*/
+                if (input.MinLuong.HasValue || input.MaxLuong.HasValue )
+                {
+                    query += " AND (";
+                    if (input.MinLuong.HasValue)
+                    {
+                        query += $" MucLuong >= {input.MinLuong} ";
+                    }
+                    if (input.MaxLuong.HasValue)
+                    {
+                        if (input.MinLuong.HasValue)
+                        {
+                            query += " AND ";
+                        }
+                        query += $" MucLuong <= {input.MaxLuong} ";
+                    }
+                    query += ")";
+
+                }
+
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -63,28 +86,7 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        var congViec = new CongViec();
-                        congViec.Id = reader.GetIntValue(0);
-                        congViec.Ten = reader.GetStringValue(1);
-                        congViec.TenCongTy = reader.GetStringValue(2);
-                        congViec.Nganh = reader.GetStringValue(3);
-                        congViec.ViTriTuyenDung = reader.GetStringValue(4);
-                        congViec.MucLuong = reader.GetDecimalValue(5);
-                        congViec.DiaDiem = reader.GetStringValue(6);
-                        congViec.TrinhDoHocVan = reader.GetStringValue(7);
-                        congViec.GioiTinh = reader.GetStringValue(8);
-                        congViec.LienHe = reader.GetStringValue(9);
-                        congViec.MoTa = reader.GetStringValue(10);
-                        congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13); ;
-                        congViec.FromDate = reader.GetDateTimeValue(14);
-                        congViec.SoLuong = reader.GetIntValue(16);
-                        congViec.IsDeleted = reader.GetBooleanValue(17);
-                        congViec.CreatedTime = reader.GetDateTimeValue(18);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
-                        congViec.IdCongTy = reader.GetIntValue(20);
-
+                        CongViec congViec = ReadValue(reader);
                         list.Add(congViec);
                     }
                 }
@@ -96,6 +98,7 @@ namespace FinalProject.Common.DAO
                 return list;
             }
         }
+
 
         public int Add(CongViec congViec)
         {
@@ -244,28 +247,7 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        var congViec = new CongViec();
-                        congViec.Id = reader.GetIntValue(0);
-                        congViec.Ten = reader.GetStringValue(1);
-                        congViec.TenCongTy = reader.GetStringValue(2);
-                        congViec.Nganh = reader.GetStringValue(3);
-                        congViec.ViTriTuyenDung = reader.GetStringValue(4);
-                        congViec.MucLuong = reader.GetDecimalValue(5);
-                        congViec.DiaDiem = reader.GetStringValue(6);
-                        congViec.TrinhDoHocVan = reader.GetStringValue(7);
-                        congViec.GioiTinh = reader.GetStringValue(8);
-                        congViec.LienHe = reader.GetStringValue(9);
-                        congViec.MoTa = reader.GetStringValue(10);
-                        congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13);
-                        congViec.FromDate = reader.GetDateTimeValue(14);
-                        congViec.SoLuong = reader.GetIntValue(16);
-                        congViec.IsDeleted = reader.GetBooleanValue(17);
-                        congViec.CreatedTime = reader.GetDateTimeValue(18);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
-                        congViec.IdCongTy = reader.GetIntValue(20);
-                        return congViec;
+                        return ReadValue(reader); ;
                     }
                 }
                 catch (Exception ex)
@@ -292,27 +274,7 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        var congViec = new CongViec();
-                        congViec.Id = reader.GetIntValue(0);
-                        congViec.Ten = reader.GetStringValue(1);
-                        congViec.TenCongTy = reader.GetStringValue(2);
-                        congViec.Nganh = reader.GetStringValue(3);
-                        congViec.ViTriTuyenDung = reader.GetStringValue(4);
-                        congViec.MucLuong = reader.GetDecimalValue(5);
-                        congViec.DiaDiem = reader.GetStringValue(6);
-                        congViec.TrinhDoHocVan = reader.GetStringValue(7);
-                        congViec.GioiTinh = reader.GetStringValue(8);
-                        congViec.LienHe = reader.GetStringValue(9);
-                        congViec.MoTa = reader.GetStringValue(10);
-                        congViec.QuyenLoi = reader.GetStringValue(11);
-                        congViec.KinhNghiem = reader.GetStringValue(12);
-                        congViec.YeuCauUngVien = reader.GetStringValue(13);
-                        congViec.FromDate = reader.GetDateTimeValue(14);
-                        congViec.SoLuong = reader.GetIntValue(16);
-                        congViec.IsDeleted = reader.GetBooleanValue(17);
-                        congViec.CreatedTime = reader.GetDateTimeValue(18);
-                        congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
-                        congViec.IdCongTy = reader.GetIntValue(20);
+                        CongViec congViec = ReadValue(reader);
                         congViecList.Add(congViec);
                     }
                     reader.Close();
@@ -325,5 +287,31 @@ namespace FinalProject.Common.DAO
             }
             return congViecList;
         }
+        public CongViec ReadValue(SqlDataReader reader)
+        {
+            var congViec = new CongViec();
+            congViec.Id = reader.GetIntValue(0);
+            congViec.Ten = reader.GetStringValue(1);
+            congViec.TenCongTy = reader.GetStringValue(2);
+            congViec.Nganh = reader.GetStringValue(3);
+            congViec.ViTriTuyenDung = reader.GetStringValue(4);
+            congViec.MucLuong = reader.GetDecimalValue(5);
+            congViec.DiaDiem = reader.GetStringValue(6);
+            congViec.TrinhDoHocVan = reader.GetStringValue(7);
+            congViec.GioiTinh = reader.GetStringValue(8);
+            congViec.LienHe = reader.GetStringValue(9);
+            congViec.MoTa = reader.GetStringValue(10);
+            congViec.QuyenLoi = reader.GetStringValue(11);
+            congViec.KinhNghiem = reader.GetStringValue(12);
+            congViec.YeuCauUngVien = reader.GetStringValue(13); ;
+            congViec.FromDate = reader.GetDateTimeValue(14);
+            congViec.SoLuong = reader.GetIntValue(16);
+            congViec.IsDeleted = reader.GetBooleanValue(17);
+            congViec.CreatedTime = reader.GetDateTimeValue(18);
+            congViec.UpdatedTime = reader.GetDateTimeValueNullable(19);
+            congViec.IdCongTy = reader.GetIntValue(20);
+            return congViec;
+        }
     }
+
 }
