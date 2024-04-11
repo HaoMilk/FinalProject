@@ -33,10 +33,6 @@ namespace FinalProject.Company.GUI
             this.comboBox_DiaDiem.Items.Clear();
             this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
-            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
-            this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
-            this.comboBox_KinhNghiem.SelectedIndex = 0;
-
             var listMucLuong = MucLuongConstants.GetMucLuongList();
             this.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
             this.comboBox_MucLuong.SelectedIndex = 0;
@@ -97,13 +93,9 @@ namespace FinalProject.Company.GUI
             var input = new CongViecGetAllInput();
             input.Search = textBox_TimKiem.Text;
             input.NgheNghiep = comboBox_NgheNghiep.Text;
-
             var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
             input.DiaDiem = selectedTinh != null ? selectedTinh.Code : null;
-
-            input = input.SetKinhNghiem(comboBox_KinhNghiem.Text);
             input = input.SetMucLuong(comboBox_MucLuong.Text);
-
             input.FromId = ucPagination.StartRecord;
             input.ToId = ucPagination.EndRecord;
 

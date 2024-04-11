@@ -221,8 +221,6 @@ namespace FinalProject.UC
             }
             else
             {
-                //MessageBox.Show($"View id = {id}");
-
                 FCongViec fCongViec = new FCongViec();
                 fCongViec.Id = id;
                 fCongViec.CvUpdatedTime = lastUpdatedTime;
@@ -230,10 +228,5 @@ namespace FinalProject.UC
             }
         }
 
-        private void button_Edit_Click(object sender, EventArgs e)
-        {
-            FCongViec fAddViecLam = new FCongViec();
-            
-        }
     }
 }

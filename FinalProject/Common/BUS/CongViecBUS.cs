@@ -108,10 +108,10 @@ namespace FinalProject.Common.BUS
             }
         }
 
-        public int Delete(int idCongTy)
+        public int Delete(int id)
         {
             var congViec = new CongViec();
-            congViec.IdCongTy = idCongTy;
+            congViec.Id = id;
             return congViecDAO.Delete(congViec);
         }
 

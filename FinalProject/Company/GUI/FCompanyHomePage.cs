@@ -23,36 +23,6 @@ namespace FinalProject.Company
             InitializeComponent();            
         }
 
-  
-
-
-    private void menuItem_Dsvl_Click(object sender, EventArgs e)
-        {
-            FCongViec fAddViecLam = new FCongViec();
-            fAddViecLam.Show();
-        }
-
-        private void menuItem_DsCty_Click(object sender, EventArgs e)
-        {
-            FDanhSachUngVien fDanhSachUngVien = new FDanhSachUngVien();
-            fDanhSachUngVien.Show();
-        }
-
-        private void menuItem_ThongTinCaNhan_Click(object sender, EventArgs e)
-        {
-            FThongTinCongTy fThongTin = new FThongTinCongTy();
-            fThongTin.Show();
-        }
-
-        private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
-        {
-            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
-            fDoiMatKhau.Show();
-        }
-        private void menuItem_DangXuat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         #region DanhSachViecLam
         private void ToolStripMenuItem_ChinhSuaCongViec_Click(object sender, EventArgs e)
         {
@@ -66,14 +36,16 @@ namespace FinalProject.Company
             FDSViecLam fDanhSachVL = new FDSViecLam();
             fDanhSachVL.ShowDialog();
 
-            if (!isAlwaysShowDashboard) this.Show();
+            if (!isAlwaysShowDashboard) this.ShowDialog();
         }
         #endregion DanhSachViecLam
 
         private void ucMenuCard_TaoViecLam_MenuClick(object sender, EventArgs e)
         {
+            this.Hide();
             FCongViec fAddViecLam = new FCongViec();
-            fAddViecLam.Show();
+            fAddViecLam.ShowDialog();
+            this.Show();
         }
 
 
@@ -89,8 +61,27 @@ namespace FinalProject.Company
 
         private void ucMenuCard_ThongTin_MenuClick(object sender, EventArgs e)
         {
+            this.Hide();
             FThongTinCongTy fThongTin = new FThongTinCongTy();
-            fThongTin.Show();
+            fThongTin.ShowDialog();
+            this.Show();
+        }
+
+        private void ucMenuCard_HSChuaDuyet_MenuClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FHSChuaDuyet fHSChuaDuyet = new FHSChuaDuyet();
+            fHSChuaDuyet.ShowDialog();
+            this.Show();
+
+        }
+
+        private void ucMenuCard_DoiMatKhau_MenuClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FThongTinCongTy fThongTin = new FThongTinCongTy();
+            fThongTin.ShowDialog();
+            this.Show();
         }
     }
 }
