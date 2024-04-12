@@ -30,6 +30,12 @@ namespace FinalProject.Common.BUS
             ct.IsDeleted = false;
             return congTyDAO.Add(ct);
         }
+
+        public int Add(CongTy congTy)
+        {
+            return congTyDAO.Add(congTy);
+        }
+
         public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst )
         {
             var ct = new CongTy();
