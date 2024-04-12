@@ -138,14 +138,16 @@ namespace FinalProject.Common.DAO
                     N'{user.Phone}', 
                     N'{user.Role}', 
                     '{user.CreatedTime:yyyy-MM-dd hh:mm:ss}', 
-                    NULL);";
+                    NULL);
+                SELECT MAX(Id) AS LastInsertedID FROM [User];";
 
             using (dbConnection.Connection)
             {
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
                 {
-                    return cmd.ExecuteNonQuery();
+                    var result = cmd.ExecuteScalar();
+                    return Convert.ToInt32(result);
                 }
                 catch (Exception ex)
                 {

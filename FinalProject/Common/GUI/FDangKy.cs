@@ -72,10 +72,6 @@ namespace FinalProject
             }
         }
 
-        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-        }
-
         private void Form_DangNhap_Load(object sender, EventArgs e)
         {
 
@@ -99,6 +95,11 @@ namespace FinalProject
                 return false;
             }    
             return true;
+        }
+
+        private void linkLabel_DangNhap_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
