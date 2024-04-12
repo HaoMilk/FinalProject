@@ -35,6 +35,7 @@
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button_Luu = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox_GiayPhep = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.textBox_DiaChi = new System.Windows.Forms.TextBox();
             this.label_Name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -113,6 +113,7 @@
             this.textBox_ID.Location = new System.Drawing.Point(3, 28);
             this.textBox_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox_ID.Name = "textBox_ID";
+            this.textBox_ID.ReadOnly = true;
             this.textBox_ID.Size = new System.Drawing.Size(620, 32);
             this.textBox_ID.TabIndex = 2;
             // 
@@ -146,6 +147,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(626, 643);
             this.panel1.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Image = global::FinalProject.Properties.Resources.icons8_add_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 513);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(626, 65);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Chọn giấy phép";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button_Luu
             // 
@@ -282,21 +298,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(500, 643);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::FinalProject.Properties.Resources.icons8_add_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(626, 65);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Chọn giấy phép";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // FThongTinCongTy
             // 

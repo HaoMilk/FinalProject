@@ -28,8 +28,6 @@ namespace FinalProject
         public Form_DangNhap()
         {
             InitializeComponent();
-            this.textBox_TenDangNhap.Text = "test";
-            this.textBox_MatKhau.Text = "123456";
         }
 
         private void button_DangNhap_Click(object sender, EventArgs e)
