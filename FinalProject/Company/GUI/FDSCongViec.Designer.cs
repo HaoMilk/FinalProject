@@ -36,7 +36,6 @@ namespace FinalProject.Company.GUI
             this.comboBox_DiaDiem = new System.Windows.Forms.ToolStripComboBox();
             this.comboBox_NgheNghiep = new System.Windows.Forms.ToolStripComboBox();
             this.comboBox_MucLuong = new System.Windows.Forms.ToolStripComboBox();
-            this.comboBox_KinhNghiem = new System.Windows.Forms.ToolStripComboBox();
             this.groupBox_ViTri = new System.Windows.Forms.GroupBox();
             this.textBox_TimKiem = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -79,14 +78,13 @@ namespace FinalProject.Company.GUI
             this.menuStrip_Filter.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.comboBox_DiaDiem,
             this.comboBox_NgheNghiep,
-            this.comboBox_MucLuong,
-            this.comboBox_KinhNghiem});
+            this.comboBox_MucLuong});
             this.menuStrip_Filter.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip_Filter.Location = new System.Drawing.Point(0, 188);
             this.menuStrip_Filter.Name = "menuStrip_Filter";
             this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 146);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(292, 111);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 
@@ -122,17 +120,6 @@ namespace FinalProject.Company.GUI
             this.comboBox_MucLuong.Name = "comboBox_MucLuong";
             this.comboBox_MucLuong.Size = new System.Drawing.Size(284, 35);
             this.comboBox_MucLuong.ToolTipText = "Mức lương";
-            // 
-            // comboBox_KinhNghiem
-            // 
-            this.comboBox_KinhNghiem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.comboBox_KinhNghiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_KinhNghiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox_KinhNghiem.Font = new System.Drawing.Font("Times New Roman", 14F);
-            this.comboBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.Control;
-            this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
-            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(284, 35);
-            this.comboBox_KinhNghiem.ToolTipText = "Kinh nghiệm";
             // 
             // groupBox_ViTri
             // 
@@ -325,7 +312,6 @@ namespace FinalProject.Company.GUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label_SoLuongViecLam;
         private System.Windows.Forms.ToolStripComboBox comboBox_DiaDiem;
-        private System.Windows.Forms.ToolStripComboBox comboBox_KinhNghiem;
         private System.Windows.Forms.ToolStripComboBox comboBox_NgheNghiep;
         private System.Windows.Forms.ToolStripComboBox comboBox_MucLuong;
         private UCCustomButton button_Search;

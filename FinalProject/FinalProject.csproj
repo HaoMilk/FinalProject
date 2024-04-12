@@ -350,6 +350,18 @@
     <Compile Include="Company\GUI\FCongViec.Designer.cs">
       <DependentUpon>FCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Company\GUI\FHSChuaDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FHSChuaDuyet.Designer.cs">
+      <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FViewCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FViewCV.Designer.cs">
+      <DependentUpon>FViewCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Common\DTO\UngTuyenDTO.cs" />
     <Compile Include="Common\DTO\UngTuyenGetAllInput.cs" />
@@ -405,10 +417,10 @@
     <Compile Include="Common\GUI\FDoiMatKhau.Designer.cs">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\FCompanyHomePage.cs">
+    <Compile Include="Company\GUI\FCompanyHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\FCompanyHomePage.Designer.cs">
+    <Compile Include="Company\GUI\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FThongTinCongTy.cs">
@@ -436,6 +448,12 @@
     </Compile>
     <Compile Include="UC\UCJobCard.Designer.cs">
       <DependentUpon>UCJobCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCViewCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCViewCV.Designer.cs">
+      <DependentUpon>UCViewCV.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCViewJob.cs">
       <SubType>UserControl</SubType>
@@ -524,6 +542,12 @@
     <EmbeddedResource Include="Company\GUI\FCongViec.resx">
       <DependentUpon>FCongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FHSChuaDuyet.resx">
+      <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FViewCV.resx">
+      <DependentUpon>FViewCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -545,7 +569,7 @@
     <EmbeddedResource Include="Common\GUI\FDoiMatKhau.resx">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\FCompanyHomePage.resx">
+    <EmbeddedResource Include="Company\GUI\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FThongTinCongTy.resx">
@@ -571,6 +595,9 @@
       <DependentUpon>UCJobCard.cs</DependentUpon>
     </EmbeddedResource>
     <Content Include="Database\Scripts\014. Update TableCongViec.sql" />
+    <EmbeddedResource Include="UC\UCViewCV.resx">
+      <DependentUpon>UCViewCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC\UCViewJob.resx">
       <DependentUpon>UCViewJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,6 +655,12 @@
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
+    <None Include="Resources\create job.png" />
+    <None Include="Resources\icons8-list-64.png" />
+    <None Include="Resources\icons8-profile-check-64.png" />
+    <None Include="Resources\icons8-data-pending-64.png" />
+    <None Include="Resources\icons8-history-64.png" />
+    <None Include="Resources\icons8-check-32.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
