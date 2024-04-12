@@ -106,7 +106,7 @@ namespace FinalProject.Candidate.GUI
             this.menuStrip_Filter.Name = "menuStrip_Filter";
             this.menuStrip_Filter.Padding = new System.Windows.Forms.Padding(20);
             this.menuStrip_Filter.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip_Filter.Size = new System.Drawing.Size(307, 182);
+            this.menuStrip_Filter.Size = new System.Drawing.Size(307, 206);
             this.menuStrip_Filter.TabIndex = 2;
             this.menuStrip_Filter.Text = "MenuFilter";
             // 

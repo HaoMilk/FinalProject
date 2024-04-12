@@ -43,7 +43,8 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = "INSERT INTO CongTy(ID, Email, TenCongTy, DiaChi, TenCEO, MST) VALUES(@ID, @Email, @TenCongTy, @DiaChi, @TenCEO, @MST, @UserId)";
+                    string query = $@"INSERT INTO CongTy(Email, TenCongTy, DiaChi, TenCEO, MST, CreatedTime, IsDeleted, UserId) 
+                        VALUES(@Email, @TenCongTy, @DiaChi, @TenCEO, @MST, @CreatedTime, 0, @UserId)";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);
@@ -51,6 +52,7 @@ namespace FinalProject.Common.DAO
                     cmd.Parameters.AddWithValue("@DiaChi", Cty.DiaChi);
                     cmd.Parameters.AddWithValue("@TenCEO", Cty.CEO);
                     cmd.Parameters.AddWithValue("@MST", Cty.MST);
+                    cmd.Parameters.AddWithValue("@CreatedTime", Cty.CreatedTime);
                     cmd.Parameters.AddWithValue("@UserId", Cty.UserId);
                     return cmd.ExecuteNonQuery();
 
@@ -69,13 +71,12 @@ namespace FinalProject.Common.DAO
                 using (var connection = dbConnection.Connection)
                 {
                     string query = @"UPDATE CongTy SET 
-                    ID = @ID,
                     Email = @Email,
                     TenCongTy = @TenCongTy, 
                     DiaChi = @DiaChi, 
                     TenCEO = @TenCEO,
                     MST = @MST
-                    WHERE MST = @ID";
+                    WHERE ID = @ID";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@ID", Cty.ID);
                     cmd.Parameters.AddWithValue("@Email", Cty.Email);

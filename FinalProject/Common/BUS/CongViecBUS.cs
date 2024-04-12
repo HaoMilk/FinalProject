@@ -14,11 +14,6 @@ namespace FinalProject.Common.BUS
     public class CongViecBUS
     {
         private CongViecDAO congViecDAO = new CongViecDAO();
-        public List<CongViec> GetAll()
-        {
-            return congViecDAO.GetAll();
-        }
-
         public List<CongViec> Search(CongViecGetAllInput input)
         {
             return congViecDAO.GetAll(input);
@@ -71,7 +66,7 @@ namespace FinalProject.Common.BUS
             }
         }
 
-        public int Update(int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
+        public int Update(int Id, int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
             string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong , DateTime fromdate)
@@ -79,6 +74,7 @@ namespace FinalProject.Common.BUS
             try
             {
                 var congViec = new CongViec();
+                congViec.Id = Id;
                 congViec.IdCongTy = idCongTy;
                 congViec.TenCongTy = tenCongTy;
                 congViec.Ten = ten;
@@ -112,10 +108,10 @@ namespace FinalProject.Common.BUS
             }
         }
 
-        public int Delete(int idCongTy)
+        public int Delete(int id)
         {
             var congViec = new CongViec();
-            congViec.IdCongTy = idCongTy;
+            congViec.Id = id;
             return congViecDAO.Delete(congViec);
         }
 

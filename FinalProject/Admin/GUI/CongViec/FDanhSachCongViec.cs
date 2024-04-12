@@ -66,7 +66,41 @@ namespace FinalProject.Admin
                 return "50 Triệu trở lên";
             }
         }
+        private void LoadComboBoxData()
+        {
+            try
+            {
+                string[] comboBoxQueries = {
+                    "SELECT DISTINCT Nganh FROM CongViec",
+                    "SELECT DISTINCT DiaDiem FROM CongViec",
+                    "SELECT DISTINCT KinhNghiem FROM CongViec",
+                    "SELECT DISTINCT MucLuong FROM CongViec"
+                };
+
+                ComboBox[] comboBoxes = { cbNganh, cbDiaDiem, cbKinhNghiem, cbMucLuong };
+
+                for (int i = 0; i < comboBoxes.Length; i++)
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(comboBoxQueries[i], conn);
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        comboBoxes[i].Items.Add(dr[0].ToString());
+                    }
+
+                    dr.Close();
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         #endregion ComboBox
+
 
 
 
@@ -74,28 +108,8 @@ namespace FinalProject.Admin
         {
             try
             {
-                string queryComboBoxNganh = "SELECT DISTINCT Nganh FROM CongViec";
-                string colNameNganh = "Nganh";
-                ComboBoxResource(colNameNganh, queryComboBoxNganh, cbNganh);
-                string queryComboBoxDiaDiem = "SELECT DISTINCT DiaDiem FROM CongViec";
-                string colNameDiaDiem = "DiaDiem";
-                ComboBoxResource(colNameDiaDiem, queryComboBoxDiaDiem, cbDiaDiem);
-                string queryComboBoxKinhNghiem = "SELECT DISTINCT KinhNghiem FROM CongViec";
-                string colNameKinhNghiem = "KinhNghiem";
-                ComboBoxResource(colNameKinhNghiem, queryComboBoxKinhNghiem, cbKinhNghiem);
-                string queryComboBoxMucLuong = "SELECT DISTINCT MucLuong FROM CongViec";
-                string colNameMucLuong = "MucLuong";
-                conn.Open();
-                SqlCommand cmdMucLuong = new SqlCommand(queryComboBoxMucLuong, conn);
-                SqlDataReader drMucLuong = cmdMucLuong.ExecuteReader();
-
-                while (drMucLuong.Read())
-                {
-                    int mucLuong = Convert.ToInt32(drMucLuong[colNameMucLuong]);
-                    string khoangMucLuong = ChuyenDoiMucLuong(mucLuong);
-                    cbMucLuong.Items.Add(khoangMucLuong);
-                }
-                drMucLuong.Close();
+                LoadComboBoxData();
+               // FilterDataGridView();
                 string sqlStr = "SELECT * FROM CongViec";
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlStr, conn);
                 DataTable dt = new DataTable();
@@ -112,12 +126,75 @@ namespace FinalProject.Admin
             }
         }
 
-        
+        private void FilterDataGridView()
+        {
+            try
+            {
+                StringBuilder queryBuilder = new StringBuilder("SELECT * FROM CongViec WHERE 1=1");
+
+                string[] comboBoxesText = {
+                    cbNganh.SelectedItem?.ToString(),
+                    cbDiaDiem.SelectedItem?.ToString(),
+                    cbKinhNghiem.SelectedItem?.ToString(),
+                    cbMucLuong.SelectedItem?.ToString()
+                };
+
+                string[] comboBoxColumns = { "Nganh", "DiaDiem", "KinhNghiem", "MucLuong" };
+
+                for (int i = 0; i < comboBoxesText.Length; i++)
+                {
+                    if (!string.IsNullOrEmpty(comboBoxesText[i]))
+                    {
+                        queryBuilder.Append($" AND {comboBoxColumns[i]} = '{comboBoxesText[i]}'");
+                    }
+                }
+
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(queryBuilder.ToString(), conn);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sqlDataAdapter.Fill(dt);
+                dgvDSCV.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             FChinhSuaCongViec fChinhSuaCongViec = new FChinhSuaCongViec();
             fChinhSuaCongViec.ShowDialog();
+        }
+
+        private void cbNganh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          //  FilterDataGridView();
+        }
+
+        private void cbDiaDiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           // FilterDataGridView();
+        }
+
+        private void cbKinhNghiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //FilterDataGridView();
+        }
+
+        private void cbMucLuong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           // FilterDataGridView();
+        }
+
+        private void dgvDSCV_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

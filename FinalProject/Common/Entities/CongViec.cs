@@ -33,18 +33,18 @@ namespace FinalProject.Database.Entities
 
         public bool CheckNull( )
         {
-            return Ten is null ||
-                   Nganh is null ||
-                   ViTriTuyenDung is null ||
-                   DiaDiem is null ||
-                   TrinhDoHocVan is null ||
-                   GioiTinh is null ||
-                   LienHe is null ||
-                   MoTa is null ||
-                   QuyenLoi is null ||
-                   KinhNghiem is null ||
-                   YeuCauUngVien is null ||
-                   TenCongTy is null ||
+            return string.IsNullOrEmpty(Ten) ||
+                   string.IsNullOrEmpty(Nganh) ||
+                   string.IsNullOrEmpty(ViTriTuyenDung) ||
+                   string.IsNullOrEmpty(DiaDiem) ||
+                   string.IsNullOrEmpty(TrinhDoHocVan) ||
+                   string.IsNullOrEmpty(GioiTinh) ||
+                   string.IsNullOrEmpty(LienHe) ||
+                   string.IsNullOrEmpty(MoTa) ||
+                   string.IsNullOrEmpty(QuyenLoi) ||
+                   string.IsNullOrEmpty(KinhNghiem) ||
+                   string.IsNullOrEmpty(YeuCauUngVien) ||
+                   string.IsNullOrEmpty(TenCongTy) ||
                    MucLuong == default ||
                    SoLuong == default ||
                    IdCongTy == default ||

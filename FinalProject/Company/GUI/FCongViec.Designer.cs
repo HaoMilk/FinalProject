@@ -41,8 +41,6 @@
             this.dateTimePicker_FromDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.textBox_LienHe = new System.Windows.Forms.TextBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.textBox_SoLuong = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.textBox_KinhNghiem = new System.Windows.Forms.TextBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
@@ -50,20 +48,22 @@
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.textBox_Nganh = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_ViTriCongViec = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox_TenCViec = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox_DiaDiem = new System.Windows.Forms.TextBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.textBox_SoLuong = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox_ViTriCongViec = new System.Windows.Forms.TextBox();
             this.groupBox_GioiTinh = new System.Windows.Forms.GroupBox();
             this.comboBox_GioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox_TrinhDoHocVan = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button_Luu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_Xoa = new System.Windows.Forms.Button();
+            this.comboBox_DiaDiem = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -72,16 +72,16 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox_GioiTinh.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -247,26 +247,6 @@
             this.textBox_LienHe.Size = new System.Drawing.Size(386, 36);
             this.textBox_LienHe.TabIndex = 1;
             // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.textBox_SoLuong);
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox15.Location = new System.Drawing.Point(3, 568);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(352, 112);
-            this.groupBox15.TabIndex = 6;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Số lượng";
-            // 
-            // textBox_SoLuong
-            // 
-            this.textBox_SoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_SoLuong.Location = new System.Drawing.Point(3, 32);
-            this.textBox_SoLuong.Name = "textBox_SoLuong";
-            this.textBox_SoLuong.Size = new System.Drawing.Size(346, 36);
-            this.textBox_SoLuong.TabIndex = 1;
-            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.textBox_KinhNghiem);
@@ -351,26 +331,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(358, 683);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox_ViTriCongViec);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(3, 116);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(352, 107);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Vị trí công việc";
-            // 
-            // textBox_ViTriCongViec
-            // 
-            this.textBox_ViTriCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ViTriCongViec.Location = new System.Drawing.Point(3, 32);
-            this.textBox_ViTriCongViec.Name = "textBox_ViTriCongViec";
-            this.textBox_ViTriCongViec.Size = new System.Drawing.Size(346, 36);
-            this.textBox_ViTriCongViec.TabIndex = 1;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox_TenCViec);
@@ -391,25 +351,45 @@
             this.textBox_TenCViec.Size = new System.Drawing.Size(346, 36);
             this.textBox_TenCViec.TabIndex = 1;
             // 
-            // groupBox6
+            // groupBox15
             // 
-            this.groupBox6.Controls.Add(this.textBox_DiaDiem);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox6.Location = new System.Drawing.Point(3, 455);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(352, 107);
-            this.groupBox6.TabIndex = 7;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Địa điểm làm việc";
+            this.groupBox15.Controls.Add(this.textBox_SoLuong);
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox15.Location = new System.Drawing.Point(3, 568);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(352, 112);
+            this.groupBox15.TabIndex = 6;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Số lượng";
             // 
-            // textBox_DiaDiem
+            // textBox_SoLuong
             // 
-            this.textBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_DiaDiem.Location = new System.Drawing.Point(3, 32);
-            this.textBox_DiaDiem.Name = "textBox_DiaDiem";
-            this.textBox_DiaDiem.Size = new System.Drawing.Size(346, 36);
-            this.textBox_DiaDiem.TabIndex = 1;
+            this.textBox_SoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_SoLuong.Location = new System.Drawing.Point(3, 32);
+            this.textBox_SoLuong.Name = "textBox_SoLuong";
+            this.textBox_SoLuong.Size = new System.Drawing.Size(346, 36);
+            this.textBox_SoLuong.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textBox_ViTriCongViec);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(3, 116);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(352, 107);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Vị trí công việc";
+            // 
+            // textBox_ViTriCongViec
+            // 
+            this.textBox_ViTriCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_ViTriCongViec.Location = new System.Drawing.Point(3, 32);
+            this.textBox_ViTriCongViec.Name = "textBox_ViTriCongViec";
+            this.textBox_ViTriCongViec.Size = new System.Drawing.Size(346, 36);
+            this.textBox_ViTriCongViec.TabIndex = 1;
             // 
             // groupBox_GioiTinh
             // 
@@ -455,6 +435,18 @@
             this.textBox_TrinhDoHocVan.Name = "textBox_TrinhDoHocVan";
             this.textBox_TrinhDoHocVan.Size = new System.Drawing.Size(346, 36);
             this.textBox_TrinhDoHocVan.TabIndex = 1;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.comboBox_DiaDiem);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox6.Location = new System.Drawing.Point(3, 455);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(352, 107);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Địa điểm làm việc";
             // 
             // tableLayoutPanel1
             // 
@@ -510,7 +502,20 @@
             this.button_Xoa.TabIndex = 2;
             this.button_Xoa.Text = "Xoá";
             this.button_Xoa.UseVisualStyleBackColor = false;
-            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click_1);
+            // 
+            // comboBox_DiaDiem
+            // 
+            this.comboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_DiaDiem.FormattingEnabled = true;
+            this.comboBox_DiaDiem.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Không yêu cầu"});
+            this.comboBox_DiaDiem.Location = new System.Drawing.Point(3, 32);
+            this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
+            this.comboBox_DiaDiem.Size = new System.Drawing.Size(346, 36);
+            this.comboBox_DiaDiem.TabIndex = 1;
             // 
             // FCongViec
             // 
@@ -535,8 +540,6 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.groupBox15.ResumeLayout(false);
-            this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             this.groupBox17.ResumeLayout(false);
@@ -544,15 +547,16 @@
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox_GioiTinh.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -577,7 +581,6 @@
         private System.Windows.Forms.GroupBox groupBox18;
         private System.Windows.Forms.TextBox textBox_Nganh;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox_DiaDiem;
         private System.Windows.Forms.ComboBox comboBox_GioiTinh;
         private System.Windows.Forms.Button button_Xoa;
         private System.Windows.Forms.Button button_Luu;
@@ -597,5 +600,6 @@
         private System.Windows.Forms.TextBox textBox_TenCViec;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.DateTimePicker dateTimePicker_FromDate;
+        private System.Windows.Forms.ComboBox comboBox_DiaDiem;
     }
 }

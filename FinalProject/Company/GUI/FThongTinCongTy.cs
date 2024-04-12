@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace FinalProject.Company.GUI.Thong_tin
     {
         private CongTyBUS cty_BUS = new CongTyBUS();
         private CongTy _congTy;
-        private int _id;
+        private int _id = LoggedUser.CongTy.ID;
         public int Id
         {
             get => _id;
@@ -41,8 +42,16 @@ namespace FinalProject.Company.GUI.Thong_tin
             var Ten = textBox_TenCTy.Text;
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
-            cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
-            MessageBox.Show("Thêm thành công");
+            if (this.Id > 0)
+            {
+                cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
+                MessageBox.Show("Thêm thành công");
+            }
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
@@ -53,8 +62,7 @@ namespace FinalProject.Company.GUI.Thong_tin
             var Ten = textBox_TenCTy.Text;
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
-            cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
-            MessageBox.Show("Cập nhật thành công");
+
         }
 
         private void button_Xoa_Click(object sender, EventArgs e)
@@ -67,6 +75,7 @@ namespace FinalProject.Company.GUI.Thong_tin
 
         private void FThongTinCongTy_Load(object sender, EventArgs e)
         {
+            _congTy = cty_BUS.GetById(Id);
             if (_congTy != null)
             {
                 textBox_ID.Text = _congTy.ID.ToString();
@@ -76,6 +85,11 @@ namespace FinalProject.Company.GUI.Thong_tin
                 textBox_DiaChi.Text = _congTy.DiaChi;
                 textBox_CEO.Text = _congTy.CEO;
             }
+        }
+
+        private void button_Xoa_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
