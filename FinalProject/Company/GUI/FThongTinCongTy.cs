@@ -42,10 +42,16 @@ namespace FinalProject.Company.GUI.Thong_tin
             var Ten = textBox_TenCTy.Text;
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
-            cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
-            MessageBox.Show("Thêm thành công");
-            cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
-            MessageBox.Show("Cập nhật thành công");
+            if (this.Id > 0)
+            {
+                cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
+                MessageBox.Show("Thêm thành công");
+            }
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
