@@ -296,7 +296,7 @@
             this.linkLabel_DangKy.TabStop = true;
             this.linkLabel_DangKy.Text = "Đăng ký ngay";
             this.linkLabel_DangKy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.linkLabel_DangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_DangKy_LinkClicked);
+            this.linkLabel_DangKy.Click += new System.EventHandler(this.linkLabel_DangKy_Click);
             // 
             // label1
             // 

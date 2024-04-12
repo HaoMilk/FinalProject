@@ -10,9 +10,11 @@ namespace FinalProject.Common.Helper
     {
         public static string ToMD5(this string input)
         {
-            var hash = System.Security.Cryptography.MD5.Create();
-            var data = hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-            return Convert.ToBase64String(data);
+            return input;
+
+            //var hash = System.Security.Cryptography.MD5.Create();
+            //var data = hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+            //return Convert.ToBase64String(data);
         }
     }
 }

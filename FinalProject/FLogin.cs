@@ -28,8 +28,6 @@ namespace FinalProject
         public Form_DangNhap()
         {
             InitializeComponent();
-            this.textBox_TenDangNhap.Text = "test";
-            this.textBox_MatKhau.Text = "123456";
         }
 
         private void button_DangNhap_Click(object sender, EventArgs e)
@@ -104,10 +102,6 @@ namespace FinalProject
             }
         }
 
-        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-        }
-
         private void Form_DangNhap_Load(object sender, EventArgs e)
         {
 
@@ -131,6 +125,14 @@ namespace FinalProject
                 return false;
             }    
             return true;
+        }
+
+        private void linkLabel_DangKy_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FDangKy fDangKy = new FDangKy();
+            fDangKy.ShowDialog();
+            this.Show();
         }
     }
 }

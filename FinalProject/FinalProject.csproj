@@ -270,6 +270,12 @@
     <Compile Include="Common\DTO\CongTyGetAllInput.cs" />
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
+    <Compile Include="Common\GUI\FDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\GUI\FDangKy.Designer.cs">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
@@ -527,6 +533,9 @@
     <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\GUI\FDangKy.resx">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -644,6 +653,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
+    <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
     <None Include="Resources\create job.png" />

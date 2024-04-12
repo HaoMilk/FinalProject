@@ -23,7 +23,7 @@ namespace FinalProject.Candidate.GUI
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            var id = LoggedUser.UserId;
+            var id = LoggedUser.UngVien.Id;
             var hoten = textBox_Name.Text;
             var ngaysinh = dateTime_Birthday.Value;
             var gioitinh = textBox_Gender.Text;
@@ -34,25 +34,33 @@ namespace FinalProject.Candidate.GUI
             var trangthai = LoggedUser.UngVien.TrangThai;
             var avatar = LoggedUser.UngVien.Avatar;
 
-            ungVienBUS.Update(id, hoten, ngaysinh, gioitinh, 
+            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
 
-            LoggedUser.UngVien = ungVienBUS.GetById(LoggedUser.UserId);
+            if (result <= 0)
+            {
+                MessageBox.Show("Có lỗi phát sinh !");
+                return;
+            }
 
-
+            LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
             MessageBox.Show("Bạn đã cập nhật thành công !");
         }
 
         private void FCandidateInfor_Load(object sender, EventArgs e)
         {
             var ungVien = LoggedUser.UngVien;
-            textBox_Name.Text = ungVien.HoTen;
-            dateTime_Birthday.Value = ungVien.NgaySinh;
-            textBox_Gender.Text = ungVien.GioiTinh;
-            textBox_Address.Text = ungVien.DiaChi;
-            textBox_Phone.Text = ungVien.SDT;
-            textBox_Email.Text = ungVien.Email;
-            textBox_Major.Text = ungVien.ChuyenMon;
+            if(ungVien != null)
+            {
+                textBox_Name.Text = ungVien.HoTen;
+                dateTime_Birthday.Value = ungVien.NgaySinh;
+                textBox_Gender.Text = ungVien.GioiTinh;
+                textBox_Address.Text = ungVien.DiaChi;
+                textBox_Phone.Text = ungVien.SDT;
+                textBox_Email.Text = ungVien.Email;
+                textBox_Major.Text = ungVien.ChuyenMon;
+            }
+         
         }
     }
 }
