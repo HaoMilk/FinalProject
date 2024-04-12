@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.DAO;
+﻿using FinalProject.Common.Const;
+using FinalProject.Common.DAO;
 using FinalProject.Common.Helper;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
@@ -7,12 +8,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FinalProject.Common.BUS
 {
     public class UserBUS
     {
         private UserDAO _userDAO = new UserDAO();
+        private UngVienBUS _ungVienBUS = new UngVienBUS();
+        private CongTyBUS _congTyBUS = new CongTyBUS();
 
         public int CheckExist(int id)
         {
@@ -77,6 +81,60 @@ namespace FinalProject.Common.BUS
             };
             var user = _userDAO.GetAll(input).FirstOrDefault();
             return user;
+        }
+
+        private bool CheckUsernameExist(string username, string role)
+        {
+            var input = new UserGetAllInput
+            {
+                Username = username,
+                Role = role
+            };
+            var user = _userDAO.GetAll(input).FirstOrDefault();
+            return user != null;
+        }
+
+        public int Signup(string username, string plainPassword, string role)
+        {
+            var isUsernameExisted = this.CheckUsernameExist(username, role);
+            if (isUsernameExisted)
+            {
+                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
+                return -1;
+            }
+
+            var result = 0;
+            var user = new User()
+            {
+                Username = username,
+                Password = plainPassword.ToMD5(),
+                Role = role
+            };
+            var userId = _userDAO.Add(user);
+            if (userId > 0)
+            {
+                if (role == UserRoleConst.Candidate)
+                {
+                    var ungVien = new UngVien()
+                    {
+                        UserId = userId,
+                        NgaySinh = DateTime.Now,
+                        TrangThai = "Active",
+                        CreatedTime = DateTime.Now,
+                    };
+                    result = _ungVienBUS.Add(ungVien);
+                }
+                else if (role == UserRoleConst.Employer)
+                {
+                    var congTy = new CongTy()
+                    {
+                        UserId = userId,
+                        CreatedTime = DateTime.Now,
+                    };
+                    result = _congTyBUS.Add(congTy);
+                }
+            }
+            return result;
         }
 
         /// <summary>
