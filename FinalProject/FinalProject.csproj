@@ -653,6 +653,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
+    <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
     <None Include="Resources\create job.png" />

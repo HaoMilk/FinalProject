@@ -33,7 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox_PhanQuyen = new System.Windows.Forms.GroupBox();
-            this.radioButton_Admin = new System.Windows.Forms.RadioButton();
             this.radioButton_NhaTuyenDung = new System.Windows.Forms.RadioButton();
             this.radioButton__UngVien = new System.Windows.Forms.RadioButton();
             this.groupBox_Pass = new System.Windows.Forms.GroupBox();
@@ -104,7 +103,6 @@
             // groupBox_PhanQuyen
             // 
             this.groupBox_PhanQuyen.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_PhanQuyen.Controls.Add(this.radioButton_Admin);
             this.groupBox_PhanQuyen.Controls.Add(this.radioButton_NhaTuyenDung);
             this.groupBox_PhanQuyen.Controls.Add(this.radioButton__UngVien);
             this.groupBox_PhanQuyen.Dock = System.Windows.Forms.DockStyle.Top;
@@ -118,19 +116,6 @@
             this.groupBox_PhanQuyen.TabIndex = 6;
             this.groupBox_PhanQuyen.TabStop = false;
             this.groupBox_PhanQuyen.Text = "Phân quyền";
-            // 
-            // radioButton_Admin
-            // 
-            this.radioButton_Admin.AutoSize = true;
-            this.radioButton_Admin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radioButton_Admin.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton_Admin.Location = new System.Drawing.Point(210, 32);
-            this.radioButton_Admin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButton_Admin.Name = "radioButton_Admin";
-            this.radioButton_Admin.Size = new System.Drawing.Size(83, 38);
-            this.radioButton_Admin.TabIndex = 2;
-            this.radioButton_Admin.Text = "Admin";
-            this.radioButton_Admin.UseVisualStyleBackColor = true;
             // 
             // radioButton_NhaTuyenDung
             // 
@@ -369,7 +354,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox_PhanQuyen;
-        private System.Windows.Forms.RadioButton radioButton_Admin;
         private System.Windows.Forms.RadioButton radioButton_NhaTuyenDung;
         private System.Windows.Forms.RadioButton radioButton__UngVien;
         private System.Windows.Forms.GroupBox groupBox_Pass;

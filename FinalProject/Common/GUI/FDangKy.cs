@@ -52,15 +52,15 @@ namespace FinalProject
                     this.Close();
                 }              
             }
-            else if(radioButton_Admin.Checked)
-            {
-                var result = userBUS.Signup(username, password, UserRoleConst.Admin);
-                if (result > 0)
-                {
-                    MessageBox.Show("Bạn đã đăng ký thành công, vui lòng đăng nhập!");
-                    this.Close();
-                }              
-            }    
+            //else if(radioButton_Admin.Checked)
+            //{
+            //    var result = userBUS.Signup(username, password, UserRoleConst.Admin);
+            //    if (result > 0)
+            //    {
+            //        MessageBox.Show("Bạn đã đăng ký thành công, vui lòng đăng nhập!");
+            //        this.Close();
+            //    }              
+            //}    
             else if (radioButton_NhaTuyenDung.Checked)
             {
                 var result = userBUS.Signup(username, password, UserRoleConst.Employer);
