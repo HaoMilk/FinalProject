@@ -280,6 +280,12 @@
     <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
+    <Compile Include="Company\GUI\FCreateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FCreateJob.Designer.cs">
+      <DependentUpon>FCreateJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company\GUI\FDSCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -536,6 +542,9 @@
     <EmbeddedResource Include="Common\GUI\FDangKy.resx">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
+      <DependentUpon>FCreateJob.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
       <DependentUpon>FDSCongViec.cs</DependentUpon>
     </EmbeddedResource>
@@ -662,6 +671,7 @@
     <None Include="Resources\icons8-data-pending-64.png" />
     <None Include="Resources\icons8-history-64.png" />
     <None Include="Resources\icons8-check-32.png" />
+    <None Include="Resources\icons8-delete-32.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -936,6 +946,8 @@
     <None Include="Resources\chart_icon_11.jpg" />
     <None Include="Resources\CANDIDATE_ICON.jpg" />
     <None Include="Resources\icons8-delete-24.png" />
+    <None Include="Resources\TuyenDung.jpg" />
+    <None Include="Resources\Thông tin tuyển dụng.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
