@@ -28,43 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_UpdatedTime = new System.Windows.Forms.Label();
-            this.label_CvName = new System.Windows.Forms.Label();
             this.button_View = new System.Windows.Forms.Button();
+            this.label_CvName = new System.Windows.Forms.Label();
+            this.label_UpdatedTime = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label_UpdatedTime
-            // 
-            this.label_UpdatedTime.AutoEllipsis = true;
-            this.label_UpdatedTime.AutoSize = true;
-            this.label_UpdatedTime.BackColor = System.Drawing.Color.Transparent;
-            this.label_UpdatedTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_UpdatedTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_UpdatedTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_UpdatedTime.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label_UpdatedTime.Location = new System.Drawing.Point(3, 0);
-            this.label_UpdatedTime.Name = "label_UpdatedTime";
-            this.label_UpdatedTime.Size = new System.Drawing.Size(288, 42);
-            this.label_UpdatedTime.TabIndex = 2;
-            this.label_UpdatedTime.Text = "09/03/2024 11:10:00";
-            this.label_UpdatedTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_CvName
-            // 
-            this.label_CvName.AutoEllipsis = true;
-            this.label_CvName.AutoSize = true;
-            this.label_CvName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_CvName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_CvName.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_CvName.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label_CvName.Location = new System.Drawing.Point(3, 42);
-            this.label_CvName.Name = "label_CvName";
-            this.label_CvName.Size = new System.Drawing.Size(288, 126);
-            this.label_CvName.TabIndex = 1;
-            this.label_CvName.Text = "CV Name";
-            this.label_CvName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_View
             // 
@@ -83,6 +52,37 @@
             this.button_View.UseVisualStyleBackColor = false;
             this.button_View.Click += new System.EventHandler(this.button_View_Click);
             // 
+            // label_CvName
+            // 
+            this.label_CvName.AutoEllipsis = true;
+            this.label_CvName.AutoSize = true;
+            this.label_CvName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_CvName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_CvName.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_CvName.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label_CvName.Location = new System.Drawing.Point(3, 42);
+            this.label_CvName.Name = "label_CvName";
+            this.label_CvName.Size = new System.Drawing.Size(288, 126);
+            this.label_CvName.TabIndex = 1;
+            this.label_CvName.Text = "CV Name";
+            this.label_CvName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_UpdatedTime
+            // 
+            this.label_UpdatedTime.AutoEllipsis = true;
+            this.label_UpdatedTime.AutoSize = true;
+            this.label_UpdatedTime.BackColor = System.Drawing.Color.Transparent;
+            this.label_UpdatedTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_UpdatedTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_UpdatedTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_UpdatedTime.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label_UpdatedTime.Location = new System.Drawing.Point(3, 0);
+            this.label_UpdatedTime.Name = "label_UpdatedTime";
+            this.label_UpdatedTime.Size = new System.Drawing.Size(288, 42);
+            this.label_UpdatedTime.TabIndex = 2;
+            this.label_UpdatedTime.Text = "09/03/2024 11:10:00";
+            this.label_UpdatedTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(294, 210);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // UCViewJob
             // 
@@ -110,6 +110,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "UCViewJob";
             this.Size = new System.Drawing.Size(294, 210);
+            this.Load += new System.EventHandler(this.UCViewJob_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -118,9 +119,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label_UpdatedTime;
-        private System.Windows.Forms.Label label_CvName;
         private System.Windows.Forms.Button button_View;
+        private System.Windows.Forms.Label label_CvName;
+        private System.Windows.Forms.Label label_UpdatedTime;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
