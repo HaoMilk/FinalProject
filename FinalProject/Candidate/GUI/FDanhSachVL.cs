@@ -27,9 +27,9 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            this.listTinh = tinhBUS.GetAll();
-            this.comboBox_DiaDiem.Items.Clear();
-            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
+            //this.listTinh = tinhBUS.GetAll();
+            //this.comboBox_DiaDiem.Items.Clear();
+            //this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
             var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
             this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
@@ -67,10 +67,9 @@ namespace FinalProject.Candidate.GUI
             }
 
             flowLayoutPanel_CongViec.Controls.Clear();
-            foreach (var ucJobCard in ucJobCards)
-            {
-                flowLayoutPanel_CongViec.Controls.Add(ucJobCard);
-            }
+            flowLayoutPanel_CongViec.SuspendLayout();
+            flowLayoutPanel_CongViec.Controls.AddRange(ucJobCards.ToArray());
+            flowLayoutPanel_CongViec.ResumeLayout();
         }
         #endregion JobList
 

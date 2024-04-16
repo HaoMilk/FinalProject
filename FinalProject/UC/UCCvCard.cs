@@ -51,7 +51,7 @@ namespace FinalProject.UC
             set
             {
                 id = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -67,7 +67,7 @@ namespace FinalProject.UC
                 }
                 cvName = value;
                 this.label_CvName.Text = cvName;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -83,7 +83,7 @@ namespace FinalProject.UC
                 }
                 lastUpdatedTime = value;
                 this.label_UpdatedTime.Text = lastUpdatedTime.ToString("dd/MM/yyyy");
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -99,7 +99,7 @@ namespace FinalProject.UC
                 }
                 cvNameTextColor = value;
                 this.label_CvName.ForeColor = cvNameTextColor;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -116,7 +116,7 @@ namespace FinalProject.UC
                 }
                 lastUpdatedTimeTextColor = value;
                 this.label_UpdatedTime.ForeColor = lastUpdatedTimeTextColor;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -133,7 +133,7 @@ namespace FinalProject.UC
                 }
                 bgImage = value;
                 this.BackgroundImage = bgImage;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
