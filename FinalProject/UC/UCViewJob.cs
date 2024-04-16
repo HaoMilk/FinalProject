@@ -1,5 +1,5 @@
 ﻿using FinalProject.Candidate.GUI;
-using FinalProject.Company.GUI.Ung_tuyen;
+using FinalProject.Company.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -221,12 +221,16 @@ namespace FinalProject.UC
             }
             else
             {
-                FCongViec fCongViec = new FCongViec();
-                fCongViec.Id = id;
-                fCongViec.CvUpdatedTime = lastUpdatedTime;
-                fCongViec.ShowDialog();
+                FCreateJob fCreateJob = new FCreateJob();
+                fCreateJob.Id = id;
+                fCreateJob.CvUpdatedTime = lastUpdatedTime;
+                fCreateJob.ShowDialog();
             }
         }
 
+        private void UCViewJob_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
