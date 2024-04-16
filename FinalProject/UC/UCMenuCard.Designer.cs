@@ -59,6 +59,7 @@
             this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
+            this.button_View.FlatAppearance.BorderSize = 0;
             this.button_View.FlatAppearance.MouseDownBackColor = System.Drawing.Color.NavajoWhite;
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_View.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
