@@ -51,7 +51,7 @@ namespace FinalProject.UC
                 _currentPage = value;
                 this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
                 this.OnCurrentPageChanged(EventArgs.Empty);
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -70,7 +70,7 @@ namespace FinalProject.UC
                 _currentPage = 1;
                 _totalPage = (int)Math.Ceiling((double)_totalRecord / _pageSize);
                 this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -123,7 +123,7 @@ namespace FinalProject.UC
                 this._pageSize = (int)item.Value;
                 this._currentPage = 1;
                 this.label_CurrentPage.Text = $"{_currentPage} / {_totalPage}";
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
     }

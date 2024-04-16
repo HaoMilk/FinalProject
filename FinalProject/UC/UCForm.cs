@@ -17,7 +17,7 @@ namespace FinalProject.UC
             InitializeComponent();
 
             this.DoubleBuffered = true;
-            this.AutoScaleMode = AutoScaleMode.None;
+            this.AutoScaleMode = AutoScaleMode.Font;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.UserPaint, true);
@@ -71,7 +71,7 @@ namespace FinalProject.UC
                     this.WindowState = FormWindowState.Maximized;
                     break;
             }
-            this.Invalidate();
+            // this.Invalidate();
         }
     }
 }

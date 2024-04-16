@@ -25,7 +25,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             set
             {
                 id = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
         public DateTime CvUpdatedTime
@@ -34,7 +34,7 @@ namespace FinalProject.Company.GUI.Ung_tuyen
             set
             {
                 congViecUpdatedTime = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
         public FCongViec()

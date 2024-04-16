@@ -22,7 +22,7 @@ namespace FinalProject.UC
             set
             {
                 borderSize = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -33,7 +33,7 @@ namespace FinalProject.UC
             set
             {
                 borderRadius = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -44,7 +44,7 @@ namespace FinalProject.UC
             set
             {
                 borderColor = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -143,7 +143,7 @@ namespace FinalProject.UC
 
         private void Container_BackColorChanged(object sender, EventArgs e)
         {
-            this.Invalidate();
+            // this.Invalidate();
         }
         
         private void Button_Resize(object sender, EventArgs e)
