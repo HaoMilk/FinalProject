@@ -2,6 +2,7 @@
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI;
 using FinalProject.Company.GUI.Thong_tin;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
