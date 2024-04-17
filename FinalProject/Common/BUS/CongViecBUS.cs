@@ -129,9 +129,9 @@ namespace FinalProject.Common.BUS
         {
             return congViecDAO.GetById(id);
         }
-        public List<CongViec> GetByIDCty(int id)
+        public List<CongViec> GetByIDCty(CongViecGetAllInput input, int comanyId)
         {
-            return congViecDAO.GetByIDCty(id);
+            return congViecDAO.GetByIDCty(input, comanyId);
         }
     }
 }
