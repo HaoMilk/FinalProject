@@ -30,6 +30,8 @@ namespace FinalProject.Candidate.GUI
             };
             this.ucComboBox_Gender.Items = items;
             this.ucComboBox_Gender.SelectedIndex = 0;
+
+            this.pictureBox_Avatar.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -70,6 +72,15 @@ namespace FinalProject.Candidate.GUI
                 textBox_Phone.Text = ungVien.SDT;
                 textBox_Email.Text = ungVien.Email;
                 richTextBox_ChuyenMon.Text = ungVien.ChuyenMon;
+            }
+
+            if (LoggedUser.User != null)
+            {
+                var url = LoggedUser.User.AvatarUrl;
+                if (!string.IsNullOrWhiteSpace(url))
+                {
+                    pictureBox_Avatar.LoadAsync(url);
+                }
             }
         }
     }
