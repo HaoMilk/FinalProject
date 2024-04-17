@@ -1,7 +1,10 @@
 ﻿using FinalProject.Candidate.GUI;
+using FinalProject.Common.Helper;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace FinalProject.UC
@@ -18,6 +21,8 @@ namespace FinalProject.UC
         #region Fields
         private int id;
         private string menuName;
+        private int borderRadious = 20;
+        private Color menuBackColor = Color.Azure;
         private Color buttonBackColor = Color.Cornsilk;
         private Color buttonTextColor = Color.RoyalBlue;
         private Image menuImage;
@@ -41,7 +46,7 @@ namespace FinalProject.UC
             set
             {
                 id = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -57,7 +62,23 @@ namespace FinalProject.UC
                 }
                 menuName = value;
                 this.button_View.Text = menuName;
-                this.Invalidate();
+                // this.Invalidate();
+            }
+        }
+
+        [Category("CUSTOMIZE UI")]
+        public Color MenuBackColor
+        {
+            get { return menuBackColor; }
+            set
+            {
+                if (value == null)
+                {
+                    value = Color.Azure;
+                }
+                menuBackColor = value;
+                this.BackColor = menuBackColor;
+                // this.Invalidate();
             }
         }
 
@@ -73,7 +94,7 @@ namespace FinalProject.UC
                 }
                 buttonBackColor = value;
                 this.button_View.BackColor = buttonBackColor;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -89,8 +110,8 @@ namespace FinalProject.UC
                 }
                 buttonTextColor = value;
                 this.button_View.ForeColor = value;
-                this.button_View.FlatAppearance.BorderColor = value;
-                this.Invalidate();
+                //this.button_View.FlatAppearance.BorderColor = value;
+                // this.Invalidate();
             }
         }
 
@@ -106,9 +127,12 @@ namespace FinalProject.UC
                 }
                 menuImage = value;
                 this.pictureBox_Image.BackgroundImage = menuImage;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
+
+        [Category("CUSTOMIZE UI")]
+        public int BorderRadious { get => borderRadious; set => borderRadious = value; }
         #endregion Properties
 
         public UCMenuCard()
@@ -137,6 +161,23 @@ namespace FinalProject.UC
             {
                 MessageBox.Show("Menu clicked");
             }
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            Graphics graphics = e.Graphics;
+
+            Rectangle gradientRectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+
+            Brush borderBrush = new LinearGradientBrush(gradientRectangle, this.buttonBackColor, this.buttonBackColor, 0.0f);
+            Brush backgroundBrush = new LinearGradientBrush(gradientRectangle, this.menuBackColor, this.menuBackColor, 0.0f);
+
+            graphics.SmoothingMode = SmoothingMode.HighQuality;
+            GuiHelper.FillRoundedRectangle(gradientRectangle, this.borderRadious, graphics, backgroundBrush, borderBrush);
+
+            this.BackColor = Color.Transparent;
         }
     }
 }

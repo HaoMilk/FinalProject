@@ -134,5 +134,21 @@ namespace FinalProject
             fDangKy.ShowDialog();
             this.Show();
         }
+
+        private void Form_DangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_DangNhap_Click(sender, e);
+            }
+        }
+
+        private void textBox_MatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_DangNhap_Click(sender, e);
+            }
+        }
     }
 }

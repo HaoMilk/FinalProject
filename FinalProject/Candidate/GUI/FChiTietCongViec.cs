@@ -34,7 +34,7 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 id = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -58,7 +58,7 @@ namespace FinalProject.Candidate.GUI
             {
                 cvName = value;
                 this.label_JobName.Text = cvName;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -68,7 +68,7 @@ namespace FinalProject.Candidate.GUI
             set
             {
                 cvUpdatedTime = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 

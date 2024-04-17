@@ -25,7 +25,7 @@ namespace FinalProject.Company.GUI
             set
             {
                 id = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -35,7 +35,7 @@ namespace FinalProject.Company.GUI
             set
             {
                 congViecUpdatedTime = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
         public FCreateJob()

@@ -35,7 +35,7 @@ namespace FinalProject.UC
                 }
                 name = value;
                 label_Name.Text = name;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -50,7 +50,7 @@ namespace FinalProject.UC
                     value = "Địa chỉ công ty";
                 }
                 address = value;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 

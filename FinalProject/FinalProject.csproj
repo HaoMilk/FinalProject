@@ -277,6 +277,7 @@
       <DependentUpon>FDangKy.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
+    <Compile Include="Common\Helper\GuiHelper.cs" />
     <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
@@ -410,6 +411,12 @@
     </Compile>
     <Compile Include="UC\UCPagination.Designer.cs">
       <DependentUpon>UCPagination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\UCTextBox.Designer.cs">
+      <DependentUpon>UCTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCUserSetting.cs">
       <SubType>UserControl</SubType>
