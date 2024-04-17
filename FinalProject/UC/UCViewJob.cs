@@ -1,5 +1,5 @@
 ﻿using FinalProject.Candidate.GUI;
-using FinalProject.Company.GUI.Ung_tuyen;
+using FinalProject.Company.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,7 +87,7 @@ namespace FinalProject.UC
                 }
                 jobName = value;
                 this.label_CvName.Text = jobName;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -104,7 +104,7 @@ namespace FinalProject.UC
                 }
                 lastUpdatedTime = value;
                 this.label_UpdatedTime.Text = lastUpdatedTime.ToString("dd/MM/yyyy");
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -121,7 +121,7 @@ namespace FinalProject.UC
                 }
                 buttonViewBackground = value;
                 this.button_View.BackColor = buttonViewBackground;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -139,7 +139,7 @@ namespace FinalProject.UC
                 }
                 jobNameTextColor = value;
                 this.label_CvName.ForeColor = jobNameTextColor;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -156,7 +156,7 @@ namespace FinalProject.UC
                 }
                 lastUpdatedTimeTextColor = value;
                 this.label_UpdatedTime.ForeColor = lastUpdatedTimeTextColor;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -173,7 +173,7 @@ namespace FinalProject.UC
                 }
                 bgImage = value;
                 this.BackgroundImage = bgImage;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -190,7 +190,7 @@ namespace FinalProject.UC
                 }
                 buttonViewImage = value;
                 this.button_View.BackgroundImage = buttonViewImage;
-                this.Invalidate();
+                // this.Invalidate();
             }
         }
 
@@ -221,12 +221,16 @@ namespace FinalProject.UC
             }
             else
             {
-                FCongViec fCongViec = new FCongViec();
-                fCongViec.Id = id;
-                fCongViec.CvUpdatedTime = lastUpdatedTime;
-                fCongViec.ShowDialog();
+                FCreateJob fCreateJob = new FCreateJob();
+                fCreateJob.Id = id;
+                fCreateJob.CvUpdatedTime = lastUpdatedTime;
+                fCreateJob.ShowDialog();
             }
         }
 
+        private void UCViewJob_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

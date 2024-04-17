@@ -11,6 +11,7 @@ namespace FinalProject.Database.Entities
     public class User
     {
         public static string TableName = "User";
+        public static string DefaultAvatarUrl = "https://img.icons8.com/bubbles/200/picture.png";
 
         private string _password;
         private string _role;
@@ -25,8 +26,8 @@ namespace FinalProject.Database.Entities
                 this._password = value.ToMD5();
             }
         }
-        public string Email { get; set; }
-        public string Status { get; set; }
+        public string Email { get; set; } = string.Empty;
+        public string Status { get; set; } = StatusConst.Waiting;
         public string Role
         {
             get => this._role;
@@ -42,10 +43,33 @@ namespace FinalProject.Database.Entities
                 }
             }
         }
-        public string Phone { get; set; }
-        public bool IsDeleted { get; set; }
-        public DateTime CreatedTime { get; set; }
+        public string Phone { get; set; } = string.Empty;
+        public bool IsDeleted { get; set; } = false;
+        public DateTime CreatedTime { get; set; } = DateTime.Now;
         public DateTime? UpdatedTime { get; set; }
+        private string _avatarUrl;
+        public string AvatarUrl
+        {
+            get
+            {
+                if (this._avatarUrl == null)
+                {
+                    return DefaultAvatarUrl;
+                }
+                return this._avatarUrl;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    this._avatarUrl = DefaultAvatarUrl;
+                }
+                else
+                {
+                    this._avatarUrl = value;
+                }
+            }
+        }
 
         public User()
         {
@@ -53,7 +77,7 @@ namespace FinalProject.Database.Entities
             this.IsDeleted = false;
         }
 
-        public User(string username, string password, string email, string status, string role, string phone)
+        public User(string username, string password, string email, string status, string role, string phone, string avatarUrl)
         {
             this.Username = username;
             this.Password = password;
@@ -63,6 +87,7 @@ namespace FinalProject.Database.Entities
             this.Phone = phone;
             this.CreatedTime = DateTime.Now;
             this.IsDeleted = false;
+            this.AvatarUrl = avatarUrl;
         }
     }
 }

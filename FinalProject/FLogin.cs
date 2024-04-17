@@ -30,6 +30,13 @@ namespace FinalProject
             InitializeComponent();
         }
 
+        private void ClearData()
+        {
+            textBox_TenDangNhap.Text = "";
+            textBox_MatKhau.Text = "";
+            radioButton__UngVien.Checked = true;
+        }
+
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
             if (!Check())
@@ -59,6 +66,7 @@ namespace FinalProject
                 this.Hide();
                 FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
                 fCandidateHomePage.ShowDialog();
+                this.ClearData();
                 this.Show();
             }
             else if(radioButton_Admin.Checked)
@@ -78,6 +86,7 @@ namespace FinalProject
                 this.Hide();
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();
+                this.ClearData();
                 this.Show();
             }    
             else if (radioButton_NhaTuyenDung.Checked)
@@ -98,6 +107,7 @@ namespace FinalProject
                 this.Hide();
                 FCompanyHomePage fCompanyHomePage = new FCompanyHomePage();
                 fCompanyHomePage.ShowDialog();
+                this.ClearData();
                 this.Show();
             }
         }
@@ -133,6 +143,22 @@ namespace FinalProject
             FDangKy fDangKy = new FDangKy();
             fDangKy.ShowDialog();
             this.Show();
+        }
+
+        private void Form_DangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_DangNhap_Click(sender, e);
+            }
+        }
+
+        private void textBox_MatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button_DangNhap_Click(sender, e);
+            }
         }
     }
 }

@@ -1,11 +1,14 @@
-﻿using FinalProject.Common;
+﻿using CloudinaryDotNet;
+using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Helper;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,9 +19,20 @@ namespace FinalProject.Candidate.GUI
     public partial class FCandidateInfor : UCForm
     {
         private UngVienBUS ungVienBUS = new UngVienBUS();
+        private UserBUS userBUS = new UserBUS();
+
         public FCandidateInfor()
         {
             InitializeComponent();
+
+            var items = new ComboBoxItem[]
+            {
+                new ComboBoxItem { Text = "Nam", Value = "M" },
+                new ComboBoxItem { Text = "Nữ", Value = "F" },
+                new ComboBoxItem { Text = "Khác", Value = "O" },
+            };
+            this.ucComboBox_Gender.Items = items;
+            this.ucComboBox_Gender.SelectedIndex = 0;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -26,15 +40,15 @@ namespace FinalProject.Candidate.GUI
             var id = LoggedUser.UngVien.Id;
             var hoten = textBox_Name.Text;
             var ngaysinh = dateTime_Birthday.Value;
-            var gioitinh = textBox_Gender.Text;
+            var gioitinh = ucComboBox_Gender.Text;
             var diachi = textBox_Address.Text;
             var sdt = textBox_Phone.Text;
             var email = textBox_Email.Text;
-            var chuyenmon = textBox_Major.Text;
+            var chuyenmon = richTextBox_ChuyenMon.Text;
             var trangthai = LoggedUser.UngVien.TrangThai;
             var avatar = LoggedUser.UngVien.Avatar;
 
-            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioitinh, 
+            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
 
             if (result <= 0)
@@ -54,13 +68,54 @@ namespace FinalProject.Candidate.GUI
             {
                 textBox_Name.Text = ungVien.HoTen;
                 dateTime_Birthday.Value = ungVien.NgaySinh;
-                textBox_Gender.Text = ungVien.GioiTinh;
+                ucComboBox_Gender.Text = ungVien.GioiTinh;
                 textBox_Address.Text = ungVien.DiaChi;
                 textBox_Phone.Text = ungVien.SDT;
                 textBox_Email.Text = ungVien.Email;
-                textBox_Major.Text = ungVien.ChuyenMon;
+                richTextBox_ChuyenMon.Text = ungVien.ChuyenMon;
             }
-         
+
+            if (LoggedUser.User != null)
+            {
+                var url = LoggedUser.User.AvatarUrl;
+                if (!string.IsNullOrWhiteSpace(url))
+                {
+                    pictureBox_Avatar.LoadAsync(url);
+                }
+            }
+        }
+
+        private void button_ChangeAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var uploadResult = ImageHelper.UploadImage(openFileDialog.FileName, $"User_{LoggedUser.UserId}");
+                if (uploadResult != null)
+                {
+                    //// Do không đổi url ảnh, nên không cần update url ảnh trong database
+                    //MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    //pictureBox_Avatar.Load(openFileDialog.FileName);
+
+                    string url = uploadResult.Url.ToString();
+                    LoggedUser.User.AvatarUrl = url;
+                    var result = userBUS.Update(LoggedUser.User);
+                    if (result > 0)
+                    {
+                        pictureBox_Avatar.Load(openFileDialog.FileName);
+                        MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi phát sinh !");
+                    }
+                }
+
+                Cursor.Current = Cursors.Default;
+            }
         }
     }
 }

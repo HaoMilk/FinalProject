@@ -243,6 +243,7 @@
             this.comboBox_GioiTinh.Name = "comboBox_GioiTinh";
             this.comboBox_GioiTinh.Size = new System.Drawing.Size(420, 30);
             this.comboBox_GioiTinh.TabIndex = 0;
+            this.comboBox_GioiTinh.SelectedIndexChanged += new System.EventHandler(this.comboBox_GioiTinh_SelectedIndexChanged);
             // 
             // groupBox5
             // 
