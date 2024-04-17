@@ -33,9 +33,9 @@ namespace FinalProject.Common.BUS
             return _userDAO.GetAll(input);
         }
 
-        public int Add(string username, string password, string email, string status, string role, string phone)
+        public int Add(string username, string password, string email, string status, string role, string phone, string avatarUrl)
         {
-            var user = new User(username, password, email, status, role, phone);
+            var user = new User(username, password, email, status, role, phone, avatarUrl);
             return _userDAO.Add(user);
         }
 
@@ -44,9 +44,9 @@ namespace FinalProject.Common.BUS
             return _userDAO.Add(user);
         }
 
-        public int Update(int id, string username, string password, string email, string status, string role, string phone)
+        public int Update(int id, string username, string password, string email, string status, string role, string phone, string avatarUrl)
         {
-            var user = new User(username, password, email, status, role, phone);
+            var user = new User(username, password, email, status, role, phone, avatarUrl);
             user.Id = id;
             return _userDAO.Update(user);
         }

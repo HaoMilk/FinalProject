@@ -101,18 +101,7 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        var user = new User();
-                        user.Id = reader.GetIntValue(0);
-                        user.Username = reader.GetStringValue(1);
-                        user.Password = reader.GetStringValue(2);
-                        user.Email = reader.GetStringValue(3);
-                        user.Status = reader.GetStringValue(4);
-                        user.IsDeleted = reader.GetBooleanValue(5);
-                        user.Phone = reader.GetStringValue(6);
-                        user.Role = reader.GetStringValue(7);
-                        user.CreatedTime = reader.GetDateTimeValue(8);
-                        user.UpdatedTime = reader.GetDateTimeValueNullable(9);
-
+                        var user = ObjectMapping(reader);
                         list.Add(user);
                     }
                 }
@@ -128,22 +117,22 @@ namespace FinalProject.Common.DAO
         public int Add(User user)
         {
             string query = $@"
-                INSERT INTO [User](UserName, [Password], Email, [Status], IsDeleted, Phone, [Role], CreatedTime, UpdatedTime)
-                VALUES (
-                    N'{user.Username}', 
-                    N'{user.Password}', 
-                    N'{user.Email}', 
-                    N'{user.Status}', 
-                    0, 
-                    N'{user.Phone}', 
-                    N'{user.Role}', 
-                    '{user.CreatedTime:yyyy-MM-dd hh:mm:ss}', 
-                    NULL);
+                INSERT INTO [User](UserName, [Password], Email, [Status], IsDeleted, Phone, [Role], CreatedTime, UpdatedTime, AvatarUrl)
+                VALUES (@UserName, @Password, @Email, @Status, 0, @Phone, @Role, @CreatedTime, NULL, @AvatarUrl);
                 SELECT MAX(Id) AS LastInsertedID FROM [User];";
 
             using (dbConnection.Connection)
             {
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@UserName", user.Username);
+                cmd.Parameters.AddWithValue("@Password", user.Password);
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@Status", user.Status);
+                cmd.Parameters.AddWithValue("@Phone", user.Phone);
+                cmd.Parameters.AddWithValue("@Role", user.Role);
+                cmd.Parameters.AddWithValue("@CreatedTime", user.CreatedTime);
+                cmd.Parameters.AddWithValue("@AvatarUrl", user.AvatarUrl);
+
                 try
                 {
                     var result = cmd.ExecuteScalar();
@@ -160,18 +149,28 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $@"
-                UPDATE [User] SET 
-                    UserName = N'{user.Username}', 
-                    [Password] = N'{user.Password}', 
-                    Email = N'{user.Email}', 
-                    [Status] = N'{user.Status}', 
-                    Phone = N'{user.Phone}', 
-                    [Role] = N'{user.Role}', 
-                    UpdatedTime = '{user.UpdatedTime:yyyy-MM-dd hh:mm:ss}'
-                    WHERE Id = {user.Id};
-                ";
+                    UPDATE [User] SET 
+                        [UserName] = @UserName,
+                        [Password] = @Password,
+                        [Email] = @Email,
+                        [Status] = @Status,
+                        [Phone] = @Phone,
+                        [Role] = @Role,
+                        [UpdatedTime] = @UpdatedTime,
+                        [AvatarUrl] = @AvatarUrl
+                        WHERE [Id] = @Id;";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                cmd.Parameters.AddWithValue("@Id", user.Id);
+                cmd.Parameters.AddWithValue("@UserName", user.Username);
+                cmd.Parameters.AddWithValue("@Password", user.Password);
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@Status", user.Status);
+                cmd.Parameters.AddWithValue("@Phone", user.Phone);
+                cmd.Parameters.AddWithValue("@Role", user.Role);
+                cmd.Parameters.AddWithValue("@UpdatedTime", DateTime.Now);
+                cmd.Parameters.AddWithValue("@AvatarUrl", user.AvatarUrl);
+
                 try
                 {
                     return cmd.ExecuteNonQuery();
@@ -235,18 +234,7 @@ namespace FinalProject.Common.DAO
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
-                        var user = new User();
-                        user.Id = reader.GetIntValue(0);
-                        user.Username = reader.GetStringValue(1);
-                        user.Password = reader.GetStringValue(2);
-                        user.Email = reader.GetStringValue(3);
-                        user.Status = reader.GetStringValue(4);
-                        user.IsDeleted = reader.GetBooleanValue(5);
-                        user.Phone = reader.GetStringValue(6);
-                        user.Role = reader.GetStringValue(7);
-                        user.CreatedTime = reader.GetDateTimeValue(8);
-                        user.UpdatedTime = reader.GetDateTimeValueNullable(9);
-
+                        var user = ObjectMapping(reader);
                         return user;
                     }
                 }
@@ -257,6 +245,24 @@ namespace FinalProject.Common.DAO
 
                 return null;
             }
+        }
+
+        private User ObjectMapping(SqlDataReader reader)
+        {
+            var user = new User();
+            user.Id = reader.GetIntValue(0);
+            user.Username = reader.GetStringValue(1);
+            user.Password = reader.GetStringValue(2);
+            user.Email = reader.GetStringValue(3);
+            user.Status = reader.GetStringValue(4);
+            user.IsDeleted = reader.GetBooleanValue(5);
+            user.Phone = reader.GetStringValue(6);
+            user.Role = reader.GetStringValue(7);
+            user.CreatedTime = reader.GetDateTimeValue(8);
+            user.UpdatedTime = reader.GetDateTimeValueNullable(9);
+            user.AvatarUrl = reader.GetStringValue(10);
+
+            return user;
         }
     }
 }
