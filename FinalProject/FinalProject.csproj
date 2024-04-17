@@ -729,6 +729,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\024. Drop Foreign Key FK_CV_UngVien.sql" />
     <Content Include="Database\Scripts\023. Add AvatarUrl into User.sql" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
