@@ -310,6 +310,7 @@
     <Compile Include="Common\BUS\UngVienBUS.cs" />
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\BUS\UserBUS.cs" />
+    <Compile Include="Common\Const\StatusConst.cs" />
     <Compile Include="Common\Const\UserRoleConst.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UserDAO.cs" />
@@ -728,6 +729,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\023. Add AvatarUrl into User.sql" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
     <None Include="Resources\File icon.jpg" />
     <None Include="Resources\create job.png" />
