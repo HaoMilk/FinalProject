@@ -1,6 +1,7 @@
 ﻿using FinalProject.Candidate.Constants;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -21,31 +22,31 @@ namespace FinalProject.Company.GUI
         private List<Tinh> listTinh = new List<Tinh>();
         private CongViecBUS congViecBUS = new CongViecBUS();
         private List<CongViec> listCongViec = new List<CongViec>();
-        UCDanhSachViecLam UC = new UCDanhSachViecLam();
 
         public FDanhSachViecLam()
         {
             InitializeComponent();
-            UC = this.UC_DSVL;
-            UC.button_Close.Click += button_Close_Click;
-            UC.button_TimKiem.Click += button_TimKiem_Click;
+            this.listTinh = tinhBUS.GetAll();
+            this.comboBox_DiaDiem.Items.Clear();
+            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
+
             var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
-            this.UC.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
-            this.UC.comboBox_KinhNghiem.SelectedIndex = 0;
+            this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
+            this.comboBox_KinhNghiem.SelectedIndex = 0;
 
             var listMucLuong = MucLuongConstants.GetMucLuongList();
-            this.UC.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
-            this.UC.comboBox_MucLuong.SelectedIndex = 0;
+            this.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
+            this.comboBox_MucLuong.SelectedIndex = 0;
 
             var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
-            this.UC.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
-            this.UC.comboBox_NgheNghiep.SelectedIndex = 0;
+            this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
+            this.comboBox_NgheNghiep.SelectedIndex = 0;
         }
         #region JobList
 
         private void LoadJobList()
         {
-            UC.ucPagination.TotalRecord = listCongViec.Count;
+            ucPagination.TotalRecord = listCongViec.Count;
 
             List<UCViewJob> uCViewJobs = new List<UCViewJob>();
             if (listCongViec != null && listCongViec.Count > 0)
@@ -63,28 +64,52 @@ namespace FinalProject.Company.GUI
                 }
             }
 
-            UC.flowLayoutPanel_CongViec.Controls.Clear();
-            UC.flowLayoutPanel_CongViec.SuspendLayout();
-            UC.flowLayoutPanel_CongViec.Controls.AddRange(uCViewJobs.ToArray());
-            UC.flowLayoutPanel_CongViec.ResumeLayout();
+            flowLayoutPanel_CongViec.Controls.Clear();
+            flowLayoutPanel_CongViec.SuspendLayout();
+            flowLayoutPanel_CongViec.Controls.AddRange(uCViewJobs.ToArray());
+            flowLayoutPanel_CongViec.ResumeLayout();
         }
         #endregion JobList
-        private void UC_DSVL_Load(object sender, EventArgs e)
-        {
-            LoadJobList();
-        }
-        private void LoadCongViec()
-        {
-            listCongViec = congViecBUS.GetByIDCty(LoggedUser.CongTy.ID);
-        }
-        private void button_TimKiem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FDanhSachViecLam_Load(object sender, EventArgs e)
+        {
+            SearchCongViec();
+            LoadJobList();
+        }
+        private void SearchCongViec()
+        {
+            var input = new CongViecGetAllInput();
+            input.Search = textBox_TimKiem.Text;
+            input.NgheNghiep = comboBox_NgheNghiep.Text;
+
+            var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
+            if (selectedTinh != null)
+            {
+                input.DiaDiem = comboBox_DiaDiem.Text;
+            }
+            else
+            {
+                input.DiaDiem = null;
+            }
+
+            input = input.SetKinhNghiem(comboBox_KinhNghiem.Text);
+            input = input.SetMucLuong(comboBox_MucLuong.Text);
+
+            input.FromId = ucPagination.StartRecord;
+            input.ToId = ucPagination.EndRecord;
+
+            listCongViec = congViecBUS.GetByIDCty(input, LoggedUser.CongTy.ID);
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            SearchCongViec();
+            LoadJobList() ;
         }
     }
 }
