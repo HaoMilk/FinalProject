@@ -336,11 +336,11 @@
     <Compile Include="Company\GUI\FCreateJob.Designer.cs">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FDSCongViec.cs">
+    <Compile Include="Company\GUI\FDSViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FDSCongViec.Designer.cs">
-      <DependentUpon>FDSCongViec.cs</DependentUpon>
+    <Compile Include="Company\GUI\FDSViecLam.Designer.cs">
+      <DependentUpon>FDSViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Common\DTO\CvGetAllInput.cs" />
@@ -400,17 +400,17 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\FCongViec.Designer.cs">
-      <DependentUpon>FCongViec.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\FHSChuaDuyet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\FHSChuaDuyet.Designer.cs">
       <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FDanhSachViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FDanhSachViecLam.Designer.cs">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
@@ -442,6 +442,12 @@
     </Compile>
     <Compile Include="UC\UCCvCard.Designer.cs">
       <DependentUpon>UCCvCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCDanhSachViecLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\UCDanhSachViecLam.Designer.cs">
+      <DependentUpon>UCDanhSachViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCForm.cs">
       <SubType>Form</SubType>
@@ -601,14 +607,14 @@
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
-      <DependentUpon>FDSCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FCongViec.resx">
-      <DependentUpon>FCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FDSViecLam.resx">
+      <DependentUpon>FDSViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FHSChuaDuyet.resx">
       <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
+      <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
@@ -618,6 +624,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCvCard.resx">
       <DependentUpon>UCCvCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCDanhSachViecLam.resx">
+      <DependentUpon>UCDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCForm.resx">
       <DependentUpon>UCForm.cs</DependentUpon>
