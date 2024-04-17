@@ -12,7 +12,7 @@ namespace FinalProject.Common.Helper
     {
         private static Cloudinary cloudinary = new Cloudinary(Properties.Settings.Default.cloudinary_url);
         
-        public static ImageUploadResult UploadImage(string filePath, string fileName = null, string fileFormat = "jpg")
+        public static ImageUploadResult UploadImage(string filePath, string fileName = null, string fileFormat = "jpg", System.Drawing.Size? size = null)
         {
             var uploadParams = new ImageUploadParams()
             {
@@ -23,8 +23,16 @@ namespace FinalProject.Common.Helper
                 FilenameOverride = fileName,
                 Format = fileFormat,
                 UniqueFilename = false,
-                Overwrite = true
+                Overwrite = true,
+                UseFilenameAsDisplayName = true,
             };
+            if (size != null)
+            {
+                uploadParams.Transformation = new Transformation()
+                    .Width(size.Value.Width)
+                    .Height(size.Value.Height)
+                    .Crop("fill");
+            }
             var uploadResult = cloudinary.Upload(uploadParams);
             return uploadResult;
         }
