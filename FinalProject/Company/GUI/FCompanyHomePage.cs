@@ -93,14 +93,17 @@ namespace FinalProject.Company
 
 
 
-        private void ucMenuCard_DsCty_MenuClick(object sender, EventArgs e)
-        {
-
-        }
-
         private void ucMenuCard_DSViecLam_MenuClick(object sender, EventArgs e)
         {
             this.OpenMenuDanhSachViecLam();
+        }
+
+        private void ucMenuCard_LichSuCongViec_MenuClick(object sender, EventArgs e)
+        {
+            this.Hide();
+            FDanhSachViecLam fDanhSachViecLam = new FDanhSachViecLam();
+            fDanhSachViecLam.ShowDialog();
+            this.Show();
         }
     }
 }
