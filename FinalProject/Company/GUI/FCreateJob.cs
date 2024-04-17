@@ -25,7 +25,6 @@ namespace FinalProject.Company.GUI
             set
             {
                 id = value;
-                // this.Invalidate();
             }
         }
 
@@ -64,7 +63,7 @@ namespace FinalProject.Company.GUI
             var result = 0;
             if (congViecBUS.CheckExist(Id) == 0)
             {
-                result = congViecBUS.Add(TenCongTy, TenCongViec, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, FromDate);
+                result = congViecBUS.Add(TenCongTy, IdCongTy, TenCongViec, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, FromDate);
             }
             else
             {
@@ -94,8 +93,9 @@ namespace FinalProject.Company.GUI
                 this.Close();
             }
             else
-
+            {
                 MessageBox.Show("Xoá thất bại");
+            }
         }
 
         private void FCreateJob_Load(object sender, EventArgs e)

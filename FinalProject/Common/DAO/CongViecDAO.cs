@@ -56,10 +56,6 @@ namespace FinalProject.Common.DAO
                 {
                     query = query + $" AND ViTriTuyenDung LIKE '{input.Search}' ";
                 }
-/*                if (input.NgheNghiep != "Tất cả ngành nghề")
-                {
-                    query = query + $" AND Nganh LIKE {input.NgheNghiep} ";
-                }*/
                 if (input.MinLuong.HasValue || input.MaxLuong.HasValue )
                 {
                     query += " AND (";
@@ -106,7 +102,7 @@ namespace FinalProject.Common.DAO
                 INSERT INTO CongViec ( Ten, TenCongTy, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, 
                     TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien,
                     FromDate, SoLuong, IsDeleted, CreatedTime, UpdatedTime, IdCongTy) 
-                VALUES (@Id, @Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
+                VALUES (@Ten, @TenCongTy, @Nganh, @ViTriTuyenDung, @MucLuong, @DiaDiem, 
                     @TrinhDoHocVan, @GioiTinh, @LienHe, @MoTa, @QuyenLoi, @KinhNghiem, @YeuCauUngVien, 
                     @FromDate, @SoLuong , @IsDeleted, @CreatedTime, @UpdatedTime, @IdCongTy);";
 
@@ -265,7 +261,7 @@ namespace FinalProject.Common.DAO
             {
                 string query = @"SELECT *FROM CongViec cv
                          JOIN CongTy ct ON cv.IdCongTy = ct.Id
-                         WHERE cv.IdCongTy = @CompanyId";
+                         WHERE cv.IdCongTy = @CompanyId AND cv.IsDeleted = 0";
                 SqlCommand command = new SqlCommand(query, dbConnection.Connection);
                 command.Parameters.AddWithValue("@CompanyId", companyId);
 
@@ -281,7 +277,6 @@ namespace FinalProject.Common.DAO
                 }
                 catch (Exception ex)
                 {
-                    // Xử lý ngoại lệ hoặc ghi log
                     throw ex;
                 }
             }

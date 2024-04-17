@@ -82,7 +82,7 @@
             this.ucMenuCard_TaoViecLam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_TaoViecLam.ButtonBackColor = System.Drawing.Color.Cornsilk;
             this.ucMenuCard_TaoViecLam.ButtonTextColor = System.Drawing.Color.Coral;
-            this.ucMenuCard_TaoViecLam.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_TaoViecLam.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_TaoViecLam.Id = 0;
             this.ucMenuCard_TaoViecLam.Location = new System.Drawing.Point(21, 21);
             this.ucMenuCard_TaoViecLam.Margin = new System.Windows.Forms.Padding(12);
@@ -101,7 +101,7 @@
             this.ucMenuCard_DSViecLam.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_DSViecLam.ButtonBackColor = System.Drawing.Color.Cornsilk;
             this.ucMenuCard_DSViecLam.ButtonTextColor = System.Drawing.Color.Coral;
-            this.ucMenuCard_DSViecLam.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DSViecLam.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DSViecLam.Id = 0;
             this.ucMenuCard_DSViecLam.Location = new System.Drawing.Point(311, 21);
             this.ucMenuCard_DSViecLam.Margin = new System.Windows.Forms.Padding(12);
@@ -120,7 +120,7 @@
             this.ucMenuCard_DsCV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_DsCV.ButtonBackColor = System.Drawing.Color.CadetBlue;
             this.ucMenuCard_DsCV.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_DsCV.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DsCV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DsCV.Id = 0;
             this.ucMenuCard_DsCV.Location = new System.Drawing.Point(601, 21);
             this.ucMenuCard_DsCV.Margin = new System.Windows.Forms.Padding(12);
@@ -138,7 +138,7 @@
             this.ucMenuCard_HSChuaDuyet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_HSChuaDuyet.ButtonBackColor = System.Drawing.Color.CadetBlue;
             this.ucMenuCard_HSChuaDuyet.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_HSChuaDuyet.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_HSChuaDuyet.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_HSChuaDuyet.Id = 0;
             this.ucMenuCard_HSChuaDuyet.Location = new System.Drawing.Point(891, 21);
             this.ucMenuCard_HSChuaDuyet.Margin = new System.Windows.Forms.Padding(12);
@@ -157,7 +157,7 @@
             this.ucMenuCard_DsCty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_DsCty.ButtonBackColor = System.Drawing.Color.Cornsilk;
             this.ucMenuCard_DsCty.ButtonTextColor = System.Drawing.Color.RoyalBlue;
-            this.ucMenuCard_DsCty.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DsCty.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DsCty.Id = 0;
             this.ucMenuCard_DsCty.Location = new System.Drawing.Point(21, 287);
             this.ucMenuCard_DsCty.Margin = new System.Windows.Forms.Padding(12);
@@ -176,7 +176,7 @@
             this.ucMenuCard_ThongTin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_ThongTin.ButtonBackColor = System.Drawing.Color.Goldenrod;
             this.ucMenuCard_ThongTin.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_ThongTin.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_ThongTin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_ThongTin.Id = 0;
             this.ucMenuCard_ThongTin.Location = new System.Drawing.Point(311, 287);
             this.ucMenuCard_ThongTin.Margin = new System.Windows.Forms.Padding(12);
@@ -195,7 +195,7 @@
             this.ucMenuCard_DoiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_DoiMatKhau.ButtonBackColor = System.Drawing.Color.Goldenrod;
             this.ucMenuCard_DoiMatKhau.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_DoiMatKhau.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DoiMatKhau.Id = 0;
             this.ucMenuCard_DoiMatKhau.Location = new System.Drawing.Point(601, 287);
             this.ucMenuCard_DoiMatKhau.Margin = new System.Windows.Forms.Padding(12);
@@ -214,7 +214,7 @@
             this.ucMenuCard_DangXuat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ucMenuCard_DangXuat.ButtonBackColor = System.Drawing.Color.Tomato;
             this.ucMenuCard_DangXuat.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_DangXuat.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DangXuat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DangXuat.Id = 0;
             this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(891, 287);
             this.ucMenuCard_DangXuat.Margin = new System.Windows.Forms.Padding(12);

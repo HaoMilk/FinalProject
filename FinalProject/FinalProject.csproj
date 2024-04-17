@@ -287,11 +287,11 @@
     <Compile Include="Company\GUI\FCreateJob.Designer.cs">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FDSCongViec.cs">
+    <Compile Include="Company\GUI\FDSViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FDSCongViec.Designer.cs">
-      <DependentUpon>FDSCongViec.cs</DependentUpon>
+    <Compile Include="Company\GUI\FDSViecLam.Designer.cs">
+      <DependentUpon>FDSViecLam.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Common\DTO\CvGetAllInput.cs" />
@@ -351,12 +351,6 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\FCongViec.Designer.cs">
-      <DependentUpon>FCongViec.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\FHSChuaDuyet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -552,11 +546,8 @@
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FDSCongViec.resx">
-      <DependentUpon>FDSCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FCongViec.resx">
-      <DependentUpon>FCongViec.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FDSViecLam.resx">
+      <DependentUpon>FDSViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FHSChuaDuyet.resx">
       <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
