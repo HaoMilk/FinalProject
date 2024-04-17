@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="cloudinary_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">cloudinary://674852553643445:Pcnyu-u_fkEJDwE94m2srcoZ2tk@df3zf2d1g</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
