@@ -55,5 +55,10 @@ namespace FinalProject.Company.GUI
                 richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
             }
         }
+
+        private void comboBox_GioiTinh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

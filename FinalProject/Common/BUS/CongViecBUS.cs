@@ -24,7 +24,7 @@ namespace FinalProject.Common.BUS
             return congViecDAO.CheckExist(id);
         }
 
-        public int Add(string tenCongTy, string ten, string nganh, string viTriTuyenDung,
+        public int Add(string tenCongTy,int IdCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
             string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong, DateTime fromdate)
@@ -33,6 +33,7 @@ namespace FinalProject.Common.BUS
             {
                 CongViec congViec = new CongViec();
                 congViec.TenCongTy = tenCongTy;
+                congViec.IdCongTy = IdCongTy;
                 congViec.Ten = ten;
                 congViec.Nganh = nganh;
                 congViec.ViTriTuyenDung = viTriTuyenDung;
@@ -115,10 +116,10 @@ namespace FinalProject.Common.BUS
             return congViecDAO.Delete(congViec);
         }
 
-        public int SoftDelete(int idCongTy)
+        public int SoftDelete(int id)
         {
             var congViec = new CongViec();
-            congViec.IdCongTy = idCongTy;
+            congViec.Id = id;
             congViec.IsDeleted = true;
             congViec.UpdatedTime = DateTime.Now;
 
