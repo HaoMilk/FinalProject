@@ -1,4 +1,5 @@
-﻿using FinalProject.Common;
+﻿using CloudinaryDotNet;
+using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.Helper;
 using FinalProject.UC;
@@ -18,6 +19,8 @@ namespace FinalProject.Candidate.GUI
     public partial class FCandidateInfor : UCForm
     {
         private UngVienBUS ungVienBUS = new UngVienBUS();
+        private UserBUS userBUS = new UserBUS();
+
         public FCandidateInfor()
         {
             InitializeComponent();
@@ -30,8 +33,6 @@ namespace FinalProject.Candidate.GUI
             };
             this.ucComboBox_Gender.Items = items;
             this.ucComboBox_Gender.SelectedIndex = 0;
-
-            this.pictureBox_Avatar.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace FinalProject.Candidate.GUI
             var trangthai = LoggedUser.UngVien.TrangThai;
             var avatar = LoggedUser.UngVien.Avatar;
 
-            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioitinh, 
+            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
 
             if (result <= 0)
@@ -81,6 +82,39 @@ namespace FinalProject.Candidate.GUI
                 {
                     pictureBox_Avatar.LoadAsync(url);
                 }
+            }
+        }
+
+        private void button_ChangeAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var uploadResult = ImageHelper.UploadImage(openFileDialog.FileName, $"User_{LoggedUser.UserId}");
+                if (uploadResult != null)
+                {
+                    //// Do không đổi url ảnh, nên không cần update url ảnh trong database
+                    //MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    //pictureBox_Avatar.Load(openFileDialog.FileName);
+
+                    string url = uploadResult.Url.ToString();
+                    LoggedUser.User.AvatarUrl = url;
+                    var result = userBUS.Update(LoggedUser.User);
+                    if (result > 0)
+                    {
+                        pictureBox_Avatar.Load(openFileDialog.FileName);
+                        MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi phát sinh !");
+                    }
+                }
+
+                Cursor.Current = Cursors.Default;
             }
         }
     }
