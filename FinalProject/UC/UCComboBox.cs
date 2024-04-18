@@ -1,4 +1,7 @@
-﻿using System.ComponentModel;
+﻿using FinalProject.Database.Entities;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace FinalProject.UC
@@ -24,6 +27,21 @@ namespace FinalProject.UC
                     base.Items.Add(item);
                 }
             }
+        }
+
+        public void SetItems(ComboBoxItem[] items)
+        {
+            Items = items;
+        }
+
+        public void SetItems(List<Tinh> items)
+        {
+            Items = items.Select(x => new ComboBoxItem(x.Ten, x)).ToArray();
+        }
+
+        public void SetItems(List<string> items)
+        {
+            Items = items.Select(x => new ComboBoxItem(x, x)).ToArray();
         }
 
         public UCComboBox()
