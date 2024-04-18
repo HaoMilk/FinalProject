@@ -46,7 +46,7 @@ namespace FinalProject.Common.Helper
             return path;
         }
 
-        public static void FillRoundedRectangle(Rectangle bounds, int cornerRadius, Graphics graphics, Brush backgroundBrush, Brush borderBrush = null)
+        public static void FillRoundedRectangle(Rectangle bounds, int cornerRadius, Graphics graphics, Brush backgroundBrush, Brush borderBrush = null, float borderWidth = 2.0f)
         {
             if (graphics == null)
                 throw new ArgumentNullException("graphics");
@@ -59,7 +59,7 @@ namespace FinalProject.Common.Helper
 
                 if (borderBrush != null)
                 {
-                    using (Pen pen = new Pen(borderBrush, 1.0f))
+                    using (Pen pen = new Pen(borderBrush, borderWidth))
                     {
                         graphics.DrawPath(pen, path);
                     }

@@ -39,13 +39,11 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.textBox_SoLuong = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.comboBox_DiaDiem = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_FromDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.textBox_TrinhDoHocVan = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.comboBox_KinhNgiem = new System.Windows.Forms.ComboBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.comboBox_GioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -53,9 +51,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox_ViTriCongViec = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox_TenCViec = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox_Nganh = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -64,6 +60,10 @@
             this.richTextBox_QuyenLoi = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.richTextBox_MoTa = new System.Windows.Forms.RichTextBox();
+            this.comboBox_DiaDiem = new System.Windows.Forms.ComboBox();
+            this.comboBox_KinhNghiem = new System.Windows.Forms.ComboBox();
+            this.comboBox_NgheNghiep = new System.Windows.Forms.ComboBox();
+            this.textBox_Nganh = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -246,19 +246,6 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Địa điểm";
             // 
-            // comboBox_DiaDiem
-            // 
-            this.comboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_DiaDiem.FormattingEnabled = true;
-            this.comboBox_DiaDiem.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ",
-            "Không yêu cầu"});
-            this.comboBox_DiaDiem.Location = new System.Drawing.Point(5, 27);
-            this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
-            this.comboBox_DiaDiem.Size = new System.Drawing.Size(514, 31);
-            this.comboBox_DiaDiem.TabIndex = 2;
-            // 
             // groupBox9
             // 
             this.groupBox9.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -306,7 +293,7 @@
             // groupBox11
             // 
             this.groupBox11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox11.Controls.Add(this.comboBox_KinhNgiem);
+            this.groupBox11.Controls.Add(this.comboBox_KinhNghiem);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox11.Location = new System.Drawing.Point(5, 379);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -316,23 +303,6 @@
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Kinh Nghiệm";
-            // 
-            // comboBox_KinhNgiem
-            // 
-            this.comboBox_KinhNgiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_KinhNgiem.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.comboBox_KinhNgiem.FormattingEnabled = true;
-            this.comboBox_KinhNgiem.Items.AddRange(new object[] {
-            "không yêu cầu",
-            "1 năm",
-            "2 năm",
-            "3 năm",
-            "4 năm",
-            "trên 5 năm"});
-            this.comboBox_KinhNgiem.Location = new System.Drawing.Point(5, 27);
-            this.comboBox_KinhNgiem.Name = "comboBox_KinhNgiem";
-            this.comboBox_KinhNgiem.Size = new System.Drawing.Size(514, 31);
-            this.comboBox_KinhNgiem.TabIndex = 2;
             // 
             // groupBox12
             // 
@@ -409,7 +379,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.textBox_TenCViec);
+            this.groupBox1.Controls.Add(this.comboBox_NgheNghiep);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(5, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -419,14 +389,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tên công việc";
-            // 
-            // textBox_TenCViec
-            // 
-            this.textBox_TenCViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_TenCViec.Location = new System.Drawing.Point(5, 27);
-            this.textBox_TenCViec.Name = "textBox_TenCViec";
-            this.textBox_TenCViec.Size = new System.Drawing.Size(514, 30);
-            this.textBox_TenCViec.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -441,14 +403,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ngành";
-            // 
-            // textBox_Nganh
-            // 
-            this.textBox_Nganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Nganh.Location = new System.Drawing.Point(5, 27);
-            this.textBox_Nganh.Name = "textBox_Nganh";
-            this.textBox_Nganh.Size = new System.Drawing.Size(514, 30);
-            this.textBox_Nganh.TabIndex = 2;
             // 
             // tableLayoutPanel4
             // 
@@ -540,6 +494,41 @@
             this.richTextBox_MoTa.TabIndex = 1;
             this.richTextBox_MoTa.Text = "";
             // 
+            // comboBox_DiaDiem
+            // 
+            this.comboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_DiaDiem.FormattingEnabled = true;
+            this.comboBox_DiaDiem.Location = new System.Drawing.Point(5, 27);
+            this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
+            this.comboBox_DiaDiem.Size = new System.Drawing.Size(514, 31);
+            this.comboBox_DiaDiem.TabIndex = 2;
+            // 
+            // comboBox_KinhNghiem
+            // 
+            this.comboBox_KinhNghiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_KinhNghiem.FormattingEnabled = true;
+            this.comboBox_KinhNghiem.Location = new System.Drawing.Point(5, 27);
+            this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
+            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(514, 31);
+            this.comboBox_KinhNghiem.TabIndex = 2;
+            // 
+            // comboBox_NgheNghiep
+            // 
+            this.comboBox_NgheNghiep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox_NgheNghiep.FormattingEnabled = true;
+            this.comboBox_NgheNghiep.Location = new System.Drawing.Point(5, 27);
+            this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
+            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(514, 31);
+            this.comboBox_NgheNghiep.TabIndex = 3;
+            // 
+            // textBox_Nganh
+            // 
+            this.textBox_Nganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_Nganh.Location = new System.Drawing.Point(5, 27);
+            this.textBox_Nganh.Name = "textBox_Nganh";
+            this.textBox_Nganh.Size = new System.Drawing.Size(514, 30);
+            this.textBox_Nganh.TabIndex = 3;
+            // 
             // FCreateJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -577,7 +566,6 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -598,13 +586,11 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox_SoLuong;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox comboBox_DiaDiem;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.DateTimePicker dateTimePicker_FromDate;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox textBox_TrinhDoHocVan;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.ComboBox comboBox_KinhNgiem;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.ComboBox comboBox_GioiTinh;
         private System.Windows.Forms.GroupBox groupBox13;
@@ -612,9 +598,7 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox_ViTriCongViec;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox_TenCViec;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox_Nganh;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -625,5 +609,9 @@
         private System.Windows.Forms.RichTextBox richTextBox_MoTa;
         private System.Windows.Forms.Button button_Luu;
         private System.Windows.Forms.Button button_Xoa;
+        public System.Windows.Forms.ComboBox comboBox_DiaDiem;
+        public System.Windows.Forms.ComboBox comboBox_KinhNghiem;
+        public System.Windows.Forms.ComboBox comboBox_NgheNghiep;
+        private System.Windows.Forms.TextBox textBox_Nganh;
     }
 }
