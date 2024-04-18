@@ -117,5 +117,10 @@ namespace FinalProject.Candidate.GUI
 
             listCongViec = congViecBUS.Search(input);
         }
+
+        private void textBox_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

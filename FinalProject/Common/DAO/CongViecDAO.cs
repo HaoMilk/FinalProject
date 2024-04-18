@@ -35,7 +35,7 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<CongViec> GetAll(CongViecGetAllInput input)
+        public List<CongViec> GetAll(CongViecGetAllInput input = null)
         {
             if (input == null)
             {
