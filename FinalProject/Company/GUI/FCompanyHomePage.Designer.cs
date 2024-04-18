@@ -115,22 +115,6 @@
             // 
             // ucMenuCard_DsCV
             // 
-            this.ucMenuCard_DsCV.BackColor = System.Drawing.Color.Transparent;
-            this.ucMenuCard_DsCV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMenuCard_DsCV.BorderRadious = 20;
-            this.ucMenuCard_DsCV.ButtonBackColor = System.Drawing.Color.CadetBlue;
-            this.ucMenuCard_DsCV.ButtonTextColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_DsCV.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMenuCard_DsCV.Id = 0;
-            this.ucMenuCard_DsCV.Location = new System.Drawing.Point(539, 31);
-            this.ucMenuCard_DsCV.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
-            this.ucMenuCard_DsCV.MenuBackColor = System.Drawing.Color.Azure;
-            this.ucMenuCard_DsCV.MenuImage = global::FinalProject.Properties.Resources.icons8_profile_check_64;
-            this.ucMenuCard_DsCV.MenuName = "Hồ sơ đã duyệt";
-            this.ucMenuCard_DsCV.Name = "ucMenuCard_DsCV";
-            this.ucMenuCard_DsCV.Padding = new System.Windows.Forms.Padding(17, 18, 17, 18);
-            this.ucMenuCard_DsCV.Size = new System.Drawing.Size(220, 180);
-            this.ucMenuCard_DsCV.TabIndex = 2;
             // 
             // ucMenuCard_HSChuaDuyet
             // 
