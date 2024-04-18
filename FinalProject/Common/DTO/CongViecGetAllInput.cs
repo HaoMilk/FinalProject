@@ -13,6 +13,7 @@ namespace FinalProject.Common.DTO
         public string Search { get; set; }
         public string DiaDiem { get; set; }
         public string NgheNghiep { get; set; }
+        public string KinhNghiem {  get; set; }
         public decimal? MinLuong { get; set; }
         public decimal? MaxLuong { get; set; }
         public bool LuongThoaThuan { get; set; } = false;

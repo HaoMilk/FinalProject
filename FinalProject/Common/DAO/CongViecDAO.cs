@@ -45,7 +45,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 var list = new List<CongViec>();
-                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0 ";
+                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0";
 
                 if (input.FromId > 0 && input.ToId > input.FromId)
                 {
@@ -220,6 +220,7 @@ namespace FinalProject.Common.DAO
                         UpdatedTime = '{congViec.UpdatedTime:yyyy-MM-dd hh:mm:ss}' 
                     WHERE Id = {congViec.Id};";
 
+
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
                 {
@@ -254,7 +255,7 @@ namespace FinalProject.Common.DAO
                 return null;
             }
         }
-        public List<CongViec> GetByIDCty(int companyId)
+        public List<CongViec> GetByIDCty(CongViecGetAllInput input, int companyId)
         {
             List<CongViec> congViecList = new List<CongViec>();
             using (dbConnection.Connection)
@@ -262,6 +263,38 @@ namespace FinalProject.Common.DAO
                 string query = @"SELECT *FROM CongViec cv
                          JOIN CongTy ct ON cv.IdCongTy = ct.Id
                          WHERE cv.IdCongTy = @CompanyId AND cv.IsDeleted = 0";
+
+                if (input.FromId > 0 && input.ToId > input.FromId)
+                {
+                    query = query + $" AND (cv.Id >= {input.FromId} AND cv.Id < {input.ToId}) ";
+                }
+
+                if (!string.IsNullOrWhiteSpace(input.Search))
+                {
+                    query = query + $" AND cv.ViTriTuyenDung LIKE '{input.Search}' ";
+                }
+                if (input.MinLuong.HasValue || input.MaxLuong.HasValue)
+                {
+                    query += " AND (";
+                    if (input.MinLuong.HasValue)
+                    {
+                        query += $" cv.MucLuong >= {input.MinLuong} ";
+                    }
+                    if (input.MaxLuong.HasValue)
+                    {
+                        if (input.MinLuong.HasValue)
+                        {
+                            query += " AND ";
+                        }
+                        query += $" cv.MucLuong <= {input.MaxLuong} ";
+                    }
+                    query += ")";
+
+                }
+                if (!string.IsNullOrWhiteSpace(input.DiaDiem))
+                {
+                    query += $" AND cv.DiaDiem LIKE '{input.DiaDiem}' ";
+                }
                 SqlCommand command = new SqlCommand(query, dbConnection.Connection);
                 command.Parameters.AddWithValue("@CompanyId", companyId);
 
