@@ -23,43 +23,14 @@ namespace FinalProject.Company
             InitializeComponent();
         }
 
-        #region DanhSachViecLam
-        private void ToolStripMenuItem_ChinhSuaCongViec_Click(object sender, EventArgs e)
-        {
-            this.OpenMenuDanhSachViecLam();
-        }
-
-        private void OpenMenuDanhSachViecLam()
-        {
-            if (!isAlwaysShowDashboard) this.Hide();
-
-            FDSViecLam fDanhSachVL = new FDSViecLam();
-            fDanhSachVL.ShowDialog();
-
-            if (!isAlwaysShowDashboard) this.ShowDialog();
-        }
-        #endregion DanhSachViecLam
-        #region DoiMatKhau
-        private void menuItem_DoiMatKhau_Click(object sender, EventArgs e)
-        {
-            this.OpenDoiMatKhau();
-        }
-
         private void ucMenuCard_DoiMatKhau_MenuClick(object sender, EventArgs e)
         {
-            this.OpenDoiMatKhau();
-        }
-
-        private void OpenDoiMatKhau()
-        {
-            if (!isAlwaysShowDashboard) this.Hide();
-
+            this.Hide();
             FDoiMatKhau fChangePassword = new FDoiMatKhau();
             fChangePassword.ShowDialog();
-
-            if (!isAlwaysShowDashboard) this.Show();
+            this.Show();
         }
-        #endregion DoiMatKhau
+
 
         private void ucMenuCard_TaoViecLam_MenuClick(object sender, EventArgs e)
         {
@@ -96,15 +67,15 @@ namespace FinalProject.Company
 
         private void ucMenuCard_DSViecLam_MenuClick(object sender, EventArgs e)
         {
-            this.OpenMenuDanhSachViecLam();
-        }
-
-        private void ucMenuCard_LichSuCongViec_MenuClick(object sender, EventArgs e)
-        {
             this.Hide();
             FDanhSachViecLam fDanhSachViecLam = new FDanhSachViecLam();
             fDanhSachViecLam.ShowDialog();
             this.Show();
+        }
+
+        private void ucMenuCard_LichSuCongViec_MenuClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

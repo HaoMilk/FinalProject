@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ namespace FinalProject.Company.GUI
     {
         CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
+        private TinhBUS tinhBUS = new TinhBUS();
+        private List<Tinh> listTinh = new List<Tinh>();
         private int id;
         private DateTime congViecUpdatedTime;
         public int Id
@@ -40,6 +43,17 @@ namespace FinalProject.Company.GUI
         public FCreateJob()
         {
             InitializeComponent();
+
+            this.listTinh = tinhBUS.GetAll();
+            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
+
+            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
+            this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
+
+            var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
+            this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
+
+            FillData();
         }
 
         private void button_Luu_Click(object sender, EventArgs e)
@@ -48,12 +62,12 @@ namespace FinalProject.Company.GUI
             var ViTriTuyenDung = textBox_ViTriCongViec.Text;
             var MucLuong = decimal.TryParse(textBox_MucLuong.Text, out decimal parsedMucLuong) ? parsedMucLuong : 0;
             var GioiTinh = comboBox_GioiTinh.Text;
-            var KinhNghiem = comboBox_KinhNgiem.Text;
+            var KinhNghiem = comboBox_KinhNghiem.Text;
             var TrinhDoHocVan = textBox_TrinhDoHocVan.Text;
             var SoLuong = int.TryParse(textBox_SoLuong.Text, out int parsedSoLuong) ? parsedSoLuong : 0;
             var DiaDiem = comboBox_DiaDiem.Text;
             var LienHe = textBox_LienHe.Text;
-            var TenCongViec = textBox_TenCViec.Text;
+            var TenCongViec = comboBox_NgheNghiep.Text;
             var MoTa = richTextBox_MoTa.Text;
             var QuyenLoi = richTextBox_QuyenLoi.Text;
             var YeuCauUngVien = richTextBox_YeuCauUV.Text;
@@ -100,23 +114,27 @@ namespace FinalProject.Company.GUI
 
         private void FCreateJob_Load(object sender, EventArgs e)
         {
+            FillData();
+        }
+        private void FillData()
+        {
             congViec = congViecBUS.GetById(id);
 
             // fill data 
             if (congViec != null)
             {
-                textBox_TenCViec.Text = congViec.Ten;
+                textBox_Nganh.Text = congViec.Nganh;
                 comboBox_DiaDiem.Text = congViec.DiaDiem;
                 textBox_MucLuong.Text = congViec.MucLuong.ToString();
                 textBox_ViTriCongViec.Text = congViec.ViTriTuyenDung;
                 comboBox_GioiTinh.Text = congViec.GioiTinh;
                 textBox_TrinhDoHocVan.Text = congViec.TrinhDoHocVan;
                 richTextBox_MoTa.Text = congViec.MoTa;
-                comboBox_KinhNgiem.Text = congViec.KinhNghiem;
+                comboBox_KinhNghiem.Text = congViec.KinhNghiem;
                 textBox_LienHe.Text = congViec.LienHe;
                 dateTimePicker_FromDate.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
-                textBox_Nganh.Text = congViec.Nganh;
+                comboBox_NgheNghiep.Text = congViec.Ten;
                 textBox_SoLuong.Text = congViec.SoLuong.ToString();
                 richTextBox_YeuCauUV.Text = congViec.YeuCauUngVien;
             }
