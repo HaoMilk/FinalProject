@@ -16,8 +16,10 @@ namespace FinalProject.Company.GUI
     public partial class FViewCV : Form
     {
         private CvBUS _cvBus = new CvBUS();
-
+        private UngVienBUS _uvBus = new UngVienBUS();
+        private UngTuyenBUS _utBUS = new UngTuyenBUS();
         private int id;
+        private UngVien UV;
         private CV _cv;
 
         public int Id
@@ -26,6 +28,15 @@ namespace FinalProject.Company.GUI
             {
                 id = value;
                 _cv = _cvBus.GetById(id);
+                this.LoadData();
+            }
+        }
+        public int IdUV
+        {
+            get => id; set
+            {
+                id = value;
+                UV = _uvBus.GetById(id);
                 this.LoadData();
             }
         }
@@ -41,6 +52,16 @@ namespace FinalProject.Company.GUI
         }
         private void LoadData()
         {
+            if (UV != null)
+            {
+                textBox_HovaTen.Text = UV.HoTen;
+                textBox_Email.Text = UV.Email;
+                textBox_SoDienThoai.Text = UV.SDT;
+                textBox_DiaChi.Text = UV.DiaChi;
+                textBox_NgaySinh.Text = UV.NgaySinh.ToString();
+                textBox_GioiTinh.Text = UV.GioiTinh;
+            }
+
             if (_cv != null)
             {
                 textBox_TenCv.Text = _cv.Ten;
@@ -59,6 +80,11 @@ namespace FinalProject.Company.GUI
         private void comboBox_GioiTinh_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_Duyet_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

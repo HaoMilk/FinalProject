@@ -57,7 +57,7 @@ namespace FinalProject.Company
         private void ucMenuCard_HSChuaDuyet_MenuClick(object sender, EventArgs e)
         {
             this.Hide();
-            FHSChuaDuyet fHSChuaDuyet = new FHSChuaDuyet();
+            FHoSoUT fHSChuaDuyet = new FHoSoUT();
             fHSChuaDuyet.ShowDialog();
             this.Show();
 
