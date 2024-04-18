@@ -1,4 +1,4 @@
-﻿using FinalProject.Candidate.Constants;
+﻿using FinalProject.Common.Const;
 using FinalProject.Database.DTO;
 using System;
 using System.Collections.Generic;

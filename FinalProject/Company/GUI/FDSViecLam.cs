@@ -1,4 +1,4 @@
-﻿using FinalProject.Candidate.Constants;
+﻿using FinalProject.Common.Const;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.DTO;
