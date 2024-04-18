@@ -48,7 +48,6 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_GioiTinh.SelectedIndex = 0;
 
             this.dateTimePicker_FromDate.Value = DateTime.Now.AddDays(-7);
-            this.dateTimePicker_ToDate.Value = DateTime.Now.AddDays(7);
         }
 
         #region JobList
@@ -112,7 +111,6 @@ namespace FinalProject.Candidate.GUI
             input = input.SetMucLuong(ucComboBox_Luong.Text);
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             input.FromDate = dateTimePicker_FromDate.Value;
-            input.ToDate = dateTimePicker_ToDate.Value;
             input.IdCongTy = LoggedUser.CongTy?.ID;
             input.FromId = ucPagination.StartRecord;
             input.ToId = ucPagination.EndRecord;
