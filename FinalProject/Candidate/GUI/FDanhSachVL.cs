@@ -1,5 +1,5 @@
-﻿using FinalProject.Candidate.Constants;
-using FinalProject.Common.BUS;
+﻿using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
@@ -27,9 +27,9 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            //this.listTinh = tinhBUS.GetAll();
-            //this.comboBox_DiaDiem.Items.Clear();
-            //this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
+            this.listTinh = tinhBUS.GetAll();
+            this.comboBox_DiaDiem.Items.Clear();
+            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
             var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
             this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());

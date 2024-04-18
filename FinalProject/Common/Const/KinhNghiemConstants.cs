@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Candidate.Constants
+namespace FinalProject.Common.Const
 {
     public class KinhNghiemConstants
     {

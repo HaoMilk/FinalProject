@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FinalProject.Candidate.Constants
+namespace FinalProject.Common.Const
 {
     public class NgheNghiepConstants
     {

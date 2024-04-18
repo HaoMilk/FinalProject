@@ -11,9 +11,21 @@ namespace FinalProject.Common.BUS
     public class TinhBUS
     {
         private TinhDAO tinhDAO = new TinhDAO();
+
         public List<Tinh> GetAll()
         {
             return tinhDAO.GetAll();
+        }
+
+        public Dictionary<string, string> GetAllDictionary()
+        {
+            var listTinh = GetAll();
+            var dictionary = new Dictionary<string, string>();
+            foreach (var tinh in listTinh)
+            {
+                dictionary.Add(tinh.Code, tinh.Ten);
+            }
+            return dictionary;
         }
 
         public int CheckExist(int id)

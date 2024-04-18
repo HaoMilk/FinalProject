@@ -1,6 +1,6 @@
-﻿using FinalProject.Candidate.Constants;
-using FinalProject.Common;
+﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;

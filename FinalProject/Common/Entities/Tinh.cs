@@ -20,7 +20,7 @@ namespace FinalProject.Database.Entities
 
         public override string ToString()
         {
-            return $"{Code} - {Ten}";
+            return $"{Ten}";
         }
     }
 }
