@@ -38,6 +38,7 @@ namespace FinalProject.Candidate.GUI
 
             var items = new ComboBoxItem[]
             {
+                new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
                 new ComboBoxItem { Text = "Nam", Value = GioiTinhConsts.Male },
                 new ComboBoxItem { Text = "Nữ", Value = GioiTinhConsts.Female },
                 new ComboBoxItem { Text = "Khác", Value = GioiTinhConsts.Others },
@@ -108,7 +109,7 @@ namespace FinalProject.Candidate.GUI
 
             input = input.SetKinhNghiem(ucComboBox_KinhNghiem.Text);
             input = input.SetMucLuong(ucComboBox_Luong.Text);
-            input.GioiTinh = ucComboBox_GioiTinh.Text;
+            input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             input.FromDate = dateTimePicker_FromDate.Value;
             input.ToDate = dateTimePicker_ToDate.Value;
 

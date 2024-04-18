@@ -72,6 +72,26 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND MucLuong <= {input.MaxLuong} ";
                 }
+                if (input.MinKinhNghiem.HasValue)
+                {
+                    query += $" AND KinhNghiem >= {input.MinKinhNghiem} ";
+                }
+                if (input.MaxKinhNghiem.HasValue)
+                {
+                    query += $" AND KinhNghiem <= {input.MaxKinhNghiem} ";
+                }
+                if (!string.IsNullOrWhiteSpace(input.GioiTinh))
+                {
+                    query += $" AND GioiTinh LIKE N'%{input.GioiTinh}%' ";
+                }
+                if (input.FromDate != null)
+                {
+                    query += $" AND FromDate >= '{input.FromDate:yyyy-MM-dd}' ";
+                }
+                if (input.ToDate != null)
+                {
+                    query += $" AND FromDate <= '{input.ToDate:yyyy-MM-dd}' ";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
