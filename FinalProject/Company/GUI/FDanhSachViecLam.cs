@@ -1,6 +1,6 @@
-﻿using FinalProject.Candidate.Constants;
-using FinalProject.Common;
+﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -30,7 +30,7 @@ namespace FinalProject.Company.GUI
             this.comboBox_DiaDiem.Items.Clear();
             this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
-            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
+            var listKinhNghiem = KinhNghiemConsts.GetKinhNghiemList();
             this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
             this.comboBox_KinhNghiem.SelectedIndex = 0;
 
@@ -38,7 +38,7 @@ namespace FinalProject.Company.GUI
             this.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
             this.comboBox_MucLuong.SelectedIndex = 0;
 
-            var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
+            var listNgheNghiep = NgheNghiepConts.GetNgheNghiepList();
             this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
             this.comboBox_NgheNghiep.SelectedIndex = 0;
         }
@@ -85,7 +85,7 @@ namespace FinalProject.Company.GUI
         {
             var input = new CongViecGetAllInput();
             input.Search = textBox_TimKiem.Text;
-            input.NgheNghiep = comboBox_NgheNghiep.Text;
+            input.Nganh = comboBox_NgheNghiep.Text;
 
             var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
             if (selectedTinh != null)

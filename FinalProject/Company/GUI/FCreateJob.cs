@@ -1,6 +1,6 @@
-﻿using FinalProject.Candidate.Constants;
-using FinalProject.Common;
+﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -47,10 +47,10 @@ namespace FinalProject.Company.GUI
             this.listTinh = tinhBUS.GetAll();
             this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
 
-            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
+            var listKinhNghiem = KinhNghiemConsts.GetKinhNghiemList();
             this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
 
-            var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
+            var listNgheNghiep = NgheNghiepConts.GetNgheNghiepList();
             this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
 
             FillData();

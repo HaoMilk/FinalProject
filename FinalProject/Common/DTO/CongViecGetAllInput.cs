@@ -1,4 +1,4 @@
-﻿using FinalProject.Candidate.Constants;
+﻿using FinalProject.Common.Const;
 using FinalProject.Database.DTO;
 using System;
 using System.Collections.Generic;
@@ -12,14 +12,17 @@ namespace FinalProject.Common.DTO
     {
         public string Search { get; set; }
         public string DiaDiem { get; set; }
-        public string NgheNghiep { get; set; }
+        public string Nganh { get; set; }
         public string KinhNghiem {  get; set; }
         public decimal? MinLuong { get; set; }
         public decimal? MaxLuong { get; set; }
         public bool LuongThoaThuan { get; set; } = false;
         public decimal? MinKinhNghiem { get; set; }
         public decimal? MaxKinhNghiem { get; set; }
-
+        public string GioiTinh { get; set; }
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+        public int? IdCongTy { get; set; }
         public int FromId { get; set; }
         public int ToId { get; set; }
         public string SortColumn { get; set; }
@@ -34,27 +37,27 @@ namespace FinalProject.Common.DTO
         {
             switch (kinhNgiem)
             {
-                case KinhNghiemConstants.All:
+                case KinhNghiemConsts.All:
                     this.MinKinhNghiem = null;
                     this.MaxKinhNghiem = null;
                     break;
-                case KinhNghiemConstants.Duoi1Nam:
+                case KinhNghiemConsts.Duoi1Nam:
                     this.MinKinhNghiem = 0;
                     this.MaxKinhNghiem = 1;
                     break;
-                case KinhNghiemConstants.Tu1Den2Nam:
+                case KinhNghiemConsts.Tu1Den2Nam:
                     this.MinKinhNghiem = 1;
                     this.MaxKinhNghiem = 2;
                     break;
-                case KinhNghiemConstants.Tu2Den5Nam:
+                case KinhNghiemConsts.Tu2Den5Nam:
                     this.MinKinhNghiem = 2;
                     this.MaxKinhNghiem = 5;
                     break;
-                case KinhNghiemConstants.Tren5Nam:
+                case KinhNghiemConsts.Tren5Nam:
                     this.MinKinhNghiem = 5;
                     this.MaxKinhNghiem = null;
                     break;
-                case KinhNghiemConstants.KhongYeuCau:
+                case KinhNghiemConsts.KhongYeuCau:
                     this.MinKinhNghiem = -1;
                     this.MaxKinhNghiem = -1;
                     break;

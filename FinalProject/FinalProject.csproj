@@ -291,9 +291,10 @@
     <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
       <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\Constants\KinhNghiemConstants.cs" />
-    <Compile Include="Candidate\Constants\MucLuongConstants.cs" />
-    <Compile Include="Candidate\Constants\NgheNghiepConstants.cs" />
+    <Compile Include="Common\Const\GioiTinhConsts.cs" />
+    <Compile Include="Common\Const\KinhNghiemConsts.cs" />
+    <Compile Include="Common\Const\MucLuongConstants.cs" />
+    <Compile Include="Common\Const\NgheNghiepConts.cs" />
     <Compile Include="Candidate\GUI\FTaoCv.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -722,8 +723,11 @@
     <None Include="Resources\icons8-history-64.png" />
     <None Include="Resources\icons8-check-32.png" />
     <None Include="Resources\icons8-delete-32.png" />
+
     <None Include="Resources\icons8-check-48.png" />
     <None Include="Resources\icons8-remove-48.png" />
+
+
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

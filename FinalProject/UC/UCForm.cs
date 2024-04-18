@@ -73,5 +73,10 @@ namespace FinalProject.UC
             }
             // this.Invalidate();
         }
+
+        private void button_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
