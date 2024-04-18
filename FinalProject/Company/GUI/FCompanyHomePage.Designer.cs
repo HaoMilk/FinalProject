@@ -32,7 +32,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ucMenuCard_TaoViecLam = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DSViecLam = new FinalProject.UC.UCMenuCard();
-            this.ucMenuCard_DsCV = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_HSChuaDuyet = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_LichSuCongViec = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_ThongTin = new FinalProject.UC.UCMenuCard();
@@ -61,7 +60,6 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_TaoViecLam);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DSViecLam);
-            this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DsCV);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_HSChuaDuyet);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_LichSuCongViec);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_ThongTin);
@@ -143,11 +141,11 @@
             this.ucMenuCard_HSChuaDuyet.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_HSChuaDuyet.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_HSChuaDuyet.Id = 0;
-            this.ucMenuCard_HSChuaDuyet.Location = new System.Drawing.Point(793, 31);
-            this.ucMenuCard_HSChuaDuyet.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_HSChuaDuyet.Location = new System.Drawing.Point(601, 21);
+            this.ucMenuCard_HSChuaDuyet.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_HSChuaDuyet.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_HSChuaDuyet.MenuImage = global::FinalProject.Properties.Resources.icons8_data_pending_64;
-            this.ucMenuCard_HSChuaDuyet.MenuName = "Hồ sơ chưa duyệt";
+            this.ucMenuCard_HSChuaDuyet.MenuName = "Hồ sơ ứng tuyển";
             this.ucMenuCard_HSChuaDuyet.Name = "ucMenuCard_HSChuaDuyet";
             this.ucMenuCard_HSChuaDuyet.Padding = new System.Windows.Forms.Padding(17, 18, 17, 18);
             this.ucMenuCard_HSChuaDuyet.Size = new System.Drawing.Size(220, 180);
@@ -163,8 +161,9 @@
             this.ucMenuCard_LichSuCongViec.ButtonTextColor = System.Drawing.Color.RoyalBlue;
             this.ucMenuCard_LichSuCongViec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_LichSuCongViec.Id = 0;
-            this.ucMenuCard_LichSuCongViec.Location = new System.Drawing.Point(31, 247);
-            this.ucMenuCard_LichSuCongViec.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_LichSuCongViec.Location = new System.Drawing.Point(891, 21);
+            this.ucMenuCard_LichSuCongViec.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+
             this.ucMenuCard_LichSuCongViec.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_LichSuCongViec.MenuImage = global::FinalProject.Properties.Resources.icons8_history_64;
             this.ucMenuCard_LichSuCongViec.MenuName = "Lịch sử tuyển dụng";
@@ -183,8 +182,8 @@
             this.ucMenuCard_ThongTin.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_ThongTin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_ThongTin.Id = 0;
-            this.ucMenuCard_ThongTin.Location = new System.Drawing.Point(285, 247);
-            this.ucMenuCard_ThongTin.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_ThongTin.Location = new System.Drawing.Point(21, 287);
+            this.ucMenuCard_ThongTin.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_ThongTin.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_ThongTin.MenuImage = global::FinalProject.Properties.Resources.icons8_company_96;
             this.ucMenuCard_ThongTin.MenuName = "Thông tin công ty";
@@ -203,8 +202,8 @@
             this.ucMenuCard_DoiMatKhau.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DoiMatKhau.Id = 0;
-            this.ucMenuCard_DoiMatKhau.Location = new System.Drawing.Point(539, 247);
-            this.ucMenuCard_DoiMatKhau.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_DoiMatKhau.Location = new System.Drawing.Point(311, 287);
+            this.ucMenuCard_DoiMatKhau.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_DoiMatKhau.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DoiMatKhau.MenuImage = global::FinalProject.Properties.Resources.icons8_password_144;
             this.ucMenuCard_DoiMatKhau.MenuName = "Đổi mật khẩu";
@@ -223,8 +222,9 @@
             this.ucMenuCard_DangXuat.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DangXuat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DangXuat.Id = 0;
-            this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(793, 247);
-            this.ucMenuCard_DangXuat.Margin = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(601, 287);
+            this.ucMenuCard_DangXuat.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+
             this.ucMenuCard_DangXuat.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DangXuat.MenuImage = global::FinalProject.Properties.Resources.icons8_log_out_96;
             this.ucMenuCard_DangXuat.MenuName = "Đăng xuất";
@@ -260,11 +260,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UC.UCMenuCard ucMenuCard_TaoViecLam;
         private UC.UCMenuCard ucMenuCard_DSViecLam;
-        private UC.UCMenuCard ucMenuCard_DsCV;
-        private UC.UCMenuCard ucMenuCard_HSChuaDuyet;
         private UC.UCMenuCard ucMenuCard_LichSuCongViec;
         private UC.UCMenuCard ucMenuCard_ThongTin;
         private UC.UCMenuCard ucMenuCard_DoiMatKhau;
         private UC.UCMenuCard ucMenuCard_DangXuat;
+        private UC.UCMenuCard ucMenuCard_HSChuaDuyet;
     }
 }
