@@ -51,7 +51,10 @@ namespace FinalProject.Common.DAO
                 {
                     query = query + $" AND (Id >= {input.FromId} AND Id < {input.ToId}) ";
                 }
-
+                if (input.IdCongTy.HasValue)
+                {
+                    query = query + $" AND IdCongTy = {input.IdCongTy} ";
+                }
                 if (!string.IsNullOrWhiteSpace(input.Search))
                 {
                     query = query + $" AND (ViTriTuyenDung LIKE N'%{input.Search}%' OR Ten LIKE N'%{input.Search}%' OR  TenCongTy LIKE N'%{input.Search}%') ";
@@ -71,6 +74,26 @@ namespace FinalProject.Common.DAO
                 if (input.MaxLuong.HasValue)
                 {
                     query += $" AND MucLuong <= {input.MaxLuong} ";
+                }
+                if (input.MinKinhNghiem.HasValue)
+                {
+                    query += $" AND KinhNghiem >= {input.MinKinhNghiem} ";
+                }
+                if (input.MaxKinhNghiem.HasValue)
+                {
+                    query += $" AND KinhNghiem <= {input.MaxKinhNghiem} ";
+                }
+                if (!string.IsNullOrWhiteSpace(input.GioiTinh))
+                {
+                    query += $" AND GioiTinh LIKE N'%{input.GioiTinh}%' ";
+                }
+                if (input.FromDate != null)
+                {
+                    query += $" AND FromDate >= '{input.FromDate:yyyy-MM-dd}' ";
+                }
+                if (input.ToDate != null)
+                {
+                    query += $" AND FromDate <= '{input.ToDate:yyyy-MM-dd}' ";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);

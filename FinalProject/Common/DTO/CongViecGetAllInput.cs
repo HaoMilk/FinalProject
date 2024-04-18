@@ -22,7 +22,7 @@ namespace FinalProject.Common.DTO
         public string GioiTinh { get; set; }
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
-
+        public int? IdCongTy { get; set; }
         public int FromId { get; set; }
         public int ToId { get; set; }
         public string SortColumn { get; set; }
