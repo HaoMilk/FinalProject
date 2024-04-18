@@ -51,7 +51,10 @@ namespace FinalProject.Common.DAO
                 {
                     query = query + $" AND (Id >= {input.FromId} AND Id < {input.ToId}) ";
                 }
-
+                if (input.IdCongTy.HasValue)
+                {
+                    query = query + $" AND IdCongTy = {input.IdCongTy} ";
+                }
                 if (!string.IsNullOrWhiteSpace(input.Search))
                 {
                     query = query + $" AND (ViTriTuyenDung LIKE N'%{input.Search}%' OR Ten LIKE N'%{input.Search}%' OR  TenCongTy LIKE N'%{input.Search}%') ";

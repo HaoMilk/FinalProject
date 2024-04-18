@@ -1,4 +1,5 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
@@ -112,7 +113,7 @@ namespace FinalProject.Candidate.GUI
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             input.FromDate = dateTimePicker_FromDate.Value;
             input.ToDate = dateTimePicker_ToDate.Value;
-
+            input.IdCongTy = LoggedUser.CongTy?.ID;
             input.FromId = ucPagination.StartRecord;
             input.ToId = ucPagination.EndRecord;
 
