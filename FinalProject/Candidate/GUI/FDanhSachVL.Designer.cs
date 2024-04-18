@@ -35,8 +35,6 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.ucPagination = new FinalProject.UC.UCPagination();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox_FromDate = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker_FromDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox_KinhNghiem = new System.Windows.Forms.GroupBox();
             this.ucComboBox_KinhNghiem = new FinalProject.UC.UCComboBox();
             this.groupBox_GioiTinh = new System.Windows.Forms.GroupBox();
@@ -54,7 +52,6 @@ namespace FinalProject.Candidate.GUI
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox_FromDate.SuspendLayout();
             this.groupBox_KinhNghiem.SuspendLayout();
             this.groupBox_GioiTinh.SuspendLayout();
             this.groupBox_Luong.SuspendLayout();
@@ -72,7 +69,7 @@ namespace FinalProject.Candidate.GUI
             this.panel3.Controls.Add(this.ucPagination);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(418, 50);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1203, 793);
             this.panel3.TabIndex = 5;
@@ -84,7 +81,7 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(16, 15, 16, 15);
             this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1203, 718);
@@ -95,7 +92,7 @@ namespace FinalProject.Candidate.GUI
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ucPagination.Location = new System.Drawing.Point(0, 718);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ucPagination.Margin = new System.Windows.Forms.Padding(5);
             this.ucPagination.Name = "ucPagination";
             this.ucPagination.Size = new System.Drawing.Size(1203, 75);
             this.ucPagination.TabIndex = 0;
@@ -105,7 +102,6 @@ namespace FinalProject.Candidate.GUI
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.groupBox_FromDate);
             this.panel1.Controls.Add(this.groupBox_KinhNghiem);
             this.panel1.Controls.Add(this.groupBox_GioiTinh);
             this.panel1.Controls.Add(this.groupBox_Luong);
@@ -119,62 +115,6 @@ namespace FinalProject.Candidate.GUI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(410, 588);
             this.panel1.TabIndex = 18;
-            // 
-            // groupBox_ToDate
-            // 
-            this.groupBox_ToDate.BackColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_ToDate.Controls.Add(this.dateTimePicker_ToDate);
-            this.groupBox_ToDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_ToDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox_ToDate.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.groupBox_ToDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_ToDate.Location = new System.Drawing.Point(0, 786);
-            this.groupBox_ToDate.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox_ToDate.Name = "groupBox_ToDate";
-            this.groupBox_ToDate.Padding = new System.Windows.Forms.Padding(36, 11, 36, 23);
-            this.groupBox_ToDate.Size = new System.Drawing.Size(384, 114);
-            this.groupBox_ToDate.TabIndex = 22;
-            this.groupBox_ToDate.TabStop = false;
-            this.groupBox_ToDate.Text = "  Đến ngày  ";
-            // 
-            // dateTimePicker_ToDate
-            // 
-            this.dateTimePicker_ToDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker_ToDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker_ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_ToDate.Location = new System.Drawing.Point(36, 38);
-            this.dateTimePicker_ToDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker_ToDate.Name = "dateTimePicker_ToDate";
-            this.dateTimePicker_ToDate.Size = new System.Drawing.Size(312, 34);
-            this.dateTimePicker_ToDate.TabIndex = 1;
-            // 
-            // groupBox_FromDate
-            // 
-            this.groupBox_FromDate.BackColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_FromDate.Controls.Add(this.dateTimePicker_FromDate);
-            this.groupBox_FromDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox_FromDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox_FromDate.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.groupBox_FromDate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_FromDate.Location = new System.Drawing.Point(0, 672);
-            this.groupBox_FromDate.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.groupBox_FromDate.Name = "groupBox_FromDate";
-            this.groupBox_FromDate.Padding = new System.Windows.Forms.Padding(36, 11, 36, 23);
-            this.groupBox_FromDate.Size = new System.Drawing.Size(384, 114);
-            this.groupBox_FromDate.TabIndex = 21;
-            this.groupBox_FromDate.TabStop = false;
-            this.groupBox_FromDate.Text = "  Từ ngày  ";
-            // 
-            // dateTimePicker_FromDate
-            // 
-            this.dateTimePicker_FromDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker_FromDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker_FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_FromDate.Location = new System.Drawing.Point(36, 38);
-            this.dateTimePicker_FromDate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dateTimePicker_FromDate.Name = "dateTimePicker_FromDate";
-            this.dateTimePicker_FromDate.Size = new System.Drawing.Size(312, 34);
-            this.dateTimePicker_FromDate.TabIndex = 0;
             // 
             // groupBox_KinhNghiem
             // 
@@ -421,7 +361,7 @@ namespace FinalProject.Candidate.GUI
             this.ucCustomButton1.ForeColor = System.Drawing.Color.White;
             this.ucCustomButton1.Image = global::FinalProject.Properties.Resources.icons8_search_32;
             this.ucCustomButton1.Location = new System.Drawing.Point(5, 717);
-            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(5);
             this.ucCustomButton1.Name = "ucCustomButton1";
             this.ucCustomButton1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.ucCustomButton1.Size = new System.Drawing.Size(408, 71);
@@ -463,7 +403,6 @@ namespace FinalProject.Candidate.GUI
             this.Controls.SetChildIndex(this.panel3, 0);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.groupBox_FromDate.ResumeLayout(false);
             this.groupBox_KinhNghiem.ResumeLayout(false);
             this.groupBox_GioiTinh.ResumeLayout(false);
             this.groupBox_Luong.ResumeLayout(false);
@@ -482,7 +421,6 @@ namespace FinalProject.Candidate.GUI
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
         private UCPagination ucPagination;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox_FromDate;
         private System.Windows.Forms.GroupBox groupBox_KinhNghiem;
         private UCComboBox ucComboBox_KinhNghiem;
         private System.Windows.Forms.GroupBox groupBox_GioiTinh;
@@ -498,6 +436,5 @@ namespace FinalProject.Candidate.GUI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private UCCustomButton ucCustomButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_FromDate;
     }
 }
