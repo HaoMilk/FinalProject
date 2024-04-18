@@ -312,6 +312,7 @@
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\BUS\UserBUS.cs" />
     <Compile Include="Common\Const\StatusConst.cs" />
+    <Compile Include="Common\Const\TrangThaiUngTuyenConsts.cs" />
     <Compile Include="Common\Const\UserRoleConst.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UserDAO.cs" />
@@ -723,11 +724,8 @@
     <None Include="Resources\icons8-history-64.png" />
     <None Include="Resources\icons8-check-32.png" />
     <None Include="Resources\icons8-delete-32.png" />
-
     <None Include="Resources\icons8-check-48.png" />
     <None Include="Resources\icons8-remove-48.png" />
-
-
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

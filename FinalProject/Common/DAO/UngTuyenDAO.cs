@@ -69,13 +69,17 @@ namespace FinalProject.Common.DAO
                     INNER JOIN UngVien ON UngTuyen.UngVienId = UngVien.Id
                     INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.Id
                     INNER JOIN CV ON UngTuyen.CvId = CV.Id
-                    WHERE UngTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 AND CV.IsDeleted = 0 ";
+                    WHERE UngTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 
+                          AND CV.IsDeleted = 0 ";
 
                 if (input.Id != 0)
                 {
                     query += $" AND UngTuyen.Id = {input.Id}";
                 }
-
+                if (input.TrangThai != null)
+                {
+                    query += $" AND UngTuyen.TrangThai = N'{input.TrangThai}' ";
+                }
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
