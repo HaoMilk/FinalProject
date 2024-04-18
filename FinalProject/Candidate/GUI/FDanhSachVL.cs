@@ -18,8 +18,12 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachVL_Name : UCForm
     {
-        private TinhBUS tinhBUS = new TinhBUS();
-        private List<Tinh> listTinh = new List<Tinh>();
+        private static TinhBUS tinhBUS = new TinhBUS();
+        private static List<Tinh> listTinh = tinhBUS.GetAll();
+        private static List<string> listKinhNghiem = KinhNghiemConsts.GetKinhNghiemList();
+        private static List<string> listMucLuong = MucLuongConstants.GetMucLuongList();
+        private static List<string> listNgheNghiep = NgheNghiepConts.GetNgheNghiepList();
+        private static List<string> listGioiTinh = GioiTinhConsts.GetGioiTinhList();
         private CongViecBUS congViecBUS = new CongViecBUS();
         private List<CongViec> listCongViec = new List<CongViec>();
 
@@ -27,21 +31,22 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            this.listTinh = tinhBUS.GetAll();
-            this.comboBox_DiaDiem.Items.Clear();
-            this.comboBox_DiaDiem.Items.AddRange(this.listTinh.ToArray());
+            this.ucComboBox_DiaDiem.SetItems(listTinh);
+            this.ucComboBox_KinhNghiem.SetItems(listKinhNghiem);
+            this.ucComboBox_Luong.SetItems(listMucLuong);
+            this.ucComboBox_Nganh.SetItems(listNgheNghiep);
 
-            var listKinhNghiem = KinhNghiemConstants.GetKinhNghiemList();
-            this.comboBox_KinhNghiem.Items.AddRange(listKinhNghiem.ToArray());
-            this.comboBox_KinhNghiem.SelectedIndex = 0;
+            var items = new ComboBoxItem[]
+            {
+                new ComboBoxItem { Text = "Nam", Value = GioiTinhConsts.Male },
+                new ComboBoxItem { Text = "Nữ", Value = GioiTinhConsts.Female },
+                new ComboBoxItem { Text = "Khác", Value = GioiTinhConsts.Others },
+            };
+            this.ucComboBox_GioiTinh.Items = items;
+            this.ucComboBox_GioiTinh.SelectedIndex = 0;
 
-            var listMucLuong = MucLuongConstants.GetMucLuongList();
-            this.comboBox_MucLuong.Items.AddRange(listMucLuong.ToArray());
-            this.comboBox_MucLuong.SelectedIndex = 0;
-
-            var listNgheNghiep = NgheNghiepConstants.GetNgheNghiepList();
-            this.comboBox_NgheNghiep.Items.AddRange(listNgheNghiep.ToArray());
-            this.comboBox_NgheNghiep.SelectedIndex = 0;
+            this.dateTimePicker_FromDate.Value = DateTime.Now.AddDays(-7);
+            this.dateTimePicker_ToDate.Value = DateTime.Now.AddDays(7);
         }
 
         #region JobList
@@ -95,13 +100,17 @@ namespace FinalProject.Candidate.GUI
         {
             var input = new CongViecGetAllInput();
             input.Search = textBox_TimKiem.Text;
-            input.NgheNghiep = comboBox_NgheNghiep.Text;
+            input.Nganh = ucComboBox_Nganh.Text;
 
-            var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
-            input.DiaDiem = selectedTinh != null ? selectedTinh.Code : null;
+            //var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
+            //input.DiaDiem = selectedTinh != null ? selectedTinh.Ten : null;
+            input.DiaDiem = ucComboBox_DiaDiem.Text;
 
-            input = input.SetKinhNghiem(comboBox_KinhNghiem.Text);
-            input = input.SetMucLuong(comboBox_MucLuong.Text);
+            input = input.SetKinhNghiem(ucComboBox_KinhNghiem.Text);
+            input = input.SetMucLuong(ucComboBox_Luong.Text);
+            input.GioiTinh = ucComboBox_GioiTinh.Text;
+            input.FromDate = dateTimePicker_FromDate.Value;
+            input.ToDate = dateTimePicker_ToDate.Value;
 
             input.FromId = ucPagination.StartRecord;
             input.ToId = ucPagination.EndRecord;

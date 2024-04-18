@@ -291,9 +291,10 @@
     <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
       <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\Const\KinhNghiemConstants.cs" />
+    <Compile Include="Common\Const\GioiTinhConsts.cs" />
+    <Compile Include="Common\Const\KinhNghiemConsts.cs" />
     <Compile Include="Common\Const\MucLuongConstants.cs" />
-    <Compile Include="Common\Const\NgheNghiepConstants.cs" />
+    <Compile Include="Common\Const\NgheNghiepConts.cs" />
     <Compile Include="Candidate\GUI\FTaoCv.cs">
       <SubType>Form</SubType>
     </Compile>

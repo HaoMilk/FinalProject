@@ -45,7 +45,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 var list = new List<CongViec>();
-                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0";
+                string query = "SELECT * FROM CongViec WHERE IsDeleted = 0 ";
 
                 if (input.FromId > 0 && input.ToId > input.FromId)
                 {
@@ -54,25 +54,23 @@ namespace FinalProject.Common.DAO
 
                 if (!string.IsNullOrWhiteSpace(input.Search))
                 {
-                    query = query + $" AND ViTriTuyenDung LIKE '{input.Search}' ";
+                    query = query + $" AND (ViTriTuyenDung LIKE N'%{input.Search}%' OR Ten LIKE N'%{input.Search}%' OR  TenCongTy LIKE N'%{input.Search}%') ";
                 }
-                if (input.MinLuong.HasValue || input.MaxLuong.HasValue )
+                if (!string.IsNullOrWhiteSpace(input.DiaDiem))
                 {
-                    query += " AND (";
-                    if (input.MinLuong.HasValue)
-                    {
-                        query += $" MucLuong >= {input.MinLuong} ";
-                    }
-                    if (input.MaxLuong.HasValue)
-                    {
-                        if (input.MinLuong.HasValue)
-                        {
-                            query += " AND ";
-                        }
-                        query += $" MucLuong <= {input.MaxLuong} ";
-                    }
-                    query += ")";
-
+                    query += $" AND DiaDiem LIKE N'%{input.DiaDiem}%' ";
+                }
+                if (!string.IsNullOrWhiteSpace(input.Nganh))
+                {
+                    query += $" AND Nganh LIKE N'%{input.Nganh}%' ";
+                }
+                if (input.MinLuong.HasValue)
+                {
+                    query += $" AND MucLuong >= {input.MinLuong} ";
+                }
+                if (input.MaxLuong.HasValue)
+                {
+                    query += $" AND MucLuong <= {input.MaxLuong} ";
                 }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
