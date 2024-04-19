@@ -312,6 +312,7 @@
     <Compile Include="Common\BUS\CvBUS.cs" />
     <Compile Include="Common\BUS\UserBUS.cs" />
     <Compile Include="Common\Const\StatusConst.cs" />
+    <Compile Include="Common\Const\TrangThaiUngTuyenConsts.cs" />
     <Compile Include="Common\Const\UserRoleConst.cs" />
     <Compile Include="Common\DAO\CongTyDAO.cs" />
     <Compile Include="Common\DAO\UserDAO.cs" />
@@ -396,11 +397,11 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FHSChuaDuyet.cs">
+    <Compile Include="Company\GUI\FHoSoUT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FHSChuaDuyet.Designer.cs">
-      <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
@@ -597,8 +598,8 @@
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FHSChuaDuyet.resx">
-      <DependentUpon>FHSChuaDuyet.cs</DependentUpon>
+    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
@@ -723,7 +724,8 @@
     <None Include="Resources\icons8-history-64.png" />
     <None Include="Resources\icons8-check-32.png" />
     <None Include="Resources\icons8-delete-32.png" />
-    <None Include="Resources\icons8-minimize-96.png" />
+    <None Include="Resources\icons8-check-48.png" />
+    <None Include="Resources\icons8-remove-48.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

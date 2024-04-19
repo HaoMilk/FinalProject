@@ -35,7 +35,7 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public List<CongViec> GetAll(CongViecGetAllInput input)
+        public List<CongViec> GetAll(CongViecGetAllInput input = null)
         {
             if (input == null)
             {
@@ -91,10 +91,7 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND FromDate >= '{input.FromDate:yyyy-MM-dd}' ";
                 }
-                if (input.ToDate != null)
-                {
-                    query += $" AND FromDate <= '{input.ToDate:yyyy-MM-dd}' ";
-                }
+
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 

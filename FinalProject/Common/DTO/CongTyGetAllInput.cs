@@ -9,6 +9,7 @@ namespace FinalProject.Common.DTO
     public class CongTyGetAllInput
     {
         public int Id { get; set; }
+        public string TenCongTy { get; set; }
         public int UserId { get; set; }
     }
 }
