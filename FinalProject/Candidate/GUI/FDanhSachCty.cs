@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Common.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -43,16 +44,28 @@ namespace FinalProject.Candidate.GUI
                 UCCtyCards.Add(ctyCard);
             }
             flowLayoutPanel_DanhSach.Controls.Clear();
-
-            foreach (var UCCtyCard in UCCtyCards)
-            {
-                flowLayoutPanel_DanhSach.Controls.Add(UCCtyCard);
-            }
+            flowLayoutPanel_DanhSach.SuspendLayout();
+            flowLayoutPanel_DanhSach.Controls.AddRange(UCCtyCards.ToArray());
+            flowLayoutPanel_DanhSach.ResumeLayout();
+ 
             this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + UCCtyCards.Count;
-        }
+        } 
 
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            // Lấy du lieu tim kiem
+            // Goi ham search tu BUS,luu lại vào biến tạm.
+            // cập nhật giao diện.
+            var input = new CongTyGetAllInput();
+            input.TenCongTy = textBox_TimKiem.Text;
+
+            _listCongTy = _congTyBUS.Search(input);
+            this.LoadListCongTy();
 
         }
     }

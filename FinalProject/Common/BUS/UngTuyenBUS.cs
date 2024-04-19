@@ -93,5 +93,9 @@ namespace FinalProject.Common.BUS
             var list = ungTuyenDAO.GetAll(input);
             return list.FirstOrDefault();
         }
+        public List<UngTuyenDTO> Search(UngTuyenGetAllInput input = null)
+        {
+            return ungTuyenDAO.GetAll(input);
+        }
     }
 }

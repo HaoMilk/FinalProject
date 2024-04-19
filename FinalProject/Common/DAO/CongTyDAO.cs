@@ -164,6 +164,10 @@ namespace FinalProject.Common.DAO
                     {
                         query += $" AND ID = {input.Id} ";
                     }
+                    if (input.TenCongTy != null)
+                    {
+                        query += $" AND TenCongTy LIKE N'%{input.TenCongTy}%' ";
+                    }
                     if (input.UserId > 0)
                     {
                         query += $" AND UserId = {input.UserId} ";

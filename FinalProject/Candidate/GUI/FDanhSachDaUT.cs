@@ -1,4 +1,6 @@
-﻿using FinalProject.Common.DAO;
+﻿using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
+using FinalProject.Common.DAO;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -18,10 +20,20 @@ namespace FinalProject.Candidate.GUI
     {
         private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
         private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
+        private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
 
         public FDanhSachDaUT()
         {
             InitializeComponent();
+            var items = new ComboBoxItem[]
+            {
+                new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
+                new ComboBoxItem { Text = "Đã ứng tuyển", Value = TrangThaiUngTuyenConsts.Submitted },
+                new ComboBoxItem { Text = "NTD đã xem hồ sơ", Value = TrangThaiUngTuyenConsts.Viewed },
+                new ComboBoxItem { Text = "Đã duyệt hồ sơ", Value = TrangThaiUngTuyenConsts.Approved },
+            };
+            this.ucComboBox_TrangThai.Items = items;
+            this.ucComboBox_TrangThai.SelectedIndex = 0;
         }
 
         #region JobList
@@ -33,11 +45,10 @@ namespace FinalProject.Candidate.GUI
 
             var ucJobCards = CreateJobList(quantity);
             flowLayoutPanel_Data.Controls.Clear();
+            flowLayoutPanel_Data.SuspendLayout();
+            flowLayoutPanel_Data.Controls.AddRange(ucJobCards.ToArray());
+            flowLayoutPanel_Data.ResumeLayout();
 
-            foreach (var ucJobCard in ucJobCards)
-            {
-                flowLayoutPanel_Data.Controls.Add(ucJobCard);
-            }
             //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
         }
 
@@ -97,6 +108,20 @@ namespace FinalProject.Candidate.GUI
         private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
         {
             LoadJobList();
+        }
+
+        private void comboBox_Status_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            var input = new UngTuyenGetAllInput();
+            input.TrangThai = ucComboBox_TrangThai.SelectedItem.ToString();
+
+            listUngTuyen = ungTuyenBUS.Search(input);
+            this.LoadJobList();
         }
     }
 }

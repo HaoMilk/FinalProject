@@ -74,6 +74,10 @@ namespace FinalProject.Common.BUS
         {
             return congTyDAO.GetAll();
         }
+        public List<CongTy> Search(CongTyGetAllInput input)
+        {
+            return congTyDAO.GetAll(input);
+        }
 
         public CongTy GetByUserId(int userId)
         {
