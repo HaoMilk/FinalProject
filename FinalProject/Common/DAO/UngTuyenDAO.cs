@@ -76,7 +76,7 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND UngTuyen.Id = {input.Id}";
                 }
-                if (input.TrangThai != null)
+                if (!string.IsNullOrWhiteSpace(input.TrangThai))
                 {
                     query += $" AND UngTuyen.TrangThai = N'{input.TrangThai}' ";
                 }

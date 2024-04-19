@@ -54,8 +54,6 @@ namespace FinalProject.Candidate.GUI
 
         private List<UCJobCard> CreateJobList(int quantity)
         {
-            listUngTuyen = ungTuyenDAO.GetAll();
-
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
 
             if (listUngTuyen.Count == 0)
@@ -102,6 +100,7 @@ namespace FinalProject.Candidate.GUI
 
         private void FDanhSachDaUT_Load(object sender, EventArgs e)
         {
+            this.listUngTuyen = ungTuyenBUS.GetAll();
             LoadJobList();
         }
 
@@ -118,9 +117,9 @@ namespace FinalProject.Candidate.GUI
         private void button_TimKiem_Click(object sender, EventArgs e)
         {
             var input = new UngTuyenGetAllInput();
-            input.TrangThai = ucComboBox_TrangThai.SelectedItem.ToString();
+            input.TrangThai = ucComboBox_TrangThai.SelectedItem?.Value as string;
 
-            listUngTuyen = ungTuyenBUS.Search(input);
+            this.listUngTuyen = ungTuyenBUS.Search(input);
             this.LoadJobList();
         }
     }

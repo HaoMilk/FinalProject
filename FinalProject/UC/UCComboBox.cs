@@ -29,6 +29,18 @@ namespace FinalProject.UC
             }
         }
 
+        public new ComboBoxItem SelectedItem
+        {
+            get
+            {
+                return SelectedIndex >= 0 ? Items[SelectedIndex] : null;
+            }
+            set
+            {
+                SelectedIndex = FindStringExact(value.Text);
+            }
+        }
+
         public void SetItems(ComboBoxItem[] items)
         {
             Items = items;
