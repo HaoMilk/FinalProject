@@ -75,7 +75,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND UngTuyen.Id = {input.Id}";
                 }
-
+                if (!string.IsNullOrWhiteSpace(input.TrangThai))
+                {
+                    query += $" AND UngTuyen.TrangThai = N'{input.TrangThai}' ";
+                }
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
