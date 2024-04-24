@@ -1,8 +1,10 @@
 ﻿using FinalProject.Common.DTO;
 using MailKit.Security;
 using MimeKit;
+using NPOI.HSSF.Record.Chart;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +32,12 @@ namespace FinalProject.Common.Helper
             }
 
             emailMessage.Subject = input.Title;
-            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = input.Content };
+            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            {
+                Text = input.Content,
+                ContentTransferEncoding = ContentEncoding.Base64
+            };
+
             try
             {
                 using (var client = new MailKit.Net.Smtp.SmtpClient())
@@ -60,11 +67,13 @@ namespace FinalProject.Common.Helper
         // Test SendEmailBySMTP
         public static SendEmailBySMTPOutput TestSendEmailBySMTP()
         {
+            var content = File.ReadAllText("./Resources/email-template-1.html", encoding: Encoding.UTF8);
+            content = content.Replace("@FullName", "Vi Quốc Thuận");
             var input = new SendEmailBySMTPInput()
             {
-                Title = "Test",
-                Content = $"Test: {DateTime.Now}",
-                Recipient = new List<string> { "22110006@student.hcmute.edu.vn" }
+                Title = $"Test {DateTime.Now}",
+                Content = content,
+                Recipient = new List<string> { "ngotienhoang09@gmail.com" }
             };
             var output = MailHelper.SendEmailBySMTP(input).Result;
             
