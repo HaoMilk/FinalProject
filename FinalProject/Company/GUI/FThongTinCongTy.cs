@@ -18,7 +18,7 @@ namespace FinalProject.Company.GUI.Thong_tin
     {
         private CongTyBUS cty_BUS = new CongTyBUS();
         private CongTy _congTy;
-        private int _id = LoggedUser.CongTy.ID;
+        private int _id;
         public int Id
         {
             get => _id;

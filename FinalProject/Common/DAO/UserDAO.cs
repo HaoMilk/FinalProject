@@ -121,8 +121,8 @@ namespace FinalProject.Common.DAO
         public int Add(User user)
         {
             string query = $@"
-                INSERT INTO [User](UserName, [Password], Email, [Status], IsDeleted, Phone, [Role], CreatedTime, UpdatedTime, AvatarUrl)
-                VALUES (@UserName, @Password, @Email, @Status, 0, @Phone, @Role, @CreatedTime, NULL, @AvatarUrl);
+                INSERT INTO [User](UserName, [Password], Email, [Status], IsDeleted, Phone, [Role], CreatedTime, UpdatedTime, AvatarUrl, Otp, OtpExpiredTime, IsEmailVerified)
+                VALUES (@UserName, @Password, @Email, @Status, 0, @Phone, @Role, @CreatedTime, NULL, @AvatarUrl, '', @OtpExpiredTime, 0);
                 SELECT MAX(Id) AS LastInsertedID FROM [User];";
 
             using (dbConnection.Connection)
@@ -136,6 +136,7 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@Role", user.Role);
                 cmd.Parameters.AddWithValue("@CreatedTime", user.CreatedTime);
                 cmd.Parameters.AddWithValue("@AvatarUrl", user.AvatarUrl);
+                cmd.Parameters.AddWithValue("@OtpExpiredTime", DateTime.MaxValue);
 
                 try
                 {
@@ -178,8 +179,8 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@UpdatedTime", DateTime.Now);
                 cmd.Parameters.AddWithValue("@AvatarUrl", user.AvatarUrl);
                 cmd.Parameters.AddWithValue("@IsEmailVerified", user.IsEmailVerified);
-                cmd.Parameters.AddWithValue("@Otp", user.Otp);
-                cmd.Parameters.AddWithValue("@OtpExpiredTime", user.OtpExpiredTime);
+                cmd.Parameters.AddWithValue("@Otp", user.Otp ?? string.Empty);
+                cmd.Parameters.AddWithValue("@OtpExpiredTime", user.OtpExpiredTime ?? DateTime.MaxValue);
 
                 try
                 {
