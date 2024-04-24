@@ -67,10 +67,11 @@ namespace FinalProject.Common.DAO
                     SELECT UngTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link
                     FROM UngTuyen 
                     INNER JOIN UngVien ON UngTuyen.UngVienId = UngVien.Id
-                    INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.Id
+                    INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.ID
+                    INNER JOIN CongTy ON CongViec.IdCongTy = CongTy.Id
                     INNER JOIN CV ON UngTuyen.CvId = CV.Id
                     WHERE UngTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 
-                          AND CV.IsDeleted = 0 ";
+                          AND CV.IsDeleted = 0 AND CongTy.IsDeleted = 0";
 
                 if (input.Id != 0)
                 {
@@ -79,6 +80,10 @@ namespace FinalProject.Common.DAO
                 if (!string.IsNullOrWhiteSpace(input.TrangThai))
                 {
                     query += $" AND UngTuyen.TrangThai = N'{input.TrangThai}' ";
+                }
+                if (input.IdCongTy != 0) 
+                {
+                    query += $" AND CongTy.Id = {input.IdCongTy}";
                 }
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 

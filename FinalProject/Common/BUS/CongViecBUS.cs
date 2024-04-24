@@ -14,7 +14,7 @@ namespace FinalProject.Common.BUS
     public class CongViecBUS
     {
         private CongViecDAO congViecDAO = new CongViecDAO();
-        public List<CongViec> Search(CongViecGetAllInput input)
+        public List<CongViec> Search(CongViecGetAllInput input=null)
         {
             return congViecDAO.GetAll(input);
         }
