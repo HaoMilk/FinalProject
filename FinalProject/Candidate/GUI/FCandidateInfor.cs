@@ -136,7 +136,12 @@ namespace FinalProject.Candidate.GUI
 
                 if (result.IsSuccess)
                 {
-                    MessageBox.Show("Mã xác nhận đã được gửi đến email của bạn !");
+                    FXacNhanEmail fXacNhanEmail = new FXacNhanEmail();
+                    fXacNhanEmail.ShowDialog();
+
+                    // Cập nhật lại thông tin user
+                    LoggedUser.User = userBUS.GetById(LoggedUser.User.Id);
+                    this.FCandidateInfor_Load(sender, e);
                 }
                 else
                 {
