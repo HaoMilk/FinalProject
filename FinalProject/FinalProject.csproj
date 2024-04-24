@@ -341,6 +341,12 @@
     <Compile Include="Common\GUI\FDangKy.Designer.cs">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\GUI\FXacNhanEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\GUI\FXacNhanEmail.Designer.cs">
+      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\Helper\GuiHelper.cs" />
     <Compile Include="Common\Helper\ImageHelper.cs" />
@@ -609,6 +615,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FDangKy.resx">
       <DependentUpon>FDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\GUI\FXacNhanEmail.resx">
+      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>

@@ -115,5 +115,15 @@ namespace FinalProject.Database.Entities
             var output = MailHelper.SendEmailBySMTP(input);
             return output;
         }
+
+        public bool VerifyOtp(string otp)
+        {
+            if (otp == this.Otp && DateTime.Now < this.OtpExpiredTime)
+            {
+                this.IsEmailVerified = true;
+                return true;
+            }
+            return false;
+        }
     }
 }
