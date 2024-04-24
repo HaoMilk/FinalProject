@@ -102,15 +102,10 @@ namespace FinalProject.Candidate.GUI
             var input = new CongViecGetAllInput();
             input.Search = textBox_TimKiem.Text;
             input.Nganh = ucComboBox_Nganh.Text;
-
-            //var selectedTinh = this.comboBox_DiaDiem.SelectedItem as Tinh;
-            //input.DiaDiem = selectedTinh != null ? selectedTinh.Ten : null;
             input.DiaDiem = ucComboBox_DiaDiem.Text;
-
             input = input.SetKinhNghiem(ucComboBox_KinhNghiem.Text);
             input = input.SetMucLuong(ucComboBox_Luong.Text);
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
-            //input.FromDate = dateTimePicker_FromDate.Value;
             input.IdCongTy = LoggedUser.CongTy?.ID;
             input.FromId = ucPagination.StartRecord;
             input.ToId = ucPagination.EndRecord;
