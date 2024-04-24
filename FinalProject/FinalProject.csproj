@@ -728,6 +728,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />
+    <Content Include="Database\Scripts\025. User add Otp, OtpExpiredTime.sql" />
     <Content Include="Database\Scripts\024. Drop Foreign Key FK_CV_UngVien.sql" />
     <Content Include="Database\Scripts\023. Add AvatarUrl into User.sql" />
     <Content Include="Database\Scripts\021. Add UserId into CongTy, UngVien.sql" />
@@ -1020,6 +1022,9 @@
     <None Include="Resources\icons8-delete-24.png" />
     <None Include="Resources\TuyenDung.jpg" />
     <None Include="Resources\Thông tin tuyển dụng.png" />
+    <Content Include="Resources\Templates\SendOtpVerifyEmail.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

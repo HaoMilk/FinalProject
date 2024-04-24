@@ -35,7 +35,7 @@ namespace FinalProject.Common.Helper
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
                 Text = input.Content,
-                ContentTransferEncoding = ContentEncoding.Base64
+                //ContentTransferEncoding = ContentEncoding.Base64
             };
 
             try

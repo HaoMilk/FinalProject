@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common.Const;
 using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
@@ -154,6 +155,28 @@ namespace FinalProject.Common.BUS
             var result = _userDAO.Update(user);
 
             return result > 0;
+        }
+
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(User user)
+        {
+            var otp = new Random().Next(100000, 999999).ToString();
+            var otpExpiredTime = DateTime.Now.AddDays(1);
+            var output = user.SendOtpVerifyEmail(otp);
+
+            if (output != null && output.IsSuccess)
+            {
+                user.Otp = otp;
+                user.OtpExpiredTime = otpExpiredTime;
+
+                var result = _userDAO.Update(user);
+                if (result <= 0)
+                {
+                    output.IsSuccess = false;
+                    output.ErrorMessage = "Có lỗi xảy ra, vui lòng thử lại sau!";
+                }
+            }
+
+            return output;
         }
     }
 }

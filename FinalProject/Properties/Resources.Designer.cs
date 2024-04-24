@@ -304,14 +304,13 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
         ///&lt;html lang=&quot;en&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-        ///  &lt;head&gt;
+        ///&lt;head&gt;
         ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
         ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
         ///    &lt;title&gt;ðŸ‘‹ You asked me to remind you to practice Arabic&lt;/title&gt;
         ///    &lt;!--[if gte mso 9
         ///      ]&gt;&lt;xml&gt;
-        ///        &lt;o:OfficeDocumentSettings&gt;
-        ///     [rest of string was truncated]&quot;;.
+        ///        &lt;o:OfficeDocumentSettings [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string email_template_1 {
             get {
@@ -1066,6 +1065,24 @@ namespace FinalProject.Properties {
             get {
                 object obj = ResourceManager.GetObject("save_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        ///&lt;html lang=&quot;vi&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+        ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
+        ///    &lt;title&gt;ðŸ‘‹ XÃ¡c minh Ä‘á»‹a chá»‰ email&lt;/title&gt;
+        ///    &lt;!--[if gte mso 9
+        ///      ]&gt;&lt;xml&gt;
+        ///        &lt;o:OfficeDocumentSettings&gt;
+        ///          &lt;o:A [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string SendOtpVerifyEmail {
+            get {
+                return ResourceManager.GetString("SendOtpVerifyEmail", resourceCulture);
             }
         }
         

@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
+using FinalProject.Common.DAO;
+using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 
 namespace FinalProject.Database.Entities
@@ -70,11 +74,17 @@ namespace FinalProject.Database.Entities
                 }
             }
         }
+        public bool IsEmailVerified { get; set; } = false;
+        public string Otp { get; set; } = string.Empty;
+
+        public DateTime? OtpExpiredTime { get; set; } = DateTime.MaxValue;
 
         public User()
         {
             this.CreatedTime = DateTime.Now;
             this.IsDeleted = false;
+            this.AvatarUrl = DefaultAvatarUrl;
+            this.IsEmailVerified = false;
         }
 
         public User(string username, string password, string email, string status, string role, string phone, string avatarUrl)
@@ -88,6 +98,22 @@ namespace FinalProject.Database.Entities
             this.CreatedTime = DateTime.Now;
             this.IsDeleted = false;
             this.AvatarUrl = avatarUrl;
+            this.IsEmailVerified = false;
+        }
+
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(string otp)
+        {
+            var content = File.ReadAllText("Resources/Templates/SendOtpVerifyEmail.html", encoding: Encoding.UTF8);
+            content = content.Replace("@OTP", otp);
+
+            var input = new SendEmailBySMTPInput
+            {
+                Title = "Xác thực tài khoản",
+                Content = content,
+                Recipient = new List<string> { this.Email }
+            };
+            var output = MailHelper.SendEmailBySMTP(input).Result;
+            return output;
         }
     }
 }

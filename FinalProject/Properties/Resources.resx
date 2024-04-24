@@ -472,4 +472,7 @@
   <data name="email_template_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email-template-1.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="SendOtpVerifyEmail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Templates\SendOtpVerifyEmail.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
 </root>
