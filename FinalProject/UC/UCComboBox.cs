@@ -1,4 +1,6 @@
-﻿using FinalProject.Database.Entities;
+﻿using FinalProject.Common.Const;
+using FinalProject.Database.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -8,6 +10,37 @@ namespace FinalProject.UC
 {
     public class UCComboBox : ComboBox
     {
+        #region Constants
+        public static ComboBoxItem[] UserSatusItems = new ComboBoxItem[]
+        {
+            new ComboBoxItem { Text = "Hoạt động", Value = StatusConst.Active },
+            new ComboBoxItem { Text = "Không hoạt động", Value = StatusConst.Inactive },
+            new ComboBoxItem { Text = "Chờ", Value = StatusConst.Waiting },
+            new ComboBoxItem { Text = "Đã xóa tài khoản", Value = StatusConst.Deleted },
+        };
+
+        public static ComboBoxItem[] EmailStatusItems = new ComboBoxItem[]
+        {
+            new ComboBoxItem { Text = "Đã xác minh", Value = true },
+            new ComboBoxItem { Text = "Chưa xác minh", Value = false },
+        };
+
+        public static ComboBoxItem[] GenderItems = new ComboBoxItem[]
+        {
+            new ComboBoxItem { Text = "Nam", Value = "M" },
+            new ComboBoxItem { Text = "Nữ", Value = "F" },
+            new ComboBoxItem { Text = "Khác", Value = "O" },
+        };
+
+        public static ComboBoxItem[] TrangThaiUngTuyenItems = new ComboBoxItem[]
+        {
+            new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
+            new ComboBoxItem { Text = "Đã ứng tuyển", Value = TrangThaiUngTuyenConsts.Submitted },
+            new ComboBoxItem { Text = "NTD đã xem hồ sơ", Value = TrangThaiUngTuyenConsts.Viewed },
+            new ComboBoxItem { Text = "Đã duyệt hồ sơ", Value = TrangThaiUngTuyenConsts.Approved },
+        };
+        #endregion Constants
+
         public new ComboBoxItem[] Items
         {
             get
@@ -17,7 +50,7 @@ namespace FinalProject.UC
                 {
                     items[i] = base.Items[i] as ComboBoxItem;
                 }
-                return items;
+                return items.ToArray();
             }
             set
             {
@@ -37,7 +70,14 @@ namespace FinalProject.UC
             }
             set
             {
-                SelectedIndex = FindStringExact(value.Text);
+                if (value == null)
+                {
+                    SelectedIndex = -1;
+                }
+                else
+                {
+                    SelectedIndex = FindStringExact(value.Text);
+                }
             }
         }
 
@@ -54,6 +94,42 @@ namespace FinalProject.UC
         public void SetItems(List<string> items)
         {
             Items = items.Select(x => new ComboBoxItem(x, x)).ToArray();
+        }
+
+        public int FindItemIndex(object value)
+        {
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (value == Items[i].Value)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public int FindItemIndex(string value)
+        {
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (value == Items[i].Value.ToString())
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public int FindItemIndex(bool value)
+        {
+            for (int i = 0; i < Items.Length; i++)
+            {
+                if (value == Convert.ToBoolean(Items[i].Value))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
 
         public UCComboBox()

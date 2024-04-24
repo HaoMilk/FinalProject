@@ -25,14 +25,8 @@ namespace FinalProject.Candidate.GUI
         public FDanhSachDaUT()
         {
             InitializeComponent();
-            var items = new ComboBoxItem[]
-            {
-                new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
-                new ComboBoxItem { Text = "Đã ứng tuyển", Value = TrangThaiUngTuyenConsts.Submitted },
-                new ComboBoxItem { Text = "NTD đã xem hồ sơ", Value = TrangThaiUngTuyenConsts.Viewed },
-                new ComboBoxItem { Text = "Đã duyệt hồ sơ", Value = TrangThaiUngTuyenConsts.Approved },
-            };
-            this.ucComboBox_TrangThai.Items = items;
+           
+            this.ucComboBox_TrangThai.Items = UCComboBox.TrangThaiUngTuyenItems;
             this.ucComboBox_TrangThai.SelectedIndex = 0;
         }
 

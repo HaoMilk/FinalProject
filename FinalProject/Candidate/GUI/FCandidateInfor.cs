@@ -1,7 +1,10 @@
 ﻿using CloudinaryDotNet;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
+using FinalProject.Common.GUI;
 using FinalProject.Common.Helper;
+using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -25,14 +28,11 @@ namespace FinalProject.Candidate.GUI
         {
             InitializeComponent();
 
-            var items = new ComboBoxItem[]
-            {
-                new ComboBoxItem { Text = "Nam", Value = "M" },
-                new ComboBoxItem { Text = "Nữ", Value = "F" },
-                new ComboBoxItem { Text = "Khác", Value = "O" },
-            };
-            this.ucComboBox_Gender.Items = items;
-            this.ucComboBox_Gender.SelectedIndex = 0;
+            // Ẩn button xác nhận email nếu email đã được xác nhận
+            this.button_XacNhanEmail.Visible = !LoggedUser.User.IsEmailVerified;
+            this.ucComboBox_TrangThai.Items = UCComboBox.UserSatusItems;
+            this.ucComboBox_TrangThaiEmail.Items = UCComboBox.EmailStatusItems;
+            this.ucComboBox_Gender.Items = UCComboBox.GenderItems;
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -82,6 +82,10 @@ namespace FinalProject.Candidate.GUI
                 {
                     pictureBox_Avatar.LoadAsync(url);
                 }
+
+                this.ucComboBox_TrangThai.SelectedIndex = this.ucComboBox_TrangThai.FindItemIndex(LoggedUser.User.Status);
+                this.ucComboBox_TrangThaiEmail.SelectedIndex = this.ucComboBox_TrangThaiEmail.FindItemIndex(LoggedUser.User.IsEmailVerified);
+                this.ucComboBox_Gender.SelectedIndex = this.ucComboBox_Gender.FindItemIndex(LoggedUser.UngVien.GioiTinh);
             }
         }
 
@@ -115,6 +119,29 @@ namespace FinalProject.Candidate.GUI
                 }
 
                 Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void button_DoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FDoiMatKhau fDoiMatKhau = new FDoiMatKhau();
+            fDoiMatKhau.ShowDialog();
+        }
+
+        private void button_XacNhanEmail_Click(object sender, EventArgs e)
+        {
+            if (LoggedUser.User.IsEmailVerified == false)
+            {
+                var result = userBUS.SendOtpVerifyEmail(LoggedUser.User);
+
+                if (result.IsSuccess)
+                {
+                    MessageBox.Show("Mã xác nhận đã được gửi đến email của bạn !");
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi phát sinh !");
+                }
             }
         }
     }
