@@ -13,5 +13,20 @@
     <Setting Name="cloudinary_url" Type="System.String" Scope="Application">
       <Value Profile="(Default)">cloudinary://674852553643445:Pcnyu-u_fkEJDwE94m2srcoZ2tk@df3zf2d1g</Value>
     </Setting>
+    <Setting Name="emailHost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="emailPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="emailFrom" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tiennhm.it@gmail.com</Value>
+    </Setting>
+    <Setting Name="emailUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">tiennhm.it@gmail.com</Value>
+    </Setting>
+    <Setting Name="emailPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">crmc dcnm sitn sxvb</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

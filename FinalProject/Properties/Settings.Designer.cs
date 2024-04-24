@@ -42,5 +42,50 @@ namespace FinalProject.Properties {
                 return ((string)(this["cloudinary_url"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("smtp.gmail.com")]
+        public string emailHost {
+            get {
+                return ((string)(this["emailHost"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("587")]
+        public int emailPort {
+            get {
+                return ((int)(this["emailPort"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("tiennhm.it@gmail.com")]
+        public string emailFrom {
+            get {
+                return ((string)(this["emailFrom"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("tiennhm.it@gmail.com")]
+        public string emailUsername {
+            get {
+                return ((string)(this["emailUsername"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("crmc dcnm sitn sxvb")]
+        public string emailPassword {
+            get {
+                return ((string)(this["emailPassword"]));
+            }
+        }
     }
 }
