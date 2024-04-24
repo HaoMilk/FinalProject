@@ -412,17 +412,17 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FHoSoUT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.Designer.cs">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
@@ -613,11 +613,11 @@
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
