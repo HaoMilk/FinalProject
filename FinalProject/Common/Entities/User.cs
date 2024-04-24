@@ -112,7 +112,7 @@ namespace FinalProject.Database.Entities
                 Content = content,
                 Recipient = new List<string> { this.Email }
             };
-            var output = MailHelper.SendEmailBySMTP(input).Result;
+            var output = MailHelper.SendEmailBySMTP(input);
             return output;
         }
     }
