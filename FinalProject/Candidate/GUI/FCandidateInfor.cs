@@ -29,7 +29,7 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
 
             // Ẩn button xác nhận email nếu email đã được xác nhận
-            this.button_XacNhanEmail.Visible = !LoggedUser.User.IsEmailVerified;
+            this.button_XacNhanEmail.Enabled = !LoggedUser.User.IsEmailVerified;
             this.ucComboBox_TrangThai.Items = UCComboBox.UserSatusItems;
             this.ucComboBox_TrangThaiEmail.Items = UCComboBox.EmailStatusItems;
             this.ucComboBox_Gender.Items = UCComboBox.GenderItems;
@@ -50,15 +50,32 @@ namespace FinalProject.Candidate.GUI
 
             var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
-
+             
             if (result <= 0)
             {
                 MessageBox.Show("Có lỗi phát sinh !");
                 return;
             }
+            else
+            {
+                // Cần xác nhận email lại nếu email đã thay đổi
+                if (email != LoggedUser.User.Email)
+                {
+                    var user = LoggedUser.User;
+                    user.Email = email;
+                    user.IsEmailVerified = false;
+                    var result2 = userBUS.Update(user);
+                    if (result2 <= 0)
+                    {
+                        MessageBox.Show("Có lỗi phát sinh !");
+                        return;
+                    }
+                }
 
-            LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
-            MessageBox.Show("Bạn đã cập nhật thành công !");
+                LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
+                this.FCandidateInfor_Load(sender, e);
+                MessageBox.Show("Bạn đã cập nhật thành công !");
+            }
         }
 
         private void FCandidateInfor_Load(object sender, EventArgs e)
