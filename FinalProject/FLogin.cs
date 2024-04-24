@@ -63,6 +63,11 @@ namespace FinalProject
                 LoggedUser.User = user;
                 LoggedUser.UngVien = ungVienBUS.GetByUserId(user.Id);
 
+                if (user.IsEmailVerified == false)
+                {
+                    userBUS.SendOtpVerifyEmail(user);
+                }
+
                 this.Hide();
                 FCandidateHomePage fCandidateHomePage = new FCandidateHomePage();
                 fCandidateHomePage.ShowDialog();

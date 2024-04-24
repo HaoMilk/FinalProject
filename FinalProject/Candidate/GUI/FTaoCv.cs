@@ -5,6 +5,7 @@ using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace FinalProject.Candidate.GUI
@@ -111,7 +112,8 @@ namespace FinalProject.Candidate.GUI
 
             if (!string.IsNullOrEmpty(filePath))
             {
-                Process.Start(filePath);
+                Process.Start("explorer.exe", "/select," + Path.GetFullPath(filePath));
+                MessageBox.Show("Xuất file thành công");
             }
             else
             {

@@ -93,6 +93,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND [Role] = N'{input.Role}' ";
                 }
+                if (input.IsEmailVerified.HasValue)
+                {
+                    query += $" AND IsEmailVerified = {input.IsEmailVerified} ";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
@@ -157,7 +161,10 @@ namespace FinalProject.Common.DAO
                         [Phone] = @Phone,
                         [Role] = @Role,
                         [UpdatedTime] = @UpdatedTime,
-                        [AvatarUrl] = @AvatarUrl
+                        [AvatarUrl] = @AvatarUrl,
+                        [IsEmailVerified] = @IsEmailVerified,
+                        [Otp] = @Otp,
+                        [OtpExpiredTime] = @OtpExpiredTime
                         WHERE [Id] = @Id;";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
@@ -170,6 +177,9 @@ namespace FinalProject.Common.DAO
                 cmd.Parameters.AddWithValue("@Role", user.Role);
                 cmd.Parameters.AddWithValue("@UpdatedTime", DateTime.Now);
                 cmd.Parameters.AddWithValue("@AvatarUrl", user.AvatarUrl);
+                cmd.Parameters.AddWithValue("@IsEmailVerified", user.IsEmailVerified);
+                cmd.Parameters.AddWithValue("@Otp", user.Otp);
+                cmd.Parameters.AddWithValue("@OtpExpiredTime", user.OtpExpiredTime);
 
                 try
                 {
@@ -261,6 +271,9 @@ namespace FinalProject.Common.DAO
             user.CreatedTime = reader.GetDateTimeValue(8);
             user.UpdatedTime = reader.GetDateTimeValueNullable(9);
             user.AvatarUrl = reader.GetStringValue(10);
+            user.Otp = reader.GetStringValue(11);
+            user.OtpExpiredTime = reader.GetDateTimeValueNullable(12);
+            user.IsEmailVerified = reader.GetBooleanValue(13);
 
             return user;
         }
