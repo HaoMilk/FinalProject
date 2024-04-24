@@ -90,8 +90,25 @@ namespace FinalProject.Candidate.GUI
         public FUngTuyenCongViec()
         {
             InitializeComponent();
+            button_Submit.Visible = true;
+            button_Huy.Visible = false;
+            
         }
-
+        public FUngTuyenCongViec(int? ungTuyenId)
+        {
+            InitializeComponent();
+            this.UngTuyenId = ungTuyenId;
+            if (UngTuyenId == null || UngTuyenId == 0)
+            {
+                button_Submit.Visible = true;
+                button_Huy.Visible = false;
+            }
+            else
+            {
+                button_Submit.Visible = false;
+                button_Huy.Visible = true;
+            }
+        }
         private void FUngTuyenCongViec_Load(object sender, EventArgs e)
         {
             LoadCv();
