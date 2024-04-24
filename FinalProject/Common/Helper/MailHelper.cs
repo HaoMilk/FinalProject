@@ -20,7 +20,7 @@ namespace FinalProject.Common.Helper
         private static string _emailPassword = Properties.Settings.Default.emailPassword;
         private static SecureSocketOptions _secureSocketOptions = SecureSocketOptions.Auto;
 
-        public static async Task<SendEmailBySMTPOutput> SendEmailBySMTP(SendEmailBySMTPInput input)
+        public static async Task<SendEmailBySMTPOutput> SendEmailBySMTPAsync(SendEmailBySMTPInput input)
         {
             var result = new SendEmailBySMTPOutput();
 
@@ -64,6 +64,48 @@ namespace FinalProject.Common.Helper
             return result;
         }
 
+        public static SendEmailBySMTPOutput SendEmailBySMTP(SendEmailBySMTPInput input)
+        {
+            var result = new SendEmailBySMTPOutput();
+
+            var emailMessage = new MimeMessage();
+            emailMessage.From.Add(MailboxAddress.Parse(_emailFrom));
+            foreach (var item in input.Recipient)
+            {
+                emailMessage.To.Add(MailboxAddress.Parse(item));
+            }
+
+            emailMessage.Subject = input.Title;
+            emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
+            {
+                Text = input.Content,
+                //ContentTransferEncoding = ContentEncoding.Base64
+            };
+
+            try
+            {
+                using (var client = new MailKit.Net.Smtp.SmtpClient())
+                {
+                    client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+
+                    client.Connect(_emailHost, _emailPort, _secureSocketOptions);
+                    client.Authenticate(_emailUsername, _emailPassword);
+                    client.Send(emailMessage);
+                    result.IsSuccess = true;
+                    client.Disconnect(true);
+                }
+            }
+            catch (Exception ex) //todo add another try to send email
+            {
+                var e = ex;
+                result.ErrorMessage = ex.Message;
+                result.IsSuccess = false;
+                throw;
+            }
+
+            return result;
+        }
+
         // Test SendEmailBySMTP
         public static SendEmailBySMTPOutput TestSendEmailBySMTP()
         {
@@ -75,7 +117,7 @@ namespace FinalProject.Common.Helper
                 Content = content,
                 Recipient = new List<string> { "ngotienhoang09@gmail.com" }
             };
-            var output = MailHelper.SendEmailBySMTP(input).Result;
+            var output = MailHelper.SendEmailBySMTP(input);
             
             return output;
         }
