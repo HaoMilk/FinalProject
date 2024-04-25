@@ -50,16 +50,7 @@ namespace FinalProject.Admin.GUI.ThongKe
             }
 
             // Thêm dữ liệu từ Dictionary vào biểu đồ cột
-            foreach (var pair in tongLuongTheoNganh)
-            {
-                BieuDoCotLuong.Series["BieuDoCotLuong"].Points.AddXY(pair.Key, pair.Value);
-            }
-
-            // Thiết lập các thuộc tính của biểu đồ
-            BieuDoCotLuong.ChartAreas[0].AxisX.Interval = 1; // Đảm bảo mỗi tên ngành chỉ hiển thị một lần trên trục x
-            BieuDoCotLuong.ChartAreas[0].AxisX.MajorGrid.Enabled = false; // Tắt lưới chính trên trục x
-            BieuDoCotLuong.ChartAreas[0].AxisY.MajorGrid.Enabled = false; // Tắt lưới chính trên trục y
-            BieuDoCotLuong.ChartAreas[0].AxisX.LabelStyle.Angle = -30; // Góc quay của nhãn trên trục x
+            
         }
     }
 }

@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,6 +54,10 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label_DSCongTy = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.TopNganhLuongCaoNhat = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.TiTrongCacNganh = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,16 +67,22 @@
             this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TopNganhLuongCaoNhat)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TiTrongCacNganh)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1304, 396);
+            this.panel2.Size = new System.Drawing.Size(1344, 778);
             this.panel2.TabIndex = 1;
             // 
             // panel8
@@ -78,7 +94,7 @@
             this.panel8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1304, 38);
+            this.panel8.Size = new System.Drawing.Size(1344, 38);
             this.panel8.TabIndex = 2;
             // 
             // label1
@@ -111,7 +127,7 @@
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Location = new System.Drawing.Point(0, 74);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1304, 275);
+            this.panel5.Size = new System.Drawing.Size(1340, 275);
             this.panel5.TabIndex = 1;
             // 
             // panel11
@@ -120,7 +136,7 @@
             this.panel11.Controls.Add(this.txtSoLuongCongTy);
             this.panel11.Controls.Add(this.label2);
             this.panel11.Controls.Add(this.panel16);
-            this.panel11.Location = new System.Drawing.Point(886, 3);
+            this.panel11.Location = new System.Drawing.Point(922, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(418, 272);
             this.panel11.TabIndex = 3;
@@ -161,7 +177,7 @@
             this.panel10.Controls.Add(this.txtSoLuongUngVien);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Controls.Add(this.panel15);
-            this.panel10.Location = new System.Drawing.Point(446, 3);
+            this.panel10.Location = new System.Drawing.Point(462, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(418, 269);
             this.panel10.TabIndex = 2;
@@ -255,7 +271,7 @@
             this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
             this.label_DSCongTy.Name = "label_DSCongTy";
-            this.label_DSCongTy.Size = new System.Drawing.Size(1304, 67);
+            this.label_DSCongTy.Size = new System.Drawing.Size(1344, 67);
             this.label_DSCongTy.TabIndex = 12;
             this.label_DSCongTy.Text = "DASHBOARD";
             this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,18 +283,71 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1304, 67);
+            this.panel1.Size = new System.Drawing.Size(1344, 67);
             this.panel1.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.TopNganhLuongCaoNhat);
+            this.panel3.Location = new System.Drawing.Point(12, 391);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(661, 401);
+            this.panel3.TabIndex = 3;
+            // 
+            // TopNganhLuongCaoNhat
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.TopNganhLuongCaoNhat.ChartAreas.Add(chartArea2);
+            this.TopNganhLuongCaoNhat.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend2.Name = "Legend1";
+            this.TopNganhLuongCaoNhat.Legends.Add(legend2);
+            this.TopNganhLuongCaoNhat.Location = new System.Drawing.Point(0, 0);
+            this.TopNganhLuongCaoNhat.Name = "TopNganhLuongCaoNhat";
+            this.TopNganhLuongCaoNhat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.TopNganhLuongCaoNhat.Series.Add(series2);
+            this.TopNganhLuongCaoNhat.Size = new System.Drawing.Size(661, 401);
+            this.TopNganhLuongCaoNhat.TabIndex = 0;
+            this.TopNganhLuongCaoNhat.Text = "chart1";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.TiTrongCacNganh);
+            this.panel4.Location = new System.Drawing.Point(679, 391);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(661, 401);
+            this.panel4.TabIndex = 4;
+            // 
+            // TiTrongCacNganh
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.TiTrongCacNganh.ChartAreas.Add(chartArea1);
+            this.TiTrongCacNganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.TiTrongCacNganh.Legends.Add(legend1);
+            this.TiTrongCacNganh.Location = new System.Drawing.Point(0, 0);
+            this.TiTrongCacNganh.Name = "TiTrongCacNganh";
+            this.TiTrongCacNganh.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.TiTrongCacNganh.Series.Add(series1);
+            this.TiTrongCacNganh.Size = new System.Drawing.Size(661, 401);
+            this.TiTrongCacNganh.TabIndex = 1;
+            this.TiTrongCacNganh.Text = "chart2";
             // 
             // FDashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1304, 463);
+            this.ClientSize = new System.Drawing.Size(1344, 845);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FDashBoard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FDashBoard";
             this.Load += new System.EventHandler(this.FDashBoard_Load);
             this.panel2.ResumeLayout(false);
@@ -294,6 +363,10 @@
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TopNganhLuongCaoNhat)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TiTrongCacNganh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -319,5 +392,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox txtSoLuongCongTy;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart TopNganhLuongCaoNhat;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart TiTrongCacNganh;
     }
 }
