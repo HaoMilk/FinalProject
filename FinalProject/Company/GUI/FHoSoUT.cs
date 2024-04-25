@@ -61,10 +61,14 @@
                 {
                     input.TrangThai = TrangThaiUngTuyen.Approved;     
                 }
-                else
+                else if(comboBox_TrangThai.Text == "Hồ sơ bị loại")
                 {
                     input.TrangThai = TrangThaiUngTuyen.Rejected;
                 }
+                else
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Recruitmented;
+                }    
 
 
                 listUngTuyen = ungTuyenBUS.Search(input);

@@ -38,6 +38,8 @@ namespace FinalProject.UC
             new ComboBoxItem { Text = "Đã ứng tuyển", Value = TrangThaiUngTuyenConsts.Submitted },
             new ComboBoxItem { Text = "NTD đã xem hồ sơ", Value = TrangThaiUngTuyenConsts.Viewed },
             new ComboBoxItem { Text = "Đã duyệt hồ sơ", Value = TrangThaiUngTuyenConsts.Approved },
+            new ComboBoxItem { Text = "Đã hủy", Value = TrangThaiUngTuyenConsts.Cancel }
+
         };
         #endregion Constants
 

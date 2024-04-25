@@ -74,7 +74,7 @@
             this.button_Submit.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Submit.ForeColor = System.Drawing.SystemColors.Control;
             this.button_Submit.Location = new System.Drawing.Point(0, 719);
-            this.button_Submit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button_Submit.Margin = new System.Windows.Forms.Padding(5);
             this.button_Submit.Name = "button_Submit";
             this.button_Submit.Size = new System.Drawing.Size(1200, 70);
             this.button_Submit.TabIndex = 8;
@@ -93,7 +93,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 109);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -108,7 +108,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(5, 128);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.groupBox1.Size = new System.Drawing.Size(590, 112);
@@ -123,7 +123,7 @@
             this.textBox_TenUngVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_TenUngVien.ForeColor = System.Drawing.Color.MidnightBlue;
             this.textBox_TenUngVien.Location = new System.Drawing.Point(15, 41);
-            this.textBox_TenUngVien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox_TenUngVien.Margin = new System.Windows.Forms.Padding(5);
             this.textBox_TenUngVien.Name = "textBox_TenUngVien";
             this.textBox_TenUngVien.Size = new System.Drawing.Size(560, 34);
             this.textBox_TenUngVien.TabIndex = 0;
@@ -135,7 +135,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox5.Location = new System.Drawing.Point(605, 128);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.groupBox5.Size = new System.Drawing.Size(590, 112);
@@ -155,7 +155,7 @@
             this.ucComboBox_Cv.ItemHeight = 51;
             this.ucComboBox_Cv.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_Cv.Location = new System.Drawing.Point(15, 41);
-            this.ucComboBox_Cv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ucComboBox_Cv.Margin = new System.Windows.Forms.Padding(5);
             this.ucComboBox_Cv.Name = "ucComboBox_Cv";
             this.ucComboBox_Cv.SelectedItem = null;
             this.ucComboBox_Cv.Size = new System.Drawing.Size(560, 57);
@@ -168,7 +168,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(5, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.groupBox3.Size = new System.Drawing.Size(590, 112);
@@ -184,7 +184,7 @@
             this.textBox_TenCongTy.Enabled = false;
             this.textBox_TenCongTy.ForeColor = System.Drawing.Color.MidnightBlue;
             this.textBox_TenCongTy.Location = new System.Drawing.Point(15, 41);
-            this.textBox_TenCongTy.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox_TenCongTy.Margin = new System.Windows.Forms.Padding(5);
             this.textBox_TenCongTy.Name = "textBox_TenCongTy";
             this.textBox_TenCongTy.Size = new System.Drawing.Size(560, 34);
             this.textBox_TenCongTy.TabIndex = 1;
@@ -196,7 +196,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(605, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.groupBox2.Size = new System.Drawing.Size(590, 112);
@@ -212,7 +212,7 @@
             this.textBox_TenCongViec.Enabled = false;
             this.textBox_TenCongViec.ForeColor = System.Drawing.Color.MidnightBlue;
             this.textBox_TenCongViec.Location = new System.Drawing.Point(15, 41);
-            this.textBox_TenCongViec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox_TenCongViec.Margin = new System.Windows.Forms.Padding(5);
             this.textBox_TenCongViec.Name = "textBox_TenCongViec";
             this.textBox_TenCongViec.Size = new System.Drawing.Size(560, 34);
             this.textBox_TenCongViec.TabIndex = 1;
@@ -224,7 +224,7 @@
             this.groupBox_MoTa.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_MoTa.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox_MoTa.Location = new System.Drawing.Point(0, 355);
-            this.groupBox_MoTa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox_MoTa.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox_MoTa.Name = "groupBox_MoTa";
             this.groupBox_MoTa.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.groupBox_MoTa.Size = new System.Drawing.Size(1200, 364);
@@ -240,7 +240,7 @@
             this.richTextBox_MoTa.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox_MoTa.ForeColor = System.Drawing.Color.MidnightBlue;
             this.richTextBox_MoTa.Location = new System.Drawing.Point(15, 44);
-            this.richTextBox_MoTa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.richTextBox_MoTa.Margin = new System.Windows.Forms.Padding(5);
             this.richTextBox_MoTa.Name = "richTextBox_MoTa";
             this.richTextBox_MoTa.Size = new System.Drawing.Size(1170, 306);
             this.richTextBox_MoTa.TabIndex = 0;
@@ -262,6 +262,7 @@
             this.button_Huy.TabIndex = 11;
             this.button_Huy.Text = "HỦY ỨNG TUYỂN";
             this.button_Huy.UseVisualStyleBackColor = false;
+            this.button_Huy.Click += new System.EventHandler(this.button_Huy_Click);
             // 
             // FUngTuyenCongViec
             // 

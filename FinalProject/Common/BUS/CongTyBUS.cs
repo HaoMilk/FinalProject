@@ -87,5 +87,9 @@ namespace FinalProject.Common.BUS
             };
             return congTyDAO.GetAll(input).FirstOrDefault();
         }
+        public int AddFileWord(string url, int id)
+        {
+            return congTyDAO.AddfileWord(url, id);
+        }
     }
 }
