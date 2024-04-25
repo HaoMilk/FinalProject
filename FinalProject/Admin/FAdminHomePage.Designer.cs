@@ -33,10 +33,10 @@
             this.ucMenuCard_ViecLamUT = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DsCty = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard1 = new FinalProject.UC.UCMenuCard();
-            this.ucMenuCard2 = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_DashBoard = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard3 = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard4 = new FinalProject.UC.UCMenuCard();
-            this.ucMenuCard5 = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_DangXuat = new FinalProject.UC.UCMenuCard();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,24 +119,25 @@
             this.ucMenuCard1.Size = new System.Drawing.Size(220, 180);
             this.ucMenuCard1.TabIndex = 13;
             // 
-            // ucMenuCard2
+            // ucMenuCard_DashBoard
             // 
-            this.ucMenuCard2.BackColor = System.Drawing.Color.Transparent;
-            this.ucMenuCard2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMenuCard2.BorderRadious = 20;
-            this.ucMenuCard2.ButtonBackColor = System.Drawing.Color.Crimson;
-            this.ucMenuCard2.ButtonTextColor = System.Drawing.SystemColors.Control;
-            this.ucMenuCard2.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMenuCard2.Id = 0;
-            this.ucMenuCard2.Location = new System.Drawing.Point(21, 58);
-            this.ucMenuCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.ucMenuCard2.MenuBackColor = System.Drawing.Color.Azure;
-            this.ucMenuCard2.MenuImage = global::FinalProject.Properties.Resources.char_icon;
-            this.ucMenuCard2.MenuName = "DASHBOARD";
-            this.ucMenuCard2.Name = "ucMenuCard2";
-            this.ucMenuCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.ucMenuCard2.Size = new System.Drawing.Size(220, 180);
-            this.ucMenuCard2.TabIndex = 14;
+            this.ucMenuCard_DashBoard.BackColor = System.Drawing.Color.Transparent;
+            this.ucMenuCard_DashBoard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_DashBoard.BorderRadious = 20;
+            this.ucMenuCard_DashBoard.ButtonBackColor = System.Drawing.Color.Crimson;
+            this.ucMenuCard_DashBoard.ButtonTextColor = System.Drawing.SystemColors.Control;
+            this.ucMenuCard_DashBoard.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DashBoard.Id = 0;
+            this.ucMenuCard_DashBoard.Location = new System.Drawing.Point(21, 58);
+            this.ucMenuCard_DashBoard.Margin = new System.Windows.Forms.Padding(14);
+            this.ucMenuCard_DashBoard.MenuBackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_DashBoard.MenuImage = global::FinalProject.Properties.Resources.char_icon;
+            this.ucMenuCard_DashBoard.MenuName = "DASHBOARD";
+            this.ucMenuCard_DashBoard.Name = "ucMenuCard_DashBoard";
+            this.ucMenuCard_DashBoard.Padding = new System.Windows.Forms.Padding(14);
+            this.ucMenuCard_DashBoard.Size = new System.Drawing.Size(220, 180);
+            this.ucMenuCard_DashBoard.TabIndex = 14;
+            this.ucMenuCard_DashBoard.MenuClick += new System.EventHandler(this.ucMenuCard_DashBoard_MenuClick);
             // 
             // ucMenuCard3
             // 
@@ -176,35 +177,35 @@
             this.ucMenuCard4.Size = new System.Drawing.Size(220, 180);
             this.ucMenuCard4.TabIndex = 16;
             // 
-            // ucMenuCard5
+            // ucMenuCard_DangXuat
             // 
-            this.ucMenuCard5.BackColor = System.Drawing.Color.Transparent;
-            this.ucMenuCard5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ucMenuCard5.BorderRadious = 20;
-            this.ucMenuCard5.ButtonBackColor = System.Drawing.Color.Red;
-            this.ucMenuCard5.ButtonTextColor = System.Drawing.SystemColors.Control;
-            this.ucMenuCard5.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucMenuCard5.Id = 0;
-            this.ucMenuCard5.Location = new System.Drawing.Point(526, 247);
-            this.ucMenuCard5.Margin = new System.Windows.Forms.Padding(14);
-            this.ucMenuCard5.MenuBackColor = System.Drawing.Color.Azure;
-            this.ucMenuCard5.MenuImage = global::FinalProject.Properties.Resources.icons8_log_out_96;
-            this.ucMenuCard5.MenuName = "ĐĂNG XUẤT";
-            this.ucMenuCard5.Name = "ucMenuCard5";
-            this.ucMenuCard5.Padding = new System.Windows.Forms.Padding(14);
-            this.ucMenuCard5.Size = new System.Drawing.Size(220, 180);
-            this.ucMenuCard5.TabIndex = 17;
-            this.ucMenuCard5.MenuClick += new System.EventHandler(this.ucMenuCard5_MenuClick);
+            this.ucMenuCard_DangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.ucMenuCard_DangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_DangXuat.BorderRadious = 20;
+            this.ucMenuCard_DangXuat.ButtonBackColor = System.Drawing.Color.Red;
+            this.ucMenuCard_DangXuat.ButtonTextColor = System.Drawing.SystemColors.Control;
+            this.ucMenuCard_DangXuat.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DangXuat.Id = 0;
+            this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(526, 247);
+            this.ucMenuCard_DangXuat.Margin = new System.Windows.Forms.Padding(14);
+            this.ucMenuCard_DangXuat.MenuBackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_DangXuat.MenuImage = global::FinalProject.Properties.Resources.icons8_log_out_96;
+            this.ucMenuCard_DangXuat.MenuName = "ĐĂNG XUẤT";
+            this.ucMenuCard_DangXuat.Name = "ucMenuCard_DangXuat";
+            this.ucMenuCard_DangXuat.Padding = new System.Windows.Forms.Padding(14);
+            this.ucMenuCard_DangXuat.Size = new System.Drawing.Size(220, 180);
+            this.ucMenuCard_DangXuat.TabIndex = 17;
+            this.ucMenuCard_DangXuat.MenuClick += new System.EventHandler(this.ucMenuCard_DangXuat_MenuClick);
             // 
             // FAdminHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 496);
-            this.Controls.Add(this.ucMenuCard5);
+            this.Controls.Add(this.ucMenuCard_DangXuat);
             this.Controls.Add(this.ucMenuCard4);
             this.Controls.Add(this.ucMenuCard3);
-            this.Controls.Add(this.ucMenuCard2);
+            this.Controls.Add(this.ucMenuCard_DashBoard);
             this.Controls.Add(this.ucMenuCard1);
             this.Controls.Add(this.ucMenuCard_DsCty);
             this.Controls.Add(this.ucMenuCard_ViecLamUT);
@@ -227,9 +228,9 @@
         private UC.UCMenuCard ucMenuCard_ViecLamUT;
         private UC.UCMenuCard ucMenuCard_DsCty;
         private UC.UCMenuCard ucMenuCard1;
-        private UC.UCMenuCard ucMenuCard2;
+        private UC.UCMenuCard ucMenuCard_DashBoard;
         private UC.UCMenuCard ucMenuCard3;
         private UC.UCMenuCard ucMenuCard4;
-        private UC.UCMenuCard ucMenuCard5;
+        private UC.UCMenuCard ucMenuCard_DangXuat;
     }
 }

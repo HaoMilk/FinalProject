@@ -1,5 +1,6 @@
 ﻿
 using FinalProject.Admin.GUI;
+using FinalProject.Admin.GUI.ThongKe;
 using FinalProject.Admin.GUI.XetDuyet;
 using FinalProject.Candidate.GUI;
 using FinalProject.Common.GUI;
@@ -23,13 +24,21 @@ namespace FinalProject.Admin
             InitializeComponent();
         }
         #region ThongKe
-
+        private void ucMenuCard_DashBoard_MenuClick(object sender, EventArgs e)
+        {
+            FDashBoard fDashBoard = new FDashBoard();
+            fDashBoard.Show();
+        }
         #endregion
+
         #region XetDuyet
         #endregion XetDuyet
-        private void ucMenuCard5_MenuClick(object sender, EventArgs e)
+
+        private void ucMenuCard_DangXuat_MenuClick(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
