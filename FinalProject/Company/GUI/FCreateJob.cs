@@ -2,6 +2,7 @@
 using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -85,16 +86,16 @@ namespace FinalProject.Company.GUI
             }
             if (result > 0)
             {
-                MessageBox.Show("Lưu thành công");
+                UCMessageBox.Show("Lưu thành công");
                 //this.Close();
             }
             else if (result == -1)
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                UCMessageBox.Show("Vui lòng nhập đầy đủ thông tin");
             }
             else
             {
-                MessageBox.Show("Lưu thất bại");
+                UCMessageBox.Show("Lưu thất bại");
             }
         }
 
@@ -103,12 +104,12 @@ namespace FinalProject.Company.GUI
             var result = congViecBUS.SoftDelete(Id);
             if (result > 0)
             {
-                MessageBox.Show("Xoá thành công");
+                UCMessageBox.Show("Xoá thành công");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Xoá thất bại");
+                UCMessageBox.Show("Xoá thất bại");
             }
         }
 

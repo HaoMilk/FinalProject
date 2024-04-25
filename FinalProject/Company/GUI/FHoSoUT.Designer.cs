@@ -33,10 +33,10 @@
             this.ucPagination = new FinalProject.UC.UCPagination();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_Name = new System.Windows.Forms.GroupBox();
+            this.button_TimKiem = new System.Windows.Forms.Button();
             this.comboBox_TrangThai = new System.Windows.Forms.ComboBox();
             this.label_Name = new System.Windows.Forms.Label();
             this.flowLayoutPanel_Data = new System.Windows.Forms.FlowLayoutPanel();
-            this.button_TimKiem = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox_Name.SuspendLayout();
             this.SuspendLayout();
@@ -45,19 +45,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 721);
+            this.panel1.Location = new System.Drawing.Point(27, 712);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 19);
+            this.panel1.Size = new System.Drawing.Size(1026, 19);
             this.panel1.TabIndex = 0;
             // 
             // ucPagination
             // 
             this.ucPagination.CurrentPage = 1;
             this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(20, 740);
+            this.ucPagination.Location = new System.Drawing.Point(27, 731);
             this.ucPagination.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(1040, 47);
+            this.ucPagination.Size = new System.Drawing.Size(1026, 47);
             this.ucPagination.TabIndex = 9;
             this.ucPagination.TotalRecord = 0;
             this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
@@ -69,11 +69,11 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox_Name, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 91);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 91);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1040, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1026, 94);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // groupBox_Name
@@ -88,47 +88,10 @@
             this.groupBox_Name.Margin = new System.Windows.Forms.Padding(11);
             this.groupBox_Name.Name = "groupBox_Name";
             this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11);
-            this.groupBox_Name.Size = new System.Drawing.Size(1018, 72);
+            this.groupBox_Name.Size = new System.Drawing.Size(1004, 72);
             this.groupBox_Name.TabIndex = 15;
             this.groupBox_Name.TabStop = false;
             this.groupBox_Name.Text = "Tìm kiếm";
-            // 
-            // comboBox_TrangThai
-            // 
-            this.comboBox_TrangThai.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox_TrangThai.FormattingEnabled = true;
-            this.comboBox_TrangThai.Items.AddRange(new object[] {
-            "Hồ sơ đã duyệt",
-            "Hồ sơ chưa duyệt"});
-            this.comboBox_TrangThai.Location = new System.Drawing.Point(11, 32);
-            this.comboBox_TrangThai.Name = "comboBox_TrangThai";
-            this.comboBox_TrangThai.Size = new System.Drawing.Size(285, 29);
-            this.comboBox_TrangThai.TabIndex = 0;
-            this.comboBox_TrangThai.Text = "Tất cả";
-            // 
-            // label_Name
-            // 
-            this.label_Name.BackColor = System.Drawing.Color.OrangeRed;
-            this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.Color.Azure;
-            this.label_Name.Location = new System.Drawing.Point(20, 50);
-            this.label_Name.Name = "label_Name";
-            this.label_Name.Size = new System.Drawing.Size(1040, 41);
-            this.label_Name.TabIndex = 15;
-            this.label_Name.Text = "QUẢN LÝ CV";
-            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flowLayoutPanel_Data
-            // 
-            this.flowLayoutPanel_Data.BackColor = System.Drawing.Color.CadetBlue;
-            this.flowLayoutPanel_Data.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel_Data.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(20, 185);
-            this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
-            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(18, 19, 18, 19);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1040, 536);
-            this.flowLayoutPanel_Data.TabIndex = 17;
             // 
             // button_TimKiem
             // 
@@ -138,12 +101,49 @@
             this.button_TimKiem.FlatAppearance.BorderSize = 0;
             this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
-            this.button_TimKiem.Location = new System.Drawing.Point(934, 32);
+            this.button_TimKiem.Location = new System.Drawing.Point(920, 28);
             this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(73, 29);
+            this.button_TimKiem.Size = new System.Drawing.Size(73, 33);
             this.button_TimKiem.TabIndex = 3;
             this.button_TimKiem.UseVisualStyleBackColor = true;
             this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
+            // 
+            // comboBox_TrangThai
+            // 
+            this.comboBox_TrangThai.Dock = System.Windows.Forms.DockStyle.Left;
+            this.comboBox_TrangThai.FormattingEnabled = true;
+            this.comboBox_TrangThai.Items.AddRange(new object[] {
+            "Hồ sơ đã duyệt",
+            "Hồ sơ chưa duyệt"});
+            this.comboBox_TrangThai.Location = new System.Drawing.Point(11, 28);
+            this.comboBox_TrangThai.Name = "comboBox_TrangThai";
+            this.comboBox_TrangThai.Size = new System.Drawing.Size(285, 23);
+            this.comboBox_TrangThai.TabIndex = 0;
+            this.comboBox_TrangThai.Text = "Hồ sơ chưa duyệt";
+            // 
+            // label_Name
+            // 
+            this.label_Name.BackColor = System.Drawing.Color.OrangeRed;
+            this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_Name.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Name.ForeColor = System.Drawing.Color.Azure;
+            this.label_Name.Location = new System.Drawing.Point(27, 50);
+            this.label_Name.Name = "label_Name";
+            this.label_Name.Size = new System.Drawing.Size(1026, 41);
+            this.label_Name.TabIndex = 15;
+            this.label_Name.Text = "QUẢN LÝ CV";
+            this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel_Data
+            // 
+            this.flowLayoutPanel_Data.BackColor = System.Drawing.Color.CadetBlue;
+            this.flowLayoutPanel_Data.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel_Data.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel_Data.Location = new System.Drawing.Point(27, 185);
+            this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
+            this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(18, 19, 18, 19);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1026, 527);
+            this.flowLayoutPanel_Data.TabIndex = 17;
             // 
             // FHoSoUT
             // 

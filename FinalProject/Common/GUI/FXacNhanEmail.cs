@@ -26,12 +26,12 @@ namespace FinalProject.Common.GUI
             var result = _userBUS.VerifyOtp(LoggedUser.User.Id, otp);
             if (result == true)
             {
-                MessageBox.Show("Xác nhận email thành công");
+                UCMessageBox.Show("Xác nhận email thành công");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Mã OTP không đúng");
+                UCMessageBox.Show("Mã OTP không đúng");
             }
         }
     }

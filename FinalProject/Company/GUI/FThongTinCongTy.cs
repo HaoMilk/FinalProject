@@ -1,6 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,12 +46,12 @@ namespace FinalProject.Company.GUI.Thong_tin
             if (this.Id > 0)
             {
                 cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
-                MessageBox.Show("Cập nhật thành công");
+                UCMessageBox.Show("Cập nhật thành công");
             }
             else
             {
                 cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
-                MessageBox.Show("Thêm thành công");
+                UCMessageBox.Show("Thêm thành công");
             }
         }
 
@@ -69,7 +70,7 @@ namespace FinalProject.Company.GUI.Thong_tin
         {
             var ID = int.Parse(textBox_ID.Text);
             cty_BUS.Delete(ID);
-            MessageBox.Show("Xoá thành công");
+            UCMessageBox.Show("Xoá thành công");
 
         }
 

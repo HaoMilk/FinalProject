@@ -53,7 +53,7 @@ namespace FinalProject.Candidate.GUI
              
             if (result <= 0)
             {
-                MessageBox.Show("Có lỗi phát sinh !");
+                UCMessageBox.Show("Có lỗi phát sinh !");
                 return;
             }
             else
@@ -67,14 +67,14 @@ namespace FinalProject.Candidate.GUI
                     var result2 = userBUS.Update(user);
                     if (result2 <= 0)
                     {
-                        MessageBox.Show("Có lỗi phát sinh !");
+                        UCMessageBox.Show("Có lỗi phát sinh !");
                         return;
                     }
                 }
 
                 LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
                 this.FCandidateInfor_Load(sender, e);
-                MessageBox.Show("Bạn đã cập nhật thành công !");
+                UCMessageBox.Show("Bạn đã cập nhật thành công !");
             }
         }
 
@@ -118,7 +118,7 @@ namespace FinalProject.Candidate.GUI
                 if (uploadResult != null)
                 {
                     //// Do không đổi url ảnh, nên không cần update url ảnh trong database
-                    //MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    //UCMessageBox.Show("Cập nhật ảnh đại diện thành công !");
                     //pictureBox_Avatar.Load(openFileDialog.FileName);
 
                     string url = uploadResult.Url.ToString();
@@ -127,11 +127,11 @@ namespace FinalProject.Candidate.GUI
                     if (result > 0)
                     {
                         pictureBox_Avatar.Load(openFileDialog.FileName);
-                        MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                        UCMessageBox.Show("Cập nhật ảnh đại diện thành công !");
                     }
                     else
                     {
-                        MessageBox.Show("Có lỗi phát sinh !");
+                        UCMessageBox.Show("Có lỗi phát sinh !");
                     }
                 }
 
@@ -162,7 +162,7 @@ namespace FinalProject.Candidate.GUI
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi phát sinh !");
+                    UCMessageBox.Show("Có lỗi phát sinh !");
                 }
             }
         }

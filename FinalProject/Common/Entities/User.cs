@@ -22,12 +22,16 @@ namespace FinalProject.Database.Entities
 
         public int Id { get; set; }
         public string Username { get; set; }
+
+        /// <summary>
+        /// **WARNINGS**: Encrypted password (please use ToMD5() method to encrypt password)
+        /// </summary>
         public string Password
         {
             get => this._password;
             set
             {
-                this._password = value.ToMD5();
+                this._password = value;
             }
         }
         public string Email { get; set; } = string.Empty;
@@ -101,14 +105,16 @@ namespace FinalProject.Database.Entities
             this.IsEmailVerified = false;
         }
 
-        public SendEmailBySMTPOutput SendOtpVerifyEmail(string otp)
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(string otp, string title = "Xác thực tài khoản")
         {
-            var content = File.ReadAllText("Resources/Templates/SendOtpVerifyEmail.html", encoding: Encoding.UTF8);
+            var content = File.ReadAllText("Resources/Templates/SendOtpToEmail.html", encoding: Encoding.UTF8);
+            content = content.Replace("@EmailTitle", title);
+            content = content.Replace("@EmailContent", "Mã OTP xác thực tài khoản");
             content = content.Replace("@OTP", otp);
 
             var input = new SendEmailBySMTPInput
             {
-                Title = "Xác thực tài khoản",
+                Title = title,
                 Content = content,
                 Recipient = new List<string> { this.Email }
             };
