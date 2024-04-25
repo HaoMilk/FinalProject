@@ -74,7 +74,7 @@ namespace FinalProject
                 LoggedUser.UserId = user.Id;
                 LoggedUser.UserRole = UserRoleConst.Admin;
                 LoggedUser.User = user;
-                */
+                
                 this.Hide();
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();
