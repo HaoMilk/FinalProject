@@ -4,6 +4,7 @@ using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,7 +101,7 @@ namespace FinalProject.Common.BUS
             var isUsernameExisted = this.CheckUsernameExist(username, role);
             if (isUsernameExisted)
             {
-                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
+                UCMessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
                 return -1;
             }
 

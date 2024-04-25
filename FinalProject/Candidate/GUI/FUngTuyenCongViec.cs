@@ -148,11 +148,11 @@ namespace FinalProject.Candidate.GUI
             var result = ungTuyenBUS.Add(ungTuyen);
             if (result > 0)
             {
-                MessageBox.Show("Ứng tuyển thành công");
+                UCMessageBox.Show("Ứng tuyển thành công");
             }
             else
             {
-                MessageBox.Show("Ứng tuyển thất bại");
+                UCMessageBox.Show("Ứng tuyển thất bại");
             }
             this.Close();
         }

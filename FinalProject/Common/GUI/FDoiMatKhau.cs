@@ -27,33 +27,33 @@ namespace FinalProject.Common.GUI
             var nhapLaiMatKhau = textBox_NhapLaiMatKhau.Text;
             if(string.IsNullOrEmpty(matKhauCu))
             {
-                MessageBox.Show("Bạn chưa nhập mật khẩu cũ");
+                UCMessageBox.Show("Bạn chưa nhập mật khẩu cũ");
                 return;
             }
             if (string.IsNullOrEmpty(matKhauMoi))
                
             {
-                MessageBox.Show("Bạn chưa nhập mật khẩu mới");
+                UCMessageBox.Show("Bạn chưa nhập mật khẩu mới");
                 return;
             }
             if (string.IsNullOrEmpty(nhapLaiMatKhau))
             {
-                MessageBox.Show("Bạn chưa nhập lại mật khẩu");
+                UCMessageBox.Show("Bạn chưa nhập lại mật khẩu");
                 return;
             }
             if (matKhauCu != LoggedUser.User.Password)
             {
-                MessageBox.Show("Sai mật khẩu! Vui lòng nhập lại.");
+                UCMessageBox.Show("Sai mật khẩu! Vui lòng nhập lại.");
                 return;
             }
             if(matKhauMoi == matKhauCu)
             {
-                MessageBox.Show("Trùng mật khẩu cũ! Vui lòng nhập lại.");
+                UCMessageBox.Show("Trùng mật khẩu cũ! Vui lòng nhập lại.");
                 return;
             }
             if(matKhauMoi != nhapLaiMatKhau)
             {
-                MessageBox.Show("Không trùng khớp mật khẩu mới!");
+                UCMessageBox.Show("Không trùng khớp mật khẩu mới!");
                 return;
             }
 
@@ -61,11 +61,11 @@ namespace FinalProject.Common.GUI
             var result = userBUS.Update(LoggedUser.User); 
             if(result > 0)
             {
-                MessageBox.Show("Lưu thành công!");
+                UCMessageBox.Show("Lưu thành công!");
             }
             else
             {
-                MessageBox.Show("Lưu thất bại!");
+                UCMessageBox.Show("Lưu thất bại!");
             }
         }
 

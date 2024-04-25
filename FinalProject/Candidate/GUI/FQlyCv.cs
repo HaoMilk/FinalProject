@@ -119,15 +119,15 @@ namespace FinalProject.Candidate.GUI
 
             if (cvBUS.CheckExist(id) == 0)
             {
-                MessageBox.Show("Không tìm thấy CV");
+                UCMessageBox.Show("Không tìm thấy CV");
                 return;
             }
 
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa CV này?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (UCMessageBox.Show("Bạn có chắc chắn muốn xóa CV này?", "Xác nhận", UCMessageBox.MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 cvBUS.SoftDelete(id);
                 this.FQlyCv_Load(this, EventArgs.Empty);
-                MessageBox.Show("Xóa CV thành công");
+                UCMessageBox.Show("Xóa CV thành công");
             }
         }
     }
