@@ -90,6 +90,7 @@ namespace FinalProject.Candidate.GUI
                 textBox_Phone.Text = ungVien.SDT;
                 textBox_Email.Text = ungVien.Email;
                 richTextBox_ChuyenMon.Text = ungVien.ChuyenMon;
+                this.ucComboBox_Gender.SelectedIndex = this.ucComboBox_Gender.FindItemIndex(ungVien.GioiTinh);
             }
 
             if (LoggedUser.User != null)
@@ -102,7 +103,6 @@ namespace FinalProject.Candidate.GUI
 
                 this.ucComboBox_TrangThai.SelectedIndex = this.ucComboBox_TrangThai.FindItemIndex(LoggedUser.User.Status);
                 this.ucComboBox_TrangThaiEmail.SelectedIndex = this.ucComboBox_TrangThaiEmail.FindItemIndex(LoggedUser.User.IsEmailVerified);
-                this.ucComboBox_Gender.SelectedIndex = this.ucComboBox_Gender.FindItemIndex(LoggedUser.UngVien.GioiTinh);
             }
         }
 
