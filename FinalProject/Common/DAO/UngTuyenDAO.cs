@@ -202,5 +202,25 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
+        public int UpdateTrangThai(UngTuyen ungTuyen)
+        {
+            using (dbConnection.Connection)
+            {
+                string query = $@"
+                    UPDATE UngTuyen 
+                    SET TrangThai = N'{ungTuyen.TrangThai}',  
+                    WHERE Id = {ungTuyen.Id};";
+
+                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                try
+                {
+                    return cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
     }
 }
