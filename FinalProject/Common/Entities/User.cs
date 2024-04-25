@@ -22,12 +22,16 @@ namespace FinalProject.Database.Entities
 
         public int Id { get; set; }
         public string Username { get; set; }
+
+        /// <summary>
+        /// **WARNINGS**: Encrypted password (please use ToMD5() method to encrypt password)
+        /// </summary>
         public string Password
         {
             get => this._password;
             set
             {
-                this._password = value.ToMD5();
+                this._password = value;
             }
         }
         public string Email { get; set; } = string.Empty;
