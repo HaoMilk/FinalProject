@@ -19,6 +19,7 @@ namespace FinalProject.Company.GUI
         private CvBUS _cvBus = new CvBUS();
         private UngVienBUS _uvBus = new UngVienBUS();
         private UngTuyenBUS _utBUS = new UngTuyenBUS();
+        private UngTuyenGetAllInput input = new UngTuyenGetAllInput();
         private int id;
         private UngVien _uv;
         private CV _cv;
@@ -26,7 +27,8 @@ namespace FinalProject.Company.GUI
         private int result;
         public int Id
         {
-            get => id; set
+            get => id; 
+            set
             {
                 id = value;
                 _cv = _cvBus.GetById(id);

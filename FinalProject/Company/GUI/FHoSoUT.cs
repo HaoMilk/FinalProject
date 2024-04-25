@@ -66,7 +66,7 @@
                 for (int i = 0; i < listUngTuyen.Count; i++)
                     {
                         UCViewCV uCViewCV = new UCViewCV();
-                        uCViewCV.Id = listUngTuyen[i].CvId;
+                        uCViewCV.Id = listUngTuyen[i].Id;
                         uCViewCV.CvName = listUngTuyen[i].TenCv;
                         uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
                         uCViewCVs.Add(uCViewCV);
