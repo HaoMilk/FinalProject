@@ -19,8 +19,9 @@
     {
         public partial class FHoSoUT : UCForm
         {
-            private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
+            private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
             private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
+            UngTuyenGetAllInput input = new UngTuyenGetAllInput();
 
             public FHoSoUT()
             {
@@ -49,33 +50,29 @@
 
             private List<UCViewCV> CreateCvList(int quantity)
             {
-                listUngTuyen = ungTuyenDAO.GetAll(new UngTuyenGetAllInput {Id = LoggedUser.CongTy.ID});
 
                 List<UCViewCV> uCViewCVs = new List<UCViewCV>();
-
-                if (listUngTuyen.Count == 0)
+                input.IdCongTy = LoggedUser.CongTy.ID;
+                if (comboBox_TrangThai.Text == "Hồ sơ chưa duyệt" || comboBox_TrangThai.Text == "")
                 {
-                    return uCViewCVs;
-                }
-                if (comboBox_TrangThai.Text == "Hồ sơ chưa duyệt")
-                {
-                var filteredList = listUngTuyen.Where(ungTuyen => ungTuyen.TrangThai == "watting").ToList();
+                    input.TrangThai = "Submitted";
                 }
                 if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
                 {
-                    var filteredList = listUngTuyen.Where(ungTuyen => ungTuyen.TrangThai == "approved").ToList();
+                    input.TrangThai = "Approved";     
                 }
 
-            for (int i = 0; i < listUngTuyen.Count; i++)
-                {
-                    UCViewCV uCViewCV = new UCViewCV();
-                    uCViewCV.Id = listUngTuyen[i].CvId;
-                    uCViewCV.CvName = listUngTuyen[i].TenCv;
-                    uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
-                    uCViewCVs.Add(uCViewCV);
+                listUngTuyen = ungTuyenBUS.Search(input);
+                for (int i = 0; i < listUngTuyen.Count; i++)
+                    {
+                        UCViewCV uCViewCV = new UCViewCV();
+                        uCViewCV.Id = listUngTuyen[i].CvId;
+                        uCViewCV.CvName = listUngTuyen[i].TenCv;
+                        uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
+                        uCViewCVs.Add(uCViewCV);
+                    }
+                    return uCViewCVs;
                 }
-                return uCViewCVs;
-            }
             
 
             private void ucPagination_CurrentPageChanged(object sender, EventArgs e)

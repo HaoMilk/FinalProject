@@ -9,6 +9,7 @@ namespace FinalProject.Database.DTO
     public class UngTuyenGetAllInput
     {
         public int Id { get; set; }
+        public int IdCongTy { get; set; }
         public string TrangThai { get; set; }
     }
 }
