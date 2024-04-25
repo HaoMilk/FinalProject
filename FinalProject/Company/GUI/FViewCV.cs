@@ -25,7 +25,7 @@ namespace FinalProject.Company.GUI
         private CV _cv;
         private UngTuyenDTO _ut ;
         private int result;
-        public int Id
+        public int IdCV
         {
             get => id; 
             set
@@ -98,7 +98,12 @@ namespace FinalProject.Company.GUI
         {
             var ID = _ut.Id;
             var trangThai = _ut.TrangThai;
-            if(_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            {
+                MessageBox.Show("Hồ sơ đã bị loại bỏ");
+                return;
+            }
+            else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
             {
                 MessageBox.Show("Hồ sơ đã được duyệt");
                 return;
