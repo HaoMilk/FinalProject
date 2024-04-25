@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,10 @@ namespace FinalProject.Company.GUI
         private UngVienBUS _uvBus = new UngVienBUS();
         private UngTuyenBUS _utBUS = new UngTuyenBUS();
         private int id;
-        private UngVien UV;
+        private UngVien _uv;
         private CV _cv;
-
+        private UngTuyenDTO _ut ;
+        private int result;
         public int Id
         {
             get => id; set
@@ -36,8 +38,16 @@ namespace FinalProject.Company.GUI
             get => id; set
             {
                 id = value;
-                UV = _uvBus.GetById(id);
+                _uv = _uvBus.GetById(id);
                 this.LoadData();
+            }
+        }
+        public int IdUT
+        {
+            get => id; set
+            {
+                id = value;
+                _ut = _utBUS.GetById(id);
             }
         }
 
@@ -52,14 +62,14 @@ namespace FinalProject.Company.GUI
         }
         private void LoadData()
         {
-            if (UV != null)
+            if (_uv != null)
             {
-                textBox_HovaTen.Text = UV.HoTen;
-                textBox_Email.Text = UV.Email;
-                textBox_SoDienThoai.Text = UV.SDT;
-                textBox_DiaChi.Text = UV.DiaChi;
-                textBox_NgaySinh.Text = UV.NgaySinh.ToString();
-                textBox_GioiTinh.Text = UV.GioiTinh;
+                textBox_HovaTen.Text = _uv.HoTen;
+                textBox_Email.Text = _uv.Email;
+                textBox_SoDienThoai.Text = _uv.SDT;
+                textBox_DiaChi.Text = _uv.DiaChi;
+                textBox_NgaySinh.Text = _uv.NgaySinh.ToString();
+                textBox_GioiTinh.Text = _uv.GioiTinh;
             }
 
             if (_cv != null)
@@ -84,7 +94,53 @@ namespace FinalProject.Company.GUI
 
         private void button_Duyet_Click(object sender, EventArgs e)
         {
-            
+            var ID = _ut.Id;
+            var trangThai = _ut.TrangThai;
+            if(_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            {
+                MessageBox.Show("Hồ sơ đã được duyệt");
+                return;
+            }
+            else
+            {
+                trangThai = TrangThaiUngTuyen.Approved;
+            }
+            result = _utBUS.UpdateTrangThai(ID, trangThai);
+            if(result!=0)
+            {
+                MessageBox.Show("Duyệt thành công");
+            }
+            else
+            {
+                MessageBox.Show("Duyệt không thành công");
+
+            }
+        }
+
+        private void button_Loai_Click(object sender, EventArgs e)
+        {
+            var ID = _ut.Id;
+            var trangThai = _ut.TrangThai;
+            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            {
+                MessageBox.Show("Hồ sơ đã được loại bỏ");
+                return;
+            }
+            else
+            {
+                trangThai = TrangThaiUngTuyen.Rejected;
+            }
+
+            result = _utBUS.UpdateTrangThai(ID, trangThai);
+            if (result != 0)
+            {
+                MessageBox.Show("Loại bỏ thành công");
+            }
+            else
+            {
+                MessageBox.Show("Loại bỏ không thành công");
+
+            }
         }
     }
 }

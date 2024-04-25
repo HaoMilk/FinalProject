@@ -55,11 +55,11 @@
                 input.IdCongTy = LoggedUser.CongTy.ID;
                 if (comboBox_TrangThai.Text == "Hồ sơ chưa duyệt" || comboBox_TrangThai.Text == "")
                 {
-                    input.TrangThai = "Submitted";
+                    input.TrangThai = TrangThaiUngTuyen.Submitted;
                 }
                 if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
                 {
-                    input.TrangThai = "Approved";     
+                    input.TrangThai = TrangThaiUngTuyen.Approved;     
                 }
 
                 listUngTuyen = ungTuyenBUS.Search(input);
@@ -73,16 +73,10 @@
                     }
                     return uCViewCVs;
                 }
-            
 
             private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
             {
                 LoadCvList();
-            }
-
-
-            private void textBox_TenCv_KeyDown(object sender, KeyEventArgs e)
-            {
             }
 
             private void button_TimKiem_Click(object sender, EventArgs e)

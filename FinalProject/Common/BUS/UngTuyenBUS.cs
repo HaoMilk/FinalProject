@@ -97,5 +97,12 @@ namespace FinalProject.Common.BUS
         {
             return ungTuyenDAO.GetAll(input);
         }
+        public int UpdateTrangThai(int id, string trangthai)
+        {
+            UngTuyen ut = new UngTuyen();
+            ut.Id = id;
+            ut.TrangThai = trangthai;
+            return ungTuyenDAO.UpdateTrangThai(ut);
+        }
     }
 }
