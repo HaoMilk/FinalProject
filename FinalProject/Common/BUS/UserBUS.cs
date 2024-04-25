@@ -112,7 +112,7 @@ namespace FinalProject.Common.BUS
                 Password = plainPassword.ToMD5(),
                 Role = role
             };
-            var userId = _userDAO.Add(user);
+            var userId = this.Add(user);
             if (userId > 0)
             {
                 if (role == UserRoleConst.Candidate)
