@@ -1,4 +1,5 @@
 ﻿using FinalProject.Admin;
+using FinalProject.Common;
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI;
 using FinalProject.Company.GUI.Thong_tin;
@@ -50,6 +51,7 @@ namespace FinalProject.Company
         {
             this.Hide();
             FThongTinCongTy fThongTin = new FThongTinCongTy();
+            fThongTin.Id = LoggedUser.CongTy.ID;
             fThongTin.ShowDialog();
             this.Show();
         }

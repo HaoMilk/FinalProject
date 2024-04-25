@@ -251,7 +251,7 @@ namespace FinalProject.UC
             }
             else
             {
-                //MessageBox.Show($"View id = {id}");
+                //UCMessageBox.Show($"View id = {id}");
 
                 FChiTietCongViec fChiTietCv = new FChiTietCongViec();
                 fChiTietCv.Id = id;
@@ -270,8 +270,7 @@ namespace FinalProject.UC
             }
             else
             {
-                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec();
-                fUngTuyenCongViec.UngTuyenId = LoggedUser.UserId;
+                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec(this.UngTuyenId);              
                 fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
                 fUngTuyenCongViec.CongViecId = id;
                 fUngTuyenCongViec.ShowDialog();

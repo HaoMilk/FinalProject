@@ -29,7 +29,7 @@ namespace FinalProject.Candidate.GUI
             InitializeComponent();
 
             // Ẩn button xác nhận email nếu email đã được xác nhận
-            this.button_XacNhanEmail.Visible = !LoggedUser.User.IsEmailVerified;
+            this.button_XacNhanEmail.Enabled = !LoggedUser.User.IsEmailVerified;
             this.ucComboBox_TrangThai.Items = UCComboBox.UserSatusItems;
             this.ucComboBox_TrangThaiEmail.Items = UCComboBox.EmailStatusItems;
             this.ucComboBox_Gender.Items = UCComboBox.GenderItems;
@@ -50,15 +50,32 @@ namespace FinalProject.Candidate.GUI
 
             var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
-
+             
             if (result <= 0)
             {
-                MessageBox.Show("Có lỗi phát sinh !");
+                UCMessageBox.Show("Có lỗi phát sinh !");
                 return;
             }
+            else
+            {
+                // Cần xác nhận email lại nếu email đã thay đổi
+                if (email != LoggedUser.User.Email)
+                {
+                    var user = LoggedUser.User;
+                    user.Email = email;
+                    user.IsEmailVerified = false;
+                    var result2 = userBUS.Update(user);
+                    if (result2 <= 0)
+                    {
+                        UCMessageBox.Show("Có lỗi phát sinh !");
+                        return;
+                    }
+                }
 
-            LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
-            MessageBox.Show("Bạn đã cập nhật thành công !");
+                LoggedUser.UngVien = ungVienBUS.GetByUserId(LoggedUser.UserId);
+                this.FCandidateInfor_Load(sender, e);
+                UCMessageBox.Show("Bạn đã cập nhật thành công !");
+            }
         }
 
         private void FCandidateInfor_Load(object sender, EventArgs e)
@@ -101,7 +118,7 @@ namespace FinalProject.Candidate.GUI
                 if (uploadResult != null)
                 {
                     //// Do không đổi url ảnh, nên không cần update url ảnh trong database
-                    //MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                    //UCMessageBox.Show("Cập nhật ảnh đại diện thành công !");
                     //pictureBox_Avatar.Load(openFileDialog.FileName);
 
                     string url = uploadResult.Url.ToString();
@@ -110,11 +127,11 @@ namespace FinalProject.Candidate.GUI
                     if (result > 0)
                     {
                         pictureBox_Avatar.Load(openFileDialog.FileName);
-                        MessageBox.Show("Cập nhật ảnh đại diện thành công !");
+                        UCMessageBox.Show("Cập nhật ảnh đại diện thành công !");
                     }
                     else
                     {
-                        MessageBox.Show("Có lỗi phát sinh !");
+                        UCMessageBox.Show("Có lỗi phát sinh !");
                     }
                 }
 
@@ -136,11 +153,16 @@ namespace FinalProject.Candidate.GUI
 
                 if (result.IsSuccess)
                 {
-                    MessageBox.Show("Mã xác nhận đã được gửi đến email của bạn !");
+                    FXacNhanEmail fXacNhanEmail = new FXacNhanEmail();
+                    fXacNhanEmail.ShowDialog();
+
+                    // Cập nhật lại thông tin user
+                    LoggedUser.User = userBUS.GetById(LoggedUser.User.Id);
+                    this.FCandidateInfor_Load(sender, e);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi phát sinh !");
+                    UCMessageBox.Show("Có lỗi phát sinh !");
                 }
             }
         }

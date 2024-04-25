@@ -4,6 +4,7 @@ using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,7 +101,7 @@ namespace FinalProject.Common.BUS
             var isUsernameExisted = this.CheckUsernameExist(username, role);
             if (isUsernameExisted)
             {
-                MessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
+                UCMessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
                 return -1;
             }
 
@@ -111,7 +112,7 @@ namespace FinalProject.Common.BUS
                 Password = plainPassword.ToMD5(),
                 Role = role
             };
-            var userId = _userDAO.Add(user);
+            var userId = this.Add(user);
             if (userId > 0)
             {
                 if (role == UserRoleConst.Candidate)
@@ -120,7 +121,7 @@ namespace FinalProject.Common.BUS
                     {
                         UserId = userId,
                         NgaySinh = DateTime.Now,
-                        TrangThai = "Active",
+                        TrangThai = StatusConst.Active,
                         CreatedTime = DateTime.Now,
                     };
                     result = _ungVienBUS.Add(ungVien);
@@ -157,11 +158,17 @@ namespace FinalProject.Common.BUS
             return result > 0;
         }
 
-        public SendEmailBySMTPOutput SendOtpVerifyEmail(User user)
+        /// <summary>
+        /// Gửi mã OTP qua email để xác thực
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(User user, string title = null)
         {
             var otp = new Random().Next(100000, 999999).ToString();
             var otpExpiredTime = DateTime.Now.AddDays(1);
-            var output = user.SendOtpVerifyEmail(otp);
+            var output = user.SendOtpVerifyEmail(otp, title);
 
             if (output != null && output.IsSuccess)
             {
@@ -177,6 +184,29 @@ namespace FinalProject.Common.BUS
             }
 
             return output;
+        }
+
+        public bool VerifyOtp(int id, string otp)
+        {
+            var user = GetById(id);
+            if (user == null)
+            {
+                return false;
+            }
+
+            if (user.VerifyOtp(otp) == false)
+            {
+                return false;
+            }
+            else
+            {
+
+                user.Otp = null;
+                user.OtpExpiredTime = null;
+                user.IsEmailVerified = true;
+                var result = _userDAO.Update(user);
+                return result > 0;
+            }
         }
     }
 }

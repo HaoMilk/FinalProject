@@ -65,12 +65,12 @@ namespace FinalProject.Candidate.GUI
             if (result > 0)
             {
                 this.Id = Id;
-                MessageBox.Show("Lưu thành công");
+                UCMessageBox.Show("Lưu thành công");
                 //this.Close();
             }
             else
             {
-                MessageBox.Show("Lưu thất bại");
+                UCMessageBox.Show("Lưu thất bại");
             }
         }
 
@@ -113,11 +113,11 @@ namespace FinalProject.Candidate.GUI
             if (!string.IsNullOrEmpty(filePath))
             {
                 Process.Start("explorer.exe", "/select," + Path.GetFullPath(filePath));
-                MessageBox.Show("Xuất file thành công");
+                UCMessageBox.Show("Xuất file thành công");
             }
             else
             {
-                MessageBox.Show("Xuất file thất bại");
+                UCMessageBox.Show("Xuất file thất bại");
             }
         }
     }

@@ -45,6 +45,11 @@ namespace FinalProject.UC
         {
             get
             {
+                if (base.Items.Count == 0)
+                {
+                    return new ComboBoxItem[0];
+                }
+
                 var items = new ComboBoxItem[base.Items.Count];
                 for (int i = 0; i < base.Items.Count; i++)
                 {

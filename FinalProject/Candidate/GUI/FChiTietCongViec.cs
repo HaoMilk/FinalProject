@@ -98,6 +98,7 @@ namespace FinalProject.Candidate.GUI
                 textBox_Nganh.Text = congViec.Nganh;
                 textBox_SoLuong.Text = congViec.SoLuong.ToString() ;
                 richTextBox_YeuCau.Text = congViec.YeuCauUngVien;
+                dateTimePicker_NgayBatDau.Value = congViec.FromDate;
             }
         }
 

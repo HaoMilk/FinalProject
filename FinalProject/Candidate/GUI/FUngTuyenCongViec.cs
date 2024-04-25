@@ -90,8 +90,25 @@ namespace FinalProject.Candidate.GUI
         public FUngTuyenCongViec()
         {
             InitializeComponent();
+            button_Submit.Visible = true;
+            button_Huy.Visible = false;
+            
         }
-
+        public FUngTuyenCongViec(int? ungTuyenId)
+        {
+            InitializeComponent();
+            this.UngTuyenId = ungTuyenId;
+            if (UngTuyenId == null || UngTuyenId == 0)
+            {
+                button_Submit.Visible = true;
+                button_Huy.Visible = false;
+            }
+            else
+            {
+                button_Submit.Visible = false;
+                button_Huy.Visible = true;
+            }
+        }
         private void FUngTuyenCongViec_Load(object sender, EventArgs e)
         {
             LoadCv();
@@ -131,11 +148,11 @@ namespace FinalProject.Candidate.GUI
             var result = ungTuyenBUS.Add(ungTuyen);
             if (result > 0)
             {
-                MessageBox.Show("Ứng tuyển thành công");
+                UCMessageBox.Show("Ứng tuyển thành công");
             }
             else
             {
-                MessageBox.Show("Ứng tuyển thất bại");
+                UCMessageBox.Show("Ứng tuyển thất bại");
             }
             this.Close();
         }
