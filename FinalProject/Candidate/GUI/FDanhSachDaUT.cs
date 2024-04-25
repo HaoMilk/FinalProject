@@ -77,7 +77,7 @@ namespace FinalProject.Candidate.GUI
         private void UcJobCard_ViewClick(object sender, EventArgs e)
         {
             var ucJobCard = sender as UCJobCard;
-            MessageBox.Show($"Xem chi tiết công việc: {ucJobCard.Id}");
+            UCMessageBox.Show($"Xem chi tiết công việc: {ucJobCard.Id}");
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace FinalProject.Candidate.GUI
         private void UcJobCard_MenuClick(object sender, EventArgs e)
         {
             var ucJobCard = sender as UCJobCard;
-            MessageBox.Show($"Menu công việc: {ucJobCard.Id}");
+            UCMessageBox.Show($"Menu công việc: {ucJobCard.Id}");
         }
         #endregion JobList
 

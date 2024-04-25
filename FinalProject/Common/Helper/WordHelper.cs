@@ -1,4 +1,5 @@
 ﻿using FinalProject.Database.Entities;
+using FinalProject.UC;
 using NPOI.XWPF.UserModel;
 using System;
 using System.Collections.Generic;
@@ -96,7 +97,7 @@ namespace FinalProject.Common.Helper
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi xuất file", MessageBoxButton.OK, MessageBoxImage.Error);
+                UCMessageBox.Show(ex.Message, "Lỗi xuất file", UCMessageBox.MessageBoxButtons.OK);
                 return null;
             }
 

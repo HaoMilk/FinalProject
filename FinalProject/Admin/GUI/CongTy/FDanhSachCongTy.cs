@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using FinalProject.Admin.GUI.CongTy;
+using FinalProject.UC;
 
 namespace FinalProject.Admin
 {
@@ -45,7 +46,7 @@ namespace FinalProject.Admin
             }
             catch(Exception ex) 
             {
-                MessageBox.Show(ex.Message);
+                UCMessageBox.Show(ex.Message);
             }
             finally
             {

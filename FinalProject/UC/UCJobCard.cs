@@ -251,7 +251,7 @@ namespace FinalProject.UC
             }
             else
             {
-                //MessageBox.Show($"View id = {id}");
+                //UCMessageBox.Show($"View id = {id}");
 
                 FChiTietCongViec fChiTietCv = new FChiTietCongViec();
                 fChiTietCv.Id = id;

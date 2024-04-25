@@ -1,4 +1,5 @@
 ﻿using FinalProject.Admin.GUI.CongViec;
+using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,7 +97,7 @@ namespace FinalProject.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                UCMessageBox.Show(ex.Message);
             }
         }
         #endregion ComboBox
@@ -118,7 +119,7 @@ namespace FinalProject.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                UCMessageBox.Show(ex.Message);
             }
             finally
             {
@@ -158,7 +159,7 @@ namespace FinalProject.Admin
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                UCMessageBox.Show(ex.Message);
             }
             finally
             {
