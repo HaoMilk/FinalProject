@@ -101,14 +101,16 @@ namespace FinalProject.Database.Entities
             this.IsEmailVerified = false;
         }
 
-        public SendEmailBySMTPOutput SendOtpVerifyEmail(string otp)
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(string otp, string title = "Xác thực tài khoản")
         {
-            var content = File.ReadAllText("Resources/Templates/SendOtpVerifyEmail.html", encoding: Encoding.UTF8);
+            var content = File.ReadAllText("Resources/Templates/SendOtpToEmail.html", encoding: Encoding.UTF8);
+            content = content.Replace("@EmailTitle", title);
+            content = content.Replace("@EmailContent", "Mã OTP xác thực tài khoản");
             content = content.Replace("@OTP", otp);
 
             var input = new SendEmailBySMTPInput
             {
-                Title = "Xác thực tài khoản",
+                Title = title,
                 Content = content,
                 Recipient = new List<string> { this.Email }
             };

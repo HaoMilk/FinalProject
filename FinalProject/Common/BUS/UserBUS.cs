@@ -121,7 +121,7 @@ namespace FinalProject.Common.BUS
                     {
                         UserId = userId,
                         NgaySinh = DateTime.Now,
-                        TrangThai = "Active",
+                        TrangThai = StatusConst.Active,
                         CreatedTime = DateTime.Now,
                     };
                     result = _ungVienBUS.Add(ungVien);
@@ -158,11 +158,17 @@ namespace FinalProject.Common.BUS
             return result > 0;
         }
 
-        public SendEmailBySMTPOutput SendOtpVerifyEmail(User user)
+        /// <summary>
+        /// Gửi mã OTP qua email để xác thực
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        public SendEmailBySMTPOutput SendOtpVerifyEmail(User user, string title = null)
         {
             var otp = new Random().Next(100000, 999999).ToString();
             var otpExpiredTime = DateTime.Now.AddDays(1);
-            var output = user.SendOtpVerifyEmail(otp);
+            var output = user.SendOtpVerifyEmail(otp, title);
 
             if (output != null && output.IsSuccess)
             {
