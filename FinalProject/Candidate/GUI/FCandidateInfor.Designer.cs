@@ -120,8 +120,8 @@ namespace FinalProject.Candidate.GUI
             // 
             this.flowLayoutPanel1.Controls.Add(this.button_ChangeAvatar);
             this.flowLayoutPanel1.Controls.Add(this.button_DoiMatKhau);
-            this.flowLayoutPanel1.Controls.Add(this.button_XacNhanEmail);
             this.flowLayoutPanel1.Controls.Add(this.button_Save);
+            this.flowLayoutPanel1.Controls.Add(this.button_XacNhanEmail);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(883, 329);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -177,7 +177,7 @@ namespace FinalProject.Candidate.GUI
             this.button_XacNhanEmail.Font = new System.Drawing.Font("Constantia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_XacNhanEmail.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_XacNhanEmail.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_XacNhanEmail.Location = new System.Drawing.Point(16, 93);
+            this.button_XacNhanEmail.Location = new System.Drawing.Point(150, 93);
             this.button_XacNhanEmail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_XacNhanEmail.Name = "button_XacNhanEmail";
             this.button_XacNhanEmail.Size = new System.Drawing.Size(128, 72);
@@ -196,7 +196,7 @@ namespace FinalProject.Candidate.GUI
             this.button_Save.Font = new System.Drawing.Font("Constantia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Save.Location = new System.Drawing.Point(152, 93);
+            this.button_Save.Location = new System.Drawing.Point(16, 93);
             this.button_Save.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(126, 72);

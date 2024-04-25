@@ -178,5 +178,28 @@ namespace FinalProject.Common.BUS
 
             return output;
         }
+
+        public bool VerifyOtp(int id, string otp)
+        {
+            var user = GetById(id);
+            if (user == null)
+            {
+                return false;
+            }
+
+            if (user.VerifyOtp(otp) == false)
+            {
+                return false;
+            }
+            else
+            {
+
+                user.Otp = null;
+                user.OtpExpiredTime = null;
+                user.IsEmailVerified = true;
+                var result = _userDAO.Update(user);
+                return result > 0;
+            }
+        }
     }
 }
