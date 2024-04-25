@@ -228,6 +228,12 @@
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\Class\ChartHelper.cs" />
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.Designer.cs">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\ThongKe\FDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,6 +522,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.resx">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\ThongKe\FDashBoard.resx">
       <DependentUpon>FDashBoard.cs</DependentUpon>

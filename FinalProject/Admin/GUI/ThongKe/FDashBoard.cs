@@ -30,7 +30,6 @@ namespace FinalProject.Admin.GUI.ThongKe
             string query = "SELECT COUNT(*) FROM CongTy";
             return chartHelper.DemSo(query, connectionString);
         }
-
         private void FDashBoard_Load(object sender, EventArgs e)
         {
             int soCV = DemSoCongViec(conn);
@@ -43,7 +42,7 @@ namespace FinalProject.Admin.GUI.ThongKe
             txtSoLuongCongTy.Text = soCty.ToString();
 
             DataTable dataTableMucLuong = LayDuLieuTongLuongTheoNganh(conn);
-            ChartHelper.ThemDuLieu(TopNganhLuongCaoNhat, dataTableMucLuong, "Nganh", "TongLuong", "Ngành", "Tổng Lương", SeriesChartType.Column, "TOP NHỮNG NGÀNH LƯƠNG CAO NHẤT");
+            ChartHelper.ThemDuLieu(TopNganhLuongCaoNhat, dataTableMucLuong, "Nganh", "TongLuong", "Ngành", "Tổng Lương", SeriesChartType.Column, "TOP NHỮNG NGÀNH LƯƠNG CAO NHẤT TRONG HỆ THỐNG");
 
             DataTable dataTableSoLuong = LayDuLieuSoLuongTheoNganh(conn);
             ChartHelper.ThemDuLieu(TiTrongCacNganh, dataTableSoLuong, "Nganh", "SoLuong", "Ngành", "Số Lượng", SeriesChartType.Pie,"TỈ TRỌNG GIỮA CÁC NGÀNH");
