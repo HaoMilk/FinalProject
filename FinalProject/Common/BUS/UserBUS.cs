@@ -95,6 +95,25 @@ namespace FinalProject.Common.BUS
             var user = _userDAO.GetAll(input).FirstOrDefault();
             return user != null;
         }
+        public bool CheckEmailExist(string email)
+        {
+            var input = new UserGetAllInput
+            {
+                Email = email
+            };
+            var user = _userDAO.GetAll(input).FirstOrDefault();
+            return user != null;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            var input = new UserGetAllInput
+            {
+                Email = email
+            };
+            var user = _userDAO.GetAll(input).FirstOrDefault();
+            return user;
+        }
 
         public int Signup(string username, string plainPassword, string role)
         {

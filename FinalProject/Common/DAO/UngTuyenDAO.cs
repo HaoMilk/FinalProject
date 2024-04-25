@@ -208,7 +208,7 @@ namespace FinalProject.Common.DAO
             {
                 string query = $@"
                     UPDATE UngTuyen 
-                    SET TrangThai = N'{ungTuyen.TrangThai}',  
+                    SET TrangThai = N'{ungTuyen.TrangThai}'  
                     WHERE Id = {ungTuyen.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);

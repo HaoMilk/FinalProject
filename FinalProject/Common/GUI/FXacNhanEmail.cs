@@ -14,16 +14,17 @@ namespace FinalProject.Common.GUI
 {
     public partial class FXacNhanEmail : UCForm
     {
+        public bool Result {  get; set; }
         private UserBUS _userBUS = new UserBUS();
         public FXacNhanEmail()
         {
             InitializeComponent();
         }
-
         private void button_OK_Click(object sender, EventArgs e)
         {
             var otp = textBox_OTP.Text;
             var result = _userBUS.VerifyOtp(LoggedUser.User.Id, otp);
+            this.Result = result;
             if (result == true)
             {
                 UCMessageBox.Show("Xác nhận email thành công");

@@ -26,5 +26,6 @@ namespace FinalProject.Database.Entities
         public const string Submitted = "Submitted";
         public const string Approved = "Approved";
         public const string Rejected = "Rejected";
+        public const string Recruitmented = "Recruitmented";
     }
 }

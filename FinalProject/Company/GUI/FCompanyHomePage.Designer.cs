@@ -49,7 +49,7 @@
             this.pictureBox_Image.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(1051, 472);
+            this.pictureBox_Image.Size = new System.Drawing.Size(1168, 695);
             this.pictureBox_Image.TabIndex = 7;
             this.pictureBox_Image.TabStop = false;
             // 
@@ -70,7 +70,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1051, 472);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1168, 695);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // ucMenuCard_TaoViecLam
@@ -113,9 +113,6 @@
             this.ucMenuCard_DSViecLam.TabIndex = 1;
             this.ucMenuCard_DSViecLam.MenuClick += new System.EventHandler(this.ucMenuCard_DSViecLam_MenuClick);
             // 
-            // ucMenuCard_DsCV
-            // 
-            // 
             // ucMenuCard_HSChuaDuyet
             // 
             this.ucMenuCard_HSChuaDuyet.BackColor = System.Drawing.Color.Transparent;
@@ -125,7 +122,7 @@
             this.ucMenuCard_HSChuaDuyet.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_HSChuaDuyet.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_HSChuaDuyet.Id = 0;
-            this.ucMenuCard_HSChuaDuyet.Location = new System.Drawing.Point(601, 21);
+            this.ucMenuCard_HSChuaDuyet.Location = new System.Drawing.Point(534, 25);
             this.ucMenuCard_HSChuaDuyet.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_HSChuaDuyet.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_HSChuaDuyet.MenuImage = global::FinalProject.Properties.Resources.icons8_data_pending_64;
@@ -145,9 +142,8 @@
             this.ucMenuCard_LichSuCongViec.ButtonTextColor = System.Drawing.Color.RoyalBlue;
             this.ucMenuCard_LichSuCongViec.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_LichSuCongViec.Id = 0;
-            this.ucMenuCard_LichSuCongViec.Location = new System.Drawing.Point(891, 21);
+            this.ucMenuCard_LichSuCongViec.Location = new System.Drawing.Point(778, 25);
             this.ucMenuCard_LichSuCongViec.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
-
             this.ucMenuCard_LichSuCongViec.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_LichSuCongViec.MenuImage = global::FinalProject.Properties.Resources.icons8_history_64;
             this.ucMenuCard_LichSuCongViec.MenuName = "Lịch sử tuyển dụng";
@@ -166,7 +162,7 @@
             this.ucMenuCard_ThongTin.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_ThongTin.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_ThongTin.Id = 0;
-            this.ucMenuCard_ThongTin.Location = new System.Drawing.Point(21, 287);
+            this.ucMenuCard_ThongTin.Location = new System.Drawing.Point(26, 241);
             this.ucMenuCard_ThongTin.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_ThongTin.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_ThongTin.MenuImage = global::FinalProject.Properties.Resources.icons8_company_96;
@@ -186,7 +182,7 @@
             this.ucMenuCard_DoiMatKhau.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DoiMatKhau.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DoiMatKhau.Id = 0;
-            this.ucMenuCard_DoiMatKhau.Location = new System.Drawing.Point(311, 287);
+            this.ucMenuCard_DoiMatKhau.Location = new System.Drawing.Point(270, 241);
             this.ucMenuCard_DoiMatKhau.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.ucMenuCard_DoiMatKhau.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DoiMatKhau.MenuImage = global::FinalProject.Properties.Resources.icons8_password_144;
@@ -206,9 +202,8 @@
             this.ucMenuCard_DangXuat.ButtonTextColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DangXuat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucMenuCard_DangXuat.Id = 0;
-            this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(601, 287);
+            this.ucMenuCard_DangXuat.Location = new System.Drawing.Point(514, 241);
             this.ucMenuCard_DangXuat.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
-
             this.ucMenuCard_DangXuat.MenuBackColor = System.Drawing.Color.Azure;
             this.ucMenuCard_DangXuat.MenuImage = global::FinalProject.Properties.Resources.icons8_log_out_96;
             this.ucMenuCard_DangXuat.MenuName = "Đăng xuất";
@@ -222,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 472);
+            this.ClientSize = new System.Drawing.Size(1168, 695);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox_Image);
             this.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
