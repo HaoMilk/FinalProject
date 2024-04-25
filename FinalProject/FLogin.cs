@@ -53,7 +53,7 @@ namespace FinalProject
                 var user = userBUS.Login(username, password, UserRoleConst.Candidate);
                 if (user == null)
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                     return;
                 }
 
@@ -74,7 +74,7 @@ namespace FinalProject
                 var user = userBUS.Login(username, password, UserRoleConst.Admin);
                 if (user == null)
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                     return;
                 }
 
@@ -94,7 +94,7 @@ namespace FinalProject
                 var user = userBUS.Login(username, password, UserRoleConst.Employer);
                 if (user == null)
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
                     return;
                 }
 
@@ -119,7 +119,7 @@ namespace FinalProject
 
         private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Quên mật khẩu");
+            UCMessageBox.Show("Quên mật khẩu");
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace FinalProject
         {
             if (String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
+                UCMessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
                 return false;
             }    
             return true;

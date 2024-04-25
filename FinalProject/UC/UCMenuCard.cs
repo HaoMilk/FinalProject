@@ -159,7 +159,7 @@ namespace FinalProject.UC
             }
             else
             {
-                MessageBox.Show("Menu clicked");
+                UCMessageBox.Show("Menu clicked");
             }
         }
 

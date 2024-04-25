@@ -1,4 +1,5 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Common.Helper;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -27,61 +28,58 @@ namespace FinalProject.Common.GUI
             var nhapLaiMatKhau = textBox_NhapLaiMatKhau.Text;
             if(string.IsNullOrEmpty(matKhauCu))
             {
-                MessageBox.Show("Bạn chưa nhập mật khẩu cũ");
+                UCMessageBox.Show("Bạn chưa nhập mật khẩu cũ");
+                textBox_MatKhauCu.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(matKhauMoi))
-               
             {
-                MessageBox.Show("Bạn chưa nhập mật khẩu mới");
+                UCMessageBox.Show("Bạn chưa nhập mật khẩu mới");
+                textBox_MatKhauMoi.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(nhapLaiMatKhau))
             {
-                MessageBox.Show("Bạn chưa nhập lại mật khẩu");
+                UCMessageBox.Show("Bạn chưa nhập lại mật khẩu");
+                textBox_NhapLaiMatKhau.Focus();
                 return;
             }
-            if (matKhauCu != LoggedUser.User.Password)
+            if (matKhauCu.ToMD5() != LoggedUser.User.Password)
             {
-                MessageBox.Show("Sai mật khẩu! Vui lòng nhập lại.");
+                UCMessageBox.Show("Sai mật khẩu! Vui lòng nhập lại.");
+                textBox_MatKhauCu.Focus();
                 return;
             }
             if(matKhauMoi == matKhauCu)
             {
-                MessageBox.Show("Trùng mật khẩu cũ! Vui lòng nhập lại.");
+                UCMessageBox.Show("Trùng mật khẩu cũ! Vui lòng nhập lại.");
+                textBox_MatKhauMoi.Focus();
                 return;
             }
             if(matKhauMoi != nhapLaiMatKhau)
             {
-                MessageBox.Show("Không trùng khớp mật khẩu mới!");
+                UCMessageBox.Show("Không trùng khớp mật khẩu mới!");
+                textBox_NhapLaiMatKhau.Focus();
                 return;
             }
 
-            LoggedUser.User.Password = matKhauMoi;
+            LoggedUser.User.Password = matKhauMoi.ToMD5();
             var result = userBUS.Update(LoggedUser.User); 
             if(result > 0)
             {
-                MessageBox.Show("Lưu thành công!");
+                UCMessageBox.Show("Lưu thành công!");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Lưu thất bại!");
+                UCMessageBox.Show("Lưu thất bại!");
             }
         }
 
         private void FChangePassword_Load(object sender, EventArgs e)
         {
             textBox_TenDangNhap.Text = LoggedUser.User.Username;
-        }
-
-        private void button_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void textBox_TenDangNhap_TextChanged(object sender, EventArgs e)
-        {
-
+            textBox_MatKhauCu.Focus();
         }
     }
 }

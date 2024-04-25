@@ -418,17 +418,17 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FHoSoUT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.Designer.cs">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
@@ -472,6 +472,12 @@
     </Compile>
     <Compile Include="UC\UCMenuCard.Designer.cs">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\UCMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UC\UCMessageBox.Designer.cs">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UC\UCPagination.cs">
       <SubType>UserControl</SubType>
@@ -622,11 +628,11 @@
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
@@ -642,6 +648,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCMenuCard.resx">
       <DependentUpon>UCMenuCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\UCMessageBox.resx">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCPagination.resx">
       <DependentUpon>UCPagination.cs</DependentUpon>
@@ -1031,6 +1040,9 @@
     <None Include="Resources\icons8-delete-24.png" />
     <None Include="Resources\TuyenDung.jpg" />
     <None Include="Resources\Thông tin tuyển dụng.png" />
+    <Content Include="Resources\Templates\SendOtpToEmail.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Templates\SendOtpVerifyEmail.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -143,6 +143,7 @@
             this.button_Loai.TabIndex = 10;
             this.button_Loai.Text = "Loại";
             this.button_Loai.UseVisualStyleBackColor = false;
+            this.button_Loai.Click += new System.EventHandler(this.button_Loai_Click);
             // 
             // button_Duyet
             // 
