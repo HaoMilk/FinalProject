@@ -11,5 +11,7 @@ namespace FinalProject.Common.Const
         public const string Submitted = "Submitted";
         public const string Viewed = "Viewed";
         public const string Approved = "Approved";
+        public const string Cancel = "Cancel";
+
     }
 }
