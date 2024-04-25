@@ -29,6 +29,11 @@ namespace FinalProject.Admin
             FDashBoard fDashBoard = new FDashBoard();
             fDashBoard.Show();
         }
+        private void ucMenuCard_ViecLamUT_MenuClick(object sender, EventArgs e)
+        {
+            FThongKeCongViec fThongKeCongViec = new FThongKeCongViec();
+            fThongKeCongViec.Show();
+        }
         #endregion
 
         #region XetDuyet
@@ -38,7 +43,5 @@ namespace FinalProject.Admin
         {
             this.Close();
         }
-
-        
     }
 }
