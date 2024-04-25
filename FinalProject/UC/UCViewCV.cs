@@ -168,7 +168,7 @@ namespace FinalProject.UC
             else
             {
                 FViewCV fViewCV = new FViewCV();
-                fViewCV.IdUV = this.CandidateId;
+                fViewCV.IdUT = this.Id;
                 fViewCV.Id = this.Id;
                 fViewCV.ShowDialog();
             }
