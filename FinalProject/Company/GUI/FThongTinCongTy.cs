@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Helper;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -90,6 +91,38 @@ namespace FinalProject.Company.GUI.Thong_tin
 
         private void button_Xoa_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void button_ThemGiayPhep_Click(object sender, EventArgs e)
+        {
+            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Word files (*.doc, *.docx) | *.doc; *.docx"; // Thay đổi Filter để chỉ cho phép tải lên tệp Word
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var uploadResult = WordHelper.UpLoadFile(openFileDialog.FileName, $"User_{LoggedUser.UserId}"); // Thay ImageHelper.UploadImage bằng WordFileHelper.UploadWordFile
+                if (uploadResult != null)
+                {
+                    string url = uploadResult.Url.ToString();
+                    int id = LoggedUser.CongTy.ID;
+                    int result = cty_BUS.AddFileWord(url, id);
+                    if (result > 0)
+                    {
+                        // Hiển thị thông báo và tải hình ảnh lên PictureBox nếu cần
+                        UCMessageBox.Show("Cập nhật tệp Word thành công !");
+                        // pictureBox_WordFile.Load(openFileDialog.FileName); // Tải hình ảnh nếu cần
+                    }
+                    else
+                    {
+                        UCMessageBox.Show("Có lỗi phát sinh khi cập nhật tệp Word !");
+                    }
+                }
+
+                Cursor.Current = Cursors.Default;
+            }
 
         }
     }

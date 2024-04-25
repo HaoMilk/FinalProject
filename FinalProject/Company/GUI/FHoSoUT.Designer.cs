@@ -46,7 +46,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(39, 968);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1465, 27);
             this.panel1.TabIndex = 0;
@@ -71,7 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox_Name, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(39, 107);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -104,7 +104,7 @@
             this.button_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_TimKiem.ForeColor = System.Drawing.Color.Transparent;
             this.button_TimKiem.Location = new System.Drawing.Point(1313, 36);
-            this.button_TimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button_TimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(104, 50);
             this.button_TimKiem.TabIndex = 3;
@@ -118,9 +118,10 @@
             this.comboBox_TrangThai.Items.AddRange(new object[] {
             "Hồ sơ đã duyệt",
             "Hồ sơ chưa duyệt",
-            "Hồ sơ bị loại"});
+            "Hồ sơ bị loại",
+            "Hồ sơ tuyển dụng"});
             this.comboBox_TrangThai.Location = new System.Drawing.Point(16, 36);
-            this.comboBox_TrangThai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox_TrangThai.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_TrangThai.Name = "comboBox_TrangThai";
             this.comboBox_TrangThai.Size = new System.Drawing.Size(405, 29);
             this.comboBox_TrangThai.TabIndex = 0;
@@ -146,7 +147,7 @@
             this.flowLayoutPanel_Data.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel_Data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_Data.Location = new System.Drawing.Point(39, 239);
-            this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
             this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(26, 27, 26, 27);
             this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1465, 729);
