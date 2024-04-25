@@ -240,5 +240,25 @@ namespace FinalProject.Common.DAO
                 throw ex;
             }
         }
+        public int AddfileWord(string url, int ID)
+        {
+            try
+            {
+                using (var connection = dbConnection.Connection)
+                {
+                    string query = @"UPDATE CongTy SET 
+                    WordURL = @URL,
+                    WHERE ID = @ID";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@URL", url);
+                    cmd.Parameters.AddWithValue("@ID",  ID);
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
