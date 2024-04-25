@@ -3,18 +3,10 @@ using FinalProject.Candidate.GUI;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
+using FinalProject.Common.GUI;
 using FinalProject.Company;
-using FinalProject.Company.GUI.Thong_tin;
-using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject
@@ -69,8 +61,8 @@ namespace FinalProject
                 this.ClearData();
                 this.Show();
             }
-            else if(radioButton_Admin.Checked)
-            {/*
+            else if (radioButton_Admin.Checked)
+            {
                 var user = userBUS.Login(username, password, UserRoleConst.Admin);
                 if (user == null)
                 {
@@ -88,7 +80,7 @@ namespace FinalProject
                 fAdminHomePage.ShowDialog();
                 this.ClearData();
                 this.Show();
-            }    
+            }
             else if (radioButton_NhaTuyenDung.Checked)
             {
                 var user = userBUS.Login(username, password, UserRoleConst.Employer);
@@ -119,7 +111,10 @@ namespace FinalProject
 
         private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UCMessageBox.Show("Quên mật khẩu");
+            this.Hide();
+            FQuenMatKhau fQuenMatKhau = new FQuenMatKhau();
+            fQuenMatKhau.ShowDialog();
+            this.Show();
         }
 
         private void button_Close_Click(object sender, EventArgs e)
@@ -133,7 +128,7 @@ namespace FinalProject
             {
                 UCMessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
                 return false;
-            }    
+            }
             return true;
         }
 
