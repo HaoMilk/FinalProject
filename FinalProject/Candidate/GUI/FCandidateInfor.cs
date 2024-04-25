@@ -149,7 +149,7 @@ namespace FinalProject.Candidate.GUI
         {
             if (LoggedUser.User.IsEmailVerified == false)
             {
-                var result = userBUS.SendOtpVerifyEmail(LoggedUser.User);
+                var result = userBUS.SendOtpVerifyEmail(LoggedUser.User, "Xác thực tài khoản");
 
                 if (result.IsSuccess)
                 {
