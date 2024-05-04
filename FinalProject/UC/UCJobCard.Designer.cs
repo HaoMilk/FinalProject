@@ -32,7 +32,6 @@
             this.label_MucLuong = new System.Windows.Forms.Label();
             this.label_DiaDiem = new System.Windows.Forms.Label();
             this.button_View = new System.Windows.Forms.Button();
-            this.button_Menu = new System.Windows.Forms.Button();
             this.label_TenCongViec = new System.Windows.Forms.Label();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
             this.label_TenCty = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label_MucLuong, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label_DiaDiem, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.button_View, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button_Menu, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label_TenCongViec, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_Logo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_TenCty, 1, 0);
@@ -98,37 +96,19 @@
             this.button_View.BackColor = System.Drawing.Color.Cornsilk;
             this.button_View.BackgroundImage = global::FinalProject.Properties.Resources.icons8_view_96;
             this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tableLayoutPanel1.SetColumnSpan(this.button_View, 2);
             this.button_View.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
             this.button_View.FlatAppearance.MouseDownBackColor = System.Drawing.Color.NavajoWhite;
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_View.Location = new System.Drawing.Point(0, 168);
-            this.button_View.Margin = new System.Windows.Forms.Padding(0, 5, 5, 0);
+            this.button_View.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.button_View.Name = "button_View";
             this.button_View.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button_View.Size = new System.Drawing.Size(122, 26);
+            this.button_View.Size = new System.Drawing.Size(254, 26);
             this.button_View.TabIndex = 4;
             this.button_View.UseVisualStyleBackColor = false;
             this.button_View.Click += new System.EventHandler(this.button_View_Click);
-            // 
-            // button_Menu
-            // 
-            this.button_Menu.BackColor = System.Drawing.Color.Azure;
-            this.button_Menu.BackgroundImage = global::FinalProject.Properties.Resources.icons8_menu_96;
-            this.button_Menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Menu.Cursor = System.Windows.Forms.Cursors.Default;
-            this.button_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_Menu.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.button_Menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button_Menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Menu.Location = new System.Drawing.Point(132, 168);
-            this.button_Menu.Margin = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.button_Menu.Name = "button_Menu";
-            this.button_Menu.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button_Menu.Size = new System.Drawing.Size(122, 26);
-            this.button_Menu.TabIndex = 3;
-            this.button_Menu.UseVisualStyleBackColor = false;
-            this.button_Menu.Click += new System.EventHandler(this.button_Menu_Click);
             // 
             // label_TenCongViec
             // 
@@ -198,7 +178,6 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button_View;
-        private System.Windows.Forms.Button button_Menu;
         private System.Windows.Forms.Label label_TenCongViec;
         private System.Windows.Forms.PictureBox pictureBox_Logo;
         private System.Windows.Forms.Label label_TenCty;
