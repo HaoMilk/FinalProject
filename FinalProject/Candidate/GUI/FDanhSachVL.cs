@@ -61,11 +61,9 @@ namespace FinalProject.Candidate.GUI
             {
                 for (int i = 0; i < listCongViec.Count; i++)
                 {
-
                     UCJobCard ucJobCard = new UCJobCard();
                     ucJobCard.Id = listCongViec[i].Id;
-                    ucJobCard.JobName = listCongViec[i].Ten;
-                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
+                    ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
                     //ucJobCard.ScaleSize(0.5f);
 
                     ucJobCards.Add(ucJobCard);
