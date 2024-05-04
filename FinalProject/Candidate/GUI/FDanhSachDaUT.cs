@@ -18,7 +18,7 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachDaUT : UCForm
     {
-        private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
+        private CongViecBUS congViecBUS = new CongViecBUS();
         private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
 
@@ -60,8 +60,7 @@ namespace FinalProject.Candidate.GUI
                 UCJobCard ucJobCard = new UCJobCard();
                 ucJobCard.Id = listUngTuyen[i].CongViecId;
                 ucJobCard.UngTuyenId = listUngTuyen[i].Id;
-                ucJobCard.JobName = listUngTuyen[i].TenCongViec;
-                ucJobCard.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
+                ucJobCard.CongViec = congViecBUS.GetById(listUngTuyen[i].CongViecId);
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);
