@@ -27,7 +27,7 @@ namespace FinalProject.Candidate.GUI
         private void FDanhSachCty_Load(object sender, EventArgs e)
         {
             _listCongTy = _congTyBUS.GetAll();
-            ucPagination.TotalRecord = _listCongTy.Count;
+            //ucPagination.TotalRecord = _listCongTy.Count;
             LoadListCongTy();
         }
 
@@ -50,11 +50,6 @@ namespace FinalProject.Candidate.GUI
  
             this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + UCCtyCards.Count;
         } 
-
-        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button_TimKiem_Click(object sender, EventArgs e)
         {

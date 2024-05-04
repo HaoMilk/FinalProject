@@ -33,7 +33,6 @@ namespace FinalProject.Candidate.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachVL_Name));
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox_KinhNghiem = new System.Windows.Forms.GroupBox();
             this.ucComboBox_KinhNghiem = new FinalProject.UC.UCComboBox();
@@ -66,7 +65,6 @@ namespace FinalProject.Candidate.GUI
             // 
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
-            this.panel3.Controls.Add(this.ucPagination);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(348, 50);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -84,20 +82,8 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1003, 622);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1003, 688);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
-            // 
-            // ucPagination
-            // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(0, 622);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(1003, 66);
-            this.ucPagination.TabIndex = 0;
-            this.ucPagination.TotalRecord = 15;
-            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // panel1
             // 
@@ -415,7 +401,6 @@ namespace FinalProject.Candidate.GUI
         #endregion
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
-        private UCPagination ucPagination;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox_KinhNghiem;
         private UCComboBox ucComboBox_KinhNghiem;

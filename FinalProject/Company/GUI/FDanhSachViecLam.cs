@@ -54,7 +54,7 @@ namespace FinalProject.Company.GUI
 
         private void LoadJobList()
         {
-            ucPagination.TotalRecord = listCongViec.Count;
+            //ucPagination.TotalRecord = listCongViec.Count;
 
             List<UCViewJob> uCViewJobs = new List<UCViewJob>();
             if (listCongViec != null && listCongViec.Count > 0)
@@ -112,8 +112,8 @@ namespace FinalProject.Company.GUI
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             //input.FromDate = dateTimePicker_FromDate.Value;
             input.IdCongTy = LoggedUser.CongTy.ID;
-            input.FromId = ucPagination.StartRecord;
-            input.ToId = ucPagination.EndRecord;
+            //input.FromId = ucPagination.StartRecord;
+            //input.ToId = ucPagination.EndRecord;
 
             listCongViec = congViecBUS.Search(input);
         }

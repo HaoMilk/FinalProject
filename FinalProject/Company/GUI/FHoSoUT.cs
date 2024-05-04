@@ -35,11 +35,11 @@
 
             private void LoadCvList()
             {
-                var quantity = ucPagination.PageSize;
-                var start = ucPagination.StartRecord;
-                var end = ucPagination.EndRecord;
+                //var quantity = ucPagination.PageSize;
+                //var start = ucPagination.StartRecord;
+                //var end = ucPagination.EndRecord;
 
-                var ucJobCards = CreateCvList(quantity);
+                var ucJobCards = CreateCvList();
                 flowLayoutPanel_Data.Controls.Clear();
 
                 foreach (var ucJobCard in ucJobCards)
@@ -48,7 +48,7 @@
                 }
             }
 
-            private List<UCViewCV> CreateCvList(int quantity)
+            private List<UCViewCV> CreateCvList()
             {
 
                 List<UCViewCV> uCViewCVs = new List<UCViewCV>();

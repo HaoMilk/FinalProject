@@ -37,8 +37,6 @@
             this.groupBox_Name = new System.Windows.Forms.GroupBox();
             this.button_TimKiem = new System.Windows.Forms.Button();
             this.textBox_TenCv = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox_Name.SuspendLayout();
@@ -53,7 +51,7 @@
             this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
             this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(26, 27, 26, 27);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1503, 750);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1503, 843);
             this.flowLayoutPanel_Data.TabIndex = 12;
             // 
             // label_Name
@@ -171,28 +169,6 @@
             this.textBox_TenCv.TabIndex = 1;
             this.textBox_TenCv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_TenCv_KeyDown);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(20, 989);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1503, 27);
-            this.panel1.TabIndex = 0;
-            // 
-            // ucPagination
-            // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(20, 1016);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(1503, 66);
-            this.ucPagination.TabIndex = 9;
-            this.ucPagination.TotalRecord = 0;
-            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
-            // 
             // FQlyCv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -200,8 +176,6 @@
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1543, 1102);
             this.Controls.Add(this.flowLayoutPanel_Data);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ucPagination);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label_Name);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -213,8 +187,6 @@
             this.Load += new System.EventHandler(this.FQlyCv_Load);
             this.Controls.SetChildIndex(this.label_Name, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.ucPagination, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel_Data, 0);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -227,13 +199,11 @@
         #endregion
         private System.Windows.Forms.Label label_Name;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_Data;
-        private FinalProject.UC.UCPagination ucPagination;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox_Name;
         private System.Windows.Forms.TextBox textBox_TenCv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_Them;
         private System.Windows.Forms.Button button_TimKiem;
-        private System.Windows.Forms.Panel panel1;
     }
 }
