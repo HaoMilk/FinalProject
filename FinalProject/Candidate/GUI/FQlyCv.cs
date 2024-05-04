@@ -33,11 +33,13 @@ namespace FinalProject.Candidate.GUI
 
         private void LoadCvList()
         {
-            ucPagination.TotalRecord = cvBUS.Count();
-            var quantity = ucPagination.PageSize;
-            var start = ucPagination.StartRecord;
-            var end = ucPagination.EndRecord;
+            //ucPagination.TotalRecord = cvBUS.Count();
+            //var quantity = ucPagination.PageSize;
+            //var start = ucPagination.StartRecord;
+            //var end = ucPagination.EndRecord;
 
+            //TODO Count by UserId
+            var quantity = cvBUS.Count();
             var ucJobCards = CreateCvList(quantity);
             flowLayoutPanel_Data.Controls.Clear();
 

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHoSoUT));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox_Name = new System.Windows.Forms.GroupBox();
             this.button_TimKiem = new System.Windows.Forms.Button();
@@ -40,28 +38,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox_Name.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(39, 968);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 27);
-            this.panel1.TabIndex = 0;
-            // 
-            // ucPagination
-            // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Location = new System.Drawing.Point(39, 995);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(1465, 66);
-            this.ucPagination.TabIndex = 9;
-            this.ucPagination.TotalRecord = 0;
-            this.ucPagination.CurrentPageChanged += new System.EventHandler(this.ucPagination_CurrentPageChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -150,7 +126,7 @@
             this.flowLayoutPanel_Data.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel_Data.Name = "flowLayoutPanel_Data";
             this.flowLayoutPanel_Data.Padding = new System.Windows.Forms.Padding(26, 27, 26, 27);
-            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1465, 729);
+            this.flowLayoutPanel_Data.Size = new System.Drawing.Size(1465, 822);
             this.flowLayoutPanel_Data.TabIndex = 17;
             // 
             // FHoSoUT
@@ -162,8 +138,6 @@
             this.Controls.Add(this.flowLayoutPanel_Data);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label_Name);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ucPagination);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FHoSoUT";
@@ -171,8 +145,6 @@
             this.Text = "Quản lý CV";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FQlyCv_Load);
-            this.Controls.SetChildIndex(this.ucPagination, 0);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.label_Name, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
             this.Controls.SetChildIndex(this.flowLayoutPanel_Data, 0);
@@ -183,8 +155,6 @@
         }
 
         #endregion
-        private FinalProject.UC.UCPagination ucPagination;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox_Name;
         private System.Windows.Forms.Label label_Name;

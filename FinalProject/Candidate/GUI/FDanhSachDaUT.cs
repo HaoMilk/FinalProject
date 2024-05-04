@@ -33,11 +33,11 @@ namespace FinalProject.Candidate.GUI
         #region JobList
         private void LoadJobList()
         {
-            var quantity = ucPagination.PageSize;
-            var start = ucPagination.StartRecord;
-            var end = ucPagination.EndRecord;
+            //var quantity = ucPagination.PageSize;
+            //var start = ucPagination.StartRecord;
+            //var end = ucPagination.EndRecord;
 
-            var ucJobCards = CreateJobList(quantity);
+            var ucJobCards = CreateJobList();
             flowLayoutPanel_Data.Controls.Clear();
             flowLayoutPanel_Data.SuspendLayout();
             flowLayoutPanel_Data.Controls.AddRange(ucJobCards.ToArray());
@@ -46,7 +46,7 @@ namespace FinalProject.Candidate.GUI
             //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
         }
 
-        private List<UCJobCard> CreateJobList(int quantity)
+        private List<UCJobCard> CreateJobList()
         {
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
 
