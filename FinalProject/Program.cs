@@ -1,4 +1,5 @@
 ﻿using FinalProject.Candidate.GUI;
+using FinalProject.Common.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace FinalProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new Form_DangNhap());
         }
     }

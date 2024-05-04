@@ -63,7 +63,7 @@ namespace FinalProject.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("tiennhm.it@gmail.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2thuancr03@gmail.com")]
         public string emailFrom {
             get {
                 return ((string)(this["emailFrom"]));
@@ -72,7 +72,7 @@ namespace FinalProject.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("tiennhm.it@gmail.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("2thuancr03@gmail.com")]
         public string emailUsername {
             get {
                 return ((string)(this["emailUsername"]));
@@ -81,7 +81,7 @@ namespace FinalProject.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("crmc dcnm sitn sxvb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("eifm nvmj httv mnsa")]
         public string emailPassword {
             get {
                 return ((string)(this["emailPassword"]));

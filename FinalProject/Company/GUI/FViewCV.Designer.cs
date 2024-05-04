@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button_TuyenDung = new System.Windows.Forms.Button();
             this.button_Loai = new System.Windows.Forms.Button();
             this.button_Duyet = new System.Windows.Forms.Button();
             this.tabControl_ThongTin = new System.Windows.Forms.TabControl();
@@ -117,9 +118,11 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.93695F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.06305F));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.button_TuyenDung, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_Loai, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_Duyet, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -130,19 +133,35 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(734, 62);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // button_TuyenDung
+            // 
+            this.button_TuyenDung.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button_TuyenDung.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button_TuyenDung.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_TuyenDung.Image = global::FinalProject.Properties.Resources.icons8_approve_48;
+            this.button_TuyenDung.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_TuyenDung.Location = new System.Drawing.Point(247, 3);
+            this.button_TuyenDung.Name = "button_TuyenDung";
+            this.button_TuyenDung.Size = new System.Drawing.Size(238, 56);
+            this.button_TuyenDung.TabIndex = 11;
+            this.button_TuyenDung.Text = "Tuyển dụng";
+            this.button_TuyenDung.UseVisualStyleBackColor = false;
+            this.button_TuyenDung.Click += new System.EventHandler(this.button_TuyenDung_Click);
+            // 
             // button_Loai
             // 
-            this.button_Loai.BackColor = System.Drawing.Color.Tomato;
+            this.button_Loai.BackColor = System.Drawing.Color.Red;
             this.button_Loai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_Loai.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Loai.Image = global::FinalProject.Properties.Resources.icons8_remove_48;
             this.button_Loai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Loai.Location = new System.Drawing.Point(369, 3);
+            this.button_Loai.Location = new System.Drawing.Point(491, 3);
             this.button_Loai.Name = "button_Loai";
-            this.button_Loai.Size = new System.Drawing.Size(362, 56);
+            this.button_Loai.Size = new System.Drawing.Size(240, 56);
             this.button_Loai.TabIndex = 10;
             this.button_Loai.Text = "Loại";
             this.button_Loai.UseVisualStyleBackColor = false;
+            this.button_Loai.Click += new System.EventHandler(this.button_Loai_Click);
             // 
             // button_Duyet
             // 
@@ -154,7 +173,7 @@
             this.button_Duyet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Duyet.Location = new System.Drawing.Point(3, 3);
             this.button_Duyet.Name = "button_Duyet";
-            this.button_Duyet.Size = new System.Drawing.Size(360, 56);
+            this.button_Duyet.Size = new System.Drawing.Size(238, 56);
             this.button_Duyet.TabIndex = 9;
             this.button_Duyet.Text = "Duyệt";
             this.button_Duyet.UseVisualStyleBackColor = false;
@@ -814,5 +833,6 @@
         private System.Windows.Forms.Button button_Duyet;
         private System.Windows.Forms.Button button_Loai;
         private System.Windows.Forms.TextBox textBox_GioiTinh;
+        private System.Windows.Forms.Button button_TuyenDung;
     }
 }

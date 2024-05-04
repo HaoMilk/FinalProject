@@ -123,6 +123,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business {
+            get {
+                object obj = ResourceManager.GetObject("business", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap business_people_partnership_support_team_urban_scene_concept {
             get {
                 object obj = ResourceManager.GetObject("business-people-partnership-support-team-urban-scene-concept", resourceCulture);
@@ -257,6 +267,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap daily_resumes_of_candidates_for_recruitment {
             get {
                 object obj = ResourceManager.GetObject("daily-resumes-of-candidates-for-recruitment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashboard {
+            get {
+                object obj = ResourceManager.GetObject("dashboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -484,6 +504,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_add_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_approve_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-approve-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1211,6 +1241,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap TuyenDung {
             get {
                 object obj = ResourceManager.GetObject("TuyenDung", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_orange_bubble_background_with_white_line_gradient_orange_5230618 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_orange-bubble-background-with-white-line-gradient-orange_5230618", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

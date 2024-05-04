@@ -19,8 +19,9 @@
     {
         public partial class FHoSoUT : UCForm
         {
-            private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
+            private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
             private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
+            UngTuyenGetAllInput input = new UngTuyenGetAllInput();
 
             public FHoSoUT()
             {
@@ -49,43 +50,44 @@
 
             private List<UCViewCV> CreateCvList(int quantity)
             {
-                listUngTuyen = ungTuyenDAO.GetAll(new UngTuyenGetAllInput {Id = LoggedUser.CongTy.ID});
 
                 List<UCViewCV> uCViewCVs = new List<UCViewCV>();
-
-                if (listUngTuyen.Count == 0)
+                input.IdCongTy = LoggedUser.CongTy.ID;
+                if (comboBox_TrangThai.Text == "Hồ sơ chưa duyệt" || comboBox_TrangThai.Text == "")
                 {
+                    input.TrangThai = TrangThaiUngTuyen.Submitted;
+                }
+                else if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Approved;     
+                }
+                else if(comboBox_TrangThai.Text == "Hồ sơ bị loại")
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Rejected;
+                }
+                else
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Recruitmented;
+                }    
+
+
+                listUngTuyen = ungTuyenBUS.Search(input);
+                for (int i = 0; i < listUngTuyen.Count; i++)
+                    {
+                        UCViewCV uCViewCV = new UCViewCV();
+                        uCViewCV.Id = listUngTuyen[i].Id;
+                        uCViewCV.CandidateId = listUngTuyen[i].UngVienId;
+                        uCViewCV.CVId = listUngTuyen[i].CvId;
+                        uCViewCV.CvName = listUngTuyen[i].TenCv;
+                        uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
+                        uCViewCVs.Add(uCViewCV);
+                    }
                     return uCViewCVs;
                 }
-                if (comboBox_TrangThai.Text == "Hồ sơ chưa duyệt")
-                {
-                var filteredList = listUngTuyen.Where(ungTuyen => ungTuyen.TrangThai == "watting").ToList();
-                }
-                if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
-                {
-                    var filteredList = listUngTuyen.Where(ungTuyen => ungTuyen.TrangThai == "approved").ToList();
-                }
-
-            for (int i = 0; i < listUngTuyen.Count; i++)
-                {
-                    UCViewCV uCViewCV = new UCViewCV();
-                    uCViewCV.Id = listUngTuyen[i].CvId;
-                    uCViewCV.CvName = listUngTuyen[i].TenCv;
-                    uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
-                    uCViewCVs.Add(uCViewCV);
-                }
-                return uCViewCVs;
-            }
-            
 
             private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
             {
                 LoadCvList();
-            }
-
-
-            private void textBox_TenCv_KeyDown(object sender, KeyEventArgs e)
-            {
             }
 
             private void button_TimKiem_Click(object sender, EventArgs e)
