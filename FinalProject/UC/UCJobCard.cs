@@ -31,11 +31,11 @@ namespace FinalProject.UC
         private CongViec congViec;
         private Color cardBackground = Color.LightBlue;
         private Color buttonViewBackground = Color.Cornsilk;
-        private Color buttonMenuBackground = Color.LightCyan;
+        //private Color buttonMenuBackground = Color.LightCyan;
         private Color jobNameTextColor = SystemColors.Highlight;
         private Image bgImage;
         private Image buttonViewImage;
-        private Image buttonMenuImage;
+        //private Image buttonMenuImage;
         #endregion Fields
 
         #region Properties
@@ -128,22 +128,22 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("BackColor Menu")]
-        public Color ButtonMenuBackground
-        {
-            get { return buttonMenuBackground; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Color.Azure;
-                }
-                buttonMenuBackground = value;
-                this.button_Menu.BackColor = buttonMenuBackground;
-                // this.Invalidate();
-            }
-        }
+        //[Category("CUSTOMIZE UI")]
+        //[DisplayName("BackColor Menu")]
+        //public Color ButtonMenuBackground
+        //{
+        //    get { return buttonMenuBackground; }
+        //    set
+        //    {
+        //        if (value == null)
+        //        {
+        //            value = Color.Azure;
+        //        }
+        //        buttonMenuBackground = value;
+        //        this.button_Menu.BackColor = buttonMenuBackground;
+        //        // this.Invalidate();
+        //    }
+        //}
 
         [Category("CUSTOMIZE UI")]
         [DisplayName("JobNameTextColor")]
@@ -196,22 +196,22 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("ButtonMenu Image")]
-        public Image ButtonMenuImage
-        {
-            get { return buttonMenuImage; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Properties.Resources.icons8_menu_96;
-                }
-                buttonMenuImage = value;
-                this.button_Menu.BackgroundImage = buttonMenuImage;
-                // this.Invalidate();
-            }
-        }
+        //[Category("CUSTOMIZE UI")]
+        //[DisplayName("ButtonMenu Image")]
+        //public Image ButtonMenuImage
+        //{
+        //    get { return buttonMenuImage; }
+        //    set
+        //    {
+        //        if (value == null)
+        //        {
+        //            value = Properties.Resources.icons8_menu_96;
+        //        }
+        //        buttonMenuImage = value;
+        //        this.button_Menu.BackgroundImage = buttonMenuImage;
+        //        // this.Invalidate();
+        //    }
+        //}
         #endregion Properties
 
         public UCJobCard()
