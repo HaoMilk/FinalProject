@@ -35,11 +35,11 @@
 
             private void LoadCvList()
             {
-                var quantity = ucPagination.PageSize;
-                var start = ucPagination.StartRecord;
-                var end = ucPagination.EndRecord;
+                //var quantity = ucPagination.PageSize;
+                //var start = ucPagination.StartRecord;
+                //var end = ucPagination.EndRecord;
 
-                var ucJobCards = CreateCvList(quantity);
+                var ucJobCards = CreateCvList();
                 flowLayoutPanel_Data.Controls.Clear();
 
                 foreach (var ucJobCard in ucJobCards)
@@ -48,7 +48,7 @@
                 }
             }
 
-            private List<UCViewCV> CreateCvList(int quantity)
+            private List<UCViewCV> CreateCvList()
             {
 
                 List<UCViewCV> uCViewCVs = new List<UCViewCV>();
@@ -57,16 +57,27 @@
                 {
                     input.TrangThai = TrangThaiUngTuyen.Submitted;
                 }
-                if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
+                else if (comboBox_TrangThai.Text == "Hồ sơ đã duyệt")
                 {
                     input.TrangThai = TrangThaiUngTuyen.Approved;     
                 }
+                else if(comboBox_TrangThai.Text == "Hồ sơ bị loại")
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Rejected;
+                }
+                else
+                {
+                    input.TrangThai = TrangThaiUngTuyen.Recruitmented;
+                }    
+
 
                 listUngTuyen = ungTuyenBUS.Search(input);
                 for (int i = 0; i < listUngTuyen.Count; i++)
                     {
                         UCViewCV uCViewCV = new UCViewCV();
                         uCViewCV.Id = listUngTuyen[i].Id;
+                        uCViewCV.CandidateId = listUngTuyen[i].UngVienId;
+                        uCViewCV.CVId = listUngTuyen[i].CvId;
                         uCViewCV.CvName = listUngTuyen[i].TenCv;
                         uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
                         uCViewCVs.Add(uCViewCV);

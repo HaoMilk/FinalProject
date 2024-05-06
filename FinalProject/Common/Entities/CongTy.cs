@@ -14,7 +14,7 @@ namespace FinalProject.Database.Entities
         public string DiaChi { get; set; } = string.Empty;
         public string CEO { get; set; } = string.Empty;
         public string MST { get; set; } = string.Empty;
-        public string Giayphep { get; set; } = string.Empty;
+        public string WordFileUrl { get; set; } = string.Empty;
         public DateTime CreatedTime { get; set; } = DateTime.Now;
         public DateTime? UpdatedTime { get; set; }
         public bool IsDeleted { get; set; } = false;

@@ -227,6 +227,13 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\GUI\ThongKe\Class\ChartHelper.cs" />
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.Designer.cs">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\GUI\ThongKe\FDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -516,6 +523,9 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.resx">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\ThongKe\FDashBoard.resx">
       <DependentUpon>FDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -717,6 +727,7 @@
     <Content Include="Resources\email-template-1.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8-approve-48.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -80,6 +80,7 @@
             this.ucMenuCard_ViecLamUT.Padding = new System.Windows.Forms.Padding(14);
             this.ucMenuCard_ViecLamUT.Size = new System.Drawing.Size(220, 180);
             this.ucMenuCard_ViecLamUT.TabIndex = 11;
+            this.ucMenuCard_ViecLamUT.MenuClick += new System.EventHandler(this.ucMenuCard_ViecLamUT_MenuClick);
             // 
             // ucMenuCard_DsCty
             // 

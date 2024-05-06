@@ -25,7 +25,7 @@ namespace FinalProject.Company.GUI
         private CV _cv;
         private UngTuyenDTO _ut ;
         private int result;
-        public int Id
+        public int IdCV
         {
             get => id; 
             set
@@ -98,7 +98,12 @@ namespace FinalProject.Company.GUI
         {
             var ID = _ut.Id;
             var trangThai = _ut.TrangThai;
-            if(_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            {
+                MessageBox.Show("Hồ sơ đã bị loại bỏ");
+                return;
+            }
+            else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
             {
                 MessageBox.Show("Hồ sơ đã được duyệt");
                 return;
@@ -143,6 +148,37 @@ namespace FinalProject.Company.GUI
                 MessageBox.Show("Loại bỏ không thành công");
 
             }
+        }
+
+        private void button_TuyenDung_Click(object sender, EventArgs e)
+        {
+            var ID = _ut.Id;
+            var trangThai = _ut.TrangThai;
+            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            {
+                MessageBox.Show("Hồ sơ đã bị loại bỏ");
+                return;
+            }
+            else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            {
+                trangThai = TrangThaiUngTuyen.Recruitmented;
+            }
+            else
+            {
+                MessageBox.Show("Hồ sơ chưa được duyệt");
+                return;
+            }
+            result = _utBUS.UpdateTrangThai(ID, trangThai);
+            if (result != 0)
+            {
+                MessageBox.Show("Tuyển dụng thành công");
+            }
+            else
+            {
+                MessageBox.Show("Tuyển dụng không thành công");
+
+            }
+
         }
     }
 }

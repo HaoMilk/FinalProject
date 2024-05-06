@@ -54,18 +54,16 @@ namespace FinalProject.Candidate.GUI
 
         private void LoadJobList()
         {
-            ucPagination.TotalRecord = listCongViec.Count;
+            //ucPagination.TotalRecord = listCongViec.Count;
 
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
             if (listCongViec != null && listCongViec.Count > 0)
             {
                 for (int i = 0; i < listCongViec.Count; i++)
                 {
-
                     UCJobCard ucJobCard = new UCJobCard();
                     ucJobCard.Id = listCongViec[i].Id;
-                    ucJobCard.JobName = listCongViec[i].Ten;
-                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
+                    ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
                     //ucJobCard.ScaleSize(0.5f);
 
                     ucJobCards.Add(ucJobCard);
@@ -112,8 +110,8 @@ namespace FinalProject.Candidate.GUI
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             //input.FromDate = dateTimePicker_FromDate.Value;
             input.IdCongTy = LoggedUser.CongTy?.ID;
-            input.FromId = ucPagination.StartRecord;
-            input.ToId = ucPagination.EndRecord;
+            //input.FromId = ucPagination.StartRecord;
+            //input.ToId = ucPagination.EndRecord;
 
             listCongViec = congViecBUS.Search(input);
         }

@@ -1,4 +1,6 @@
-﻿using FinalProject.Database.Entities;
+﻿using CloudinaryDotNet.Actions;
+using CloudinaryDotNet;
+using FinalProject.Database.Entities;
 using FinalProject.UC;
 using NPOI.XWPF.UserModel;
 using System;
@@ -13,6 +15,7 @@ namespace FinalProject.Common.Helper
 {
     public static class WordHelper
     {
+        private static Cloudinary cloudinary = new Cloudinary(Properties.Settings.Default.cloudinary_url);
         public static void ExportWord(string template, string generateFile, Dictionary<string, string> data)
         {
             using (var rs = File.OpenRead(template))
@@ -102,6 +105,30 @@ namespace FinalProject.Common.Helper
             }
 
             return generateFile;
+        }
+        public static ImageUploadResult UpLoadFile(string filePath, string fileName = null, string fileFormat = "jpg", System.Drawing.Size? size = null)
+        {
+            var uploadParams = new ImageUploadParams()
+            {
+                File = new FileDescription(filePath),
+                AssetFolder = "job-management",
+                Folder = "job-management",
+                UseFilename = true,
+                FilenameOverride = fileName,
+                Format = fileFormat,
+                UniqueFilename = false,
+                Overwrite = true,
+                UseFilenameAsDisplayName = true,
+            };
+            if (size != null)
+            {
+                uploadParams.Transformation = new Transformation()
+                    .Width(size.Value.Width)
+                    .Height(size.Value.Height)
+                    .Crop("fill");
+            }
+            var uploadResult = cloudinary.Upload(uploadParams);
+            return uploadResult;
         }
     }
 }
