@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label_TrangThaiUngTuyen = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.button_TuyenDung = new System.Windows.Forms.Button();
             this.button_Loai = new System.Windows.Forms.Button();
@@ -72,19 +73,18 @@
             this.richTextBox_KinhNghiem = new System.Windows.Forms.RichTextBox();
             this.groupBox_MucTieu = new System.Windows.Forms.GroupBox();
             this.richTextBox_MucTieu = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label_TenCongViec = new System.Windows.Forms.Label();
-            this.label_TrangThaiUngTuyen = new System.Windows.Forms.Label();
             this.tabPage_ThongTinPhongVan = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel_ThongTinPV = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox_NguoiPV = new System.Windows.Forms.GroupBox();
+            this.richTextBox_NguoiPV = new System.Windows.Forms.RichTextBox();
+            this.groupBox_DiaDiemPV = new System.Windows.Forms.GroupBox();
+            this.richTextBox_DiaDiemPV = new System.Windows.Forms.RichTextBox();
             this.groupBox_KetQuaPV = new System.Windows.Forms.GroupBox();
             this.richTextBox_KetQuaPV = new System.Windows.Forms.RichTextBox();
             this.groupBox_ThoiGianPV = new System.Windows.Forms.GroupBox();
-            this.groupBox_DiaDiemPV = new System.Windows.Forms.GroupBox();
-            this.richTextBox_DiaDiemPV = new System.Windows.Forms.RichTextBox();
-            this.groupBox_NguoiPV = new System.Windows.Forms.GroupBox();
-            this.richTextBox_NguoiPV = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker_ThoiGianPV = new System.Windows.Forms.DateTimePicker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label_TenCongViec = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel_Buttons.SuspendLayout();
             this.tabControl_ThongTin.SuspendLayout();
@@ -112,10 +112,10 @@
             this.groupBox_MucTieu.SuspendLayout();
             this.tabPage_ThongTinPhongVan.SuspendLayout();
             this.tableLayoutPanel_ThongTinPV.SuspendLayout();
+            this.groupBox_NguoiPV.SuspendLayout();
+            this.groupBox_DiaDiemPV.SuspendLayout();
             this.groupBox_KetQuaPV.SuspendLayout();
             this.groupBox_ThoiGianPV.SuspendLayout();
-            this.groupBox_DiaDiemPV.SuspendLayout();
-            this.groupBox_NguoiPV.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -133,6 +133,20 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(18);
             this.panel1.Size = new System.Drawing.Size(770, 602);
             this.panel1.TabIndex = 3;
+            // 
+            // label_TrangThaiUngTuyen
+            // 
+            this.label_TrangThaiUngTuyen.BackColor = System.Drawing.Color.Crimson;
+            this.label_TrangThaiUngTuyen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label_TrangThaiUngTuyen.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TrangThaiUngTuyen.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_TrangThaiUngTuyen.Location = new System.Drawing.Point(18, 480);
+            this.label_TrangThaiUngTuyen.Name = "label_TrangThaiUngTuyen";
+            this.label_TrangThaiUngTuyen.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label_TrangThaiUngTuyen.Size = new System.Drawing.Size(734, 42);
+            this.label_TrangThaiUngTuyen.TabIndex = 4;
+            this.label_TrangThaiUngTuyen.Text = "label_TrangThaiUngTuyen";
+            this.label_TrangThaiUngTuyen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel_Buttons
             // 
@@ -731,42 +745,6 @@
             this.richTextBox_MucTieu.TabIndex = 0;
             this.richTextBox_MucTieu.Text = "";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(18, 65);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(734, 18);
-            this.panel2.TabIndex = 3;
-            // 
-            // label_TenCongViec
-            // 
-            this.label_TenCongViec.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label_TenCongViec.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_TenCongViec.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TenCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label_TenCongViec.Location = new System.Drawing.Point(18, 18);
-            this.label_TenCongViec.Name = "label_TenCongViec";
-            this.label_TenCongViec.Size = new System.Drawing.Size(734, 47);
-            this.label_TenCongViec.TabIndex = 0;
-            this.label_TenCongViec.Text = "HỒ SƠ ỨNG TUYỂN";
-            this.label_TenCongViec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_TrangThaiUngTuyen
-            // 
-            this.label_TrangThaiUngTuyen.BackColor = System.Drawing.Color.Crimson;
-            this.label_TrangThaiUngTuyen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_TrangThaiUngTuyen.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TrangThaiUngTuyen.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_TrangThaiUngTuyen.Location = new System.Drawing.Point(18, 480);
-            this.label_TrangThaiUngTuyen.Name = "label_TrangThaiUngTuyen";
-            this.label_TrangThaiUngTuyen.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label_TrangThaiUngTuyen.Size = new System.Drawing.Size(734, 42);
-            this.label_TrangThaiUngTuyen.TabIndex = 4;
-            this.label_TrangThaiUngTuyen.Text = "label_TrangThaiUngTuyen";
-            this.label_TrangThaiUngTuyen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // tabPage_ThongTinPhongVan
             // 
             this.tabPage_ThongTinPhongVan.Controls.Add(this.tableLayoutPanel_ThongTinPV);
@@ -797,6 +775,58 @@
             this.tableLayoutPanel_ThongTinPV.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel_ThongTinPV.Size = new System.Drawing.Size(720, 355);
             this.tableLayoutPanel_ThongTinPV.TabIndex = 3;
+            // 
+            // groupBox_NguoiPV
+            // 
+            this.groupBox_NguoiPV.Controls.Add(this.richTextBox_NguoiPV);
+            this.groupBox_NguoiPV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_NguoiPV.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_NguoiPV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_NguoiPV.Location = new System.Drawing.Point(363, 2);
+            this.groupBox_NguoiPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_NguoiPV.Name = "groupBox_NguoiPV";
+            this.groupBox_NguoiPV.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox_NguoiPV.Size = new System.Drawing.Size(354, 102);
+            this.groupBox_NguoiPV.TabIndex = 7;
+            this.groupBox_NguoiPV.TabStop = false;
+            this.groupBox_NguoiPV.Text = "Người phỏng vấn";
+            // 
+            // richTextBox_NguoiPV
+            // 
+            this.richTextBox_NguoiPV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_NguoiPV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox_NguoiPV.Location = new System.Drawing.Point(7, 30);
+            this.richTextBox_NguoiPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_NguoiPV.Name = "richTextBox_NguoiPV";
+            this.richTextBox_NguoiPV.Size = new System.Drawing.Size(340, 65);
+            this.richTextBox_NguoiPV.TabIndex = 1;
+            this.richTextBox_NguoiPV.Text = "";
+            // 
+            // groupBox_DiaDiemPV
+            // 
+            this.groupBox_DiaDiemPV.Controls.Add(this.richTextBox_DiaDiemPV);
+            this.groupBox_DiaDiemPV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_DiaDiemPV.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_DiaDiemPV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_DiaDiemPV.Location = new System.Drawing.Point(3, 108);
+            this.groupBox_DiaDiemPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_DiaDiemPV.Name = "groupBox_DiaDiemPV";
+            this.groupBox_DiaDiemPV.Padding = new System.Windows.Forms.Padding(7);
+            this.groupBox_DiaDiemPV.Size = new System.Drawing.Size(354, 245);
+            this.groupBox_DiaDiemPV.TabIndex = 6;
+            this.groupBox_DiaDiemPV.TabStop = false;
+            this.groupBox_DiaDiemPV.Text = "Địa điểm phỏng vấn";
+            // 
+            // richTextBox_DiaDiemPV
+            // 
+            this.richTextBox_DiaDiemPV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox_DiaDiemPV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox_DiaDiemPV.Location = new System.Drawing.Point(7, 30);
+            this.richTextBox_DiaDiemPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox_DiaDiemPV.Name = "richTextBox_DiaDiemPV";
+            this.richTextBox_DiaDiemPV.Size = new System.Drawing.Size(340, 208);
+            this.richTextBox_DiaDiemPV.TabIndex = 0;
+            this.richTextBox_DiaDiemPV.Text = "";
             // 
             // groupBox_KetQuaPV
             // 
@@ -839,68 +869,39 @@
             this.groupBox_ThoiGianPV.TabStop = false;
             this.groupBox_ThoiGianPV.Text = "Thời gian phỏng vấn";
             // 
-            // groupBox_DiaDiemPV
-            // 
-            this.groupBox_DiaDiemPV.Controls.Add(this.richTextBox_DiaDiemPV);
-            this.groupBox_DiaDiemPV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_DiaDiemPV.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_DiaDiemPV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_DiaDiemPV.Location = new System.Drawing.Point(3, 108);
-            this.groupBox_DiaDiemPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_DiaDiemPV.Name = "groupBox_DiaDiemPV";
-            this.groupBox_DiaDiemPV.Padding = new System.Windows.Forms.Padding(7);
-            this.groupBox_DiaDiemPV.Size = new System.Drawing.Size(354, 245);
-            this.groupBox_DiaDiemPV.TabIndex = 6;
-            this.groupBox_DiaDiemPV.TabStop = false;
-            this.groupBox_DiaDiemPV.Text = "Địa điểm phỏng vấn";
-            // 
-            // richTextBox_DiaDiemPV
-            // 
-            this.richTextBox_DiaDiemPV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_DiaDiemPV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox_DiaDiemPV.Location = new System.Drawing.Point(7, 30);
-            this.richTextBox_DiaDiemPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_DiaDiemPV.Name = "richTextBox_DiaDiemPV";
-            this.richTextBox_DiaDiemPV.Size = new System.Drawing.Size(340, 208);
-            this.richTextBox_DiaDiemPV.TabIndex = 0;
-            this.richTextBox_DiaDiemPV.Text = "";
-            // 
-            // groupBox_NguoiPV
-            // 
-            this.groupBox_NguoiPV.Controls.Add(this.richTextBox_NguoiPV);
-            this.groupBox_NguoiPV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_NguoiPV.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox_NguoiPV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox_NguoiPV.Location = new System.Drawing.Point(363, 2);
-            this.groupBox_NguoiPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_NguoiPV.Name = "groupBox_NguoiPV";
-            this.groupBox_NguoiPV.Padding = new System.Windows.Forms.Padding(7);
-            this.groupBox_NguoiPV.Size = new System.Drawing.Size(354, 102);
-            this.groupBox_NguoiPV.TabIndex = 7;
-            this.groupBox_NguoiPV.TabStop = false;
-            this.groupBox_NguoiPV.Text = "Người phỏng vấn";
-            // 
-            // richTextBox_NguoiPV
-            // 
-            this.richTextBox_NguoiPV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_NguoiPV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox_NguoiPV.Location = new System.Drawing.Point(7, 30);
-            this.richTextBox_NguoiPV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox_NguoiPV.Name = "richTextBox_NguoiPV";
-            this.richTextBox_NguoiPV.Size = new System.Drawing.Size(340, 65);
-            this.richTextBox_NguoiPV.TabIndex = 1;
-            this.richTextBox_NguoiPV.Text = "";
-            // 
             // dateTimePicker_ThoiGianPV
             // 
-            this.dateTimePicker_ThoiGianPV.CalendarFont = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker_ThoiGianPV.CalendarFont = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_ThoiGianPV.CustomFormat = "dd/MM/yyyy hh:mm";
             this.dateTimePicker_ThoiGianPV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker_ThoiGianPV.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_ThoiGianPV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_ThoiGianPV.Location = new System.Drawing.Point(7, 30);
             this.dateTimePicker_ThoiGianPV.Name = "dateTimePicker_ThoiGianPV";
-            this.dateTimePicker_ThoiGianPV.Size = new System.Drawing.Size(340, 30);
+            this.dateTimePicker_ThoiGianPV.Size = new System.Drawing.Size(340, 29);
             this.dateTimePicker_ThoiGianPV.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(18, 65);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(734, 18);
+            this.panel2.TabIndex = 3;
+            // 
+            // label_TenCongViec
+            // 
+            this.label_TenCongViec.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label_TenCongViec.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_TenCongViec.Font = new System.Drawing.Font("Constantia", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TenCongViec.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label_TenCongViec.Location = new System.Drawing.Point(18, 18);
+            this.label_TenCongViec.Name = "label_TenCongViec";
+            this.label_TenCongViec.Size = new System.Drawing.Size(734, 47);
+            this.label_TenCongViec.TabIndex = 0;
+            this.label_TenCongViec.Text = "HỒ SƠ ỨNG TUYỂN";
+            this.label_TenCongViec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FViewCV
             // 
@@ -954,10 +955,10 @@
             this.groupBox_MucTieu.ResumeLayout(false);
             this.tabPage_ThongTinPhongVan.ResumeLayout(false);
             this.tableLayoutPanel_ThongTinPV.ResumeLayout(false);
+            this.groupBox_NguoiPV.ResumeLayout(false);
+            this.groupBox_DiaDiemPV.ResumeLayout(false);
             this.groupBox_KetQuaPV.ResumeLayout(false);
             this.groupBox_ThoiGianPV.ResumeLayout(false);
-            this.groupBox_DiaDiemPV.ResumeLayout(false);
-            this.groupBox_NguoiPV.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

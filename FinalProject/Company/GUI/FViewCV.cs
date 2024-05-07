@@ -168,6 +168,11 @@ namespace FinalProject.Company.GUI
                 return;
             }
             //result = _utBUS.UpdateTrangThai(ID, trangThai);
+
+            _ut.ThoiGianPhongVan = dateTimePicker_ThoiGianPV.Value;
+            _ut.DiaDiemPhongVan = richTextBox_DiaDiemPV.Text;
+            _ut.NguoiPhongVan = richTextBox_NguoiPV.Text;
+
             var ungTuyen = new UngTuyen
             {
                 Id = _ut.Id,
@@ -179,8 +184,16 @@ namespace FinalProject.Company.GUI
             result = _utBUS.Update(ungTuyen);
             if(result > 0)
             {
-                UCMessageBox.Show("Duyệt thành công");
-                this.Close();
+                var output = ungTuyen.SendEmailPhongVan(_ut);
+                if (output.IsSuccess)
+                {
+                    UCMessageBox.Show("Duyệt thành công");
+                    this.Close();
+                }
+                else
+                {
+                    UCMessageBox.Show("Có lỗi phát sinh khi gửi email.");
+                }
             }
             else
             {
