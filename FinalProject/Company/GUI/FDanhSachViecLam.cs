@@ -56,17 +56,16 @@ namespace FinalProject.Company.GUI
         {
             //ucPagination.TotalRecord = listCongViec.Count;
 
-            List<UCViewJob> uCViewJobs = new List<UCViewJob>();
+            List<UCJobCard> uCViewJobs = new List<UCJobCard>();
             if (listCongViec != null && listCongViec.Count > 0)
             {
                 for (int i = 0; i < listCongViec.Count; i++)
                 {
-
-                    UCViewJob uCViewJob = new UCViewJob();
+                    UCJobCard uCViewJob = new UCJobCard();
                     uCViewJob.Id = listCongViec[i].Id;
-                    uCViewJob.JobName = listCongViec[i].Ten;
-                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
-                    //ucJobCard.ScaleSize(0.5f);
+                    uCViewJob.CongViec = listCongViec[i];
+                    // Gán event UCViewJob_ViewClick cho EventHandler ViewClick
+                    uCViewJob.ViewClick += UCViewJob_ViewClick;
 
                     uCViewJobs.Add(uCViewJob);
                 }
@@ -77,6 +76,15 @@ namespace FinalProject.Company.GUI
             flowLayoutPanel_CongViec.Controls.AddRange(uCViewJobs.ToArray());
             flowLayoutPanel_CongViec.ResumeLayout();
         }
+
+        private void UCViewJob_ViewClick(object sender, EventArgs e)
+        {
+            var ucViewJob = sender as UCJobCard;
+            FCreateJob fCreateJob = new FCreateJob();
+            fCreateJob.Id = ucViewJob.Id;
+            fCreateJob.ShowDialog();
+        }
+
         #endregion JobList
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
