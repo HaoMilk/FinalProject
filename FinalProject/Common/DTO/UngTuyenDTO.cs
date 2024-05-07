@@ -26,5 +26,6 @@ namespace FinalProject.Database.DTO
         public string DiaDiemPhongVan { get; set; }
         public string NguoiPhongVan { get; set; }
         public string KetQuaPhongVan { get; set; }
+        public string Email { get; set; }
     }
 }

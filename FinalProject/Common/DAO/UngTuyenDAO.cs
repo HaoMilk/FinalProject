@@ -64,7 +64,7 @@ namespace FinalProject.Common.DAO
             {
                 var list = new List<UngTuyenDTO>();
                 string query = $@"
-                    SELECT ungTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link
+                    SELECT ungTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link, UngVien.Email
                     FROM ungTuyen 
                     INNER JOIN UngVien ON ungTuyen.UngVienId = UngVien.Id
                     INNER JOIN CongViec ON ungTuyen.CongViecId = CongViec.Id
@@ -111,6 +111,7 @@ namespace FinalProject.Common.DAO
                         ungTuyenDto.TenCongTy = reader.GetStringValue(15);
                         ungTuyenDto.TenCv = reader.GetStringValue(16);
                         ungTuyenDto.LinkCv = reader.GetStringValue(17);
+                        ungTuyenDto.Email = reader.GetStringValue(18);
 
                         list.Add(ungTuyenDto);
                     }

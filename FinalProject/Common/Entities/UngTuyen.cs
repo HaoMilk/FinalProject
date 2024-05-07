@@ -1,5 +1,9 @@
-﻿using System;
+﻿using FinalProject.Common.DTO;
+using FinalProject.Common.Helper;
+using FinalProject.Database.DTO;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +27,28 @@ namespace FinalProject.Database.Entities
         public string DiaDiemPhongVan { get; set; }
         public string NguoiPhongVan { get; set; }
         public string KetQuaPhongVan { get; set; }
+
+        public SendEmailBySMTPOutput SendEmailPhongVan(UngTuyenDTO dto)
+        {
+            var title = "Thông báo lịch phỏng vấn";
+            var content = File.ReadAllText("Resources/Templates/HenLichPhongVan.html", encoding: Encoding.UTF8);
+            content = content.Replace("@EmailTitle", title);
+            content = content.Replace("@EmailContent", title);
+            content = content.Replace("@TenUngVien", dto.TenUngVien);
+            content = content.Replace("@TenCongViec", dto.TenCongViec);
+            content = content.Replace("@TenCongTy", dto.TenCongTy);
+            content = content.Replace("@ThoiGianPhongVan", dto.ThoiGianPhongVan.Value.ToString("hh:mm, dd/MM/yyyy"));
+            content = content.Replace("@DiaDiemPhongVan", dto.DiaDiemPhongVan);
+
+            var input = new SendEmailBySMTPInput
+            {
+                Title = title,
+                Content = content,
+                Recipient = new List<string> { dto.Email }
+            };
+            var output = MailHelper.SendEmailBySMTP(input);
+            return output;
+        }
     }
 
     /// <summary>
