@@ -16,11 +16,6 @@ namespace FinalProject.UC
     {
         [Browsable(true)]
         [Category("Action")]
-        [Description("Invoked when user clicks button menu")]
-        public event EventHandler MenuClick;
-
-        [Browsable(true)]
-        [Category("Action")]
         [Description("Invoked when user clicks button view")]
         public event EventHandler ViewClick;
 

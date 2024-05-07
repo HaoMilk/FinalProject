@@ -22,5 +22,9 @@ namespace FinalProject.Database.DTO
         public bool IsDeleted { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? UpdatedTime { get; set; }
+        public DateTime? ThoiGianPhongVan { get; set; }
+        public string DiaDiemPhongVan { get; set; }
+        public string NguoiPhongVan { get; set; }
+        public string KetQuaPhongVan { get; set; }
     }
 }

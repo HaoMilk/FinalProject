@@ -64,7 +64,7 @@ namespace FinalProject.Candidate.GUI
                     UCJobCard ucJobCard = new UCJobCard();
                     ucJobCard.Id = listCongViec[i].Id;
                     ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
-                    //ucJobCard.ScaleSize(0.5f);
+                    ucJobCard.ViewClick += UcJobCard_ViewClick;
 
                     ucJobCards.Add(ucJobCard);
                 }
@@ -75,6 +75,18 @@ namespace FinalProject.Candidate.GUI
             flowLayoutPanel_CongViec.Controls.AddRange(ucJobCards.ToArray());
             flowLayoutPanel_CongViec.ResumeLayout();
         }
+
+        private void UcJobCard_ViewClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            FChiTietCongViec fChiTietCv = new FChiTietCongViec();
+            fChiTietCv.Id = ucJobCard.Id;
+            fChiTietCv.UngTuyenId = ucJobCard.UngTuyenId;
+            fChiTietCv.CvName = ucJobCard.CongViec?.Ten;
+            fChiTietCv.ShowDialog();
+        }
+
+
         #endregion JobList
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
