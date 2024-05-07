@@ -2,6 +2,8 @@
 using FinalProject.Common.BUS;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
+using FinalProject.UC;
+using NPOI.HSSF.Record.Chart;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,76 +89,150 @@ namespace FinalProject.Company.GUI
                 richTextBox_MucTieu.Text = _cv.MucTieu;
                 richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
             }
-        }
 
-        private void comboBox_GioiTinh_SelectedIndexChanged(object sender, EventArgs e)
-        {
+            if (_ut != null)
+            {
+                label_TenCongViec.Text = _ut.TenCongViec;
+                dateTimePicker_ThoiGianPV.Value = _ut.ThoiGianPhongVan ?? DateTime.Now;
+                richTextBox_DiaDiemPV.Text = _ut.DiaDiemPhongVan;
+                richTextBox_NguoiPV.Text = _ut.NguoiPhongVan;
+                richTextBox_KetQuaPV.Text = _ut.KetQuaPhongVan;
+                label_TrangThaiUngTuyen.Text = TrangThaiUngTuyen.GetValue(_ut.TrangThai);
 
+                if (_ut.TrangThai == TrangThaiUngTuyen.Submitted)
+                {
+                    richTextBox_KetQuaPV.Enabled = false;
+                    button_TuyenDung.Enabled = false;
+                }
+                else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
+                {
+                    button_Duyet.Enabled = false;
+                    dateTimePicker_ThoiGianPV.Enabled = false;
+                    richTextBox_DiaDiemPV.Enabled = false;
+                    richTextBox_NguoiPV.Enabled = false;
+                }
+                else if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+                {
+                    tableLayoutPanel_Buttons.Enabled = false;
+                    tableLayoutPanel_ThongTinPV.Enabled = false;
+                }
+                else if (_ut.TrangThai == TrangThaiUngTuyen.Cancelled)
+                {
+                    tableLayoutPanel_Buttons.Enabled = false;
+                    tableLayoutPanel_ThongTinPV.Enabled = false;
+                }
+                else if (_ut.TrangThai == TrangThaiUngTuyen.Recruitmented)
+                {
+                    tableLayoutPanel_Buttons.Enabled = false;
+                    tableLayoutPanel_ThongTinPV.Enabled = false;
+                }
+            }
         }
 
         private void button_Duyet_Click(object sender, EventArgs e)
         {
-            var ID = _ut.Id;
             var trangThai = _ut.TrangThai;
             if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
             {
-                MessageBox.Show("Hồ sơ đã bị loại bỏ");
+                UCMessageBox.Show("Hồ sơ đã bị loại bỏ");
                 return;
             }
             else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
             {
-                MessageBox.Show("Hồ sơ đã được duyệt");
+                UCMessageBox.Show("Hồ sơ đã được duyệt");
                 return;
             }
             else
             {
                 trangThai = TrangThaiUngTuyen.Approved;
             }
-            result = _utBUS.UpdateTrangThai(ID, trangThai);
-            if(result!=0)
+            if (string.IsNullOrEmpty(richTextBox_DiaDiemPV.Text))
             {
-                MessageBox.Show("Duyệt thành công");
+                tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
+                richTextBox_DiaDiemPV.Focus();
+                UCMessageBox.Show("Vui lòng nhập địa điểm phỏng vấn!");
+                return;
+            }
+            if (string.IsNullOrEmpty(richTextBox_NguoiPV.Text))
+            {
+                tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
+                richTextBox_NguoiPV.Focus();
+                UCMessageBox.Show("Vui lòng nhập thông tin người phỏng vấn!");
+                return;
+            }
+            if (string.IsNullOrEmpty(richTextBox_DiaDiemPV.Text))
+            {
+                tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
+                richTextBox_DiaDiemPV.Focus();
+                UCMessageBox.Show("Vui lòng nhập thông tin địa điểm phỏng vấn!");
+                return;
+            }
+            //result = _utBUS.UpdateTrangThai(ID, trangThai);
+            var ungTuyen = new UngTuyen
+            {
+                Id = _ut.Id,
+                TrangThai = trangThai,
+                ThoiGianPhongVan = dateTimePicker_ThoiGianPV.Value,
+                DiaDiemPhongVan = richTextBox_DiaDiemPV.Text,
+                NguoiPhongVan = richTextBox_NguoiPV.Text,
+            };
+            result = _utBUS.Update(ungTuyen);
+            if(result > 0)
+            {
+                UCMessageBox.Show("Duyệt thành công");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Duyệt không thành công");
-
+                UCMessageBox.Show("Duyệt không thành công");
             }
         }
 
         private void button_Loai_Click(object sender, EventArgs e)
         {
-            var ID = _ut.Id;
             var trangThai = _ut.TrangThai;
             if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
             {
-                MessageBox.Show("Hồ sơ đã được loại bỏ");
+                UCMessageBox.Show("Hồ sơ đã được loại bỏ");
                 return;
             }
             else
             {
                 trangThai = TrangThaiUngTuyen.Rejected;
             }
-
-            result = _utBUS.UpdateTrangThai(ID, trangThai);
-            if (result != 0)
+            if (string.IsNullOrEmpty(richTextBox_KetQuaPV.Text))
             {
-                MessageBox.Show("Loại bỏ thành công");
+                tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
+                richTextBox_KetQuaPV.Focus();
+                UCMessageBox.Show("Vui lòng nhập thông tin kết quả phỏng vấn!");
+                return;
+            }
+
+            //result = _utBUS.UpdateTrangThai(ID, trangThai);
+            var ungTuyen = new UngTuyen
+            {
+                Id = _ut.Id,
+                TrangThai = trangThai,
+                KetQuaPhongVan = richTextBox_KetQuaPV.Text
+            };
+            result = _utBUS.Update(ungTuyen);
+            if (result > 0)
+            {
+                UCMessageBox.Show("Loại bỏ thành công");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Loại bỏ không thành công");
-
+                UCMessageBox.Show("Loại bỏ không thành công");
             }
         }
 
         private void button_TuyenDung_Click(object sender, EventArgs e)
         {
-            var ID = _ut.Id;
             var trangThai = _ut.TrangThai;
             if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
             {
-                MessageBox.Show("Hồ sơ đã bị loại bỏ");
+                UCMessageBox.Show("Hồ sơ đã bị loại bỏ");
                 return;
             }
             else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
@@ -165,20 +241,34 @@ namespace FinalProject.Company.GUI
             }
             else
             {
-                MessageBox.Show("Hồ sơ chưa được duyệt");
+                UCMessageBox.Show("Hồ sơ chưa được duyệt");
                 return;
             }
-            result = _utBUS.UpdateTrangThai(ID, trangThai);
-            if (result != 0)
+            if (string.IsNullOrEmpty(richTextBox_KetQuaPV.Text))
             {
-                MessageBox.Show("Tuyển dụng thành công");
+                tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
+                richTextBox_KetQuaPV.Focus();
+                UCMessageBox.Show("Vui lòng nhập thông tin kết quả phỏng vấn!");
+                return;
+            }
+
+            //result = _utBUS.UpdateTrangThai(ID, trangThai);
+            var ungTuyen = new UngTuyen
+            {
+                Id = _ut.Id,
+                TrangThai = trangThai,
+                KetQuaPhongVan = richTextBox_KetQuaPV.Text
+            };
+            result = _utBUS.Update(ungTuyen);
+            if (result > 0)
+            {
+                UCMessageBox.Show("Tuyển dụng thành công");
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Tuyển dụng không thành công");
-
+                UCMessageBox.Show("Tuyển dụng không thành công");
             }
-
         }
     }
 }
