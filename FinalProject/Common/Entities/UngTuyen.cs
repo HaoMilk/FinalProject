@@ -49,6 +49,27 @@ namespace FinalProject.Database.Entities
             var output = MailHelper.SendEmailBySMTP(input);
             return output;
         }
+
+        public SendEmailBySMTPOutput SendEmailKetQuaPhongVan(UngTuyenDTO dto)
+        {
+            var title = "Thông báo kết quả phỏng vấn";
+            var content = File.ReadAllText("Resources/Templates/KetQuaPhongVan.html", encoding: Encoding.UTF8);
+            content = content.Replace("@EmailTitle", title);
+            content = content.Replace("@EmailContent", title);
+            content = content.Replace("@TenUngVien", dto.TenUngVien);
+            content = content.Replace("@TenCongViec", dto.TenCongViec);
+            content = content.Replace("@TenCongTy", dto.TenCongTy);
+            content = content.Replace("@KetQuaPhongVan", dto.KetQuaPhongVan);
+
+            var input = new SendEmailBySMTPInput
+            {
+                Title = title,
+                Content = content,
+                Recipient = new List<string> { dto.Email }
+            };
+            var output = MailHelper.SendEmailBySMTP(input);
+            return output;
+        }
     }
 
     /// <summary>
