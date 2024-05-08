@@ -75,9 +75,6 @@ namespace FinalProject.Company
             this.Show();
         }
 
-        private void ucMenuCard_LichSuCongViec_MenuClick(object sender, EventArgs e)
-        {
 
-        }
     }
 }
