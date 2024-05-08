@@ -729,6 +729,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\icons8-approve-48.png" />
+    <None Include="Resources\FPT.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
