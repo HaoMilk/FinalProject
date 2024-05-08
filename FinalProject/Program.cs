@@ -1,4 +1,4 @@
-﻿using FinalProject.Candidate.GUI;
+﻿using FinalProject.GUI.Candidate;
 using FinalProject.Common.Helper;
 using System;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ namespace FinalProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Form_DangNhap());
+            Application.Run(new FDangNhap());
         }
     }
 }

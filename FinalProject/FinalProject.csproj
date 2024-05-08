@@ -221,63 +221,63 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\FAdminHomePage.cs">
+    <Compile Include="GUI\Admin\FAdminHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\FAdminHomePage.Designer.cs">
+    <Compile Include="GUI\Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\Class\ChartHelper.cs" />
-    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.cs">
+    <Compile Include="GUI\Admin\ThongKe\Class\ChartHelper.cs" />
+    <Compile Include="GUI\Admin\ThongKe\Class\FThongKeUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.Designer.cs">
+    <Compile Include="GUI\Admin\ThongKe\Class\FThongKeUngVien.Designer.cs">
       <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FDashBoard.cs">
+    <Compile Include="GUI\Admin\ThongKe\FDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FDashBoard.Designer.cs">
+    <Compile Include="GUI\Admin\ThongKe\FDashBoard.Designer.cs">
       <DependentUpon>FDashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.cs">
+    <Compile Include="GUI\Admin\ThongKe\FThongKeCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.Designer.cs">
+    <Compile Include="GUI\Admin\ThongKe\FThongKeCongViec.Designer.cs">
       <DependentUpon>FThongKeCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.Designer.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyet.Designer.cs">
       <DependentUpon>FXetDuyet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyetCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.Designer.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyetCongTy.Designer.cs">
       <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyetUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
+    <Compile Include="GUI\Admin\XetDuyet\FXetDuyetUngVien.Designer.cs">
       <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\Const\GioiTinhConsts.cs" />
     <Compile Include="Common\Const\KinhNghiemConsts.cs" />
     <Compile Include="Common\Const\MucLuongConstants.cs" />
     <Compile Include="Common\Const\NgheNghiepConts.cs" />
-    <Compile Include="Candidate\GUI\FTaoCv.cs">
+    <Compile Include="GUI\Candidate\FTaoCv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FTaoCv.Designer.cs">
+    <Compile Include="GUI\Candidate\FTaoCv.Designer.cs">
       <DependentUpon>FTaoCv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FUngTuyenCongViec.cs">
+    <Compile Include="GUI\Candidate\FUngTuyenCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FUngTuyenCongViec.Designer.cs">
+    <Compile Include="GUI\Candidate\FUngTuyenCongViec.Designer.cs">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\BUS\CongTyBUS.cs" />
@@ -327,61 +327,61 @@
     <Compile Include="Common\Helper\StringHelper.cs" />
     <Compile Include="Common\Helper\WordHelper.cs" />
     <Compile Include="Common\LoggedUser.cs" />
-    <Compile Include="Company\GUI\FCreateJob.cs">
+    <Compile Include="GUI\Company\FCreateJob.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FCreateJob.Designer.cs">
+    <Compile Include="GUI\Company\FCreateJob.Designer.cs">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\DTO\UngVienGetAllInput.cs" />
     <Compile Include="Common\DTO\CvGetAllInput.cs" />
     <Compile Include="Common\DTO\TimKiemViecLamDto.cs" />
-    <Compile Include="Candidate\GUI\FCandidateHomePage.cs">
+    <Compile Include="GUI\Candidate\FCandidateHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FCandidateHomePage.Designer.cs">
+    <Compile Include="GUI\Candidate\FCandidateHomePage.Designer.cs">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FCandidateInfor.cs">
+    <Compile Include="GUI\Candidate\FCandidateInfor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FCandidateInfor.Designer.cs">
+    <Compile Include="GUI\Candidate\FCandidateInfor.Designer.cs">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FChiTietCongViec.cs">
+    <Compile Include="GUI\Candidate\FChiTietCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FChiTietCongViec.Designer.cs">
+    <Compile Include="GUI\Candidate\FChiTietCongViec.Designer.cs">
       <DependentUpon>FChiTietCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachCty.cs">
+    <Compile Include="GUI\Candidate\FDanhSachCty.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachCty.Designer.cs">
+    <Compile Include="GUI\Candidate\FDanhSachCty.Designer.cs">
       <DependentUpon>FDanhSachCty.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachDaUT.cs">
+    <Compile Include="GUI\Candidate\FDanhSachDaUT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachDaUT.Designer.cs">
+    <Compile Include="GUI\Candidate\FDanhSachDaUT.Designer.cs">
       <DependentUpon>FDanhSachDaUT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachVL.cs">
+    <Compile Include="GUI\Candidate\FDanhSachVL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FDanhSachVL.Designer.cs">
+    <Compile Include="GUI\Candidate\FDanhSachVL.Designer.cs">
       <DependentUpon>FDanhSachVL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FMauCv.cs">
+    <Compile Include="GUI\Candidate\FMauCv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FMauCv.Designer.cs">
+    <Compile Include="GUI\Candidate\FMauCv.Designer.cs">
       <DependentUpon>FMauCv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Candidate\GUI\FQlyCv.cs">
+    <Compile Include="GUI\Candidate\FQlyCv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Candidate\GUI\FQlyCv.Designer.cs">
+    <Compile Include="GUI\Candidate\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\BUS\UngTuyenBUS.cs" />
@@ -391,22 +391,22 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FDanhSachViecLam.cs">
+    <Compile Include="GUI\Company\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FDanhSachViecLam.Designer.cs">
+    <Compile Include="GUI\Company\FDanhSachViecLam.Designer.cs">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FHoSoUT.cs">
+    <Compile Include="GUI\Company\FHoSoUT.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
+    <Compile Include="GUI\Company\FHoSoUT.Designer.cs">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FViewCV.cs">
+    <Compile Include="GUI\Company\FViewCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FViewCV.Designer.cs">
+    <Compile Include="GUI\Company\FViewCV.Designer.cs">
       <DependentUpon>FViewCV.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
@@ -419,6 +419,36 @@
     <Compile Include="Common\Entities\UngTuyen.cs" />
     <Compile Include="Common\Entities\UngVien.cs" />
     <Compile Include="Common\Entities\User.cs" />
+    <Compile Include="GUI\Common\FDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Common\FDangKy.Designer.cs">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Common\FDatLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Common\FDatLaiMatKhau.Designer.cs">
+      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Common\FDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Common\FDoiMatKhau.Designer.cs">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Common\FQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Common\FQuenMatKhau.Designer.cs">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Common\FXacNhanEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Common\FXacNhanEmail.Designer.cs">
+      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC\UCComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -476,23 +506,23 @@
     <Compile Include="Common\GUI\FDoiMatKhau.Designer.cs">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FCompanyHomePage.cs">
+    <Compile Include="GUI\Company\FCompanyHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FCompanyHomePage.Designer.cs">
+    <Compile Include="GUI\Company\FCompanyHomePage.Designer.cs">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Company\GUI\FThongTinCongTy.cs">
+    <Compile Include="GUI\Company\FThongTinCongTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Company\GUI\FThongTinCongTy.Designer.cs">
+    <Compile Include="GUI\Company\FThongTinCongTy.Designer.cs">
       <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FLogin.cs">
+    <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FLogin.Designer.cs">
-      <DependentUpon>FLogin.cs</DependentUpon>
+    <Compile Include="FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -520,58 +550,58 @@
     <Compile Include="UC\UCViewJob.Designer.cs">
       <DependentUpon>UCViewJob.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Admin\FAdminHomePage.resx">
+    <EmbeddedResource Include="GUI\Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.resx">
+    <EmbeddedResource Include="GUI\Admin\ThongKe\Class\FThongKeUngVien.resx">
       <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\ThongKe\FDashBoard.resx">
+    <EmbeddedResource Include="GUI\Admin\ThongKe\FDashBoard.resx">
       <DependentUpon>FDashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKeCongViec.resx">
+    <EmbeddedResource Include="GUI\Admin\ThongKe\FThongKeCongViec.resx">
       <DependentUpon>FThongKeCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="UC\UCCustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyet.resx">
+    <EmbeddedResource Include="GUI\Admin\XetDuyet\FXetDuyet.resx">
       <DependentUpon>FXetDuyet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.resx">
+    <EmbeddedResource Include="GUI\Admin\XetDuyet\FXetDuyetCongTy.resx">
       <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.resx">
+    <EmbeddedResource Include="GUI\Admin\XetDuyet\FXetDuyetUngVien.resx">
       <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FCandidateHomePage.resx">
+    <EmbeddedResource Include="GUI\Candidate\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FCandidateInfor.resx">
+    <EmbeddedResource Include="GUI\Candidate\FCandidateInfor.resx">
       <DependentUpon>FCandidateInfor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FChiTietCongViec.resx">
+    <EmbeddedResource Include="GUI\Candidate\FChiTietCongViec.resx">
       <DependentUpon>FChiTietCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FDanhSachCty.resx">
+    <EmbeddedResource Include="GUI\Candidate\FDanhSachCty.resx">
       <DependentUpon>FDanhSachCty.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FDanhSachDaUT.resx">
+    <EmbeddedResource Include="GUI\Candidate\FDanhSachDaUT.resx">
       <DependentUpon>FDanhSachDaUT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FDanhSachVL.resx">
+    <EmbeddedResource Include="GUI\Candidate\FDanhSachVL.resx">
       <DependentUpon>FDanhSachVL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FMauCv.resx">
+    <EmbeddedResource Include="GUI\Candidate\FMauCv.resx">
       <DependentUpon>FMauCv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FQlyCv.resx">
+    <EmbeddedResource Include="GUI\Candidate\FQlyCv.resx">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FTaoCv.resx">
+    <EmbeddedResource Include="GUI\Candidate\FTaoCv.resx">
       <DependentUpon>FTaoCv.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Candidate\GUI\FUngTuyenCongViec.resx">
+    <EmbeddedResource Include="GUI\Candidate\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FDangKy.resx">
@@ -586,17 +616,32 @@
     <EmbeddedResource Include="Common\GUI\FXacNhanEmail.resx">
       <DependentUpon>FXacNhanEmail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
+    <EmbeddedResource Include="GUI\Company\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
+    <EmbeddedResource Include="GUI\Company\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
+    <EmbeddedResource Include="GUI\Company\FHoSoUT.resx">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FViewCV.resx">
+    <EmbeddedResource Include="GUI\Company\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Common\FDangKy.resx">
+      <DependentUpon>FDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Common\FDatLaiMatKhau.resx">
+      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Common\FDoiMatKhau.resx">
+      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Common\FQuenMatKhau.resx">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Common\FXacNhanEmail.resx">
+      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCCtyCard.resx">
       <DependentUpon>UCCtyCard.cs</DependentUpon>
@@ -622,14 +667,14 @@
     <EmbeddedResource Include="Common\GUI\FDoiMatKhau.resx">
       <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FCompanyHomePage.resx">
+    <EmbeddedResource Include="GUI\Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FThongTinCongTy.resx">
+    <EmbeddedResource Include="GUI\Company\FThongTinCongTy.resx">
       <DependentUpon>FThongTinCongTy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FLogin.resx">
-      <DependentUpon>FLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

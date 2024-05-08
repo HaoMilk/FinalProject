@@ -1,5 +1,5 @@
-﻿using FinalProject.Candidate.GUI;
-using FinalProject.Company.GUI;
+﻿using FinalProject.GUI.Candidate;
+using FinalProject.GUI.Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

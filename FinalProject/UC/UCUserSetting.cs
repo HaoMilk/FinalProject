@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FinalProject.Candidate.UC
+namespace FinalProject.UC
 {
     public partial class UCUserSetting : UserControl
     {

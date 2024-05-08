@@ -1,4 +1,4 @@
-﻿using FinalProject.Candidate.GUI;
+﻿using FinalProject.GUI.Candidate;
 using FinalProject.Common.Helper;
 using System;
 using System.ComponentModel;

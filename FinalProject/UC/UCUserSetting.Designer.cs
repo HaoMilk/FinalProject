@@ -1,4 +1,4 @@
-﻿namespace FinalProject.Candidate.UC
+﻿namespace FinalProject.UC
 {
     partial class UCUserSetting
     {

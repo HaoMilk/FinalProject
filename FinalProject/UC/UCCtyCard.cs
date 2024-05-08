@@ -1,5 +1,4 @@
 ﻿using FinalProject.Common.Helper;
-using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Database.Entities;
 using System;
 using System.Collections.Generic;
