@@ -18,7 +18,7 @@ namespace FinalProject.Candidate.GUI
 {
     public partial class FDanhSachDaUT : UCForm
     {
-        private UngTuyenDAO ungTuyenDAO = new UngTuyenDAO();
+        private CongViecBUS congViecBUS = new CongViecBUS();
         private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
         private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
 
@@ -33,11 +33,11 @@ namespace FinalProject.Candidate.GUI
         #region JobList
         private void LoadJobList()
         {
-            var quantity = ucPagination.PageSize;
-            var start = ucPagination.StartRecord;
-            var end = ucPagination.EndRecord;
+            //var quantity = ucPagination.PageSize;
+            //var start = ucPagination.StartRecord;
+            //var end = ucPagination.EndRecord;
 
-            var ucJobCards = CreateJobList(quantity);
+            var ucJobCards = CreateJobList();
             flowLayoutPanel_Data.Controls.Clear();
             flowLayoutPanel_Data.SuspendLayout();
             flowLayoutPanel_Data.Controls.AddRange(ucJobCards.ToArray());
@@ -46,7 +46,7 @@ namespace FinalProject.Candidate.GUI
             //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
         }
 
-        private List<UCJobCard> CreateJobList(int quantity)
+        private List<UCJobCard> CreateJobList()
         {
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
 
@@ -60,8 +60,7 @@ namespace FinalProject.Candidate.GUI
                 UCJobCard ucJobCard = new UCJobCard();
                 ucJobCard.Id = listUngTuyen[i].CongViecId;
                 ucJobCard.UngTuyenId = listUngTuyen[i].Id;
-                ucJobCard.JobName = listUngTuyen[i].TenCongViec;
-                ucJobCard.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
+                ucJobCard.CongViec = congViecBUS.GetById(listUngTuyen[i].CongViecId);
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);

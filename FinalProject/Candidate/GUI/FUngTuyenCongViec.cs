@@ -180,7 +180,7 @@ namespace FinalProject.Candidate.GUI
             if (ungTuyenId.HasValue && ungTuyenId > 0)
             {
                 // Cập nhật trạng thái ứng tuyển thành cancel
-                var result = ungTuyenBUS.Update(ungTuyenId.Value, TrangThaiUngTuyenConsts.Cancel, "Hủy ứng tuyển");
+                var result = ungTuyenBUS.Update(ungTuyenId.Value, TrangThaiUngTuyen.Cancelled, "Hủy ứng tuyển");
                 if (result > 0) 
                 {
                     UCMessageBox.Show("Hủy thành công!");

@@ -19,7 +19,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $"SELECT COUNT(1) FROM UngTuyen WHERE Id = '{id}';";
+                string query = $"SELECT COUNT(1) FROM ungTuyen WHERE Id = '{id}';";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -38,7 +38,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = "SELECT COUNT(1) FROM UngTuyen WHERE IsDeleted = 0 ;";
+                string query = "SELECT COUNT(1) FROM ungTuyen WHERE IsDeleted = 0 ;";
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
@@ -64,22 +64,22 @@ namespace FinalProject.Common.DAO
             {
                 var list = new List<UngTuyenDTO>();
                 string query = $@"
-                    SELECT UngTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link
-                    FROM UngTuyen 
-                    INNER JOIN UngVien ON UngTuyen.UngVienId = UngVien.Id
-                    INNER JOIN CongViec ON UngTuyen.CongViecId = CongViec.Id
-                    INNER JOIN CV ON UngTuyen.CvId = CV.Id
+                    SELECT ungTuyen.*, UngVien.HoTen, CongViec.Ten, CongViec.TenCongTy, Cv.Ten, CV.Link, UngVien.Email
+                    FROM ungTuyen 
+                    INNER JOIN UngVien ON ungTuyen.UngVienId = UngVien.Id
+                    INNER JOIN CongViec ON ungTuyen.CongViecId = CongViec.Id
+                    INNER JOIN CV ON ungTuyen.CvId = CV.Id
                     INNER JOIN CongTy ON CongViec.IdCongTy = CongTy.ID
-                    WHERE UngTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 
+                    WHERE ungTuyen.IsDeleted = 0 AND UngVien.IsDeleted = 0 AND CongViec.IsDeleted = 0 
                           AND CV.IsDeleted = 0 ";
 
                 if (input.Id != 0)
                 {
-                    query += $" AND UngTuyen.Id = {input.Id}";
+                    query += $" AND ungTuyen.Id = {input.Id}";
                 }
                 if (!string.IsNullOrWhiteSpace(input.TrangThai))
                 {
-                    query += $" AND UngTuyen.TrangThai = N'{input.TrangThai}' ";
+                    query += $" AND ungTuyen.TrangThai = N'{input.TrangThai}' ";
                 }
                 if(input.IdCongTy!=0)
                 {
@@ -102,11 +102,16 @@ namespace FinalProject.Common.DAO
                         ungTuyenDto.IsDeleted = reader.GetBooleanValue(6);
                         ungTuyenDto.CreatedTime = reader.GetDateTimeValue(7);
                         ungTuyenDto.UpdatedTime = reader.GetDateTimeValueNullable(8);
-                        ungTuyenDto.TenUngVien = reader.GetStringValue(9);
-                        ungTuyenDto.TenCongViec = reader.GetStringValue(10);
-                        ungTuyenDto.TenCongTy = reader.GetStringValue(11);
-                        ungTuyenDto.TenCv = reader.GetStringValue(12);
-                        ungTuyenDto.LinkCv = reader.GetStringValue(13);
+                        ungTuyenDto.ThoiGianPhongVan = reader.GetDateTimeValueNullable(9);
+                        ungTuyenDto.DiaDiemPhongVan = reader.GetStringValue(10);
+                        ungTuyenDto.NguoiPhongVan = reader.GetStringValue(11);
+                        ungTuyenDto.KetQuaPhongVan = reader.GetStringValue(12);
+                        ungTuyenDto.TenUngVien = reader.GetStringValue(13);
+                        ungTuyenDto.TenCongViec = reader.GetStringValue(14);
+                        ungTuyenDto.TenCongTy = reader.GetStringValue(15);
+                        ungTuyenDto.TenCv = reader.GetStringValue(16);
+                        ungTuyenDto.LinkCv = reader.GetStringValue(17);
+                        ungTuyenDto.Email = reader.GetStringValue(18);
 
                         list.Add(ungTuyenDto);
                     }
@@ -123,7 +128,7 @@ namespace FinalProject.Common.DAO
         public int Add(UngTuyen ungTuyen)
         {
             string query = $@"
-            INSERT INTO UngTuyen (CongViecId, UngVienId, CvId, TrangThai, MoTa, IsDeleted, CreatedTime, UpdatedTime )
+            INSERT INTO ungTuyen (CongViecId, UngVienId, CvId, TrangThai, MoTa, IsDeleted, CreatedTime, UpdatedTime )
             VALUES ({ungTuyen.CongViecId}, {ungTuyen.UngVienId}, {ungTuyen.CvId}, N'{ungTuyen.TrangThai}',
                 N'{ungTuyen.MoTa}', 0, '{ungTuyen.CreatedTime:yyyy-MM-dd hh:mm:ss}', NULL
             );";
@@ -141,20 +146,50 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        public int Update(UngTuyen UngTuyen)
+        public int Update(UngTuyen ungTuyen)
         {
             using (dbConnection.Connection)
             {
-                string query = $@"
-                    UPDATE UngTuyen 
-                    SET TrangThai = N'{UngTuyen.TrangThai}', 
-                        MoTa = N'{UngTuyen.MoTa}', 
-                        UpdatedTime = '{UngTuyen.UpdatedTime:yyyy-MM-dd hh:mm:ss}' 
-                    WHERE Id = {UngTuyen.Id};";
+                string query = $@" UPDATE UngTuyen SET UpdatedTime = @UpdatedTime ";
 
-                SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                if (ungTuyen.ThoiGianPhongVan.HasValue)
+                {
+                    query += $", ThoiGianPhongVan = @ThoiGianPhongVan ";
+                }
+                if (!string.IsNullOrEmpty(ungTuyen.DiaDiemPhongVan))
+                {
+                    query += $", DiaDiemPhongVan = @DiaDiemPhongVan ";
+                }
+                if (!string.IsNullOrEmpty(ungTuyen.NguoiPhongVan))
+                {
+                    query += $", NguoiPhongVan = @NguoiPhongVan ";
+                }
+                if (!string.IsNullOrEmpty(ungTuyen.KetQuaPhongVan))
+                {
+                    query += $", KetQuaPhongVan = @KetQuaPhongVan ";
+                }
+                if (!string.IsNullOrEmpty(ungTuyen.TrangThai))
+                {
+                    query += $", TrangThai = @TrangThai ";
+                }
+                if (!string.IsNullOrEmpty(ungTuyen.MoTa))
+                {
+                    query += $", MoTa = @MoTa ";
+                }
+                query += "  WHERE Id = @Id;";
+
                 try
                 {
+                    SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
+                    cmd.Parameters.AddWithValue("@Id", ungTuyen.Id);
+                    cmd.Parameters.AddWithValue("@UpdatedTime", ungTuyen.UpdatedTime ?? DateTime.Now);
+                    cmd.Parameters.AddWithValue("@ThoiGianPhongVan", ungTuyen.ThoiGianPhongVan ?? DateTime.Now);
+                    cmd.Parameters.AddWithValue("@DiaDiemPhongVan", ungTuyen.DiaDiemPhongVan ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@NguoiPhongVan", ungTuyen.NguoiPhongVan ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@KetQuaPhongVan", ungTuyen.KetQuaPhongVan ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@TrangThai", ungTuyen.TrangThai ?? string.Empty);
+                    cmd.Parameters.AddWithValue("@MoTa", ungTuyen.MoTa ?? string.Empty);
+
                     return cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -167,7 +202,7 @@ namespace FinalProject.Common.DAO
         {
             using (dbConnection.Connection)
             {
-                string query = $"DELETE FROM UngTuyen WHERE Id = {UngTuyen.Id};";
+                string query = $"DELETE FROM ungTuyen WHERE Id = {UngTuyen.Id};";
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 try
@@ -186,7 +221,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $@"
-                    UPDATE UngTuyen 
+                    UPDATE ungTuyen 
                     SET IsDeleted = 1, 
                         UpdatedTime = '{UngTuyen.UpdatedTime:yyyy-MM-dd hh:mm:ss}' 
                     WHERE Id = {UngTuyen.Id};";
@@ -207,7 +242,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 string query = $@"
-                    UPDATE UngTuyen 
+                    UPDATE ungTuyen 
                     SET TrangThai = N'{ungTuyen.TrangThai}'  
                     WHERE Id = {ungTuyen.Id};";
 

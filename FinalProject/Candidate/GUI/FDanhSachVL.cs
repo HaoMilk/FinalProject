@@ -54,19 +54,17 @@ namespace FinalProject.Candidate.GUI
 
         private void LoadJobList()
         {
-            ucPagination.TotalRecord = listCongViec.Count;
+            //ucPagination.TotalRecord = listCongViec.Count;
 
             List<UCJobCard> ucJobCards = new List<UCJobCard>();
             if (listCongViec != null && listCongViec.Count > 0)
             {
                 for (int i = 0; i < listCongViec.Count; i++)
                 {
-
                     UCJobCard ucJobCard = new UCJobCard();
                     ucJobCard.Id = listCongViec[i].Id;
-                    ucJobCard.JobName = listCongViec[i].Ten;
-                    //ucJobCard.LastUpdatedTime = listCongViec[i].UpdatedTime;
-                    //ucJobCard.ScaleSize(0.5f);
+                    ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
+                    ucJobCard.ViewClick += UcJobCard_ViewClick;
 
                     ucJobCards.Add(ucJobCard);
                 }
@@ -77,6 +75,18 @@ namespace FinalProject.Candidate.GUI
             flowLayoutPanel_CongViec.Controls.AddRange(ucJobCards.ToArray());
             flowLayoutPanel_CongViec.ResumeLayout();
         }
+
+        private void UcJobCard_ViewClick(object sender, EventArgs e)
+        {
+            var ucJobCard = sender as UCJobCard;
+            FChiTietCongViec fChiTietCv = new FChiTietCongViec();
+            fChiTietCv.Id = ucJobCard.Id;
+            fChiTietCv.UngTuyenId = ucJobCard.UngTuyenId;
+            fChiTietCv.CvName = ucJobCard.CongViec?.Ten;
+            fChiTietCv.ShowDialog();
+        }
+
+
         #endregion JobList
 
         private void FDanhSachVL_Load(object sender, EventArgs e)
@@ -112,8 +122,8 @@ namespace FinalProject.Candidate.GUI
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             //input.FromDate = dateTimePicker_FromDate.Value;
             input.IdCongTy = LoggedUser.CongTy?.ID;
-            input.FromId = ucPagination.StartRecord;
-            input.ToId = ucPagination.EndRecord;
+            //input.FromId = ucPagination.StartRecord;
+            //input.ToId = ucPagination.EndRecord;
 
             listCongViec = congViecBUS.Search(input);
         }

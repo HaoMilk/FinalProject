@@ -707,6 +707,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\027. Thong tin lich phong van.sql" />
     <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />
     <Content Include="Database\Scripts\025. User add Otp, OtpExpiredTime.sql" />
     <Content Include="Database\Scripts\024. Drop Foreign Key FK_CV_UngVien.sql" />
@@ -1004,6 +1005,9 @@
     <None Include="Resources\icons8-delete-24.png" />
     <None Include="Resources\TuyenDung.jpg" />
     <None Include="Resources\Thông tin tuyển dụng.png" />
+    <Content Include="Resources\Templates\HenLichPhongVan.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Templates\SendOtpToEmail.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
