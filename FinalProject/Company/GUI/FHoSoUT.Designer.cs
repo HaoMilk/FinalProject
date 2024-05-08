@@ -89,6 +89,7 @@
             // 
             // comboBox_TrangThai
             // 
+            this.comboBox_TrangThai.BackColor = System.Drawing.Color.CadetBlue;
             this.comboBox_TrangThai.Dock = System.Windows.Forms.DockStyle.Left;
             this.comboBox_TrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_TrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -104,6 +105,7 @@
             this.comboBox_TrangThai.Name = "comboBox_TrangThai";
             this.comboBox_TrangThai.Size = new System.Drawing.Size(439, 29);
             this.comboBox_TrangThai.TabIndex = 0;
+            this.comboBox_TrangThai.SelectedValueChanged += new System.EventHandler(this.comboBox_TrangThai_SelectedValueChanged);
             // 
             // label_Name
             // 
@@ -135,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1032, 784);
             this.Controls.Add(this.flowLayoutPanel_Data);
             this.Controls.Add(this.tableLayoutPanel1);

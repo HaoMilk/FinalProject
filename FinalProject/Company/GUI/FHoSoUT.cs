@@ -5,6 +5,7 @@ using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FinalProject.Company.GUI
 {
@@ -22,33 +23,25 @@ namespace FinalProject.Company.GUI
 
         private void FQlyCv_Load(object sender, EventArgs e)
         {
-            LoadCvList();
+
         }
 
-        private void LoadCvList()
+        private void TimKiem()
         {
-            //var quantity = ucPagination.PageSize;
-            //var start = ucPagination.StartRecord;
-            //var end = ucPagination.EndRecord;
+            input.IdCongTy = LoggedUser.CongTy.ID;
+            input.TrangThai = TrangThaiUngTuyen.GetKey(comboBox_TrangThai.Text);
+            listUngTuyen = ungTuyenBUS.Search(input);
 
-            var ucJobCards = CreateCvList();
+            var ucViewCVs = CreateCvList();
             flowLayoutPanel_Data.Controls.Clear();
-
-            foreach (var ucJobCard in ucJobCards)
-            {
-                flowLayoutPanel_Data.Controls.Add(ucJobCard);
-            }
+            flowLayoutPanel_Data.SuspendLayout();
+            flowLayoutPanel_Data.Controls.AddRange(ucViewCVs.ToArray());
+            flowLayoutPanel_Data.ResumeLayout();
         }
 
         private List<UCViewCV> CreateCvList()
         {
-
             List<UCViewCV> uCViewCVs = new List<UCViewCV>();
-            input.IdCongTy = LoggedUser.CongTy.ID;
-            input.TrangThai = TrangThaiUngTuyen.GetKey(comboBox_TrangThai.Text);
-
-            listUngTuyen = ungTuyenBUS.Search(input);
-
             for (int i = 0; i < listUngTuyen.Count; i++)
             {
                 UCViewCV uCViewCV = new UCViewCV();
@@ -75,17 +68,17 @@ namespace FinalProject.Company.GUI
             fViewCV.ShowDialog();
 
             // Load lại data
-            LoadCvList();
-        }
-
-        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
-        {
-            LoadCvList();
+            TimKiem();
         }
 
         private void button_TimKiem_Click(object sender, EventArgs e)
         {
-            LoadCvList();
+            TimKiem();
+        }
+
+        private void comboBox_TrangThai_SelectedValueChanged(object sender, EventArgs e)
+        {
+            TimKiem();
         }
     }
 }
