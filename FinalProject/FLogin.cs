@@ -106,7 +106,7 @@ namespace FinalProject
 
         private void Form_DangNhap_Load(object sender, EventArgs e)
         {
-
+            textBox_TenDangNhap.Focus();
         }
 
         private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

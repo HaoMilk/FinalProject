@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI
 {
-    public partial class FViewCV : Form
+    public partial class FViewCV : UCForm
     {
         private CvBUS _cvBus = new CvBUS();
         private UngVienBUS _uvBus = new UngVienBUS();
@@ -101,7 +101,6 @@ namespace FinalProject.Company.GUI
 
                 if (_ut.TrangThai == TrangThaiUngTuyen.Submitted)
                 {
-                    richTextBox_KetQuaPV.Enabled = false;
                     button_TuyenDung.Enabled = false;
                 }
                 else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
