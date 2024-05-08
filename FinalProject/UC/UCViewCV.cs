@@ -178,12 +178,14 @@ namespace FinalProject.UC
             }
             else
             {
-                FViewCV fViewCV = new FViewCV();
-                fViewCV.IdCV = this.CVId;
-                fViewCV.IdUT = this.Id;
-                fViewCV.IdUV = this.CandidateId;
+                UCMessageBox.Show("CV Clicked!");
 
-                fViewCV.ShowDialog();
+                //FViewCV fViewCV = new FViewCV();
+                //fViewCV.IdCV = this.CVId;
+                //fViewCV.IdUT = this.Id;
+                //fViewCV.IdUV = this.CandidateId;
+
+                //fViewCV.ShowDialog();
             }
         }
     }

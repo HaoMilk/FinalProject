@@ -33,22 +33,16 @@ namespace FinalProject.Candidate.GUI
         #region JobList
         private void LoadJobList()
         {
-            //var quantity = ucPagination.PageSize;
-            //var start = ucPagination.StartRecord;
-            //var end = ucPagination.EndRecord;
-
-            var ucJobCards = CreateJobList();
+            var ucJobCards = CreateJobCards();
             flowLayoutPanel_Data.Controls.Clear();
             flowLayoutPanel_Data.SuspendLayout();
             flowLayoutPanel_Data.Controls.AddRange(ucJobCards.ToArray());
             flowLayoutPanel_Data.ResumeLayout();
-
-            //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
         }
 
-        private List<UCJobCard> CreateJobList()
+        private List<UCJobCard> CreateJobCards()
         {
-            List<UCJobCard> ucJobCards = new List<UCJobCard>();
+            var ucJobCards = new List<UCJobCard>();
 
             if (listUngTuyen.Count == 0)
             {
@@ -61,6 +55,7 @@ namespace FinalProject.Candidate.GUI
                 ucJobCard.Id = listUngTuyen[i].CongViecId;
                 ucJobCard.UngTuyenId = listUngTuyen[i].Id;
                 ucJobCard.CongViec = congViecBUS.GetById(listUngTuyen[i].CongViecId);
+                ucJobCard.ViewClick += UcJobCard_ViewClick;
                 //ucJobCard.ScaleSize(0.5f);
 
                 ucJobCards.Add(ucJobCard);
@@ -76,19 +71,16 @@ namespace FinalProject.Candidate.GUI
         private void UcJobCard_ViewClick(object sender, EventArgs e)
         {
             var ucJobCard = sender as UCJobCard;
-            UCMessageBox.Show($"Xem chi tiết công việc: {ucJobCard.Id}");
+            FChiTietCongViec fChiTietCv = new FChiTietCongViec();
+            fChiTietCv.Id = ucJobCard.Id;
+            fChiTietCv.UngTuyenId = ucJobCard.UngTuyenId;
+            fChiTietCv.CvName = ucJobCard.CongViec?.Ten;
+            fChiTietCv.ShowDialog();
+
+            // Reload lại danh sách công việc
+            TimKiem();
         }
 
-        /// <summary>
-        /// Event khi click vào menu của UCJobCard
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UcJobCard_MenuClick(object sender, EventArgs e)
-        {
-            var ucJobCard = sender as UCJobCard;
-            UCMessageBox.Show($"Menu công việc: {ucJobCard.Id}");
-        }
         #endregion JobList
 
         private void FDanhSachDaUT_Load(object sender, EventArgs e)
@@ -97,17 +89,12 @@ namespace FinalProject.Candidate.GUI
             LoadJobList();
         }
 
-        private void ucPagination_CurrentPageChanged(object sender, EventArgs e)
-        {
-            LoadJobList();
-        }
-
-        private void comboBox_Status_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+           TimKiem();
+        }
+
+        private void TimKiem()
         {
             var input = new UngTuyenGetAllInput();
             input.TrangThai = ucComboBox_TrangThai.SelectedItem?.Value as string;

@@ -68,6 +68,7 @@
             this.label_MucLuong.AutoSize = true;
             this.label_MucLuong.BackColor = System.Drawing.Color.LightBlue;
             this.label_MucLuong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_MucLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_MucLuong.ForeColor = System.Drawing.Color.Crimson;
             this.label_MucLuong.Location = new System.Drawing.Point(127, 125);
             this.label_MucLuong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -82,6 +83,7 @@
             this.label_DiaDiem.AutoSize = true;
             this.label_DiaDiem.BackColor = System.Drawing.Color.LightBlue;
             this.label_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_DiaDiem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_DiaDiem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label_DiaDiem.Location = new System.Drawing.Point(0, 125);
             this.label_DiaDiem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -118,7 +120,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.label_TenCongViec, 2);
             this.label_TenCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_TenCongViec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_TenCongViec.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TenCongViec.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TenCongViec.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label_TenCongViec.Location = new System.Drawing.Point(0, 58);
             this.label_TenCongViec.Margin = new System.Windows.Forms.Padding(0);
@@ -145,7 +147,7 @@
             this.label_TenCty.AutoSize = true;
             this.label_TenCty.BackColor = System.Drawing.Color.LightBlue;
             this.label_TenCty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_TenCty.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TenCty.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TenCty.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label_TenCty.Location = new System.Drawing.Point(127, 0);
             this.label_TenCty.Margin = new System.Windows.Forms.Padding(0);
@@ -157,7 +159,7 @@
             // 
             // UCJobCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

@@ -1,5 +1,6 @@
 ﻿using FinalProject.Common.BUS;
 using FinalProject.Common.DTO;
+using FinalProject.Company.GUI.Thong_tin;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -18,6 +19,7 @@ namespace FinalProject.Candidate.GUI
     {
         private List<CongTy> _listCongTy = new List<CongTy>();
         private CongTyBUS _congTyBUS = new CongTyBUS();
+        private List<UCCtyCard> ucCtyCards = new List<UCCtyCard>();
 
         public FDanhSachCty()
         {
@@ -33,25 +35,42 @@ namespace FinalProject.Candidate.GUI
 
         private void LoadListCongTy()
         {
-            List<UCCtyCard> UCCtyCards = new List<UCCtyCard>();
+            this.ucCtyCards = new List<UCCtyCard>();
+
             for (int i = 0; i < _listCongTy.Count; i++)
             {
                 UCCtyCard ctyCard = new UCCtyCard();
                 ctyCard.Id = _listCongTy[i].ID;
-                ctyCard.Name = _listCongTy[i].TenCongTy;
-                ctyCard.Address = _listCongTy[i].DiaChi;
+                ctyCard.CongTy = _listCongTy[i];
+                ctyCard.ViewClick += CtyCard_ViewClick;
 
-                UCCtyCards.Add(ctyCard);
+                this.ucCtyCards.Add(ctyCard);
             }
             flowLayoutPanel_DanhSach.Controls.Clear();
             flowLayoutPanel_DanhSach.SuspendLayout();
-            flowLayoutPanel_DanhSach.Controls.AddRange(UCCtyCards.ToArray());
+            flowLayoutPanel_DanhSach.Controls.AddRange(this.ucCtyCards.ToArray());
             flowLayoutPanel_DanhSach.ResumeLayout();
  
-            this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + UCCtyCards.Count;
-        } 
+            this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + _listCongTy.Count;
+        }
+
+        private void CtyCard_ViewClick(object sender, EventArgs e)
+        {
+            var ucCtyCard = sender as UCCtyCard;
+            FThongTinCongTy fThongTinCongTy = new FThongTinCongTy();
+            fThongTinCongTy.Id = ucCtyCard.Id;
+            fThongTinCongTy.ShowDialog();
+
+            // Reload lai danh sach cong ty
+            this.TimKiem();
+        }
 
         private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            this.TimKiem();
+        }
+
+        private void TimKiem()
         {
             // Lấy du lieu tim kiem
             // Goi ham search tu BUS,luu lại vào biến tạm.
@@ -61,7 +80,6 @@ namespace FinalProject.Candidate.GUI
 
             _listCongTy = _congTyBUS.Search(input);
             this.LoadListCongTy();
-
         }
     }
 }

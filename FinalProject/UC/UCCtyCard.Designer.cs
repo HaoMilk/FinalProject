@@ -41,13 +41,14 @@
             this.tableLayoutPanel1.Controls.Add(this.label_Name, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button_View, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 10);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(232, 182);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(230, 182);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label_Name
@@ -61,7 +62,7 @@
             this.label_Name.Location = new System.Drawing.Point(3, 0);
             this.label_Name.Name = "label_Name";
             this.label_Name.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.label_Name.Size = new System.Drawing.Size(226, 136);
+            this.label_Name.Size = new System.Drawing.Size(224, 136);
             this.label_Name.TabIndex = 0;
             this.label_Name.Text = "Công ty";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -75,9 +76,10 @@
             this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.DarkOrange;
             this.button_View.FlatAppearance.BorderSize = 0;
             this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_View.Location = new System.Drawing.Point(3, 139);
+            this.button_View.Location = new System.Drawing.Point(3, 138);
+            this.button_View.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(226, 40);
+            this.button_View.Size = new System.Drawing.Size(224, 42);
             this.button_View.TabIndex = 1;
             this.button_View.UseVisualStyleBackColor = false;
             this.button_View.Click += new System.EventHandler(this.button_View_Click);
@@ -90,9 +92,11 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UCCtyCard";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.Size = new System.Drawing.Size(252, 202);
+            this.Load += new System.EventHandler(this.UCCtyCard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -13,10 +13,10 @@ namespace FinalProject.UC
 {
     public partial class UCJobCard : UserControl
     {
-        [Browsable(true)]
-        [Category("Action")]
-        [Description("Invoked when user clicks button menu")]
-        public event EventHandler MenuClick;
+        //[Browsable(true)]
+        //[Category("Action")]
+        //[Description("Invoked when user clicks button menu")]
+        //public event EventHandler MenuClick;
 
         [Browsable(true)]
         [Category("Action")]
@@ -240,30 +240,21 @@ namespace FinalProject.UC
             }
             else
             {
-                //UCMessageBox.Show($"View id = {id}");
-
-                FChiTietCongViec fChiTietCv = new FChiTietCongViec();
-                fChiTietCv.Id = id;
-                fChiTietCv.UngTuyenId = ungTuyenId;
-                fChiTietCv.CvName = congViec?.Ten;
-                fChiTietCv.ShowDialog();
+                UCMessageBox.Show($"View id = {id}");
             }
         }
 
-        private void button_Menu_Click(object sender, EventArgs e)
-        {
-            if (MenuClick != null)
-            {
-                MenuClick(this, e);
-            }
-            else
-            {
-                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec(this.UngTuyenId);              
-                fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
-                fUngTuyenCongViec.CongViecId = id;
-                fUngTuyenCongViec.ShowDialog();
-            }
-        }
+        //private void button_Menu_Click(object sender, EventArgs e)
+        //{
+        //    if (MenuClick != null)
+        //    {
+        //        MenuClick(this, e);
+        //    }
+        //    else
+        //    {
+        //        UCMessageBox.Show("Menu clicked!");
+        //    }
+        //}
 
         protected override void OnPaint(PaintEventArgs e)
         {

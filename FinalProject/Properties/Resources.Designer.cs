@@ -381,6 +381,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FPT {
+            get {
+                object obj = ResourceManager.GetObject("FPT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gdsc_hcmute {
             get {
                 object obj = ResourceManager.GetObject("gdsc hcmute", resourceCulture);
@@ -475,6 +485,25 @@ namespace FinalProject.Properties {
             get {
                 object obj = ResourceManager.GetObject("heart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        ///&lt;html lang=&quot;vi&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+        ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
+        ///    &lt;title&gt;ðŸ‘‹ @EmailTitle&lt;/title&gt;
+        ///    &lt;!--[if gte mso 9
+        ///      ]&gt;&lt;xml&gt;
+        ///        &lt;o:OfficeDocumentSettings&gt;
+        ///          &lt;o:AllowPNG /&gt;
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HenLichPhongVan {
+            get {
+                return ResourceManager.GetString("HenLichPhongVan", resourceCulture);
             }
         }
         
@@ -949,6 +978,25 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        ///&lt;html lang=&quot;vi&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+        ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
+        ///    &lt;title&gt;ðŸ‘‹ @EmailTitle&lt;/title&gt;
+        ///    &lt;!--[if gte mso 9
+        ///      ]&gt;&lt;xml&gt;
+        ///        &lt;o:OfficeDocumentSettings&gt;
+        ///          &lt;o:AllowPNG /&gt;
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string KetQuaPhongVan {
+            get {
+                return ResourceManager.GetString("KetQuaPhongVan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo_FIT {
@@ -1236,21 +1284,30 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        ///&lt;html lang=&quot;vi&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+        ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
+        ///    &lt;title&gt;ðŸ‘‹ @EmailTitle&lt;/title&gt;
+        ///    &lt;!--[if gte mso 9
+        ///      ]&gt;&lt;xml&gt;
+        ///        &lt;o:OfficeDocumentSettings&gt;
+        ///          &lt;o:AllowPNG /&gt;
+        ///    [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static System.Drawing.Bitmap TuyenDung {
+        internal static string TuChoiHoSoPhongVan {
             get {
-                object obj = ResourceManager.GetObject("TuyenDung", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("TuChoiHoSoPhongVan", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap vecteezy_orange_bubble_background_with_white_line_gradient_orange_5230618 {
+        internal static System.Drawing.Bitmap TuyenDung {
             get {
-                object obj = ResourceManager.GetObject("vecteezy_orange-bubble-background-with-white-line-gradient-orange_5230618", resourceCulture);
+                object obj = ResourceManager.GetObject("TuyenDung", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

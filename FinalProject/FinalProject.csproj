@@ -707,6 +707,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\027. Thong tin lich phong van.sql" />
     <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />
     <Content Include="Database\Scripts\025. User add Otp, OtpExpiredTime.sql" />
     <Content Include="Database\Scripts\024. Drop Foreign Key FK_CV_UngVien.sql" />
@@ -728,6 +729,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\icons8-approve-48.png" />
+    <None Include="Resources\FPT.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1004,6 +1006,12 @@
     <None Include="Resources\icons8-delete-24.png" />
     <None Include="Resources\TuyenDung.jpg" />
     <None Include="Resources\Thông tin tuyển dụng.png" />
+    <Content Include="Resources\Templates\HenLichPhongVan.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Templates\KetQuaPhongVan.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Templates\SendOtpToEmail.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1011,6 +1019,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\vecteezy_orange-bubble-background-with-white-line-gradient-orange_5230618.jpg" />
+    <Content Include="Resources\Templates\TuChoiHoSoPhongVan.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />
