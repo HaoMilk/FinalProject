@@ -220,6 +220,7 @@ namespace FinalProject.Company.GUI
                 UCMessageBox.Show("Vui lòng nhập thông tin kết quả phỏng vấn!");
                 return;
             }
+            _ut.KetQuaPhongVan = richTextBox_KetQuaPV.Text;
 
             //result = _utBUS.UpdateTrangThai(ID, trangThai);
             var ungTuyen = new UngTuyen
@@ -231,8 +232,16 @@ namespace FinalProject.Company.GUI
             result = _utBUS.Update(ungTuyen);
             if (result > 0)
             {
-                UCMessageBox.Show("Loại bỏ thành công");
-                this.Close();
+                var output = ungTuyen.SendEmailTuChoiHoSoPhongVan(_ut);
+                if (output.IsSuccess)
+                {
+                    UCMessageBox.Show("Loại bỏ thành công");
+                    this.Close();
+                }
+                else
+                {
+                    UCMessageBox.Show("Có lỗi phát sinh khi gửi email.");
+                }
             }
             else
             {
@@ -264,6 +273,7 @@ namespace FinalProject.Company.GUI
                 UCMessageBox.Show("Vui lòng nhập thông tin kết quả phỏng vấn!");
                 return;
             }
+            _ut.KetQuaPhongVan = richTextBox_KetQuaPV.Text;
 
             //result = _utBUS.UpdateTrangThai(ID, trangThai);
             var ungTuyen = new UngTuyen
@@ -275,8 +285,16 @@ namespace FinalProject.Company.GUI
             result = _utBUS.Update(ungTuyen);
             if (result > 0)
             {
-                UCMessageBox.Show("Tuyển dụng thành công");
-                this.Close();
+                var output = ungTuyen.SendEmailKetQuaPhongVan(_ut);
+                if(output.IsSuccess)
+                {
+                    UCMessageBox.Show("Tuyển dụng thành công");
+                    this.Close();
+                } 
+                else
+                {
+                    UCMessageBox.Show("Có lỗi phát sinh khi gửi email.");
+                }
             }
             else
             {
