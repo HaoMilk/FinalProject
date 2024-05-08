@@ -61,6 +61,8 @@ namespace FinalProject.UC
         public static DialogResult Show(string message, string title = DefaultTitle, MessageBoxButtons messageBoxType = MessageBoxButtons.OK)
         {
             var messageBox = new UCMessageBox(message, title, messageBoxType);
+            messageBox.TopMost = true;
+            messageBox.BringToFront();
             messageBox.ShowDialog();
             return messageBox.Result;
         }

@@ -115,7 +115,9 @@
     <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
       <HintPath>..\packages\SixLabors.ImageSharp.2.1.7\lib\net472\SixLabors.ImageSharp.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -225,65 +227,24 @@
     <Compile Include="Admin\FAdminHomePage.Designer.cs">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.cs">
+    <Compile Include="Admin\GUI\ThongKe\Class\ChartHelper.cs" />
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\CongTy\FChinhSuaCongTy.Designer.cs">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.Designer.cs">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.cs">
+    <Compile Include="Admin\GUI\ThongKe\FDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\CongTy\FDanhSachCongTy.Designer.cs">
-      <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\CongViec\FChinhSuaCongViec.Designer.cs">
-      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\CongViec\FDanhSachCongViec.Designer.cs">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\ThongKe\FThongKe.Designer.cs">
-      <DependentUpon>FThongKe.cs</DependentUpon>
+    <Compile Include="Admin\GUI\ThongKe\FDashBoard.Designer.cs">
+      <DependentUpon>FDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.Designer.cs">
       <DependentUpon>FThongKeCongViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FChinhSuaUngVien.Designer.cs">
-      <DependentUpon>FChinhSuaUngVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FDanhSachUngVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FDanhSachUngVien.Designer.cs">
-      <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FTaiKhoanUngVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\UngVien\FTaiKhoanUngVien.Designer.cs">
-      <DependentUpon>FTaiKhoanUngVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\CongTy\FTaiKhoanCty.Designer.cs">
-      <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.cs">
       <SubType>Form</SubType>
@@ -340,6 +301,18 @@
     </Compile>
     <Compile Include="Common\GUI\FDangKy.Designer.cs">
       <DependentUpon>FDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GUI\FDatLaiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\GUI\FDatLaiMatKhau.Designer.cs">
+      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GUI\FQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\GUI\FQuenMatKhau.Designer.cs">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\GUI\FXacNhanEmail.cs">
       <SubType>Form</SubType>
@@ -418,17 +391,17 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="Company\GUI\FHoSoUT.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.Designer.cs">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
@@ -550,32 +523,14 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongTy\FChinhSuaCongTy.resx">
-      <DependentUpon>FChinhSuaCongTy.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.resx">
+      <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongTy\FDanhSachCongTy.resx">
-      <DependentUpon>FDanhSachCongTy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongViec\FChinhSuaCongViec.resx">
-      <DependentUpon>FChinhSuaCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongViec\FDanhSachCongViec.resx">
-      <DependentUpon>FDanhSachCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKe.resx">
-      <DependentUpon>FThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FDashBoard.resx">
+      <DependentUpon>FDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKeCongViec.resx">
       <DependentUpon>FThongKeCongViec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\UngVien\FDanhSachUngVien.resx">
-      <DependentUpon>FDanhSachUngVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\UngVien\FTaiKhoanUngVien.resx">
-      <DependentUpon>FTaiKhoanUngVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\CongTy\FTaiKhoanCty.resx">
-      <DependentUpon>FTaiKhoanCty.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="UC\UCCustomButton.cs">
       <SubType>Component</SubType>
@@ -622,17 +577,23 @@
     <EmbeddedResource Include="Common\GUI\FDangKy.resx">
       <DependentUpon>FDangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Common\GUI\FDatLaiMatKhau.resx">
+      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\GUI\FQuenMatKhau.resx">
+      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Common\GUI\FXacNhanEmail.resx">
       <DependentUpon>FXacNhanEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
-      <DependentUpon>FHoSoUT.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
+      <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
@@ -746,6 +707,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\027. Thong tin lich phong van.sql" />
     <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />
     <Content Include="Database\Scripts\025. User add Otp, OtpExpiredTime.sql" />
     <Content Include="Database\Scripts\024. Drop Foreign Key FK_CV_UngVien.sql" />
@@ -761,9 +723,12 @@
     <None Include="Resources\icons8-delete-32.png" />
     <None Include="Resources\icons8-check-48.png" />
     <None Include="Resources\icons8-remove-48.png" />
+    <None Include="Resources\dashboard.png" />
+    <None Include="Resources\business.png" />
     <Content Include="Resources\email-template-1.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8-approve-48.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1040,12 +1005,16 @@
     <None Include="Resources\icons8-delete-24.png" />
     <None Include="Resources\TuyenDung.jpg" />
     <None Include="Resources\Thông tin tuyển dụng.png" />
+    <Content Include="Resources\Templates\HenLichPhongVan.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Templates\SendOtpToEmail.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Templates\SendOtpVerifyEmail.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\vecteezy_orange-bubble-background-with-white-line-gradient-orange_5230618.jpg" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

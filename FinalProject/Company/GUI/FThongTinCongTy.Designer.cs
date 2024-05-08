@@ -35,7 +35,7 @@
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_ThemGiayPhep = new System.Windows.Forms.Button();
             this.button_Luu = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox_GiayPhep = new System.Windows.Forms.TextBox();
@@ -133,7 +133,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button_ThemGiayPhep);
             this.panel1.Controls.Add(this.button_Luu);
             this.panel1.Controls.Add(this.groupBox8);
             this.panel1.Controls.Add(this.groupBox7);
@@ -148,20 +148,21 @@
             this.panel1.Size = new System.Drawing.Size(626, 643);
             this.panel1.TabIndex = 12;
             // 
-            // button1
+            // button_ThemGiayPhep
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::FinalProject.Properties.Resources.icons8_add_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(626, 65);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Chọn giấy phép";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_ThemGiayPhep.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_ThemGiayPhep.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button_ThemGiayPhep.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_ThemGiayPhep.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_ThemGiayPhep.Image = global::FinalProject.Properties.Resources.icons8_add_48;
+            this.button_ThemGiayPhep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_ThemGiayPhep.Location = new System.Drawing.Point(0, 513);
+            this.button_ThemGiayPhep.Name = "button_ThemGiayPhep";
+            this.button_ThemGiayPhep.Size = new System.Drawing.Size(626, 65);
+            this.button_ThemGiayPhep.TabIndex = 13;
+            this.button_ThemGiayPhep.Text = "Chọn giấy phép";
+            this.button_ThemGiayPhep.UseVisualStyleBackColor = false;
+            this.button_ThemGiayPhep.Click += new System.EventHandler(this.button_ThemGiayPhep_Click);
             // 
             // button_Luu
             // 
@@ -351,6 +352,6 @@
         private System.Windows.Forms.TextBox textBox_CEO;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox_GiayPhep;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_ThemGiayPhep;
     }
 }

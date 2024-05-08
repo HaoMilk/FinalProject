@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Company.GUI
+﻿using FinalProject.UC;
+
+namespace FinalProject.Company.GUI
 {
     partial class FDanhSachViecLam
     {
@@ -28,226 +30,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button_TimKiem = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBox_NgheNghiep = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox_TimKiem = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox_MucLuong = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox_KinhNghiem = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox_DiaDiem = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button_Close = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachViecLam));
+            this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucPagination = new FinalProject.UC.UCPagination();
-            this.groupBox6.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox_KinhNghiem = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_KinhNghiem = new FinalProject.UC.UCComboBox();
+            this.groupBox_GioiTinh = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_GioiTinh = new FinalProject.UC.UCComboBox();
+            this.groupBox_Luong = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_Luong = new FinalProject.UC.UCComboBox();
+            this.groupBox_Nganh = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_Nganh = new FinalProject.UC.UCComboBox();
+            this.groupBox_DiaDiem = new System.Windows.Forms.GroupBox();
+            this.ucComboBox_DiaDiem = new FinalProject.UC.UCComboBox();
+            this.groupBox_TimKiem = new System.Windows.Forms.GroupBox();
+            this.textBox_TimKiem = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.ucCustomButton1 = new FinalProject.UC.UCCustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox_KinhNghiem.SuspendLayout();
+            this.groupBox_GioiTinh.SuspendLayout();
+            this.groupBox_Luong.SuspendLayout();
+            this.groupBox_Nganh.SuspendLayout();
+            this.groupBox_DiaDiem.SuspendLayout();
+            this.groupBox_TimKiem.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button_TimKiem
+            // panel3
             // 
-            this.button_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_TimKiem.FlatAppearance.BorderSize = 3;
-            this.button_TimKiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_TimKiem.Image = global::FinalProject.Properties.Resources.icons8_search_32;
-            this.button_TimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_TimKiem.Location = new System.Drawing.Point(1113, 3);
-            this.button_TimKiem.Name = "button_TimKiem";
-            this.button_TimKiem.Size = new System.Drawing.Size(203, 83);
-            this.button_TimKiem.TabIndex = 30;
-            this.button_TimKiem.Text = "Tìm Kiếm";
-            this.button_TimKiem.UseVisualStyleBackColor = true;
-            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox6.Controls.Add(this.comboBox_NgheNghiep);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(228, 5);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox6.Size = new System.Drawing.Size(210, 79);
-            this.groupBox6.TabIndex = 22;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Tên công việc";
-            // 
-            // comboBox_NgheNghiep
-            // 
-            this.comboBox_NgheNghiep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_NgheNghiep.FormattingEnabled = true;
-            this.comboBox_NgheNghiep.Location = new System.Drawing.Point(6, 28);
-            this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
-            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(198, 30);
-            this.comboBox_NgheNghiep.TabIndex = 0;
-            this.comboBox_NgheNghiep.Text = "Tất cả công việc";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Controls.Add(this.textBox_TimKiem);
-            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox1.Size = new System.Drawing.Size(210, 79);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vị trí tuyển dụng";
-            // 
-            // textBox_TimKiem
-            // 
-            this.textBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_TimKiem.Location = new System.Drawing.Point(6, 28);
-            this.textBox_TimKiem.Name = "textBox_TimKiem";
-            this.textBox_TimKiem.Size = new System.Drawing.Size(198, 30);
-            this.textBox_TimKiem.TabIndex = 0;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Controls.Add(this.comboBox_MucLuong);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(450, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox2.Size = new System.Drawing.Size(210, 79);
-            this.groupBox2.TabIndex = 24;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Mức lương";
-            // 
-            // comboBox_MucLuong
-            // 
-            this.comboBox_MucLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_MucLuong.FormattingEnabled = true;
-            this.comboBox_MucLuong.Location = new System.Drawing.Point(6, 28);
-            this.comboBox_MucLuong.Name = "comboBox_MucLuong";
-            this.comboBox_MucLuong.Size = new System.Drawing.Size(198, 30);
-            this.comboBox_MucLuong.TabIndex = 1;
-            this.comboBox_MucLuong.Text = "Tất cả mức lương";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Controls.Add(this.comboBox_KinhNghiem);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(894, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox3.Size = new System.Drawing.Size(210, 79);
-            this.groupBox3.TabIndex = 25;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Kinh Nghiệm";
-            // 
-            // comboBox_KinhNghiem
-            // 
-            this.comboBox_KinhNghiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_KinhNghiem.FormattingEnabled = true;
-            this.comboBox_KinhNghiem.Location = new System.Drawing.Point(6, 28);
-            this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
-            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(198, 30);
-            this.comboBox_KinhNghiem.TabIndex = 1;
-            this.comboBox_KinhNghiem.Text = "Tất cả kinh nghiệm";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox4.Controls.Add(this.comboBox_DiaDiem);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(672, 5);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.groupBox4.Size = new System.Drawing.Size(210, 79);
-            this.groupBox4.TabIndex = 26;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Địa điểm";
-            // 
-            // comboBox_DiaDiem
-            // 
-            this.comboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox_DiaDiem.FormattingEnabled = true;
-            this.comboBox_DiaDiem.Location = new System.Drawing.Point(6, 28);
-            this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
-            this.comboBox_DiaDiem.Size = new System.Drawing.Size(198, 30);
-            this.comboBox_DiaDiem.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox4, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.groupBox6, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button_TimKiem, 5, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 41);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1319, 89);
-            this.tableLayoutPanel1.TabIndex = 33;
-            // 
-            // button_Close
-            // 
-            this.button_Close.BackColor = System.Drawing.Color.Transparent;
-            this.button_Close.BackgroundImage = global::FinalProject.Properties.Resources.icons8_close_96;
-            this.button_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_Close.FlatAppearance.BorderSize = 0;
-            this.button_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Close.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Close.Location = new System.Drawing.Point(1269, 6);
-            this.button_Close.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button_Close.Name = "button_Close";
-            this.button_Close.Size = new System.Drawing.Size(50, 24);
-            this.button_Close.TabIndex = 1;
-            this.button_Close.UseVisualStyleBackColor = false;
-            this.button_Close.Click += new System.EventHandler(this.button_Close_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.button_Close);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 6, 0, 11);
-            this.panel4.Size = new System.Drawing.Size(1319, 41);
-            this.panel4.TabIndex = 30;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(348, 50);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1003, 688);
+            this.panel3.TabIndex = 5;
             // 
             // flowLayoutPanel_CongViec
             // 
@@ -255,71 +78,344 @@
             this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_CongViec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 130);
-            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
-            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1319, 544);
-            this.flowLayoutPanel_CongViec.TabIndex = 37;
+            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(13, 13, 13, 13);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1003, 688);
+            this.flowLayoutPanel_CongViec.TabIndex = 3;
             // 
-            // ucPagination
+            // panel1
             // 
-            this.ucPagination.CurrentPage = 1;
-            this.ucPagination.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucPagination.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ucPagination.Location = new System.Drawing.Point(0, 674);
-            this.ucPagination.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucPagination.Name = "ucPagination";
-            this.ucPagination.Size = new System.Drawing.Size(1319, 73);
-            this.ucPagination.TabIndex = 31;
-            this.ucPagination.TotalRecord = 15;
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.groupBox_KinhNghiem);
+            this.panel1.Controls.Add(this.groupBox_GioiTinh);
+            this.panel1.Controls.Add(this.groupBox_Luong);
+            this.panel1.Controls.Add(this.groupBox_Nganh);
+            this.panel1.Controls.Add(this.groupBox_DiaDiem);
+            this.panel1.Controls.Add(this.groupBox_TimKiem);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Location = new System.Drawing.Point(3, 106);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 510);
+            this.panel1.TabIndex = 18;
+            // 
+            // groupBox_KinhNghiem
+            // 
+            this.groupBox_KinhNghiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_KinhNghiem.Controls.Add(this.ucComboBox_KinhNghiem);
+            this.groupBox_KinhNghiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_KinhNghiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_KinhNghiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_KinhNghiem.Location = new System.Drawing.Point(0, 489);
+            this.groupBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_KinhNghiem.Name = "groupBox_KinhNghiem";
+            this.groupBox_KinhNghiem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_KinhNghiem.Size = new System.Drawing.Size(321, 100);
+            this.groupBox_KinhNghiem.TabIndex = 20;
+            this.groupBox_KinhNghiem.TabStop = false;
+            this.groupBox_KinhNghiem.Text = "  Kinh nghiệm  ";
+            // 
+            // ucComboBox_KinhNghiem
+            // 
+            this.ucComboBox_KinhNghiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ucComboBox_KinhNghiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ucComboBox_KinhNghiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ucComboBox_KinhNghiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_KinhNghiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_KinhNghiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_KinhNghiem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucComboBox_KinhNghiem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_KinhNghiem.FormattingEnabled = true;
+            this.ucComboBox_KinhNghiem.ItemHeight = 41;
+            this.ucComboBox_KinhNghiem.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_KinhNghiem.Location = new System.Drawing.Point(30, 33);
+            this.ucComboBox_KinhNghiem.Name = "ucComboBox_KinhNghiem";
+            this.ucComboBox_KinhNghiem.SelectedItem = null;
+            this.ucComboBox_KinhNghiem.Size = new System.Drawing.Size(261, 47);
+            this.ucComboBox_KinhNghiem.TabIndex = 0;
+            // 
+            // groupBox_GioiTinh
+            // 
+            this.groupBox_GioiTinh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_GioiTinh.Controls.Add(this.ucComboBox_GioiTinh);
+            this.groupBox_GioiTinh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_GioiTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_GioiTinh.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_GioiTinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_GioiTinh.Location = new System.Drawing.Point(0, 389);
+            this.groupBox_GioiTinh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_GioiTinh.Name = "groupBox_GioiTinh";
+            this.groupBox_GioiTinh.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_GioiTinh.Size = new System.Drawing.Size(321, 100);
+            this.groupBox_GioiTinh.TabIndex = 19;
+            this.groupBox_GioiTinh.TabStop = false;
+            this.groupBox_GioiTinh.Text = "  Giới tính  ";
+            // 
+            // ucComboBox_GioiTinh
+            // 
+            this.ucComboBox_GioiTinh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ucComboBox_GioiTinh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ucComboBox_GioiTinh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ucComboBox_GioiTinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_GioiTinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_GioiTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_GioiTinh.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucComboBox_GioiTinh.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_GioiTinh.FormattingEnabled = true;
+            this.ucComboBox_GioiTinh.ItemHeight = 41;
+            this.ucComboBox_GioiTinh.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_GioiTinh.Location = new System.Drawing.Point(30, 33);
+            this.ucComboBox_GioiTinh.Name = "ucComboBox_GioiTinh";
+            this.ucComboBox_GioiTinh.SelectedItem = null;
+            this.ucComboBox_GioiTinh.Size = new System.Drawing.Size(261, 47);
+            this.ucComboBox_GioiTinh.TabIndex = 0;
+            // 
+            // groupBox_Luong
+            // 
+            this.groupBox_Luong.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_Luong.Controls.Add(this.ucComboBox_Luong);
+            this.groupBox_Luong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_Luong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_Luong.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_Luong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_Luong.Location = new System.Drawing.Point(0, 289);
+            this.groupBox_Luong.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_Luong.Name = "groupBox_Luong";
+            this.groupBox_Luong.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_Luong.Size = new System.Drawing.Size(321, 100);
+            this.groupBox_Luong.TabIndex = 18;
+            this.groupBox_Luong.TabStop = false;
+            this.groupBox_Luong.Text = "  Mức lương  ";
+            // 
+            // ucComboBox_Luong
+            // 
+            this.ucComboBox_Luong.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ucComboBox_Luong.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ucComboBox_Luong.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ucComboBox_Luong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_Luong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_Luong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_Luong.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucComboBox_Luong.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_Luong.FormattingEnabled = true;
+            this.ucComboBox_Luong.ItemHeight = 41;
+            this.ucComboBox_Luong.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_Luong.Location = new System.Drawing.Point(30, 33);
+            this.ucComboBox_Luong.Name = "ucComboBox_Luong";
+            this.ucComboBox_Luong.SelectedItem = null;
+            this.ucComboBox_Luong.Size = new System.Drawing.Size(261, 47);
+            this.ucComboBox_Luong.TabIndex = 0;
+            // 
+            // groupBox_Nganh
+            // 
+            this.groupBox_Nganh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_Nganh.Controls.Add(this.ucComboBox_Nganh);
+            this.groupBox_Nganh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_Nganh.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_Nganh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_Nganh.Location = new System.Drawing.Point(0, 189);
+            this.groupBox_Nganh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_Nganh.Name = "groupBox_Nganh";
+            this.groupBox_Nganh.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_Nganh.Size = new System.Drawing.Size(321, 100);
+            this.groupBox_Nganh.TabIndex = 17;
+            this.groupBox_Nganh.TabStop = false;
+            this.groupBox_Nganh.Text = "  Ngành nghề  ";
+            // 
+            // ucComboBox_Nganh
+            // 
+            this.ucComboBox_Nganh.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.ucComboBox_Nganh.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ucComboBox_Nganh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ucComboBox_Nganh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_Nganh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_Nganh.Font = new System.Drawing.Font("Constantia", 11F);
+            this.ucComboBox_Nganh.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_Nganh.FormattingEnabled = true;
+            this.ucComboBox_Nganh.ItemHeight = 41;
+            this.ucComboBox_Nganh.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_Nganh.Location = new System.Drawing.Point(30, 33);
+            this.ucComboBox_Nganh.Name = "ucComboBox_Nganh";
+            this.ucComboBox_Nganh.SelectedItem = null;
+            this.ucComboBox_Nganh.Size = new System.Drawing.Size(261, 47);
+            this.ucComboBox_Nganh.TabIndex = 0;
+            // 
+            // groupBox_DiaDiem
+            // 
+            this.groupBox_DiaDiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_DiaDiem.Controls.Add(this.ucComboBox_DiaDiem);
+            this.groupBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_DiaDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_DiaDiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_DiaDiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_DiaDiem.Location = new System.Drawing.Point(0, 89);
+            this.groupBox_DiaDiem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_DiaDiem.Name = "groupBox_DiaDiem";
+            this.groupBox_DiaDiem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_DiaDiem.Size = new System.Drawing.Size(321, 100);
+            this.groupBox_DiaDiem.TabIndex = 16;
+            this.groupBox_DiaDiem.TabStop = false;
+            this.groupBox_DiaDiem.Text = "  Địa điểm  ";
+            // 
+            // ucComboBox_DiaDiem
+            // 
+            this.ucComboBox_DiaDiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.ucComboBox_DiaDiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ucComboBox_DiaDiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ucComboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucComboBox_DiaDiem.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ucComboBox_DiaDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucComboBox_DiaDiem.Font = new System.Drawing.Font("Constantia", 11F);
+            this.ucComboBox_DiaDiem.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.ucComboBox_DiaDiem.FormattingEnabled = true;
+            this.ucComboBox_DiaDiem.ItemHeight = 41;
+            this.ucComboBox_DiaDiem.Items = new FinalProject.UC.ComboBoxItem[0];
+            this.ucComboBox_DiaDiem.Location = new System.Drawing.Point(30, 33);
+            this.ucComboBox_DiaDiem.Name = "ucComboBox_DiaDiem";
+            this.ucComboBox_DiaDiem.SelectedItem = null;
+            this.ucComboBox_DiaDiem.Size = new System.Drawing.Size(261, 47);
+            this.ucComboBox_DiaDiem.TabIndex = 0;
+            // 
+            // groupBox_TimKiem
+            // 
+            this.groupBox_TimKiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.groupBox_TimKiem.Controls.Add(this.textBox_TimKiem);
+            this.groupBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox_TimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox_TimKiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupBox_TimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox_TimKiem.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_TimKiem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox_TimKiem.Name = "groupBox_TimKiem";
+            this.groupBox_TimKiem.Padding = new System.Windows.Forms.Padding(30, 10, 30, 20);
+            this.groupBox_TimKiem.Size = new System.Drawing.Size(321, 89);
+            this.groupBox_TimKiem.TabIndex = 15;
+            this.groupBox_TimKiem.TabStop = false;
+            this.groupBox_TimKiem.Text = "  Tìm kiếm  ";
+            // 
+            // textBox_TimKiem
+            // 
+            this.textBox_TimKiem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.textBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox_TimKiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_TimKiem.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBox_TimKiem.Location = new System.Drawing.Point(30, 33);
+            this.textBox_TimKiem.Name = "textBox_TimKiem";
+            this.textBox_TimKiem.Size = new System.Drawing.Size(261, 30);
+            this.textBox_TimKiem.TabIndex = 0;
+            this.textBox_TimKiem.TextChanged += new System.EventHandler(this.textBox_TimKiem_TextChanged);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.ucCustomButton1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(348, 688);
+            this.tableLayoutPanel1.TabIndex = 19;
+            // 
+            // ucCustomButton1
+            // 
+            this.ucCustomButton1.BackColor = System.Drawing.Color.DarkOrange;
+            this.ucCustomButton1.BackgroundColor = System.Drawing.Color.DarkOrange;
+            this.ucCustomButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ucCustomButton1.BorderRadius = 0;
+            this.ucCustomButton1.BorderSize = 0;
+            this.ucCustomButton1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucCustomButton1.FlatAppearance.BorderSize = 0;
+            this.ucCustomButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ucCustomButton1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucCustomButton1.ForeColor = System.Drawing.Color.White;
+            this.ucCustomButton1.Image = global::FinalProject.Properties.Resources.icons8_search_32;
+            this.ucCustomButton1.Location = new System.Drawing.Point(4, 623);
+            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ucCustomButton1.Name = "ucCustomButton1";
+            this.ucCustomButton1.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.ucCustomButton1.Size = new System.Drawing.Size(340, 61);
+            this.ucCustomButton1.TabIndex = 19;
+            this.ucCustomButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ucCustomButton1.TextColor = System.Drawing.Color.White;
+            this.ucCustomButton1.UseVisualStyleBackColor = false;
+            this.ucCustomButton1.Click += new System.EventHandler(this.button_Search_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.icons8_job_seeker_96;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(342, 97);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // FDanhSachViecLam
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 747);
-            this.Controls.Add(this.flowLayoutPanel_CongViec);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1351, 738);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.ucPagination);
-            this.Controls.Add(this.panel4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FDanhSachViecLam";
-            this.Text = "Form1";
+            this.Padding = new System.Windows.Forms.Padding(0);
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FDanhSachViecLam_Load);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FDanhSachVL_Load);
+            this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
+            this.Controls.SetChildIndex(this.panel3, 0);
+            this.panel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.groupBox_KinhNghiem.ResumeLayout(false);
+            this.groupBox_GioiTinh.ResumeLayout(false);
+            this.groupBox_Luong.ResumeLayout(false);
+            this.groupBox_Nganh.ResumeLayout(false);
+            this.groupBox_DiaDiem.ResumeLayout(false);
+            this.groupBox_TimKiem.ResumeLayout(false);
+            this.groupBox_TimKiem.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Button button_TimKiem;
-        public System.Windows.Forms.GroupBox groupBox6;
-        public System.Windows.Forms.ComboBox comboBox_NgheNghiep;
-        public System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox textBox_TimKiem;
-        public System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.ComboBox comboBox_MucLuong;
-        public System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.ComboBox comboBox_KinhNghiem;
-        public System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.ComboBox comboBox_DiaDiem;
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public System.Windows.Forms.ColorDialog colorDialog2;
-        public System.Windows.Forms.ColorDialog colorDialog1;
-        public System.Windows.Forms.Button button_Close;
-        public System.Windows.Forms.Panel panel4;
-        public UC.UCPagination ucPagination;
-        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox_KinhNghiem;
+        private UCComboBox ucComboBox_KinhNghiem;
+        private System.Windows.Forms.GroupBox groupBox_GioiTinh;
+        private UCComboBox ucComboBox_GioiTinh;
+        private System.Windows.Forms.GroupBox groupBox_Luong;
+        private UCComboBox ucComboBox_Luong;
+        private System.Windows.Forms.GroupBox groupBox_Nganh;
+        private UCComboBox ucComboBox_Nganh;
+        private System.Windows.Forms.GroupBox groupBox_DiaDiem;
+        private UCComboBox ucComboBox_DiaDiem;
+        private System.Windows.Forms.GroupBox groupBox_TimKiem;
+        private System.Windows.Forms.TextBox textBox_TimKiem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private UCCustomButton ucCustomButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

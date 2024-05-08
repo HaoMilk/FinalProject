@@ -1,9 +1,11 @@
 ﻿using FinalProject.Candidate.GUI;
 using FinalProject.Common;
+using FinalProject.Common.Helper;
 using FinalProject.Database.Entities;
 using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Windows.Media.Media3D;
 
@@ -11,10 +13,10 @@ namespace FinalProject.UC
 {
     public partial class UCJobCard : UserControl
     {
-        [Browsable(true)]
-        [Category("Action")]
-        [Description("Invoked when user clicks button menu")]
-        public event EventHandler MenuClick;
+        //[Browsable(true)]
+        //[Category("Action")]
+        //[Description("Invoked when user clicks button menu")]
+        //public event EventHandler MenuClick;
 
         [Browsable(true)]
         [Category("Action")]
@@ -26,16 +28,14 @@ namespace FinalProject.UC
         #region Fields
         private int id = 0;
         private int? ungTuyenId = 0;
-        private string jobName;
-        private DateTime lastUpdatedTime;
-
+        private CongViec congViec;
+        private Color cardBackground = Color.LightBlue;
         private Color buttonViewBackground = Color.Cornsilk;
-        private Color buttonMenuBackground = Color.LightCyan;
+        //private Color buttonMenuBackground = Color.LightCyan;
         private Color jobNameTextColor = SystemColors.Highlight;
-        private Color lastUpdatedTimeTextColor = Color.Navy;
         private Image bgImage;
         private Image buttonViewImage;
-        private Image buttonMenuImage;
+        //private Image buttonMenuImage;
         #endregion Fields
 
         #region Properties
@@ -72,35 +72,41 @@ namespace FinalProject.UC
         }
 
         [Category("CUSTOMIZE DATA")]
-        [DisplayName("Job Name")]
-        public string JobName
+        [DisplayName("CongViec")]
+        public CongViec CongViec
         {
-            get { return jobName; }
+            get { return congViec; }
             set
             {
-                if (value == null)
+                congViec = value;
+                if (congViec != null)
                 {
-                    value = "Job Name";
+                    this.label_TenCongViec.Text = congViec.Ten;
+                    this.label_TenCty.Text = congViec.TenCongTy;
+                    this.label_DiaDiem.Text = congViec.DiaDiem;
+                    this.label_MucLuong.Text = $"{congViec.MucLuong} đ";
+                    this.pictureBox_Logo.LoadAsync("https://img.icons8.com/bubbles/100/company.png");
                 }
-                jobName = value;
-                this.label_CvName.Text = jobName;
-                // this.Invalidate();
             }
         }
 
-        [Category("CUSTOMIZE DATA")]
-        [DisplayName("Last Updated Time")]
-        public DateTime LastUpdatedTime
+        [Category("CUSTOMIZE UI")]
+        [DisplayName("BackColor Card")]
+        public Color CardBackground
         {
-            get { return lastUpdatedTime; }
+            get { return cardBackground; }
             set
             {
                 if (value == null)
                 {
-                    value = DateTime.Now;
+                    value = Color.LightBlue;
                 }
-                lastUpdatedTime = value;
-                this.label_UpdatedTime.Text = lastUpdatedTime.ToString("dd/MM/yyyy");
+                cardBackground = value;
+                this.pictureBox_Logo.BackColor = value;
+                this.label_TenCty.BackColor = value;
+                this.label_TenCongViec.BackColor = value;
+                this.label_DiaDiem.BackColor = value;
+                this.label_MucLuong.BackColor = value;
                 // this.Invalidate();
             }
         }
@@ -122,22 +128,22 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("BackColor Menu")]
-        public Color ButtonMenuBackground
-        {
-            get { return buttonMenuBackground; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Color.Azure;
-                }
-                buttonMenuBackground = value;
-                this.button_Menu.BackColor = buttonMenuBackground;
-                // this.Invalidate();
-            }
-        }
+        //[Category("CUSTOMIZE UI")]
+        //[DisplayName("BackColor Menu")]
+        //public Color ButtonMenuBackground
+        //{
+        //    get { return buttonMenuBackground; }
+        //    set
+        //    {
+        //        if (value == null)
+        //        {
+        //            value = Color.Azure;
+        //        }
+        //        buttonMenuBackground = value;
+        //        this.button_Menu.BackColor = buttonMenuBackground;
+        //        // this.Invalidate();
+        //    }
+        //}
 
         [Category("CUSTOMIZE UI")]
         [DisplayName("JobNameTextColor")]
@@ -151,24 +157,7 @@ namespace FinalProject.UC
                     value = Color.RoyalBlue;
                 }
                 jobNameTextColor = value;
-                this.label_CvName.ForeColor = jobNameTextColor;
-                // this.Invalidate();
-            }
-        }
-
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("LastUpdatedTimeTextColor")]
-        public Color LastUpdatedTimeTextColor
-        {
-            get { return lastUpdatedTimeTextColor; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Color.RoyalBlue;
-                }
-                lastUpdatedTimeTextColor = value;
-                this.label_UpdatedTime.ForeColor = lastUpdatedTimeTextColor;
+                this.label_TenCongViec.ForeColor = jobNameTextColor;
                 // this.Invalidate();
             }
         }
@@ -207,28 +196,28 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("ButtonMenu Image")]
-        public Image ButtonMenuImage
-        {
-            get { return buttonMenuImage; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Properties.Resources.icons8_menu_96;
-                }
-                buttonMenuImage = value;
-                this.button_Menu.BackgroundImage = buttonMenuImage;
-                // this.Invalidate();
-            }
-        }
+        //[Category("CUSTOMIZE UI")]
+        //[DisplayName("ButtonMenu Image")]
+        //public Image ButtonMenuImage
+        //{
+        //    get { return buttonMenuImage; }
+        //    set
+        //    {
+        //        if (value == null)
+        //        {
+        //            value = Properties.Resources.icons8_menu_96;
+        //        }
+        //        buttonMenuImage = value;
+        //        this.button_Menu.BackgroundImage = buttonMenuImage;
+        //        // this.Invalidate();
+        //    }
+        //}
         #endregion Properties
 
         public UCJobCard()
         {
             InitializeComponent();
-
+            this.pictureBox_Logo.SizeMode = PictureBoxSizeMode.Zoom;
             this.DoubleBuffered = true;
             this.AutoScaleMode = AutoScaleMode.None;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
@@ -251,30 +240,37 @@ namespace FinalProject.UC
             }
             else
             {
-                //UCMessageBox.Show($"View id = {id}");
-
-                FChiTietCongViec fChiTietCv = new FChiTietCongViec();
-                fChiTietCv.Id = id;
-                fChiTietCv.UngTuyenId = ungTuyenId;
-                fChiTietCv.CvName = jobName;
-                fChiTietCv.CvUpdatedTime = lastUpdatedTime;
-                fChiTietCv.ShowDialog();
+                UCMessageBox.Show($"View id = {id}");
             }
         }
 
-        private void button_Menu_Click(object sender, EventArgs e)
+        //private void button_Menu_Click(object sender, EventArgs e)
+        //{
+        //    if (MenuClick != null)
+        //    {
+        //        MenuClick(this, e);
+        //    }
+        //    else
+        //    {
+        //        UCMessageBox.Show("Menu clicked!");
+        //    }
+        //}
+
+        protected override void OnPaint(PaintEventArgs e)
         {
-            if (MenuClick != null)
-            {
-                MenuClick(this, e);
-            }
-            else
-            {
-                FUngTuyenCongViec fUngTuyenCongViec = new FUngTuyenCongViec(this.UngTuyenId);              
-                fUngTuyenCongViec.UngVien = LoggedUser.UngVien;
-                fUngTuyenCongViec.CongViecId = id;
-                fUngTuyenCongViec.ShowDialog();
-            }
+            base.OnPaint(e);
+
+            Graphics graphics = e.Graphics;
+
+            Rectangle gradientRectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+
+            Brush borderBrush = new LinearGradientBrush(gradientRectangle, Color.DarkSlateGray, Color.DarkSlateGray, 0.0f);
+            Brush backgroundBrush = new LinearGradientBrush(gradientRectangle, Color.Azure, Color.Azure, 0.0f);
+
+            graphics.SmoothingMode = SmoothingMode.HighQuality;
+            GuiHelper.FillRoundedRectangle(gradientRectangle, 10, graphics, backgroundBrush, borderBrush);
+
+            this.BackColor = Color.Transparent;
         }
     }
 }

@@ -123,6 +123,16 @@ namespace FinalProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap business {
+            get {
+                object obj = ResourceManager.GetObject("business", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap business_people_partnership_support_team_urban_scene_concept {
             get {
                 object obj = ResourceManager.GetObject("business-people-partnership-support-team-urban-scene-concept", resourceCulture);
@@ -257,6 +267,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap daily_resumes_of_candidates_for_recruitment {
             get {
                 object obj = ResourceManager.GetObject("daily-resumes-of-candidates-for-recruitment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dashboard {
+            get {
+                object obj = ResourceManager.GetObject("dashboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -459,6 +479,25 @@ namespace FinalProject.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+        ///&lt;html lang=&quot;vi&quot; style=&quot;background: #fff !important&quot; xml:lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///  &lt;head&gt;
+        ///    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot; /&gt;
+        ///    &lt;meta content=&quot;width=device-width&quot; name=&quot;viewport&quot; /&gt;
+        ///    &lt;title&gt;ðŸ‘‹ @EmailTitle&lt;/title&gt;
+        ///    &lt;!--[if gte mso 9
+        ///      ]&gt;&lt;xml&gt;
+        ///        &lt;o:OfficeDocumentSettings&gt;
+        ///          &lt;o:AllowPNG /&gt;
+        ///    [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string HenLichPhongVan {
+            get {
+                return ResourceManager.GetString("HenLichPhongVan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap home {
@@ -484,6 +523,16 @@ namespace FinalProject.Properties {
         internal static System.Drawing.Bitmap icons8_add_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_approve_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-approve-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

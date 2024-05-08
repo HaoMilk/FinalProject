@@ -126,8 +126,8 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button_View;
         private System.Windows.Forms.Label label_CvName;
         private System.Windows.Forms.Label label_UpdatedTime;
+        private System.Windows.Forms.Button button_View;
     }
 }

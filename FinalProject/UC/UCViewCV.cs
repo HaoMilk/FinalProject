@@ -29,6 +29,7 @@ namespace FinalProject.UC
         #region Fields
         private int id = 0;
         private int candidateId = 0;
+        private int cvId = 0;
         private string cvName;
         private DateTime lastUpdatedTime;
         private Color cvNameTextColor = SystemColors.Highlight;
@@ -150,6 +151,16 @@ namespace FinalProject.UC
                 candidateId = value;
             }
         }
+        [Category("CUSTOMIZE DATA")]
+        [DisplayName("CvID ID")]
+        public int CVId
+        {
+            get { return cvId; }
+            set
+            {
+                cvId = value;
+            }
+        }
         #endregion Properties
         public UCViewCV()
         {
@@ -167,10 +178,14 @@ namespace FinalProject.UC
             }
             else
             {
-                FViewCV fViewCV = new FViewCV();
-                fViewCV.IdUV = this.CandidateId;
-                fViewCV.Id = this.Id;
-                fViewCV.ShowDialog();
+                UCMessageBox.Show("CV Clicked!");
+
+                //FViewCV fViewCV = new FViewCV();
+                //fViewCV.IdCV = this.CVId;
+                //fViewCV.IdUT = this.Id;
+                //fViewCV.IdUV = this.CandidateId;
+
+                //fViewCV.ShowDialog();
             }
         }
     }

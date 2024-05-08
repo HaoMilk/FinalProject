@@ -36,5 +36,6 @@ namespace FinalProject.Common.Helper
             var uploadResult = cloudinary.Upload(uploadParams);
             return uploadResult;
         }
+
     }
 }

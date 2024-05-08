@@ -35,9 +35,12 @@ namespace FinalProject.UC
         public static ComboBoxItem[] TrangThaiUngTuyenItems = new ComboBoxItem[]
         {
             new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
-            new ComboBoxItem { Text = "Đã ứng tuyển", Value = TrangThaiUngTuyenConsts.Submitted },
-            new ComboBoxItem { Text = "NTD đã xem hồ sơ", Value = TrangThaiUngTuyenConsts.Viewed },
-            new ComboBoxItem { Text = "Đã duyệt hồ sơ", Value = TrangThaiUngTuyenConsts.Approved },
+            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Submitted), Value = TrangThaiUngTuyen.Submitted },
+            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Approved), Value = TrangThaiUngTuyen.Approved },
+            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Rejected), Value = TrangThaiUngTuyen.Rejected },
+            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Recruitmented), Value = TrangThaiUngTuyen.Recruitmented },
+            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Cancelled), Value = TrangThaiUngTuyen.Cancelled }
+
         };
         #endregion Constants
 

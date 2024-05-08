@@ -20,13 +20,13 @@
       <Value Profile="(Default)">587</Value>
     </Setting>
     <Setting Name="emailFrom" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">tiennhm.it@gmail.com</Value>
+      <Value Profile="(Default)">2thuancr03@gmail.com</Value>
     </Setting>
     <Setting Name="emailUsername" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">tiennhm.it@gmail.com</Value>
+      <Value Profile="(Default)">2thuancr03@gmail.com</Value>
     </Setting>
     <Setting Name="emailPassword" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">crmc dcnm sitn sxvb</Value>
+      <Value Profile="(Default)">eifm nvmj httv mnsa</Value>
     </Setting>
   </Settings>
 </SettingsFile>

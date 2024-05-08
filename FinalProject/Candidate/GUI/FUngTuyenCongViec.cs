@@ -1,7 +1,9 @@
 ﻿using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
+using NPOI.SS.UserModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -165,6 +167,30 @@ namespace FinalProject.Candidate.GUI
             richTextBox_MoTa.Enabled = false;
             ucComboBox_Cv.Enabled = false;
             button_Submit.Visible = false;
+        }
+
+        private void button_Huy_Click(object sender, EventArgs e)
+        {
+            // Xác nhận hủy ứng tuyển
+            var dialogResult = UCMessageBox.Show("Bạn có muốn hủy ứng tuyển không?", "Xác nhận", UCMessageBox.MessageBoxButtons.YesNoCancel);
+            if(dialogResult != DialogResult.Yes)
+            {
+                return;
+            }
+            if (ungTuyenId.HasValue && ungTuyenId > 0)
+            {
+                // Cập nhật trạng thái ứng tuyển thành cancel
+                var result = ungTuyenBUS.Update(ungTuyenId.Value, TrangThaiUngTuyen.Cancelled, "Hủy ứng tuyển");
+                if (result > 0) 
+                {
+                    UCMessageBox.Show("Hủy thành công!");
+                    this.Close();
+                }
+                else
+                {
+                    UCMessageBox.Show("Hủy thất bại!");
+                }
+            }
         }
     }
 }
