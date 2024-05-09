@@ -61,6 +61,10 @@ namespace FinalProject.Admin.GUI.ThongKe
             chart.ChartAreas[0].AxisX.Interval = 1;
             chart.Titles.Clear();
             chart.Titles.Add(chartTitle);
+
+
+            chart.ChartAreas[0].Area3DStyle.Enable3D = true; 
+            chart.Series[0]["DrawingStyle"] = "Cylinder"; 
         }
 
     }

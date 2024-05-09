@@ -10,6 +10,7 @@ namespace FinalProject.Database.DTO
     {
         public int Id { get; set; }
         public int IdCongTy { get; set; }
+        public int IdCongViec {  get; set; }
         public string TrangThai { get; set; }
     }
 }

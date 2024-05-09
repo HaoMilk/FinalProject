@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company
 {
-    public partial class FCompanyHomePage : Form
+    public partial class FCompanyHomePage : UCForm
     {
         private bool isAlwaysShowDashboard = true;
         public FCompanyHomePage()

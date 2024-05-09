@@ -68,24 +68,24 @@ namespace FinalProject.Company.GUI
         {
             if (_uv != null)
             {
-                textBox_HovaTen.Text = _uv.HoTen;
-                textBox_Email.Text = _uv.Email;
-                textBox_SoDienThoai.Text = _uv.SDT;
-                textBox_DiaChi.Text = _uv.DiaChi;
-                textBox_NgaySinh.Text = _uv.NgaySinh.ToString();
-                textBox_GioiTinh.Text = _uv.GioiTinh;
+                label_HoVaTen.Text = _uv.HoTen;
+                label_Email.Text = _uv.Email;
+                label_SDT.Text = _uv.SDT;
+                label_DiaChi.Text = _uv.DiaChi;
+                label_NgaySinh.Text = _uv.NgaySinh.ToString();
+                label_GioiTinh.Text = _uv.GioiTinh;
             }
 
             if (_cv != null)
             {
-                textBox_TenCv.Text = _cv.Ten;
-                textBox_ViTriUT.Text = _cv.ViTriUngTuyen;
-                textBox_KyNang.Text = _cv.KyNang;
-                textBox_NgoaiNgu.Text = _cv.NgoaiNgu;
-                textBox_TinHoc.Text = _cv.TinHoc;
-                textBox_HocVan.Text = _cv.HocVan;
-                textBox_HoatDong.Text = _cv.HoatDong;
-                textBox_ChungChi.Text = _cv.ChungChi;
+                label_TenCV.Text = _cv.Ten;
+                label_ViTri.Text = _cv.ViTriUngTuyen;
+                label_KyNang.Text = _cv.KyNang;
+                label_NgoaiNgu.Text = _cv.NgoaiNgu;
+                label_TinHoc.Text = _cv.TinHoc;
+                label_HocVan.Text = _cv.HocVan;
+                label_HoatDong.Text = _cv.HoatDong;
+                label_ChungChi.Text = _cv.ChungChi;
                 richTextBox_MucTieu.Text = _cv.MucTieu;
                 richTextBox_KinhNghiem.Text = _cv.KinhNghiem;
             }
@@ -212,13 +212,13 @@ namespace FinalProject.Company.GUI
             {
                 trangThai = TrangThaiUngTuyen.Rejected;
             }
-            if (string.IsNullOrEmpty(richTextBox_KetQuaPV.Text))
+/*            if (string.IsNullOrEmpty(richTextBox_KetQuaPV.Text))
             {
                 tabControl_ThongTin.SelectedTab = tabPage_ThongTinPhongVan;
                 richTextBox_KetQuaPV.Focus();
                 UCMessageBox.Show("Vui lòng nhập thông tin kết quả phỏng vấn!");
                 return;
-            }
+            }*/
             _ut.KetQuaPhongVan = richTextBox_KetQuaPV.Text;
 
             //result = _utBUS.UpdateTrangThai(ID, trangThai);

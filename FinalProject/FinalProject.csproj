@@ -228,10 +228,10 @@
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\Class\ChartHelper.cs" />
-    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.cs">
+    <Compile Include="Admin\GUI\ThongKe\FThongKeUngVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.Designer.cs">
+    <Compile Include="Admin\GUI\ThongKe\FThongKeUngVien.Designer.cs">
       <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\FDashBoard.cs">
@@ -245,24 +245,6 @@
     </Compile>
     <Compile Include="Admin\GUI\ThongKe\FThongKeCongViec.Designer.cs">
       <DependentUpon>FThongKeCongViec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyet.Designer.cs">
-      <DependentUpon>FXetDuyet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.Designer.cs">
-      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.Designer.cs">
-      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Common\Const\GioiTinhConsts.cs" />
     <Compile Include="Common\Const\KinhNghiemConsts.cs" />
@@ -391,6 +373,12 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
+    <Compile Include="Company\GUI\FDanhSachUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FDanhSachUngTuyen.Designer.cs">
+      <DependentUpon>FDanhSachUngTuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -523,7 +511,7 @@
     <EmbeddedResource Include="Admin\FAdminHomePage.resx">
       <DependentUpon>FAdminHomePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\ThongKe\Class\FThongKeUngVien.resx">
+    <EmbeddedResource Include="Admin\GUI\ThongKe\FThongKeUngVien.resx">
       <DependentUpon>FThongKeUngVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\GUI\ThongKe\FDashBoard.resx">
@@ -535,15 +523,6 @@
     <Compile Include="UC\UCCustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyet.resx">
-      <DependentUpon>FXetDuyet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetCongTy.resx">
-      <DependentUpon>FXetDuyetCongTy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\GUI\XetDuyet\FXetDuyetUngVien.resx">
-      <DependentUpon>FXetDuyetUngVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Candidate\GUI\FCandidateHomePage.resx">
       <DependentUpon>FCandidateHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -588,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FDanhSachUngTuyen.resx">
+      <DependentUpon>FDanhSachUngTuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>

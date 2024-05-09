@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label_DSCongTy = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -70,8 +70,9 @@
             this.panel1.Controls.Add(this.label_DSCongTy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1358, 64);
+            this.panel1.Size = new System.Drawing.Size(1018, 52);
             this.panel1.TabIndex = 0;
             // 
             // label_DSCongTy
@@ -81,8 +82,9 @@
             this.label_DSCongTy.Font = new System.Drawing.Font("Constantia", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label_DSCongTy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label_DSCongTy.Location = new System.Drawing.Point(0, 0);
+            this.label_DSCongTy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label_DSCongTy.Name = "label_DSCongTy";
-            this.label_DSCongTy.Size = new System.Drawing.Size(1358, 64);
+            this.label_DSCongTy.Size = new System.Drawing.Size(1018, 52);
             this.label_DSCongTy.TabIndex = 13;
             this.label_DSCongTy.Text = "THỐNG KÊ CÔNG VIỆC";
             this.label_DSCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,25 +94,27 @@
             // 
             this.panel3.Controls.Add(this.DiaDiem);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(689, 0);
+            this.panel3.Location = new System.Drawing.Point(516, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(669, 284);
+            this.panel3.Size = new System.Drawing.Size(502, 231);
             this.panel3.TabIndex = 2;
             // 
             // DiaDiem
             // 
-            chartArea9.Name = "ChartArea1";
-            this.DiaDiem.ChartAreas.Add(chartArea9);
+            chartArea1.Name = "ChartArea1";
+            this.DiaDiem.ChartAreas.Add(chartArea1);
             this.DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend9.Name = "Legend1";
-            this.DiaDiem.Legends.Add(legend9);
+            legend1.Name = "Legend1";
+            this.DiaDiem.Legends.Add(legend1);
             this.DiaDiem.Location = new System.Drawing.Point(0, 0);
+            this.DiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DiaDiem.Name = "DiaDiem";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.DiaDiem.Series.Add(series9);
-            this.DiaDiem.Size = new System.Drawing.Size(669, 284);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.DiaDiem.Series.Add(series1);
+            this.DiaDiem.Size = new System.Drawing.Size(502, 231);
             this.DiaDiem.TabIndex = 1;
             this.DiaDiem.Text = "chart1";
             // 
@@ -118,9 +122,10 @@
             // 
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.panel3);
-            this.panel4.Location = new System.Drawing.Point(0, 91);
+            this.panel4.Location = new System.Drawing.Point(0, 74);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1358, 284);
+            this.panel4.Size = new System.Drawing.Size(1018, 231);
             this.panel4.TabIndex = 3;
             // 
             // panel5
@@ -128,24 +133,26 @@
             this.panel5.Controls.Add(this.ViTriTuyenDungPhoBien);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(669, 284);
+            this.panel5.Size = new System.Drawing.Size(502, 231);
             this.panel5.TabIndex = 2;
             // 
             // ViTriTuyenDungPhoBien
             // 
-            chartArea10.Name = "ChartArea1";
-            this.ViTriTuyenDungPhoBien.ChartAreas.Add(chartArea10);
+            chartArea2.Name = "ChartArea1";
+            this.ViTriTuyenDungPhoBien.ChartAreas.Add(chartArea2);
             this.ViTriTuyenDungPhoBien.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend10.Name = "Legend1";
-            this.ViTriTuyenDungPhoBien.Legends.Add(legend10);
+            legend2.Name = "Legend1";
+            this.ViTriTuyenDungPhoBien.Legends.Add(legend2);
             this.ViTriTuyenDungPhoBien.Location = new System.Drawing.Point(0, 0);
+            this.ViTriTuyenDungPhoBien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViTriTuyenDungPhoBien.Name = "ViTriTuyenDungPhoBien";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.ViTriTuyenDungPhoBien.Series.Add(series10);
-            this.ViTriTuyenDungPhoBien.Size = new System.Drawing.Size(669, 284);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ViTriTuyenDungPhoBien.Series.Add(series2);
+            this.ViTriTuyenDungPhoBien.Size = new System.Drawing.Size(502, 231);
             this.ViTriTuyenDungPhoBien.TabIndex = 0;
             this.ViTriTuyenDungPhoBien.Text = "chart1";
             // 
@@ -153,9 +160,10 @@
             // 
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Location = new System.Drawing.Point(0, 404);
+            this.panel2.Location = new System.Drawing.Point(0, 328);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1358, 284);
+            this.panel2.Size = new System.Drawing.Size(1018, 231);
             this.panel2.TabIndex = 4;
             // 
             // panel6
@@ -163,24 +171,26 @@
             this.panel6.Controls.Add(this.Nganh);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(669, 284);
+            this.panel6.Size = new System.Drawing.Size(502, 231);
             this.panel6.TabIndex = 2;
             // 
             // Nganh
             // 
-            chartArea11.Name = "ChartArea1";
-            this.Nganh.ChartAreas.Add(chartArea11);
+            chartArea3.Name = "ChartArea1";
+            this.Nganh.ChartAreas.Add(chartArea3);
             this.Nganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend11.Name = "Legend1";
-            this.Nganh.Legends.Add(legend11);
+            legend3.Name = "Legend1";
+            this.Nganh.Legends.Add(legend3);
             this.Nganh.Location = new System.Drawing.Point(0, 0);
+            this.Nganh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Nganh.Name = "Nganh";
-            series11.ChartArea = "ChartArea1";
-            series11.Legend = "Legend1";
-            series11.Name = "Series1";
-            this.Nganh.Series.Add(series11);
-            this.Nganh.Size = new System.Drawing.Size(669, 284);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.Nganh.Series.Add(series3);
+            this.Nganh.Size = new System.Drawing.Size(502, 231);
             this.Nganh.TabIndex = 0;
             this.Nganh.Text = "chart1";
             // 
@@ -188,37 +198,42 @@
             // 
             this.panel7.Controls.Add(this.LuongTheoDiaDiem);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(689, 0);
+            this.panel7.Location = new System.Drawing.Point(516, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(669, 284);
+            this.panel7.Size = new System.Drawing.Size(502, 231);
             this.panel7.TabIndex = 2;
             // 
             // LuongTheoDiaDiem
             // 
-            chartArea12.Name = "ChartArea1";
-            this.LuongTheoDiaDiem.ChartAreas.Add(chartArea12);
+            chartArea4.Name = "ChartArea1";
+            this.LuongTheoDiaDiem.ChartAreas.Add(chartArea4);
             this.LuongTheoDiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend12.Name = "Legend1";
-            this.LuongTheoDiaDiem.Legends.Add(legend12);
+            legend4.Name = "Legend1";
+            this.LuongTheoDiaDiem.Legends.Add(legend4);
             this.LuongTheoDiaDiem.Location = new System.Drawing.Point(0, 0);
+            this.LuongTheoDiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LuongTheoDiaDiem.Name = "LuongTheoDiaDiem";
-            series12.ChartArea = "ChartArea1";
-            series12.Legend = "Legend1";
-            series12.Name = "Series1";
-            this.LuongTheoDiaDiem.Series.Add(series12);
-            this.LuongTheoDiaDiem.Size = new System.Drawing.Size(669, 284);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.LuongTheoDiaDiem.Series.Add(series4);
+            this.LuongTheoDiaDiem.Size = new System.Drawing.Size(502, 231);
             this.LuongTheoDiaDiem.TabIndex = 1;
             this.LuongTheoDiaDiem.Text = "chart1";
             // 
             // FThongKeCongViec
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1358, 845);
+            this.ClientSize = new System.Drawing.Size(1018, 609);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FThongKeCongViec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FThongKeCongViec";
