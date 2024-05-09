@@ -33,6 +33,7 @@ namespace FinalProject.Candidate.GUI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachVL_Name));
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucCtyCard1 = new FinalProject.UC.UCCtyCard();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox_KinhNghiem = new System.Windows.Forms.GroupBox();
             this.ucComboBox_KinhNghiem = new FinalProject.UC.UCComboBox();
@@ -49,7 +50,6 @@ namespace FinalProject.Candidate.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ucCustomButton1 = new FinalProject.UC.UCCustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ucCtyCard1 = new FinalProject.UC.UCCtyCard();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel_CongViec.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,9 +68,10 @@ namespace FinalProject.Candidate.GUI
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(244, 50);
+            this.panel3.Location = new System.Drawing.Point(418, 50);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(702, 477);
+            this.panel3.Size = new System.Drawing.Size(1204, 793);
             this.panel3.TabIndex = 5;
             // 
             // flowLayoutPanel_CongViec
@@ -81,10 +82,23 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.Controls.Add(this.ucCtyCard1);
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
-            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(702, 477);
+            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1204, 793);
             this.flowLayoutPanel_CongViec.TabIndex = 3;
+            // 
+            // ucCtyCard1
+            // 
+            this.ucCtyCard1.BackColor = System.Drawing.Color.Transparent;
+            this.ucCtyCard1.CongTy = null;
+            this.ucCtyCard1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ucCtyCard1.Id = 0;
+            this.ucCtyCard1.Location = new System.Drawing.Point(18, 17);
+            this.ucCtyCard1.Name = "ucCtyCard1";
+            this.ucCtyCard1.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
+            this.ucCtyCard1.Size = new System.Drawing.Size(324, 262);
+            this.ucCtyCard1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -97,10 +111,9 @@ namespace FinalProject.Candidate.GUI
             this.panel1.Controls.Add(this.groupBox_TimKiem);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(2, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(240, 353);
+            this.panel1.Size = new System.Drawing.Size(412, 588);
             this.panel1.TabIndex = 18;
             // 
             // groupBox_KinhNghiem
@@ -111,11 +124,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_KinhNghiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_KinhNghiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_KinhNghiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_KinhNghiem.Location = new System.Drawing.Point(0, 348);
-            this.groupBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_KinhNghiem.Location = new System.Drawing.Point(0, 558);
+            this.groupBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_KinhNghiem.Name = "groupBox_KinhNghiem";
-            this.groupBox_KinhNghiem.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_KinhNghiem.Size = new System.Drawing.Size(223, 71);
+            this.groupBox_KinhNghiem.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_KinhNghiem.Size = new System.Drawing.Size(386, 114);
             this.groupBox_KinhNghiem.TabIndex = 20;
             this.groupBox_KinhNghiem.TabStop = false;
             this.groupBox_KinhNghiem.Text = "  Kinh nghiệm  ";
@@ -131,13 +144,12 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_KinhNghiem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucComboBox_KinhNghiem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ucComboBox_KinhNghiem.FormattingEnabled = true;
-            this.ucComboBox_KinhNghiem.ItemHeight = 26;
+            this.ucComboBox_KinhNghiem.ItemHeight = 48;
             this.ucComboBox_KinhNghiem.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_KinhNghiem.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_KinhNghiem.Location = new System.Drawing.Point(36, 38);
             this.ucComboBox_KinhNghiem.Name = "ucComboBox_KinhNghiem";
             this.ucComboBox_KinhNghiem.SelectedItem = null;
-            this.ucComboBox_KinhNghiem.Size = new System.Drawing.Size(181, 32);
+            this.ucComboBox_KinhNghiem.Size = new System.Drawing.Size(314, 54);
             this.ucComboBox_KinhNghiem.TabIndex = 0;
             // 
             // groupBox_GioiTinh
@@ -148,11 +160,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_GioiTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_GioiTinh.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_GioiTinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_GioiTinh.Location = new System.Drawing.Point(0, 277);
-            this.groupBox_GioiTinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_GioiTinh.Location = new System.Drawing.Point(0, 444);
+            this.groupBox_GioiTinh.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_GioiTinh.Name = "groupBox_GioiTinh";
-            this.groupBox_GioiTinh.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_GioiTinh.Size = new System.Drawing.Size(223, 71);
+            this.groupBox_GioiTinh.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_GioiTinh.Size = new System.Drawing.Size(386, 114);
             this.groupBox_GioiTinh.TabIndex = 19;
             this.groupBox_GioiTinh.TabStop = false;
             this.groupBox_GioiTinh.Text = "  Giới tính  ";
@@ -168,13 +180,12 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_GioiTinh.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucComboBox_GioiTinh.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ucComboBox_GioiTinh.FormattingEnabled = true;
-            this.ucComboBox_GioiTinh.ItemHeight = 26;
+            this.ucComboBox_GioiTinh.ItemHeight = 48;
             this.ucComboBox_GioiTinh.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_GioiTinh.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_GioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_GioiTinh.Location = new System.Drawing.Point(36, 38);
             this.ucComboBox_GioiTinh.Name = "ucComboBox_GioiTinh";
             this.ucComboBox_GioiTinh.SelectedItem = null;
-            this.ucComboBox_GioiTinh.Size = new System.Drawing.Size(181, 32);
+            this.ucComboBox_GioiTinh.Size = new System.Drawing.Size(314, 54);
             this.ucComboBox_GioiTinh.TabIndex = 0;
             // 
             // groupBox_Luong
@@ -185,11 +196,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_Luong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_Luong.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_Luong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_Luong.Location = new System.Drawing.Point(0, 206);
-            this.groupBox_Luong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_Luong.Location = new System.Drawing.Point(0, 330);
+            this.groupBox_Luong.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_Luong.Name = "groupBox_Luong";
-            this.groupBox_Luong.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_Luong.Size = new System.Drawing.Size(223, 71);
+            this.groupBox_Luong.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_Luong.Size = new System.Drawing.Size(386, 114);
             this.groupBox_Luong.TabIndex = 18;
             this.groupBox_Luong.TabStop = false;
             this.groupBox_Luong.Text = "  Mức lương  ";
@@ -205,13 +216,12 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_Luong.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucComboBox_Luong.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ucComboBox_Luong.FormattingEnabled = true;
-            this.ucComboBox_Luong.ItemHeight = 26;
+            this.ucComboBox_Luong.ItemHeight = 48;
             this.ucComboBox_Luong.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_Luong.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_Luong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_Luong.Location = new System.Drawing.Point(36, 38);
             this.ucComboBox_Luong.Name = "ucComboBox_Luong";
             this.ucComboBox_Luong.SelectedItem = null;
-            this.ucComboBox_Luong.Size = new System.Drawing.Size(181, 32);
+            this.ucComboBox_Luong.Size = new System.Drawing.Size(314, 54);
             this.ucComboBox_Luong.TabIndex = 0;
             // 
             // groupBox_Nganh
@@ -222,11 +232,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_Nganh.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_Nganh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_Nganh.Location = new System.Drawing.Point(0, 135);
-            this.groupBox_Nganh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_Nganh.Location = new System.Drawing.Point(0, 216);
+            this.groupBox_Nganh.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_Nganh.Name = "groupBox_Nganh";
-            this.groupBox_Nganh.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_Nganh.Size = new System.Drawing.Size(223, 71);
+            this.groupBox_Nganh.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_Nganh.Size = new System.Drawing.Size(386, 114);
             this.groupBox_Nganh.TabIndex = 17;
             this.groupBox_Nganh.TabStop = false;
             this.groupBox_Nganh.Text = "  Ngành nghề  ";
@@ -242,13 +252,12 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_Nganh.Font = new System.Drawing.Font("Constantia", 11F);
             this.ucComboBox_Nganh.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ucComboBox_Nganh.FormattingEnabled = true;
-            this.ucComboBox_Nganh.ItemHeight = 26;
+            this.ucComboBox_Nganh.ItemHeight = 48;
             this.ucComboBox_Nganh.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_Nganh.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_Nganh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_Nganh.Location = new System.Drawing.Point(36, 38);
             this.ucComboBox_Nganh.Name = "ucComboBox_Nganh";
             this.ucComboBox_Nganh.SelectedItem = null;
-            this.ucComboBox_Nganh.Size = new System.Drawing.Size(181, 32);
+            this.ucComboBox_Nganh.Size = new System.Drawing.Size(314, 54);
             this.ucComboBox_Nganh.TabIndex = 0;
             // 
             // groupBox_DiaDiem
@@ -259,11 +268,11 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_DiaDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox_DiaDiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_DiaDiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox_DiaDiem.Location = new System.Drawing.Point(0, 64);
-            this.groupBox_DiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_DiaDiem.Location = new System.Drawing.Point(0, 102);
+            this.groupBox_DiaDiem.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_DiaDiem.Name = "groupBox_DiaDiem";
-            this.groupBox_DiaDiem.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_DiaDiem.Size = new System.Drawing.Size(223, 71);
+            this.groupBox_DiaDiem.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_DiaDiem.Size = new System.Drawing.Size(386, 114);
             this.groupBox_DiaDiem.TabIndex = 16;
             this.groupBox_DiaDiem.TabStop = false;
             this.groupBox_DiaDiem.Text = "  Địa điểm  ";
@@ -279,13 +288,12 @@ namespace FinalProject.Candidate.GUI
             this.ucComboBox_DiaDiem.Font = new System.Drawing.Font("Constantia", 11F);
             this.ucComboBox_DiaDiem.ForeColor = System.Drawing.Color.MidnightBlue;
             this.ucComboBox_DiaDiem.FormattingEnabled = true;
-            this.ucComboBox_DiaDiem.ItemHeight = 26;
+            this.ucComboBox_DiaDiem.ItemHeight = 48;
             this.ucComboBox_DiaDiem.Items = new FinalProject.UC.ComboBoxItem[0];
-            this.ucComboBox_DiaDiem.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_DiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_DiaDiem.Location = new System.Drawing.Point(36, 38);
             this.ucComboBox_DiaDiem.Name = "ucComboBox_DiaDiem";
             this.ucComboBox_DiaDiem.SelectedItem = null;
-            this.ucComboBox_DiaDiem.Size = new System.Drawing.Size(181, 32);
+            this.ucComboBox_DiaDiem.Size = new System.Drawing.Size(314, 54);
             this.ucComboBox_DiaDiem.TabIndex = 0;
             // 
             // groupBox_TimKiem
@@ -297,10 +305,10 @@ namespace FinalProject.Candidate.GUI
             this.groupBox_TimKiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox_TimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox_TimKiem.Location = new System.Drawing.Point(0, 0);
-            this.groupBox_TimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_TimKiem.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox_TimKiem.Name = "groupBox_TimKiem";
-            this.groupBox_TimKiem.Padding = new System.Windows.Forms.Padding(21, 7, 21, 14);
-            this.groupBox_TimKiem.Size = new System.Drawing.Size(223, 64);
+            this.groupBox_TimKiem.Padding = new System.Windows.Forms.Padding(36, 11, 36, 22);
+            this.groupBox_TimKiem.Size = new System.Drawing.Size(386, 102);
             this.groupBox_TimKiem.TabIndex = 15;
             this.groupBox_TimKiem.TabStop = false;
             this.groupBox_TimKiem.Text = "  Tìm kiếm  ";
@@ -311,10 +319,9 @@ namespace FinalProject.Candidate.GUI
             this.textBox_TimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_TimKiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_TimKiem.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox_TimKiem.Location = new System.Drawing.Point(21, 25);
-            this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(36, 38);
             this.textBox_TimKiem.Name = "textBox_TimKiem";
-            this.textBox_TimKiem.Size = new System.Drawing.Size(181, 25);
+            this.textBox_TimKiem.Size = new System.Drawing.Size(314, 34);
             this.textBox_TimKiem.TabIndex = 0;
             this.textBox_TimKiem.TextChanged += new System.EventHandler(this.textBox_TimKiem_TextChanged);
             // 
@@ -330,13 +337,12 @@ namespace FinalProject.Candidate.GUI
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(244, 477);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 793);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // ucCustomButton1
@@ -352,10 +358,11 @@ namespace FinalProject.Candidate.GUI
             this.ucCustomButton1.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ucCustomButton1.ForeColor = System.Drawing.Color.White;
             this.ucCustomButton1.Image = global::FinalProject.Properties.Resources.icons8_search_32;
-            this.ucCustomButton1.Location = new System.Drawing.Point(3, 431);
+            this.ucCustomButton1.Location = new System.Drawing.Point(5, 717);
+            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ucCustomButton1.Name = "ucCustomButton1";
-            this.ucCustomButton1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ucCustomButton1.Size = new System.Drawing.Size(238, 43);
+            this.ucCustomButton1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.ucCustomButton1.Size = new System.Drawing.Size(408, 71);
             this.ucCustomButton1.TabIndex = 19;
             this.ucCustomButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ucCustomButton1.TextColor = System.Drawing.Color.White;
@@ -367,37 +374,23 @@ namespace FinalProject.Candidate.GUI
             this.pictureBox1.BackgroundImage = global::FinalProject.Properties.Resources.icons8_job_seeker_96;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(412, 112);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // ucCtyCard1
-            // 
-            this.ucCtyCard1.BackColor = System.Drawing.Color.Transparent;
-            this.ucCtyCard1.CongTy = null;
-            this.ucCtyCard1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ucCtyCard1.Id = 0;
-            this.ucCtyCard1.Location = new System.Drawing.Point(11, 11);
-            this.ucCtyCard1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucCtyCard1.Name = "ucCtyCard1";
-            this.ucCtyCard1.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.ucCtyCard1.Size = new System.Drawing.Size(189, 164);
-            this.ucCtyCard1.TabIndex = 0;
-            // 
             // FDanhSachVL_Name
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(946, 527);
+            this.ClientSize = new System.Drawing.Size(1622, 843);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.Name = "FDanhSachVL_Name";
             this.Padding = new System.Windows.Forms.Padding(0);
             this.Text = " ";
