@@ -761,6 +761,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\028. Set default value for CreatedTime, IsDeleted.sql" />
     <Content Include="Database\Scripts\027. Thong tin lich phong van.sql" />
     <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />
     <Content Include="Database\Scripts\025. User add Otp, OtpExpiredTime.sql" />
