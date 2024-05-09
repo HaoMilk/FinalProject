@@ -106,27 +106,22 @@ namespace FinalProject.Common.Helper
 
             return generateFile;
         }
-        public static ImageUploadResult UpLoadFile(string filePath, string fileName = null, string fileFormat = "jpg", System.Drawing.Size? size = null)
+        public static RawUploadResult UpLoadFile(string filePath, string fileName = null)
         {
-            var uploadParams = new ImageUploadParams()
+            // Get File extension from file path
+            var ext = Path.GetExtension(filePath);
+            var uploadParams = new RawUploadParams()
             {
                 File = new FileDescription(filePath),
                 AssetFolder = "job-management",
                 Folder = "job-management",
                 UseFilename = true,
-                FilenameOverride = fileName,
-                Format = fileFormat,
+                FilenameOverride = $"{fileName}{ext}",
                 UniqueFilename = false,
                 Overwrite = true,
                 UseFilenameAsDisplayName = true,
             };
-            if (size != null)
-            {
-                uploadParams.Transformation = new Transformation()
-                    .Width(size.Value.Width)
-                    .Height(size.Value.Height)
-                    .Crop("fill");
-            }
+           
             var uploadResult = cloudinary.Upload(uploadParams);
             return uploadResult;
         }
