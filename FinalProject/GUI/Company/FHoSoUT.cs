@@ -4,7 +4,7 @@ using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Company.GUI;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;

@@ -3,7 +3,7 @@ using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;

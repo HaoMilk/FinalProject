@@ -37,12 +37,12 @@ namespace FinalProject
             }
 
             // Kiểm tra thông tin đăng nhập
-            var username = textBox_TenDangNhap.Text;
+            var UserName = textBox_TenDangNhap.Text;
             var password = textBox_MatKhau.Text;
 
             if (radioButton__UngVien.Checked)
             {
-                var user = userBUS.Login(username, password, UserRoleConst.Candidate);
+                var user = userBUS.Login(UserName, password, UserRoleConst.Candidate);
                 if (user == null)
                 {
                     UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
@@ -63,7 +63,7 @@ namespace FinalProject
             }
             else if (radioButton_Admin.Checked)
             {
-                var user = userBUS.Login(username, password, UserRoleConst.Admin);
+                var user = userBUS.Login(UserName, password, UserRoleConst.Admin);
                 if (user == null)
                 {
                     UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
@@ -83,7 +83,7 @@ namespace FinalProject
             }
             else if (radioButton_NhaTuyenDung.Checked)
             {
-                var user = userBUS.Login(username, password, UserRoleConst.Employer);
+                var user = userBUS.Login(UserName, password, UserRoleConst.Employer);
                 if (user == null)
                 {
                     UCMessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
@@ -126,7 +126,7 @@ namespace FinalProject
         {
             if (String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
             {
-                UCMessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
+                UCMessageBox.Show("Vui lòng nhập đủ thông tin UserName / Password !");
                 return false;
             }
             return true;

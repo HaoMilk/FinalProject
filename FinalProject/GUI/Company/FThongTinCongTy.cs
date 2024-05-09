@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.Helper;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -85,7 +85,7 @@ namespace FinalProject.GUI.Company
                 textBox_MST.Text = _congTy.MST;
                 textBox_TenCTy.Text = _congTy.TenCongTy;
                 textBox_DiaChi.Text = _congTy.DiaChi;
-                textBox_CEO.Text = _congTy.CEO;
+                textBox_CEO.Text = _congTy.TenCEO;
             }
         }
 

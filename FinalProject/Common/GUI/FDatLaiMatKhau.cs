@@ -60,7 +60,7 @@ namespace FinalProject.Common.GUI
 
         private void FChangePassword_Load(object sender, EventArgs e)
         {
-            textBox_TenDangNhap.Text = LoggedUser.User.Username;
+            textBox_TenDangNhap.Text = LoggedUser.User.UserName;
         }
     }
 }

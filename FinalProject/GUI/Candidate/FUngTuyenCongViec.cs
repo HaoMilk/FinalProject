@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using NPOI.SS.UserModel;
 using System;
@@ -140,7 +140,7 @@ namespace FinalProject.GUI.Candidate
                 CongViecId = CongViec.Id,
                 UngVienId = UngVien.Id,
                 CvId = (int)selectedCv.Value,
-                TrangThai = TrangThaiUngTuyen.Submitted,
+                TrangThai = TrangThaiUngTuyenConsts.Submitted,
                 MoTa = richTextBox_MoTa.Text,
                 IsDeleted = false,
                 CreatedTime = DateTime.Now,
@@ -180,7 +180,7 @@ namespace FinalProject.GUI.Candidate
             if (ungTuyenId.HasValue && ungTuyenId > 0)
             {
                 // Cập nhật trạng thái ứng tuyển thành cancel
-                var result = ungTuyenBUS.Update(ungTuyenId.Value, TrangThaiUngTuyen.Cancelled, "Hủy ứng tuyển");
+                var result = ungTuyenBUS.Update(ungTuyenId.Value, TrangThaiUngTuyenConsts.Cancelled, "Hủy ứng tuyển");
                 if (result > 0) 
                 {
                     UCMessageBox.Show("Hủy thành công!");

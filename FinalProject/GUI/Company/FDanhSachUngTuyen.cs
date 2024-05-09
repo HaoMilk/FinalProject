@@ -11,8 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.GUI.Company;
+using FinalProject.Common.Const;
 
 namespace FinalProject.Company.GUI
 {
@@ -42,7 +43,7 @@ namespace FinalProject.Company.GUI
             List<UCViewCV> uCViewCVs = new List<UCViewCV>();
             input.IdCongTy = LoggedUser.CongTy.ID;
             input.IdCongViec = IDCongViec;
-            input.TrangThai = TrangThaiUngTuyen.GetKey(comboBox_TrangThai.Text);
+            input.TrangThai = TrangThaiUngTuyenConsts.GetKey(comboBox_TrangThai.Text);
             listUngTuyen = ungTuyenBUS.Search(input);
             for (int i = 0; i < listUngTuyen.Count; i++)
             {

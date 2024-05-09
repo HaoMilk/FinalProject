@@ -3,7 +3,7 @@ using FinalProject.GUI.Candidate;
 using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -38,12 +38,12 @@ namespace FinalProject.GUI.Common
             }
 
             // Kiểm tra thông tin đăng nhập
-            var username = textBox_TenDangNhap.Text;
+            var UserName = textBox_TenDangNhap.Text;
             var password = textBox_MatKhau.Text;
 
             if (radioButton__UngVien.Checked)
             {
-                var result = userBUS.Signup(username, password, UserRoleConst.Candidate);
+                var result = userBUS.Signup(UserName, password, UserRoleConst.Candidate);
                 if (result > 0)
                 {
                     UCMessageBox.Show("Bạn đã đăng ký thành công, vui lòng đăng nhập!");
@@ -52,7 +52,7 @@ namespace FinalProject.GUI.Common
             }
             //else if(radioButton_Admin.Checked)
             //{
-            //    var result = userBUS.Signup(username, password, UserRoleConst.Admin);
+            //    var result = userBUS.Signup(UserName, password, UserRoleConst.Admin);
             //    if (result > 0)
             //    {
             //        UCMessageBox.Show("Bạn đã đăng ký thành công, vui lòng đăng nhập!");
@@ -61,7 +61,7 @@ namespace FinalProject.GUI.Common
             //}    
             else if (radioButton_NhaTuyenDung.Checked)
             {
-                var result = userBUS.Signup(username, password, UserRoleConst.Employer);
+                var result = userBUS.Signup(UserName, password, UserRoleConst.Employer);
                 if (result > 0)
                 {
                     UCMessageBox.Show("Bạn đã đăng ký thành công, vui lòng đăng nhập!");
@@ -89,7 +89,7 @@ namespace FinalProject.GUI.Common
         {
             if (String.IsNullOrEmpty(textBox_TenDangNhap.Text) || String.IsNullOrEmpty(textBox_MatKhau.Text))
             {
-                UCMessageBox.Show("Vui lòng nhập đủ thông tin Username / Password !");
+                UCMessageBox.Show("Vui lòng nhập đủ thông tin UserName / Password !");
                 return false;
             }    
             return true;

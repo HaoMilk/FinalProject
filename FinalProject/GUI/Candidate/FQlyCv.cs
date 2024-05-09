@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;

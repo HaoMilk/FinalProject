@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -133,7 +133,8 @@ namespace FinalProject.GUI.Company
                 richTextBox_MoTa.Text = congViec.MoTa;
                 comboBox_KinhNghiem.Text = congViec.KinhNghiem;
                 textBox_LienHe.Text = congViec.LienHe;
-                dateTimePicker_FromDate.Text = congViec.CreatedTime.ToShortDateString();
+                var createdTime = congViec.CreatedTime ?? DateTime.Now;
+                dateTimePicker_FromDate.Text = createdTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 comboBox_NgheNghiep.Text = congViec.Ten;
                 textBox_SoLuong.Text = congViec.SoLuong.ToString();

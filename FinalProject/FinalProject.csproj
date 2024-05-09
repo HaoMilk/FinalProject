@@ -62,6 +62,12 @@
     <Reference Include="CloudinaryDotNet, Version=1.26.2.0, Culture=neutral, PublicKeyToken=c8234dc617ae7841, processorArchitecture=MSIL">
       <HintPath>..\packages\CloudinaryDotNet.1.26.2\lib\net452\CloudinaryDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Enums.NET, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7ea1c1650d506225, processorArchitecture=MSIL">
       <HintPath>..\packages\Enums.NET.4.0.1\lib\net45\Enums.NET.dll</HintPath>
     </Reference>
@@ -160,6 +166,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -221,6 +228,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\CongTy.cs" />
+    <Compile Include="Database\CongViec.cs" />
+    <Compile Include="Database\CV.cs" />
+    <Compile Include="Database\JobManagerContext.cs" />
+    <Compile Include="Database\Tinh.cs" />
+    <Compile Include="Database\UngTuyen.cs" />
+    <Compile Include="Database\UngVien.cs" />
+    <Compile Include="Database\User.cs" />
     <Compile Include="GUI\Admin\FAdminHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -418,13 +433,6 @@
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Common\DTO\UngTuyenDTO.cs" />
     <Compile Include="Common\DTO\UngTuyenGetAllInput.cs" />
-    <Compile Include="Common\Entities\CongTy.cs" />
-    <Compile Include="Common\Entities\CongViec.cs" />
-    <Compile Include="Common\Entities\CV.cs" />
-    <Compile Include="Common\Entities\Tinh.cs" />
-    <Compile Include="Common\Entities\UngTuyen.cs" />
-    <Compile Include="Common\Entities\UngVien.cs" />
-    <Compile Include="Common\Entities\User.cs" />
     <Compile Include="GUI\Common\FDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -761,6 +769,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-company-100.png" />
     <Content Include="Database\Scripts\022. Update CongTy Id Identity.sql" />
+    <Content Include="Database\Scripts\029. Change datatype for CongTy.sql" />
     <Content Include="Database\Scripts\028. Set default value for CreatedTime, IsDeleted.sql" />
     <Content Include="Database\Scripts\027. Thong tin lich phong van.sql" />
     <Content Include="Database\Scripts\026. User add IsEmailVerified.sql" />

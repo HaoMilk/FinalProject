@@ -22,7 +22,7 @@
     <Setting Name="emailFrom" Type="System.String" Scope="Application">
       <Value Profile="(Default)">2thuancr03@gmail.com</Value>
     </Setting>
-    <Setting Name="emailUsername" Type="System.String" Scope="Application">
+    <Setting Name="emailUserName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">2thuancr03@gmail.com</Value>
     </Setting>
     <Setting Name="emailPassword" Type="System.String" Scope="Application">

@@ -4,7 +4,7 @@ using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Common.GUI;
 using FinalProject.Common.Helper;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace FinalProject.GUI.Candidate
             InitializeComponent();
 
             // Ẩn button xác nhận email nếu email đã được xác nhận
-            this.button_XacNhanEmail.Enabled = !LoggedUser.User.IsEmailVerified;
+            this.button_XacNhanEmail.Enabled = !LoggedUser.User.IsEmailVerified.HasValue || !LoggedUser.User.IsEmailVerified.Value;
             this.ucComboBox_TrangThai.Items = UCComboBox.UserSatusItems;
             this.ucComboBox_TrangThaiEmail.Items = UCComboBox.EmailStatusItems;
             this.ucComboBox_Gender.Items = UCComboBox.GenderItems;
@@ -84,7 +84,7 @@ namespace FinalProject.GUI.Candidate
             if(ungVien != null)
             {
                 textBox_Name.Text = ungVien.HoTen;
-                dateTime_Birthday.Value = ungVien.NgaySinh;
+                dateTime_Birthday.Value = ungVien.NgaySinh ?? DateTime.Now;
                 ucComboBox_Gender.Text = ungVien.GioiTinh;
                 textBox_Address.Text = ungVien.DiaChi;
                 textBox_Phone.Text = ungVien.SDT;

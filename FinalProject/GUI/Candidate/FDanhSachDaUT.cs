@@ -2,7 +2,7 @@
 using FinalProject.Common.Const;
 using FinalProject.Common.DAO;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -26,7 +26,7 @@ namespace FinalProject.GUI.Candidate
         {
             InitializeComponent();
            
-            this.ucComboBox_TrangThai.Items = UCComboBox.TrangThaiUngTuyenItems;
+            this.ucComboBox_TrangThai.Items = UCComboBox.TrangThaiUngTuyenConstsItems;
             this.ucComboBox_TrangThai.SelectedIndex = 0;
         }
 

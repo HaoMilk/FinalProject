@@ -3,7 +3,7 @@ using FinalProject.Common.DAO;
 using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -35,9 +35,9 @@ namespace FinalProject.Common.BUS
             return _userDAO.GetAll(input);
         }
 
-        public int Add(string username, string password, string email, string status, string role, string phone, string avatarUrl)
+        public int Add(string UserName, string password, string email, string status, string role, string phone, string avatarUrl)
         {
-            var user = new User(username, password, email, status, role, phone, avatarUrl);
+            var user = new User(UserName, password, email, status, role, phone, avatarUrl);
             return _userDAO.Add(user);
         }
 
@@ -46,9 +46,9 @@ namespace FinalProject.Common.BUS
             return _userDAO.Add(user);
         }
 
-        public int Update(int id, string username, string password, string email, string status, string role, string phone, string avatarUrl)
+        public int Update(int id, string UserName, string password, string email, string status, string role, string phone, string avatarUrl)
         {
-            var user = new User(username, password, email, status, role, phone, avatarUrl);
+            var user = new User(UserName, password, email, status, role, phone, avatarUrl);
             user.Id = id;
             return _userDAO.Update(user);
         }
@@ -73,11 +73,11 @@ namespace FinalProject.Common.BUS
             return _userDAO.SoftDelete(id);
         }
 
-        public User Login(string username, string plainPassword, string role)
+        public User Login(string UserName, string plainPassword, string role)
         {
             var input = new UserGetAllInput
             {
-                Username = username,
+                UserName = UserName,
                 Password = plainPassword.ToMD5(),
                 Role = role
             };
@@ -85,11 +85,11 @@ namespace FinalProject.Common.BUS
             return user;
         }
 
-        private bool CheckUsernameExist(string username, string role)
+        private bool CheckUserNameExist(string UserName, string role)
         {
             var input = new UserGetAllInput
             {
-                Username = username,
+                UserName = UserName,
                 Role = role
             };
             var user = _userDAO.GetAll(input).FirstOrDefault();
@@ -115,10 +115,10 @@ namespace FinalProject.Common.BUS
             return user;
         }
 
-        public int Signup(string username, string plainPassword, string role)
+        public int Signup(string UserName, string plainPassword, string role)
         {
-            var isUsernameExisted = this.CheckUsernameExist(username, role);
-            if (isUsernameExisted)
+            var isUserNameExisted = this.CheckUserNameExist(UserName, role);
+            if (isUserNameExisted)
             {
                 UCMessageBox.Show("Tên đăng nhập đã tồn tại, vui lòng chọn tên khác!");
                 return -1;
@@ -127,7 +127,7 @@ namespace FinalProject.Common.BUS
             var result = 0;
             var user = new User()
             {
-                Username = username,
+                UserName = UserName,
                 Password = plainPassword.ToMD5(),
                 Role = role
             };

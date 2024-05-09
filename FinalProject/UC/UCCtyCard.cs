@@ -1,5 +1,5 @@
 ﻿using FinalProject.Common.Helper;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

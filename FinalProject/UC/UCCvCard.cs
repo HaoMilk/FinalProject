@@ -1,5 +1,5 @@
 ﻿using FinalProject.GUI.Candidate;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.ComponentModel;
 using System.Drawing;

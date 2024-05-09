@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common.DAO;
 using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +24,7 @@ namespace FinalProject.Common.BUS
             ct.MST = mst;
             ct.TenCongTy = tencongty;
             ct.DiaChi = dichi;
-            ct.CEO = ceo;
+            ct.TenCEO = ceo;
             ct.CreatedTime = DateTime.Now;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
@@ -44,7 +44,7 @@ namespace FinalProject.Common.BUS
             ct.MST = mst;
             ct.TenCongTy = tencongty;
             ct.DiaChi = dichi;
-            ct.CEO = ceo;
+            ct.TenCEO = ceo;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
             return congTyDAO.Edit(ct);

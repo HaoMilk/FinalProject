@@ -1,5 +1,5 @@
 ﻿using FinalProject.Common.Const;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,14 +32,14 @@ namespace FinalProject.UC
             new ComboBoxItem { Text = "Khác", Value = "O" },
         };
 
-        public static ComboBoxItem[] TrangThaiUngTuyenItems = new ComboBoxItem[]
+        public static ComboBoxItem[] TrangThaiUngTuyenConstsItems = new ComboBoxItem[]
         {
             new ComboBoxItem { Text = "Tất cả", Value = string.Empty },
-            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Submitted), Value = TrangThaiUngTuyen.Submitted },
-            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Approved), Value = TrangThaiUngTuyen.Approved },
-            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Rejected), Value = TrangThaiUngTuyen.Rejected },
-            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Recruitmented), Value = TrangThaiUngTuyen.Recruitmented },
-            new ComboBoxItem { Text = TrangThaiUngTuyen.GetValue(TrangThaiUngTuyen.Cancelled), Value = TrangThaiUngTuyen.Cancelled }
+            new ComboBoxItem { Text = TrangThaiUngTuyenConsts.GetValue(TrangThaiUngTuyenConsts.Submitted), Value = TrangThaiUngTuyenConsts.Submitted },
+            new ComboBoxItem { Text = TrangThaiUngTuyenConsts.GetValue(TrangThaiUngTuyenConsts.Approved), Value = TrangThaiUngTuyenConsts.Approved },
+            new ComboBoxItem { Text = TrangThaiUngTuyenConsts.GetValue(TrangThaiUngTuyenConsts.Rejected), Value = TrangThaiUngTuyenConsts.Rejected },
+            new ComboBoxItem { Text = TrangThaiUngTuyenConsts.GetValue(TrangThaiUngTuyenConsts.Recruitmented), Value = TrangThaiUngTuyenConsts.Recruitmented },
+            new ComboBoxItem { Text = TrangThaiUngTuyenConsts.GetValue(TrangThaiUngTuyenConsts.Cancelled), Value = TrangThaiUngTuyenConsts.Cancelled }
 
         };
         #endregion Constants

@@ -16,7 +16,7 @@ namespace FinalProject.Common.Helper
         private static string _emailFrom = Properties.Settings.Default.emailFrom;
         private static string _emailHost = Properties.Settings.Default.emailHost;
         private static int _emailPort = Properties.Settings.Default.emailPort;
-        private static string _emailUsername = Properties.Settings.Default.emailUsername;
+        private static string _emailUserName = Properties.Settings.Default.emailUserName;
         private static string _emailPassword = Properties.Settings.Default.emailPassword;
         private static SecureSocketOptions _secureSocketOptions = SecureSocketOptions.Auto;
 
@@ -45,7 +45,7 @@ namespace FinalProject.Common.Helper
                     client.ServerCertificateValidationCallback = (s, c, h, e) => true;
 
                     await client.ConnectAsync(_emailHost, _emailPort, _secureSocketOptions);
-                    await client.AuthenticateAsync(_emailUsername, _emailPassword);
+                    await client.AuthenticateAsync(_emailUserName, _emailPassword);
 
                     await client.SendAsync(emailMessage);
                     result.IsSuccess = true;
@@ -89,7 +89,7 @@ namespace FinalProject.Common.Helper
                     client.ServerCertificateValidationCallback = (s, c, h, e) => true;
 
                     client.Connect(_emailHost, _emailPort, _secureSocketOptions);
-                    client.Authenticate(_emailUsername, _emailPassword);
+                    client.Authenticate(_emailUserName, _emailPassword);
                     client.Send(emailMessage);
                     result.IsSuccess = true;
                     client.Disconnect(true);

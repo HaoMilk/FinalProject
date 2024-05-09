@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using NPOI.HSSF.Record.Chart;
 using System;
@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FinalProject.Common.Const;
 
 namespace FinalProject.GUI.Company
 {
@@ -97,30 +98,30 @@ namespace FinalProject.GUI.Company
                 richTextBox_DiaDiemPV.Text = _ut.DiaDiemPhongVan;
                 richTextBox_NguoiPV.Text = _ut.NguoiPhongVan;
                 richTextBox_KetQuaPV.Text = _ut.KetQuaPhongVan;
-                label_TrangThaiUngTuyen.Text = TrangThaiUngTuyen.GetValue(_ut.TrangThai);
+                label_TrangThaiUngTuyenConsts.Text = TrangThaiUngTuyenConsts.GetValue(_ut.TrangThai);
 
-                if (_ut.TrangThai == TrangThaiUngTuyen.Submitted)
+                if (_ut.TrangThai == TrangThaiUngTuyenConsts.Submitted)
                 {
                     button_TuyenDung.Enabled = false;
                 }
-                else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
+                else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Approved)
                 {
                     button_Duyet.Enabled = false;
                     dateTimePicker_ThoiGianPV.Enabled = false;
                     richTextBox_DiaDiemPV.Enabled = false;
                     richTextBox_NguoiPV.Enabled = false;
                 }
-                else if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+                else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Rejected)
                 {
                     tableLayoutPanel_Buttons.Enabled = false;
                     tableLayoutPanel_ThongTinPV.Enabled = false;
                 }
-                else if (_ut.TrangThai == TrangThaiUngTuyen.Cancelled)
+                else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Cancelled)
                 {
                     tableLayoutPanel_Buttons.Enabled = false;
                     tableLayoutPanel_ThongTinPV.Enabled = false;
                 }
-                else if (_ut.TrangThai == TrangThaiUngTuyen.Recruitmented)
+                else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Recruitmented)
                 {
                     tableLayoutPanel_Buttons.Enabled = false;
                     tableLayoutPanel_ThongTinPV.Enabled = false;
@@ -131,19 +132,19 @@ namespace FinalProject.GUI.Company
         private void button_Duyet_Click(object sender, EventArgs e)
         {
             var trangThai = _ut.TrangThai;
-            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            if (_ut.TrangThai == TrangThaiUngTuyenConsts.Rejected)
             {
                 UCMessageBox.Show("Hồ sơ đã bị loại bỏ");
                 return;
             }
-            else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Approved)
             {
                 UCMessageBox.Show("Hồ sơ đã được duyệt");
                 return;
             }
             else
             {
-                trangThai = TrangThaiUngTuyen.Approved;
+                trangThai = TrangThaiUngTuyenConsts.Approved;
             }
             if (string.IsNullOrEmpty(richTextBox_DiaDiemPV.Text))
             {
@@ -203,14 +204,14 @@ namespace FinalProject.GUI.Company
         private void button_Loai_Click(object sender, EventArgs e)
         {
             var trangThai = _ut.TrangThai;
-            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            if (_ut.TrangThai == TrangThaiUngTuyenConsts.Rejected)
             {
                 UCMessageBox.Show("Hồ sơ đã được loại bỏ");
                 return;
             }
             else
             {
-                trangThai = TrangThaiUngTuyen.Rejected;
+                trangThai = TrangThaiUngTuyenConsts.Rejected;
             }
 /*            if (string.IsNullOrEmpty(richTextBox_KetQuaPV.Text))
             {
@@ -251,14 +252,14 @@ namespace FinalProject.GUI.Company
         private void button_TuyenDung_Click(object sender, EventArgs e)
         {
             var trangThai = _ut.TrangThai;
-            if (_ut.TrangThai == TrangThaiUngTuyen.Rejected)
+            if (_ut.TrangThai == TrangThaiUngTuyenConsts.Rejected)
             {
                 UCMessageBox.Show("Hồ sơ đã bị loại bỏ");
                 return;
             }
-            else if (_ut.TrangThai == TrangThaiUngTuyen.Approved)
+            else if (_ut.TrangThai == TrangThaiUngTuyenConsts.Approved)
             {
-                trangThai = TrangThaiUngTuyen.Recruitmented;
+                trangThai = TrangThaiUngTuyenConsts.Recruitmented;
             }
             else
             {

@@ -1,6 +1,6 @@
 ﻿using CloudinaryDotNet.Actions;
 using CloudinaryDotNet;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using NPOI.XWPF.UserModel;
 using System;
@@ -56,10 +56,11 @@ namespace FinalProject.Common.Helper
                 }
                 generateFile = $"{path}/Output/CV/CV{cv.Id}_{ungVien.HoTen}_{cv.Ten}_{DateTime.Now:yyyyMMddhhmmss}.docx";
             }
+            var ngaySinh = ungVien.NgaySinh ?? DateTime.Now;
             var data = new Dictionary<string, string>
             {
                 { "{HoTen}", ungVien.HoTen },
-                { "{NgaySinh}", ungVien.NgaySinh.ToString("yyyy-MM-dd") },
+                { "{NgaySinh}", ngaySinh.ToString("yyyy-MM-dd") },
                 { "{GioiTinh}", ungVien.GioiTinh },
                 { "{DiaChi}", ungVien.DiaChi },
                 { "{SDT}", ungVien.SDT },

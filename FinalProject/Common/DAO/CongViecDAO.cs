@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

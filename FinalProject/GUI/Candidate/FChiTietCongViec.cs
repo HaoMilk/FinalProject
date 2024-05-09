@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
 using FinalProject.Common.DAO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
@@ -95,12 +95,13 @@ namespace FinalProject.GUI.Candidate
                 richTextBox_MoTa.Text = congViec.MoTa;
                 label_KinhNghiem.Text = congViec.KinhNghiem;
                 label_LienHe.Text = congViec.LienHe;
-                label_ThoigianLamViec.Text = congViec.CreatedTime.ToShortDateString();
+                var createdTime = congViec.CreatedTime ?? DateTime.Now;
+                label_ThoigianLamViec.Text = createdTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
                 label_Nganh.Text = congViec.Nganh;
                 label_SoLuong.Text = congViec.SoLuong.ToString() ;
                 richTextBox_YeuCau.Text = congViec.YeuCauUngVien;
-                dateTimePicker_NgayBatDau.Value = congViec.FromDate;
+                dateTimePicker_NgayBatDau.Value = congViec.FromDate ?? DateTime.Now;
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.DTO;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -69,9 +69,9 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND Id = {input.Id} ";
                 }
-                if (!string.IsNullOrEmpty(input.Username))
+                if (!string.IsNullOrEmpty(input.UserName))
                 {
-                    query += $" AND UserName = N'{input.Username}' ";
+                    query += $" AND UserName = N'{input.UserName}' ";
                 }
                 if (!string.IsNullOrEmpty(input.Password))
                 {
@@ -128,7 +128,7 @@ namespace FinalProject.Common.DAO
             using (dbConnection.Connection)
             {
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
-                cmd.Parameters.AddWithValue("@UserName", user.Username);
+                cmd.Parameters.AddWithValue("@UserName", user.UserName);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
                 cmd.Parameters.AddWithValue("@Status", user.Status);
@@ -170,7 +170,7 @@ namespace FinalProject.Common.DAO
 
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 cmd.Parameters.AddWithValue("@Id", user.Id);
-                cmd.Parameters.AddWithValue("@UserName", user.Username);
+                cmd.Parameters.AddWithValue("@UserName", user.UserName);
                 cmd.Parameters.AddWithValue("@Password", user.Password);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
                 cmd.Parameters.AddWithValue("@Status", user.Status);
@@ -262,7 +262,7 @@ namespace FinalProject.Common.DAO
         {
             var user = new User();
             user.Id = reader.GetIntValue(0);
-            user.Username = reader.GetStringValue(1);
+            user.UserName = reader.GetStringValue(1);
             user.Password = reader.GetStringValue(2);
             user.Email = reader.GetStringValue(3);
             user.Status = reader.GetStringValue(4);

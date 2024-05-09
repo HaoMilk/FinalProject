@@ -78,7 +78,7 @@
             this.richTextBox_KetQuaPV = new System.Windows.Forms.RichTextBox();
             this.groupBox_ThoiGianPV = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_ThoiGianPV = new System.Windows.Forms.DateTimePicker();
-            this.label_TrangThaiUngTuyen = new System.Windows.Forms.Label();
+            this.label_TrangThaiUngTuyenConsts = new System.Windows.Forms.Label();
             this.tableLayoutPanel_Buttons = new System.Windows.Forms.TableLayoutPanel();
             this.button_TuyenDung = new System.Windows.Forms.Button();
             this.button_Loai = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
             this.panel1.Controls.Add(this.tabControl_ThongTin);
-            this.panel1.Controls.Add(this.label_TrangThaiUngTuyen);
+            this.panel1.Controls.Add(this.label_TrangThaiUngTuyenConsts);
             this.panel1.Controls.Add(this.tableLayoutPanel_Buttons);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label_TenCongViec);
@@ -786,19 +786,19 @@
             this.dateTimePicker_ThoiGianPV.Size = new System.Drawing.Size(338, 24);
             this.dateTimePicker_ThoiGianPV.TabIndex = 0;
             // 
-            // label_TrangThaiUngTuyen
+            // label_TrangThaiUngTuyenConsts
             // 
-            this.label_TrangThaiUngTuyen.BackColor = System.Drawing.Color.Crimson;
-            this.label_TrangThaiUngTuyen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label_TrangThaiUngTuyen.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TrangThaiUngTuyen.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_TrangThaiUngTuyen.Location = new System.Drawing.Point(0, 477);
-            this.label_TrangThaiUngTuyen.Name = "label_TrangThaiUngTuyen";
-            this.label_TrangThaiUngTuyen.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.label_TrangThaiUngTuyen.Size = new System.Drawing.Size(730, 42);
-            this.label_TrangThaiUngTuyen.TabIndex = 4;
-            this.label_TrangThaiUngTuyen.Text = "label_TrangThaiUngTuyen";
-            this.label_TrangThaiUngTuyen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_TrangThaiUngTuyenConsts.BackColor = System.Drawing.Color.Crimson;
+            this.label_TrangThaiUngTuyenConsts.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label_TrangThaiUngTuyenConsts.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_TrangThaiUngTuyenConsts.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_TrangThaiUngTuyenConsts.Location = new System.Drawing.Point(0, 477);
+            this.label_TrangThaiUngTuyenConsts.Name = "label_TrangThaiUngTuyenConsts";
+            this.label_TrangThaiUngTuyenConsts.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label_TrangThaiUngTuyenConsts.Size = new System.Drawing.Size(730, 42);
+            this.label_TrangThaiUngTuyenConsts.TabIndex = 4;
+            this.label_TrangThaiUngTuyenConsts.Text = "label_TrangThaiUngTuyenConsts";
+            this.label_TrangThaiUngTuyenConsts.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel_Buttons
             // 
@@ -969,7 +969,7 @@
         private System.Windows.Forms.Button button_Duyet;
         private System.Windows.Forms.Button button_Loai;
         private System.Windows.Forms.Button button_TuyenDung;
-        private System.Windows.Forms.Label label_TrangThaiUngTuyen;
+        private System.Windows.Forms.Label label_TrangThaiUngTuyenConsts;
         private System.Windows.Forms.TabPage tabPage_ThongTinPhongVan;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_ThongTinPV;
         private System.Windows.Forms.GroupBox groupBox_NguoiPV;

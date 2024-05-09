@@ -1,4 +1,4 @@
-﻿using FinalProject.Database.Entities;
+﻿using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;

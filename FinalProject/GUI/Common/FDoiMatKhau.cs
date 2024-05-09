@@ -79,7 +79,7 @@ namespace FinalProject.GUI.Common
 
         private void FChangePassword_Load(object sender, EventArgs e)
         {
-            textBox_TenDangNhap.Text = LoggedUser.User.Username;
+            textBox_TenDangNhap.Text = LoggedUser.User.UserName;
             textBox_MatKhauCu.Focus();
         }
     }

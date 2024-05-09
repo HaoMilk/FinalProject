@@ -1,7 +1,7 @@
 ﻿using FinalProject.GUI.Candidate;
 using FinalProject.Common;
 using FinalProject.Common.Helper;
-using FinalProject.Database.Entities;
+using FinalProject.Database;
 using System;
 using System.ComponentModel;
 using System.Drawing;

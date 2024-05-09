@@ -73,9 +73,9 @@ namespace FinalProject.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2thuancr03@gmail.com")]
-        public string emailUsername {
+        public string emailUserName {
             get {
-                return ((string)(this["emailUsername"]));
+                return ((string)(this["emailUserName"]));
             }
         }
         
