@@ -1,14 +1,11 @@
-﻿using FinalProject.Common.DAO;
-using FinalProject.Database.DTO;
+﻿using FinalProject.DAO;
 using FinalProject.Database;
+using FinalProject.Database.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Windows.Forms.LinkLabel;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     public class UngTuyenBUS
     {

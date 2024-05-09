@@ -1,14 +1,10 @@
 ﻿using FinalProject.Common.Helper;
 using FinalProject.Database;
-using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FinalProject.Common.DAO
+namespace FinalProject.DAO
 {
     public class TinhDAO
     {
@@ -60,7 +56,7 @@ namespace FinalProject.Common.DAO
                 }
             }
         }
-        
+
         /// <summary>
         /// Lấy danh sách tỉnh
         /// </summary>

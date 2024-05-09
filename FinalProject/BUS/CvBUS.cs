@@ -1,11 +1,11 @@
-﻿using FinalProject.Common.DAO;
-using FinalProject.Database.DTO;
+﻿using FinalProject.DAO;
 using FinalProject.Database;
+using FinalProject.Database.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     public class CvBUS
     {
@@ -55,7 +55,7 @@ namespace FinalProject.Common.BUS
 
         public int Update(int id, string ten, int ungVienId, string link,
             string moTa, string trangThai, string viTriUngTuyen, string kyNang,
-            string ngoaiNgu, string tinHoc, string hocVan, string hoatDong, 
+            string ngoaiNgu, string tinHoc, string hocVan, string hoatDong,
             string chungChi, string mucTieu, string kinhNghiem)
         {
             var cv = new CV()

@@ -1,20 +1,9 @@
-﻿using CloudinaryDotNet;
+﻿using FinalProject.BUS;
 using FinalProject.Common;
-using FinalProject.Common.BUS;
-using FinalProject.Common.Const;
-using FinalProject.Common.GUI;
 using FinalProject.Common.Helper;
-using FinalProject.Database;
+using FinalProject.GUI.Common;
 using FinalProject.UC;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject.GUI.Candidate
@@ -48,9 +37,9 @@ namespace FinalProject.GUI.Candidate
             var trangthai = LoggedUser.UngVien.TrangThai;
             var avatar = LoggedUser.UngVien.Avatar;
 
-            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
+            var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh,
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
-             
+
             if (result <= 0)
             {
                 UCMessageBox.Show("Có lỗi phát sinh !");
@@ -81,7 +70,7 @@ namespace FinalProject.GUI.Candidate
         private void FCandidateInfor_Load(object sender, EventArgs e)
         {
             var ungVien = LoggedUser.UngVien;
-            if(ungVien != null)
+            if (ungVien != null)
             {
                 textBox_Name.Text = ungVien.HoTen;
                 dateTime_Birthday.Value = ungVien.NgaySinh ?? DateTime.Now;

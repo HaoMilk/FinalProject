@@ -1,13 +1,11 @@
-﻿using FinalProject.Common.DAO;
-using FinalProject.Database.DTO;
+﻿using FinalProject.DAO;
 using FinalProject.Database;
+using FinalProject.Database.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using System.Web.UI.WebControls;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     public class UngVienBUS
     {
@@ -82,7 +80,7 @@ namespace FinalProject.Common.BUS
         /// <param name="trangThai"></param>
         /// <returns></returns>
         public int Update(int id, string hoTen, DateTime ngaySinh, string gioiTinh,
-            string diaChi, string sdt, string email, string chuyenMon, 
+            string diaChi, string sdt, string email, string chuyenMon,
             string trangThai, object avatar)
         {
             var ungVien = new UngVien()

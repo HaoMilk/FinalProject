@@ -1,21 +1,15 @@
-﻿using FinalProject.Common.DAO;
-using FinalProject.Common.DTO;
-using FinalProject.Database.DTO;
+﻿using FinalProject.Common.DTO;
+using FinalProject.DAO;
 using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.ConstrainedExecution;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Interop;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     internal class CongTyBUS
     {
-        CongTyDAO congTyDAO = new CongTyDAO();  
+        CongTyDAO congTyDAO = new CongTyDAO();
         public int Add(int id, string email, string tencongty, string dichi, string ceo, string mst)
         {
             var ct = new CongTy();
@@ -36,7 +30,7 @@ namespace FinalProject.Common.BUS
             return congTyDAO.Add(congTy);
         }
 
-        public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst )
+        public int Update(int id, string email, string tencongty, string dichi, string ceo, string mst)
         {
             var ct = new CongTy();
             ct.ID = id;

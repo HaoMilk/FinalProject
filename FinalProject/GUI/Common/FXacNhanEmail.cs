@@ -1,5 +1,5 @@
 ﻿using FinalProject.Common;
-using FinalProject.Common.BUS;
+using FinalProject.BUS;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;

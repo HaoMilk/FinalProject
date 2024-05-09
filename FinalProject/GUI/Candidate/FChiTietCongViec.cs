@@ -1,6 +1,6 @@
 ﻿using FinalProject.Common;
-using FinalProject.Common.BUS;
-using FinalProject.Common.DAO;
+using FinalProject.BUS;
+using FinalProject.DAO;
 using FinalProject.Database;
 using FinalProject.UC;
 using System;

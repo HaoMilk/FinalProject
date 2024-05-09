@@ -1,4 +1,4 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.BUS;
 using FinalProject.Common.DTO;
 using FinalProject.Database;
 using FinalProject.GUI.Company;

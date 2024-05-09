@@ -1,18 +1,15 @@
 ﻿using FinalProject.Common.Const;
-using FinalProject.Common.DAO;
 using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
-using FinalProject.Database.DTO;
+using FinalProject.DAO;
 using FinalProject.Database;
+using FinalProject.Database.DTO;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     public class UserBUS
     {

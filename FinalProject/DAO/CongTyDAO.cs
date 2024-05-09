@@ -1,14 +1,11 @@
 ﻿using FinalProject.Common.DTO;
 using FinalProject.Common.Helper;
 using FinalProject.Database;
-using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Windows;
-using System.Windows.Forms;
 
-namespace FinalProject.Common.DAO
+namespace FinalProject.DAO
 {
     internal class CongTyDAO
     {
@@ -251,7 +248,7 @@ namespace FinalProject.Common.DAO
                     WHERE ID = @ID";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@URL", url);
-                    cmd.Parameters.AddWithValue("@ID",  ID);
+                    cmd.Parameters.AddWithValue("@ID", ID);
                     return cmd.ExecuteNonQuery();
                 }
             }

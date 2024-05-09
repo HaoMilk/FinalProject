@@ -1,16 +1,6 @@
-﻿using FinalProject.Admin;
-using FinalProject.Common;
-using FinalProject.Common.GUI;
-using FinalProject.GUI.Company;
-using FinalProject.UC;
+﻿using FinalProject.Common;
+using FinalProject.GUI.Common;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FinalProject.GUI.Company

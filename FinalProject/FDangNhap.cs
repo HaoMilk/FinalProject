@@ -1,13 +1,13 @@
 ﻿using FinalProject.Admin;
-using FinalProject.GUI.Candidate;
+using FinalProject.BUS;
 using FinalProject.Common;
-using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
-using FinalProject.Common.GUI;
+using FinalProject.GUI.Candidate;
+using FinalProject.GUI.Common;
+using FinalProject.GUI.Company;
 using FinalProject.UC;
 using System;
 using System.Windows.Forms;
-using FinalProject.GUI.Company;
 
 namespace FinalProject
 {
@@ -74,7 +74,7 @@ namespace FinalProject
                 LoggedUser.UserId = user.Id;
                 LoggedUser.UserRole = UserRoleConst.Admin;
                 LoggedUser.User = user;
-                
+
                 this.Hide();
                 FAdminHomePage fAdminHomePage = new FAdminHomePage();
                 fAdminHomePage.ShowDialog();

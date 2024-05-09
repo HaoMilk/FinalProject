@@ -1,5 +1,5 @@
 ﻿using FinalProject.Common;
-using FinalProject.Common.BUS;
+using FinalProject.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
 using FinalProject.Company.GUI;

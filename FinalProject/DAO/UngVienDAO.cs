@@ -1,16 +1,11 @@
 ﻿using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.DTO;
-using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FinalProject.Common.DAO
+namespace FinalProject.DAO
 {
     public class UngVienDAO
     {

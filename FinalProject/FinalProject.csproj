@@ -295,46 +295,22 @@
     <Compile Include="GUI\Candidate\FUngTuyenCongViec.Designer.cs">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\BUS\CongTyBUS.cs" />
-    <Compile Include="Common\BUS\UngVienBUS.cs" />
-    <Compile Include="Common\BUS\CvBUS.cs" />
-    <Compile Include="Common\BUS\UserBUS.cs" />
+    <Compile Include="BUS\CongTyBUS.cs" />
+    <Compile Include="BUS\UngVienBUS.cs" />
+    <Compile Include="BUS\CvBUS.cs" />
+    <Compile Include="BUS\UserBUS.cs" />
     <Compile Include="Common\Const\StatusConst.cs" />
     <Compile Include="Common\Const\TrangThaiUngTuyenConsts.cs" />
     <Compile Include="Common\Const\UserRoleConst.cs" />
-    <Compile Include="Common\DAO\CongTyDAO.cs" />
-    <Compile Include="Common\DAO\UserDAO.cs" />
-    <Compile Include="Common\DAO\UngVienDAO.cs" />
-    <Compile Include="Common\DAO\CvDAO.cs" />
+    <Compile Include="DAO\CongTyDAO.cs" />
+    <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="DAO\UngVienDAO.cs" />
+    <Compile Include="DAO\CvDAO.cs" />
     <Compile Include="Common\DTO\CongTyGetAllInput.cs" />
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPOutput.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
-    <Compile Include="Common\GUI\FDangKy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\GUI\FDangKy.Designer.cs">
-      <DependentUpon>FDangKy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Common\GUI\FDatLaiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\GUI\FDatLaiMatKhau.Designer.cs">
-      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Common\GUI\FQuenMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\GUI\FQuenMatKhau.Designer.cs">
-      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Common\GUI\FXacNhanEmail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\GUI\FXacNhanEmail.Designer.cs">
-      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
-    </Compile>
     <Compile Include="Common\Helper\DatabaseHelper.cs" />
     <Compile Include="Common\Helper\GuiHelper.cs" />
     <Compile Include="Common\Helper\ImageHelper.cs" />
@@ -399,13 +375,12 @@
     <Compile Include="GUI\Candidate\FQlyCv.Designer.cs">
       <DependentUpon>FQlyCv.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\BUS\UngTuyenBUS.cs" />
-    <Compile Include="Common\BUS\CongViecBUS.cs" />
-    <Compile Include="Common\BUS\TinhBUS.cs" />
-    <Compile Include="Common\DAO\UngTuyenDAO.cs" />
-    <Compile Include="Common\DAO\CongViecDAO.cs" />
-    <Compile Include="Common\Themes\BlueTheme.cs" />
-    <Compile Include="Common\DAO\TinhDAO.cs" />
+    <Compile Include="BUS\UngTuyenBUS.cs" />
+    <Compile Include="BUS\CongViecBUS.cs" />
+    <Compile Include="BUS\TinhBUS.cs" />
+    <Compile Include="DAO\UngTuyenDAO.cs" />
+    <Compile Include="DAO\CongViecDAO.cs" />
+    <Compile Include="DAO\TinhDAO.cs" />
     <Compile Include="GUI\Company\FDanhSachUngTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -514,12 +489,6 @@
     <Compile Include="UC\UCUserSetting.Designer.cs">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Common\GUI\FDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Common\GUI\FDoiMatKhau.Designer.cs">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Company\FCompanyHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -618,18 +587,6 @@
     <EmbeddedResource Include="GUI\Candidate\FUngTuyenCongViec.resx">
       <DependentUpon>FUngTuyenCongViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FDangKy.resx">
-      <DependentUpon>FDangKy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FDatLaiMatKhau.resx">
-      <DependentUpon>FDatLaiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FQuenMatKhau.resx">
-      <DependentUpon>FQuenMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FXacNhanEmail.resx">
-      <DependentUpon>FXacNhanEmail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Company\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
@@ -680,9 +637,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC\UCUserSetting.resx">
       <DependentUpon>UCUserSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Common\GUI\FDoiMatKhau.resx">
-      <DependentUpon>FDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Company\FCompanyHomePage.resx">
       <DependentUpon>FCompanyHomePage.cs</DependentUpon>

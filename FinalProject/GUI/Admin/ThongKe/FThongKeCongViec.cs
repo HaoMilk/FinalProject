@@ -14,10 +14,7 @@ namespace FinalProject.Admin.GUI.ThongKe
         public FThongKeCongViec()
         {
             InitializeComponent();
-            Load();
-        }
-        private void Load()
-        {
+
             DataTable dtViTri = LayThongTinViTri(conn);
             ChartHelper.ThemDuLieu(ViTriTuyenDungPhoBien, dtViTri, "ViTriTuyenDung", "SoLuong", "Vị trí tuyển dụng", "Số lượng", SeriesChartType.Column, "NHỮNG VỊ TRÍ TUYỂN DỤNG PHỔ BIẾN");
             DataTable diaDiem = LayDiaDiem(conn);

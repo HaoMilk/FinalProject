@@ -1,4 +1,4 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.BUS;
 using FinalProject.Common;
 using FinalProject.UC;
 using System;

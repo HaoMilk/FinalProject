@@ -1,7 +1,7 @@
 ﻿using FinalProject.Admin;
 using FinalProject.GUI.Candidate;
 using FinalProject.Common;
-using FinalProject.Common.BUS;
+using FinalProject.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Database;
 using FinalProject.UC;

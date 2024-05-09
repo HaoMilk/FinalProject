@@ -1,15 +1,11 @@
 ﻿using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.DTO;
-using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FinalProject.Common.DAO
+namespace FinalProject.DAO
 {
     public class UngTuyenDAO
     {
@@ -81,7 +77,7 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND ungTuyen.TrangThai = N'{input.TrangThai}' ";
                 }
-                if(input.IdCongTy!=0)
+                if (input.IdCongTy != 0)
                 {
                     query += $"AND CongTy.ID = '{input.IdCongTy}'";
                 }

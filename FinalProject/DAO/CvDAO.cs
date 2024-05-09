@@ -1,15 +1,11 @@
 ﻿using FinalProject.Common.Helper;
 using FinalProject.Database;
 using FinalProject.Database.DTO;
-using FinalProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace FinalProject.Common.DAO
+namespace FinalProject.DAO
 {
     public class CvDAO
     {
@@ -180,7 +176,7 @@ namespace FinalProject.Common.DAO
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
                 cmd.Parameters.AddWithValue("@Ten", cv.Ten);
                 cmd.Parameters.AddWithValue("@Link", cv.Link);
-                cmd.Parameters.AddWithValue("@MoTa", cv.MoTa);               
+                cmd.Parameters.AddWithValue("@MoTa", cv.MoTa);
                 cmd.Parameters.AddWithValue("@TrangThai", cv.TrangThai);
                 cmd.Parameters.AddWithValue("@ViTriUngTuyen", cv.ViTriUngTuyen);
                 cmd.Parameters.AddWithValue("@KyNang", cv.KyNang);

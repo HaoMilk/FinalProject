@@ -1,16 +1,11 @@
-﻿using FinalProject.Common.DAO;
-using FinalProject.Common.DTO;
+﻿using FinalProject.Common.DTO;
+using FinalProject.DAO;
 using FinalProject.Database;
 using FinalProject.UC;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using static System.Windows.Forms.LinkLabel;
 
-namespace FinalProject.Common.BUS
+namespace FinalProject.BUS
 {
     public class CongViecBUS
     {
@@ -25,7 +20,7 @@ namespace FinalProject.Common.BUS
             return congViecDAO.CheckExist(id);
         }
 
-        public int Add(string tenCongTy,int IdCongTy, string ten, string nganh, string viTriTuyenDung,
+        public int Add(string tenCongTy, int IdCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
             string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong, DateTime fromdate)
@@ -61,7 +56,7 @@ namespace FinalProject.Common.BUS
                     return -1;
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 UCMessageBox.Show(ex.Message);
                 return 0;
@@ -71,7 +66,7 @@ namespace FinalProject.Common.BUS
         public int Update(int Id, int idCongTy, string tenCongTy, string ten, string nganh, string viTriTuyenDung,
             decimal mucLuong, string diaDiem, string trinhDoHocVan,
             string gioiTinh, string lienHe, string moTa,
-            string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong , DateTime fromdate)
+            string quyenLoi, string kinhNghiem, string yeuCauUngVien, int soLuong, DateTime fromdate)
         {
             try
             {
