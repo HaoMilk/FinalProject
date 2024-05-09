@@ -170,7 +170,8 @@ namespace FinalProject.UC
             this.SetStyle(ControlStyles.UserPaint, true);
         }
 
-        private void button_View_Click(object sender, EventArgs e)
+
+        private void label_CvName_Click(object sender, EventArgs e)
         {
             if (CvClick != null)
             {
@@ -180,12 +181,6 @@ namespace FinalProject.UC
             {
                 UCMessageBox.Show("CV Clicked!");
 
-                //FViewCV fViewCV = new FViewCV();
-                //fViewCV.IdCV = this.CVId;
-                //fViewCV.IdUT = this.Id;
-                //fViewCV.IdUV = this.CandidateId;
-
-                //fViewCV.ShowDialog();
             }
         }
     }
