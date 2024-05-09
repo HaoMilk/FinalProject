@@ -36,7 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_ThemGiayPhep = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Xem = new System.Windows.Forms.Button();
             this.button_Luu = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBox_GiayPhep = new System.Windows.Forms.TextBox();
@@ -135,7 +135,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.button_ThemGiayPhep);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button_Xem);
             this.panel1.Controls.Add(this.button_Luu);
             this.panel1.Controls.Add(this.groupBox8);
             this.panel1.Controls.Add(this.groupBox7);
@@ -164,21 +164,23 @@
             this.button_ThemGiayPhep.TabIndex = 15;
             this.button_ThemGiayPhep.Text = "Chọn giấy phép";
             this.button_ThemGiayPhep.UseVisualStyleBackColor = false;
+            this.button_ThemGiayPhep.Click += new System.EventHandler(this.button_ThemGiayPhep_Click);
             // 
-            // button1
+            // button_Xem
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Image = global::FinalProject.Properties.Resources.icons8_view_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(269, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(313, 64);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Xem giấy phép";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button_Xem.BackColor = System.Drawing.Color.MidnightBlue;
+            this.button_Xem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_Xem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Xem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_Xem.Image = global::FinalProject.Properties.Resources.icons8_view_48;
+            this.button_Xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Xem.Location = new System.Drawing.Point(269, 514);
+            this.button_Xem.Name = "button_Xem";
+            this.button_Xem.Size = new System.Drawing.Size(313, 64);
+            this.button_Xem.TabIndex = 15;
+            this.button_Xem.Text = "Xem giấy phép";
+            this.button_Xem.UseVisualStyleBackColor = false;
+            this.button_Xem.Click += new System.EventHandler(this.button_Xem_Click);
             // 
             // button_Luu
             // 
@@ -368,7 +370,7 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox textBox_GiayPhep;
         private System.Windows.Forms.Button button_ThemGiayPhep;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Xem;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

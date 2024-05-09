@@ -89,7 +89,7 @@ namespace FinalProject.Company.GUI.Thong_tin
             }
         }
 
-        private void button_Xoa_Click_1(object sender, EventArgs e)
+        private void button_Xem_Click(object sender, EventArgs e)
         {
 
         }
