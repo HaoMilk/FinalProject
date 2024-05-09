@@ -76,7 +76,7 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 54);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1008, 652);
             this.panel2.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             this.panel4.Controls.Add(this.TiTrongCacNganh);
             this.panel4.Location = new System.Drawing.Point(509, 270);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(496, 374);
             this.panel4.TabIndex = 4;
@@ -99,7 +99,7 @@
             legend1.Name = "Legend1";
             this.TiTrongCacNganh.Legends.Add(legend1);
             this.TiTrongCacNganh.Location = new System.Drawing.Point(0, 0);
-            this.TiTrongCacNganh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TiTrongCacNganh.Margin = new System.Windows.Forms.Padding(2);
             this.TiTrongCacNganh.Name = "TiTrongCacNganh";
             this.TiTrongCacNganh.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
@@ -114,7 +114,7 @@
             // 
             this.panel3.Controls.Add(this.TopNganhLuongCaoNhat);
             this.panel3.Location = new System.Drawing.Point(9, 270);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(496, 374);
             this.panel3.TabIndex = 3;
@@ -129,7 +129,7 @@
             legend2.Name = "Legend1";
             this.TopNganhLuongCaoNhat.Legends.Add(legend2);
             this.TopNganhLuongCaoNhat.Location = new System.Drawing.Point(0, 0);
-            this.TopNganhLuongCaoNhat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TopNganhLuongCaoNhat.Margin = new System.Windows.Forms.Padding(2);
             this.TopNganhLuongCaoNhat.Name = "TopNganhLuongCaoNhat";
             this.TopNganhLuongCaoNhat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series2.ChartArea = "ChartArea1";
@@ -148,7 +148,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1008, 31);
             this.panel8.TabIndex = 2;
@@ -172,7 +172,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 31);
             this.pictureBox1.TabIndex = 1;
@@ -184,7 +184,7 @@
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Controls.Add(this.panel9);
             this.panel5.Location = new System.Drawing.Point(0, 60);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1005, 179);
             this.panel5.TabIndex = 1;
@@ -195,7 +195,7 @@
             this.panel11.Controls.Add(this.txtSoLuongCongTy);
             this.panel11.Controls.Add(this.label2);
             this.panel11.Location = new System.Drawing.Point(692, 2);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(314, 221);
             this.panel11.TabIndex = 3;
@@ -205,7 +205,7 @@
             this.txtSoLuongCongTy.BackColor = System.Drawing.Color.NavajoWhite;
             this.txtSoLuongCongTy.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSoLuongCongTy.Location = new System.Drawing.Point(24, 41);
-            this.txtSoLuongCongTy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuongCongTy.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuongCongTy.Name = "txtSoLuongCongTy";
             this.txtSoLuongCongTy.ReadOnly = true;
             this.txtSoLuongCongTy.Size = new System.Drawing.Size(266, 92);
@@ -230,7 +230,7 @@
             this.panel10.Controls.Add(this.txtSoLuongUngVien);
             this.panel10.Controls.Add(this.label3);
             this.panel10.Location = new System.Drawing.Point(346, 2);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(314, 219);
             this.panel10.TabIndex = 2;
@@ -240,7 +240,7 @@
             this.txtSoLuongUngVien.BackColor = System.Drawing.Color.PeachPuff;
             this.txtSoLuongUngVien.Font = new System.Drawing.Font("Constantia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSoLuongUngVien.Location = new System.Drawing.Point(24, 41);
-            this.txtSoLuongUngVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuongUngVien.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuongUngVien.Name = "txtSoLuongUngVien";
             this.txtSoLuongUngVien.ReadOnly = true;
             this.txtSoLuongUngVien.Size = new System.Drawing.Size(266, 92);
@@ -266,7 +266,7 @@
             this.panel9.Controls.Add(this.label5);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(314, 179);
             this.panel9.TabIndex = 1;
@@ -276,7 +276,7 @@
             this.txtSoLuongCongViec.BackColor = System.Drawing.Color.Bisque;
             this.txtSoLuongCongViec.Font = new System.Drawing.Font("Constantia", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSoLuongCongViec.Location = new System.Drawing.Point(24, 41);
-            this.txtSoLuongCongViec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuongCongViec.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuongCongViec.Name = "txtSoLuongCongViec";
             this.txtSoLuongCongViec.ReadOnly = true;
             this.txtSoLuongCongViec.Size = new System.Drawing.Size(266, 92);
@@ -315,7 +315,7 @@
             this.panel1.Controls.Add(this.label_DSCongTy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1008, 54);
             this.panel1.TabIndex = 0;
@@ -328,7 +328,7 @@
             this.ClientSize = new System.Drawing.Size(1008, 706);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FDashBoard";
