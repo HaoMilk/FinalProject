@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -98,7 +99,15 @@ namespace FinalProject.Company.GUI.Thong_tin
 
         private void button_Xem_Click(object sender, EventArgs e)
         {
-
+            string url = textBox_GiayPhep.Text;
+            if (url == null)
+            {
+                UCMessageBox.Show("Chưa có giấy phép đăng ký");
+            }    
+            else
+            {
+                Process.Start(url);
+            }    
         }
 
         private void button_ThemGiayPhep_Click(object sender, EventArgs e)
@@ -120,10 +129,7 @@ namespace FinalProject.Company.GUI.Thong_tin
                     {
                         // Reload lại data
                         LoadData();
-
-                        // Hiển thị thông báo và tải hình ảnh lên PictureBox nếu cần
                         UCMessageBox.Show("Cập nhật tệp Word thành công !");
-                        // pictureBox_WordFile.Load(openFileDialog.FileName); // Tải hình ảnh nếu cần
                     }
                     else
                     {
