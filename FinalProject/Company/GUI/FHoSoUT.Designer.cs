@@ -43,7 +43,7 @@
             this.label_Name.Name = "label_Name";
             this.label_Name.Size = new System.Drawing.Size(694, 41);
             this.label_Name.TabIndex = 15;
-            this.label_Name.Text = "QUẢN LÝ CV";
+            this.label_Name.Text = "DANH SÁCH CÔNG VIỆC";
             this.label_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel_CongViec

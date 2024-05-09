@@ -421,12 +421,11 @@
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(199, 50);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(734, 142);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
@@ -435,9 +434,9 @@
             this.label_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_DiaDiem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_DiaDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.label_DiaDiem.Location = new System.Drawing.Point(3, 73);
+            this.label_DiaDiem.Location = new System.Drawing.Point(3, 78);
             this.label_DiaDiem.Name = "label_DiaDiem";
-            this.label_DiaDiem.Size = new System.Drawing.Size(728, 31);
+            this.label_DiaDiem.Size = new System.Drawing.Size(728, 33);
             this.label_DiaDiem.TabIndex = 11;
             this.label_DiaDiem.Text = "Dia Diem";
             this.label_DiaDiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -450,7 +449,7 @@
             this.label_JobName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label_JobName.Location = new System.Drawing.Point(3, 0);
             this.label_JobName.Name = "label_JobName";
-            this.label_JobName.Size = new System.Drawing.Size(728, 44);
+            this.label_JobName.Size = new System.Drawing.Size(728, 47);
             this.label_JobName.TabIndex = 9;
             this.label_JobName.Text = "CÔNG VIỆC";
             this.label_JobName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -460,9 +459,9 @@
             this.label_TenCongTy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_TenCongTy.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TenCongTy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
-            this.label_TenCongTy.Location = new System.Drawing.Point(3, 44);
+            this.label_TenCongTy.Location = new System.Drawing.Point(3, 47);
             this.label_TenCongTy.Name = "label_TenCongTy";
-            this.label_TenCongTy.Size = new System.Drawing.Size(728, 29);
+            this.label_TenCongTy.Size = new System.Drawing.Size(728, 31);
             this.label_TenCongTy.TabIndex = 10;
             this.label_TenCongTy.Text = "Ten Cong Ty";
             this.label_TenCongTy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,9 +471,9 @@
             this.label_MucLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_MucLuong.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_MucLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(63)))), ((int)(((byte)(36)))));
-            this.label_MucLuong.Location = new System.Drawing.Point(3, 104);
+            this.label_MucLuong.Location = new System.Drawing.Point(3, 111);
             this.label_MucLuong.Name = "label_MucLuong";
-            this.label_MucLuong.Size = new System.Drawing.Size(728, 28);
+            this.label_MucLuong.Size = new System.Drawing.Size(728, 31);
             this.label_MucLuong.TabIndex = 16;
             this.label_MucLuong.Text = "Muc Luong";
             this.label_MucLuong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
