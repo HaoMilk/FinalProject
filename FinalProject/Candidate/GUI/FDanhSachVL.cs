@@ -121,7 +121,7 @@ namespace FinalProject.Candidate.GUI
             input = input.SetMucLuong(ucComboBox_Luong.Text);
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             //input.FromDate = dateTimePicker_FromDate.Value;
-            input.IdCongTy = LoggedUser.CongTy?.ID;
+            //input.IdCongTy = LoggedUser.CongTy?.ID;
             //input.FromId = ucPagination.StartRecord;
             //input.ToId = ucPagination.EndRecord;
 
