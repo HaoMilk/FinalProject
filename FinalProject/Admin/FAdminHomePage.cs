@@ -1,7 +1,6 @@
 ﻿
 using FinalProject.Admin.GUI;
 using FinalProject.Admin.GUI.ThongKe;
-using FinalProject.Admin.GUI.XetDuyet;
 using FinalProject.Candidate.GUI;
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
