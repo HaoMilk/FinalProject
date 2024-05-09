@@ -121,7 +121,7 @@ namespace FinalProject.Candidate.GUI
             input = input.SetMucLuong(ucComboBox_Luong.Text);
             input.GioiTinh = ucComboBox_GioiTinh.SelectedValue as string;
             //input.FromDate = dateTimePicker_FromDate.Value;
-            input.IdCongTy = LoggedUser.CongTy?.ID;
+            //input.IdCongTy = LoggedUser.CongTy?.ID;
             //input.FromId = ucPagination.StartRecord;
             //input.ToId = ucPagination.EndRecord;
 
@@ -129,6 +129,16 @@ namespace FinalProject.Candidate.GUI
         }
 
         private void textBox_TimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucCvCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucCvCard1_CvDelete(object sender, EventArgs e)
         {
 
         }

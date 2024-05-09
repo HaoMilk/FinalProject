@@ -32,7 +32,7 @@ namespace FinalProject
             //this.textBox_MatKhau.Text = "123456";
         }
 
-        private void button_DangNhap_Click(object sender, EventArgs e)
+        private void button_DangKy_Click(object sender, EventArgs e)
         {
             if (!Check())
             {
