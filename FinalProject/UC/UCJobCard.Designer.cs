@@ -31,7 +31,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label_MucLuong = new System.Windows.Forms.Label();
             this.label_DiaDiem = new System.Windows.Forms.Label();
-            this.button_View = new System.Windows.Forms.Button();
             this.label_TenCongViec = new System.Windows.Forms.Label();
             this.pictureBox_Logo = new System.Windows.Forms.PictureBox();
             this.label_TenCty = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label_MucLuong, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label_DiaDiem, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.button_View, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label_TenCongViec, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_Logo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label_TenCty, 1, 0);
@@ -55,11 +53,10 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 13);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(254, 194);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -70,10 +67,10 @@
             this.label_MucLuong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_MucLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_MucLuong.ForeColor = System.Drawing.Color.Crimson;
-            this.label_MucLuong.Location = new System.Drawing.Point(127, 125);
+            this.label_MucLuong.Location = new System.Drawing.Point(127, 147);
             this.label_MucLuong.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label_MucLuong.Name = "label_MucLuong";
-            this.label_MucLuong.Size = new System.Drawing.Size(127, 33);
+            this.label_MucLuong.Size = new System.Drawing.Size(127, 42);
             this.label_MucLuong.TabIndex = 8;
             this.label_MucLuong.Text = "Mức lương";
             this.label_MucLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,32 +82,13 @@
             this.label_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label_DiaDiem.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_DiaDiem.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label_DiaDiem.Location = new System.Drawing.Point(0, 125);
+            this.label_DiaDiem.Location = new System.Drawing.Point(0, 147);
             this.label_DiaDiem.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label_DiaDiem.Name = "label_DiaDiem";
-            this.label_DiaDiem.Size = new System.Drawing.Size(127, 33);
+            this.label_DiaDiem.Size = new System.Drawing.Size(127, 42);
             this.label_DiaDiem.TabIndex = 7;
             this.label_DiaDiem.Text = "Địa điểm";
             this.label_DiaDiem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button_View
-            // 
-            this.button_View.BackColor = System.Drawing.Color.Cornsilk;
-            this.button_View.BackgroundImage = global::FinalProject.Properties.Resources.icons8_view_96;
-            this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tableLayoutPanel1.SetColumnSpan(this.button_View, 2);
-            this.button_View.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
-            this.button_View.FlatAppearance.MouseDownBackColor = System.Drawing.Color.NavajoWhite;
-            this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_View.Location = new System.Drawing.Point(0, 168);
-            this.button_View.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.button_View.Name = "button_View";
-            this.button_View.Padding = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.button_View.Size = new System.Drawing.Size(254, 26);
-            this.button_View.TabIndex = 4;
-            this.button_View.UseVisualStyleBackColor = false;
-            this.button_View.Click += new System.EventHandler(this.button_View_Click);
             // 
             // label_TenCongViec
             // 
@@ -122,13 +100,14 @@
             this.label_TenCongViec.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label_TenCongViec.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_TenCongViec.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label_TenCongViec.Location = new System.Drawing.Point(0, 58);
+            this.label_TenCongViec.Location = new System.Drawing.Point(0, 68);
             this.label_TenCongViec.Margin = new System.Windows.Forms.Padding(0);
             this.label_TenCongViec.Name = "label_TenCongViec";
-            this.label_TenCongViec.Size = new System.Drawing.Size(254, 67);
+            this.label_TenCongViec.Size = new System.Drawing.Size(254, 79);
             this.label_TenCongViec.TabIndex = 1;
             this.label_TenCongViec.Text = "Tên công việc";
             this.label_TenCongViec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_TenCongViec.Click += new System.EventHandler(this.label_TenCongViec_Click);
             // 
             // pictureBox_Logo
             // 
@@ -138,7 +117,7 @@
             this.pictureBox_Logo.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_Logo.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox_Logo.Name = "pictureBox_Logo";
-            this.pictureBox_Logo.Size = new System.Drawing.Size(127, 58);
+            this.pictureBox_Logo.Size = new System.Drawing.Size(127, 68);
             this.pictureBox_Logo.TabIndex = 5;
             this.pictureBox_Logo.TabStop = false;
             // 
@@ -152,7 +131,7 @@
             this.label_TenCty.Location = new System.Drawing.Point(127, 0);
             this.label_TenCty.Margin = new System.Windows.Forms.Padding(0);
             this.label_TenCty.Name = "label_TenCty";
-            this.label_TenCty.Size = new System.Drawing.Size(127, 58);
+            this.label_TenCty.Size = new System.Drawing.Size(127, 68);
             this.label_TenCty.TabIndex = 6;
             this.label_TenCty.Text = "Tên công ty";
             this.label_TenCty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +158,6 @@
 
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button_View;
         private System.Windows.Forms.Label label_TenCongViec;
         private System.Windows.Forms.PictureBox pictureBox_Logo;
         private System.Windows.Forms.Label label_TenCty;
