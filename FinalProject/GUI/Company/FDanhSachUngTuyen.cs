@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
+using FinalProject.GUI.Company;
 
 namespace FinalProject.Company.GUI
 {

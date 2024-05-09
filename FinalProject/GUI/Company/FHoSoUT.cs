@@ -2,6 +2,7 @@
 using FinalProject.Common.BUS;
 using FinalProject.Common.Const;
 using FinalProject.Common.DTO;
+using FinalProject.Company.GUI;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -63,10 +64,5 @@ namespace FinalProject.GUI.Company
             fDanhSachUngTuyen.ShowDialog();
         }
         #endregion JobList
-
-
-
-
-
     }
 }
