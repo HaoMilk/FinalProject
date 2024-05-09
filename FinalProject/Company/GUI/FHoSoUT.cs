@@ -1,5 +1,7 @@
 ﻿using FinalProject.Common;
 using FinalProject.Common.BUS;
+using FinalProject.Common.Const;
+using FinalProject.Common.DTO;
 using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
@@ -11,74 +13,60 @@ namespace FinalProject.Company.GUI
 {
     public partial class FHoSoUT : UCForm
     {
-        private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
-        private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
-        UngTuyenGetAllInput input = new UngTuyenGetAllInput();
+        private CongViecBUS congViecBUS = new CongViecBUS();
+        private List<CongViec> listCongViec = new List<CongViec>();
 
         public FHoSoUT()
         {
             InitializeComponent();
-            comboBox_TrangThai.SelectedIndex = 0;
         }
 
         private void FQlyCv_Load(object sender, EventArgs e)
         {
-
+            LoadJobList();  
         }
 
-        private void TimKiem()
+        #region JobList
+
+        private void LoadJobList()
         {
+            var input = new CongViecGetAllInput();
             input.IdCongTy = LoggedUser.CongTy.ID;
-            input.TrangThai = TrangThaiUngTuyen.GetKey(comboBox_TrangThai.Text);
-            listUngTuyen = ungTuyenBUS.Search(input);
-
-            var ucViewCVs = CreateCvList();
-            flowLayoutPanel_Data.Controls.Clear();
-            flowLayoutPanel_Data.SuspendLayout();
-            flowLayoutPanel_Data.Controls.AddRange(ucViewCVs.ToArray());
-            flowLayoutPanel_Data.ResumeLayout();
-        }
-
-        private List<UCViewCV> CreateCvList()
-        {
-            List<UCViewCV> uCViewCVs = new List<UCViewCV>();
-            for (int i = 0; i < listUngTuyen.Count; i++)
+            listCongViec = congViecBUS.Search(input);
+            List<UCJobCard> uCViewJobs = new List<UCJobCard>();
+            if (listCongViec != null && listCongViec.Count > 0)
             {
-                UCViewCV uCViewCV = new UCViewCV();
-                uCViewCV.Id = listUngTuyen[i].Id;
-                uCViewCV.CandidateId = listUngTuyen[i].UngVienId;
-                uCViewCV.CVId = listUngTuyen[i].CvId;
-                uCViewCV.CvName = listUngTuyen[i].TenCv;
-                uCViewCV.LastUpdatedTime = listUngTuyen[i].UpdatedTime ?? DateTime.Now;
-                uCViewCV.CvClick += UCViewCV_CvClick;
-                uCViewCVs.Add(uCViewCV);
+                for (int i = 0; i < listCongViec.Count; i++)
+                {
+                    UCJobCard uCViewJob = new UCJobCard();
+                    uCViewJob.Id = listCongViec[i].Id;
+                    uCViewJob.CongViec = listCongViec[i];
+                    // Gán event UCViewJob_ViewClick cho EventHandler ViewClick
+                    uCViewJob.ViewClick += UCViewJob_ViewClick;
+
+                    uCViewJobs.Add(uCViewJob);
+                }
             }
-            return uCViewCVs;
+
+            flowLayoutPanel_CongViec.Controls.Clear();
+            flowLayoutPanel_CongViec.SuspendLayout();
+            flowLayoutPanel_CongViec.Controls.AddRange(uCViewJobs.ToArray());
+            flowLayoutPanel_CongViec.ResumeLayout();
         }
 
-        private void UCViewCV_CvClick(object sender, EventArgs e)
-        {
-            var ucViewCV = sender as UCViewCV;
-
-            FViewCV fViewCV = new FViewCV();
-            fViewCV.IdCV = ucViewCV.CVId;
-            fViewCV.IdUT = ucViewCV.Id;
-            fViewCV.IdUV = ucViewCV.CandidateId;
-
-            fViewCV.ShowDialog();
-
-            // Load lại data
-            TimKiem();
+        private void UCViewJob_ViewClick(object sender, EventArgs e)
+        { 
+            var ucViewCV = sender as UCJobCard;
+            int idCongViec = ucViewCV.CongViec.Id;
+            FDanhSachUngTuyen fDanhSachUngTuyen = new FDanhSachUngTuyen();
+            fDanhSachUngTuyen.IDCongViec = idCongViec;
+            fDanhSachUngTuyen.ShowDialog();
         }
+        #endregion JobList
 
-        private void button_TimKiem_Click(object sender, EventArgs e)
-        {
-            TimKiem();
-        }
 
-        private void comboBox_TrangThai_SelectedValueChanged(object sender, EventArgs e)
-        {
-            TimKiem();
-        }
+
+
+
     }
 }

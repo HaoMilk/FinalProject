@@ -53,14 +53,6 @@ namespace FinalProject.UC
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            if (ViewClick != null)
-            {
-                ViewClick(this, e);
-            }
-            else
-            {
-                UCMessageBox.Show($"Cty {id}");
-            }
         }
 
         private void UCCtyCard_Load(object sender, EventArgs e)
@@ -86,6 +78,18 @@ namespace FinalProject.UC
             GuiHelper.FillRoundedRectangle(gradientRectangle, 20, graphics, backgroundBrush, borderBrush);
 
             this.BackColor = Color.Transparent;
+        }
+
+        private void label_Name_Click(object sender, EventArgs e)
+        {
+            if (ViewClick != null)
+            {
+                ViewClick(this, e);
+            }
+            else
+            {
+                UCMessageBox.Show($"Cty {id}");
+            }
         }
     }
 }

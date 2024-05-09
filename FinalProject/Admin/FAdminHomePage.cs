@@ -1,7 +1,7 @@
 ﻿
 using FinalProject.Admin.GUI;
 using FinalProject.Admin.GUI.ThongKe;
-using FinalProject.Admin.GUI.XetDuyet;
+using FinalProject.Admin.GUI.ThongKe.Class;
 using FinalProject.Candidate.GUI;
 using FinalProject.Common.GUI;
 using FinalProject.Company.GUI.Thong_tin;
@@ -34,14 +34,18 @@ namespace FinalProject.Admin
             FThongKeCongViec fThongKeCongViec = new FThongKeCongViec();
             fThongKeCongViec.Show();
         }
+        private void ucMenuCard_UngVien_MenuClick(object sender, EventArgs e)
+        {
+            FThongKeUngVien fThongKeUngVien = new FThongKeUngVien();
+            fThongKeUngVien.Show();
+        }
         #endregion
-
-        #region XetDuyet
-        #endregion XetDuyet
 
         private void ucMenuCard_DangXuat_MenuClick(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }

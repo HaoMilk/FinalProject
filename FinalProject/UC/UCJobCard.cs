@@ -111,7 +111,7 @@ namespace FinalProject.UC
             }
         }
 
-        [Category("CUSTOMIZE UI")]
+   /*     [Category("CUSTOMIZE UI")]
         [DisplayName("BackColor View")]
         public Color ButtonViewBackground
         {
@@ -126,7 +126,7 @@ namespace FinalProject.UC
                 this.button_View.BackColor = buttonViewBackground;
                 // this.Invalidate();
             }
-        }
+        }*/
 
         //[Category("CUSTOMIZE UI")]
         //[DisplayName("BackColor Menu")]
@@ -178,40 +178,6 @@ namespace FinalProject.UC
                 // this.Invalidate();
             }
         }
-
-        [Category("CUSTOMIZE UI")]
-        [DisplayName("ButtonView Image")]
-        public Image ButtonViewImage
-        {
-            get { return buttonViewImage; }
-            set
-            {
-                if (value == null)
-                {
-                    value = Properties.Resources.icons8_view_96;
-                }
-                buttonViewImage = value;
-                this.button_View.BackgroundImage = buttonViewImage;
-                // this.Invalidate();
-            }
-        }
-
-        //[Category("CUSTOMIZE UI")]
-        //[DisplayName("ButtonMenu Image")]
-        //public Image ButtonMenuImage
-        //{
-        //    get { return buttonMenuImage; }
-        //    set
-        //    {
-        //        if (value == null)
-        //        {
-        //            value = Properties.Resources.icons8_menu_96;
-        //        }
-        //        buttonMenuImage = value;
-        //        this.button_Menu.BackgroundImage = buttonMenuImage;
-        //        // this.Invalidate();
-        //    }
-        //}
         #endregion Properties
 
         public UCJobCard()
@@ -234,27 +200,9 @@ namespace FinalProject.UC
 
         private void button_View_Click(object sender, EventArgs e)
         {
-            if (ViewClick != null)
-            {
-                ViewClick(this, e);
-            }
-            else
-            {
-                UCMessageBox.Show($"View id = {id}");
-            }
+
         }
 
-        //private void button_Menu_Click(object sender, EventArgs e)
-        //{
-        //    if (MenuClick != null)
-        //    {
-        //        MenuClick(this, e);
-        //    }
-        //    else
-        //    {
-        //        UCMessageBox.Show("Menu clicked!");
-        //    }
-        //}
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -271,6 +219,18 @@ namespace FinalProject.UC
             GuiHelper.FillRoundedRectangle(gradientRectangle, 10, graphics, backgroundBrush, borderBrush);
 
             this.BackColor = Color.Transparent;
+        }
+
+        private void label_TenCongViec_Click(object sender, EventArgs e)
+        {
+            if (ViewClick != null)
+            {
+                ViewClick(this, e);
+            }
+            else
+            {
+                UCMessageBox.Show($"View id = {id}");
+            }
         }
     }
 }
