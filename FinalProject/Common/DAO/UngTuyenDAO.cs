@@ -85,6 +85,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $"AND CongTy.ID = '{input.IdCongTy}'";
                 }
+                if (input.IdCongViec != 0)
+                {
+                    query += $"AND CongViec.Id = '{input.IdCongViec}'";
+                }
                 SqlCommand cmd = new SqlCommand(query, dbConnection.Connection);
 
                 try
