@@ -50,6 +50,7 @@ namespace FinalProject.Candidate.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ucCustomButton1 = new FinalProject.UC.UCCustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucCvCard1 = new FinalProject.UC.UCCvCard();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel_CongViec.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,7 +70,7 @@ namespace FinalProject.Candidate.GUI
             this.panel3.Controls.Add(this.flowLayoutPanel_CongViec);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(418, 50);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Margin = new System.Windows.Forms.Padding(5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1204, 793);
             this.panel3.TabIndex = 5;
@@ -80,9 +81,10 @@ namespace FinalProject.Candidate.GUI
             this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
             this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel_CongViec.Controls.Add(this.ucCtyCard1);
+            this.flowLayoutPanel_CongViec.Controls.Add(this.ucCvCard1);
             this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.flowLayoutPanel_CongViec.Margin = new System.Windows.Forms.Padding(5);
             this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
             this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(1204, 793);
@@ -94,7 +96,8 @@ namespace FinalProject.Candidate.GUI
             this.ucCtyCard1.CongTy = null;
             this.ucCtyCard1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ucCtyCard1.Id = 0;
-            this.ucCtyCard1.Location = new System.Drawing.Point(18, 17);
+            this.ucCtyCard1.Location = new System.Drawing.Point(20, 20);
+            this.ucCtyCard1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ucCtyCard1.Name = "ucCtyCard1";
             this.ucCtyCard1.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
             this.ucCtyCard1.Size = new System.Drawing.Size(324, 262);
@@ -359,7 +362,7 @@ namespace FinalProject.Candidate.GUI
             this.ucCustomButton1.ForeColor = System.Drawing.Color.White;
             this.ucCustomButton1.Image = global::FinalProject.Properties.Resources.icons8_search_32;
             this.ucCustomButton1.Location = new System.Drawing.Point(5, 717);
-            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ucCustomButton1.Margin = new System.Windows.Forms.Padding(5);
             this.ucCustomButton1.Name = "ucCustomButton1";
             this.ucCustomButton1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.ucCustomButton1.Size = new System.Drawing.Size(408, 71);
@@ -379,6 +382,27 @@ namespace FinalProject.Candidate.GUI
             this.pictureBox1.Size = new System.Drawing.Size(412, 112);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // ucCvCard1
+            // 
+            this.ucCvCard1.BackColor = System.Drawing.Color.Transparent;
+            this.ucCvCard1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ucCvCard1.BackgroundImage")));
+            this.ucCvCard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucCvCard1.BgImage = null;
+            this.ucCvCard1.CvName = null;
+            this.ucCvCard1.CvNameTextColor = System.Drawing.SystemColors.Highlight;
+            this.ucCvCard1.Id = 0;
+            this.ucCvCard1.LastUpdatedTime = new System.DateTime(((long)(0)));
+            this.ucCvCard1.LastUpdatedTimeTextColor = System.Drawing.Color.Navy;
+            this.ucCvCard1.Location = new System.Drawing.Point(364, 28);
+            this.ucCvCard1.Margin = new System.Windows.Forms.Padding(15, 14, 15, 14);
+            this.ucCvCard1.Name = "ucCvCard1";
+            this.ucCvCard1.Padding = new System.Windows.Forms.Padding(15, 14, 15, 14);
+            this.ucCvCard1.Size = new System.Drawing.Size(284, 252);
+            this.ucCvCard1.TabIndex = 1;
+            this.ucCvCard1.ViTriUngTuyen = null;
+            this.ucCvCard1.CvDelete += new System.EventHandler(this.ucCvCard1_CvDelete);
+            this.ucCvCard1.Load += new System.EventHandler(this.ucCvCard1_Load);
             // 
             // FDanhSachVL_Name
             // 
@@ -434,5 +458,6 @@ namespace FinalProject.Candidate.GUI
         private UCCustomButton ucCustomButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private UCCtyCard ucCtyCard1;
+        private UCCvCard ucCvCard1;
     }
 }

@@ -24,14 +24,21 @@ namespace FinalProject.Common.Helper
         {
             var result = new SendEmailBySMTPOutput();
 
+            // Khởi tạo đối tượng email message
             var emailMessage = new MimeMessage();
+            // Gửi mail từ mail của ai
             emailMessage.From.Add(MailboxAddress.Parse(_emailFrom));
+
+            // Thêm danh sách người nhận mail ( recipient )
             foreach (var item in input.Recipient)
             {
+                // Thêm từng email người nhận vào mục To
                 emailMessage.To.Add(MailboxAddress.Parse(item));
             }
 
+            // Tựa đề của email
             emailMessage.Subject = input.Title;
+            // Nội dung của email
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)
             {
                 Text = input.Content,
@@ -40,20 +47,27 @@ namespace FinalProject.Common.Helper
 
             try
             {
+                // Tạo client để chuẩn bị gửi mail
                 using (var client = new MailKit.Net.Smtp.SmtpClient())
                 {
                     client.ServerCertificateValidationCallback = (s, c, h, e) => true;
 
+                    // Kết nối tới host 
                     await client.ConnectAsync(_emailHost, _emailPort, _secureSocketOptions);
+                    // Xác thực tài khoản với username, password
                     await client.AuthenticateAsync(_emailUsername, _emailPassword);
 
+                    // send email message
                     await client.SendAsync(emailMessage);
+
+                    // nếu gửi thành công thì gán issucess == true
                     result.IsSuccess = true;
 
+                    // Đóng kết nối -- > tắt client
                     await client.DisconnectAsync(true);
                 }
             }
-            catch (Exception ex) //todo add another try to send email
+            catch (Exception ex) // Có lỗi phát sinh khi gửi mail
             {
                 var e = ex;
                 result.ErrorMessage = ex.Message;
