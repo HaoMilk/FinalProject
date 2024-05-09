@@ -64,7 +64,7 @@
             this.textBox_TenCTy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_TenCTy.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_TenCTy.Location = new System.Drawing.Point(2, 22);
-            this.textBox_TenCTy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_TenCTy.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TenCTy.Name = "textBox_TenCTy";
             this.textBox_TenCTy.Size = new System.Drawing.Size(461, 27);
             this.textBox_TenCTy.TabIndex = 2;
@@ -77,9 +77,9 @@
             this.groupBox5.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox5.Location = new System.Drawing.Point(0, 122);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(465, 52);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
@@ -90,7 +90,7 @@
             this.textBox_Email.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_Email.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_Email.Location = new System.Drawing.Point(2, 22);
-            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_Email.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_Email.Name = "textBox_Email";
             this.textBox_Email.Size = new System.Drawing.Size(461, 27);
             this.textBox_Email.TabIndex = 2;
@@ -103,9 +103,9 @@
             this.groupBox4.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox4.Location = new System.Drawing.Point(0, 61);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(465, 61);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
@@ -116,7 +116,7 @@
             this.textBox_ID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_ID.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_ID.Location = new System.Drawing.Point(2, 22);
-            this.textBox_ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_ID.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.ReadOnly = true;
             this.textBox_ID.Size = new System.Drawing.Size(461, 27);
@@ -130,9 +130,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(465, 61);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -152,7 +152,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 34);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 523);
             this.panel1.TabIndex = 12;
@@ -166,7 +166,7 @@
             this.button_ThemGiayPhep.Image = global::FinalProject.Properties.Resources.icons8_add_48;
             this.button_ThemGiayPhep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_ThemGiayPhep.Location = new System.Drawing.Point(0, 418);
-            this.button_ThemGiayPhep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_ThemGiayPhep.Margin = new System.Windows.Forms.Padding(2);
             this.button_ThemGiayPhep.Name = "button_ThemGiayPhep";
             this.button_ThemGiayPhep.Size = new System.Drawing.Size(230, 52);
             this.button_ThemGiayPhep.TabIndex = 15;
@@ -183,7 +183,7 @@
             this.button_Xem.Image = global::FinalProject.Properties.Resources.icons8_view_48;
             this.button_Xem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Xem.Location = new System.Drawing.Point(230, 418);
-            this.button_Xem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Xem.Margin = new System.Windows.Forms.Padding(2);
             this.button_Xem.Name = "button_Xem";
             this.button_Xem.Size = new System.Drawing.Size(235, 52);
             this.button_Xem.TabIndex = 15;
@@ -200,7 +200,7 @@
             this.button_Luu.Image = global::FinalProject.Properties.Resources.save;
             this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Luu.Location = new System.Drawing.Point(0, 470);
-            this.button_Luu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Luu.Margin = new System.Windows.Forms.Padding(2);
             this.button_Luu.Name = "button_Luu";
             this.button_Luu.Size = new System.Drawing.Size(465, 53);
             this.button_Luu.TabIndex = 3;
@@ -216,9 +216,9 @@
             this.groupBox8.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox8.Location = new System.Drawing.Point(0, 357);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(465, 61);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
@@ -229,7 +229,7 @@
             this.textBox_GiayPhep.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_GiayPhep.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_GiayPhep.Location = new System.Drawing.Point(2, 22);
-            this.textBox_GiayPhep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_GiayPhep.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_GiayPhep.Name = "textBox_GiayPhep";
             this.textBox_GiayPhep.Size = new System.Drawing.Size(461, 27);
             this.textBox_GiayPhep.TabIndex = 2;
@@ -242,9 +242,9 @@
             this.groupBox7.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox7.Location = new System.Drawing.Point(0, 296);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(465, 61);
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
@@ -255,7 +255,7 @@
             this.textBox_MST.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_MST.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_MST.Location = new System.Drawing.Point(2, 22);
-            this.textBox_MST.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_MST.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_MST.Name = "textBox_MST";
             this.textBox_MST.Size = new System.Drawing.Size(461, 27);
             this.textBox_MST.TabIndex = 2;
@@ -268,9 +268,9 @@
             this.groupBox6.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox6.Location = new System.Drawing.Point(0, 235);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(465, 61);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
@@ -281,7 +281,7 @@
             this.textBox_CEO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_CEO.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_CEO.Location = new System.Drawing.Point(2, 22);
-            this.textBox_CEO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_CEO.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_CEO.Name = "textBox_CEO";
             this.textBox_CEO.Size = new System.Drawing.Size(461, 27);
             this.textBox_CEO.TabIndex = 2;
@@ -294,9 +294,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Constantia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(0, 174);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(465, 61);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
@@ -307,14 +307,14 @@
             this.textBox_DiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox_DiaChi.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.textBox_DiaChi.Location = new System.Drawing.Point(2, 22);
-            this.textBox_DiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_DiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_DiaChi.Name = "textBox_DiaChi";
             this.textBox_DiaChi.Size = new System.Drawing.Size(461, 27);
             this.textBox_DiaChi.TabIndex = 2;
             // 
             // label_Name
             // 
-            this.label_Name.BackColor = System.Drawing.Color.MidnightBlue;
+            this.label_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(16)))), ((int)(((byte)(120)))));
             this.label_Name.Dock = System.Windows.Forms.DockStyle.Top;
             this.label_Name.Font = new System.Drawing.Font("Constantia", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -332,7 +332,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(465, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(367, 523);
             this.pictureBox1.TabIndex = 13;
@@ -346,7 +346,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_Name);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FThongTinCongTy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
