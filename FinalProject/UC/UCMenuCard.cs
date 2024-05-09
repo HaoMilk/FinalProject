@@ -61,7 +61,7 @@ namespace FinalProject.UC
                     value = "Menu";
                 }
                 menuName = value;
-                this.button_View.Text = menuName;
+                this.label_Menu.Text = menuName;
                 // this.Invalidate();
             }
         }
@@ -93,7 +93,7 @@ namespace FinalProject.UC
                     value = Color.Cornsilk;
                 }
                 buttonBackColor = value;
-                this.button_View.BackColor = buttonBackColor;
+                this.label_Menu.BackColor = buttonBackColor;
                 // this.Invalidate();
             }
         }
@@ -109,9 +109,7 @@ namespace FinalProject.UC
                     value = Color.RoyalBlue;
                 }
                 buttonTextColor = value;
-                this.button_View.ForeColor = value;
-                //this.button_View.FlatAppearance.BorderColor = value;
-                // this.Invalidate();
+                this.label_Menu.ForeColor = value;
             }
         }
 
@@ -151,18 +149,6 @@ namespace FinalProject.UC
             return size;
         }
 
-        private void button_View_Click(object sender, EventArgs e)
-        {
-            if (MenuClick != null)
-            {
-                MenuClick(this, e);
-            }
-            else
-            {
-                UCMessageBox.Show("Menu clicked");
-            }
-        }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -178,6 +164,30 @@ namespace FinalProject.UC
             GuiHelper.FillRoundedRectangle(gradientRectangle, this.borderRadious, graphics, backgroundBrush, borderBrush);
 
             this.BackColor = Color.Transparent;
+        }
+
+        private void pictureBox_Image_Click(object sender, EventArgs e)
+        {
+            if (MenuClick != null)
+            {
+                MenuClick(this, e);
+            }
+            else
+            {
+                UCMessageBox.Show("Menu clicked");
+            }
+        }
+
+        private void label_Menu_Click(object sender, EventArgs e)
+        {
+            if (MenuClick != null)
+            {
+                MenuClick(this, e);
+            }
+            else
+            {
+                UCMessageBox.Show("Menu clicked");
+            }
         }
     }
 }
