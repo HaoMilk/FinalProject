@@ -66,6 +66,8 @@ namespace FinalProject.Company.GUI
             var ucViewCV = sender as UCViewCV;
             FViewCV fViewCV = new FViewCV();
             fViewCV.IdCV = ucViewCV.CVId;
+            fViewCV.IdUT = ucViewCV.Id;
+            fViewCV.IdUV = ucViewCV.CandidateId;
             fViewCV.ShowDialog();
             LoadCVList();
         }
