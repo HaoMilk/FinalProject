@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace FinalProject.Company.GUI
 {
-    public partial class FCreateJob : Form
+    public partial class FCreateJob : UCForm
     {
         CongViecBUS congViecBUS = new CongViecBUS();
         private CongViec congViec = new CongViec();
