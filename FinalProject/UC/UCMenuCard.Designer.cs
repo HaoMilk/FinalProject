@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button_View = new System.Windows.Forms.Button();
             this.pictureBox_Image = new System.Windows.Forms.PictureBox();
+            this.label_Menu = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Image)).BeginInit();
             this.SuspendLayout();
@@ -40,38 +40,17 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.button_View, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_Image, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label_Menu, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 13);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.95454F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.04546F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(276, 176);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // button_View
-            // 
-            this.button_View.AutoEllipsis = true;
-            this.button_View.BackColor = System.Drawing.Color.Cornsilk;
-            this.button_View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_View.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button_View.FlatAppearance.BorderColor = System.Drawing.Color.Orange;
-            this.button_View.FlatAppearance.BorderSize = 0;
-            this.button_View.FlatAppearance.MouseDownBackColor = System.Drawing.Color.NavajoWhite;
-            this.button_View.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_View.Font = new System.Drawing.Font("Constantia", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_View.ForeColor = System.Drawing.Color.Orange;
-            this.button_View.Location = new System.Drawing.Point(4, 92);
-            this.button_View.Margin = new System.Windows.Forms.Padding(4);
-            this.button_View.Name = "button_View";
-            this.button_View.Size = new System.Drawing.Size(268, 80);
-            this.button_View.TabIndex = 0;
-            this.button_View.Text = "Menu";
-            this.button_View.UseVisualStyleBackColor = false;
-            this.button_View.Click += new System.EventHandler(this.button_View_Click);
             // 
             // pictureBox_Image
             // 
@@ -81,13 +60,27 @@
             this.pictureBox_Image.Location = new System.Drawing.Point(4, 4);
             this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(268, 80);
+            this.pictureBox_Image.Size = new System.Drawing.Size(268, 94);
             this.pictureBox_Image.TabIndex = 1;
             this.pictureBox_Image.TabStop = false;
+            this.pictureBox_Image.Click += new System.EventHandler(this.pictureBox_Image_Click);
+            // 
+            // label_Menu
+            // 
+            this.label_Menu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_Menu.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Menu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label_Menu.Location = new System.Drawing.Point(3, 102);
+            this.label_Menu.Name = "label_Menu";
+            this.label_Menu.Size = new System.Drawing.Size(270, 74);
+            this.label_Menu.TabIndex = 2;
+            this.label_Menu.Text = "Menu";
+            this.label_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Menu.Click += new System.EventHandler(this.label_Menu_Click);
             // 
             // UCMenuCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -107,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button button_View;
         private System.Windows.Forms.PictureBox pictureBox_Image;
+        private System.Windows.Forms.Label label_Menu;
     }
 }
