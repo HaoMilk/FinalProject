@@ -190,6 +190,7 @@ namespace FinalProject.Common.DAO
                         congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
                         congTy.IsDeleted = reader.GetBooleanValue(8);
                         congTy.UserId = reader.GetIntValue(9);
+                        congTy.WordFileUrl = reader.GetStringValue(10);
                         congTyList.Add(congTy);
                     }
 
@@ -226,6 +227,7 @@ namespace FinalProject.Common.DAO
                         congTy.UpdatedTime = reader.GetDateTimeValueNullable(7);
                         congTy.IsDeleted = reader.GetBooleanValue(8);
                         congTy.UserId = reader.GetIntValue(9);
+                        congTy.WordFileUrl = reader.GetStringValue(10);
 
                         return congTy;
                     }
@@ -246,9 +248,7 @@ namespace FinalProject.Common.DAO
             {
                 using (var connection = dbConnection.Connection)
                 {
-                    string query = @"UPDATE CongTy SET 
-                    WordURL = @URL,
-                    WHERE ID = @ID";
+                    string query = @"UPDATE CongTy SET WordURL = @URL WHERE ID = @ID";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@URL", url);
                     cmd.Parameters.AddWithValue("@ID",  ID);

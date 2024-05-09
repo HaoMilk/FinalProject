@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace FinalProject.Company.GUI.Thong_tin
             set
             {
                 _id = value;
-                _congTy = cty_BUS.GetById(_id);
+                //_congTy = cty_BUS.GetById(_id);
             }
         }
         
@@ -77,6 +78,11 @@ namespace FinalProject.Company.GUI.Thong_tin
 
         private void FThongTinCongTy_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
+
+        private void LoadData()
+        {
             _congTy = cty_BUS.GetById(Id);
             if (_congTy != null)
             {
@@ -86,6 +92,7 @@ namespace FinalProject.Company.GUI.Thong_tin
                 textBox_TenCTy.Text = _congTy.TenCongTy;
                 textBox_DiaChi.Text = _congTy.DiaChi;
                 textBox_CEO.Text = _congTy.CEO;
+                textBox_GiayPhep.Text = _congTy.WordFileUrl;
             }
         }
 
@@ -96,6 +103,36 @@ namespace FinalProject.Company.GUI.Thong_tin
 
         private void button_ThemGiayPhep_Click(object sender, EventArgs e)
         {
+            
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Word files (*.doc, *.docx) | *.doc; *.docx"; // Thay đổi Filter để chỉ cho phép tải lên tệp Word
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var uploadResult = WordHelper.UpLoadFile(openFileDialog.FileName, $"User_{LoggedUser.UserId}"); // Thay ImageHelper.UploadImage bằng WordFileHelper.UploadWordFile
+                if (uploadResult != null)
+                {
+                    string url = uploadResult.Url.ToString();
+                    int id = LoggedUser.CongTy.ID;
+                    int result = cty_BUS.AddFileWord(url, id);
+                    if (result > 0)
+                    {
+                        // Reload lại data
+                        LoadData();
+
+                        // Hiển thị thông báo và tải hình ảnh lên PictureBox nếu cần
+                        UCMessageBox.Show("Cập nhật tệp Word thành công !");
+                        // pictureBox_WordFile.Load(openFileDialog.FileName); // Tải hình ảnh nếu cần
+                    }
+                    else
+                    {
+                        UCMessageBox.Show("Có lỗi phát sinh khi cập nhật tệp Word !");
+                    }
+                }
+
+                Cursor.Current = Cursors.Default;
+            }
 
         }
     }
