@@ -19,7 +19,7 @@ namespace FinalProject.GUI.Candidate
     {
         private List<CongTy> _listCongTy = new List<CongTy>();
         private CongTyBUS _congTyBUS = new CongTyBUS();
-        private UCCtyCard[] ucCtyCards = new UCCtyCard[0];
+        private List<UCCtyCard> ucCtyCards = new List<UCCtyCard>();
 
         public FDanhSachCty()
         {
@@ -35,7 +35,7 @@ namespace FinalProject.GUI.Candidate
 
         private void LoadListCongTy()
         {
-            this.ucCtyCards = new UCCtyCard[_listCongTy.Count];
+            this.ucCtyCards = new List<UCCtyCard>();
 
             for (int i = 0; i < _listCongTy.Count; i++)
             {
@@ -44,11 +44,11 @@ namespace FinalProject.GUI.Candidate
                 ctyCard.CongTy = _listCongTy[i];
                 ctyCard.ViewClick += CtyCard_ViewClick;
 
-                this.ucCtyCards.Append(ctyCard);
+                this.ucCtyCards.Add(ctyCard);
             }
             flowLayoutPanel_DanhSach.Controls.Clear();
             flowLayoutPanel_DanhSach.SuspendLayout();
-            flowLayoutPanel_DanhSach.Controls.AddRange(this.ucCtyCards);
+            flowLayoutPanel_DanhSach.Controls.AddRange(this.ucCtyCards.ToArray());
             flowLayoutPanel_DanhSach.ResumeLayout();
  
             this.flowLayoutPanel_DanhSach.Text = "Số lượng công ty: " + _listCongTy.Count;

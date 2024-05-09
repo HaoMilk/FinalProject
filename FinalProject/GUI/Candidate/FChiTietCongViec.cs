@@ -86,17 +86,19 @@ namespace FinalProject.GUI.Candidate
             // fill data 
             if(congViec != null )
             {
-                textBox_DiaDiemLamViec.Text = congViec.DiaDiem;
-                textBox_MucLuong.Text = congViec.MucLuong.ToString();
-                textBox_ViTriCongViec.Text = congViec.ViTriTuyenDung;
-                textBox_TenCongTy.Text = congViec.TenCongTy.ToString();
+                pictureBox_Logo.LoadAsync("https://img.icons8.com/bubbles/100/company.png");
+                label_JobName.Text = congViec.Ten;
+                label_DiaDiem.Text = congViec.DiaDiem;
+                label_MucLuong.Text = congViec.MucLuong.ToString();
+                label_ViTriCV.Text = congViec.ViTriTuyenDung;
+                label_TenCongTy.Text = congViec.TenCongTy.ToString();
                 richTextBox_MoTa.Text = congViec.MoTa;
-                textBox_KinhNghiem.Text = congViec.KinhNghiem;
-                textBox_LienHe.Text = congViec.LienHe;
-                textBox_ThoiGianLamViec.Text = congViec.CreatedTime.ToShortDateString();
+                label_KinhNghiem.Text = congViec.KinhNghiem;
+                label_LienHe.Text = congViec.LienHe;
+                label_ThoigianLamViec.Text = congViec.CreatedTime.ToShortDateString();
                 richTextBox_QuyenLoi.Text = congViec.QuyenLoi;
-                textBox_Nganh.Text = congViec.Nganh;
-                textBox_SoLuong.Text = congViec.SoLuong.ToString() ;
+                label_Nganh.Text = congViec.Nganh;
+                label_SoLuong.Text = congViec.SoLuong.ToString() ;
                 richTextBox_YeuCau.Text = congViec.YeuCauUngVien;
                 dateTimePicker_NgayBatDau.Value = congViec.FromDate;
             }

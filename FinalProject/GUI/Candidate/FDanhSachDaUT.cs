@@ -36,13 +36,13 @@ namespace FinalProject.GUI.Candidate
             var ucJobCards = CreateJobCards();
             flowLayoutPanel_Data.Controls.Clear();
             flowLayoutPanel_Data.SuspendLayout();
-            flowLayoutPanel_Data.Controls.AddRange(ucJobCards);
+            flowLayoutPanel_Data.Controls.AddRange(ucJobCards.ToArray());
             flowLayoutPanel_Data.ResumeLayout();
         }
 
-        private UCJobCard[] CreateJobCards()
+        private List<UCJobCard> CreateJobCards()
         {
-            UCJobCard[] ucJobCards = new UCJobCard[listUngTuyen.Count];
+            var ucJobCards = new List<UCJobCard>();
 
             if (listUngTuyen.Count == 0)
             {
@@ -58,7 +58,7 @@ namespace FinalProject.GUI.Candidate
                 ucJobCard.ViewClick += UcJobCard_ViewClick;
                 //ucJobCard.ScaleSize(0.5f);
 
-                ucJobCards.Append(ucJobCard);
+                ucJobCards.Add(ucJobCard);
             }
             return ucJobCards;
         }

@@ -391,7 +391,13 @@
     <Compile Include="Common\DAO\CongViecDAO.cs" />
     <Compile Include="Common\Themes\BlueTheme.cs" />
     <Compile Include="Common\DAO\TinhDAO.cs" />
-    <Compile Include="GUI\Company\FDanhSachViecLam.cs">
+    <Compile Include="Company\GUI\FDanhSachUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FDanhSachUngTuyen.Designer.cs">
+      <DependentUpon>FDanhSachUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FDanhSachViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\Company\FDanhSachViecLam.Designer.cs">
@@ -619,7 +625,10 @@
     <EmbeddedResource Include="GUI\Company\FCreateJob.resx">
       <DependentUpon>FCreateJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Company\FDanhSachViecLam.resx">
+    <EmbeddedResource Include="Company\GUI\FDanhSachUngTuyen.resx">
+      <DependentUpon>FDanhSachUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FDanhSachViecLam.resx">
       <DependentUpon>FDanhSachViecLam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Company\FHoSoUT.resx">
@@ -774,6 +783,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\icons8-approve-48.png" />
+    <None Include="Resources\FPT.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
