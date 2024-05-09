@@ -132,5 +132,15 @@ namespace FinalProject.Candidate.GUI
         {
 
         }
+
+        private void ucCvCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ucCvCard1_CvDelete(object sender, EventArgs e)
+        {
+
+        }
     }
 }
