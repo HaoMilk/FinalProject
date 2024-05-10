@@ -69,6 +69,18 @@ namespace FinalProject.Candidate.GUI
                     {
                         ucJobCard.pictureBox_Logo.Image = Properties.Resources.FPT;
                     }
+                    else if(listCongViec[i].TenCongTy == "Utop")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.UTOP;
+                    }
+                    else if(listCongViec[i].TenCongTy == "Viet Travel")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.VietTravel;
+                    }
+                    else if (listCongViec[i].TenCongTy == "FPT Shop")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.FPTShop;
+                    }
                     ucJobCards.Add(ucJobCard);
                 }
             }
