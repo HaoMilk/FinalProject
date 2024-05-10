@@ -35,7 +35,7 @@ namespace FinalProject.Company.GUI
             listUngTuyen = ungTuyenBUS.Search(input);
             dataGridView_Data.DataSource = MappingData(listUngTuyen);
 
-            dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;   // Turn off autosize
+            dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   // Turn off autosize
             dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
             dataGridView_Data.AllowUserToOrderColumns = true;
         }
@@ -59,6 +59,20 @@ namespace FinalProject.Company.GUI
                 });
             }
             return result;
+        }
+
+        private void button_TimKiem_Click(object sender, EventArgs e)
+        {
+            var input = new UngTuyenGetAllInput() { 
+                IdCongTy = LoggedUser.CongTy.ID ,
+                TenUngVien = textBox_TenUngVien.Text.Trim(),
+            };
+            listUngTuyen = ungTuyenBUS.Search(input);
+            dataGridView_Data.DataSource = MappingData(listUngTuyen);
+
+            dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   // Turn off autosize
+            dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
+            dataGridView_Data.AllowUserToOrderColumns = true;
         }
     }
 }

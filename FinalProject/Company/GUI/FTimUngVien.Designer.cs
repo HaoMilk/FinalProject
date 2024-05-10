@@ -59,9 +59,9 @@
             this.groupBox_Name.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_Name.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox_Name.Location = new System.Drawing.Point(19, 91);
-            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_Name.Margin = new System.Windows.Forms.Padding(11);
             this.groupBox_Name.Name = "groupBox_Name";
-            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.groupBox_Name.Padding = new System.Windows.Forms.Padding(11);
             this.groupBox_Name.Size = new System.Drawing.Size(1042, 71);
             this.groupBox_Name.TabIndex = 16;
             this.groupBox_Name.TabStop = false;
@@ -80,6 +80,7 @@
             this.button_TimKiem.Size = new System.Drawing.Size(49, 32);
             this.button_TimKiem.TabIndex = 2;
             this.button_TimKiem.UseVisualStyleBackColor = true;
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
             // 
             // textBox_TenUngVien
             // 
@@ -112,7 +113,7 @@
             this.Controls.Add(this.dataGridView_Data);
             this.Controls.Add(this.groupBox_Name);
             this.Controls.Add(this.label_Name);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FTimUngVien";
             this.Padding = new System.Windows.Forms.Padding(19, 0, 19, 21);
             this.Text = "FTimUngVien";
