@@ -82,7 +82,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(182)))));
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(98)))), ((int)(((byte)(70)))));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.88F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.32F));
@@ -99,7 +99,7 @@
             // 
             // button_Luu
             // 
-            this.button_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(172)))), ((int)(((byte)(78)))));
+            this.button_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(82)))));
             this.button_Luu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_Luu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_Luu.Image = global::FinalProject.Properties.Resources.icons8_save_32;
@@ -114,7 +114,7 @@
             // 
             // button_Xoa
             // 
-            this.button_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(172)))), ((int)(((byte)(78)))));
+            this.button_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(182)))), ((int)(((byte)(82)))));
             this.button_Xoa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_Xoa.Image = global::FinalProject.Properties.Resources.icons8_delete_32;
             this.button_Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,24 +135,24 @@
             this.tableLayoutPanel2.Controls.Add(this.groupBox4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(562, 50);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(562, 68);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(477, 651);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(477, 633);
             this.tableLayoutPanel2.TabIndex = 23;
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox5.Controls.Add(this.richTextBox_YeuCauUV);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox5.Location = new System.Drawing.Point(3, 437);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox5.Location = new System.Drawing.Point(3, 425);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(471, 211);
+            this.groupBox5.Size = new System.Drawing.Size(471, 205);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Yêu cầu";
@@ -160,21 +160,21 @@
             // richTextBox_YeuCauUV
             // 
             this.richTextBox_YeuCauUV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox_YeuCauUV.Location = new System.Drawing.Point(3, 22);
+            this.richTextBox_YeuCauUV.Location = new System.Drawing.Point(3, 31);
             this.richTextBox_YeuCauUV.Name = "richTextBox_YeuCauUV";
-            this.richTextBox_YeuCauUV.Size = new System.Drawing.Size(465, 186);
+            this.richTextBox_YeuCauUV.Size = new System.Drawing.Size(465, 171);
             this.richTextBox_YeuCauUV.TabIndex = 1;
             this.richTextBox_YeuCauUV.Text = "";
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox4.Controls.Add(this.richTextBox_QuyenLoi);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox4.Location = new System.Drawing.Point(3, 220);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox4.Location = new System.Drawing.Point(3, 214);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(471, 211);
+            this.groupBox4.Size = new System.Drawing.Size(471, 205);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Quyền lợi";
@@ -182,21 +182,21 @@
             // richTextBox_QuyenLoi
             // 
             this.richTextBox_QuyenLoi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox_QuyenLoi.Location = new System.Drawing.Point(3, 22);
+            this.richTextBox_QuyenLoi.Location = new System.Drawing.Point(3, 31);
             this.richTextBox_QuyenLoi.Name = "richTextBox_QuyenLoi";
-            this.richTextBox_QuyenLoi.Size = new System.Drawing.Size(465, 186);
+            this.richTextBox_QuyenLoi.Size = new System.Drawing.Size(465, 171);
             this.richTextBox_QuyenLoi.TabIndex = 1;
             this.richTextBox_QuyenLoi.Text = "";
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox3.Controls.Add(this.richTextBox_MoTa);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(471, 211);
+            this.groupBox3.Size = new System.Drawing.Size(471, 205);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Mô tả";
@@ -205,9 +205,9 @@
             // 
             this.richTextBox_MoTa.BackColor = System.Drawing.Color.White;
             this.richTextBox_MoTa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox_MoTa.Location = new System.Drawing.Point(3, 22);
+            this.richTextBox_MoTa.Location = new System.Drawing.Point(3, 31);
             this.richTextBox_MoTa.Name = "richTextBox_MoTa";
-            this.richTextBox_MoTa.Size = new System.Drawing.Size(465, 186);
+            this.richTextBox_MoTa.Size = new System.Drawing.Size(465, 171);
             this.richTextBox_MoTa.TabIndex = 1;
             this.richTextBox_MoTa.Text = "";
             // 
@@ -227,7 +227,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 50);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 68);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
@@ -242,20 +242,20 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090908F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 651);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 633);
             this.tableLayoutPanel1.TabIndex = 24;
             // 
             // groupBox14
             // 
-            this.groupBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox14.Controls.Add(this.textBox_LienHe);
             this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox14.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox14.Location = new System.Drawing.Point(5, 594);
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox14.Location = new System.Drawing.Point(5, 574);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox14.Size = new System.Drawing.Size(525, 53);
+            this.groupBox14.Size = new System.Drawing.Size(525, 55);
             this.groupBox14.TabIndex = 13;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Liên hệ";
@@ -263,22 +263,22 @@
             // textBox_LienHe
             // 
             this.textBox_LienHe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_LienHe.Location = new System.Drawing.Point(5, 23);
+            this.textBox_LienHe.Location = new System.Drawing.Point(5, 32);
             this.textBox_LienHe.Name = "textBox_LienHe";
-            this.textBox_LienHe.Size = new System.Drawing.Size(515, 26);
+            this.textBox_LienHe.Size = new System.Drawing.Size(515, 35);
             this.textBox_LienHe.TabIndex = 2;
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox7.Controls.Add(this.textBox_SoLuong);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox7.Location = new System.Drawing.Point(5, 535);
+            this.groupBox7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox7.Location = new System.Drawing.Point(5, 517);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox7.Size = new System.Drawing.Size(525, 51);
+            this.groupBox7.Size = new System.Drawing.Size(525, 49);
             this.groupBox7.TabIndex = 13;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Số lượng";
@@ -286,22 +286,22 @@
             // textBox_SoLuong
             // 
             this.textBox_SoLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_SoLuong.Location = new System.Drawing.Point(5, 23);
+            this.textBox_SoLuong.Location = new System.Drawing.Point(5, 32);
             this.textBox_SoLuong.Name = "textBox_SoLuong";
-            this.textBox_SoLuong.Size = new System.Drawing.Size(515, 26);
+            this.textBox_SoLuong.Size = new System.Drawing.Size(515, 35);
             this.textBox_SoLuong.TabIndex = 2;
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox8.Controls.Add(this.comboBox_DiaDiem);
             this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox8.Location = new System.Drawing.Point(5, 476);
+            this.groupBox8.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox8.Location = new System.Drawing.Point(5, 460);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox8.Size = new System.Drawing.Size(525, 51);
+            this.groupBox8.Size = new System.Drawing.Size(525, 49);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Địa điểm";
@@ -310,22 +310,22 @@
             // 
             this.comboBox_DiaDiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_DiaDiem.FormattingEnabled = true;
-            this.comboBox_DiaDiem.Location = new System.Drawing.Point(5, 23);
+            this.comboBox_DiaDiem.Location = new System.Drawing.Point(5, 32);
             this.comboBox_DiaDiem.Name = "comboBox_DiaDiem";
-            this.comboBox_DiaDiem.Size = new System.Drawing.Size(515, 27);
+            this.comboBox_DiaDiem.Size = new System.Drawing.Size(515, 34);
             this.comboBox_DiaDiem.TabIndex = 2;
             // 
             // groupBox9
             // 
-            this.groupBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox9.Controls.Add(this.dateTimePicker_FromDate);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox9.Location = new System.Drawing.Point(5, 417);
+            this.groupBox9.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox9.Location = new System.Drawing.Point(5, 403);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox9.Size = new System.Drawing.Size(525, 51);
+            this.groupBox9.Size = new System.Drawing.Size(525, 49);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Ngày bắt đầu";
@@ -333,22 +333,22 @@
             // dateTimePicker_FromDate
             // 
             this.dateTimePicker_FromDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker_FromDate.Location = new System.Drawing.Point(5, 23);
+            this.dateTimePicker_FromDate.Location = new System.Drawing.Point(5, 32);
             this.dateTimePicker_FromDate.Name = "dateTimePicker_FromDate";
-            this.dateTimePicker_FromDate.Size = new System.Drawing.Size(515, 26);
+            this.dateTimePicker_FromDate.Size = new System.Drawing.Size(515, 35);
             this.dateTimePicker_FromDate.TabIndex = 1;
             // 
             // groupBox10
             // 
-            this.groupBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox10.Controls.Add(this.textBox_TrinhDoHocVan);
             this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox10.Location = new System.Drawing.Point(5, 358);
+            this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox10.Location = new System.Drawing.Point(5, 346);
             this.groupBox10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox10.Size = new System.Drawing.Size(525, 51);
+            this.groupBox10.Size = new System.Drawing.Size(525, 49);
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Trình độ học vấn";
@@ -356,22 +356,22 @@
             // textBox_TrinhDoHocVan
             // 
             this.textBox_TrinhDoHocVan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_TrinhDoHocVan.Location = new System.Drawing.Point(5, 23);
+            this.textBox_TrinhDoHocVan.Location = new System.Drawing.Point(5, 32);
             this.textBox_TrinhDoHocVan.Name = "textBox_TrinhDoHocVan";
-            this.textBox_TrinhDoHocVan.Size = new System.Drawing.Size(515, 26);
+            this.textBox_TrinhDoHocVan.Size = new System.Drawing.Size(515, 35);
             this.textBox_TrinhDoHocVan.TabIndex = 2;
             // 
             // groupBox11
             // 
-            this.groupBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox11.Controls.Add(this.comboBox_KinhNghiem);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox11.Location = new System.Drawing.Point(5, 299);
+            this.groupBox11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox11.Location = new System.Drawing.Point(5, 289);
             this.groupBox11.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox11.Size = new System.Drawing.Size(525, 51);
+            this.groupBox11.Size = new System.Drawing.Size(525, 49);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Kinh Nghiệm";
@@ -380,22 +380,22 @@
             // 
             this.comboBox_KinhNghiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_KinhNghiem.FormattingEnabled = true;
-            this.comboBox_KinhNghiem.Location = new System.Drawing.Point(5, 23);
+            this.comboBox_KinhNghiem.Location = new System.Drawing.Point(5, 32);
             this.comboBox_KinhNghiem.Name = "comboBox_KinhNghiem";
-            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(515, 27);
+            this.comboBox_KinhNghiem.Size = new System.Drawing.Size(515, 34);
             this.comboBox_KinhNghiem.TabIndex = 2;
             // 
             // groupBox12
             // 
-            this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox12.Controls.Add(this.comboBox_GioiTinh);
             this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox12.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox12.Location = new System.Drawing.Point(5, 240);
+            this.groupBox12.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox12.Location = new System.Drawing.Point(5, 232);
             this.groupBox12.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox12.Size = new System.Drawing.Size(525, 51);
+            this.groupBox12.Size = new System.Drawing.Size(525, 49);
             this.groupBox12.TabIndex = 1;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Giới tính";
@@ -409,22 +409,22 @@
             "Nam",
             "Nữ",
             "Không yêu cầu"});
-            this.comboBox_GioiTinh.Location = new System.Drawing.Point(5, 23);
+            this.comboBox_GioiTinh.Location = new System.Drawing.Point(5, 32);
             this.comboBox_GioiTinh.Name = "comboBox_GioiTinh";
-            this.comboBox_GioiTinh.Size = new System.Drawing.Size(515, 27);
+            this.comboBox_GioiTinh.Size = new System.Drawing.Size(515, 34);
             this.comboBox_GioiTinh.TabIndex = 1;
             // 
             // groupBox13
             // 
-            this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox13.Controls.Add(this.textBox_MucLuong);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox13.Location = new System.Drawing.Point(5, 181);
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox13.Location = new System.Drawing.Point(5, 175);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox13.Size = new System.Drawing.Size(525, 51);
+            this.groupBox13.Size = new System.Drawing.Size(525, 49);
             this.groupBox13.TabIndex = 1;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Mức lương";
@@ -432,22 +432,22 @@
             // textBox_MucLuong
             // 
             this.textBox_MucLuong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_MucLuong.Location = new System.Drawing.Point(5, 23);
+            this.textBox_MucLuong.Location = new System.Drawing.Point(5, 32);
             this.textBox_MucLuong.Name = "textBox_MucLuong";
-            this.textBox_MucLuong.Size = new System.Drawing.Size(515, 26);
+            this.textBox_MucLuong.Size = new System.Drawing.Size(515, 35);
             this.textBox_MucLuong.TabIndex = 2;
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox6.Controls.Add(this.textBox_ViTriCongViec);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox6.Location = new System.Drawing.Point(5, 122);
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox6.Location = new System.Drawing.Point(5, 118);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox6.Size = new System.Drawing.Size(525, 51);
+            this.groupBox6.Size = new System.Drawing.Size(525, 49);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Vị trí công việc";
@@ -455,22 +455,22 @@
             // textBox_ViTriCongViec
             // 
             this.textBox_ViTriCongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_ViTriCongViec.Location = new System.Drawing.Point(5, 23);
+            this.textBox_ViTriCongViec.Location = new System.Drawing.Point(5, 32);
             this.textBox_ViTriCongViec.Name = "textBox_ViTriCongViec";
-            this.textBox_ViTriCongViec.Size = new System.Drawing.Size(515, 26);
+            this.textBox_ViTriCongViec.Size = new System.Drawing.Size(515, 35);
             this.textBox_ViTriCongViec.TabIndex = 2;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox1.Controls.Add(this.comboBox_NgheNghiep);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(5, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(525, 51);
+            this.groupBox1.Size = new System.Drawing.Size(525, 49);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tên công việc";
@@ -479,22 +479,22 @@
             // 
             this.comboBox_NgheNghiep.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox_NgheNghiep.FormattingEnabled = true;
-            this.comboBox_NgheNghiep.Location = new System.Drawing.Point(5, 23);
+            this.comboBox_NgheNghiep.Location = new System.Drawing.Point(5, 32);
             this.comboBox_NgheNghiep.Name = "comboBox_NgheNghiep";
-            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(515, 27);
+            this.comboBox_NgheNghiep.Size = new System.Drawing.Size(515, 34);
             this.comboBox_NgheNghiep.TabIndex = 3;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(152)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(111)))), ((int)(((byte)(71)))));
             this.groupBox2.Controls.Add(this.textBox_Nganh);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.groupBox2.Location = new System.Drawing.Point(5, 63);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox2.Location = new System.Drawing.Point(5, 61);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox2.Size = new System.Drawing.Size(525, 51);
+            this.groupBox2.Size = new System.Drawing.Size(525, 49);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ngành";
@@ -502,16 +502,16 @@
             // textBox_Nganh
             // 
             this.textBox_Nganh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox_Nganh.Location = new System.Drawing.Point(5, 23);
+            this.textBox_Nganh.Location = new System.Drawing.Point(5, 32);
             this.textBox_Nganh.Name = "textBox_Nganh";
-            this.textBox_Nganh.Size = new System.Drawing.Size(515, 26);
+            this.textBox_Nganh.Size = new System.Drawing.Size(515, 35);
             this.textBox_Nganh.TabIndex = 3;
             // 
             // FCreateJob
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(98)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(1066, 788);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
