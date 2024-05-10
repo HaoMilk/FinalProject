@@ -130,7 +130,7 @@ namespace FinalProject.Database.Entities
             }
             catch
             {
-                return string.Empty;
+                return null;
             }
         }
     }

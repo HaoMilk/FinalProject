@@ -92,7 +92,8 @@
             "Hồ sơ đã duyệt",
             "Hồ sơ bị loại",
             "Hồ sơ đã tuyển dụng",
-            "Hủy"});
+            "Hủy",
+            "Tất cả"});
             this.comboBox_TrangThai.Location = new System.Drawing.Point(11, 28);
             this.comboBox_TrangThai.Name = "comboBox_TrangThai";
             this.comboBox_TrangThai.Size = new System.Drawing.Size(308, 23);
