@@ -277,6 +277,7 @@
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPOutput.cs" />
+    <Compile Include="Common\DTO\UngVienUngTuyenDTO.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\GUI\FDangKy.cs">
       <SubType>Form</SubType>

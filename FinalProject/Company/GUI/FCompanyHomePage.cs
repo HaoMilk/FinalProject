@@ -65,8 +65,6 @@ namespace FinalProject.Company
 
         }
 
-
-
         private void ucMenuCard_DSViecLam_MenuClick(object sender, EventArgs e)
         {
             this.Hide();
@@ -75,9 +73,12 @@ namespace FinalProject.Company
             this.Show();
         }
 
-        private void ucMenuCard_LichSuCongViec_MenuClick(object sender, EventArgs e)
+        private void ucMenuCard_DSUngVien_MenuClick(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FTimUngVien fTimUngVien = new FTimUngVien();
+            fTimUngVien.ShowDialog();
+            this.Show();
         }
     }
 }
