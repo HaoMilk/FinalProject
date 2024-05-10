@@ -29,7 +29,6 @@ namespace FinalProject.Company.GUI.Thong_tin
             set
             {
                 _id = value;
-                //_congTy = cty_BUS.GetById(_id);
             }
         }
         
@@ -46,28 +45,32 @@ namespace FinalProject.Company.GUI.Thong_tin
             var Ten = textBox_TenCTy.Text;
             var DiaChi = textBox_DiaChi.Text;
             var TenCEO = textBox_CEO.Text;
+            var url = textBox_GiayPhep.Text;
+            var result = 0;
             if (this.Id > 0)
             {
-                cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST);
-                UCMessageBox.Show("Cập nhật thành công");
+                result =cty_BUS.Update(ID, Email, Ten, DiaChi, TenCEO, MST, url);
+
             }
             else
             {
-                cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST);
-                UCMessageBox.Show("Thêm thành công");
+                result = cty_BUS.Add(ID, Email, Ten, DiaChi, TenCEO, MST, url);
             }
+            if (result > 0)
+            {
+                UCMessageBox.Show("Cập nhật thành công");
+            }
+            else if (result == -1)
+            {
+                UCMessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+            }
+            else
+            {
+                UCMessageBox.Show("Lưu thất bại");
+            }
+
         }
 
-        private void button_CapNhat_Click(object sender, EventArgs e)
-        {
-            var ID = int.Parse(textBox_ID.Text);
-            var Email = textBox_Email.Text;
-            var MST = textBox_MST.Text;
-            var Ten = textBox_TenCTy.Text;
-            var DiaChi = textBox_DiaChi.Text;
-            var TenCEO = textBox_CEO.Text;
-
-        }
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
