@@ -64,7 +64,7 @@ namespace FinalProject.Common.DAO
             }
         }
 
-        public int Edit(CongTy Cty)
+        public int Update(CongTy Cty)
         {
             try
             {
