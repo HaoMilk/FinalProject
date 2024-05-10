@@ -277,6 +277,7 @@
     <Compile Include="Common\DTO\CongViecGetAllInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPInput.cs" />
     <Compile Include="Common\DTO\SendEmailBySMTPOutput.cs" />
+    <Compile Include="Common\DTO\UngVienUngTuyenDTO.cs" />
     <Compile Include="Common\DTO\UserGetAllInput.cs" />
     <Compile Include="Common\GUI\FDangKy.cs">
       <SubType>Form</SubType>
@@ -390,6 +391,12 @@
     </Compile>
     <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Company\GUI\FTimUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FTimUngVien.Designer.cs">
+      <DependentUpon>FTimUngVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
@@ -576,6 +583,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FTimUngVien.resx">
+      <DependentUpon>FTimUngVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>

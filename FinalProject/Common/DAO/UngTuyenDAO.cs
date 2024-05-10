@@ -81,7 +81,11 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND ungTuyen.TrangThai = N'{input.TrangThai}' ";
                 }
-                if(input.IdCongTy!=0)
+                if (!string.IsNullOrWhiteSpace(input.TenUngVien))
+                {
+                    query += $" AND UngVien.HoTen LIKE N'%{input.TenUngVien}%' ";
+                }
+                if (input.IdCongTy!=0)
                 {
                     query += $"AND CongTy.ID = '{input.IdCongTy}'";
                 }
