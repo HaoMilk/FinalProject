@@ -74,5 +74,29 @@ namespace FinalProject.Company.GUI
             dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
             dataGridView_Data.AllowUserToOrderColumns = true;
         }
+
+        private void dataGridView_Data_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            if (e.RowIndex >= listUngTuyen.Count) return;
+            var row = dataGridView_Data.Rows[e.RowIndex];
+            // convert row to UngVienUngTuyenDTO
+            var item = new UngVienUngTuyenDTO()
+            {
+                Id = (int)row.Cells["Id"].Value,
+                TenCongViec = (string)row.Cells["TenCongViec"].Value,
+                TenCongTy = (string)row.Cells["TenCongTy"].Value,
+                TenUngVien = (string)row.Cells["TenUngVien"].Value,
+                TenCv = (string)row.Cells["TenCv"].Value,
+                LinkCv = (string)row.Cells["LinkCv"].Value,
+                TrangThai = (string)row.Cells["TrangThai"].Value,
+                MoTa = (string)row.Cells["MoTa"].Value
+            };
+            FViewCV fViewCV = new FViewCV();
+            fViewCV.IdCV = listUngTuyen[e.RowIndex].CvId;
+            fViewCV.IdUT = item.Id;
+            fViewCV.IdUV = listUngTuyen[e.RowIndex].UngVienId;
+            fViewCV.ShowDialog();
+        }
     }
 }

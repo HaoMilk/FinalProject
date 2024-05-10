@@ -103,6 +103,7 @@
             this.dataGridView_Data.Name = "dataGridView_Data";
             this.dataGridView_Data.Size = new System.Drawing.Size(1042, 603);
             this.dataGridView_Data.TabIndex = 17;
+            this.dataGridView_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Data_CellClick);
             // 
             // FTimUngVien
             // 

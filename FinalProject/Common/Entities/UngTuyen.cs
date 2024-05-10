@@ -124,7 +124,14 @@ namespace FinalProject.Database.Entities
 
         public static string GetValue(string key)
         {
-            return Dict[key];
+            try
+            {
+                return Dict[key];
+            }
+            catch
+            {
+                return string.Empty;
+            }
         }
     }
 }
