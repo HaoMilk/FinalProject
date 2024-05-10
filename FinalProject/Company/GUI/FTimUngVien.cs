@@ -34,6 +34,10 @@ namespace FinalProject.Company.GUI
             var input = new UngTuyenGetAllInput() { IdCongTy = LoggedUser.CongTy.ID };
             listUngTuyen = ungTuyenBUS.Search(input);
             dataGridView_Data.DataSource = MappingData(listUngTuyen);
+
+            dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;   // Turn off autosize
+            dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
+            dataGridView_Data.AllowUserToOrderColumns = true;
         }
 
         private List<UngVienUngTuyenDTO> MappingData(List<UngTuyenDTO> sourceData)
@@ -48,7 +52,6 @@ namespace FinalProject.Company.GUI
                     TenCongViec = item.TenCongViec,
                     TenCongTy = item.TenCongTy,
                     TenUngVien = item.TenUngVien,
-                    CvId = item.CvId,
                     TenCv = cv.Ten,
                     LinkCv = cv.Link,
                     TrangThai = item.TrangThai,
