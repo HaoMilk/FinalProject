@@ -85,7 +85,6 @@ namespace FinalProject.UC
                     this.label_TenCty.Text = congViec.TenCongTy;
                     this.label_DiaDiem.Text = congViec.DiaDiem;
                     this.label_MucLuong.Text = $"{congViec.MucLuong} đ";
-                    this.pictureBox_Logo.LoadAsync("https://img.icons8.com/bubbles/100/company.png");
                 }
             }
         }

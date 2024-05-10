@@ -153,5 +153,13 @@ namespace FinalProject.Company.GUI.Thong_tin
             }
 
         }
+
+        private void buttonThemAVT_Click(object sender, EventArgs e)
+        {
+            if(textBox_TenCTy.Text == "FPT Software")
+            {
+                pictureBox_AVT.Image = Properties.Resources.FPT;
+            }
+        }
     }
 }
