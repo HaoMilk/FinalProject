@@ -38,6 +38,8 @@ namespace FinalProject.Company.GUI
             dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   // Turn off autosize
             dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
             dataGridView_Data.AllowUserToOrderColumns = true;
+
+            ChangeVisualData(dataGridView_Data);
         }
 
         private List<UngVienUngTuyenDTO> MappingData(List<UngTuyenDTO> sourceData)
@@ -73,6 +75,8 @@ namespace FinalProject.Company.GUI
             dataGridView_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   // Turn off autosize
             dataGridView_Data.AllowUserToResizeRows = true;                                 // Turn on letting user size columns
             dataGridView_Data.AllowUserToOrderColumns = true;
+
+            ChangeVisualData(dataGridView_Data);
         }
 
         private void dataGridView_Data_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,6 +101,43 @@ namespace FinalProject.Company.GUI
             fViewCV.IdUT = item.Id;
             fViewCV.IdUV = listUngTuyen[e.RowIndex].UngVienId;
             fViewCV.ShowDialog();
+        }
+
+        private void ChangeVisualData(DataGridView dataGridView)
+        {
+            try
+            {
+                // Change header background color for each column
+                dataGridView_Data.EnableHeadersVisualStyles = false;
+
+                dataGridView_Data.Columns["Id"].Visible = false;
+
+                dataGridView_Data.Columns["TenCongViec"].DefaultCellStyle.BackColor = Color.LightBlue;
+                dataGridView_Data.Columns["TenCongViec"].HeaderCell.Style.BackColor = Color.LightBlue;
+
+                dataGridView_Data.Columns["TenCongTy"].DefaultCellStyle.BackColor = Color.LightCoral;
+                dataGridView_Data.Columns["TenCongTy"].HeaderCell.Style.BackColor = Color.LightCoral;
+
+                dataGridView_Data.Columns["TenUngVien"].DefaultCellStyle.BackColor = Color.LightCyan;
+                dataGridView_Data.Columns["TenUngVien"].HeaderCell.Style.BackColor = Color.LightCyan;
+
+                dataGridView_Data.Columns["TenCv"].DefaultCellStyle.BackColor = Color.LightGoldenrodYellow;
+                dataGridView_Data.Columns["TenCv"].HeaderCell.Style.BackColor = Color.LightGoldenrodYellow;
+
+                dataGridView_Data.Columns["LinkCv"].DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                dataGridView_Data.Columns["LinkCv"].HeaderCell.Style.BackColor = Color.LightSkyBlue;
+
+                dataGridView_Data.Columns["TrangThai"].DefaultCellStyle.BackColor = Color.LightYellow;
+                dataGridView_Data.Columns["TrangThai"].HeaderCell.Style.BackColor = Color.LightYellow;
+
+                dataGridView_Data.Columns["MoTa"].DefaultCellStyle.BackColor = Color.LightGreen;
+                dataGridView_Data.Columns["MoTa"].HeaderCell.Style.BackColor = Color.LightGreen;
+               
+            }
+            catch (Exception ex)
+            {
+                
+            }
         }
     }
 }
