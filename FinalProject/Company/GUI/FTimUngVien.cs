@@ -1,4 +1,7 @@
-﻿using FinalProject.Common.BUS;
+﻿using FinalProject.Common;
+using FinalProject.Common.BUS;
+using FinalProject.Common.DTO;
+using FinalProject.Database.DTO;
 using FinalProject.Database.Entities;
 using FinalProject.UC;
 using System;
@@ -16,8 +19,11 @@ namespace FinalProject.Company.GUI
 {
     public partial class FTimUngVien : UCForm
     {
+        private UngTuyenBUS ungTuyenBUS = new UngTuyenBUS();
+        private List<UngTuyenDTO> listUngTuyen = new List<UngTuyenDTO>();
         private CvBUS cvBUS = new CvBUS();
         private List<CV> listCV = new List<CV>();
+
         public FTimUngVien()
         {
             InitializeComponent();
@@ -25,46 +31,31 @@ namespace FinalProject.Company.GUI
 
         private void FTimUngVien_Load(object sender, EventArgs e)
         {
-            LoadCvList();
+            var input = new UngTuyenGetAllInput() { IdCongTy = LoggedUser.CongTy.ID };
+            listUngTuyen = ungTuyenBUS.Search(input);
+            dataGridView_Data.DataSource = MappingData(listUngTuyen);
         }
-        private void LoadCvList()
+
+        private List<UngVienUngTuyenDTO> MappingData(List<UngTuyenDTO> sourceData)
         {
-
-            var quantity = cvBUS.Count();
-            var ucJobCards = CreateCvList(quantity);
-            flowLayoutPanel_Data.Controls.Clear();
-
-            foreach (var ucJobCard in ucJobCards)
+            var result = new List<UngVienUngTuyenDTO>();
+            foreach (var item in sourceData)
             {
-                flowLayoutPanel_Data.Controls.Add(ucJobCard);
+                var cv = cvBUS.GetById(item.CvId);
+                result.Add(new UngVienUngTuyenDTO()
+                {
+                    Id = item.Id,
+                    TenCongViec = item.TenCongViec,
+                    TenCongTy = item.TenCongTy,
+                    TenUngVien = item.TenUngVien,
+                    CvId = item.CvId,
+                    TenCv = cv.Ten,
+                    LinkCv = cv.Link,
+                    TrangThai = item.TrangThai,
+                    MoTa = item.MoTa
+                });
             }
-            //this.flowLayoutPanel_Data.Text = "Số lượng việc làm đã ứng tuyển: " + ucJobCards.Count;
+            return result;
         }
-
-        private List<UCCvCard> CreateCvList(int quantity)
-        {
-            List<UCCvCard> ucCvCards = new List<UCCvCard>();
-
-            if (listCV.Count == 0)
-            {
-                return ucCvCards;
-            }
-
-            for (int i = 0; i < listCV.Count; i++)
-            {
-                UCCvCard ucCvCard = new UCCvCard();
-                ucCvCard.Id = listCV[i].Id;
-                ucCvCard.CvName = listCV[i].Ten;
-                ucCvCard.ViTriUngTuyen = listCV[i].ViTriUngTuyen;
-                ucCvCard.LastUpdatedTime = listCV[i].UpdatedTime ?? DateTime.Now;
-/*                ucCvCard.CvClick += button_View_Click;
-                ucCvCard.CvDelete += button_Xoa_Click;*/
-                //ucCvCard.ScaleSize(0.5f);
-
-                ucCvCards.Add(ucCvCard);
-            }
-            return ucCvCards;
-        }
-
     }
 }
