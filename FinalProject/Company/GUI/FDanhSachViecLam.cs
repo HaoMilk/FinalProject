@@ -64,10 +64,14 @@ namespace FinalProject.Company.GUI
                     UCJobCard uCViewJob = new UCJobCard();
                     uCViewJob.Id = listCongViec[i].Id;
                     uCViewJob.CongViec = listCongViec[i];
-                    // Gán event UCViewJob_ViewClick cho EventHandler ViewClick
                     uCViewJob.ViewClick += UCViewJob_ViewClick;
-
+                    if (listCongViec[i].TenCongTy == "FPT Software")
+                    {
+                        uCViewJob.pictureBox_Logo.Image = Properties.Resources.FPT;
+                    }
+                    
                     uCViewJobs.Add(uCViewJob);
+
                 }
             }
 
