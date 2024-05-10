@@ -43,7 +43,22 @@ namespace FinalProject.Company.GUI
                     uCViewJob.CongViec = listCongViec[i];
                     // Gán event UCViewJob_ViewClick cho EventHandler ViewClick
                     uCViewJob.ViewClick += UCViewJob_ViewClick;
-
+                    if (listCongViec[i].TenCongTy == "FPT Software")
+                    {
+                        uCViewJob.pictureBox_Logo.Image = Properties.Resources.FPT;
+                    }
+                    else if (listCongViec[i].TenCongTy == "Utop")
+                    {
+                        uCViewJob.pictureBox_Logo.Image = Properties.Resources.UTOP;
+                    }
+                    else if (listCongViec[i].TenCongTy == "Viet Travel")
+                    {
+                        uCViewJob.pictureBox_Logo.Image = Properties.Resources.VietTravel;
+                    }
+                    else if (listCongViec[i].TenCongTy == "FPT Shop")
+                    {
+                        uCViewJob.pictureBox_Logo.Image = Properties.Resources.FPTShop;
+                    }
                     uCViewJobs.Add(uCViewJob);
                 }
             }

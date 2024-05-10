@@ -717,6 +717,7 @@
     <None Include="Resources\icons8-remove-48.png" />
     <None Include="Resources\dashboard.png" />
     <None Include="Resources\business.png" />
+    <None Include="Resources\BOSCH.png" />
     <Content Include="Resources\email-template-1.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

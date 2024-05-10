@@ -43,7 +43,26 @@ namespace FinalProject.Candidate.GUI
                 ctyCard.Id = _listCongTy[i].ID;
                 ctyCard.CongTy = _listCongTy[i];
                 ctyCard.ViewClick += CtyCard_ViewClick;
-
+                if (_listCongTy[i].TenCongTy == "FPT Software")
+                {
+                    ctyCard.label_Name.Image = Properties.Resources.FPT;
+                }
+                else if (_listCongTy[i].TenCongTy == "Utop")
+                {
+                    ctyCard.label_Name.Image = Properties.Resources.UTOP;
+                }
+                else if (_listCongTy[i].TenCongTy == "Viet Travel")
+                {
+                    ctyCard.label_Name.Image = Properties.Resources.VietTravel;
+                }
+                else if (_listCongTy[i].TenCongTy == "FPT Shop")
+                {
+                    ctyCard.label_Name.Image = Properties.Resources.FPTShop;
+                }
+                else if (_listCongTy[i].TenCongTy == "BOSCH")
+                {
+                    ctyCard.label_Name.Image = Properties.Resources.BOSCH;
+                }
                 this.ucCtyCards.Add(ctyCard);
             }
             flowLayoutPanel_DanhSach.Controls.Clear();
