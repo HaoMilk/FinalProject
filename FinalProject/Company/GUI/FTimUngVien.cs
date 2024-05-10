@@ -47,18 +47,23 @@ namespace FinalProject.Company.GUI
             var result = new List<UngVienUngTuyenDTO>();
             foreach (var item in sourceData)
             {
-                var cv = cvBUS.GetById(item.CvId);
-                result.Add(new UngVienUngTuyenDTO()
+                //var cv = cvBUS.GetById(item.CvId);
+                var data = new UngVienUngTuyenDTO()
                 {
                     Id = item.Id,
                     TenCongViec = item.TenCongViec,
                     TenCongTy = item.TenCongTy,
                     TenUngVien = item.TenUngVien,
-                    TenCv = cv.Ten,
-                    LinkCv = cv.Link,
+                    TenCv = item.TenCv,
+                    LinkCv = item.LinkCv,
                     TrangThai = item.TrangThai,
                     MoTa = item.MoTa
-                });
+                };
+                if(result.Any(x => x.TenUngVien == item.TenUngVien))
+                {
+                    continue;
+                }
+                result.Add(data);
             }
             return result;
         }
@@ -96,11 +101,15 @@ namespace FinalProject.Company.GUI
                 TrangThai = (string)row.Cells["TrangThai"].Value,
                 MoTa = (string)row.Cells["MoTa"].Value
             };
-            FViewCV fViewCV = new FViewCV();
-            fViewCV.IdCV = listUngTuyen[e.RowIndex].CvId;
-            fViewCV.IdUT = item.Id;
-            fViewCV.IdUV = listUngTuyen[e.RowIndex].UngVienId;
-            fViewCV.ShowDialog();
+            //FViewCV fViewCV = new FViewCV();
+            //fViewCV.IdCV = listUngTuyen[e.RowIndex].CvId;
+            //fViewCV.IdUT = item.Id;
+            //fViewCV.IdUV = listUngTuyen[e.RowIndex].UngVienId;
+            //fViewCV.ShowDialog();
+
+            FDanhSachUngTuyen fDanhSachUngTuyen = new FDanhSachUngTuyen();
+            fDanhSachUngTuyen.UngVienId = listUngTuyen[e.RowIndex].UngVienId;
+            fDanhSachUngTuyen.ShowDialog();
         }
 
         private void ChangeVisualData(DataGridView dataGridView)

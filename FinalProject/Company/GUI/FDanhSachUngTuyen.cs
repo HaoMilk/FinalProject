@@ -29,6 +29,7 @@ namespace FinalProject.Company.GUI
                 idCongViec = value;
             }
         }
+        public int? UngVienId { get; set; }
         public FDanhSachUngTuyen()
         {
             InitializeComponent();
@@ -42,6 +43,10 @@ namespace FinalProject.Company.GUI
             input.IdCongTy = LoggedUser.CongTy.ID;
             input.IdCongViec = IDCongViec;
             input.TrangThai = TrangThaiUngTuyen.GetKey(comboBox_TrangThai.Text);
+            if (UngVienId != null)
+            {
+                input.UngVienId = UngVienId.Value;
+            }
             listUngTuyen = ungTuyenBUS.Search(input);
             for (int i = 0; i < listUngTuyen.Count; i++)
             {

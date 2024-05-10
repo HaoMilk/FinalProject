@@ -77,6 +77,10 @@ namespace FinalProject.Common.DAO
                 {
                     query += $" AND ungTuyen.Id = {input.Id}";
                 }
+                if (input.UngVienId != 0)
+                {
+                    query += $" AND UngVien.Id = {input.UngVienId}";
+                }
                 if (!string.IsNullOrWhiteSpace(input.TrangThai))
                 {
                     query += $" AND ungTuyen.TrangThai = N'{input.TrangThai}' ";
