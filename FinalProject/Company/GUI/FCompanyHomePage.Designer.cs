@@ -33,6 +33,7 @@
             this.ucMenuCard_TaoViecLam = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DSViecLam = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_HSChuaDuyet = new FinalProject.UC.UCMenuCard();
+            this.ucMenuCard_DSUngVien = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_ThongTin = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DoiMatKhau = new FinalProject.UC.UCMenuCard();
             this.ucMenuCard_DangXuat = new FinalProject.UC.UCMenuCard();
@@ -48,7 +49,7 @@
             this.pictureBox_Image.Location = new System.Drawing.Point(27, 50);
             this.pictureBox_Image.Margin = new System.Windows.Forms.Padding(5);
             this.pictureBox_Image.Name = "pictureBox_Image";
-            this.pictureBox_Image.Size = new System.Drawing.Size(769, 462);
+            this.pictureBox_Image.Size = new System.Drawing.Size(1012, 448);
             this.pictureBox_Image.TabIndex = 7;
             this.pictureBox_Image.TabStop = false;
             // 
@@ -60,15 +61,16 @@
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_TaoViecLam);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DSViecLam);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_HSChuaDuyet);
+            this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DSUngVien);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_ThongTin);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DoiMatKhau);
             this.flowLayoutPanel1.Controls.Add(this.ucMenuCard_DangXuat);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Constantia", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 78);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(27, 50);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(14, 13, 14, 13);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(769, 434);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1012, 448);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // ucMenuCard_TaoViecLam
@@ -130,6 +132,26 @@
             this.ucMenuCard_HSChuaDuyet.Size = new System.Drawing.Size(220, 180);
             this.ucMenuCard_HSChuaDuyet.TabIndex = 3;
             this.ucMenuCard_HSChuaDuyet.MenuClick += new System.EventHandler(this.ucMenuCard_HSChuaDuyet_MenuClick);
+            // 
+            // ucMenuCard_DSUngVien
+            // 
+            this.ucMenuCard_DSUngVien.BackColor = System.Drawing.Color.Transparent;
+            this.ucMenuCard_DSUngVien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ucMenuCard_DSUngVien.BorderRadious = 20;
+            this.ucMenuCard_DSUngVien.ButtonBackColor = System.Drawing.Color.CadetBlue;
+            this.ucMenuCard_DSUngVien.ButtonTextColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_DSUngVien.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucMenuCard_DSUngVien.Id = 0;
+            this.ucMenuCard_DSUngVien.Location = new System.Drawing.Point(758, 25);
+            this.ucMenuCard_DSUngVien.Margin = new System.Windows.Forms.Padding(12);
+            this.ucMenuCard_DSUngVien.MenuBackColor = System.Drawing.Color.Azure;
+            this.ucMenuCard_DSUngVien.MenuImage = global::FinalProject.Properties.Resources.icons8_data_pending_64;
+            this.ucMenuCard_DSUngVien.MenuName = "Danh sách ứng viên";
+            this.ucMenuCard_DSUngVien.Name = "ucMenuCard_DSUngVien";
+            this.ucMenuCard_DSUngVien.Padding = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.ucMenuCard_DSUngVien.Size = new System.Drawing.Size(220, 180);
+            this.ucMenuCard_DSUngVien.TabIndex = 8;
+            this.ucMenuCard_DSUngVien.MenuClick += new System.EventHandler(this.ucMenuCard_DSUngVien_MenuClick);
             // 
             // ucMenuCard_ThongTin
             // 
@@ -196,7 +218,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(823, 541);
+            this.ClientSize = new System.Drawing.Size(1066, 527);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pictureBox_Image);
             this.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,5 +245,6 @@
         private UC.UCMenuCard ucMenuCard_DoiMatKhau;
         private UC.UCMenuCard ucMenuCard_HSChuaDuyet;
         private UC.UCMenuCard ucMenuCard_DangXuat;
+        private UC.UCMenuCard ucMenuCard_DSUngVien;
     }
 }
