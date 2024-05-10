@@ -64,6 +64,7 @@ namespace FinalProject.Candidate.GUI
                 UCCvCard ucCvCard = new UCCvCard();
                 ucCvCard.Id = listCV[i].Id;
                 ucCvCard.CvName = listCV[i].Ten;
+                ucCvCard.ViTriUngTuyen = listCV[i].ViTriUngTuyen;
                 ucCvCard.LastUpdatedTime = listCV[i].UpdatedTime ?? DateTime.Now;
                 ucCvCard.CvClick += button_View_Click;
                 ucCvCard.CvDelete += button_Xoa_Click;

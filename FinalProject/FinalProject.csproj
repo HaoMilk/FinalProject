@@ -391,6 +391,12 @@
     <Compile Include="Company\GUI\FHoSoUT.Designer.cs">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Company\GUI\FTimUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Company\GUI\FTimUngVien.Designer.cs">
+      <DependentUpon>FTimUngVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Company\GUI\FViewCV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -577,6 +583,9 @@
     <EmbeddedResource Include="Company\GUI\FHoSoUT.resx">
       <DependentUpon>FHoSoUT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Company\GUI\FTimUngVien.resx">
+      <DependentUpon>FTimUngVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Company\GUI\FViewCV.resx">
       <DependentUpon>FViewCV.cs</DependentUpon>
     </EmbeddedResource>
@@ -712,6 +721,7 @@
     </Content>
     <None Include="Resources\icons8-approve-48.png" />
     <None Include="Resources\FPT.png" />
+    <None Include="Resources\icons8-view-48.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

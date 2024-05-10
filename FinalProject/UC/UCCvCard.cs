@@ -25,6 +25,7 @@ namespace FinalProject.UC
         #region Fields
         private int id = 0;
         private string cvName;
+        private string viTriUngTuyen;
         private DateTime lastUpdatedTime;
 
         private Color cvNameTextColor = SystemColors.Highlight;
@@ -67,6 +68,21 @@ namespace FinalProject.UC
                 }
                 cvName = value;
                 this.label_CvName.Text = cvName;
+                // this.Invalidate();
+            }
+        }
+        [Category("CUSTOMIZE DATA")]
+        public string ViTriUngTuyen
+        {
+            get { return viTriUngTuyen; }
+            set
+            {
+                if (value == null)
+                {
+                    value = "ViTriUngTuyen";
+                }
+                viTriUngTuyen = value;
+                this.label_ViTriUngTuyen.Text = viTriUngTuyen;
                 // this.Invalidate();
             }
         }

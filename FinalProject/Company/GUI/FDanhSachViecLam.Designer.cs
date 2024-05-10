@@ -32,7 +32,6 @@ namespace FinalProject.Company.GUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDanhSachViecLam));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox_KinhNghiem = new System.Windows.Forms.GroupBox();
             this.ucComboBox_KinhNghiem = new FinalProject.UC.UCComboBox();
@@ -49,6 +48,7 @@ namespace FinalProject.Company.GUI
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ucCustomButton1 = new FinalProject.UC.UCCustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel_CongViec = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox_KinhNghiem.SuspendLayout();
@@ -71,18 +71,6 @@ namespace FinalProject.Company.GUI
             this.panel3.Size = new System.Drawing.Size(702, 500);
             this.panel3.TabIndex = 5;
             // 
-            // flowLayoutPanel_CongViec
-            // 
-            this.flowLayoutPanel_CongViec.AutoScroll = true;
-            this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
-            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(9, 9, 9, 9);
-            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(702, 500);
-            this.flowLayoutPanel_CongViec.TabIndex = 3;
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -95,7 +83,7 @@ namespace FinalProject.Company.GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(2, 77);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 371);
             this.panel1.TabIndex = 18;
@@ -131,7 +119,7 @@ namespace FinalProject.Company.GUI
             this.ucComboBox_KinhNghiem.ItemHeight = 26;
             this.ucComboBox_KinhNghiem.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_KinhNghiem.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_KinhNghiem.Margin = new System.Windows.Forms.Padding(2);
             this.ucComboBox_KinhNghiem.Name = "ucComboBox_KinhNghiem";
             this.ucComboBox_KinhNghiem.SelectedItem = null;
             this.ucComboBox_KinhNghiem.Size = new System.Drawing.Size(181, 32);
@@ -168,7 +156,7 @@ namespace FinalProject.Company.GUI
             this.ucComboBox_GioiTinh.ItemHeight = 26;
             this.ucComboBox_GioiTinh.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_GioiTinh.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_GioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_GioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.ucComboBox_GioiTinh.Name = "ucComboBox_GioiTinh";
             this.ucComboBox_GioiTinh.SelectedItem = null;
             this.ucComboBox_GioiTinh.Size = new System.Drawing.Size(181, 32);
@@ -205,7 +193,7 @@ namespace FinalProject.Company.GUI
             this.ucComboBox_Luong.ItemHeight = 26;
             this.ucComboBox_Luong.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_Luong.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_Luong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_Luong.Margin = new System.Windows.Forms.Padding(2);
             this.ucComboBox_Luong.Name = "ucComboBox_Luong";
             this.ucComboBox_Luong.SelectedItem = null;
             this.ucComboBox_Luong.Size = new System.Drawing.Size(181, 32);
@@ -242,7 +230,7 @@ namespace FinalProject.Company.GUI
             this.ucComboBox_Nganh.ItemHeight = 26;
             this.ucComboBox_Nganh.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_Nganh.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_Nganh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_Nganh.Margin = new System.Windows.Forms.Padding(2);
             this.ucComboBox_Nganh.Name = "ucComboBox_Nganh";
             this.ucComboBox_Nganh.SelectedItem = null;
             this.ucComboBox_Nganh.Size = new System.Drawing.Size(181, 32);
@@ -279,7 +267,7 @@ namespace FinalProject.Company.GUI
             this.ucComboBox_DiaDiem.ItemHeight = 26;
             this.ucComboBox_DiaDiem.Items = new FinalProject.UC.ComboBoxItem[0];
             this.ucComboBox_DiaDiem.Location = new System.Drawing.Point(21, 25);
-            this.ucComboBox_DiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ucComboBox_DiaDiem.Margin = new System.Windows.Forms.Padding(2);
             this.ucComboBox_DiaDiem.Name = "ucComboBox_DiaDiem";
             this.ucComboBox_DiaDiem.SelectedItem = null;
             this.ucComboBox_DiaDiem.Size = new System.Drawing.Size(181, 32);
@@ -309,7 +297,7 @@ namespace FinalProject.Company.GUI
             this.textBox_TimKiem.Font = new System.Drawing.Font("Constantia", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_TimKiem.ForeColor = System.Drawing.SystemColors.Control;
             this.textBox_TimKiem.Location = new System.Drawing.Point(21, 25);
-            this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_TimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(181, 25);
             this.textBox_TimKiem.TabIndex = 0;
@@ -327,7 +315,7 @@ namespace FinalProject.Company.GUI
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Constantia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 50);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
@@ -365,11 +353,23 @@ namespace FinalProject.Company.GUI
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 71);
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel_CongViec
+            // 
+            this.flowLayoutPanel_CongViec.AutoScroll = true;
+            this.flowLayoutPanel_CongViec.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.flowLayoutPanel_CongViec.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.flowLayoutPanel_CongViec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel_CongViec.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel_CongViec.Name = "flowLayoutPanel_CongViec";
+            this.flowLayoutPanel_CongViec.Padding = new System.Windows.Forms.Padding(9);
+            this.flowLayoutPanel_CongViec.Size = new System.Drawing.Size(702, 500);
+            this.flowLayoutPanel_CongViec.TabIndex = 3;
             // 
             // FDanhSachViecLam
             // 
@@ -406,7 +406,6 @@ namespace FinalProject.Company.GUI
 
         #endregion
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox_KinhNghiem;
         private UCComboBox ucComboBox_KinhNghiem;
@@ -423,5 +422,6 @@ namespace FinalProject.Company.GUI
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private UCCustomButton ucCustomButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel_CongViec;
     }
 }

@@ -51,9 +51,14 @@ namespace FinalProject.Candidate.GUI
             var result = ungVienBUS.Update(id, hoten, ngaysinh, gioiTinh: gioitinh, 
                 diachi, sdt, email, chuyenmon, trangthai, avatar);
              
-            if (result <= 0)
+            if (result == 0)
             {
                 UCMessageBox.Show("Có lỗi phát sinh !");
+                return;
+            }
+            else if (result < 0)
+            {
+                UCMessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
                 return;
             }
             else
@@ -85,12 +90,13 @@ namespace FinalProject.Candidate.GUI
             {
                 textBox_Name.Text = ungVien.HoTen;
                 dateTime_Birthday.Value = ungVien.NgaySinh;
-                ucComboBox_Gender.Text = ungVien.GioiTinh;
                 textBox_Address.Text = ungVien.DiaChi;
                 textBox_Phone.Text = ungVien.SDT;
                 textBox_Email.Text = ungVien.Email;
                 richTextBox_ChuyenMon.Text = ungVien.ChuyenMon;
                 this.ucComboBox_Gender.SelectedIndex = this.ucComboBox_Gender.FindItemIndex(ungVien.GioiTinh);
+                ucComboBox_Gender.Text = ungVien.GioiTinh;
+
             }
 
             if (LoggedUser.User != null)

@@ -31,24 +31,42 @@ namespace FinalProject.Database.Entities
         public int IdCongTy { get; set; }
         public string TenCongTy { get; set; }
 
-        public bool CheckNull( )
+        public bool CheckNull()
         {
-            return string.IsNullOrEmpty(Ten) ||
-                   string.IsNullOrEmpty(Nganh) ||
-                   string.IsNullOrEmpty(ViTriTuyenDung) ||
-                   string.IsNullOrEmpty(DiaDiem) ||
-                   string.IsNullOrEmpty(TrinhDoHocVan) ||
-                   string.IsNullOrEmpty(GioiTinh) ||
-                   string.IsNullOrEmpty(LienHe) ||
-                   string.IsNullOrEmpty(MoTa) ||
-                   string.IsNullOrEmpty(QuyenLoi) ||
-                   string.IsNullOrEmpty(KinhNghiem) ||
-                   string.IsNullOrEmpty(YeuCauUngVien) ||
-                   string.IsNullOrEmpty(TenCongTy) ||
-                   MucLuong == default ||
-                   SoLuong == default ||
-                   IdCongTy == default ||
-                   FromDate == default;
+            var properties = new object[] { Ten, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, IdCongTy };
+
+            foreach (var property in properties)
+            {
+                if (IsNull(property))
+                {
+                    return true; // Trả về true nếu có bất kỳ thuộc tính nào null hoặc mặc định
+                }
+            }
+
+            return false; // Trả về false nếu tất cả các thuộc tính đều không null hoặc mặc định
+        }
+
+        public bool IsNull(object obj)
+        {
+            // Kiểm tra cho chuỗi
+            if (obj is string && string.IsNullOrEmpty((string)obj))
+            {
+                return true;
+            }
+            if (obj is decimal && (decimal)obj == default(decimal))
+            {
+                return true;
+            }
+            if (obj is int && (int)obj == default(int))
+            {
+                return true;
+            }
+            if (obj is DateTime && (DateTime)obj == default(DateTime))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 

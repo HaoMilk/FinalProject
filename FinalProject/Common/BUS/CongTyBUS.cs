@@ -16,7 +16,7 @@ namespace FinalProject.Common.BUS
     internal class CongTyBUS
     {
         CongTyDAO congTyDAO = new CongTyDAO();  
-        public int Add(int id, string email, string tencongty, string dichi, string ceo, string mst)
+        public int Add(int id, string email, string tencongty, string dichi, string ceo, string mst, string url)
         {
             var ct = new CongTy();
             ct.ID = id;
@@ -25,10 +25,19 @@ namespace FinalProject.Common.BUS
             ct.TenCongTy = tencongty;
             ct.DiaChi = dichi;
             ct.CEO = ceo;
+            ct.WordFileUrl = url;
             ct.CreatedTime = DateTime.Now;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
-            return congTyDAO.Add(ct);
+            if (!ct.CheckNull())
+            {
+                return congTyDAO.Add(ct);
+            }
+            else
+            {
+                return -1;
+            }
+
         }
 
         public int Add(CongTy congTy)
@@ -36,7 +45,7 @@ namespace FinalProject.Common.BUS
             return congTyDAO.Add(congTy);
         }
 
-        public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst )
+        public int Update(int id , string email, string tencongty, string dichi, string ceo, string mst, string url )
         {
             var ct = new CongTy();
             ct.ID = id;
@@ -45,9 +54,17 @@ namespace FinalProject.Common.BUS
             ct.TenCongTy = tencongty;
             ct.DiaChi = dichi;
             ct.CEO = ceo;
+            ct.WordFileUrl = url;
             ct.UpdatedTime = DateTime.Now;
             ct.IsDeleted = false;
-            return congTyDAO.Edit(ct);
+            if(!ct.CheckNull())
+            {
+                return congTyDAO.Update(ct);
+            }
+            else
+            {
+                return -1;
+            }
         }
         public int Delete(int idCongTy)
         {
