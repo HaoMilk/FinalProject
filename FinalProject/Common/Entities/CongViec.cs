@@ -33,7 +33,7 @@ namespace FinalProject.Database.Entities
 
         public bool CheckNull()
         {
-            var properties = new object[] { Ten, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, IdCongTy, FromDate };
+            var properties = new object[] { Ten, Nganh, ViTriTuyenDung, MucLuong, DiaDiem, TrinhDoHocVan, GioiTinh, LienHe, MoTa, QuyenLoi, KinhNghiem, YeuCauUngVien, SoLuong, IdCongTy };
 
             foreach (var property in properties)
             {
