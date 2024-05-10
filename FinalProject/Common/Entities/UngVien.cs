@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Interop;
 
 namespace FinalProject.Database.Entities
 {
@@ -27,5 +29,37 @@ namespace FinalProject.Database.Entities
         public DateTime CreatedTime { get; set; } = DateTime.Now;
         public DateTime? UpdatedTime { get; set; }
         public int UserId { get; set; }
+        public bool CheckNull()
+        {
+            var properties = new object[] { Id, NgaySinh, HoTen, GioiTinh, DiaChi, SDT, Email, ChuyenMon, Avatar };
+            foreach (var property in properties)
+            {
+                if (IsNull(property))
+                {
+                    return true; // Trả về true nếu có bất kỳ thuộc tính nào null hoặc mặc định
+                }
+            }
+
+            return false; // Trả về false nếu tất cả các thuộc tính đều không null hoặc mặc định
+        }
+
+        public bool IsNull(object obj)
+        {
+            // Kiểm tra cho chuỗi
+            if (obj is string && string.IsNullOrEmpty((string)obj))
+            {
+                return true;
+            }
+            if (obj is decimal && (decimal)obj == default(decimal))
+            {
+                return true;
+            }
+            if (obj is int && (int)obj == default(int))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

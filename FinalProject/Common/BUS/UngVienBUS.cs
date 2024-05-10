@@ -61,8 +61,15 @@ namespace FinalProject.Common.BUS
             ungVien.IsDeleted = false;
             ungVien.CreatedTime = DateTime.Now;
             ungVien.UpdatedTime = null;
+            if (ungVien.CheckNull())
+            {
+                return -1;
+            }
+            else
+            {
+                return ungVienDAO.Add(ungVien);
 
-            return ungVienDAO.Add(ungVien);
+            }
         }
 
         /// <summary>
@@ -100,7 +107,15 @@ namespace FinalProject.Common.BUS
                 UpdatedTime = DateTime.Now
             };
 
-            return ungVienDAO.Update(ungVien);
+            if (ungVien.CheckNull())
+            {
+                return -1;
+            }
+            else
+            {
+                return ungVienDAO.Update(ungVien);
+
+            }
         }
 
         /// <summary>
