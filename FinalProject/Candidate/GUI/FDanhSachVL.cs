@@ -65,7 +65,10 @@ namespace FinalProject.Candidate.GUI
                     ucJobCard.Id = listCongViec[i].Id;
                     ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
                     ucJobCard.ViewClick += UcJobCard_ViewClick;
-
+                    if (listCongViec[i].TenCongTy == "FPT Software")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.FPT;
+                    }
                     ucJobCards.Add(ucJobCard);
                 }
             }
