@@ -65,7 +65,22 @@ namespace FinalProject.Candidate.GUI
                     ucJobCard.Id = listCongViec[i].Id;
                     ucJobCard.CongViec = congViecBUS.GetById(listCongViec[i].Id);
                     ucJobCard.ViewClick += UcJobCard_ViewClick;
-
+                    if (listCongViec[i].TenCongTy == "FPT Software")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.FPT;
+                    }
+                    else if(listCongViec[i].TenCongTy == "Utop")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.UTOP;
+                    }
+                    else if(listCongViec[i].TenCongTy == "Viet Travel")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.VietTravel;
+                    }
+                    else if (listCongViec[i].TenCongTy == "FPT Shop")
+                    {
+                        ucJobCard.pictureBox_Logo.Image = Properties.Resources.FPTShop;
+                    }
                     ucJobCards.Add(ucJobCard);
                 }
             }

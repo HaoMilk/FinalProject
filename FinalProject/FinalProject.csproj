@@ -723,6 +723,7 @@
     <None Include="Resources\icons8-approve-48.png" />
     <None Include="Resources\FPT.png" />
     <None Include="Resources\icons8-view-48.png" />
+    <None Include="Resources\FPTShop.png" />
     <Content Include="Resources\Template-Stylish_teaching_resume.docx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1015,6 +1016,8 @@
     <Content Include="Resources\Templates\TuChoiHoSoPhongVan.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\UTOP.png" />
+    <None Include="Resources\VietTravel.png" />
     <Content Include="Resources\working.jpg" />
     <None Include="Resources\icons8-delete-48 %281%29.png" />
     <None Include="Resources\backgroundgrbox.jpg" />

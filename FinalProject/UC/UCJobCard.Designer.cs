@@ -138,7 +138,7 @@
             // 
             // UCJobCard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -159,9 +159,9 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label_TenCongViec;
-        private System.Windows.Forms.PictureBox pictureBox_Logo;
         private System.Windows.Forms.Label label_TenCty;
         private System.Windows.Forms.Label label_MucLuong;
         private System.Windows.Forms.Label label_DiaDiem;
+        public System.Windows.Forms.PictureBox pictureBox_Logo;
     }
 }
